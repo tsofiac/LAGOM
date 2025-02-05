@@ -23,7 +23,7 @@ def parse_and_save_metabolite(input_file, output_file,num_iter = 20000):
     
     local_reaction = Reaction()
     is_in_local_reaction = False
-    is_in_enzymes = False
+    # is_in_enzymes = False
     right_or_left_reaction = "left"
     for i, (event, element) in enumerate(context):
         # Keep track on iteration and potenially break
@@ -50,16 +50,17 @@ def parse_and_save_metabolite(input_file, output_file,num_iter = 20000):
                     
                     # We need atleast an id or a name on both sides of the reaction
                     # To map data
-                    if((local_reaction.left_side_id == "" or local_reaction.right_side_id == "") and (local_reaction.left_side_name == "" or local_reaction.right_side_name == "")):
-                        
+                    if((local_reaction.left_side_id == "" and local_reaction.left_side_name == "") or (local_reaction.right_side_id == "" and local_reaction.right_side_name == "")): # right...
+                    # if((local_reaction.left_side_id == "" or local_reaction.right_side_id == "") and (local_reaction.left_side_name == "" or local_reaction.right_side_name == "")): # wrong
+ 
                         print("Data is missing here. Remove and investigate this datapoint")
                        
-                    # If all data exists then we add it to the list
                     else:
                       # We join the list of enzymes to single string 
-                      enzyme_string = ", ".join(local_reaction.enzymes)
+                    #   enzyme_string = ", ".join(local_reaction.enzymes)
                     
-                      parent_child_ids.append([local_reaction.left_side_id,local_reaction.left_side_name,local_reaction.right_side_id,local_reaction.right_side_name,enzyme_string])
+                    #   parent_child_ids.append([local_reaction.left_side_id,local_reaction.left_side_name,local_reaction.right_side_id,local_reaction.right_side_name,enzyme_string])
+                        parent_child_ids.append([local_reaction.left_side_id, local_reaction.left_side_name, local_reaction.right_side_id, local_reaction.right_side_name])
                     # we reset here since we want to look for the new reaction
                     local_reaction = Reaction()
 
@@ -82,24 +83,25 @@ def parse_and_save_metabolite(input_file, output_file,num_iter = 20000):
                     local_reaction.right_side_name = element.text  
             
             # get the names of the enzymes
-            if(tag == "enzyme" and is_in_local_reaction):
-                right_or_left_reaction = "none"
-                is_in_enzymes = True
-            if( is_in_enzymes):
-                if(tag == "name"):
-                    if(element.text != None):
-                        local_reaction.enzymes.append(element.text)
-                    is_in_enzymes = False
+            # if(tag == "enzyme" and is_in_local_reaction):
+            #     right_or_left_reaction = "none"
+            #     is_in_enzymes = True
+            # if( is_in_enzymes):
+            #     if(tag == "name"):
+            #         if(element.text != None):
+            #             local_reaction.enzymes.append(element.text)
+            #         is_in_enzymes = False
             
             # We know its the end of the reaction if this tag shows
             if(tag == "snp-effects"):
-                is_in_enzymes = False
+                # is_in_enzymes = False
                 is_in_local_reaction = False
 
         elif event == 'end':
             # Clean up the element when the end tag is encountered
             element.clear()
-    df = pd.DataFrame(parent_child_ids, columns=["parent_id",'parent_name',"child_id",'child_name','enzymes'])
+    # df = pd.DataFrame(parent_child_ids, columns=["parent_id",'parent_name',"child_id",'child_name','enzymes'])
+    df = pd.DataFrame(parent_child_ids, columns=["parent_id",'parent_name',"child_id",'child_name'])
     df.to_csv(output_file, index=False)
     
 # reads and generates a dataframe with relevant information such as name, id, smiles, inchi
@@ -294,6 +296,7 @@ def hmdb_metabolite_map(input_file, output_file, num_iter = 10000):
             element.clear()
 
     df = pd.DataFrame(smiles_db_pairs, columns=['name',"smiles","dbid"])
+    df['inchi_key'] = "" # added by Sofia
     df.to_csv(output_file, index=False)
 
 # combines two dataframes
@@ -307,7 +310,7 @@ def combine_datasets(first_file,second_file,output_file, remove_dupes=False):
     output_df.to_csv(output_file, index=False)
 
 
-def remove_bad_drug_metabolite_rows(input_file):
+def remove_bad_drug_metabolite_rows(input_file): # removes row if both identifiers are missing or if both smiles and inchi_key are missing
     df = pd.read_csv(input_file)
     initial_row_count = len(df)
     # if the identifiers are empty we remove
@@ -359,15 +362,15 @@ def drop_products_from_drug_information(input_File, output_file):
 
 if __name__ == "__main__":
     # Conditionals 
-    get_reaction_pairs = False
-    remove_endogenous_pairs = False
-    get_drug_info = False
-    get_metabolite_info = False
-    get_external_drugs = False
-    get_hdmb_drugs = False
-    drop_drugs_with_no_products = True
+    get_reaction_pairs = True # funkar
+    remove_endogenous_pairs = False # funkar
+    get_drug_info = False # funkar
+    get_metabolite_info = False # funkar inte
+    get_external_drugs = False # funkade inte men nu gör den det
+    get_hdmb_drugs = False # funkade inte men nu gör den det
+    drop_drugs_with_no_products = False # funkar
 
-    combine_the_data = True
+    combine_the_data = False # funkar
     # Methods 
     # These can be run all together but easier if run one at a time.
     drugbank_filepath = "dataset/raw_data/drugbank_full_database.xml"
@@ -386,7 +389,7 @@ if __name__ == "__main__":
     drugbank_metabolite_structures_filepath = "dataset/raw_data/drugbank_metabolite_structures.sdf"
     parsed_metabolite_structures_output = "dataset/raw_data/drugbank_metabolite_structures.csv"
     if get_metabolite_info: 
-        read_sdf_file(drugbank_metabolite_structures_filepath, parsed_metabolite_structures_output, -1,is_drug_information=False)
+        read_sdf_file(drugbank_metabolite_structures_filepath, parsed_metabolite_structures_output, -1, is_drug_information=False)
         remove_bad_drug_metabolite_rows(parsed_metabolite_structures_output)
 
 
@@ -402,7 +405,9 @@ if __name__ == "__main__":
     drugbank_external_drugs_cleaned = "dataset/raw_data/drugbank_external_structures_cleaned.csv"
     if get_external_drugs:        
         db_external_df = pd.read_csv(drugbank_external_drugs)
-        db_external_df = db_external_df[["dbid","smiles","inchi_key",'name']]
+        # db_external_df = db_external_df[["dbid","smiles","inchi_key",'name']]
+        db_external_df = db_external_df[["DrugBank ID","SMILES","InChIKey",'Name']]
+        db_external_df = db_external_df.rename(columns={"DrugBank ID": "dbid", "SMILES": "smiles", "InChIKey": "inchi_key", "Name": "name"}) # added by Sofia
         db_external_df.to_csv(drugbank_external_drugs_cleaned,index=False)
         remove_bad_drug_metabolite_rows(drugbank_external_drugs_cleaned)
     
@@ -410,7 +415,7 @@ if __name__ == "__main__":
     hmdb_metabolites = "dataset/raw_data/hmdb_metabolites.xml"
     hmdb_cleaned = "dataset/raw_data/hmdb_cleaned.csv"
     if get_hdmb_drugs:        
-        hmdb_metabolite_map(hmdb_metabolites,hmdb_cleaned, -1 )
+        hmdb_metabolite_map(hmdb_metabolites,hmdb_cleaned, -1)
         remove_bad_drug_metabolite_rows(hmdb_cleaned)
     
     ## Combine the drug metabolite into one file
