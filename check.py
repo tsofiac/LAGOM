@@ -32,6 +32,6 @@ def plot_and_save_loss(csv_file_path, output_file_path):
     plt.show()
 
 # Example usage
-csv_file_path = 'Sofia_and_Miranda/results/training/backward_prediction/version_1/logged_train_metrics.csv'
-output_file_path = 'loss_plot.png'
+csv_file_path = 'Sofia_and_Miranda/results/training/backward_prediction/version_2/logged_train_metrics.csv'
+output_file_path = 'loss_plot_metxbiodb1.png'
 plot_and_save_loss(csv_file_path, output_file_path)
