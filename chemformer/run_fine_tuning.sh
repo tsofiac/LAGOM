@@ -2,7 +2,7 @@
 ./chemformer/fine_tune.sh \
     chemformer/fine_tune_bart.yaml \
     dataset/dummy_data/unique_parents_metxbiodb_finetuning.csv \
-    /projects/cc/se_users/larsson_kbvs588/test/pretrained_model/step=1000000_mod_no_deepspeed.ckpt \
+    step=1000000_mod_no_deepspeed.ckpt \
     64 \
     chemformer/bart_vocab_downstream.json \
     results/training \
