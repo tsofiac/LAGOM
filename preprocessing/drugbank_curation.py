@@ -11,17 +11,16 @@ def sdf_to_csv(sdf_file, csv_file, is_drug_information = False):
             continue
         
         drugbank_id = mol.GetProp("DRUGBANK_ID") if mol.HasProp("DRUGBANK_ID") else "NaN"
-        inchi_key = Chem.inchi.MolToInchiKey(mol) if mol else "NaN"
+        inchi = Chem.inchi.MolToInchi(mol) if mol else "NaN"
         smiles = Chem.MolToSmiles(mol) if mol else "NaN"
         name = mol.GetProp(name_property) if mol.HasProp(name_property) else "NaN"
-        products = mol.GetProp("PRODUCTS") if mol.HasProp("PRODUCTS") else "NaN"
+        # products = mol.GetProp("PRODUCTS") if mol.HasProp("PRODUCTS") else "NaN"
 
         data.append({
             "dbid": drugbank_id,
-            "inchi_key": inchi_key,
+            "inchi": inchi,
             "smiles": smiles,
-            "name": name,
-            "products": products
+            "name": name
         })
 
     df = pd.DataFrame(data)
@@ -29,11 +28,11 @@ def sdf_to_csv(sdf_file, csv_file, is_drug_information = False):
 
 def reformat_external_csv(input_file, output_file):
     db_external_df = pd.read_csv(input_file)
-    db_external_df = db_external_df[["DrugBank ID","SMILES","InChIKey",'Name']]
+    db_external_df = db_external_df[["DrugBank ID","SMILES","InChI",'Name']]
     db_external_df = db_external_df.rename(columns={
         "DrugBank ID": "dbid",
         "SMILES": "smiles",
-        "InChIKey": "inchi_key",
+        "InChI": "inchi",
         "Name": "name"
     })
     db_external_df.to_csv(output_file,index=False)
@@ -44,7 +43,7 @@ def remove_bad_drug_metabolite_rows(input_file): # removes row if both identifie
     # if the identifiers are empty we remove
     df.dropna(subset=['dbid', 'name'], how='all', inplace=True)
     # If the data we need is empty the 
-    df.dropna(subset=['smiles', 'inchi_key'], how='all', inplace=True)
+    df.dropna(subset=['smiles', 'inchi'], how='all', inplace=True)
     final_row_count = len(df)
     dropped_count = initial_row_count - final_row_count
     print("Number of dropped rows: ", dropped_count)
@@ -76,31 +75,24 @@ def generate_reaction_pairs(input_file, output_file,num_iter = 20000):
         # Keep track on iteration and potenially break
         if (i % 1000000 == 0):
             print(f'iteration {i}')
-
         if(i == num_iter):
             break
-
         # Split the tag to remove garbage
         if(element.tag =="root"):
             tag = "root"
         else:
-            tag = element.tag.split('}')[1]
-                  
-
+            tag = element.tag.split('}')[1]      
         if event == 'start':
-            
             # We have entered a local reaction.
             if(tag == "reaction"):
                 is_in_local_reaction = True
                 # If local reaction has data then it is complete or it needs to be investigated
                 if(local_reaction.has_data()):                   
-                    
                     # We need atleast an id or a name on both sides of the reaction
                     # To map data
                     if((local_reaction.left_side_id == "" and local_reaction.left_side_name == "") or (local_reaction.right_side_id == "" and local_reaction.right_side_name == "")): # right...
                     # if((local_reaction.left_side_id == "" or local_reaction.right_side_id == "") and (local_reaction.left_side_name == "" or local_reaction.right_side_name == "")): # wrong
                         print("Data is missing here. Remove and investigate this datapoint")
-                       
                     else:
                         # We join the list of enzymes to single string 
                         parent_child_ids.append([local_reaction.left_side_id, local_reaction.left_side_name, local_reaction.right_side_id, local_reaction.right_side_name])
@@ -159,13 +151,53 @@ def filter_endogenous_reaction(input_file):
         iter +=1
     only_db_parents_df.to_csv(input_file, index=False)
 
+def extend_and_filter_reaction_pairs(reaction_pairs_file, structure_data_file, output_file):
+    # Load data from CSV files into DataFrames
+    reaction_pairs_df = pd.read_csv(reaction_pairs_file)
+    structure_data_df = pd.read_csv(structure_data_file)
 
-def remove_drugs_with_no_products(input_File, output_file):
-    df = pd.read_csv(input_File, on_bad_lines='skip')
-    count = len(df)
-    df = df.dropna(subset=['products'])
-    print("Dropped drugs: ", count - len(df))
-    df.to_csv(output_file, index=False)
+    # Create a mapping dictionary {key: (smiles, inchi)}
+    structure_map = {}
+    for _, row in structure_data_df.iterrows():
+        dbid = row['dbid']
+        name = row['name']
+        smiles = row['smiles']
+        inchi = row['inchi']
+
+        # Map using both dbid and name if they exist
+        if pd.notna(dbid):
+            structure_map[dbid] = (smiles, inchi)
+        if pd.notna(name):
+            structure_map[name] = (smiles, inchi)
+
+    # Function to find smiles or inchi
+    def map_smiles_inchi(row):
+        # Check with parent_id
+        key = row['parent_id']
+        if key in structure_map:
+            smiles, inchi = structure_map[key]
+            return smiles if pd.notna(smiles) else inchi
+
+        # Check with parent_name if parent_id didn't match
+        key = row['parent_name']
+        if key in structure_map:
+            smiles, inchi = structure_map[key]
+            return smiles if pd.notna(smiles) else inchi
+
+        return None
+
+    # Apply the function to each row in the DataFrame
+    reaction_pairs_df['mapped_info'] = reaction_pairs_df.apply(map_smiles_inchi, axis=1)
+
+    # Count and remove rows with no matched data
+    unmatched_count = reaction_pairs_df['mapped_info'].isna().sum()
+    filtered_df = reaction_pairs_df.dropna(subset=['mapped_info'])
+
+    # Inform the number of unmatched rows
+    print(f"Number of unmatched entries removed: {unmatched_count}")
+
+    # Save the filtered DataFrame to a new CSV file
+    filtered_df.to_csv(output_file, index=False)
 
 
 if __name__ == "__main__":
@@ -174,8 +206,7 @@ if __name__ == "__main__":
     get_metabolite_info = False
     get_external_drugs = False
     get_reaction_pairs = False
-    drop_drugs_with_no_products = True
-    
+   
 
     ## Drug structure - drugbank_drug_structures.sdf
     drugbank_drug_structures = "dataset/raw_data/drugbank_drug_structures.sdf"
@@ -205,9 +236,10 @@ if __name__ == "__main__":
         generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs,-1)
         filter_endogenous_reaction(drugbank_reaction_pairs)
 
-    drugbank_drugs_with_products = 'dataset/processed_data/drugbank_drugs_with_products.csv'
-    if drop_drugs_with_no_products:
-        remove_drugs_with_no_products(parsed_drug_structures, drugbank_drugs_with_products)
+    # Example usage:
+    matched_smiles_to_drugs = "dataset/processed_data/extended_reaction_pairs.csv"
+    extend_and_filter_reaction_pairs(drugbank_reaction_pairs, parsed_drug_structures, matched_smiles_to_drugs)
+
 
 
  
