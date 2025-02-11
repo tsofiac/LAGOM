@@ -4,7 +4,7 @@ model_path: MODEL_PATH
 n_predictions: 1
 resume: false
 
-n_epochs: 50
+n_epochs: 100
 batch_size: BATCH_SIZE
 augmentation_probability: 0.5
 augmentation_strategy: all

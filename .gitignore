@@ -4,3 +4,4 @@ dataset/raw_data/
 dataset/processed_data/
 step=1000000_mod_no_deepspeed.ckpt
 dataset/dummy_data
+results/
