@@ -4,7 +4,7 @@ from rdkit import Chem
 import json
 
 from sklearn.model_selection import GroupShuffleSplit
-from utils import fingerprint_similarity_single, valid_smiles, molecule_allowed_based_on_weight, atoms_allowed_in_molecules, standardize_molecule
+from preprocessing.prev_master_thesis.utils import fingerprint_similarity_single, valid_smiles, molecule_allowed_based_on_weight, atoms_allowed_in_molecules, standardize_molecule
 
 #### Code ####
 def load_metxbiodb_raw():
