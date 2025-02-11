@@ -112,8 +112,11 @@ def test_val_distribute(df): #Input csv file. Function adds an extra column name
 
     return final_df
 
-def df_to_csv(input_df, output_csv): # outputs a csv with tabs
+def df_to_csv_tab(input_df, output_csv): # outputs a csv with tabs
     input_df.to_csv(output_csv, sep='\t', index=False)
+
+def df_to_csv(input_df, output_csv):
+    input_df.to_csv(output_csv, index=False)
 
 
 def curate_metxbiodb_main():
@@ -123,8 +126,8 @@ def curate_metxbiodb_main():
     smiles_metxbiodb_clean_df = standardize_smiles_main(smiles_metxbiodb_set_df) # Cleans data. Input df needs columns 'parent_smiles' and 'child_smiles'
     smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_clean_df) # Outputs df ready for fine-tuning but the set-column is empty
     
-    df_to_csv(smiles_metxbiodb_clean_df, 'dataset/dummy_data/preprocessed_metxbiodb/metxbiodb_clean.csv')
-    df_to_csv(smiles_metxbiodb_mod_columns_df, 'dataset/dummy_data/preprocessed_metxbiodb/metxbiodb_clean_finetuning.csv')
+    df_to_csv(smiles_metxbiodb_clean_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean.csv')
+    df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_finetuning.csv')
 
     len_start = len(smiles_metxbiodb_df)
     len_clean = len(smiles_metxbiodb_clean_df)
@@ -149,8 +152,8 @@ def curate_metxbiodb_unique_parents_main():
     smiles_metxbiodb_clean_unique_df = get_unique_parents(smiles_metxbiodb_clean_df) # Gets a data set with only unique parents
     smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_clean_unique_df) # Outputs df ready for fine-tuning but the set-column is empty
     
-    df_to_csv(smiles_metxbiodb_mod_columns_df, 'dataset/dummy_data/preprocessed_metxbiodb/metxbiodb_clean_unique_parents_finetuning.csv')
-    df_to_csv(smiles_metxbiodb_clean_unique_df, 'dataset/dummy_data/preprocessed_metxbiodb/metxbiodb_clean_unique_parents.csv')
+    df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_unique_parents_finetuning.csv')
+    df_to_csv(smiles_metxbiodb_clean_unique_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_unique_parents.csv')
 
     len_start = len(smiles_metxbiodb_df)
     len_clean = len(smiles_metxbiodb_clean_df)
@@ -177,8 +180,8 @@ def curate_metxbiodb_unique_parents_no_clean_main():
     smiles_metxbiodb_unique_df = get_unique_parents(smiles_metxbiodb_set_df) # Gets a data set with only unique parents
     smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_unique_df) # Outputs df ready for fine-tuning but the set-column is empty
     
-    df_to_csv(smiles_metxbiodb_mod_columns_df, 'dataset/dummy_data/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents_finetuning.csv')
-    df_to_csv(smiles_metxbiodb_unique_df, 'dataset/dummy_data/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents.csv')
+    df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents_finetuning.csv')
+    df_to_csv(smiles_metxbiodb_unique_df, 'dataset/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents.csv')
 
     len_start = len(smiles_metxbiodb_df)
     len_unique_parents = len(smiles_metxbiodb_unique_df)
@@ -195,8 +198,8 @@ def curate_metxbiodb_unique_parents_no_clean_main():
 
     print('The val distribution is now', val_count_unique/len_unique_parents)
 
-#curate_metxbiodb_main()
-#curate_metxbiodb_unique_parents_main()
+curate_metxbiodb_main()
+curate_metxbiodb_unique_parents_main()
 curate_metxbiodb_unique_parents_no_clean_main()
 
 #RESULTS:

@@ -71,8 +71,11 @@ def test_val_distribute(df): #Input csv file. Function adds an extra column name
 
     return final_df
 
-def df_to_csv(input_df, output_csv): # outputs a csv with tabs
+def df_to_csv_tab(input_df, output_csv): # outputs a csv with tabs
     input_df.to_csv(output_csv, sep='\t', index=False)
+
+def df_to_csv(input_df, output_csv):
+    input_df.to_csv(output_csv, index=False)
 
 # --- RUN FUNCTIONS ---
 def preprocess_clean_main(df): #Input df needs columns 'parent_smiles' and 'child_smiles'
@@ -82,7 +85,7 @@ def preprocess_clean_main(df): #Input df needs columns 'parent_smiles' and 'chil
     df_finetune = modifiy_columns(df_clean) # Outputs df ready for fine-tuning but the set-column is empty
     
     df_to_csv(df_clean, 'dataset/curated_data/drugbank_clean.csv')
-    df_to_csv(df_finetune, 'dataset/curated_data/drugbank_clean_finetune.csv')
+    df_to_csv_tab(df_finetune, 'dataset/curated_data/drugbank_clean_finetune.csv')
 
     len_start = len(df)
     len_clean = len(df_clean)
@@ -106,7 +109,7 @@ def preprocess_clean_unique_parents_main(df): #Input df needs columns 'parent_sm
     df_finetune = modifiy_columns(df_clean_unique) # Outputs df ready for fine-tuning but the set-column is empty
     
     df_to_csv(df_clean_unique, 'dataset/curated_data/drugbank_clean_unique_parents.csv')
-    df_to_csv(df_finetune, 'dataset/curated_data/drugbank_clean_unique_parents_finetune.csv')
+    df_to_csv_tab(df_finetune, 'dataset/curated_data/drugbank_clean_unique_parents_finetune.csv')
 
     len_start = len(df)
     len_end = len(df_clean_unique)
@@ -129,7 +132,7 @@ def preprocess_unique_parents_no_clean_main(df): #Input df needs columns 'parent
     df_finetune = modifiy_columns(df_unique) # Outputs df ready for fine-tuning but the set-column is empty
     
     df_to_csv(df_unique, 'dataset/curated_data/drugbank_unique_parents.csv')
-    df_to_csv(df_finetune, 'dataset/curated_data/drugbank_unique_parents_finetune.csv')
+    df_to_csv_tab(df_finetune, 'dataset/curated_data/drugbank_unique_parents_finetune.csv')
 
     len_start = len(df)
     len_end = len(df_unique)
@@ -151,3 +154,4 @@ drugbank_df = pd.read_csv('dataset/curated_data/drugbank_smiles.csv')
 preprocess_clean_main(drugbank_df)
 preprocess_clean_unique_parents_main(drugbank_df)
 preprocess_unique_parents_no_clean_main(drugbank_df)
+
