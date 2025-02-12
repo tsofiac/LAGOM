@@ -77,7 +77,7 @@ def df_to_csv_tab(input_df, output_csv): # outputs a csv with tabs
 def df_to_csv(input_df, output_csv):
     input_df.to_csv(output_csv, index=False)
 
-# --- RUN FUNCTIONS ---
+# --- RUN FUNCTIONS --- CHANGE FILE NAMES
 def preprocess_clean_main(df): #Input df needs columns 'parent_smiles' and 'child_smiles'
     
     df_distributed = test_val_distribute(df) # adds a set column and distrubutes the datapoints into val and set
