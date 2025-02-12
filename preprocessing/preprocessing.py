@@ -84,8 +84,8 @@ if __name__ == "__main__":
     preprocess_clean_unique_parents = True
     preprocess_unique_parents_no_clean = True
 
-    name = 'drugbank'
-    dataset = 'dataset/curated_data/drugbank_smiles.csv'
+    name = 'drugbank' # 'metxbiodb'
+    dataset = f'dataset/curated_data/{name}_smiles.csv'
     
 
     clean = f'dataset/curated_data/{name}_clean.csv'
