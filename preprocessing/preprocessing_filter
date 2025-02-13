@@ -1,0 +1,77 @@
+from rdkit import Chem, DataStructs
+from rdkit.Chem import Descriptors, AllChem 
+from rdkit.Chem.SaltRemover import SaltRemover
+import torch
+import pandas as pd
+import os
+from pathlib import Path
+from collections import Counter
+
+# input should have child_smiles and parent_smiles
+def filter_out_data(data, filter_method): 
+    total_removed = 0
+
+    # Filtering based on metabolites
+    allowed_metabolites = [filter_method(metabolite) for metabolite in data["child_smiles"]]
+    data = data[allowed_metabolites]
+    total_removed += allowed_metabolites.count(False)
+
+    # Filtering based on parent molecules
+    allowed_molecules = [filter_method(molecule) for molecule in data["parent_smiles"]]
+    data = data[allowed_molecules]
+    total_removed += allowed_molecules.count(False)
+
+    return data, total_removed
+
+def molecule_allowed_based_on_weight(molecule, max_weight=800, min_weight=100): 
+    mol_weight = Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule))
+    if mol_weight <= max_weight and mol_weight >= min_weight: 
+        return True
+    return False 
+
+def valid_smiles(molecule): 
+    return Chem.MolFromSmiles(molecule) is not None
+
+def atoms_allowed_in_molecules(molecule): 
+    atoms_to_include = ['C', 'N', 'S', 'O', 'H', 'F', 'I', 'P', 'B', 'Cl', 'Br', 'Si']
+    mol = Chem.MolFromSmiles(molecule)
+    atoms = [atom.GetSymbol() for atom in mol.GetAtoms()]
+    return set(atoms).issubset(set(atoms_to_include)) #Returns true if all atoms in the molecule are included in the specified set
+
+#------ Not for filtering, just to interpret what molecules we have
+
+def define_atoms(molecule):
+    mol = Chem.MolFromSmiles(molecule)
+    atoms = [atom.GetSymbol() for atom in mol.GetAtoms()]
+    atom_counts = Counter(atoms)
+    return atom_counts
+
+def analyse_atoms(data, column):
+    total_atoms_count = Counter()
+    
+    for molecule in data[column]:
+        atom_counts = define_atoms(molecule)
+        total_atoms_count.update(atom_counts)
+    
+    return total_atoms_count
+
+def print_atom_counts(atom_counts):
+    for atom, count in atom_counts.items():
+        print(f"{atom}: {count}")
+
+# Example usage
+data = pd.DataFrame({
+    'parent_smiles': ["CCO", "NCCN"],
+    'child_smiles': ["CC(O)C", "NCC"]
+})
+
+parents_count = analyse_atoms(data, 'parent_smiles')
+children_count = analyse_atoms(data, 'child_smiles')
+
+print("Parent SMILES atom counts:")
+print_atom_counts(parents_count)
+
+print("\nChild SMILES atom counts::")
+print_atom_counts(children_count)
+
+
