@@ -4,10 +4,8 @@ from sklearn.model_selection import GroupShuffleSplit
 from sklearn.model_selection import train_test_split
 from standardize_smiles_ours import standardize_molecule, standardize_smiles_collection, standardize_smiles_main
 
-print("hello")
 
-def load_metxbiodb():
-    file = 'dataset/raw_data/metxbiodb.csv'
+def load_metxbiodb(file):
     # Columns in raw data:
     # "biotid","substrate_name","substrate_cid","substrate_inchikey","substrate_inchi",
     # "enzyme","reaction_type","biotransformation_type","biosystem","prod_name","prod_cid",
@@ -22,7 +20,7 @@ def load_metxbiodb():
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def metxbiodb_inchi_to_smiles(data):
+def metxbiodb_inchi_to_smiles(data, output_file):
     parent_child = []
     counter = 0
     for ind in data.index:
@@ -44,163 +42,173 @@ def metxbiodb_inchi_to_smiles(data):
     smiles_metxbiodb_df = pd.DataFrame(parent_child)
     smiles_metxbiodb_df.columns = ['parent_name', 'parent_smiles', 'child_name', 'child_smiles']
   
-    smiles_metxbiodb_df.to_csv('smiles_metxbiodb.csv', index=False)
+    smiles_metxbiodb_df.to_csv(output_file, index=False)
     return smiles_metxbiodb_df
 
-def modifiy_columns(df): # Returns a df ready for fine-tuning
-    try:
+
+if __name__ == "__main__":
+
+    file = 'dataset/raw_data/metxbiodb.csv'
+
+    final = 'dataset/curated_data/metxbiodb_smiles.csv'
+
+    metxbiodb = load_metxbiodb(file)
+    metxbiodb_inchi_to_smiles(metxbiodb, final)
+
+# def modifiy_columns(df): # Returns a df ready for fine-tuning
+#     try:
         
-        # Create a new DataFrame with the desired structure
-        new_df = pd.DataFrame({
-            'products': df['child_smiles'],  # Map 'parent_smiles' to 'products'
-            'reactants': df['parent_smiles'],  # Map 'child_smiles' to 'reactants'
-            'set': df['set']
-        })
+#         # Create a new DataFrame with the desired structure
+#         new_df = pd.DataFrame({
+#             'products': df['child_smiles'],  # Map 'parent_smiles' to 'products'
+#             'reactants': df['parent_smiles'],  # Map 'child_smiles' to 'reactants'
+#             'set': df['set']
+#         })
         
         
-        print(f"Transformation completed. The df now has columns: products, reactants, and set (empty)")
+#         print(f"Transformation completed. The df now has columns: products, reactants, and set (empty)")
     
-    except KeyError as e:
-        print(f"Error: Missing required column in the input data: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+#     except KeyError as e:
+#         print(f"Error: Missing required column in the input data: {e}")
+#     except Exception as e:
+#         print(f"An unexpected error occurred: {e}")
 
-    return new_df
+#     return new_df
 
-def get_unique_parents(df):
-    # Ensure df has 'parent_smiles' column, else raise an error
-    if 'parent_smiles' not in df.columns:
-        raise ValueError("The DataFrame must contain a 'parent_smiles' column.")
+# def get_unique_parents(df):
+#     # Ensure df has 'parent_smiles' column, else raise an error
+#     if 'parent_smiles' not in df.columns:
+#         raise ValueError("The DataFrame must contain a 'parent_smiles' column.")
 
-    unique_parent_dataset = []
+#     unique_parent_dataset = []
 
-    # Get a list of columns excluding 'parent_smiles'
-    other_columns = [col for col in df.columns if col != 'parent_smiles']
+#     # Get a list of columns excluding 'parent_smiles'
+#     other_columns = [col for col in df.columns if col != 'parent_smiles']
 
-    # Loop through unique parent SMILES
-    for parent in df['parent_smiles'].unique():
-        # Find the first row where 'parent_smiles' matches the current parent
-        row = df[df['parent_smiles'] == parent].iloc[0]
-        # Append the entire row
-        unique_parent_dataset.append(row)
+#     # Loop through unique parent SMILES
+#     for parent in df['parent_smiles'].unique():
+#         # Find the first row where 'parent_smiles' matches the current parent
+#         row = df[df['parent_smiles'] == parent].iloc[0]
+#         # Append the entire row
+#         unique_parent_dataset.append(row)
 
-    # Create a new DataFrame from the unique dataset, preserving other columns
-    unique_parent_df = pd.DataFrame(unique_parent_dataset).reset_index(drop=True)
+#     # Create a new DataFrame from the unique dataset, preserving other columns
+#     unique_parent_df = pd.DataFrame(unique_parent_dataset).reset_index(drop=True)
 
-    unique_parent_df = unique_parent_df[['parent_smiles'] + other_columns]
+#     unique_parent_df = unique_parent_df[['parent_smiles'] + other_columns]
 
-    return unique_parent_df
-
-
-def test_val_distribute(df): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
-
-    # Add an empty column named 'set'
-    df['set'] = None
-
-    # Split the DataFrame into train (90%) and validation (10%) sets.
-    # Random_state is for reproducibility
-    train_df, val_df = train_test_split(df, test_size=0.1, random_state=26)
-
-    # Assign "train" and "val" labels
-    train_df['set'] = 'train'
-    val_df['set'] = 'val'
-
-    # Combine the train and validation DataFrames
-    final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
-
-    print("The df is now distributed into training and validation")
-
-    return final_df
-
-def df_to_csv_tab(input_df, output_csv): # outputs a csv with tabs
-    input_df.to_csv(output_csv, sep='\t', index=False)
-
-def df_to_csv(input_df, output_csv):
-    input_df.to_csv(output_csv, index=False)
+#     return unique_parent_df
 
 
-def curate_metxbiodb_main():
-    metxbiodb_df = load_metxbiodb() # Loads raw metxbiodata
-    smiles_metxbiodb_df = metxbiodb_inchi_to_smiles(metxbiodb_df) # Converts the data to smiles. Also creates csv file
-    smiles_metxbiodb_set_df = test_val_distribute(smiles_metxbiodb_df) # adds a set column and distrubutes the datapoints into val and set
-    smiles_metxbiodb_clean_df = standardize_smiles_main(smiles_metxbiodb_set_df) # Cleans data. Input df needs columns 'parent_smiles' and 'child_smiles'
-    smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_clean_df) # Outputs df ready for fine-tuning but the set-column is empty
+# def test_val_distribute(df): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
+
+#     # Add an empty column named 'set'
+#     df['set'] = None
+
+#     # Split the DataFrame into train (90%) and validation (10%) sets.
+#     # Random_state is for reproducibility
+#     train_df, val_df = train_test_split(df, test_size=0.1, random_state=26)
+
+#     # Assign "train" and "val" labels
+#     train_df['set'] = 'train'
+#     val_df['set'] = 'val'
+
+#     # Combine the train and validation DataFrames
+#     final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
+
+#     print("The df is now distributed into training and validation")
+
+#     return final_df
+
+# def df_to_csv_tab(input_df, output_csv): # outputs a csv with tabs
+#     input_df.to_csv(output_csv, sep='\t', index=False)
+
+# def df_to_csv(input_df, output_csv):
+#     input_df.to_csv(output_csv, index=False)
+
+
+# def curate_metxbiodb_main():
+#     metxbiodb_df = load_metxbiodb() # Loads raw metxbiodata
+#     smiles_metxbiodb_df = metxbiodb_inchi_to_smiles(metxbiodb_df) # Converts the data to smiles. Also creates csv file
+#     smiles_metxbiodb_set_df = test_val_distribute(smiles_metxbiodb_df) # adds a set column and distrubutes the datapoints into val and set
+#     smiles_metxbiodb_clean_df = standardize_smiles_main(smiles_metxbiodb_set_df) # Cleans data. Input df needs columns 'parent_smiles' and 'child_smiles'
+#     smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_clean_df) # Outputs df ready for fine-tuning but the set-column is empty
     
-    df_to_csv(smiles_metxbiodb_clean_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean.csv')
-    df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_finetuning.csv')
+#     df_to_csv(smiles_metxbiodb_clean_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean.csv')
+#     df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_finetuning.csv')
 
-    len_start = len(smiles_metxbiodb_df)
-    len_clean = len(smiles_metxbiodb_clean_df)
+#     len_start = len(smiles_metxbiodb_df)
+#     len_clean = len(smiles_metxbiodb_clean_df)
 
-    print("Curation with NO unique parents")
-    print("Number of data points from start: ", len_start)
-    print("Number of data points after cleaning: ", len_clean)
+#     print("Curation with NO unique parents")
+#     print("Number of data points from start: ", len_start)
+#     print("Number of data points after cleaning: ", len_clean)
 
-    val_count_start = (smiles_metxbiodb_set_df['set'] == 'val').sum()
-    val_count_clean = (smiles_metxbiodb_clean_df['set'] == 'val').sum()
+#     val_count_start = (smiles_metxbiodb_set_df['set'] == 'val').sum()
+#     val_count_clean = (smiles_metxbiodb_clean_df['set'] == 'val').sum()
 
-    print(f"The count of 'val' from start is: {val_count_start}")
-    print(f"The count of 'val' after cleaning is: {val_count_clean}")
-    print('The val distribution is now', val_count_clean/len_clean)
+#     print(f"The count of 'val' from start is: {val_count_start}")
+#     print(f"The count of 'val' after cleaning is: {val_count_clean}")
+#     print('The val distribution is now', val_count_clean/len_clean)
 
 
-def curate_metxbiodb_unique_parents_main():
-    metxbiodb_df = load_metxbiodb() # Loads raw metxbiodata
-    smiles_metxbiodb_df = metxbiodb_inchi_to_smiles(metxbiodb_df) # Converts the data to smiles. Also creates csv file
-    smiles_metxbiodb_set_df = test_val_distribute(smiles_metxbiodb_df) # adds a set column and distrubutes the datapoints into val and set
-    smiles_metxbiodb_clean_df = standardize_smiles_main(smiles_metxbiodb_set_df) # Cleans data. Input df needs columns 'parent_smiles' and 'child_smiles'
-    smiles_metxbiodb_clean_unique_df = get_unique_parents(smiles_metxbiodb_clean_df) # Gets a data set with only unique parents
-    smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_clean_unique_df) # Outputs df ready for fine-tuning but the set-column is empty
+# def curate_metxbiodb_unique_parents_main():
+#     metxbiodb_df = load_metxbiodb() # Loads raw metxbiodata
+#     smiles_metxbiodb_df = metxbiodb_inchi_to_smiles(metxbiodb_df) # Converts the data to smiles. Also creates csv file
+#     smiles_metxbiodb_set_df = test_val_distribute(smiles_metxbiodb_df) # adds a set column and distrubutes the datapoints into val and set
+#     smiles_metxbiodb_clean_df = standardize_smiles_main(smiles_metxbiodb_set_df) # Cleans data. Input df needs columns 'parent_smiles' and 'child_smiles'
+#     smiles_metxbiodb_clean_unique_df = get_unique_parents(smiles_metxbiodb_clean_df) # Gets a data set with only unique parents
+#     smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_clean_unique_df) # Outputs df ready for fine-tuning but the set-column is empty
     
-    df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_unique_parents_finetuning.csv')
-    df_to_csv(smiles_metxbiodb_clean_unique_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_unique_parents.csv')
+#     df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_unique_parents_finetuning.csv')
+#     df_to_csv(smiles_metxbiodb_clean_unique_df, 'dataset/preprocessed_metxbiodb/metxbiodb_clean_unique_parents.csv')
 
-    len_start = len(smiles_metxbiodb_df)
-    len_clean = len(smiles_metxbiodb_clean_df)
-    len_unique_parents = len(smiles_metxbiodb_clean_unique_df)
+#     len_start = len(smiles_metxbiodb_df)
+#     len_clean = len(smiles_metxbiodb_clean_df)
+#     len_unique_parents = len(smiles_metxbiodb_clean_unique_df)
 
-    print("Curation WITH unique parents")
-    print("Number of data points from start: ", len_start)
-    print("Number of data points after cleaning: ", len_clean)
-    print("Number of data points with after cleaning and unique parents: ", len_unique_parents)
+#     print("Curation WITH unique parents")
+#     print("Number of data points from start: ", len_start)
+#     print("Number of data points after cleaning: ", len_clean)
+#     print("Number of data points with after cleaning and unique parents: ", len_unique_parents)
     
-    val_count_start = (smiles_metxbiodb_set_df['set'] == 'val').sum()
-    val_count_clean_unique = (smiles_metxbiodb_clean_unique_df['set'] == 'val').sum()
+#     val_count_start = (smiles_metxbiodb_set_df['set'] == 'val').sum()
+#     val_count_clean_unique = (smiles_metxbiodb_clean_unique_df['set'] == 'val').sum()
 
-    print(f"The count of 'val' from start is: {val_count_start}")
-    print(f"The count of 'val' after cleaning and unique parents is: {val_count_clean_unique}")
+#     print(f"The count of 'val' from start is: {val_count_start}")
+#     print(f"The count of 'val' after cleaning and unique parents is: {val_count_clean_unique}")
 
-    print('The val distribution is now', val_count_clean_unique/len_unique_parents)
+#     print('The val distribution is now', val_count_clean_unique/len_unique_parents)
 
-def curate_metxbiodb_unique_parents_no_clean_main():
-    metxbiodb_df = load_metxbiodb() # Loads raw metxbiodata
-    smiles_metxbiodb_df = metxbiodb_inchi_to_smiles(metxbiodb_df) # Converts the data to smiles. Also creates csv file
-    smiles_metxbiodb_set_df = test_val_distribute(smiles_metxbiodb_df) # adds a set column and distrubutes the datapoints into val and set
+# def curate_metxbiodb_unique_parents_no_clean_main():
+#     metxbiodb_df = load_metxbiodb() # Loads raw metxbiodata
+#     smiles_metxbiodb_df = metxbiodb_inchi_to_smiles(metxbiodb_df) # Converts the data to smiles. Also creates csv file
+#     smiles_metxbiodb_set_df = test_val_distribute(smiles_metxbiodb_df) # adds a set column and distrubutes the datapoints into val and set
 
-    smiles_metxbiodb_unique_df = get_unique_parents(smiles_metxbiodb_set_df) # Gets a data set with only unique parents
-    smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_unique_df) # Outputs df ready for fine-tuning but the set-column is empty
+#     smiles_metxbiodb_unique_df = get_unique_parents(smiles_metxbiodb_set_df) # Gets a data set with only unique parents
+#     smiles_metxbiodb_mod_columns_df = modifiy_columns(smiles_metxbiodb_unique_df) # Outputs df ready for fine-tuning but the set-column is empty
     
-    df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents_finetuning.csv')
-    df_to_csv(smiles_metxbiodb_unique_df, 'dataset/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents.csv')
+#     df_to_csv_tab(smiles_metxbiodb_mod_columns_df, 'dataset/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents_finetuning.csv')
+#     df_to_csv(smiles_metxbiodb_unique_df, 'dataset/preprocessed_metxbiodb/metxbiodb_no_clean_unique_parents.csv')
 
-    len_start = len(smiles_metxbiodb_df)
-    len_unique_parents = len(smiles_metxbiodb_unique_df)
+#     len_start = len(smiles_metxbiodb_df)
+#     len_unique_parents = len(smiles_metxbiodb_unique_df)
 
-    print("Curation WITH unique parents")
-    print("Number of data points from start: ", len_start)
-    print("Number of data points unique parents: ", len_unique_parents)
+#     print("Curation WITH unique parents")
+#     print("Number of data points from start: ", len_start)
+#     print("Number of data points unique parents: ", len_unique_parents)
     
-    val_count_start = (smiles_metxbiodb_set_df['set'] == 'val').sum()
-    val_count_unique = (smiles_metxbiodb_unique_df['set'] == 'val').sum()
+#     val_count_start = (smiles_metxbiodb_set_df['set'] == 'val').sum()
+#     val_count_unique = (smiles_metxbiodb_unique_df['set'] == 'val').sum()
 
-    print(f"The count of 'val' from start is: {val_count_start}")
-    print(f"The count of 'val' after cleaning and unique parents is: {val_count_unique}")
+#     print(f"The count of 'val' from start is: {val_count_start}")
+#     print(f"The count of 'val' after cleaning and unique parents is: {val_count_unique}")
 
-    print('The val distribution is now', val_count_unique/len_unique_parents)
+#     print('The val distribution is now', val_count_unique/len_unique_parents)
 
-curate_metxbiodb_main()
-curate_metxbiodb_unique_parents_main()
-curate_metxbiodb_unique_parents_no_clean_main()
+# curate_metxbiodb_main()
+# curate_metxbiodb_unique_parents_main()
+# curate_metxbiodb_unique_parents_no_clean_main()
 
 #RESULTS:
 

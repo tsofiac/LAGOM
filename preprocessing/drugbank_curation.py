@@ -309,7 +309,7 @@ if __name__ == "__main__":
     get_hdmb_structures = False
     get_reaction_pairs = False
     
-    combine_all_structures = False
+    combine_all_structures = True
     extend_dataset = True
    
 
@@ -363,13 +363,16 @@ if __name__ == "__main__":
         generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs,-1)
         filter_endogenous_reaction(drugbank_reaction_pairs)
         # Missing data: 45
+        # Nr of rows: 4045 (original)
+        # Nr of rows: 3194 (endogenous)
+        # Nr of rows: 2610 (duplicates)
 
     # Combine all strucutres into one file
     drugbank_full_structures = "dataset/processed_data/drugbank_full_structures.csv"
     if combine_all_structures:          
         combine_datasets(parsed_drug_structures, parsed_metabolite_structures, drugbank_full_structures)
         combine_datasets(drugbank_full_structures, parsed_external_stuctures, drugbank_full_structures)
-        combine_datasets(drugbank_full_structures, hmdb_cleaned, drugbank_full_structures)
+        # combine_datasets(drugbank_full_structures, hmdb_cleaned, drugbank_full_structures) 
         remove_duplicates(drugbank_full_structures)
 
     # Extend reaction pairs with SMILES
@@ -378,3 +381,11 @@ if __name__ == "__main__":
         map_smiles_to_reaction_pairs(drugbank_reaction_pairs, drugbank_full_structures, mapped_smiles_to_reactions, True)
         map_smiles_to_reaction_pairs(mapped_smiles_to_reactions, drugbank_full_structures, mapped_smiles_to_reactions, False)
         clean_smiles(mapped_smiles_to_reactions)
+        # Number of dropped rows:  1312 (without HMDB)
+        
+        
+    # Without hmdb
+    # drugbank_full_structures: 225782 -> 15324
+    # drugbank_smiles: 1300 -> 1299
+
+    # Might be worth removing hmdb all in all... 
