@@ -6,14 +6,13 @@ from standardize_smiles import standardize_smiles_collection
 # from standardize_smiles_ours import standardize_molecule, standardize_smiles_collection, standardize_smiles_main
 
 
-def test_val_distribute(input_file, output_file): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
+def test_val_distribute(input_file, output_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
     df = pd.read_csv(input_file)
     # Add an empty column named 'set'
     df['set'] = None
 
-    # Split the DataFrame into train (90%) and validation (10%) sets.
     # Random_state is for reproducibility
-    train_df, val_df = train_test_split(df, test_size=0.1, random_state=26)
+    train_df, val_df = train_test_split(df, test_size=val_size, random_state=26)
 
     # Assign "train" and "val" labels
     train_df['set'] = 'train'
@@ -22,17 +21,15 @@ def test_val_distribute(input_file, output_file): #Input csv file. Function adds
     # Combine the train and validation DataFrames
     final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
 
-    print("The df is now distributed into training and validation")
-
     final_df.to_csv(output_file, index=False)
 
 
-# From standardize_smiles_ours
-def standardize_smiles_main(input_file): #input df that has columns 'parent_smiles' and 'child_smiles'
-    df = pd.read_csv(input_file)
-    df['parent_smiles'] = standardize_smiles_collection(df['parent_smiles'], False) #'False' eliminates isomeres
-    df['child_smiles'] = standardize_smiles_collection(df['child_smiles'], False)
-    df.to_csv(input_file, index=False)
+# # From standardize_smiles_ours
+# def standardize_smiles_main(input_file): #input df that has columns 'parent_smiles' and 'child_smiles'
+#     df = pd.read_csv(input_file)
+#     df['parent_smiles'] = standardize_smiles_collection(df['parent_smiles'], False) #'False' eliminates isomeres
+#     df['child_smiles'] = standardize_smiles_collection(df['child_smiles'], False)
+#     df.to_csv(input_file, index=False)
 
 
 def get_unique_parents(input_file):
@@ -56,10 +53,15 @@ def get_unique_parents(input_file):
     # Create a new DataFrame from the unique dataset, preserving other columns
     unique_parent_df = pd.DataFrame(unique_parent_dataset).reset_index(drop=True)
     unique_parent_df = unique_parent_df[['parent_smiles'] + other_columns]
+
+    val_count_end = (unique_parent_df['set'] == 'val').sum()
+
+    print('Unique parent val distribution: ', val_count_end/len(unique_parent_df))
+
     unique_parent_df.to_csv(input_file, index=False)
 
 
-def modifiy_columns(input_file, output_file):
+def reformat_for_chemformer(input_file, output_file):
     df = pd.read_csv(input_file)
     try:
         new_df = pd.DataFrame({
@@ -68,8 +70,6 @@ def modifiy_columns(input_file, output_file):
             'set': df['set']
         })
         
-        print(f"Transformation completed. The df now has columns: products, reactants, and set (empty)")
-    
     except KeyError as e:
         print(f"Error: Missing required column in the input data: {e}")
     except Exception as e:
@@ -78,39 +78,72 @@ def modifiy_columns(input_file, output_file):
     new_df.to_csv(output_file, sep='\t', index=False)
 
 
+
+def small_dataset(input_file, output_file, size):
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv(input_file)
+    
+    # Check if size is less than or equal to the number of rows in the DataFrame
+    if size > len(df):
+        raise ValueError("Size is greater than the number of rows in the dataset.")
+    
+    # Select a random sample of rows
+    random_sample = df.sample(n=size)
+    
+    # Write the random sample to an output CSV file
+    random_sample.to_csv(output_file, index=False)
+
+
+
+
 if __name__ == "__main__":
 
-    preprocess_clean = True
-    preprocess_clean_unique_parents = True
-    preprocess_unique_parents_no_clean = True
+    val_size = 0.1
+    preprocess_full = True
+    preprocess_unique_parents = True
 
-    name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' ]
-    dataset = f'dataset/curated_data/{name}_smiles.csv'
+    size = 733
+    get_small_dataset = True
+
+    name = 'drugbank' # [ 'drugbank' 'metxbiodb' ]
     
+    
+    # SPECIFY WHICH DATASET TO USE!
+    dataset = f'dataset/curated_data/{name}_smiles_standard.csv'
 
-    clean = f'dataset/curated_data/{name}_clean.csv'
-    clean_finetune = f'dataset/finetune/{name}_clean_finetune.csv'
-    if preprocess_clean:
-        test_val_distribute(dataset, clean)
-        standardize_smiles_main(clean)
-        modifiy_columns(clean, clean_finetune)
-
-
-    clean_unique = f'dataset/curated_data/{name}_clean_unique_parents.csv'
-    clean_unique_finetune = f'dataset/finetune/{name}_clean_unique_parents_finetune.csv'
-    if preprocess_clean_unique_parents:
-        test_val_distribute(dataset, clean_unique)
-        standardize_smiles_main(clean_unique)
-        get_unique_parents(clean_unique)
-        modifiy_columns(clean_unique, clean_unique_finetune)
-
+    full = f'dataset/curated_data/{name}_full.csv'
+    finetune = f'dataset/finetune/{name}_full_finetune.csv'
+    finetune_small = f'dataset/finetune/{name}_full_finetune_small.csv'
+    if preprocess_full:
+        test_val_distribute(dataset, full, val_size)
+        reformat_for_chemformer(full, finetune)
+        if get_small_dataset:
+            small_dataset(finetune, finetune_small, size)
 
     unique = f'dataset/curated_data/{name}_unique_parents.csv'
-    unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv' 
-    if preprocess_unique_parents_no_clean:
-        test_val_distribute(dataset, unique)
+    unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv'
+    unique_finetune_small = f'dataset/finetune/{name}_unique_parents_finetune_small.csv'
+    if preprocess_unique_parents:
+        test_val_distribute(dataset, unique, val_size)
         get_unique_parents(unique)
-        modifiy_columns(unique, unique_finetune)
+        reformat_for_chemformer(unique, unique_finetune)
+        if get_small_dataset:
+            small_dataset(unique_finetune, unique_finetune_small, size)
+
+
+    # unique = f'dataset/curated_data/{name}_unique_parents.csv'
+    # unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv' 
+    # unique_finetune_small = f'dataset/finetune/{name}_unique_parents_finetune_small.csv' 
+    # if preprocess_unique_parents_no_clean:
+    #     test_val_distribute(dataset, unique)
+    #     get_unique_parents(unique)
+    #     modifiy_columns(unique, unique_finetune)
+    #     if get_small_dataset:
+    #         part_of_dataset(unique_finetune, unique_finetune_small, size)
+
+
+    
+
 
 
 
