@@ -361,7 +361,7 @@ if __name__ == "__main__":
     drugbank_reaction_pairs = "dataset/processed_data/drugbank_reaction_pairs.csv"
     if get_reaction_pairs: 
         generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs,-1)
-        filter_endogenous_reaction(drugbank_reaction_pairs)
+        filter_endogenous_reaction(drugbank_reaction_pairs) # 
         # Missing data: 45
         # Nr of rows: 4045 (original)
         # Nr of rows: 3194 (endogenous)
