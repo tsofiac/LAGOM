@@ -6,6 +6,7 @@ import pandas as pd
 import os
 from pathlib import Path
 from collections import Counter
+from standardize_smiles import standardize_smiles_collection
 
 # input should have child_smiles and parent_smiles
 # def filter_out_data_on_parent_and_child(data, filter_method): 
@@ -24,7 +25,7 @@ from collections import Counter
 #     return data, total_removed
 
 # saving removed data
-def filter_out_data_on_parent_and_child(data, filter_method): 
+def filter_out_data_on_both_sides(data, filter_method): 
     total_removed = 0
 
     # Filtering based on child molecules
@@ -43,15 +44,18 @@ def filter_out_data_on_parent_and_child(data, filter_method):
 
     return filtered_data, removed_data, total_removed
 
-def filter_out_data_on_parent(data, filter_method): 
+def filter_out_data_on_one_side(data, filter_method, if_parent = True): 
+    name_property = "parent_smiles" if if_parent else "child_smiles"
+
     total_removed = 0
 
     # Filtering based on parent molecules
-    allowed_molecules = [filter_method(molecule) for molecule in data["parent_smiles"]]
-    data = data[allowed_molecules]
+    allowed_molecules = [filter_method(molecule) for molecule in data[name_property]]
+    filtered_data = data[allowed_molecules]
+    removed_data = data[[not allowed for allowed in allowed_molecules]]
     total_removed += allowed_molecules.count(False)
 
-    return data, total_removed
+    return filtered_data, removed_data, total_removed
 
 def molecule_allowed_based_on_weight(molecule, max_weight=700, min_weight=100): 
     mol_weight = Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule))

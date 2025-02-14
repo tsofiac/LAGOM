@@ -1,7 +1,7 @@
 # sbatch fine_tune.sh \
 ./chemformer/fine_tune.sh \
     chemformer/fine_tune_bart.yaml \
-    dataset/finetune/metxbiodb_clean_unique_parents_finetune_small.csv \
+    dataset/curated_data/filtered/filtered_fingerprint_drugbank_clean_unique_parents.csv \
     step=1000000_mod_no_deepspeed.ckpt \
     64 \
     chemformer/bart_vocab_downstream.json \
