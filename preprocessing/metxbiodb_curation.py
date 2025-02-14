@@ -43,16 +43,15 @@ def metxbiodb_inchi_to_smiles(data, output_file):
     smiles_metxbiodb_df.columns = ['parent_name', 'parent_smiles', 'child_name', 'child_smiles']
   
     smiles_metxbiodb_df.to_csv(output_file, index=False)
-    return smiles_metxbiodb_df
+
 
 
 if __name__ == "__main__":
 
-    file = 'dataset/raw_data/metxbiodb.csv'
-
+    dataset = 'dataset/raw_data/metxbiodb.csv'
     final = 'dataset/curated_data/metxbiodb_smiles.csv'
 
-    metxbiodb = load_metxbiodb(file)
+    metxbiodb = load_metxbiodb(dataset)
     metxbiodb_inchi_to_smiles(metxbiodb, final)
 
 # def modifiy_columns(df): # Returns a df ready for fine-tuning
