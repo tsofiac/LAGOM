@@ -55,7 +55,7 @@ def filter_data_on_one_side(data_file, filter_method, removed_data_file, if_pare
     filtered_data.to_csv(data_file, index=False)
     removed_data.to_csv(removed_data_file, index=False)
 
-    print(f"Total data points removed: {total_removed}")
+    print(f"Total data points removed with {filter_method.__name__}: {total_removed}")
 
 # filtering methods
 # ----------------------------------------------------------------
@@ -68,7 +68,7 @@ def atoms_allowed_in_molecules(molecule):
     atoms = [atom.GetSymbol() for atom in mol.GetAtoms()]
     return set(atoms).issubset(set(atoms_to_include)) #Returns true if all atoms in the molecule are included in the specified set
 
-def molecule_allowed_based_on_weight(molecule, max_weight=700, min_weight=100): 
+def molecule_allowed_based_on_weight(molecule, max_weight=750, min_weight=100): 
     mol_weight = Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule))
     if mol_weight <= max_weight and mol_weight >= min_weight: 
         return True
@@ -174,7 +174,7 @@ print(removed_data)
 if __name__ == "__main__":
 
 
-    name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' ]
+    name = 'drugbank' # [ 'drugbank' 'metxbiodb' ]
 
     dataset = f'dataset/curated_data/{name}_smiles.csv'
     clean = f'dataset/curated_data/{name}_smiles_clean.csv'
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     standardize_smiles(dataset, clean)
     filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
     filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
-    filter_data_on_both_sides(clean, molecule_allowed_based_on_weight, removed_weights_allowed)
+    filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
     finger_print_similarity_filter(clean, removed_fingerprints)
     if name == 'drugbank':
         filter_endogenous_reaction(clean, removed_reactions)
