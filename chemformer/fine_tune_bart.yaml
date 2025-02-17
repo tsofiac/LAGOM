@@ -6,7 +6,7 @@ resume: false
 
 n_epochs: 50
 batch_size: BATCH_SIZE
-augmentation_probability: 0.5'
+augmentation_probability: 0.5
 augmentation_strategy: all
 
 vocabulary_path: VOCABULARY_PATH

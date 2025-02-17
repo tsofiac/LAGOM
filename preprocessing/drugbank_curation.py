@@ -45,52 +45,8 @@ def remove_bad_drug_metabolite_rows(input_file):
     df.dropna(subset=['smiles', 'inchi'], how='all', inplace=True)
     final_row_count = len(df)
     dropped_count = initial_row_count - final_row_count
-    print("Number of dropped rows: ", dropped_count)
+    print("Missing data: ", dropped_count)
     df.to_csv(input_file, index=False)
-
-
-def hmdb_metabolite_map(input_file, output_file, num_iter = 10000):
-    # Create an iterator for parsing the XML file incrementally
-    context = ET.iterparse(input_file, events=('start', 'end'))
-    smiles_db_pair = []
-    smiles_db_pairs = []
-    prev_was_accession = False
-    for i, (event, element) in enumerate(context):
-        # Keep track on iteration and potenially break
-        if (i % 1000000 == 0):
-            print(f'iteration {i}')
-        if(i == num_iter):
-            break
-        # Split the tag to remove garbage
-        if(element.tag =="root"):
-            tag = "root"
-        else:
-            tag = element.tag.split('}')[1]
-                  
-        if event == 'start':
-            if(tag == "metabolite"):
-                if(len(smiles_db_pair) == 3 ):
-                    smiles_db_pairs.append(smiles_db_pair)
-                    smiles_db_pair = []
-
-                else:
-                    smiles_db_pair = []
-            if(tag == "smiles" or tag == "drugbank_id"):
-                smiles_db_pair.append(element.text)
-            if(tag == "accession"):
-                prev_was_accession = True
-                continue
-            if(prev_was_accession and tag == "name"):
-                smiles_db_pair.append(element.text)
-                prev_was_accession = False
-
-        elif event == 'end':
-            # Clean up the element when the end tag is encountered
-            element.clear()
-
-    df = pd.DataFrame(smiles_db_pairs, columns=['name',"smiles","dbid"])
-    df['inchi'] = ""
-    df.to_csv(output_file, index=False)
 
 def count_nan_smiles(csv_file):
     df = pd.read_csv(csv_file)
@@ -99,7 +55,6 @@ def count_nan_smiles(csv_file):
     print('Missing SMILES: ', nan_count)
 
 def inchi_to_smiles(csv_file):
-
     df = pd.read_csv(csv_file)
     # Iterate over each row where `smiles` is NaN
     for index, row in df[df['smiles'].isna()].iterrows():
@@ -117,9 +72,7 @@ def inchi_to_smiles(csv_file):
         
         except Exception as e:
             print(f"ERROR processing row {index}, DBID: {row['dbid']}, error: {e}")
-
     df.to_csv(csv_file, index=False)
-
 
 # combines two dataframes
 def combine_datasets(first_file,second_file,output_file):
@@ -135,18 +88,22 @@ def combine_datasets(first_file,second_file,output_file):
 
     output_df.to_csv(output_file, index=False)
 
-
 def remove_duplicates(csv_file):
 
     df = pd.read_csv(csv_file)
+    initial_row_count = len(df)
 
     print('Nr Rows 1: ', len(df))
     df=df[df['dbid'].isnull() | ~df[df['dbid'].notnull()].duplicated(subset='dbid',keep='first')]
     print('Nr Rows 2: ', len(df))
     df=df[df['name'].isnull() | ~df[df['name'].notnull()].duplicated(subset='name',keep='first')]
     print('Nr Rows 3: ', len(df))
+    final_row_count = len(df)
+    dropped_count = initial_row_count - final_row_count
+    print("Number of duplicates removed: ", dropped_count)
 
     df.to_csv(csv_file, index=False)
+
 
 class Reaction:
     def __init__(self):
@@ -158,97 +115,126 @@ class Reaction:
 
     def has_data(self):
         return any([getattr(self, attr) for attr in vars(self)])
-
-def generate_reaction_pairs(input_file, output_file,num_iter = 20000): # possible to incorporate enzymes from prev master thesis code
+    
+def generate_reaction_pairs(input_file, output_file):
     # Create an iterator for parsing the XML file incrementally
     context = ET.iterparse(input_file, events=('start', 'end'))
-    parent_child_ids = []
-    
+    parent_child_ids_set = set()  # Use a set to store unique reaction tuples
+    duplicate_count = 0  # Counter to track number of duplicates
+
     local_reaction = Reaction()
     is_in_local_reaction = False
-    # is_in_enzymes = False
     right_or_left_reaction = "left"
     count = 0
+
     for i, (event, element) in enumerate(context):
-        # Keep track on iteration and potenially break
-        if (i % 1000000 == 0):
+        if i % 1000000 == 0:
             print(f'iteration {i}')
-        if(i == num_iter):
-            break
-        # Split the tag to remove garbage
-        if(element.tag =="root"):
+
+        if element.tag == "root":
             tag = "root"
         else:
-            tag = element.tag.split('}')[1]      
+            tag = element.tag.split('}')[1]
+
         if event == 'start':
-            # We have entered a local reaction.
-            if(tag == "reaction"):
+            if tag == "reaction":
                 is_in_local_reaction = True
-                # If local reaction has data then it is complete or it needs to be investigated
-                if(local_reaction.has_data()):                   
-                    # We need atleast an id or a name on both sides of the reaction
-                    # To map data
-                    if((local_reaction.left_side_id == "" and local_reaction.left_side_name == "") or (local_reaction.right_side_id == "" and local_reaction.right_side_name == "")):
+                if local_reaction.has_data():
+                    if (local_reaction.left_side_id == "" and local_reaction.left_side_name == "") or (local_reaction.right_side_id == "" and local_reaction.right_side_name == ""):
                         count += 1
                     else:
-                        parent_child_ids.append([local_reaction.left_side_id, local_reaction.left_side_name, local_reaction.right_side_id, local_reaction.right_side_name])
-                    # we reset here since we want to look for the new reaction
+                        # Create a tuple to ensure uniqueness
+                        reaction_tuple = (
+                            local_reaction.left_side_id, 
+                            local_reaction.left_side_name, 
+                            local_reaction.right_side_id, 
+                            local_reaction.right_side_name
+                        )
+                        # Check if the tuple is already in the set
+                        if reaction_tuple in parent_child_ids_set:
+                            duplicate_count += 1
+                        else:
+                            parent_child_ids_set.add(reaction_tuple)  # Add unique reaction to the set
+
+                    # Reset for the next reaction
                     local_reaction = Reaction()
 
-            # To keep track on what data we are looking at
-            if(tag == "left-element" and is_in_local_reaction):
+            if tag == "left-element" and is_in_local_reaction:
                 right_or_left_reaction = "left"
-            if(tag == "right-element" and is_in_local_reaction):
+            if tag == "right-element" and is_in_local_reaction:
                 right_or_left_reaction = "right"
-            
-            if(tag == "drugbank-id" and is_in_local_reaction):
-                if(right_or_left_reaction == "left"):
+
+            if tag == "drugbank-id" and is_in_local_reaction:
+                if right_or_left_reaction == "left":
                     local_reaction.left_side_id = element.text
-                elif(right_or_left_reaction == "right"):
+                elif right_or_left_reaction == "right":
                     local_reaction.right_side_id = element.text
-        
-            if(tag == "name" and is_in_local_reaction):
-                if(right_or_left_reaction == "left"):
+
+            if tag == "name" and is_in_local_reaction:
+                if right_or_left_reaction == "left":
                     local_reaction.left_side_name = element.text
-                elif(right_or_left_reaction == "right"):
-                    local_reaction.right_side_name = element.text  
-            
-            # We know its the end of the reaction if this tag shows
-            if(tag == "snp-effects"):
+                elif right_or_left_reaction == "right":
+                    local_reaction.right_side_name = element.text
+
+            if tag == "snp-effects":
                 is_in_local_reaction = False
 
         elif event == 'end':
-            # Clean up the element when the end tag is encountered
             element.clear()
-    print('Number of rows with missing data: ', count)
-    df = pd.DataFrame(parent_child_ids, columns=["parent_id",'parent_name',"child_id",'child_name'])
+
+    print('Number of rows with missing data:', count)
+    print('Number of duplicates removed:', duplicate_count)
+    df = pd.DataFrame(list(parent_child_ids_set), columns=["parent_id", "parent_name", "child_id", "child_name"])
     df.to_csv(output_file, index=False)
 
-def filter_endogenous_reaction(input_file):
+# def filter_endogenous_reaction(input_file):
 
-    original_df = pd.read_csv(input_file)
-    print('Number of rows: ', len(original_df))
-    only_db_parents_df = original_df[~original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that not contain DBMET
-    original_df = original_df[original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that contain DBMET
+#     original_df = pd.read_csv(input_file)
+#     print('Number of rows: ', len(original_df))
+#     only_db_parents_df = original_df[~original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that not contain DBMET
+#     original_df = original_df[original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that contain DBMET
 
-    num_new_rows = 1
-    while( num_new_rows != 0 ):
-        # Parent is DBMET. If parent is child in any reaction in only_db_parents_df. Then keep it
+#     num_new_rows = 1
+#     while( num_new_rows != 0 ):
+#         # Parent is DBMET. If parent is child in any reaction in only_db_parents_df. Then keep it
         
-        child_ids = only_db_parents_df['child_id'].tolist()
-        # store rows where parents are child in list
-        metabolite_parent_with_drug_origin_df  = original_df[ original_df['parent_id'].isin(child_ids) ]
-        # drop all childs that are not childs of drugs or drug metabolites
-        original_df = original_df[~original_df['parent_id'].isin(child_ids) ]
+#         child_ids = only_db_parents_df['child_id'].tolist()
+#         # store rows where parents are child in list
+#         metabolite_parent_with_drug_origin_df  = original_df[ original_df['parent_id'].isin(child_ids) ]
+#         # drop all childs that are not childs of drugs or drug metabolites
+#         original_df = original_df[~original_df['parent_id'].isin(child_ids) ]
 
-        only_db_parents_df = pd.concat([only_db_parents_df,metabolite_parent_with_drug_origin_df])
-        num_new_rows = len(metabolite_parent_with_drug_origin_df)
-        print("Number of dropped rows: ", len(original_df))
+#         only_db_parents_df = pd.concat([only_db_parents_df,metabolite_parent_with_drug_origin_df])
+#         num_new_rows = len(metabolite_parent_with_drug_origin_df)
+#         print("Number of dropped rows: ", len(original_df))
 
-    print('Number of rows: ', len(only_db_parents_df))
-    unique_reactions_df = only_db_parents_df.drop_duplicates() # Keep unique rows only 
-    print('Number of rows: ', len(unique_reactions_df))
-    unique_reactions_df.to_csv(input_file, index=False)
+#     print('Number of rows: ', len(only_db_parents_df))
+#     only_db_parents_df.to_csv(input_file, index=False)
+
+# def filter_endogenous_reaction(data_file, removed_data_file):
+
+#     original_df = pd.read_csv(data_file)
+#     only_db_parents_df = original_df[~original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that not contain DBMET
+#     only_dbmet_parents_df = original_df[original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that contain DBMET
+
+#     num_new_rows = 1
+#     while( num_new_rows != 0 ):
+#         # Parent is DBMET. If parent is child in any reaction in only_db_parents_df. Then keep it
+        
+#         child_ids = only_db_parents_df['child_id'].tolist()
+#         # store rows where parents are child in list
+#         metabolite_parent_with_drug_origin_df  = only_dbmet_parents_df[only_dbmet_parents_df['parent_id'].isin(child_ids) ]
+#         # drop all children that are not children of drugs or drug metabolites
+#         only_dbmet_parents_df  = only_dbmet_parents_df[~only_dbmet_parents_df['parent_id'].isin(child_ids) ]
+
+#         only_db_parents_df = pd.concat([only_db_parents_df,metabolite_parent_with_drug_origin_df])
+#         num_new_rows = len(metabolite_parent_with_drug_origin_df)
+
+#     only_dbmet_parents_df.to_csv(removed_data_file, index=False)
+#     print('Total data points removed due to endogenous: ', len(only_dbmet_parents_df))
+#     print('Number of og rows: ', len(original_df))
+#     print('Number of only_db rows: ', len(only_db_parents_df))
+#     only_db_parents_df.to_csv(data_file, index=False)
 
 
 def map_smiles_to_reaction_pairs(reaction_pairs_file, structures_file, output_file, is_drug=False):
@@ -295,19 +281,12 @@ def clean_smiles(input_file): # this makes 100% sense
 
 
 
-
-
-
-
-
-
 if __name__ == "__main__":
 
-    get_drug_structures = False
-    get_metabolite_structures = False
-    get_external_structures = False
-    get_hdmb_structures = False
-    get_reaction_pairs = False
+    get_drug_structures = True
+    get_metabolite_structures = True
+    get_external_structures = True
+    get_reaction_pairs = True
     
     combine_all_structures = True
     extend_dataset = True
@@ -320,7 +299,7 @@ if __name__ == "__main__":
         sdf_to_csv(drugbank_drug_structures, parsed_drug_structures, is_drug_information=True)
         remove_bad_drug_metabolite_rows(parsed_drug_structures)
         count_nan_smiles(parsed_drug_structures)
-        # Number of rows dropped: 0
+        # Missing data:: 0
         # Missing SMILES: 0
 
     ## Metabolite structure - drugbank_metabolite_structures.sdf
@@ -330,7 +309,7 @@ if __name__ == "__main__":
         sdf_to_csv(drugbank_metabolite_structures, parsed_metabolite_structures, is_drug_information=False)
         remove_bad_drug_metabolite_rows(parsed_metabolite_structures)
         count_nan_smiles(parsed_metabolite_structures)
-        # Number of rows dropped: 0
+        # Missing data:: 0
         # Missing SMILES: 0
             
     ## External drugs - drugbank_external_structures.csv
@@ -342,38 +321,28 @@ if __name__ == "__main__":
         count_nan_smiles(parsed_external_stuctures)
         inchi_to_smiles(parsed_external_stuctures)
         count_nan_smiles(parsed_external_stuctures)
-        # Number of rows dropped: 850
+        # Missing data:: 850
         # Missing SMILES: 3
-        # Missing SMILES: 0
-
-    ## HMDB drug and metabolites - hmdb_metabolites.xml
-    hmdb_metabolites = "dataset/raw_data/hmdb_metabolites.xml"
-    hmdb_cleaned = "dataset/processed_data/hmdb_cleaned.csv"
-    if get_hdmb_structures:
-        hmdb_metabolite_map(hmdb_metabolites,hmdb_cleaned, -1)
-        remove_bad_drug_metabolite_rows(hmdb_cleaned)
-        count_nan_smiles(hmdb_cleaned)
-        # Number of rows dropped: 2119
         # Missing SMILES: 0
 
     # Get the reaction pairs - drugbank_full_database.xml
     drugbank_full_database = "dataset/raw_data/drugbank_full_database.xml"
     drugbank_reaction_pairs = "dataset/processed_data/drugbank_reaction_pairs.csv"
     if get_reaction_pairs: 
-        generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs,-1)
-        filter_endogenous_reaction(drugbank_reaction_pairs) # 
+        generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
         # Missing data: 45
-        # Nr of rows: 4045 (original)
-        # Nr of rows: 3194 (endogenous)
-        # Nr of rows: 2610 (duplicates)
+        # Number of duplicates removed: 680
+        # Nr of rows: 3365 (original)  
+        # filter_endogenous_reaction(drugbank_reaction_pairs)     
+        # Nr of rows: 2610 (not endogenous)
 
     # Combine all strucutres into one file
     drugbank_full_structures = "dataset/processed_data/drugbank_full_structures.csv"
     if combine_all_structures:          
         combine_datasets(parsed_drug_structures, parsed_metabolite_structures, drugbank_full_structures)
         combine_datasets(drugbank_full_structures, parsed_external_stuctures, drugbank_full_structures)
-        # combine_datasets(drugbank_full_structures, hmdb_cleaned, drugbank_full_structures) 
         remove_duplicates(drugbank_full_structures)
+        # Number of duplicates removed:  12392
 
     # Extend reaction pairs with SMILES
     mapped_smiles_to_reactions = "dataset/curated_data/drugbank_smiles.csv"
@@ -381,11 +350,76 @@ if __name__ == "__main__":
         map_smiles_to_reaction_pairs(drugbank_reaction_pairs, drugbank_full_structures, mapped_smiles_to_reactions, True)
         map_smiles_to_reaction_pairs(mapped_smiles_to_reactions, drugbank_full_structures, mapped_smiles_to_reactions, False)
         clean_smiles(mapped_smiles_to_reactions)
-        # Number of dropped rows:  1312 (without HMDB)
+        # Missing data:  1707
+        # filter_endogenous_reaction(mapped_smiles_to_reactions)
         
-        
-    # Without hmdb
-    # drugbank_full_structures: 225782 -> 15324
-    # drugbank_smiles: 1300 -> 1299
 
-    # Might be worth removing hmdb all in all... 
+    '''
+                        reaction_pairs      full_structure      smiles
+    endogenous + hmdb   2610                225782              1299
+    endogenous          2610                15324               1298
+    hmdb                3365                225782              1659
+    none                3365                15324               1658 <-- winning concept!
+
+    1. no endogenous                   1658
+    2. endogenous in extend_dataset    1287
+    3. endogenous in reaction_pairs    1298
+
+    '''
+
+# get_hdmb_structures = False
+
+# ## HMDB drug and metabolites - hmdb_metabolites.xml
+# hmdb_metabolites = "dataset/raw_data/hmdb_metabolites.xml"
+# hmdb_cleaned = "dataset/processed_data/hmdb_cleaned.csv"
+# if get_hdmb_structures:
+#     hmdb_metabolite_map(hmdb_metabolites,hmdb_cleaned, -1)
+#     remove_bad_drug_metabolite_rows(hmdb_cleaned)
+#     count_nan_smiles(hmdb_cleaned)
+#     # Number of rows dropped: 2119
+#     # Missing SMILES: 0
+
+# combine_datasets(drugbank_full_structures, hmdb_cleaned, drugbank_full_structures) 
+
+# def hmdb_metabolite_map(input_file, output_file, num_iter = 10000):
+#     # Create an iterator for parsing the XML file incrementally
+#     context = ET.iterparse(input_file, events=('start', 'end'))
+#     smiles_db_pair = []
+#     smiles_db_pairs = []
+#     prev_was_accession = False
+#     for i, (event, element) in enumerate(context):
+#         # Keep track on iteration and potenially break
+#         if (i % 1000000 == 0):
+#             print(f'iteration {i}')
+#         if(i == num_iter):
+#             break
+#         # Split the tag to remove garbage
+#         if(element.tag =="root"):
+#             tag = "root"
+#         else:
+#             tag = element.tag.split('}')[1]
+                  
+#         if event == 'start':
+#             if(tag == "metabolite"):
+#                 if(len(smiles_db_pair) == 3 ):
+#                     smiles_db_pairs.append(smiles_db_pair)
+#                     smiles_db_pair = []
+
+#                 else:
+#                     smiles_db_pair = []
+#             if(tag == "smiles" or tag == "drugbank_id"):
+#                 smiles_db_pair.append(element.text)
+#             if(tag == "accession"):
+#                 prev_was_accession = True
+#                 continue
+#             if(prev_was_accession and tag == "name"):
+#                 smiles_db_pair.append(element.text)
+#                 prev_was_accession = False
+
+#         elif event == 'end':
+#             # Clean up the element when the end tag is encountered
+#             element.clear()
+
+#     df = pd.DataFrame(smiles_db_pairs, columns=['name',"smiles","dbid"])
+#     df['inchi'] = ""
+#     df.to_csv(output_file, index=False)

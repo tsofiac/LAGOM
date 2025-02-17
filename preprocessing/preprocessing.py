@@ -103,13 +103,13 @@ if __name__ == "__main__":
     preprocess_unique_parents = True
 
     size = 733
-    get_small_dataset = True
+    get_small_dataset = False
 
-    name = 'drugbank' # [ 'drugbank' 'metxbiodb' ]
+    name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' ]
     
     
     # SPECIFY WHICH DATASET TO USE!
-    dataset = f'dataset/curated_data/{name}_smiles_standard.csv'
+    dataset = f'dataset/curated_data/{name}_smiles_clean.csv'
 
     full = f'dataset/curated_data/{name}_full.csv'
     finetune = f'dataset/finetune/{name}_full_finetune.csv'
