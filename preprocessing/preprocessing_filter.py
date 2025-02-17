@@ -96,7 +96,7 @@ def define_finger_print_similarity(dataset):
     return dataset
 
 def fingerprints_allowed(similarity, min_similarity):
-    if similarity < min_similarity or similarity == 1:
+    if similarity < min_similarity or similarity == 1: # Should later not be removed by similarity ==1
         return False
     return True
 
@@ -115,6 +115,25 @@ def finger_print_similarity_filter(data_file, removed_data_file, min_similarity 
     removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with finger_print_similarity_filter: {total_removed}")
+
+def non_equal_smiles(parent_smiles, child_smiles):
+    # Returns True if the smiles are not equal, False otherwise.
+    return parent_smiles != child_smiles
+
+def equal_parent_child_filter(data_file, removed_data_file):
+    data = pd.read_csv(data_file)
+
+    total_removed = 0
+
+    allowed_molecules = [define_non_equal_smiles(row['parent_smiles'], row['child_smiles']) for index, row in data.iterrows()]
+    filtered_data = data[allowed_molecules]
+    removed_data = data[[not allowed for allowed in allowed_molecules]]
+    total_removed += allowed_molecules.count(False)
+
+    filtered_data.to_csv(data_file, index=False)
+    removed_data.to_csv(removed_data_file, index=False)
+
+    print(f"Total data points removed with equal_parent_child_filter: {total_removed}")
 
 
 def filter_endogenous_reaction(data_file, removed_data_file):
@@ -183,12 +202,14 @@ if __name__ == "__main__":
     removed_reactions = f'dataset/removed_data/{name}_removed_reactions.csv'
     removed_atoms_allowed = f'dataset/removed_data/{name}_removed_atoms_allowed.csv'
     removed_weights_allowed = f'dataset/removed_data/{name}_removed_weights_allowed.csv'
+    removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
     removed_fingerprints = f'dataset/removed_data/{name}_removed_fingerprints.csv'
 
     standardize_smiles(dataset, clean)
     filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
     filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
     filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+    equal_parent_child_filter(clean, non_equal_smiles, removed_equal)
     finger_print_similarity_filter(clean, removed_fingerprints)
     if name == 'drugbank':
         filter_endogenous_reaction(clean, removed_reactions)
