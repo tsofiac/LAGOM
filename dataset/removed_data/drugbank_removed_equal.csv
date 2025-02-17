@@ -1,0 +1,40 @@
+parent_id,parent_name,child_id,child_name,parent_smiles,child_smiles
+DB00590,Doxazosin,DBMET02604,"Hydroxylated metabolite, Doxazosin",COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC
+DBMET03411,Deoxydaunorubicin aglycone,DBMET03406,,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3
+DB00853,Temozolomide,DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
+DB01409,,DBMET02593,N-methylscopine,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12
+DBMET03287,3-Hydroxy Pindolol,DBMET03288,Pindolol Sulfate,CC(C)N(O)CC(O)COc1cccc2[nH]ccc12,CC(C)N(O)CC(O)COc1cccc2[nH]ccc12
+DB00501,Cimetidine,DBMET03243,hydroxymethyl cimetidine,CNC(=NC#N)NCCSCc1nc[nH]c1C,CNC(=NC#N)NCCSCc1nc[nH]c1C
+DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),DBMET03268,5-aminoimidazole-4-carboxamide (AIC),Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
+DBMET00351,para-hydroxyatorvastatin,DBMET01266,para-hydroxyatorvastatin lactone,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O
+DB01409,Tiotropium,DBMET02592,Dithienylglycolic Acid,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12
+DB09081,Idebenone,DBMET01521,QS10,COC1=C(OC)C(=O)C(CCCCCCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCCCCCCCO)=C(C)C1=O
+DBMET02025,PCI-45741 (M25),DBMET02026,M20,C=CC(=O)NCC(CCC(=O)O)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,C=CC(=O)NCC(CCC(=O)O)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21
+DB00787,Acyclovir,DBMET02605,8-hydroxy-acyclovir,Nc1nc(=O)c2ncn(COCCO)c2[nH]1,Nc1nc(=O)c2ncn(COCCO)c2[nH]1
+DBMET02552,4-oxo-13-cis-retinoic acid,DBMET02550,4-oxo-all-trans-retinoic acid,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O
+DBMET03332,Mirabegron M16 metabolite,DBMET03333,Mirabegron M5 metabolite,Nc1ccc(CCNCC(O)c2ccccc2)cc1,Nc1ccc(CCNCC(O)c2ccccc2)cc1
+DBMET03406,Deoxydaunorubicinol aglycone,DBMET03406,Deoxydaunorubicinol aglycone,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3
+DBMET01937,N-(2-hydroxymethyl-3-chlorophenyl)-anthranilic acid,DBMET01940,N-(2-hydroxymethyl-3-chlorophenyl)-4-hydroxy-anthranilic acid,O=C(OC1OC(O)C(O)C(O)C1O)c1ccccc1Nc1cccc(Cl)c1CO,O=C(OC1OC(O)C(O)C(O)C1O)c1ccccc1Nc1cccc(Cl)c1CO
+DB01171,Moclobemide,DBMET02153,Moclobemide M1,O=C(NCCN1CCOCC1)c1ccc(Cl)cc1,O=C(NCCN1CCOCC1)c1ccc(Cl)cc1
+DBMET03330,Mirabegron M8 metabolite,DBMET03331,Mirabegron M9 metabolite,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1
+DB00175,Pravastatin,DBMET02472,6-epi-pravastatin,CCC(C)C(=O)OC1CC(O)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21,CCC(C)C(=O)OC1CC(O)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21
+DB01076,Atorvastatin,DBMET01268,Atorvastatin lactone,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O
+DB00590,Doxazosin,DBMET02603,"Demethylated metabolite, Doxazosin",COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC
+DBMET00352,ortho-hydroxyatorvastatin,DBMET01267,ortho-hydroxyatorvastatin lactone,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O
+DBMET03256,Ethambutol Aldehyde,DBMET03257,"2,2'-(Ethylenediimino)di-butryic acid",CCC(CO)NCCNC(CC)CO,CCC(CO)NCCNC(CC)CO
+DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),DBMET03269,Methyl diazonium,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
+DB06781,Difluprednate,DBMET00837,difluoroprednisolone butyrate,CCCC(=O)OC1(C(=O)COC(C)=O)CCC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C,CCCC(=O)OC1(C(=O)COC(C)=O)CCC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C
+DB00287,Travoprost,DBMET02216,Travoprost free acid,CC(C)OC(=O)CCCC=CCC1C(O)CC(O)C1C=CC(O)COc1cccc(C(F)(F)F)c1,CC(C)OC(=O)CCCC=CCC1C(O)CC(O)C1C=CC(O)COc1cccc(C(F)(F)F)c1
+DBMET00174,Norbuprenorphine,DBMET01295,Hydroxynorbuprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5
+DB08893,Mirabegron,DBMET03330,Mirabegron M8 metabolite,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1
+DB00501,Cimetidine,DBMET03242,cimetidine sulfoxide,CNC(=NC#N)NCCSCc1nc[nH]c1C,CNC(=NC#N)NCCSCc1nc[nH]c1C
+DBMET02550,4-oxo-all-trans-retinoic acid,DBMET02552,4-oxo-13-cis-retinoic acid,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O
+DB15694,Cedazuridine,DBMET03186,"(4S)-2′-Deoxy-2′,2′-difluoro-3,4,5,6-tetrahydrouridine",O=C1NC(O)CCN1C1OC(CO)C(O)C1(F)F,O=C1NC(O)CCN1C1OC(CO)C(O)C1(F)F
+DB15456,Vericiguat,DBMET03245,Vericiguat debenzylated metabolite,COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N,COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N
+DB00330,Ethambutol,DBMET03256,Ethambutol Aldehyde,CCC(CO)NCCNC(CC)CO,CCC(CO)NCCNC(CC)CO
+DB00982,Isotretinoin,DBMET02548,all-trans-retinoic acid,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
+DB09053,Ibrutinib,DBMET02023,PCI-45773 (M35),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1
+DBMET01101,"2,3-Dihydroxycarbamazepine",DBMET02601,Carbamazepine-o-quinione,NC(=O)N1c2ccccc2C=Cc2cc(O)c(O)cc21,NC(=O)N1c2ccccc2C=Cc2cc(O)c(O)cc21
+DB00853,Temozolomide,DBMET03266,Temozolomide carboxylic acid metabolite (TMA),Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
+DBMET03332,Mirabegron M16 metabolite,DBMET03334,Mirabegron M17 metabolite,Nc1ccc(CCNCC(O)c2ccccc2)cc1,Nc1ccc(CCNCC(O)c2ccccc2)cc1
+DBMET02027,PCI-45752 (M34),DBMET02024,M17,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21

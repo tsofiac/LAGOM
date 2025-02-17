@@ -1,18 +1,15 @@
 parent_name,parent_smiles,child_name,child_smiles
-(R)-halothane,FC(F)(F)C(Cl)Br,"2-chloro-1,1-difluoroethene",FC(F)=CCl
-"2,2-dichloro-1,1,1-trifluoroethane",FC(F)(F)C(Cl)Cl,Trifluoroacetyl chloride,O=CC(F)(F)F
 acetaldehyde,CC=O,Acetic Acid,CC(=O)O
 acrylonitrile,C=CC#N,Cyanoethylene oxide,N#CC1CO1
+aniline,Nc1ccccc1,4-aminophenol,Nc1ccc(O)cc1
+aniline,Nc1ccccc1,N-Hydroxyaniline,ONc1ccccc1
 benzene,c1ccccc1,Phenol,Oc1ccccc1
 bms_275183,COC(=O)OC12COC1CC(O)C1(C)C(=O)C(OC(C)=O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)C)C(C)(C)C)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C,,COC(=O)OC12COC1CC(O)C1(C)C(=O)C(OC(C)=O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)C)C(C)(C)CO)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C
 butadiene_monoxide,C=CC1CO1,diepoxybutane (DEB),C1OC1C1CO1
-itraconazole,CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,Hydroxy-iteraconazole,CC(O)C(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O
-itraconazole,CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,keto-iteraconazole ,CC(=O)C(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O
-clarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,14-(R)-hydroxy-CLAR,COC1(C)CC(OC2C(C)C(=O)OC(C(C)O)C(C)(O)C(O)C(C)C(=O)C(C)CC(C)(OC)C(OC3OC(C)CC(N(C)C)C3O)C2C)OC(C)C1O
-clarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,N-desmethyl-CLAR,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(NC)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O
 cyclosporine_a,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,,CCC1N=C(O)C(C(O)C(C)CC=CCO)N(C)C(=O)C(C(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(C)N=C(O)C(C)N=C(O)C(CC(C)C)N(C)C(=O)C(C(C)C)N=C(O)C(CC(C)C)N(C)C(=O)CN(C)C1=O
 cyclosporine_a,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(O)=NC(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C
 cyclosporine_a,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)(C)O)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C
+digitoxin,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CCC5(C)C(C7=CC(=O)OC7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,Digoxigenin Bisdigitoxoside,CC1OC(OC2C(O)CC(OC3CCC4(C)C(CCC5C4CC(O)C4(C)C(C6=CC(=O)OC6)CCC54O)C3)OC2C)CC(O)C1O
 docetaxel,CC(=O)OC12COC1CC(O)C1(C)C(=O)C(O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)C)c4ccccc4)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C,Hydroxy-Docetaxel,CC(=O)OC12COC1CC(O)C1(C)C(=O)C(O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)CO)c4ccccc4)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C
 ethanol,CCO,Acetaldehyde,CC=O
 ethylmethylnitrosamine,CCN(C)N=O,,CCN=NO
@@ -23,13 +20,14 @@ fk_506,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(
 fk_506,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC,15-O-Desmethyltacrolimus,C=CCC1C=C(C)CC(C)CC(O)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC
 fk_506_m1,C=CCC1C=C(C)CC(C)CC(OC)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O,13-Desmethyl_fk_506,C=CCC1C=C(C)CC(C)CC(O)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O
 furan,c1ccoc1,(E)-2-Butenedial,O=CC=CC=O
+hexane,CCCCCC,Hexanol,CCCCC(C)O
 ivermectin,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,,COC1CC(OC2C(C)=CCC3CCC(CC4(CCC(C(C)C)CO4)O3)OC(=O)C3C=C(C)C(O)C4CCC(=CC=CC2C)C34O)OC(C)C1OC1CC(O)C(O)C(C)O1
 ivermectin,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,,COC1CC(OC2(O)C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O
 ivermectin,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)(C)O)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O
-l-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,2-chloroacetaldehyde,O=CCCl
-l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,chloroacetaldehyde,O=CCCl
 miocamycin,CCC(=O)OC1CC(=O)OC(C)CC=CC=CC(OC(C)=O)C(C)CC(CC=O)C(OC2OC(C)C(OC3CC(C)(OC(C)=O)C(OC(=O)CC)C(C)O3)C(N(C)C)C2O)C1OC,,CCC(=O)OC1CC(=O)OC(C)CC=CC=CC(OC(C)=O)C(C)CC(CC=O)C(OC2OC(C)C(OC3CC(C)(OC(C)=O)C(O)(OC(=O)CC)C(C)O3)C(N(C)C)C2O)C1OC
 n-methylformamide,CNC=O,Methyl Isocyanate,CN=C=O
+phenol,Oc1ccccc1,Hydroquinone,Oc1ccc(O)cc1
+phenol,Oc1ccccc1,Catechol,Oc1ccccc1O
 qttnoskslatgqb-uhfffaoysa-n,O=C(O)CCc1c2[nH]c(c1CC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)C2,uroporphyrin,O=C(O)CCc1c2[nH]c(c1CC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)C(O)c1[nH]c(c(CC(=O)O)c1CCC(=O)O)C2
 rifabutin,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(C)(O)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O
 rifabutin,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(CO)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O
@@ -51,42 +49,20 @@ sirolimus,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC
 sirolimus,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,46-OH-sirolimus,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(CO)CC(C)C=CC=CC=C1C
 taxol,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,6ÃŽÂ±-Hydroxypaclitaxel ,CC(=O)OC1C(=O)C2(C)C(O)C(O)C3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C
 taxol,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,3Ã¢â‚¬Â²-pHydroxypaclitaxel ,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccc(O)cc3)C(C)=C1C2(C)C
-tert-amyl methyl ether,CCC(C)(C)OC,tert-amyl alcohol,CCC(C)(C)O
-tert-butyl ethyl ether (ETBE),CCOC(C)(C)C,Tert-butanol,CC(C)(C)O
 tert-butyl methyl ether,COC(C)(C)C,Tert-butanol,CC(C)(C)O
+toluene,Cc1ccccc1,Benzyl alcohol,OCc1ccccc1
+toluene,Cc1ccccc1,o-Cresol,Cc1ccccc1O
+toluene,Cc1ccccc1,p-Cresol,Cc1ccc(O)cc1
 valspodar,CC=CCC(C)C(=O)C1C(O)=NC(C(C)C)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,,CC=CCC(C)C(=O)C1C(O)=NC(C(C)C)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)CO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C
-Nitrosodiethylamine,CCN(CC)N=O,N-Nitrosomonoethylamine,CCN=NO
 N-Nitrosodimethylamine,CN(C)N=O,N-Nitroso-N-methyl-N-hydroxymethylamine,CN(CO)N=O
 N-Nitrosodimethylamine,CN(C)N=O,N-Nitrosomethylamine,CN=NO
 butadiene,C=CC=C,butadiene_monoxide,C=CC1CO1
 butadiene,C=CC=C,3-buten-2-one,C=CC(C)=O
-Halothane ,FC(F)(F)C(Cl)Br,chlorodifluoroethene,FC(F)=CCl
 VINYL CHLORIDE,C=CCl,,ClC1CO1
 Methylene chloride,ClCCl,Dichloromethanol,OC(Cl)Cl
 Urethane,CCOC(N)=O,Vinyl carbamate,C=COC(N)=O
-Troleandomycin,COC1CC(OC2C(C)C(=O)OC(C)C(C)C(OC(C)=O)C(C)C(=O)C3(CO3)CC(C)C(OC3OC(C)CC(N(C)C)C3OC(C)=O)C2C)OC(C)C1OC(C)=O,,CNC1CC(C)OC(OC2C(C)CC3(CO3)C(=O)C(C)C(OC(C)=O)C(C)C(C)OC(=O)C(C)C(OC3CC(OC)C(OC(C)=O)C(C)O3)C2C)C1OC(C)=O
-DEET,CCN(CC)C(=O)c1cccc(C)c1,acetaldehyde,CC=O
-Bilirubin,C=CC1=C(C)C(O)=NC1=Cc1[nH]c(Cc2[nH]c(C=C3N=C(O)C(C=C)=C3C)c(C)c2CCC(=O)O)c(CCC(=O)O)c1C,"6-[3-[2-[[3-(2-carboxyethyl)-5-[(Z)-(4-ethenyl-3-methyl-5-oxopyrrol-2-ylidene)methyl]-4-methyl-1H-pyrrol-2-yl]methyl]-5-[(Z)-(3-ethenyl-4-methyl-5-oxopyrrol-2-ylidene)methyl]-4-methyl-1H-pyrrol-3-yl]propanoyloxy]-3,4,5-trihydroxyoxane-2-carboxylic acid",C=CC1=C(C)C(O)=NC1=Cc1[nH]c(Cc2[nH]c(C=C3N=C(O)C(C=C)=C3C)c(C)c2CCC(=O)O)c(CCC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1C
-Bilirubin,C=CC1=C(C)C(O)=NC1=Cc1[nH]c(Cc2[nH]c(C=C3N=C(O)C(C=C)=C3C)c(C)c2CCC(=O)O)c(CCC(=O)O)c1C,"(2S,3S,4S,5R,6S)Ã¢â‚¬Â6Ã¢â‚¬Â{[3Ã¢â‚¬Â(2Ã¢â‚¬Â{[3Ã¢â‚¬Â(2Ã¢â‚¬Âcarboxyethyl)Ã¢â‚¬Â5Ã¢â‚¬Â{[(2Z)Ã¢â‚¬Â4Ã¢â‚¬ÂethenylÃ¢â‚¬Â3Ã¢â‚¬ÂmethylÃ¢â‚¬Â5Ã¢â‚¬ÂoxoÃ¢â‚¬Â1HÃ¢â‚¬ÂpyrrolÃ¢â‚¬Â2Ã¢â‚¬Âylidene]methyl}Ã¢â‚¬Â4Ã¢â‚¬ÂmethylÃ¢â‚¬Â1HÃ¢â‚¬ÂpyrrolÃ¢â‚¬Â2Ã¢â‚¬Âyl]methyl}Ã¢â‚¬Â5Ã¢â‚¬Â{[(2Z)Ã¢â‚¬Â3Ã¢â‚¬ÂethenylÃ¢â‚¬Â4Ã¢â‚¬ÂmethylÃ¢â‚¬Â5Ã¢â‚¬ÂoxoÃ¢â‚¬Â1HÃ¢â‚¬ÂpyrrolÃ¢â‚¬Â2Ã¢â‚¬Âylidene]methyl}Ã¢â‚¬Â4Ã¢â‚¬ÂmethylÃ¢â‚¬Â1HÃ¢â‚¬ÂpyrrolÃ¢â‚¬Â3Ã¢â‚¬Âyl)propanoyl]oxy}Ã¢â‚¬Â3,4,5Ã¢â‚¬ÂtrihydroxyoxaneÃ¢â‚¬Â2Ã¢â‚¬Âcarboxylic acid",C=CC1=C(C)C(O)=NC1=Cc1[nH]c(Cc2[nH]c(C=C3N=C(O)C(C=C)=C3C)c(C)c2CCC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c(CCC(=O)O)c1C
-Triiodothyronine,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,,NC(Cc1cc(I)c(Oc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)c(I)c2)c(I)c1)C(=O)O
-Thyroxine,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,,NC(Cc1cc(I)c(Oc2cc(I)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(I)c2)c(I)c1)C(=O)O
-Irinotecan,CCc1c2c(nc3ccc(OC(=O)N4CCC(N5CCCCC5)CC4)cc13)-c1cc3c(c(=O)n1C2)COC(=O)C3(O)CC,,CCc1c2c(nc3ccc(OC(=O)N4CCC(N5CCCCC5)CC4)cc13)-c1cc3c(c(=O)n1C2)COC(=O)C3(CC)OC1OC(C(=O)O)C(O)C(O)C1O
-brostallicin,C=C(Br)C(=O)Nc1cc(C(=O)Nc2cc(C(=O)Nc3cc(C(=O)Nc4cc(C(=O)NCCNC(=N)N)n(C)c4)n(C)c3)n(C)c2)n(C)c1,glutathionyl-brostallicin,Cn1cc(NC(=O)c2cc(NC(=O)c3cc(NC(=O)c4cc(NC(=O)C(Br)CSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)cn4C)cn3C)cn2C)cc1C(=O)NCCNC(=N)N
-Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,Aniline,Nc1ccccc1
-Choline,C[N+](C)(C)CCO,Trimethylazanium,CN(C)C
-Choline,C[N+](C)(C)CCO,Acetaldehyde,CC=O
-aniline,Nc1ccccc1,4-aminophenol,Nc1ccc(O)cc1
-aniline,Nc1ccccc1,N-Hydroxyaniline,ONc1ccccc1
-itraconazole,CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,N-Desalkyl-iteraconazole,Oc1nncn1-c1ccc(N2CCN(c3ccc(OCC4COC(Cn5cncn5)(c5ccc(Cl)cc5Cl)O4)cc3)CC2)cc1
-digitoxin,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CCC5(C)C(C7=CC(=O)OC7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,Digoxigenin Bisdigitoxoside,CC1OC(OC2C(O)CC(OC3CCC4(C)C(CCC5C4CC(O)C4(C)C(C6=CC(=O)OC6)CCC54O)C3)OC2C)CC(O)C1O
-erythromycin,CCC1OCC(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)CC(C)C(O)C1(C)O,N-Desmethylerythromycin,CCC1OCC(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(NC)C2O)C(C)(O)CC(C)CC(C)C(O)C1(C)O
-hexane,CCCCCC,Hexanol,CCCCC(C)O
-phenol,Oc1ccccc1,Hydroquinone,Oc1ccc(O)cc1
-phenol,Oc1ccccc1,Catechol,Oc1ccccc1O
-toluene,Cc1ccccc1,Benzyl alcohol,OCc1ccccc1
-toluene,Cc1ccccc1,o-Cresol,Cc1ccccc1O
-toluene,Cc1ccccc1,p-Cresol,Cc1ccc(O)cc1
 Vinyl carbamate,C=COC(N)=O,Vinyl carbamate epoxide,NC(=O)OC1CO1
+Troleandomycin,COC1CC(OC2C(C)C(=O)OC(C)C(C)C(OC(C)=O)C(C)C(=O)C3(CO3)CC(C)C(OC3OC(C)CC(N(C)C)C3OC(C)=O)C2C)OC(C)C1OC(C)=O,,CNC1CC(C)OC(OC2C(C)CC3(CO3)C(=O)C(C)C(OC(C)=O)C(C)C(C)OC(=O)C(C)C(OC3CC(OC)C(OC(C)=O)C(C)O3)C2C)C1OC(C)=O
 furfuryl alcohol,OCc1ccco1,,O=S(=O)(O)OCc1ccco1
 tert-butanol,CC(C)(C)O,,CC(C)(C)OC1OC(C(=O)O)C(O)C(O)C1O
 tert-butanol,CC(C)(C)O,,CC(C)(C)OS(=O)(=O)O
@@ -96,3 +72,4 @@ pentanol,CCCCCO,,CCCCCOC1OC(C(=O)O)C(O)C(O)C1O
 isobutanol,CC(C)CO,,CC(C)COC1OC(C(=O)O)C(O)C(O)C1O
 Pyridine N-oxide,O[n+]1ccccc1,,O=C(O)C1OC(O[n+]2ccccc2)C(O)C(O)C1O
 N-nitrosodimethylamine,CN(C)N=O,,CC(=O)[NH+]([O-])N(C)C
+Thyroxine,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,,NC(Cc1cc(I)c(Oc2cc(I)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(I)c2)c(I)c1)C(=O)O

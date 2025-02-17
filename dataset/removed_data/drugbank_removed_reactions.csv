@@ -1,0 +1,372 @@
+parent_id,parent_name,child_id,child_name,parent_smiles,child_smiles,tanimoto
+DBMET03774,Cladribine 5'-monophosphate,DBMET03775,Cladribine diphosphate,Nc1nc(Cl)nc2c1ncn2C1CC(O)C(COP(=O)(O)O)O1,Nc1nc(Cl)nc2c1ncn2C1CC(O)C(COP(=O)(O)OP(=O)(O)O)O1,0.8571428571428571
+DBMET03472,R-4'-hydroxybupropion,DBMET03488,R-4'-hydroxybupropion glucuronide,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,CC(NC(C)(C)C)C(=O)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c(Cl)c1,0.509090909090909
+DBMET03200,Monomethyl Auristatin-F,DBMET03202,Monomethyl Auristatin-F M2 Metabolite,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(N)C(C)C)C(C)C,0.8658536585365854
+DBMET00314,2-hydroxydesipramine,DBMET00679,2-hydroxy-desipramine glucuronide,CNCCCN1c2ccccc2CCc2cc(O)ccc21,CNCCCN1c2ccccc2CCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc21,0.532258064516129
+DBMET00019,4-Hydroxycyclophosphamide,DBMET00658,Aldophosphamide,O=P1(N(CCCl)CCCl)NC(O)CCO1,NP(=O)(OCCC=O)N(CCCl)CCCl,0.1836734693877551
+DBMET01214,3'-Oxohexobarbital,DBMET01215,Hexobarbital glutathione conjugate derivative,CN1C(=O)NC(=O)C(C)(C2=CC(=O)CCC2)C1=O,CN1C(=O)NC(=O)C(C)(C2(SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)CCCC(=O)C2)C1=O,0.2597402597402597
+DBMET02034,13'-hydroxychromanol,DBMET02035,13'-carboxychromanol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)CO)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C(=O)O)O2,0.76
+DBMET02715,Tamoxifen Metabolite Y,DBMET02716,Tamoxifen Metabolite E,CCC(=C(c1ccccc1)c1ccc(OCCO)cc1)c1ccccc1,CCC(=C(c1ccccc1)c1ccc(O)cc1)c1ccccc1,0.5833333333333334
+DBMET03468,S-4'-hydroxybupropion,DBMET03487,S-4'-hydroxybupropion glucuronide,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,CC(NC(C)(C)C)C(=O)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c(Cl)c1,0.509090909090909
+DBMET02323,alpha-caboxymethylbutylhydroxychromanol,DBMET02324,alpha-carboxyethylhydroxychromanol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCC(=O)O)O2,0.6808510638297872
+DBMET00873,(E)-2-hydroxydoxepin,DBMET00874,(E)-2-hydroxy-N-desmethyldoxepin,CN(C)CCC=C1c2ccccc2COc2ccc(O)cc21,CNCCC=C1c2ccccc2COc2ccc(O)cc21,0.7291666666666666
+DBMET01280,4'-hydroxylumiracoxib (M23),DBMET01284,Lumiracoxib metabolite M9,Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)O)c1,O=C(O)Cc1cc(CO)ccc1Nc1c(F)cc(O)cc1Cl,0.723404255319149
+DBMET02504,5-hydroxy duloxetine,DBMET02506,Catechol duloxetine,CNCCC(Oc1cccc2c(O)cccc12)c1cccs1,CNCCC(Oc1cccc2c(O)c(O)ccc12)c1cccs1,0.8260869565217391
+DBMET03587,5-fluorodeoxyuridine diphosphate (5-FdUDP),DBMET03585,5-fluorodeoxyuridine monophosphate (5-FdUMP),O=c1[nH]c(=O)n(C2CC(O)C(COP(=O)(O)OP(=O)(O)O)O2)cc1F,O=c1[nH]c(=O)n(C2CC(O)C(COP(=O)(O)O)O2)cc1F,0.84
+DBMET01156,Thiodeoxyguanosine diphosphate,DBMET01157,Thiodeoxyguanosine triphosphate,Nc1nc(=S)c2ncn(C3CC(O)C(COP(=O)(O)OP(=O)(O)O)O3)c2[nH]1,Nc1nc(=S)c2ncn(C3CC(O)C(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O3)c2[nH]1,0.9655172413793104
+DBMET00017,N-acetylsulfamethoxazole,DBMET01048,N4-Acetyl-5-OH-sulfamethoxazole,CC(=O)Nc1ccc(S(=O)(=O)Nc2cc(C)on2)cc1,CC(=O)Nc1ccc(S(=O)(=O)Nc2cc(CO)on2)cc1,0.7045454545454546
+DBMET00111,p-Hydroxyphenobarbital,DBMET01218,Phenobarbital O-glucuronide,CCC1(c2ccc(O)cc2)C(=O)NC(=O)NC1=O,CCC1(c2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc2)C(=O)NC(=O)NC1=O,0.46
+DBMET00990,Phenytoin dihydrodiol,,Phenytoin catechol,O=C1NC(=O)C(C2=CC(O)C(O)C=C2)(c2ccccc2)N1,O=C1NC(=O)C(c2ccccc2)(c2ccc(O)c(O)c2)N1,0.4782608695652174
+DBMET01915,deacetyl-demethyl-thymoxamine,DBMET01917,glucuronide of deacetyl-demethyl-thymoxamine,CNCCOc1cc(C)c(O)cc1C(C)C,CNCCOc1c(C(C)C)ccc(C)c1OC1OC(O)C(O)C(O)C1O,0.4074074074074074
+DBMET03472,R-4'-hydroxybupropion,DBMET03490,R-4'-hydroxybupropion sulfate,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,CC(NC(C)(C)C)C(=O)c1ccc(OS(=O)(=O)O)c(Cl)c1,0.6222222222222222
+DBMET02103,Cephaeline,DBMET02106,Cephaeline 6'-O-glucuronide,CCC1CN2CCc3cc(OC)c(OC)cc3C2CC1CC1NCCc2cc(OC)c(OC)cc21,CCC1CN2CCc3cc(OC)c(OC)cc3C2CC1CC1NCCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)c(OC)cc21,0.7101449275362319
+DBMET02966,6-thioguanine monophosphate,DBMET01007,Thioguanine diphosphate,Nc1nc(S)c2ncn(C3OC(C(O)P(=O)(O)O)C(O)C3O)c2n1,N=c1nc(O)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3S)c2[nH]1,0.3417721518987341
+DBMET00411,N-Acetyl-5-hydroxytryptamine,DBMET00926,N-Acetyl-5-hydroxytryptamine sulfate,CC(=O)NCCc1c[nH]c2ccc(O)cc12,CC(=O)NCCc1c[nH]c2ccc(OS(=O)(=O)O)cc12,0.6458333333333334
+DBMET00075,2-Hydroxynevirapine,DBMET00685,2-hydroxynevirapine glucuronide,Cc1cc(O)nc2c1N=C(O)c1cccnc1N2C1CC1,Cc1cc(OC2OC(C(=O)O)C(O)C(O)C2O)nc2c1N=C(O)c1cccnc1N2C1CC1,0.5909090909090909
+DBMET00143,5-Hydroxymethyl tolterodine,DBMET01257,5-Carboxylic acid tolterodine,CC(C)N(CCC(c1ccccc1)c1cc(CO)ccc1O)C(C)C,CC(C)N(CCC(c1ccccc1)c1cc(C(=O)O)ccc1O)C(C)C,0.6888888888888889
+DBMET03400,Finerenone M5 Metabolite,DBMET03401,Finerenone M8 Metabolite,CCOc1ncc(CO)c2c1C(c1ccc(C#N)cc1OC)C(O)(C(N)=O)C(C)(O)N2,CCOc1ncc(C(=O)O)c2c1C(c1ccc(C#N)cc1OC)C(O)(C(N)=O)C(C)(O)N2,0.8028169014084507
+DBMET00024,4-Hydroxyifosfamide,DBMET01077,4-Ketoifosfamide,O=P1(NCCCl)OCCC(O)N1CCCl,O=C1CCOP(=O)(NCCCl)N1CCCl,0.4888888888888889
+DBMET01274,Lumiracoxib metabolite M21,DBMET01284,Lumiracoxib metabolite M9,O=C(O)Cc1cc(CO)ccc1Nc1c(F)cccc1Cl,O=C(O)Cc1cc(CO)ccc1Nc1c(F)cc(O)cc1Cl,0.723404255319149
+DBMET02506,Catechol duloxetine,DBMET02507,"5-hydroxy, 6-methoxy duloxetine",CNCCC(Oc1cccc2c(O)c(O)ccc12)c1cccs1,CNCCC(Oc1cccc2c(O)c(OC)ccc12)c1cccs1,0.8
+DBMET01061,Bortezomib metabolite M1,DBMET01082,Bortezomib metabolite M25,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
+DBMET03787,Ixazomib M5 metabolite,DBMET03786,Ixazomib M2 metabolite,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,0.5581395348837209
+DBMET03047,Arbidol M8 metabolite,DBMET03062,Arbidol M16 metabolite,CCOC(=O)c1c(CS(=O)(=O)c2ccccc2)n(C)c2cc(Br)c(O)c(CN(C)C)c12,CCOC(=O)c1c(CS(=O)(=O)c2ccccc2)n(C)c2cc(Br)c(OS(=O)(=O)O)c(CN(C)C)c12,0.7846153846153846
+DBMET00470,ortho-Hydroxyrosiglitazone,DBMET00968,ortho-O-Glucuronide rosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ncccc1O,CN(CCOc1ccc(CC2SC(=O)NC2=O)cc1)c1ncccc1OC1OC(C(=O)O)C(O)C(O)C1O,0.5131578947368421
+DBMET00060,4-ene-Valproic acid,,"2,4-Diene-VPA",C=CCC(CCC)C(=O)O,C=CC=C(CCC)C(=O)O,0.3235294117647059
+DBMET02456,Dehydro-aripiprazole unnamed epoxide metabolite,DBMET02457,Dehydro-aripiprazole unnamed glutathione conjugate metabolite 2,O=c1[nH]c2cc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)ccc2c2c1O2,NC(CCC(=O)NC(CSc1c(O)c(=O)[nH]c2cc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)ccc12)C(=O)NCC(=O)O)C(=O)O,0.5434782608695652
+DBMET01472,M8 (Odanacatib),DBMET01473,M3 (Odanacatib),CC(F)(CO)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)cc1)C(F)(F)F)C(=O)NC1(C#N)CC1,CC(F)(COC1OC(C(=O)O)C(O)C(O)C1O)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)cc1)C(F)(F)F)C(=O)NC1(C#N)CC1,0.6753246753246753
+DBMET03004,16-alpha hydroxyestrone,DBMET03005,17-Epiestriol,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2=O,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2O,0.6530612244897959
+DBMET01154,,DBMET01155,Thioguanosine triphosphate,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,0.9649122807017544
+DBMET00313,morphine,DB06409,Morphine glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5,0.6119402985074627
+DBMET02036,CDMDHC,DBMET02038,CDMHHC,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCC(=O)O)O2,0.9782608695652174
+DBMET00332,4-hydroxyestrone,DBMET01658,4-Hydroxyestradiol,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2=O,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2O,0.625
+DBMET02886,Acalabrutinib M7 Metabolite (ACP-5531),DBMET02887,Acalabrutinib M10 Metabolite (ACP-5461),CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(N)C(=O)NCC(=O)O,CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(N)C(=O)O,0.8928571428571429
+DBMET02095,R529,DBMET02099,"3,5 benzene diol metabolite of R406",COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)NC(=O)C(C)(C)O4)n2)cc(OC)c1O,CC1(C)Oc2ccc(Nc3nc(Nc4cc(O)cc(O)c4)ncc3F)nc2NC1=O,0.7903225806451613
+DBMET00076,8-Hydroxynevirapine,DBMET00779,8-hydroxynevirapine glucuronide,Cc1ccnc2c1N=C(O)c1cc(O)cnc1N2C1CC1,Cc1ccnc2c1NC(=O)c1cc(OC3OC(C(=O)O)C(O)C(O)C3O)cnc1N2C1CC1,0.3636363636363636
+DBMET00197,Norfluoxetine,DBMET01363,Norfluoxetine alcohol,NCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,OCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,0.7368421052631579
+DBMET01472,M8 (Odanacatib),DBMET01475,M7-B (Odanacatib),CC(F)(CO)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)cc1)C(F)(F)F)C(=O)NC1(C#N)CC1,CC(F)(C=O)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)cc1)C(F)(F)F)C(=O)NC1(C#N)CC1,0.8064516129032258
+DBMET02534,O-desmethyl-3-hydroxy-nabumetone,DBMET02531,reduced O-desmethyl-3-hydroxy-nabumetone,CC(=O)C(O)Cc1ccc2cc(O)ccc2c1,CC(O)C(O)Cc1ccc2cc(O)ccc2c1,0.6111111111111112
+DBMET01020,(R)-MHD,DBMET02804,"cis-10,11-dihydro-10,11-dihydroxycarbamazepine",NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2C(O)C(O)c2ccccc21,0.6176470588235294
+DBMET02035,13'-carboxychromanol,DBMET02036,CDMDHC,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2,0.803921568627451
+DBMET00764,6-methoxy-2-naphthylacetic acid,DBMET02529,6-methoxy-naphthylacetic acid glucuronide,COc1ccc2cc(CC(=O)O)ccc2c1,COc1ccc2cc(CC(=O)OC3OC(C(=O)O)C(O)C(O)C3O)ccc2c1,0.5208333333333334
+DBMET00109,3'-Hydroxyhexobarbital,DBMET01214,3'-Oxohexobarbital,CN1C(=O)N=C(O)C(C)(C2=CC(O)CCC2)C1=O,CN1C(=O)NC(=O)C(C)(C2=CC(=O)CCC2)C1=O,0.3396226415094339
+DBMET01486,Inositol pentanicotinate,DBMET01487,Inositol tetranicotinate,O=C(OC1C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,0.935483870967742
+DBMET00938,N-Desmethyl-para-hydroxy rosiglitazone,DBMET01113,N-Desmethyl para-O-sulfate rosiglitazone,O=C1NC(=O)C(Cc2ccc(OCCNc3ccc(O)cn3)cc2)S1,O=C1NC(=O)C(Cc2ccc(OCCNc3ccc(OS(=O)(=O)O)cn3)cc2)S1,0.7592592592592593
+DBMET02714,"N,N-didesmethyltamoxifen",DBMET02715,Tamoxifen Metabolite Y,CCC(=C(c1ccccc1)c1ccc(OCCN)cc1)c1ccccc1,CCC(=C(c1ccccc1)c1ccc(OCCO)cc1)c1ccccc1,0.7567567567567568
+DBMET02938,Levamlodipine M10 metabolite,DBMET02941,Levamlodipine M12 metabolite,CCOC(=O)c1c(COCCO)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,CCOC(=O)c1c(COCC(=O)O)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,0.7894736842105263
+DBMET01239,Methoxyzolpidem derivative (M4),DBMET01241,Zolpidem carboxylic acid derivative (M2),Cc1ccc(-c2nc3ccc(CO)cn3c2CC(=O)N(C)C)cc1,Cc1ccc(-c2nc3ccc(C(=O)O)cn3c2CC(=O)N(C)C)cc1,0.72
+DBMET03787,Ixazomib M5 metabolite,DBMET03783,Ixazomib M6 metabolite,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,CC(C)CC(=O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,0.6666666666666666
+DBMET01297,Dihydroxy ketobemidone,DBMET01298,p-Hydroxymethoxy ketobemidone,CCC(=O)C1(c2ccc(O)c(O)c2)CCN(C)CC1,CCC(=O)C1(c2ccc(O)c(OC)c2)CCN(C)CC1,0.7441860465116279
+DBMET00792,aldoifosfamide,DBMET01102,Alcoifosfamide,O=CCCOP(=O)(NCCCl)NCCCl,O=P(NCCCl)(NCCCl)OCCCO,0.5757575757575758
+DBMET02460,Aripiprazole unnamed metabolite 3,DBMET02461,Aripiprazole unnamed metabolite 4,O=C1C=CC(=O)C(Cl)=C1Cl,NC(CCC(=O)NC(CSC1=CC(=O)C(Cl)=C(Cl)C1=O)C(=O)NCC(=O)O)C(=O)O,0.1636363636363636
+DBMET03178,1-(3-trifluoromethyl-phenyl)-propan-2-one,DBMET03181,"1-(3-trifluoromethyl-phenyl)-propan-1,2-diol",CC(=O)Cc1cccc(C(F)(F)F)c1,CC(O)C(O)c1cccc(C(F)(F)F)c1,0.4102564102564102
+DBMET00254,2-hydroxyimipramine,DBMET00680,2-hydroxy-imipramine glucuronide,CN(C)CCCN1c2ccccc2CCc2cc(O)ccc21,CN(C)CCCN1c2ccccc2CCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc21,0.5238095238095238
+DBMET03200,Monomethyl Auristatin-F,DBMET03203,Monomethyl Auristatin-F M3 Metabolite,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(N)C(C)C,0.8048780487804879
+DBMET01611,dehydro-aripiprazole,DBMET02456,Dehydro-aripiprazole unnamed epoxide metabolite,O=c1ccc2ccc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)cc2[nH]1,O=c1[nH]c2cc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)ccc2c2c1O2,0.6875
+DBMET03367,Hydroxyvitamin K1,DBMET03368,Phylloquinone carboxylic acid metabolite,CC(=CCC1=C(C)C(=O)c2ccccc2C1=O)CCCC(C)CCCC(C)CCCC(C)CO,CC(=CCC1=C(C)C(=O)c2ccccc2C1=O)CCCC(C)CCCC(C)CCCC(C)C(=O)O,0.78
+DBMET01274,Lumiracoxib metabolite M21,DBMET01275,5-Carboxylumiracoxib (M11),O=C(O)Cc1cc(CO)ccc1Nc1c(F)cccc1Cl,O=C(O)Cc1cc(C(=O)O)ccc1Nc1c(F)cccc1Cl,0.717391304347826
+DBMET02038,CDMHHC,DBMET02039,CMBHC,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCC(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)C(=O)O)O2,0.74
+DBMET01154,Thioguanosine diphosphate,DBMET01155,Thioguanosine triphosphate,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,0.9649122807017544
+DBMET03449,Genz-258162,DBMET03451,Genz-399240,CC(=O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,0.8214285714285714
+DBMET02521,3-OH-nabumetone,DBMET02534,O-desmethyl-3-hydroxy-nabumetone,COc1ccc2cc(CC(O)C(C)=O)ccc2c1,CC(=O)C(O)Cc1ccc2cc(O)ccc2c1,0.6756756756756757
+DBMET01318,3-Hydroxymorphinan,DBMET01320,3-Hydroxymorphinan sulfate,Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,O=S(=O)(O)Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,0.64
+DBMET02530,reduced 3-hydroxy-nabumetone,DBMET02531,reduced O-desmethyl-3-hydroxy-nabumetone,COc1ccc2cc(CC(O)C(C)O)ccc2c1,CC(O)C(O)Cc1ccc2cc(O)ccc2c1,0.6571428571428571
+DBMET00111,p-Hydroxyphenobarbital,DBMET01217,Phenobarbital O-sulfate,CCC1(c2ccc(O)cc2)C(=O)NC(=O)NC1=O,CCC1(c2ccc(OS(=O)(=O)O)cc2)C(=O)NC(=O)NC1=O,0.6052631578947368
+DBMET01611,dehydro-aripiprazole,DBMET02455,Dehydro-aripiprazole unnamed glutathione conjugate metabolite 1,O=c1ccc2ccc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)cc2[nH]1,NC(CCC(=O)NC(CSc1cc(=O)[nH]c2cc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)ccc12)C(=O)NCC(=O)O)C(=O)O,0.5168539325842697
+DBMET02197,Desmethyl prucalopride,DBMET02198,Desmethyl prucalopride acid,Nc1c(Cl)cc(C(=O)NC2CCN(CCCO)CC2)c2c1CCO2,Nc1c(Cl)cc(C(=O)NC2CCN(CCC(=O)O)CC2)c2c1CCO2,0.7931034482758621
+DBMET01923,N-desmethyl apalutamide,DBMET03639,M4 apalutamide,N#Cc1ncc(N2C(=O)C3(CCC3)N(c3ccc(C(N)=O)c(F)c3)C2=S)cc1C(F)(F)F,N#Cc1ncc(N2C(=O)C3(CCC3)N(c3ccc(C(=O)O)c(F)c3)C2=S)cc1C(F)(F)F,0.8636363636363636
+DBMET01154,Thioguanosine diphosphate,DBMET01156,Thiodeoxyguanosine diphosphate,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,Nc1nc(=S)c2ncn(C3CC(O)C(COP(=O)(O)OP(=O)(O)O)O3)c2[nH]1,0.7619047619047619
+DBMET03045,Arbidol M6-1 metabolite,DBMET03060,Arbidol M14-1 metabolite,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(O)c(CN(C)C)c12,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(OS(=O)(=O)O)c(CN(C)C)c12,0.7761194029850746
+DBMET00248,2-hydroxyestrone,DBMET03006,2-methoxyestrone,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O,COc1cc2c(cc1O)CCC1C2CCC2(C)C(=O)CCC12,0.782608695652174
+DBMET02931,Methylprednisolone M1 Metabolite,DBMET02932,Methylprednisolone M8 Metabolite,CC1CC2C(C(=O)CC3(C)C2CCC3(O)C(=O)CO)C2(C)C=CC(=O)C=C12,CC1CC2C(C(=O)CC3(C)C2CC(O)C3(O)C(=O)CO)C2(C)C=CC(=O)C=C12,0.7
+DBMET02488,Tamsulosin M-1 Metabolite,DBMET02495,Tamsulosin M-1-Glu Metabolite,COc1ccc(CC(C)NCCOc2ccccc2O)cc1S(N)(=O)=O,COc1ccc(CC(C)NCCOc2ccccc2OC2OC(C(=O)O)C(O)C(O)C2O)cc1S(N)(=O)=O,0.6617647058823529
+DBMET00792,aldoifosfamide,DBMET01127,Isophosphamide mustard,O=CCCOP(=O)(NCCCl)NCCCl,O=P(O)(NCCCl)NCCCl,0.3870967741935484
+DBMET01020,(R)-MHD,DBMET02803,"trans-10,11-dihydro-10,11-dihydroxycarbamazepine",NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2C(O)C(O)c2ccccc21,0.6176470588235294
+DBMET03723,3'-OH-gepirone,DBMET03724,"3',5-di-OH-gepirone",CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1O,CC1(C)CC(=O)N(CCCCN2CCN(c3ncc(O)cn3)CC2)C(=O)C1O,0.82
+DBMET01238,Methoxyzolpidem derivative (M3),DBMET01242,Zolpidem carboxylic acid derivative (M1),Cc1ccc2nc(-c3ccc(CO)cc3)c(CC(=O)N(C)C)n2c1,Cc1ccc2nc(-c3ccc(C(=O)O)cc3)c(CC(=O)N(C)C)n2c1,0.76
+DBMET00470,ortho-Hydroxyrosiglitazone,DBMET00936,N-Desmethyl-ortho-hydroxy rosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ncccc1O,O=C1NC(=O)C(Cc2ccc(OCCNc3ncccc3O)cc2)S1,0.4769230769230769
+DBMET00873,(E)-2-hydroxydoxepin,DBMET00881,Hydroxydoxepin glucuronide,CN(C)CCC=C1c2ccccc2COc2ccc(O)cc21,CN(C)CCC=C1c2ccccc2COc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc21,0.5625
+DBMET02458,Aripiprazole unnamed metabolite 1,DBMET02460,Aripiprazole unnamed metabolite 3,O=C1CCc2ccc(OCCCCN3CC[N+](=C4C=CC(=O)C(Cl)=C4Cl)CC3)cc2N1,O=C1C=CC(=O)C(Cl)=C1Cl,0.2222222222222222
+DBMET03692,Hydroxy tapentadol,DBMET03693,4-Hydroxy tapentadol glucuronide,CCC(c1cc(O)cc(O)c1)C(C)CN(C)C,CCC(c1cc(O)cc(OC2OC(C(=O)O)C(O)C(O)C2O)c1)C(C)CN(C)C,0.5094339622641509
+DBMET03311,Ponesimod M12 Metabolite (ACT-204426),DBMET03312,Ponesimod M13 Metabolite (ACT-338275),CCCN=C1SC(=Cc2ccc(OCC(O)C(=O)O)c(Cl)c2)C(=O)N1c1ccccc1C,CCCN=C1SC(=Cc2ccc(OCCC(=O)O)c(Cl)c2)C(=O)N1c1ccccc1C,0.7887323943661971
+DBMET03419,M6,DBMET03420,M3,CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,0.543859649122807
+DBMET03468,S-4'-hydroxybupropion,DBMET03489,S-4'-hydroxybupropion sulfate,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,CC(NC(C)(C)C)C(=O)c1ccc(OS(=O)(=O)O)c(Cl)c1,0.6222222222222222
+DBMET02441,3-methoxy-4-hydroxyacetaldehyde,DBMET02442,Homovanillic acid,COc1cc(CC=O)ccc1O,COc1cc(CC(=O)O)ccc1O,0.6176470588235294
+DBMET03563,M-I,DBMET03565,M-II,O=C(O)c1cc(-c2ccccc2F)n(S(=O)(=O)c2cccnc2)c1,O=C(O)c1c[nH]c(-c2ccccc2F)c1,0.3962264150943396
+DBMET00144,4'-Hydroxydiclofenac,DBMET02612,4'-hydroxy-2'-glutathione conjugated monoclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cc(O)cc1Cl,NC(CCC(=O)NC(CSc1cc(O)cc(Cl)c1Nc1ccccc1CC(=O)O)C(=O)NCC(=O)O)C(=O)O,0.5
+DBMET02458,Aripiprazole unnamed metabolite 1,DBMET02459,Aripiprazole unnamed metabolite 2,O=C1CCc2ccc(OCCCCN3CC[N+](=C4C=CC(=O)C(Cl)=C4Cl)CC3)cc2N1,NC(CCC(=O)NC(CSc1cc(N2CCN(CCCCOc3ccc4c(c3)NC(=O)CC4)CC2)c(Cl)c(Cl)c1O)C(=O)NCC(=O)O)C(=O)O,0.4123711340206185
+DBMET00412,9-β-D-arabinofuranosylguanine,DB02377,Guanine,Nc1nc2c(n[c]n2C2OC(CO)C(O)C2O)c(=O)[nH]1,Nc1nc(=O)c2[nH]cnc2[nH]1,0.2068965517241379
+DBMET01280,4'-hydroxylumiracoxib (M23),DBMET01282,Lumiracoxib metabolite M25,Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)O)c1,Cc1ccc2c(c1)CC(=O)N2c1c(F)cc(O)cc1Cl,0.3728813559322034
+DBMET00035,Thalidomide arene oxide,DBMET00034,5-Hydroxythalidomide,O=C1N=C(O)CCC1N1C(=O)C2=CC3OC3C=C2C1=O,O=C1CCC(N2C(=O)c3ccc(O)cc3C2=O)C(=O)N1,0.2909090909090909
+DBMET00024,4-Hydroxyifosfamide,DBMET00792,aldoifosfamide,O=P1(NCCCl)OCCC(O)N1CCCl,O=CCCOP(=O)(NCCCl)NCCCl,0.1538461538461538
+DBMET00074,12-Hydroxynevirapine,DBMET00669,12-hydroxynevirapine glucuronide,OCc1ccnc2c1N=C(O)c1cccnc1N2C1CC1,Cc1ccnc2c1N=C(OC1OC(C(=O)O)C(O)C(O)C1O)c1cccnc1N2C1CC1O,0.3026315789473684
+DBMET00131,Verapamil metabolite D-617,DBMET01235,Verapamil metabolite PR-25,CNCCCC(C#N)(c1ccc(OC)c(OC)c1)C(C)C,CNCCCC(C#N)(c1ccc(O)c(OC)c1)C(C)C,0.8043478260869565
+DBMET02937,Levamlodipine M9 metabolite,DBMET02940,Levamlodipine M4 metabolite,CCOC(=O)c1c(COCCN)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,COC(=O)c1c(C)nc(CO)c(C(=O)O)c1-c1ccccc1Cl,0.603448275862069
+DBMET02311,13'-carboxy-alpha-tocopherol,DBMET02320,alpha-carboxydimethyldecadienylhydroxychromanol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2,0.803921568627451
+DBMET02058,5'-hydroxytegafur,DB00544,Fluorouracil,O=c1[nH]c(=O)n(C2CCC(O)O2)cc1F,O=c1[nH]cc(F)c(=O)[nH]1,0.2619047619047619
+DBMET03404,Daunorubicinol,DBMET03406,Deoxydaunorubicinol aglycone,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3OC1CC(N)C(O)C(C)O1,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,0.5333333333333333
+DBMET01055,Irbesartan derivative M1,DBMET01056,Irbesartan derivative M2,CC(O)CCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,CC(=O)CCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,0.8
+DBMET01057,Irbesartan derivative M6,DBMET01056,Irbesartan derivative M2,CC(=O)CCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,CC(=O)CCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,0.7910447761194029
+DBMET01062,Bortezomib metabolite M2,DBMET01066,Bortezomib metabolite M6,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)(O)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7735849056603774
+DBMET01098,"5-Phenyl-1,3-oxazinane-2,4-dione",DBMET01097,3-Carbamoyl-2-phenylpropionic acid,O=C1N=C(O)C(c2ccccc2)CO1,NC(=O)OCC(C(=O)O)c1ccccc1,0.1702127659574468
+DBMET03455,Genz-258179,DBMET03454,Genz-682042,CCCC(O)CCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,0.75
+DBMET01062,Bortezomib metabolite M2,DBMET01086,Bortezomib metabolite M28,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
+DBMET01612,4-Hydroxyaripiprazole,DBMET02458,Aripiprazole unnamed metabolite 1,O=C1CCc2ccc(OCCCCN3CCN(c4ccc(O)c(Cl)c4Cl)CC3)cc2N1,O=C1CCc2ccc(OCCCCN3CC[N+](=C4C=CC(=O)C(Cl)=C4Cl)CC3)cc2N1,0.5797101449275363
+DBMET00342,noroxycodone,DBMET00425,alpha-noroxycodol,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)NCCC314,COc1ccc2c3c1OC1C(O)CCC4(O)C(C2)NCCC314,0.6551724137931034
+DBMET03679,M33 Umeclidinium,DBMET03680,M21 Umeclidinium,Oc1ccc(COCC[N+]23CCC(C(O)(c4ccccc4)c4ccccc4)(CC2)CC3)cc1,O=C(O)C1OC(Oc2ccc(COCC[N+]34CCC(C(O)(c5ccccc5)c5ccccc5)(CC3)CC4)cc2)C(O)C(O)C1O,0.6065573770491803
+DBMET01067,Bortezomib metabolite M8,DBMET01068,Bortezomib metabolite M33,CC(C)CC(O)NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,0.6666666666666666
+DBMET03453,Genz-527862,DBMET03454,Genz-682042,CCC(=O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,0.7894736842105263
+DBMET01489,Inositol dinicotinate,DBMET01490,Inositol mononicotinate,O=C(OC1C(O)C(O)C(O)C(O)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(O)C(O)C1O)c1cccnc1,0.935483870967742
+DBMET00348,4-hydroxyalprazolam,DBMET02467,"alpha,4-dihydroxy-alprazolam",Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2O,OCc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2O,0.7254901960784313
+DBMET00070,1-Naphthaldehyde,DBMET01181,1-Naphthalenemethanol,O=Cc1cccc2ccccc12,OCc1cccc2ccccc12,0.4074074074074074
+DBMET00936,N-Desmethyl-ortho-hydroxy rosiglitazone,DBMET00937,N-Desmethyl-ortho-O-sulfate rosiglitazone,O=C1NC(=O)C(Cc2ccc(OCCNc3ncccc3O)cc2)S1,O=C1NC(=O)C(Cc2ccc(OCCNc3ncccc3OS(=O)(=O)O)cc2)S1,0.7719298245614035
+DBMET01523,QS6,DBMET01524,QS4,COC1=C(OC)C(=O)C(CCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCO)=C(C)C1=O,0.9655172413793104
+DBMET01062,Bortezomib metabolite M2,DBMET01085,Bortezomib metabolite M27,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
+DBMET02523,6-hydroxy-naphthylacetic acid,DBMET02525,6-hydroxy-naphthylacetic acid glucuronide,O=C(O)Cc1ccc2cc(O)ccc2c1,O=C(Cc1ccc2cc(O)ccc2c1)OC1OC(C(=O)O)C(O)C(O)C1O,0.4782608695652174
+DBMET03043,Arbidol M3-2 metabolite,DBMET03058,Arbidol M9-2 metabolite,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(O)c(CNC)c12,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(OS(=O)(=O)O)c(CNC)c12,0.7575757575757576
+DBMET03538,5-Hydroxy pirfenidone,DBMET03219,5-Carboxy pirfenidone,O=c1ccc(CO)cn1-c1ccccc1,O=C(O)c1ccc(=O)n(-c2ccccc2)c1,0.5588235294117647
+DBMET03407,Demethyl deoxydaunorubicinol aglycone,DBMET03410,Demethyl deoxydaunorubicinol aglycone-4-O-β-glucuronide,CC(O)C1(O)CCc2c(O)c3c(c(O)c2C1)C(=O)c1cccc(O)c1C3=O,CC(O)C1(O)CCc2c(O)c3c(c(O)c2C1)C(=O)c1cccc(OOC2OC(C(=O)O)C(O)C(O)C2O)c1C3=O,0.5909090909090909
+DBMET02765,Methimazole Sulfenic Acid Metabolite (Open),DBMET02767,Methimazole Sulfinic Acid Metabolite (Open),CNC(=N)SO,CNC(=N)S(=O)O,0.3043478260869565
+DBMET03512,Desmethyl-dabrafenib,DBMET03514,M30-Dabrafenib,CC(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,Nc1nccc(-c2sc(C(CO)C(=O)O)nc2-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)n1,0.7611940298507462
+DBMET02490,Tamsulosin M-3 Metabolite,DBMET02498,Tamsulosin M-3-Sul Metabolite,CCOc1ccc(O)cc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,CCOc1ccc(OS(=O)(=O)O)cc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,0.7741935483870968
+DBMET01091,Glycinexylidide (GX),DBMET01089,"2,6-Dimethylaniline (2,6-Xylidine)",Cc1cccc(C)c1NC(=O)CN,Cc1cccc(C)c1N,0.3448275862068966
+DBMET00144,4'-Hydroxydiclofenac,DBMET02611,4'-hydroxy-3'-glutathione conjugated diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cc(O)cc1Cl,NC(CCC(=O)NC(CSc1c(O)cc(Cl)c(Nc2ccccc2CC(=O)O)c1Cl)C(=O)NCC(=O)O)C(=O)O,0.417910447761194
+DBMET03138,O-desmethyl-galantamine,DBMET03142,Sulfate conjugate of O-desmethyl-galantamine,CN1CCC23C=CC(O)CC2Oc2c(O)ccc(c23)C1,CN1CCC23C=CC(O)CC2Oc2c(OS(=O)(=O)O)ccc(c23)C1,0.7017543859649122
+DBMET02507,"5-hydroxy, 6-methoxy duloxetine",DBMET02509,"5-hydroxy, 6-methoxy duloxetine glucuronide",CNCCC(Oc1cccc2c(O)c(OC)ccc12)c1cccs1,CNCCC(Oc1cccc2c(OC3OC(C(=O)O)C(O)C(O)C3O)c(OC)ccc12)c1cccs1,0.5942028985507246
+DBMET01276,Lumiracoxib metabolite M15,DBMET01287,Lumiracoxib metabolite M8,O=C(O)c1ccc2c(c1)CC(=O)N2c1c(F)cccc1Cl,O=C(O)c1ccc2c(c1)CC(=O)N2c1c(F)cc(O)cc1Cl,0.7346938775510204
+DBMET00072,4-Hydroxyvoriconazole,DBMET01184,4-Hydroxyvoriconazole 4-O-glucuronide,OCC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,O=C(O)C1OC(OCC(c2ncncc2F)C(O)(Cn2cncn2)c2ccc(F)cc2F)C(O)C(O)C1O,0.6388888888888888
+DBMET00256,3-hydroxylidocaine,DBMET01090,3-Hydroxymonoethylglycinexylidide,CCN(CC)CC(=O)Nc1c(C)ccc(O)c1C,CCNCC(=O)Nc1c(C)ccc(O)c1C,0.6410256410256411
+DBMET00070,1-Naphthaldehyde,DBMET01180,1-Naphthoic acid,O=Cc1cccc2ccccc12,O=C(O)c1cccc2ccccc12,0.4137931034482758
+DBMET03453,Genz-527862,DBMET03451,Genz-399240,CCC(=O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,0.8214285714285714
+DBMET01061,Bortezomib metabolite M1,DBMET01084,Bortezomib metabolite M26,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
+DBMET02488,Tamsulosin M-1 Metabolite,DBMET02496,Tamsulosin M-1-Sul Metabolite,COc1ccc(CC(C)NCCOc2ccccc2O)cc1S(N)(=O)=O,COc1ccc(CC(C)NCCOc2ccccc2OS(=O)(=O)O)cc1S(N)(=O)=O,0.8181818181818182
+DBMET01063,Bortezomib metabolite M3,DBMET01064,Bortezomib metabolite M4,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,O=C(NC(Cc1ccccc1)C(=O)O)c1cnccn1,0.8095238095238095
+DBMET02023,PCI-45773 (M35),DBMET02024,M17,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,0.5
+DBMET02490,Tamsulosin M-3 Metabolite,DBMET02497,Tamsulosin M-3-Glu Metabolite,CCOc1ccc(O)cc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,CCOc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,0.64
+DBMET02812,1β-hydroxymedroxyprogesterone acetate (M-3),DBMET02813,"1,2-dehydromedroxyprogesterone acetate (M-5)",CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CC(O)C4(C)C3CCC21C,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)C=CC4(C)C3CCC21C,0.65
+DBMET03519,Rucaparib M323 metabolite,DBMET03521,Rucaparib M337c metabolite,NC(=O)c1ccc(-c2[nH]c3cc(F)cc4c3c2CCNC4=O)cc1,Cn1c(-c2ccc(C(N)=O)cc2)c2c3c(cc(F)cc31)C(=O)NCC2,0.6140350877192983
+DBMET00171,"Rofecoxib-threo-3,4-dihydrohydroxy acid",DBMET01293,trans-Dihydrorofecoxib,CS(=O)(=O)c1ccc(C(CO)C(C(=O)O)c2ccccc2)cc1,CS(=O)(=O)c1ccc(C2COC(=O)C2c2ccccc2)cc1,0.3018867924528302
+DBMET00124,8-Hydroxy-delta-9-THC,DBMET01220,"8,11-Dihydroxy-delta-9-THC",CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(C)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(CO)=CC21,0.7818181818181819
+DBMET03709,Momelotinib M21 metabolite,DBMET03712,Momelotinib M8 metabolite,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4=O)cc3)n2)cc1,NC(=O)CNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4=O)cc3)n2)cc1,0.7761194029850746
+DBMET01287,Lumiracoxib metabolite M8,DBMET01288,Lumiracoxib metabolite M4/M6,O=C(O)c1ccc2c(c1)CC(=O)N2c1c(F)cc(O)cc1Cl,O=C(O)c1ccc2c(c1)CC(=O)N2c1c(F)cc(OS(=O)(=O)O)cc1Cl,0.7037037037037037
+DBMET02521,3-OH-nabumetone,DBMET02530,reduced 3-hydroxy-nabumetone,COc1ccc2cc(CC(O)C(C)=O)ccc2c1,COc1ccc2cc(CC(O)C(C)O)ccc2c1,0.631578947368421
+DBMET02092,3-(4-carboxybenzylidene)camphor,DBMET02093,3-(4-carboxybenzylidene)-6-hydroxycamphor,CC12CCC(C(=Cc3ccc(C(=O)O)cc3)C1=O)C2(C)C,CC12CC(O)C(C(=Cc3ccc(C(=O)O)cc3)C1=O)C2(C)C,0.6444444444444445
+DBMET00257,monoethylglycinexylidide,DBMET01089,"2,6-Dimethylaniline (2,6-Xylidine)",CCNCC(=O)Nc1c(C)cccc1C,Cc1cccc(C)c1N,0.28125
+DBMET02063,11-hydroxy-THC,DBMET02064,11-Nor-9-carboxy-THC (THC-COOH),CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)O)=CC21,0.7241379310344828
+DBMET01062,Bortezomib metabolite M2,DBMET01063,Bortezomib metabolite M3,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.6666666666666666
+DBMET02277,7-amino-clonazepam,DBMET03609,3-hydroxy-7-amino-clonazepam,Nc1ccc2c(c1)C(c1ccccc1Cl)=NCC(=O)N2,Nc1ccc2c(c1)C(c1ccccc1Cl)=NC(O)C(=O)N2,0.6
+DBMET02548,all-trans-retinoic acid,DBMET02549,4-hydroxy-all-trans-retinoic acid,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,0.6666666666666666
+DBMET02613,5-hydroxy diclofenac,DBMET02615,5-hydroxy-4-glutathione conjugated diclofenac,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,NC(CCC(=O)NC(CSc1cc(Nc2c(Cl)cccc2Cl)c(CC(=O)O)cc1O)C(=O)NCC(=O)O)C(=O)O,0.4090909090909091
+DBMET00449,5-fluorouracil,DBMET01999,5-fluorodeoxyuridine-monophosphate,O=c1[nH]cc(F)c(=O)[nH]1,O=c1[nH]c(=O)n(C2CC(O)C(COP(=O)(O)O)O2)cc1F,0.2115384615384615
+DBMET00658,Aldophosphamide,DBMET01147,Phosphoramide Mustard,NP(=O)(OCCC=O)N(CCCl)CCCl,NP(=O)(O)N(CCCl)CCCl,0.4242424242424242
+DBMET01043,Nitroso-dapsone,DBMET01045,Dapsone mercaptal intermediate,Nc1ccc(S(=O)(=O)c2ccc(N=O)cc2)cc1,Nc1ccc(S(=O)(=O)c2ccc(N(O)SSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)cc2)cc1,0.2424242424242424
+DBMET00321,oxymorphone,DBMET02514,alpha-oxymorphol,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3(O)C1C5,0.6428571428571429
+DBMET01127,Isophosphamide mustard,DBMET01150,Ifosforamide Aziridinium,O=P(O)(NCCCl)NCCCl,O=P(O)(NCCCl)N1CC1,0.5384615384615384
+DBMET03549,M6 enzalutamide,DBMET03550,N-desmethyl enzalutamide,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(=O)NCO)c(F)c1,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(N)=O)c(F)c1,0.7692307692307693
+DBMET00454,"5,6-Epoxyretinoic acid",DBMET03637,"rac-5,6-Epoxy-retinoyl-beta-D-glucuronide",CC(C=CC12OC1(C)CCCC2(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC12OC1(C)CCCC2(C)C)=CC=CC(C)=CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O,0.6271186440677966
+DBMET00092,2-Oxoticlopidine,DBMET01202,Active metabolite of Ticlopidine,O=C1C=C2CN(Cc3ccccc3Cl)CCC2S1,O=C(O)CC1CN(Cc2ccccc2Cl)CCC1S,0.4210526315789473
+DBMET03312,Ponesimod M13 Metabolite (ACT-338275),DBMET03309,Ponesimod M32 Metabolite,CCCN=C1SC(=Cc2ccc(OCCC(=O)O)c(Cl)c2)C(=O)N1c1ccccc1C,CCCN=C1SC(=Cc2ccc(O)c(Cl)c2)C(=O)N1c1ccccc1C,0.7058823529411765
+DBMET00647,Doxorubicinol,DBMET01078,Doxorubicine hydroxyaglycone,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(O)CO)CC3OC1CC(N)C(O)C(C)O1,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(=O)CO)CC3O,0.5061728395061729
+DBMET01297,Dihydroxy ketobemidone,DBMET01299,m-Hydroxymethoxy ketobemidone,CCC(=O)C1(c2ccc(O)c(O)c2)CCN(C)CC1,CCC(=O)C1(c2ccc(OC)c(O)c2)CCN(C)CC1,0.7441860465116279
+DBMET02619,"diclofenac 2',3'-oxide",DBMET02621,,O=C(O)Cc1ccccc1NC1=C(Cl)C=CC2OC12Cl,NC(CCC(=O)NC(CSC1C(Nc2ccccc2CC(=O)O)=C(Cl)C=CC1O)C(=O)NCC(=O)O)C(=O)O,0.3461538461538461
+DBMET00110,Epoxy-hexobarbital,DBMET01216,Hexobarbital dihydrodiol derivative,CN1C(=O)N=C(O)C(C)(C23CCCCC2O3)C1=O,CN1C(=O)NC(=O)C(C)(C2(O)CCCCC2O)C1=O,0.4038461538461538
+DBMET01069,2-hydroxydesmethyl clomipramine,DBMET01074,2-hydroxydesmethyl clomipramine glucuronide,CNCCCN1c2ccccc2CCc2cc(O)c(Cl)cc21,CNCCCN1c2cc(Cl)c(O)cc2CCc2c(OC3OC(C(=O)O)C(O)C(O)C3O)cccc21,0.5352112676056338
+DBMET00047,R-10(S)-Hydroxywarfarin,DBMET02563,(E)-dehydrowarfarin,CC(=O)C(O)C(c1ccccc1)c1c(O)c2ccccc2oc1=O,CC(=O)C=C(c1ccccc1)c1c(O)c2ccccc2oc1=O,0.4528301886792453
+DBMET00193,4-Hydroxypropofol,DBMET01312,4-Quinol sulfate,CC(C)c1cc(O)cc(C(C)C)c1O,CC(C)c1cc(OS(=O)(=O)O)cc(C(C)C)c1O,0.4827586206896552
+DBMET01251,Zafirlukast metabolite M2,DBMET01252,Zafirlukast metabolite M4,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(C)=O)cc12,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(CO)c2ccc(NC(C)=O)cc12,0.8382352941176471
+DBMET01344,Valdecoxib metabolite M1,DBMET01342,Valdecoxib metabolite M5,NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2CO)cc1,O=S(=O)(NO)c1ccc(-c2c(-c3ccccc3)noc2CO)cc1,0.75
+DBMET00296,para-Hydroxyrosiglitazone,DBMET01112,para-O-Sulfate rosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccc(O)cn1,CN(CCOc1ccc(CC2SC(=O)NC2=O)cc1)c1ccc(OS(=O)(=O)O)cn1,0.59375
+DBMET01522,QS8,DBMET01523,QS6,COC1=C(OC)C(=O)C(CCCCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCCCO)=C(C)C1=O,1.0
+DBMET00658,Aldophosphamide,DBMET01088,Carboxyphosphamide,NP(=O)(OCCC=O)N(CCCl)CCCl,NP(=O)(OCCC(=O)O)N(CCCl)CCCl,0.5833333333333334
+DBMET00460,4-hydroxymethyl ambrisentan,DBMET01406,4-hydroxymethyl ambrisentan glucuronide,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)O,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,0.640625
+DBMET01073,8-hydroxydesmethyl clomipramine,DBMET01075,8-hyroxydesmethyl clomipramine glucuronide,CNCCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,CNCCCN1c2cc(Cl)ccc2CCc2c1ccc(O)c2OC1OC(C(=O)O)C(O)C(O)C1O,0.5142857142857142
+DBMET02560,R-10(R)-Hydroxywarfarin,DBMET02563,(E)-dehydrowarfarin,CC(=O)C(O)C(c1ccccc1)c1c(O)c2ccccc2oc1=O,CC(=O)C=C(c1ccccc1)c1c(O)c2ccccc2oc1=O,0.4528301886792453
+DBMET01061,Bortezomib metabolite M1,DBMET01063,Bortezomib metabolite M3,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.6666666666666666
+DBMET00988,Phenytoin arene-oxide,DBMET00888,Hydroxyphenytoin,O=C1NC(=O)C(C2=CC3OC3C=C2)(c2ccccc2)N1,OC1=NC(c2ccccc2)(c2ccc(O)cc2)C(O)=N1,0.1636363636363636
+DBMET02045,Retinol,DBMET02046,retinoic acid,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CCO,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,0.6956521739130435
+DBMET00170,Dihydro-5-hydroxyrofecoxib,DBMET00171,"Rofecoxib-threo-3,4-dihydrohydroxy acid",CS(=O)(=O)c1ccc(C2C(O)OC(=O)C2c2ccccc2)cc1,CS(=O)(=O)c1ccc(C(CO)C(C(=O)O)c2ccccc2)cc1,0.320754716981132
+DBMET00316,norfenfluramine,DBMET03178,1-(3-trifluoromethyl-phenyl)-propan-2-one,CC(N)Cc1cccc(C(F)(F)F)c1,CC(=O)Cc1cccc(C(F)(F)F)c1,0.5277777777777778
+DBMET01200,"N,N-Didesmethyldiphenhydramine",DBMET01201,Diphenylmethoxyacetic acid,NCCOC(c1ccccc1)c1ccccc1,O=C(O)COC(c1ccccc1)c1ccccc1,0.5
+DBMET00313,morphine,DBMET00462,morphine-3-glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CCCN(C)C(CC)C1C=CC(O)C2Oc3c(OC4OC(C)C(O)C(O)C4O)cccc3C12,0.1797752808988764
+DBMET00189,Norketamine,DBMET01309,5-Hydroxynorketamine,NC1(c2ccccc2Cl)CCCCC1=O,NC1(c2ccccc2Cl)CCC(O)CC1=O,0.5609756097560976
+DBMET02507,"5-hydroxy, 6-methoxy duloxetine",DBMET00750,"5-hydroxy, 6-methoxy duloxetine sulfate",CNCCC(Oc1cccc2c(O)c(OC)ccc12)c1cccs1,CNCCC(Oc1cccc2c(OS(=O)(=O)O)c(OC)ccc12)c1ccco1,0.4923076923076923
+DBMET03512,Desmethyl-dabrafenib,DBMET03513,M31-Dabrafenib,CC(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,C=C(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,0.7272727272727273
+DBMET00052,E-10-Hydroxynortriptyline,DBMET00482,E-10-Hydroxydesmethylnortriptyline,CNCCC=C1c2ccccc2CC(O)c2ccccc21,NCCC=C1c2ccccc2CC(O)c2ccccc21,0.6904761904761905
+DBMET03391,Dabigatran M602,DBMET03392,Dabigatran M574,Cn1c(CNc2ccc(C(=N)NC(=O)OCCCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)NC(=O)OCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,0.8666666666666667
+DBMET01044,Endoxifen (4-hydroxy-N-desmethyltamoxifen),DBMET02719,"Norendoxifen (4-hydroxy-N,N-didesmethyltamoxifen)",CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN)cc1)c1ccccc1,0.7441860465116279
+DBMET03729,1-PP,DBMET03726,5-OH 1-PP,c1cnc(N2CCNCC2)nc1,Oc1cnc(N2CCNCC2)nc1,0.6071428571428571
+DBMET00258,6-Hydroxymelatonin,DBMET00763,6-Hydroxymelatonin sulfate,COc1cc2c(CCNC(C)=O)c[nH]c2cc1O,COc1cc2c(CCNC(C)=O)c[nH]c2cc1OS(=O)(=O)O,0.7
+DBMET03425,M5 (Macitentan),DBMET03426,m/z 324 (Macitentan),CCCNS(=O)(=O)Nc1ncnc(OCC(=O)O)c1-c1ccc(Br)cc1,Nc1ncnc(OCC(=O)O)c1-c1ccc(Br)cc1,0.5454545454545454
+DBMET02759,Methimazole Epoxide Metabolite,DBMET02760,Methimazole Dihydrodiol Metabolite,CN1C(S)=NC2OC21,CN1C(S)=NC(O)C1O,0.4137931034482758
+DBMET00158,Deacyl indomethacin,DBMET01351,O-Desmethyl-N-deschlorobenzoyl indomethacin,COc1ccc2[nH]c(C)c(CC(=O)O)c2c1,Cc1[nH]c2ccc(O)cc2c1CC(=O)O,0.675
+DBMET00133,Bosentan metabolite Ro 48-5033,DBMET01237,Bosentan metabolite Ro 64-1056,COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)CO)cc2)nc(-c2ncccn2)nc1OCCO,CC(C)(CO)c1ccc(S(=O)(=O)Nc2nc(-c3ncccn3)nc(OCCO)c2Oc2ccccc2O)cc1,0.875
+DBMET01559,"(R)-chloroquine, N-desethyl",DBMET03063,N-bidesethylchloroquine,CCNCCCC(C)Nc1ccnc2cc(Cl)ccc12,CC(CCCN)Nc1ccnc2cc(Cl)ccc12,0.7446808510638298
+DBMET03543,4-amino-antipyrine (AA),DBMET03544,4-acetyl-amino-antipyrine (AAA),Cc1c(N)c(=O)n(-c2ccccc2)n1C,CC(=O)Nc1c(C)n(C)n(-c2ccccc2)c1=O,0.5526315789473685
+DBMET01285,4'-Hydroxy-5-carboxylumiracoxib (M5),DBMET01287,Lumiracoxib metabolite M8,O=C(O)Cc1cc(C(=O)O)ccc1Nc1c(F)cc(O)cc1Cl,O=C(O)c1ccc2c(c1)CC(=O)N2c1c(F)cc(O)cc1Cl,0.4067796610169492
+DBMET03739,Pitavastatin glucuronide,DBMET03740,Pitavastatin lactone,O=C(CC(O)CC(O)C=Cc1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1)OC1OC(C(=O)O)C(O)C(O)C1O,O=C1CC(O)CC(C=Cc2c(C3CC3)nc3ccccc3c2-c2ccc(F)cc2)O1,0.4880952380952381
+DBMET00449,5-fluorouracil,DBMET02000,5-fluorouridine-triphosphate,O=c1[nH]cc(F)c(=O)[nH]1,O=c1[nH]c(=O)n(C2OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C2O)cc1F,0.2142857142857142
+DBMET00957,"N,O-didesmethyltramadol",DBMET00956,"N,N,O-tridesmethyl-tramadol",CNCC1CCCCC1(O)c1cccc(O)c1,NCC1CCCCC1(O)c1cccc(O)c1,0.7142857142857143
+DBMET00189,Norketamine,DBMET01308,4-Hydroxynorketamine,NC1(c2ccccc2Cl)CCCCC1=O,NC1(c2ccccc2Cl)CC(O)CCC1=O,0.5609756097560976
+DBMET02619,"diclofenac 2',3'-oxide",DBMET02620,2'-hydroxy-3'-glutathione conjugated diclofenac,O=C(O)Cc1ccccc1NC1=C(Cl)C=CC2OC12Cl,NC(CCC(=O)NC(CSC1C=CC(Cl)=C(Nc2ccccc2CC(=O)O)C1(O)Cl)C(=O)NCC(=O)O)C(=O)O,0.4210526315789473
+DBMET02310,13'-hydroxy-alpha-tocopherol,DBMET02311,13'-carboxy-alpha-tocopherol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)CO)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C(=O)O)O2,0.76
+DBMET00024,4-Hydroxyifosfamide,DBMET01100,4-Thioifosfamide,O=P1(NCCCl)OCCC(O)N1CCCl,NC(CCC(=O)NC(CSC1CCOP(=O)(NCCCl)N1CCCl)C(=O)NCC(=O)O)C(=O)O,0.4202898550724637
+DBMET00120,11-Hydroxy-delta-9-THC,DBMET01220,"8,11-Dihydroxy-delta-9-THC",CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(CO)=CC21,0.6779661016949152
+DBMET00684,2-hydroxyiminostilbene,DBMET02600,Iminoquinone,Oc1ccc2c(c1)C=Cc1ccccc1N2,NC(=O)N1c2ccccc2C=Cc2cc(O)c(O)cc21,0.2727272727272727
+DBMET01049,Nitroso-sulfamethoxazole,DBMET01050,Sulfamethoxazole GSH conjugate,Cc1cc(NS(=O)(=O)c2ccc(N=O)cc2)no1,Cc1cc(NS(=O)(=O)c2ccc(N[S+]([O-])SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)cc2)no1,0.3552631578947368
+DBMET00175,Hydroxybuprenorphine,DBMET01295,Hydroxynorbuprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5,0.6388888888888888
+DBMET01487,Inositol tetranicotinate,DBMET01488,Inositol trinicotinate,O=C(OC1C(O)C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(O)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,0.967741935483871
+DBMET00172,"Rofecoxib-erythro-3,4-dihydrohydroxy acid",DBMET01292,cis-Dihydrorofecoxib,CS(=O)(=O)c1ccc(C(CO)C(C(=O)O)c2ccccc2)cc1,CS(=O)(=O)c1ccc(C2COC(=O)C2c2ccccc2)cc1,0.3018867924528302
+DBMET00342,noroxycodone,DBMET00426,beta-noroxycodol,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)NCCC314,COc1ccc2c3c1OC1C(O)CCC4(O)C(C2)NCCC314,0.6551724137931034
+DBMET03120,Indole ethyl alcohol zolmitriptan derivative,DBMET03121,Indole acetic acid zolmitriptan derivative,O=C1NC(Cc2ccc3[nH]cc(CCO)c3c2)CO1,O=C(O)Cc1c[nH]c2ccc(CC3COC(=O)N3)cc12,0.7755102040816326
+DBMET03406,Deoxydaunorubicinol aglycone,DBMET03407,Demethyl deoxydaunorubicinol aglycone,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,CC(O)C1(O)CCc2c(O)c3c(c(O)c2C1)C(=O)c1cccc(O)c1C3=O,0.78
+DBMET00033,"cis, trans-5'-Hydroxythalidomide",DBMET03444,"cis,trans-5,5’-dihydroxythalidomide",O=C1NC(=O)C(N2C(=O)c3ccccc3C2=O)CC1O,O=C1NC(=O)C(N2C(=O)c3ccc(O)cc3C2=O)CC1O,0.717948717948718
+DBMET00063,4-Hydroxyvalproic acid,DBMET01107,2-n-Propyl-4-oxopentanoic acid,CCCC(CC(C)O)C(=O)O,CCCC(CC(C)=O)C(=O)O,0.5357142857142857
+DBMET01475,M7-B (Odanacatib),DBMET01474,M7-A (Odanacatib),CC(F)(C=O)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)cc1)C(F)(F)F)C(=O)NC1(C#N)CC1,CC1(F)CC(C(=O)NC2(C#N)CC2)N(C(c2ccc(-c3ccc(S(C)(=O)=O)cc3)cc2)C(F)(F)F)C1O,0.4871794871794871
+DBMET00657,6-Thioinosine 5'-monophosphate,DBMET01159,6-Mercaptopurine riboside,O=P(O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,0.673469387755102
+DBMET03519,Rucaparib M323 metabolite,DBMET03520,Rucaparib M337a metabolite,NC(=O)c1ccc(-c2[nH]c3cc(F)cc4c3c2CCNC4=O)cc1,CN1CCc2c(-c3ccc(C(N)=O)cc3)[nH]c3cc(F)cc(c23)C1=O,0.6607142857142857
+DBMET02590,Beclomethasone-21-monopropionate (21-BMP),DBMET02591,Beclomethasone (BOH),CCC(=O)OCC(=O)C1(O)C(C)CC2C3CCC4=CC(=O)C=CC4(C)C3(Cl)C(O)CC21C,CC1CC2C3CCC4=CC(=O)C=CC4(C)C3(Cl)C(O)CC2(C)C1(O)C(=O)CO,0.7692307692307693
+DBMET03419,M6,DBMET03421,M1 (Macitentan),CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,O=C(O)C1OC(NS(=O)(=O)Nc2ncnc(OCCOc3ncc(Br)cn3)c2-c2ccc(Br)cc2)C(O)C(O)C1O,0.5915492957746479
+DBMET01344,Valdecoxib metabolite M1,DBMET01347,Valdecoxib metabolite M3,NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2CO)cc1,NS(=O)(=O)c1ccc(-c2c(-c3cccc(O)c3)noc2CO)cc1,0.7608695652173914
+DBMET02102,Glutamate,DBMET03078,α-ketoglutarate,NC(CCC(=O)O)C(=O)O,O=C(O)CCC(=O)C(=O)O,0.3333333333333333
+DBMET00296,para-Hydroxyrosiglitazone,DBMET00981,para-O-Glucuronide rosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccc(O)cn1,CN(CCOc1ccc(CC2SC(=O)NC2=O)cc1)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cn1,0.5135135135135135
+DBMET02254,CVT-3388,DBMET02255,CVT-3389,COc1ccccc1OCC(O)CN1CCN(CC(=O)Nc2c(C)ccc(O)c2C)CC1,Cc1ccc(O)c(C)c1NC(=O)CN1CCNCC1,0.5333333333333333
+DBMET01321,Nateglinide metabolite M2/M3,DBMET01322,Nateglinide metabolite M11/M12,CC(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,CC(O)(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,0.6470588235294118
+DBMET02802,(S)-MHD,DBMET02804,"cis-10,11-dihydro-10,11-dihydroxycarbamazepine",NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2C(O)C(O)c2ccccc21,0.6176470588235294
+DBMET03612,15-keto-PGE1,DBMET03613,15-keto-PGE0,CCCCCC(=O)C=CC1C(O)CC(=O)C1CCCCCCC(=O)O,CCCCCC(=O)CCC1C(O)CC(=O)C1CCCCCCC(=O)O,0.5961538461538461
+DBMET01275,5-Carboxylumiracoxib (M11),DBMET01285,4'-Hydroxy-5-carboxylumiracoxib (M5),O=C(O)Cc1cc(C(=O)O)ccc1Nc1c(F)cccc1Cl,O=C(O)Cc1cc(C(=O)O)ccc1Nc1c(F)cc(O)cc1Cl,0.717391304347826
+DBMET03404,Daunorubicinol,DBMET03405,Daunorubicinol aglycone,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3OC1CC(N)C(O)C(C)O1,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3O,0.6527777777777778
+DBMET01914,Deacetyl-thymoxamine,DBMET01918,sulfate of deacetyl-thymoxamine,Cc1ccc(C(C)C)c(OCCN(C)C)c1O,Cc1ccc(C(C)C)c(OCCN(C)C)c1OS(O)(O)O,0.6666666666666666
+DBMET01186,"UK-215,364",DBMET01187,Voriconazole O-glucuronide derivative (1),OC(Cn1cncn1)c1ccc(F)cc1F,O=C(O)C1OC(Oc2ccc(C(O)Cn3cncn3)c(F)c2)C(O)C(O)C1O,0.5517241379310345
+DBMET00777,8-hydroxyclomipramine,DBMET01073,8-hydroxydesmethyl clomipramine,CN(C)CCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,CNCCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,0.7083333333333334
+DBMET03553,M1 telotristat,DBMET03554,M2 telotristat,Cc1ccn(-c2cc(Cl)ccc2C(Oc2cc(-c3ccc(CCN)cc3)nc(N)n2)C(F)(F)F)n1,Cc1ccn(-c2cc(Cl)ccc2C(Oc2cc(-c3ccc(CCO)cc3)nc(N)n2)C(F)(F)F)n1,0.873015873015873
+DBMET00077,3-Hydroxynevirapine,DBMET00712,3-hydroxynevirapine glucuronide,Cc1c(O)cnc2c1N=C(O)c1cccnc1N2C1CC1,Cc1c(O)cnc2c1N=C(OC1OC(C(=O)O)C(O)C(O)C1O)c1cccnc1N2C1CC1,0.5757575757575758
+DBMET03377,BIBR1087/M1,DBMET03390,Dabigatran M630,CCCCCCOC(=O)NC(=N)c1ccc(NCc2nc3cc(C(=O)N(CCC(=O)O)c4ccccn4)ccc3n2C)cc1,Cn1c(CNc2ccc(C(=N)NC(=O)OCCCCCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,0.922077922077922
+DBMET02320,alpha-carboxydimethyldecadienylhydroxychromanol,DBMET02321,alpha-carboxydimethyloctenylhydroxychromanol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)C(=O)O)O2,0.803921568627451
+DBMET00302,Irbesartan derivative M4,DBMET01057,Irbesartan derivative M6,CC(O)CCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,CC(=O)CCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,0.78125
+DBMET01488,Inositol trinicotinate,DBMET01489,Inositol dinicotinate,O=C(OC1C(O)C(O)C(O)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(O)C(O)C1OC(=O)c1cccnc1)c1cccnc1,0.967741935483871
+DBMET03138,O-desmethyl-galantamine,DBMET03141,O-desmethyl-galantamine glucuronide,CN1CCC23C=CC(O)CC2Oc2c(O)ccc(c23)C1,CN1CCC23C=CC(O)CC2Oc2c(OC4C(O)C(O)C(O)C(O)C4C(=O)O)ccc(c23)C1,0.6349206349206349
+DBMET02104,9-O-demethylemetine,DBMET02107,9-O-demethylemetine glucuronide,CCC1CN2CCC3C=C(OC)C(OC)=CC3(O)C2CC1CC1NCCc2cc(OC)c(OC)cc21,CCC1CN2CCC3C=C(OC)C(OC)=CC3(O)C2CC1CC1NCCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)c(OC)cc21,0.7682926829268293
+DBMET01363,Norfluoxetine alcohol,DBMET01364,Norfluoxetine acid,OCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,O=C(O)CC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,0.675
+DBMET03406,Deoxydaunorubicinol aglycone,DBMET03408,Deoxydaunorubicinol aglycone-13-O-β-glucuronide,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)OOC1OC(C(=O)O)C(O)C(O)C1O)CC3,0.6231884057971014
+DBMET03660,Vismodegib M3 metabolite,DBMET03662,Vismodegib M5 metabolite,CS(=O)(=O)c1ccc(C(=O)Nc2ccc(Cl)c(-c3ccc(O)cn3)c2)c(Cl)c1,CS(=O)(=O)c1ccc(C(=O)Nc2ccc(Cl)c(-c3ccc(OC4C(O)C(O)C(O)C(O)C4C(=O)O)cn3)c2)c(Cl)c1,0.6470588235294118
+DBMET02549,4-hydroxy-all-trans-retinoic acid,DBMET02550,4-oxo-all-trans-retinoic acid,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,0.64
+DBMET00106,"Haloperidol 1,2,3,6-tetrahydropyridine",DBMET01212,Haloperidol pyridinium ion derivative,O=C(CCCN1CC=C(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,O=C(CCCN1C=CC(=C2C=CC(=[Cl+])C=C2)C=C1)c1ccc(F)cc1,0.4285714285714285
+DBMET02937,Levamlodipine M9 metabolite,DBMET02938,Levamlodipine M10 metabolite,CCOC(=O)c1c(COCCN)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,CCOC(=O)c1c(COCCO)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,0.8545454545454545
+DBMET00189,Norketamine,DBMET01310,6-Hydroxynorketamine,NC1(c2ccccc2Cl)CCCCC1=O,NC1(c2ccccc2Cl)CCCC(O)C1=O,0.575
+DBMET03786,Ixazomib M2 metabolite,DBMET03785,Ixazomib M1 metabolite,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,O=C(O)CNC(=O)c1cc(Cl)ccc1Cl,0.7272727272727273
+DBMET01860,Nornalmefene,DBMET01861,Nornalmefene 3-O-glucuronide,C=C1CCC2(O)C3Cc4ccc(O)c5c4C2(CCN3)C1O5,C=C1CCC2(O)C3Cc4ccc(OC5OC(OO)C(O)C(O)C5O)c5c4C2(CCN3)C1O5,0.639344262295082
+DBMET03511,Carboxy-dabrafenib,DBMET03512,Desmethyl-dabrafenib,CC(C)(C(=O)O)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,CC(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,0.7058823529411765
+DBMET02036,CDMDHC,DBMET02037,CDMOHC,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)C(=O)O)O2,0.803921568627451
+DBMET01107,2-n-Propyl-4-oxopentanoic acid,DBMET01108,2-Propylsuccinic acid,CCCC(CC(C)=O)C(=O)O,CCCC(CC(=O)O)C(=O)O,0.7083333333333334
+DBMET02968,3-hydroxyguanfacine,DBMET02969,Guanfacine 3-glucuronide,N=C(N)NC(=O)Cc1c(Cl)ccc(O)c1Cl,N=C(N)NC(=O)Cc1c(Cl)ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c1Cl,0.5094339622641509
+DBMET02445,"3,4-Dihydroxyphenylacetaldehyde (DOPAL)",DBMET02446,"3,4-dihydroxyphenylacetic acid (DOPAC)",O=CCc1ccc(O)c(O)c1,O=C(O)Cc1ccc(O)c(O)c1,0.5357142857142857
+DBMET02613,5-hydroxy diclofenac,DBMET02614,"5,N-dihydroxy diclofenac",O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,O=C(O)Cc1cc(O)ccc1N(O)c1c(Cl)cccc1Cl,0.5348837209302325
+DBMET00029,N-Desmethyltamoxifen,DBMET02699,N-desmethyltamoxifen Sulfate,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,CCC(=C(c1ccccc1)c1ccc(OCCN(C)S(=O)(=O)O)cc1)c1ccccc1,0.5957446808510638
+DBMET01914,Deacetyl-thymoxamine,DBMET01916,glucuronide of deacetyl-thymoxamine,Cc1ccc(C(C)C)c(OCCN(C)C)c1O,Cc1cc(OCCN(C)C)c(C(C)C)cc1OC1OC(O)C(O)C(O)C1O,0.4
+DBMET00297,Torasemide M1 (hydroxytorsemide),DBMET02230,Torasemide M5,CC(C)NC(=O)NS(=O)(=O)c1c[nH]ccc1=Nc1cccc(CO)c1,CC(C)NC(=O)NS(=O)(=O)c1c[nH]ccc1=Nc1cccc(C(=O)O)c1,0.7413793103448276
+DBMET00134,Bosentan metabolite Ro 47-8634,DBMET01237,Bosentan metabolite Ro 64-1056,CC(C)(C)c1ccc(S(=O)(=O)Nc2nc(-c3ncccn3)nc(OCCO)c2Oc2ccccc2O)cc1,CC(C)(CO)c1ccc(S(=O)(=O)Nc2nc(-c3ncccn3)nc(OCCO)c2Oc2ccccc2O)cc1,0.8870967741935484
+DBMET00307,Zafirlukast metabolite M5,DBMET01254,Zafirlukast metabolite M8,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(CO)c2ccc(NC(=O)OC3CCCC3)cc12,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1c[nH]c2ccc(NC(=O)OC3CCCC3)cc12,0.7349397590361446
+DBMET00295,N-Desmethylrosiglitazone,DBMET01111,N-Desmethyl glucuronide rosiglitazone,O=C1N=C(O)C(Cc2ccc(OCCNc3ccccn3)cc2)S1,O=C1N=C(O)C(Cc2ccc(OCCNc3ncccc3OC3OC(C(=O)O)C(O)C(O)C3O)cc2)S1,0.5833333333333334
+DBMET02802,(S)-MHD,DBMET02803,"trans-10,11-dihydro-10,11-dihydroxycarbamazepine",NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2C(O)C(O)c2ccccc21,0.6176470588235294
+DBMET00734,4-hydroxyatomoxetine,DBMET02294,4-hydroxyatomoxetine-O-glucuronide,CNCCC(Oc1ccc(O)cc1C)c1ccccc1,CNCCC(Oc1ccc(O)cc1OC1OC(O)C(O)C(O)C1O)c1ccccc1,0.6111111111111112
+DBMET01305,Pioglitazone metabolite M-V,DBMET01304,Pioglitazone metabolite M-VI,O=C(O)Cc1ccc(CCOc2ccc(CC3SC(=O)NC3=O)cc2)nc1,O=C1NC(=O)C(Cc2ccc(OCCc3ccc(C(=O)O)cn3)cc2)S1,0.7692307692307693
+DBMET03449,Genz-258162,DBMET03450,Genz-399207,CC(=O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,0.8392857142857143
+DBMET02589,Beclomethasone-17-monopropionate (17-BMP),DBMET02591,Beclomethasone (BOH),CCC(=O)OC1(C(=O)CO)C(C)CC2C3CCC4=CC(=O)C=CC4(C)C3(Cl)C(O)CC21C,CC1CC2C3CCC4=CC(=O)C=CC4(C)C3(Cl)C(O)CC2(C)C1(O)C(=O)CO,0.7164179104477612
+DBMET02491,Tamsulosin M-4 Metabolite,DBMET02494,Tamsulosin M-4-Glu Metabolite,CCOc1ccccc1OCCNC(C)Cc1ccc(O)c(S(N)(=O)=O)c1,CCOc1ccccc1OCCNC(C)Cc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c(S(N)(=O)=O)c1,0.6376811594202898
+DBMET02777,BIBF 1053,DBMET02778,Nintedanib M4 Metabolite,COC(=O)c1ccc2c(c1)NC(=O)C2=C(Nc1ccc(N(C)C(=O)CN2CCNCC2)cc1)c1ccccc1,CN(C(=O)CN1CCNCC1)c1ccc(NC(=C2C(=O)Nc3cc(C(=O)O)ccc32)c2ccccc2)cc1,0.8805970149253731
+DBMET03200,Monomethyl Auristatin-F,DBMET03204,Monomethyl Auristatin-F M6 Metabolite,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,CCC(C)C(C(CC(=O)N1CCCC1C(O)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,0.8875
+DBMET00257,monoethylglycinexylidide,DBMET01091,Glycinexylidide (GX),CCNCC(=O)Nc1c(C)cccc1C,Cc1cccc(C)c1NC(=O)CN,0.625
+DBMET03628,4-O-demethyl deoxaglycone doxorubicinol,DBMET03629,Demethyldeoxaglycone doxorubicinol 4-O-sulfate,O=C1c2cccc(O)c2C(=O)c2c(O)c3c(c(O)c21)CC(O)(C(O)CO)CC3,O=C1c2cccc(OS(=O)(=O)O)c2C(=O)c2c(O)c3c(c(O)c21)CC(O)(C(O)CO)CC3,0.7454545454545455
+DBMET02322,alpha-carboxydimethylhexylhydroxychromanol,DBMET02323,alpha-caboxymethylbutylhydroxychromanol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCC(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)C(=O)O)O2,0.74
+DBMET03102,M8 (N-desmethyl selumetinib),DBMET03103,M11 (N-demethylated carboxylic acid selumetinib metabolite),O=C(NOCCO)c1cc2[nH]cnc2c(F)c1Nc1ccc(Br)cc1Cl,O=C(O)CONC(=O)c1cc2[nH]cnc2c(F)c1Nc1ccc(Br)cc1Cl,0.8225806451612904
+DBMET03709,Momelotinib M21 metabolite,DBMET03710,Momelotinib M28 metabolite,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4=O)cc3)n2)cc1,NC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4=O)cc3)n2)cc1,0.7230769230769231
+DBMET00437,"N,O-Didesmethylvenlafaxine",DBMET00958,"N,O-didesmethylvenlafaxine glucuronide",CNCC(c1ccc(O)cc1)C1(O)CCCCC1,CNCC(c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1)C1(O)CCCCC1,0.5
+DBMET00348,4-hydroxyalprazolam,DBMET02468,Alprazolam benzophenone metabolite,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2O,Cc1nnc(CO)n1-c1ccc(Cl)cc1C(=O)c1ccccc1,0.4098360655737705
+DBMET00257,monoethylglycinexylidide,DBMET01090,3-Hydroxymonoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,CCNCC(=O)Nc1c(C)ccc(O)c1C,0.6571428571428571
+DBMET02321,alpha-carboxydimethyloctenylhydroxychromanol,DBMET02322,alpha-carboxydimethylhexylhydroxychromanol,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCC(=O)O)O2,0.7843137254901961
+DBMET02531,reduced O-desmethyl-3-hydroxy-nabumetone,DBMET02532,reduced O-desmethyl-3-hydroxy-nabumetone glucuronide,CC(O)C(O)Cc1ccc2cc(O)ccc2c1,CC(O)C(O)Cc1ccc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc2c1,0.4423076923076923
+DBMET02503,4-hydroxy duloxetine,DBMET00731,4-hydroxy duloxetine glucuronide,CNCCC(Oc1ccc(O)c2ccccc12)c1cccs1,CNCCC(Oc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc12)c1cccs1,0.5901639344262295
+DBMET02532,reduced O-desmethyl-3-hydroxy-nabumetone glucuronide,DBMET02533,reduced O-desmethyl-3-hydroxy-nabumetone glucuronide glycine conjugate,CC(O)C(O)Cc1ccc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc2c1,CC(O)C(O)Cc1ccc2cc(OC3OC(C(=O)NCC(=O)O)C(O)C(O)C3O)ccc2c1,0.7719298245614035
+DBMET01392,O-desmethyl Apremilast,DBMET02625,O-desmethyl  apremilast glucuronide,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1O,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC1OC(C(=O)O)C(O)C(O)C1O,0.6666666666666666
+DBMET02716,Tamoxifen Metabolite E,DBMET02717,Tamoxifen Metabolite E Glucuronide,CCC(=C(c1ccccc1)c1ccc(O)cc1)c1ccccc1,CCC(=C(c1ccccc1)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1)c1ccccc1,0.4375
+DBMET00104,Reduced haloperidol,DBMET01211,Haloperidol reduced pyridinium ion derivative,OC(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,OC(CCC[n+]1ccc(-c2ccc(Cl)cc2)cc1)c1ccc(F)cc1,0.4615384615384615
+DBMET03758,BAL8728,DBMET03759,M4 BAL8728,CN1C(=O)OCc2cccnc21,CNc1ncccc1C(=O)O,0.2444444444444444
+DBMET02802,(S)-MHD,DBMET02806,(S)-MHD glucuronide metabolite,NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2CC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21,0.5192307692307693
+DBMET01172,6-Monoacetylmorphine,DBMET00313,morphine,CC(=O)OC1C=CC2C3Cc4ccc(O)c5c4C2(CCN3C)C1O5,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,0.7017543859649122
+DBMET00316,norfenfluramine,DBMET03179,N-hydroxynorfenfluramine,CC(N)Cc1cccc(C(F)(F)F)c1,CC(Cc1cccc(C(F)(F)F)c1)NO,0.6571428571428571
+DBMET00872,Hydroxydesmethyl doxepin,DBMET00879,Hydroxydesmethyl doxepin glucuronide,CNCCC=C1c2ccccc2COc2ccc(O)cc21,CN(C)CCC=C1c2ccccc2COc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc21,0.4428571428571428
+DBMET03178,1-(3-trifluoromethyl-phenyl)-propan-2-one,DBMET03180,1-(3-trifluoromethyl-phenyl)-propan-2-ol,CC(=O)Cc1cccc(C(F)(F)F)c1,CC(O)Cc1cccc(C(F)(F)F)c1,0.5555555555555556
+DBMET02445,"3,4-Dihydroxyphenylacetaldehyde (DOPAL)",DBMET02447,"3,4-dihydroxyphenylethanol (DOPET)",O=CCc1ccc(O)c(O)c1,OCCc1ccc(O)c(O)c1,0.5185185185185185
+DBMET03046,Arbidol M7 metabolite,DBMET03061,Arbidol M15 metabolite,CCOC(=O)c1c(CS(=O)(=O)c2ccccc2)n(C)c2cc(Br)c(O)c(CNC)c12,CCOC(=O)c1c(CS(=O)(=O)c2ccccc2)n(C)c2cc(Br)c(OS(=O)(=O)O)c(CNC)c12,0.7846153846153846
+DBMET01868,hydroxilated form of rilpivirine 4 (M4),DBMET01869,glucurinated form of rilpivirine (M7),NC=Cc1cc(CO)c(Nc2ccnc(Nc3ccc(N)cc3)n2)c(CO)c1,NC=Cc1cc(CO)c(Nc2ccnc(Nc3ccc(N)cc3)n2)c(COC2OC(C(=O)O)C(O)C(O)C2O)c1,0.6666666666666666
+DBMET00295,N-Desmethylrosiglitazone,DBMET00936,N-Desmethyl-ortho-hydroxy rosiglitazone,O=C1N=C(O)C(Cc2ccc(OCCNc3ccccn3)cc2)S1,O=C1NC(=O)C(Cc2ccc(OCCNc3ncccc3O)cc2)S1,0.5573770491803278
+DBMET00315,N-desmethyldoxepin,DBMET00834,Didesmethyl doxepin,CNCCC=C1c2ccccc2COc2ccccc21,NCCC=C1c2ccccc2COc2ccccc21,0.675
+DBMET00314,2-hydroxydesipramine,DBMET01956,2-hydroxydesipramine glucuronide,CNCCCN1c2ccccc2CCc2cc(O)ccc21,CNCCCN1c2ccccc2CCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc21,0.532258064516129
+DBMET00034,5-Hydroxythalidomide,DBMET03444,"cis,trans-5,5’-dihydroxythalidomide",O=C1CCC(N2C(=O)c3ccc(O)cc3C2=O)C(=O)N1,O=C1NC(=O)C(N2C(=O)c3ccc(O)cc3C2=O)CC1O,0.6363636363636364
+DBMET00277,S-Hydroxybupropion,DBMET03469,"S,S-Hydroxybupropion",CC(NC(C)(C)CO)C(=O)c1cccc(Cl)c1,CC1NC(C)(C)COC1(O)c1cccc(Cl)c1,0.2203389830508474
+DBMET00321,oxymorphone,DBMET00427,beta-oxymorphol,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3(O)C1C5,0.6428571428571429
+DBMET03470,R-Hydroxybupropion,DBMET03471,"R,R-Hydroxybupropion",CC(NC(C)(C)CO)C(=O)c1cccc(Cl)c1,CC1NC(C)(C)COC1(O)c1cccc(Cl)c1,0.2203389830508474
+DBMET03659,Vismodegib M1 metabolite,DBMET03661,Vismodegib M4 metabolite,CS(=O)(=O)c1ccc(C(=O)Nc2cc(O)c(Cl)c(-c3ccccn3)c2)c(Cl)c1,CS(=O)(=O)c1ccc(C(=O)Nc2cc(OC3C(O)C(O)C(O)C(O)C3C(=O)O)c(Cl)c(-c3ccccn3)c2)c(Cl)c1,0.6571428571428571
+DBMET03710,Momelotinib M28 metabolite,DBMET03711,Momelotinib M14 metabolite,NC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4=O)cc3)n2)cc1,O=C(O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4=O)cc3)n2)cc1,0.8545454545454545
+DBMET01915,deacetyl-demethyl-thymoxamine,DBMET01919,sulfate of deacetyl-demethyl-thymoxamine,CNCCOc1cc(C)c(O)cc1C(C)C,CNCCOc1c(C(C)C)ccc(C)c1OS(O)(O)O,0.4782608695652174
+DBMET01521,QS10,DBMET01522,QS8,COC1=C(OC)C(=O)C(CCCCCCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCCCCCO)=C(C)C1=O,1.0
+DBMET03063,N-bidesethylchloroquine,DBMET03064,7-chloro-4-aminoquinoline,CC(CCCN)Nc1ccnc2cc(Cl)ccc12,Nc1ccnc2cc(Cl)ccc12,0.4545454545454545
+DBMET01860,Nornalmefene,DBMET01862,Nornalmefene 3-O-sulfate,C=C1CCC2(O)C3Cc4ccc(O)c5c4C2(CCN3)C1O5,C=C1CCC2(O)C3Cc4ccc(OS(=O)(=O)O)c5c4C2(CCN3)C1O5,0.6964285714285714
+DBMET00301,dapsone hydroxylamine,DBMET01043,Nitroso-dapsone,Nc1ccc(S(=O)(=O)c2ccc(NO)cc2)cc1,Nc1ccc(S(=O)(=O)c2ccc(N=O)cc2)cc1,0.5161290322580645
+DBMET00143,5-Hydroxymethyl tolterodine,DBMET01256,N-Dealkylated 5-hydroxymethyl tolterodine,CC(C)N(CCC(c1ccccc1)c1cc(CO)ccc1O)C(C)C,CC(C)NCCC(c1ccccc1)c1cc(CO)ccc1O,0.6444444444444445
+DBMET02095,R529,DBMET02098,R529 Sulfate-conjugate,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)NC(=O)C(C)(C)O4)n2)cc(OC)c1O,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)NC(=O)C(C)(C)O4)n2)cc(OC)c1OS(=O)(=O)O,0.8059701492537313
+DBMET01275,5-Carboxylumiracoxib (M11),DBMET01276,Lumiracoxib metabolite M15,O=C(O)Cc1cc(C(=O)O)ccc1Nc1c(F)cccc1Cl,O=C(O)c1ccc2c(c1)CC(=O)N2c1c(F)cccc1Cl,0.396551724137931
+DBMET00269,3-hydroxyropivacaine,DBMET03535,3-OH-PPX,CCCN1CCCCC1C(=O)Nc1c(C)ccc(O)c1C,Cc1ccc(O)c(C)c1NC(=O)C1CCCCN1,0.5283018867924528
+DBMET00462,morphine-3-glucuronide,DBMET02018,"morphine-3,6-diglucuronide",CCCN(C)C(CC)C1C=CC(O)C2Oc3c(OC4OC(C)C(O)C(O)C4O)cccc3C12,OC1OC(Oc2ccc3c4c2OC2C(OC5OC(O)C(O)C(O)C5O)C=CC5C(C3)NCCC452)C(O)C(O)C1O,0.2446808510638297
+DBMET00847,Doxorubicinol deoxaglycone,DBMET03628,4-O-demethyl deoxaglycone doxorubicinol,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(O)CO)CC3,O=C1c2cccc(O)c2C(=O)c2c(O)c3c(c(O)c21)CC(O)(C(O)CO)CC3,0.7735849056603774
+DBMET01306,Pioglitazone metabolite M-IV,DBMET01307,Pioglitazone metabolite M-III,CC(O)c1ccc(CCOc2ccc(CC3SC(=O)NC3=O)cc2)nc1,CC(=O)c1ccc(CCOc2ccc(CC3SC(=O)NC3=O)cc2)nc1,0.7090909090909091
+DBMET01494,5-Hydroxy dexlansoprazole,DBMET03754,5-hydroxy dexlansoprazole sulfone,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2cc(O)ccc2[nH]1,Cc1c(OCC(F)(F)F)ccnc1CS(=O)(=O)c1nc2cc(O)ccc2[nH]1,0.625
+DBMET00296,para-Hydroxyrosiglitazone,DBMET00938,N-Desmethyl-para-hydroxy rosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccc(O)cn1,O=C1NC(=O)C(Cc2ccc(OCCNc3ccc(O)cn3)cc2)S1,0.484375
+DBMET03613,15-keto-PGE0,DBMET03614,"13,14-dihydro-PGE1",CCCCCC(=O)CCC1C(O)CC(=O)C1CCCCCCC(=O)O,CCCCCC(O)CCC1C(O)CC(=O)C1CCCCCCC(=O)O,0.7142857142857143
+DBMET01152,Thioguanosine monophosphate,DBMET01154,Thioguanosine diphosphate,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)O)C(O)C3O)c2[nH]1,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,0.8596491228070176
+DBMET01323,Nateglinide metabolite M1,DBMET01322,Nateglinide metabolite M11/M12,CC(C)(O)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,CC(O)(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,0.8043478260869565
+DBMET03311,Ponesimod M12 Metabolite (ACT-204426),DBMET03309,Ponesimod M32 Metabolite,CCCN=C1SC(=Cc2ccc(OCC(O)C(=O)O)c(Cl)c2)C(=O)N1c1ccccc1C,CCCN=C1SC(=Cc2ccc(O)c(Cl)c2)C(=O)N1c1ccccc1C,0.6956521739130435
+DBMET00954,"N,N-didesmethyltramadol",DBMET00956,"N,N,O-tridesmethyl-tramadol",COc1cccc(C2(C)CCCCC2CN)c1,NCC1CCCCC1(O)c1cccc(O)c1,0.46
+DBMET01252,Zafirlukast metabolite M4,DBMET01253,Zafirlukast metabolite M3,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(CO)c2ccc(NC(C)=O)cc12,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1c[nH]c2ccc(NC(C)=O)cc12,0.6891891891891891
+DBMET02278,7-acetamido-clonazepam,DBMET03608,3-hydroxy-7-acetamido-clonazepam,CC(=O)Nc1ccc2c(c1)C(c1ccccc1Cl)=NCC(=O)N2,CC(=O)Nc1ccc2c(c1)C(c1ccccc1Cl)=NC(O)C(=O)N2,0.6545454545454545
+DBMET01185,"UK-51,060",DBMET01186,"UK-215,364",O=C(Cn1cncn1)c1ccc(F)cc1F,OC(Cn1cncn1)c1ccc(F)cc1F,0.5217391304347826
+DBMET01200,"N,N-Didesmethyldiphenhydramine",DBMET02238,N-Acetyl-N-desmethyldiphenhydramine,NCCOC(c1ccccc1)c1ccccc1,CC(=O)NCCOC(c1ccccc1)c1ccccc1,0.4857142857142857
+DBMET01254,Zafirlukast metabolite M8,DBMET01253,Zafirlukast metabolite M3,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1c[nH]c2ccc(NC(=O)OC3CCCC3)cc12,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1c[nH]c2ccc(NC(C)=O)cc12,0.7945205479452054
+DBMET02968,3-hydroxyguanfacine,DBMET02970,Guanfacine 3-sulfate,N=C(N)NC(=O)Cc1c(Cl)ccc(O)c1Cl,N=C(N)NC(=O)Cc1c(Cl)ccc(OS(=O)(=O)O)c1Cl,0.627906976744186
+DBMET01094,3-Carbamoyl-2-phenylpropionaldehyde,DBMET01095,Atropaldehyde,NC(=O)OCC(C=O)c1ccccc1,C=C(C=O)c1ccccc1,0.2702702702702703
+DBMET00142,N-Dealkylated tolterodine,DBMET01256,N-Dealkylated 5-hydroxymethyl tolterodine,Cc1ccc(O)c(C(CCNC(C)C)c2ccccc2)c1,CC(C)NCCC(c1ccccc1)c1cc(CO)ccc1O,0.7380952380952381
+DBMET00071,Voriconazole N-Oxide,DBMET01185,"UK-51,060",CC(c1nc[n+]([O-])cc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,O=C(Cn1cncn1)c1ccc(F)cc1F,0.3968253968253968
+DBMET00470,ortho-Hydroxyrosiglitazone,DBMET00969,ortho-O-Sulfate rosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ncccc1O,CN(CCOc1ccc(CC2SC(=O)NC2=O)cc1)c1ncccc1OS(=O)(=O)O,0.5909090909090909
+DBMET03775,Cladribine diphosphate,DBMET00677,Cladribine triphosphate,Nc1nc(Cl)nc2c1ncn2C1CC(O)C(COP(=O)(O)OP(=O)(O)O)O1,Nc1nc(Cl)nc2c1ncn2C1CC(O)C(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O1,0.9818181818181818
+DBMET00015,Sulfamethoxazole N4-hydroxylamine,DBMET01049,Nitroso-sulfamethoxazole,Cc1cc(NS(=O)(=O)c2ccc(NO)cc2)no1,Cc1cc(NS(=O)(=O)c2ccc(N=O)cc2)no1,0.6585365853658537
+DBMET01061,Bortezomib metabolite M1,DBMET01065,Bortezomib metabolite M5,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)(O)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7735849056603774
+DBMET00094,Ticlopidine S-oxide,DBMET01207,Ticlopidine S-oxide dimer,[O-][s+]1ccc2c1CCN(Cc1ccccc1Cl)C2,[O-][S+]1C2=C(CN(Cc3ccccc3Cl)CC2)C2C1C1C3=C(CCN(Cc4ccccc4Cl)C3)C2[S+]1[O-],0.4821428571428571
+DBMET03102,M8 (N-desmethyl selumetinib),DBMET03101,"M12 (Primary amide, N-demethylated selumetinib metabolite)",O=C(NOCCO)c1cc2[nH]cnc2c(F)c1Nc1ccc(Br)cc1Cl,NC(=O)c1cc2[nH]cnc2c(F)c1Nc1ccc(Br)cc1Cl,0.7213114754098361
+DBMET00295,N-Desmethylrosiglitazone,DBMET00938,N-Desmethyl-para-hydroxy rosiglitazone,O=C1N=C(O)C(Cc2ccc(OCCNc3ccccn3)cc2)S1,O=C1NC(=O)C(Cc2ccc(OCCNc3ccc(O)cn3)cc2)S1,0.5666666666666667
+DBMET01045,Dapsone mercaptal intermediate,DBMET01046,Dapsone GSH conjugate,Nc1ccc(S(=O)(=O)c2ccc(N(O)SSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)cc2)cc1,Nc1ccc(S(=O)(=O)c2ccc(N[S+]([O-])SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)cc2)cc1,0.6857142857142857
+DBMET00061,5-Hydroxyvalproic acid,DBMET01109,2-Propylglutaric acid,CCCC(CCCO)C(=O)O,CCCC(CCC(=O)O)C(=O)O,0.6153846153846154
+DBMET01965,DM-6705,DBMET01972,DM-6706,CC1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)CN=C(N)O1,CC(O)(CNC(N)=O)COc1ccc(N2CCC(Oc3ccc(OC(F)(F)F)cc3)CC2)cc1,0.5
+DBMET03390,Dabigatran M630,DBMET03391,Dabigatran M602,Cn1c(CNc2ccc(C(=N)NC(=O)OCCCCCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)NC(=O)OCCCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,0.945945945945946
+DBMET03664,ara-GMP,DBMET03665,ara-GTP,Nc1nc2c(n[c]n2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1,Nc1nc2c(n[c]n2C2OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C2O)c(=O)[nH]1,0.8448275862068966
+DBMET02505,6-hydroxy duloxetine,DBMET02506,Catechol duloxetine,CNCCC(Oc1cccc2cc(O)ccc12)c1cccs1,CNCCC(Oc1cccc2c(O)c(O)ccc12)c1cccs1,0.6792452830188679
+DBMET03628,4-O-demethyl deoxaglycone doxorubicinol,DBMET03630,Demethyldeoxaglycone doxorubicinol 4-O-b-glucuronide,O=C1c2cccc(O)c2C(=O)c2c(O)c3c(c(O)c21)CC(O)(C(O)CO)CC3,O=C1c2cccc(OC3OC(C(=O)O)C(O)C(O)C3O)c2C(=O)c2c(O)c3c(c(O)c21)CC(O)(C(O)CO)CC3,0.6212121212121212
+DBMET03407,Demethyl deoxydaunorubicinol aglycone,DBMET03409,Demethyl deoxydaunorubicinol aglycone-4-O-sulfate,CC(O)C1(O)CCc2c(O)c3c(c(O)c2C1)C(=O)c1cccc(O)c1C3=O,CC(O)C1(O)CCc2c(O)c3c(c(O)c2C1)C(=O)c1cccc(OS(O)(O)O)c1C3=O,0.7358490566037735
+DBMET03554,M2 telotristat,DBMET03555,LP-951757,Cc1ccn(-c2cc(Cl)ccc2C(Oc2cc(-c3ccc(CCO)cc3)nc(N)n2)C(F)(F)F)n1,Cc1ccn(-c2cc(Cl)ccc2C(Oc2cc(-c3ccc(C(=O)CO)cc3)nc(N)n2)C(F)(F)F)n1,0.7681159420289855
+DBMET03143,Dihydroartemisinin Glucuronide,DBMET03144,Furano Acetate of Dihydroartemisinin Glucuronide,CC1CCC2C(C)C(OC3OC(C(=O)O)C(O)C(O)C3O)OC3OC4(C)CCC1C32OO4,CC(=O)OC1OC(OC2OC(C(=O)O)C(O)C(O)C2O)C(C)C2CCC(C)C3CCOC132,0.578125
+DBMET00777,8-hydroxyclomipramine,DBMET01072,8-hydroxyclomipramine glucuronide,CN(C)CCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,CN(C)CCCN1c2cc(Cl)ccc2CCc2c1ccc(O)c2OC1OC(C(=O)O)C(O)C(O)C1O,0.5142857142857142
+DBMET01344,Valdecoxib metabolite M1,DBMET01346,Valdecoxib metabolite M4,NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2CO)cc1,NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2C(=O)O)cc1,0.6666666666666666
+DBMET02768,Methimazole Sulfenic Acid Metabolite (Ring),DBMET02769,Methimazole Sulfinic Acid Metabolite (Ring),Cn1ccnc1SO,Cn1ccnc1S(=O)O,0.4193548387096774
+DBMET00047,R-10(S)-Hydroxywarfarin,DBMET02564,(Z)-dehydrowarfarin,CC(=O)C(O)C(c1ccccc1)c1c(O)c2ccccc2oc1=O,CC(=O)C=C(c1ccccc1)c1c(O)c2ccccc2oc1=O,0.4528301886792453
+DBMET02613,5-hydroxy diclofenac,DBMET02616,5-hydroxy-6-glutathione conjugated diclofenac,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,NC(CCC(=O)NC(CSc1c(O)ccc(Nc2c(Cl)cccc2Cl)c1CC(=O)O)C(=O)NCC(=O)O)C(=O)O,0.391304347826087
+DBMET02039,CMBHC,DBMET02040,CEHC,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCC(=O)O)O2,0.6808510638297872
+DBMET03044,Arbidol M5 metabolite,DBMET03059,Arbidol M11-2 metabolite,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(O)c(CNC)c12,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(OS(=O)(=O)O)c(CNC)c12,0.7761194029850746
+DBMET02693,ω-hydroxy-butyrfentanyl,DBMET02694,ω-carboxy-butyrfentanyl,O=C(CCCO)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,O=C(O)CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,0.782608695652174
+DBMET02560,R-10(R)-Hydroxywarfarin,DBMET02564,(Z)-dehydrowarfarin,CC(=O)C(O)C(c1ccccc1)c1c(O)c2ccccc2oc1=O,CC(=O)C=C(c1ccccc1)c1c(O)c2ccccc2oc1=O,0.4528301886792453
+DBMET00238,Norketobemidone,DBMET01296,Dihydroxy norketobemidone,CCC(=O)C1(c2cccc(O)c2)CCNCC1,CCC(=O)C1(c2ccc(O)c(O)c2)CCNCC1,0.6829268292682927
+DBMET02037,CDMOHC,DBMET02038,CDMHHC,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCC(=O)O)O2,0.7843137254901961
+DBMET01020,(R)-MHD,DBMET02805,(R)-MHD glucuronide metabolite,NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2CC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21,0.5192307692307693
+DBMET01284,Lumiracoxib metabolite M9,DBMET01285,4'-Hydroxy-5-carboxylumiracoxib (M5),O=C(O)Cc1cc(CO)ccc1Nc1c(F)cc(O)cc1Cl,O=C(O)Cc1cc(C(=O)O)ccc1Nc1c(F)cc(O)cc1Cl,0.723404255319149
+DBMET00194,Propofol glucuronide,DBMET01311,1-Quinol glucuronide,CC(C)c1cccc(C(C)C)c1OC1OC(C(=O)O)C(O)C(O)C1O,CC(C)c1cc(O)cc(C(C)C)c1OC1OC(C(=O)O)C(O)C(O)C1O,0.7441860465116279
+DBMET00204,Methylhydroxygliclazide,DBMET01328,Carboxygliclazide,O=C(NN1CC2CCCC2C1)NS(=O)(=O)c1ccc(CO)cc1,O=C(NN1CC2CCCC2C1)NS(=O)(=O)c1ccc(C(=O)O)cc1,0.7272727272727273
+DBMET00682,2-hydroxyclomipramine,DBMET01071,2-hydroxyclomipramine glucuronide,CN(C)CCCN1c2ccccc2CCc2cc(O)c(Cl)cc21,CN(C)CCCN1c2cc(Cl)c(O)cc2CCc2c(OC3OC(C(=O)O)C(O)C(O)C3O)cccc21,0.5428571428571428
+DBMET03424,M4 (Macitentan),DBMET03425,M5 (Macitentan),CCCNS(=O)(=O)Nc1ncnc(OCCO)c1-c1ccc(Br)cc1,CCCNS(=O)(=O)Nc1ncnc(OCC(=O)O)c1-c1ccc(Br)cc1,0.7777777777777778

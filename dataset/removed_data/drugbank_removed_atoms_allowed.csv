@@ -1,26 +1,31 @@
 parent_id,parent_name,child_id,child_name,parent_smiles,child_smiles
-DB00115,Cyanocobalamin,DB03614,Mecobalamin,CC1=C2N=C(C=C3N=C(C(C)=C4C(CCC(N)=O)C(C)(CC(N)=O)C(C)(C5N=C1C(C)(CCC(=O)NCC(C)OP(=O)([O-])OC1C(CO)OC(n6cnc7cc(C)c(C)cc76)C1O)C5CC(N)=O)N4[Co+]C#N)C(C)(CC(N)=O)C3CCC(N)=O)C(C)(C)C2CCC(N)=O,CC1=C2[N+]3=C(C=C4[N+]5=C(C(C)=C6N7C8C(CC(N)=O)C6(C)CCC(=O)NCC(C)OP(=O)([O-])OC6C(CO)OC(C6O)n6c[n+](c9cc(C)c(C)cc96)[Co-3]753(C)[N+]3=C1C(CCC(N)=O)C(C)(CC(N)=O)C83C)C(CCC(N)=O)C4(C)C)C(CCC(N)=O)C2(C)CC(N)=O
-DB00526,Oxaliplatin,DBMET03682,Monochloro DACH platinum,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,O=C(O)C(=O)O[Pt]1(Cl)NC2CCCCC2N1
-DB01169,Arsenic trioxide,DB04456,Arsenous acid,O=[As]O[As]=O,O[As](O)O
-DB04456,Arsenous acid,DBMET02875,Dimethylarsinic acid,O[As](O)O,C[As](C)(=O)O
-DB04456,Arsenous acid,DBMET02872,Arsenic acid,O[As](O)O,O=[As](O)(O)O
-DB04456,Arsenous acid,DBMET02874,Monomethylarsonic acid,O[As](O)O,C[As](=O)(O)O
 DB01294,Bismuth subsalicylate,DB14572,Bismuth cation,O=C1O[Bi](O)Oc2ccccc21,[Bi+3]
-DB11127,Selenious acid,DBMET01468,Selenodiglutathione,O=[Se](O)O,NC(CCC(=O)NC(CS[Se]SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C(=O)NCC(=O)O)C(=O)O
-DBMET03682,Monochloro DACH platinum,DBMET03683,Dichloro DACH platinum,O=C(O)C(=O)O[Pt]1(Cl)NC2CCCCC2N1,Cl[Pt]1(Cl)NC2CCCCC2N1
-DBMET03683,Dichloro DACH platinum,DBMET03684,Monoaquo DACH platinum,Cl[Pt]1(Cl)NC2CCCCC2N1,[OH2+][Pt]1(Cl)NC2CCCCC2N1
-DBMET03683,Dichloro DACH platinum,DBMET03686,DACH platinum cysteine,Cl[Pt]1(Cl)NC2CCCCC2N1,NC(CS[Pt]1(SCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O
-DBMET03683,Dichloro DACH platinum,DBMET03688,DACH platinum methionine,Cl[Pt]1(Cl)NC2CCCCC2N1,NC(CCS[Pt]1(SCCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O
-DBMET03683,Dichloro DACH platinum,DBMET03690,DACH platinum bis(GSH) complex,Cl[Pt]1(Cl)NC2CCCCC2N1,NC(CCC(=O)NC(CS[Pt]1(SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)NC2CCCCC2N1)C(=O)NCC(=O)O)C(=O)O
+DBMET01458,Hydrogen Selenide,DBMET01461,Methyl-selenol,[SeH2],C[SeH]
+DBMET01466,Se-methylselenocysteine selenoxide,DBMET01467,Methyl selenic acid,C[Se](=O)CC(N)C(=O)O,C[Se]O
+DB00115,Cyanocobalamin,DB03614,Mecobalamin,CC1=C2N=C(C=C3N=C(C(C)=C4C(CCC(N)=O)C(C)(CC(N)=O)C(C)(C5N=C1C(C)(CCC(=O)NCC(C)OP(=O)([O-])OC1C(CO)OC(n6cnc7cc(C)c(C)cc76)C1O)C5CC(N)=O)N4[Co+]C#N)C(C)(CC(N)=O)C3CCC(N)=O)C(C)(C)C2CCC(N)=O,CC1=C2[N+]3=C(C=C4[N+]5=C(C(C)=C6N7C8C(CC(N)=O)C6(C)CCC(=O)NCC(C)OP(=O)([O-])OC6C(CO)OC(C6O)n6c[n+](c9cc(C)c(C)cc96)[Co-3]753(C)[N+]3=C1C(CCC(N)=O)C(C)(CC(N)=O)C83C)C(CCC(N)=O)C4(C)C)C(CCC(N)=O)C2(C)CC(N)=O
 DBMET03684,Monoaquo DACH platinum,DBMET03685,Diaquo DACH platinum,[OH2+][Pt]1(Cl)NC2CCCCC2N1,[OH2+][Pt]1([OH2+])NC2CCCCC2N1
+DB00526,Oxaliplatin,DBMET03682,Monochloro DACH platinum,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,O=C(O)C(=O)O[Pt]1(Cl)NC2CCCCC2N1
 DBMET03686,DACH platinum cysteine,DBMET03687,DACH platinum bis(Cys) complex,NC(CS[Pt]1(SCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O,O=C(O)C1CS[Pt]23SCC(C(=O)O)N2C2CCCCC2N13
+DBMET03683,Dichloro DACH platinum,DBMET03688,DACH platinum methionine,Cl[Pt]1(Cl)NC2CCCCC2N1,NC(CCS[Pt]1(SCCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O
 DBMET03688,DACH platinum methionine,DBMET03689,DACH platinum bis(Met) complex,NC(CCS[Pt]1(SCCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O,O=C(O)C1CCS[Pt]23SCCC(C(=O)O)N2C2CCCCC2N13
+DBMET01461,Methyl-selenol,DBMET01462,Dimethyl selenide,C[SeH],C[Se]C
+DBMET03683,Dichloro DACH platinum,DBMET03686,DACH platinum cysteine,Cl[Pt]1(Cl)NC2CCCCC2N1,NC(CS[Pt]1(SCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O
+DBMET01458,Hydrogen Selenide,DBMET01460,Selenophosphate,[SeH2],OP(O)(O)=[Se]
+DB11127,Selenious acid,DBMET01468,Selenodiglutathione,O=[Se](O)O,NC(CCC(=O)NC(CS[Se]SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C(=O)NCC(=O)O)C(=O)O
+DB04456,Arsenous acid,DBMET02874,Monomethylarsonic acid,O[As](O)O,C[As](=O)(O)O
+DBMET03682,Monochloro DACH platinum,DBMET03683,Dichloro DACH platinum,O=C(O)C(=O)O[Pt]1(Cl)NC2CCCCC2N1,Cl[Pt]1(Cl)NC2CCCCC2N1
+DBMET03683,Dichloro DACH platinum,DBMET03690,DACH platinum bis(GSH) complex,Cl[Pt]1(Cl)NC2CCCCC2N1,NC(CCC(=O)NC(CS[Pt]1(SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)NC2CCCCC2N1)C(=O)NCC(=O)O)C(=O)O
+DBMET01462,Dimethyl selenide,DBMET01463,Trimethylselenonium,C[Se]C,C[Se+](C)C
+DBMET03683,Dichloro DACH platinum,DBMET03684,Monoaquo DACH platinum,Cl[Pt]1(Cl)NC2CCCCC2N1,[OH2+][Pt]1(Cl)NC2CCCCC2N1
+DB04456,Arsenous acid,DBMET02872,Arsenic acid,O[As](O)O,O=[As](O)(O)O
+DB04456,Arsenous acid,DBMET02875,Dimethylarsinic acid,O[As](O)O,C[As](C)(=O)O
+DB01169,Arsenic trioxide,DB04456,Arsenous acid,O=[As]O[As]=O,O[As](O)O
+DB09570,Ixazomib,DBMET03784,Ixazomib M3 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,O=C(O)c1cc(Cl)ccc1Cl
+DB09570,Ixazomib,DBMET03786,Ixazomib M2 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl
+DB13235,Perboric acid,DB11091,Hydrogen peroxide,O=BOO,OO
+DB13235,Perboric acid,DBMET02108,Carbonate,O=BOO,O=C(O)O
 DB00188,Bortezomib,DBMET01081,Bortezomib metabolite M34,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)CC(=O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1
 DB09570,Ixazomib,DBMET03783,Ixazomib M6 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,CC(C)CC(=O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl
-DB09570,Ixazomib,DBMET03784,Ixazomib M3 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,O=C(O)c1cc(Cl)ccc1Cl
 DB09570,Ixazomib,DBMET03785,Ixazomib M1 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,O=C(O)CNC(=O)c1cc(Cl)ccc1Cl
-DB09570,Ixazomib,DBMET03786,Ixazomib M2 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl
-DB09570,Ixazomib,DBMET03787,Ixazomib M5 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl
-DB13235,Perboric acid,DBMET02108,Carbonate,O=BOO,O=C(O)O
-DB13235,Perboric acid,DB11091,Hydrogen peroxide,O=BOO,OO
 DB13235,Perboric acid,DB09460,Sodium carbonate,O=BOO,O=C(O)O
+DB09570,Ixazomib,DBMET03787,Ixazomib M5 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl
