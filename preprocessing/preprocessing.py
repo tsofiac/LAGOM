@@ -98,7 +98,7 @@ if __name__ == "__main__":
     size = 733
     get_small_dataset = False
 
-    name = 'drugbank' # [ 'drugbank' 'metxbiodb' ]
+    name = 'drugbank' # [ 'drugbank' 'metxbiodb' 'combined']
     
     # SPECIFY WHICH DATASET TO USE!
     dataset = f'dataset/curated_data/{name}_smiles_clean.csv'
