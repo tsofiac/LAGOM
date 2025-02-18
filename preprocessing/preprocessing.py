@@ -24,15 +24,7 @@ def test_val_distribute(input_file, output_file, val_size): #Input csv file. Fun
     final_df.to_csv(output_file, index=False)
 
 
-# # From standardize_smiles_ours
-# def standardize_smiles_main(input_file): #input df that has columns 'parent_smiles' and 'child_smiles'
-#     df = pd.read_csv(input_file)
-#     df['parent_smiles'] = standardize_smiles_collection(df['parent_smiles'], False) #'False' eliminates isomeres
-#     df['child_smiles'] = standardize_smiles_collection(df['child_smiles'], False)
-#     df.to_csv(input_file, index=False)
-
-
-def get_unique_parents(input_file):
+def get_unique_parents(input_file, additional_file):
     df = pd.read_csv(input_file)
     # Ensure df has 'parent_smiles' column, else raise an error
     if 'parent_smiles' not in df.columns:
@@ -59,9 +51,10 @@ def get_unique_parents(input_file):
     print('Unique parent val distribution: ', val_count_end/len(unique_parent_df))
 
     unique_parent_df.to_csv(input_file, index=False)
+    unique_parent_df.to_csv(additional_file, columns=['parent_smiles','parent_name','child_name','child_smiles'],index=False)
 
 
-def reformat_for_chemformer(input_file, output_file):
+def reformat_for_chemformer(input_file):
     df = pd.read_csv(input_file)
     try:
         new_df = pd.DataFrame({
@@ -75,7 +68,7 @@ def reformat_for_chemformer(input_file, output_file):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-    new_df.to_csv(output_file, sep='\t', index=False)
+    new_df.to_csv(input_file, sep='\t', index=False)
 
 
 
@@ -99,7 +92,7 @@ def small_dataset(input_file, output_file, size):
 if __name__ == "__main__":
 
     val_size = 0.1
-    preprocess_full = True
+    preprocess = True
     preprocess_unique_parents = True
 
     size = 733
@@ -110,12 +103,11 @@ if __name__ == "__main__":
     # SPECIFY WHICH DATASET TO USE!
     dataset = f'dataset/curated_data/{name}_smiles_clean.csv'
 
-    full = f'dataset/curated_data/{name}_full.csv'
-    finetune = f'dataset/finetune/{name}_full_finetune.csv'
-    finetune_small = f'dataset/finetune/{name}_full_finetune_small.csv'
-    if preprocess_full:
-        test_val_distribute(dataset, full, val_size)
-        reformat_for_chemformer(full, finetune)
+    finetune = f'dataset/finetune/{name}_finetune.csv'
+    finetune_small = f'dataset/finetune/{name}_finetune_small.csv'
+    if preprocess:
+        test_val_distribute(dataset, finetune, val_size)
+        reformat_for_chemformer(finetune)
         if get_small_dataset:
             small_dataset(finetune, finetune_small, size)
 
@@ -123,9 +115,9 @@ if __name__ == "__main__":
     unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv'
     unique_finetune_small = f'dataset/finetune/{name}_unique_parents_finetune_small.csv'
     if preprocess_unique_parents:
-        test_val_distribute(dataset, unique, val_size)
-        get_unique_parents(unique)
-        reformat_for_chemformer(unique, unique_finetune)
+        test_val_distribute(dataset, unique_finetune, val_size)
+        get_unique_parents(unique_finetune, unique)
+        reformat_for_chemformer(unique_finetune)
         if get_small_dataset:
             small_dataset(unique_finetune, unique_finetune_small, size)
 
