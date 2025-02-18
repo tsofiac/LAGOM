@@ -51,7 +51,7 @@ def get_unique_parents(input_file, additional_file):
     print('Unique parent val distribution: ', val_count_end/len(unique_parent_df))
 
     unique_parent_df.to_csv(input_file, index=False)
-    unique_parent_df.to_csv(additional_file, columns=['parent_smiles','parent_name','child_name','child_smiles'],index=False)
+    unique_parent_df.to_csv(additional_file, columns=['parent_name','child_name','parent_smiles','child_smiles'],index=False)
 
 
 def reformat_for_chemformer(input_file):
