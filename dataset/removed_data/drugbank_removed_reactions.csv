@@ -1,34 +1,50 @@
 parent_id,parent_name,child_id,child_name,enzymes,parent_smiles,child_smiles,tanimoto
 DBMET03082,Dihydrolipoamide,DB00166,Lipoic acid,"Dihydrolipoyl dehydrogenase, mitochondrial, Glycine cleavage system H protein, mitochondrial",NC(=O)CCCCC(S)CCS,O=C(O)CCCCC1CCSS1,0.1627906976744186
 DBMET01061,Bortezomib metabolite M1,DBMET01063,Bortezomib metabolite M3,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.6666666666666666
-DBMET01062,Bortezomib metabolite M2,DBMET01063,Bortezomib metabolite M3,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.6666666666666666
 DBMET01061,Bortezomib metabolite M1,DBMET01065,Bortezomib metabolite M5,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)(O)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7735849056603774
-DBMET01062,Bortezomib metabolite M2,DBMET01066,Bortezomib metabolite M6,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)(O)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7735849056603774
 DBMET01062,Bortezomib metabolite M2,DBMET01067,Bortezomib metabolite M8,Cytochrome P450 3A4,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)CC(O)NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,0.6727272727272727
 DBMET01061,Bortezomib metabolite M1,DBMET01082,Bortezomib metabolite M25,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
-DBMET01061,Bortezomib metabolite M1,DBMET01084,Bortezomib metabolite M26,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
-DBMET01062,Bortezomib metabolite M2,DBMET01085,Bortezomib metabolite M27,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
-DBMET01062,Bortezomib metabolite M2,DBMET01086,Bortezomib metabolite M28,,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,0.7547169811320755
 DBMET01063,Bortezomib metabolite M3,DBMET01064,Bortezomib metabolite M4,,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,O=C(NC(Cc1ccccc1)C(=O)O)c1cnccn1,0.8095238095238095
 DBMET01067,Bortezomib metabolite M8,DBMET01068,Bortezomib metabolite M33,,CC(C)CC(O)NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,0.6666666666666666
+DBMET00723,3alpha-Hydroxydesogestrel,DB00294,Etonogestrel,3 beta-hydroxysteroid dehydrogenase/Delta 5-->4-isomerase type 1,C#CC1(O)CCC2C3CCC4=CC(O)CCC4C3C(=C)CC21CC,C#CC1(O)CCC2C3CCC4=CC(=O)CCC4C3C(=C)CC21CC,0.7166666666666667
 DBMET00181,"2-Ethylidene-1,5-dimethyl-3,3-diphenylpyrrolidine",DBMET01087,"2-Ethyl-5-methyl-3,3-diphenyl-1-pyrroline (EMDP)",Cytochrome P450 3A7,CC=C1N(C)C(C)CC1(c1ccccc1)c1ccccc1,CCC1=NC(C)CC1(c1ccccc1)c1ccccc1,0.3720930232558139
+DBMET01262,Teniposide catechol derivative,DBMET01263,Teniposide o-quinone derivative,Myeloperoxidase,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,COC1=CC(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)=CC(=O)C1=O,0.7222222222222222
 DBMET02787,3-hydroxydesloratadine,DBMET02792,3-hydroxydesloratadine glucuronide,"UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A3, UDP-glucuronosyltransferase 2B15",Oc1cnc2c(c1)CCc1cc(Cl)ccc1C2=C1CCNCC1,O=C(O)C1OC(Oc2cnc3c(c2)CCc2cc(Cl)ccc2C3=C2CCNCC2)C(O)C(O)C1O,0.546875
+DBMET00124,8-Hydroxy-delta-9-THC,DBMET01220,"8,11-Dihydroxy-delta-9-THC",,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(C)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(CO)=CC21,0.7818181818181819
+DBMET00120,11-Hydroxy-delta-9-THC,DBMET01220,"8,11-Dihydroxy-delta-9-THC",,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(CO)=CC21,0.6779661016949152
+DBMET00120,11-Hydroxy-delta-9-THC,DBMET01221,11-Nor-9-carboxy-delta-9-THC,Cytochrome P450 2C9,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)O)=CC21,0.7241379310344828
+DBMET00120,11-Hydroxy-delta-9-THC,DBMET03560,11-Hydroxy-delta-9-THC-glucuronide,"UDP-glucuronosyltransferase 1A9, UDP-glucuronosyltransferase 1A10",CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(COC3OC(C(=O)O)C(O)C(O)C3O)=CC21,0.6338028169014085
+DBMET01221,11-Nor-9-carboxy-delta-9-THC,DBMET03558,11-nor-9-carboxy-delta-9-THC-glucuronide,"UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A3",CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)O)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)OC3OC(C(=O)O)C(O)C(O)C3O)=CC21,0.6857142857142857
+DBMET00172,"Rofecoxib-erythro-3,4-dihydrohydroxy acid",DBMET01292,cis-Dihydrorofecoxib,,CS(=O)(=O)c1ccc(C(CO)C(C(=O)O)c2ccccc2)cc1,CS(=O)(=O)c1ccc(C2COC(=O)C2c2ccccc2)cc1,0.3018867924528302
+DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,0.6129032258064516
+DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02856,"6β,11β,17α,21-tetrahydroxy-5ξ-pregn-1-en-3,20-dione (M-XIV)",,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,0.6229508196721312
+DBMET02854,"6β,11β,17α,20β,21-pentahydroxypregnan-1,4-diene-3-one (M-VIII)",DBMET02855,"6β,11β,17α,20β,21-pentahydroxy-5ξ-pregn-1-en-3-one (M-XV)",,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO,0.6229508196721312
+DBMET02855,"6β,11β,17α,20β,21-pentahydroxy-5ξ-pregn-1-en-3-one (M-XV)",DBMET02856,"6β,11β,17α,21-tetrahydroxy-5ξ-pregn-1-en-3,20-dione (M-XIV)",,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,0.6896551724137931
 DBMET03265,Adenosine Diphosphate,DB00171,ATP,"Nucleoside diphosphate kinase A, Nucleoside diphosphate kinase B",Nc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,Nc1ncnc2c1ncn2C1OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C1O,0.8301886792452831
+DBMET00047,R-10(S)-Hydroxywarfarin,DBMET02563,(E)-dehydrowarfarin,,CC(=O)C(O)C(c1ccccc1)c1c(O)c2ccccc2oc1=O,CC(=O)C=C(c1ccccc1)c1c(O)c2ccccc2oc1=O,0.4528301886792453
 DBMET01174,Adefovir monophosphate,DBMET01175,Adefovir Diphosphate,"Nucleoside diphosphate kinase A, Nucleoside diphosphate kinase B",Nc1ncnc2c1ncn2CCOCP(=O)(O)OP(=O)(O)O,Nc1ncnc2c1ncn2CCOCP(=O)(O)OP(=O)(O)OP(=O)(O)O,0.9130434782608696
+DBMET01321,Nateglinide metabolite M2/M3,DBMET01322,Nateglinide metabolite M11/M12,,CC(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,CC(O)(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,0.6470588235294118
+DBMET01323,Nateglinide metabolite M1,DBMET01322,Nateglinide metabolite M11/M12,,CC(C)(O)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,CC(O)(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,0.8043478260869565
 DBMET02759,Methimazole Epoxide Metabolite,DBMET02760,Methimazole Dihydrodiol Metabolite,,CN1C(S)=NC2OC21,CN1C(S)=NC(O)C1O,0.4137931034482758
 DBMET02765,Methimazole Sulfenic Acid Metabolite (Open),DBMET02767,Methimazole Sulfinic Acid Metabolite (Open),,CNC(=N)SO,CNC(=N)S(=O)O,0.3043478260869565
+DBMET01264,Etoposide catechol,DBMET01265,Etoposide ortho-quinone,Myeloperoxidase,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,COC1=CC(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)=CC(=O)C1=O,0.691358024691358
+DBMET02802,(S)-MHD,DBMET02803,"trans-10,11-dihydro-10,11-dihydroxycarbamazepine",,NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2C(O)C(O)c2ccccc21,0.6176470588235294
 DBMET03004,16-alpha hydroxyestrone,DBMET03005,17-Epiestriol,,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2=O,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2O,0.6530612244897959
-DBMET00175,Hydroxybuprenorphine,DBMET01295,Hydroxynorbuprenorphine,,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5,0.6388888888888888
+DBMET00193,4-Hydroxypropofol,DBMET01311,1-Quinol glucuronide,"UDP-glucuronosyltransferase 1A8, UDP-glucuronosyltransferase 1A9",CC(C)c1cc(O)cc(C(C)C)c1O,CC(C)c1cc(O)cc(C(C)C)c1OC1OC(C(=O)O)C(O)C(O)C1O,0.3414634146341463
+DBMET00193,4-Hydroxypropofol,DBMET01312,4-Quinol sulfate,,CC(C)c1cc(O)cc(C(C)C)c1O,CC(C)c1cc(OS(=O)(=O)O)cc(C(C)C)c1O,0.4827586206896552
 DBMET01096,"4-Hydroxy-5-phenyltetrahydro-1,3-oxazin-2-one",DBMET01098,"5-Phenyl-1,3-oxazinane-2,4-dione",Alcohol dehydrogenase 1A,OC1=NC(O)C(c2ccccc2)CO1,O=C1N=C(O)C(c2ccccc2)CO1,0.3902439024390244
 DBMET01098,"5-Phenyl-1,3-oxazinane-2,4-dione",DBMET01097,3-Carbamoyl-2-phenylpropionic acid,,O=C1N=C(O)C(c2ccccc2)CO1,NC(=O)OCC(C(=O)O)c1ccccc1,0.1702127659574468
-DBMET02548,all-trans-retinoic acid,DBMET02549,4-hydroxy-all-trans-retinoic acid,,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,0.6666666666666666
-DBMET02549,4-hydroxy-all-trans-retinoic acid,DBMET02550,4-oxo-all-trans-retinoic acid,,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,0.64
+DBMET03669,6-Hydroxy rizatriptan,DBMET03670,6-Hydroxy rizatriptan sulfate,,CN(C)CCc1c[nH]c2cc(O)c(Cn3cncn3)cc12,CN(C)CCc1c[nH]c2cc(OS(=O)(=O)O)c(Cn3cncn3)cc12,0.6842105263157895
+DBMET02687,6-β-hydrocodol,DBMET02728,6-β-hydrocodol glucuronide conjugate,,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341,COc1ccc2c3c1OC1C(OC4OC(C(=O)O)C(O)C(O)C4O)CCC4C(C2)N(C)CCC341,0.6470588235294118
+DBMET02684,6-β-hydromorphol,DBMET02724,6-β-hydromorphol glucuronide conjugate 1,,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5,0.6153846153846154
+DBMET02684,6-β-hydromorphol,DBMET02725,6-β-hydromorphol glucuronide conjugate 2,,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5,0.6212121212121212
 DBMET01010,6-Thiosine 5'-monophosphate,DBMET02965,6-methylthiosine 5'-monophosphate,Thiopurine S-methyltransferase,O=P(O)(O)OCC1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,CSc1nc(O)nc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,0.7321428571428571
 DBMET01010,6-Thiosine 5'-monophosphate,DBMET00771,6-thioxanthylic acid,"Inosine-5'-monophosphate dehydrogenase 1, Inosine-5'-monophosphate dehydrogenase 2",O=P(O)(O)OCC1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,O=P(O)(O)C(O)C1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,0.6491228070175439
 DBMET00771,6-thioxanthylic acid,DBMET02966,6-thioguanine monophosphate,GMP synthase [glutamine-hydrolyzing],O=P(O)(O)C(O)C1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,Nc1nc(S)c2ncn(C3OC(C(O)P(=O)(O)O)C(O)C3O)c2n1,0.7924528301886793
 DBMET02965,6-methylthiosine 5'-monophosphate,DBMET00769,6-thioinosine triphosphate,Inosine triphosphate pyrophosphatase,CSc1nc(O)nc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,O=P(O)(O)OP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,0.5151515151515151
 DBMET02966,6-thioguanine monophosphate,DBMET01007,Thioguanine diphosphate,,Nc1nc(S)c2ncn(C3OC(C(O)P(=O)(O)O)C(O)C3O)c2n1,N=c1nc(O)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3S)c2[nH]1,0.3417721518987341
 DBMET00769,6-thioinosine triphosphate,DBMET02967,6-methylthioinosine triphosphate,Thiopurine S-methyltransferase,O=P(O)(O)OP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,CSc1ncnc2c1ncn2C1OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C1O,0.7627118644067796
+DBMET01052,Irbesartan derivative M7,DBMET01055,Irbesartan derivative M1,Cytochrome P450 2C9,CCCCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,CC(O)CCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,0.8115942028985508
 DBMET00657,6-Thioinosine 5'-monophosphate,DBMET01151,Thioxanthine monophosphate,GMP synthase [glutamine-hydrolyzing],O=P(O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,O=P(O)(O)OCC1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,0.7692307692307693
 DBMET00657,6-Thioinosine 5'-monophosphate,DBMET01158,Methyl-thioinosine 5'-monophospate,Thiopurine S-methyltransferase,O=P(O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,CSc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,0.7407407407407407
 DBMET00657,6-Thioinosine 5'-monophosphate,DBMET01159,6-Mercaptopurine riboside,,O=P(O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,0.673469387755102
@@ -37,22 +53,22 @@ DBMET01159,6-Mercaptopurine riboside,DBMET01160,6-Methylmercaptopurine-riboside,
 DBMET01160,6-Methylmercaptopurine-riboside,DBMET01158,Methyl-thioinosine 5'-monophospate,Adenosine kinase,CSc1ncnc2c1ncn2C1OC(CO)C(O)C1O,CSc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,0.6981132075471698
 DBMET03582,β-ureidopropionic acid (FUPA),DB03904,Urea,Beta-ureidopropionase,NC(=O)NCC(F)C(=O)O,NC(N)=O,0.2272727272727272
 DBMET03582,β-ureidopropionic acid (FUPA),DBMET03583,fluoro-β-alanine (FBAL),Beta-ureidopropionase,NC(=O)NCC(F)C(=O)O,NCC(F)C(=O)O,0.48
+DBMET03472,R-4'-hydroxybupropion,DBMET03490,R-4'-hydroxybupropion sulfate,,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,CC(NC(C)(C)C)C(=O)c1ccc(OS(=O)(=O)O)c(Cl)c1,0.6222222222222222
+DBMET03476,"S,S-threohydrobupropion",DBMET03478,"S,S-threohydrobupropion glucuronide","UDP-glucuronosyltransferase 2B7, UDP-glucuronosyltransferase 1A3, UDP-glucuronosyltransferase 1A4",CC(NC(C)(C)C)C(O)c1cccc(Cl)c1,CC(NC(C)(C)C)C(OC1OC(C(=O)O)C(C)C(C)C1C)c1cccc(Cl)c1,0.4642857142857143
+DBMET00962,Nor-levomethadyl acetate (nor-LAAM),DBMET00843,Dinor-levomethadyl acetate,Cytochrome P450 3A7,CCC(OC(C)=O)C(CC(C)NC)(c1ccccc1)c1ccccc1,CCC(OC(C)=O)C(CC(C)N)(c1ccccc1)c1ccccc1,0.7209302325581395
 DBMET03758,BAL8728,DBMET03759,M4 BAL8728,,CN1C(=O)OCc2cccnc21,CNc1ncccc1C(=O)O,0.2444444444444444
-DBMET03419,M6,DBMET03420,M3,,CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,0.543859649122807
 DBMET03419,M6,DBMET03421,M1 (Macitentan),,CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,O=C(O)C1OC(NS(=O)(=O)Nc2ncnc(OCCOc3ncc(Br)cn3)c2-c2ccc(Br)cc2)C(O)C(O)C1O,0.5915492957746479
 DBMET01486,Inositol pentanicotinate,DBMET01487,Inositol tetranicotinate,,O=C(OC1C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,0.935483870967742
 DBMET01487,Inositol tetranicotinate,DBMET01488,Inositol trinicotinate,,O=C(OC1C(O)C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(O)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,0.967741935483871
 DBMET01488,Inositol trinicotinate,DBMET01489,Inositol dinicotinate,,O=C(OC1C(O)C(O)C(O)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(O)C(O)C1OC(=O)c1cccnc1)c1cccnc1,0.967741935483871
 DBMET01489,Inositol dinicotinate,DBMET01490,Inositol mononicotinate,,O=C(OC1C(O)C(O)C(O)C(O)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(O)C(O)C(O)C1O)c1cccnc1,0.935483870967742
-DBMET02023,PCI-45773 (M35),DBMET02024,M17,,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,0.5
 DBMET01521,QS10,DBMET01522,QS8,,COC1=C(OC)C(=O)C(CCCCCCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCCCCCO)=C(C)C1=O,1.0
 DBMET01522,QS8,DBMET01523,QS6,,COC1=C(OC)C(=O)C(CCCCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCCCO)=C(C)C1=O,1.0
 DBMET01523,QS6,DBMET01524,QS4,,COC1=C(OC)C(=O)C(CCCCCCO)=C(C)C1=O,COC1=C(OC)C(=O)C(CCCCO)=C(C)C1=O,0.9655172413793104
-DBMET02005,FUPA,DBMET02006,FBAL,Beta-ureidopropionase,NC(=O)NCC(F)C(=O)O,NCC(F)C(=O)O,0.48
-DBMET02005,FUPA,DB03904,Urea,Beta-ureidopropionase,NC(=O)NCC(F)C(=O)O,NC(N)=O,0.2272727272727272
 DBMET03786,Ixazomib M2 metabolite,DBMET03785,Ixazomib M1 metabolite,,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,O=C(O)CNC(=O)c1cc(Cl)ccc1Cl,0.7272727272727273
 DBMET03787,Ixazomib M5 metabolite,DBMET03786,Ixazomib M2 metabolite,,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,0.5581395348837209
 DBMET03787,Ixazomib M5 metabolite,DBMET03783,Ixazomib M6 metabolite,,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,CC(C)CC(=O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,0.6666666666666666
+DBMET00462,morphine-3-glucuronide,DBMET02018,"morphine-3,6-diglucuronide",,CCCN(C)C(CC)C1C=CC(O)C2Oc3c(OC4OC(C)C(O)C(O)C4O)cccc3C12,OC1OC(Oc2ccc3c4c2OC2C(OC5OC(O)C(O)C(O)C5O)C=CC5C(C3)NCCC452)C(O)C(O)C1O,0.2446808510638297
 DBMET02886,Acalabrutinib M7 Metabolite (ACP-5531),DBMET02887,Acalabrutinib M10 Metabolite (ACP-5461),,CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(N)C(=O)NCC(=O)O,CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(N)C(=O)O,0.8928571428571429
 DBMET02088,α-D-galactose,DBMET02089,galactose-1-phosphate,Galactokinase,OCC1OC(O)C(O)C(O)C1O,O=P(O)(O)OC1OC(O)C(O)C(O)C1O,0.3448275862068966
 DBMET02089,galactose-1-phosphate,DB03501,Galactose-uridine-5'-diphosphate,Galactose-1-phosphate uridylyltransferase,O=P(O)(O)OC1OC(O)C(O)C(O)C1O,O=c1ccn(C2OC(COP(=O)(O)OP(=O)(O)OC3OC(CO)C(O)C(O)C3O)C(O)C2O)c(=O)[nH]1,0.2833333333333333
@@ -61,7 +77,7 @@ DBMET03554,M2 telotristat,DBMET03555,LP-951757,,Cc1ccn(-c2cc(Cl)ccc2C(Oc2cc(-c3c
 DBMET02104,9-O-demethylemetine,DBMET02107,9-O-demethylemetine glucuronide,,CCC1CN2CCC3C=C(OC)C(OC)=CC3(O)C2CC1CC1NCCc2cc(OC)c(OC)cc21,CCC1CN2CCC3C=C(OC)C(OC)=CC3(O)C2CC1CC1NCCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)c(OC)cc21,0.7682926829268293
 DBMET02103,Cephaeline,DBMET02106,Cephaeline 6'-O-glucuronide,,CCC1CN2CCc3cc(OC)c(OC)cc3C2CC1CC1NCCc2cc(OC)c(OC)cc21,CCC1CN2CCc3cc(OC)c(OC)cc3C2CC1CC1NCCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)c(OC)cc21,0.7101449275362319
 DBMET01886,U7 semaglutide,DBMET01887,U6 semaglutide,Neprilysin,NC(CCCCNC(=O)COCCOCCNC(=O)COCCOCCNC(=O)CCC(NC(=O)CCCCC(=O)O)C(=O)O)C(=O)O,NC(CCCCNC(=O)COCCOCCNC(=O)COCCOCCNC(=O)CCC(NC(=O)CCC(=O)O)C(=O)O)C(=O)O,0.9019607843137256
-DBMET02063,11-hydroxy-THC,DBMET02064,11-Nor-9-carboxy-THC (THC-COOH),,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)O)=CC21,0.7241379310344828
+DBMET02036,CDMDHC,DBMET02038,CDMHHC,,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCC(=O)O)O2,0.9782608695652174
 DBMET03200,Monomethyl Auristatin-F,DBMET03202,Monomethyl Auristatin-F M2 Metabolite,,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(N)C(C)C)C(C)C,0.8658536585365854
 DBMET03200,Monomethyl Auristatin-F,DBMET03203,Monomethyl Auristatin-F M3 Metabolite,,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(N)C(C)C,0.8048780487804879
 DBMET03200,Monomethyl Auristatin-F,DBMET03204,Monomethyl Auristatin-F M6 Metabolite,,CCC(C)C(C(CC(=O)N1CCCC1C(OC)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,CCC(C)C(C(CC(=O)N1CCCC1C(O)C(C)C(=O)NC(Cc1ccccc1)C(=O)O)OC)N(C)C(=O)C(NC(=O)C(NC)C(C)C)C(C)C,0.8875

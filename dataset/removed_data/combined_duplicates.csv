@@ -1,0 +1,1087 @@
+parent_name,parent_smiles,child_name,child_smiles,source,is_duplicate
+acetaminophen,CC(=O)Nc1ccc(O)cc1,N-Acetyl-p-benzoquinone,CC(=O)N=C1C=CC(=O)C=C1,MetXBioDB,True
+(R)-halothane,FC(F)(F)C(Cl)Br,trifluoroacetic acid,O=C(O)C(F)(F)F,MetXBioDB,True
+(R)-halothane,FC(F)(F)C(Cl)Br,"1-chloro-2,2,2-trifluoroethanide",FC(F)(F)CCl,MetXBioDB,True
+"(4R)-5-(methoxycarbonyl)-2,6-dimethyl-4-(3-nitrophenyl)-1,4-dihydropyridine-3-carboxylic acid",COC(=O)C1=C(C)NC(C)=C(C(=O)O)C1c1cccc([N+](=O)[O-])c1,OPC-13463,COC(=O)c1c(C)nc(C)c(C(=O)O)c1-c1cccc([N+](=O)[O-])c1,MetXBioDB,True
+Dehydroxyzyleuton,CC(NC(N)=O)c1cc2ccccc2s1,Dehydroxyzyleuton sulfoxide,CC(NC(N)=O)c1cc2ccccc2[s+]1[O-],MetXBioDB,True
+(-)-etodolac,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,6-Hydroxyetodolac,CCc1cc(O)cc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,MetXBioDB,True
+(-)-etodolac,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,7-Hydroxyetodolac,CCc1c(O)ccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,MetXBioDB,True
+(-)-limonene,C=C(C)C1CC=C(C)CC1,Carveol,C=C(C)C1CC=C(C)C(O)C1,MetXBioDB,True
+(-)-zileuton,CC(c1cc2ccccc2s1)N(O)C(N)=O,Zileuton sulfoxide,CC(c1cc2ccccc2[s+]1[O-])N(O)C(N)=O,MetXBioDB,True
+(-)-zileuton,CC(c1cc2ccccc2s1)N(O)C(N)=O,Hydroxyzileuton,CC(c1cc2ccc(O)cc2s1)N(O)C(N)=O,MetXBioDB,True
+Perhexiline,C1CCC(C(CC2CCCCN2)C2CCCCC2)CC1,cis-hydroxyperhexilline,OC1CCC(C(CC2CCCCN2)C2CCCCC2)CC1,MetXBioDB,True
+(+)-halofantrine,CCCCN(CCCC)CCC(O)c1cc2c(Cl)cc(Cl)cc2c2cc(C(F)(F)F)ccc12,"(+)-halofantrine, N-desbutyl",CCCCNCCC(O)c1cc2c(Cl)cc(Cl)cc2c2cc(C(F)(F)F)ccc12,MetXBioDB,True
+Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,"(2S)-N-[(2S,3R)-4-[(3S,4aS,8aS)-3-[(1-hydroxy-2-methylpropan-2-yl)carbamoyl]-decahydroisoquinolin-2-yl]-3-hydroxy-1-phenylbutan-2-yl]-2-[(quinolin-2-yl)formamido]butanediamide",CC(C)(CO)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,MetXBioDB,True
+Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,"(2S)-N-[(2S,3R)-4-[(3S,4aR,8aS)-3-(tert-butylcarbamoyl)-6-hydroxy-decahydroisoquinolin-2-yl]-3-hydroxy-1-phenylbutan-2-yl]-2-[(quinolin-2-yl)formamido]butanediamide",CC(C)(C)NC(=O)C1CC2CC(O)CCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,MetXBioDB,True
+Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,"(2S)-N-[(2S,3R)-4-[(3S,4aS,8aS)-3-(tert-butylcarbamoyl)-7-hydroxy-decahydroisoquinolin-2-yl]-3-hydroxy-1-phenylbutan-2-yl]-2-[(quinolin-2-yl)formamido]butanediamide",CC(C)(C)NC(=O)C1CC2CCC(O)CC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,MetXBioDB,True
+(r)-(+)-felodipine,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc(Cl)c1Cl,Dehydrofelodipine,CCOC(=O)c1c(C)nc(C)c(C(=O)OC)c1-c1cccc(Cl)c1Cl,MetXBioDB,True
+(R)-(-)-Mexiletine,Cc1cccc(C)c1OCC(C)N,"(R)-(-)-Mexiletine, p-hydroxyl",Cc1cc(O)cc(C)c1OCC(C)N,MetXBioDB,True
+(R)-(-)-Mexiletine,Cc1cccc(C)c1OCC(C)N,"(R)-(-)-Mexiletine, m-hydroxyl",Cc1ccc(O)c(C)c1OCC(C)N,MetXBioDB,True
+(R)-(-)-Mexiletine,Cc1cccc(C)c1OCC(C)N,"(R)-(-)-Mexiletine, 2-OH-hydroxymethyl",Cc1cccc(CO)c1OCC(C)N,MetXBioDB,True
+(R)-(-)-Mexiletine,Cc1cccc(C)c1OCC(C)N,"(R)-(-)-Mexiletine, N-hydroxy",Cc1cccc(C)c1OCC(C)NO,MetXBioDB,True
+(r)-azelastine,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1,"(r)-azelastine, N-desmethyl",O=c1c2ccccc2c(Cc2ccc(Cl)cc2)nn1C1CCCNCC1,MetXBioDB,True
+(r)-bupropion,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,(2R)-1-(3-chlorophenyl)-2-[(1-hydroxy-2-methylpropan-2-yl)amino]propan-1-one,CC(NC(C)(C)CO)C(=O)c1cccc(Cl)c1,MetXBioDB,True
+(r)-bupropion,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,(2R)-2-(tert-butylamino)-1-(3-chlorophenyl)-3-hydroxypropan-1-one,CC(C)(C)NC(CO)C(=O)c1cccc(Cl)c1,MetXBioDB,True
+(r)-bupropion,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,(2R)-2-(tert-butylamino)-1-(3-chloro-4-hydroxyphenyl)propan-1-one,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,MetXBioDB,True
+(r)-chloroquine,CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12,"(r)-chloroquine, N-desethyl",CCNCCCC(C)Nc1ccnc2cc(Cl)ccc12,MetXBioDB,True
+(r)-enflurane,FC(F)OC(F)(F)C(F)Cl,"2-(difluoromethoxy)-2,2-difluoroacetyl fluoride",O=C(F)C(F)(F)OC(F)F,MetXBioDB,True
+(r)-ketamine,CNC1(c2ccccc2Cl)CCCCC1=O,Norketamine,NC1(c2ccccc2Cl)CCCCC1=O,MetXBioDB,True
+(r)-metoprolol,COCCc1ccc(OCC(O)CNC(C)C)cc1,alpha-Hydroxymetoprolol,COCC(O)c1ccc(OCC(O)CNC(C)C)cc1,MetXBioDB,True
+(r)-metoprolol,COCCc1ccc(OCC(O)CNC(C)C)cc1,O-Demethylmetoprolol,CC(C)NCC(O)COc1ccc(CCO)cc1,MetXBioDB,True
+(r)-metoprolol,COCCc1ccc(OCC(O)CNC(C)C)cc1,N_DEISOPROPYLATION,COCCc1ccc(OCC(O)CN)cc1,MetXBioDB,True
+(s)-(-)-carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,4'-OH-carvedilol,COc1cc(O)ccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,MetXBioDB,True
+(s)-(-)-carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,O-Desmethylcarvedilol,Oc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,MetXBioDB,True
+(s)-(-)-carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,5'-OH-carvedilol,COc1ccc(O)cc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,MetXBioDB,True
+(s)-(-)-carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,8-OH-carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3c(O)cccc3c12,MetXBioDB,True
+(s)-(+)-ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,2-Hydroxyibuprofen,CC(C(=O)O)c1ccc(CC(C)(C)O)cc1,MetXBioDB,True
+(s)-(+)-ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,3-Hydroxyibuprofen,CC(CO)Cc1ccc(C(C)C(=O)O)cc1,MetXBioDB,True
+(s)-fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,(s)-Norfluoxetine,NCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,MetXBioDB,True
+(s)-fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,p-Trifluoromethyl phenol,Oc1ccc(C(F)(F)F)cc1,MetXBioDB,True
+(s)-fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,3-(methylamino)-1-phenylpropan-1-one,CNCCC(=O)c1ccccc1,MetXBioDB,True
+(s)-flurbiprofen,CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1,4-OH-S-flurbiprofen,CC(C(=O)O)c1ccc(-c2ccc(O)cc2)c(F)c1,MetXBioDB,True
+(s)-oxybutynin,CCN(CC)CC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,2-cyclohexyl-2-phenylglycolic acid,O=C(O)C(O)(c1ccccc1)C1CCCCC1,MetXBioDB,True
+(s)-oxybutynin,CCN(CC)CC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,N-desethyloxybutynin,CCNCC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,MetXBioDB,True
+(s)-propafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1,(S)-5-Hydroxypropafenone,CCCNCC(O)COc1ccc(O)cc1C(=O)CCc1ccccc1,MetXBioDB,True
+(s)-propafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1,(S)-N-Despropylpropafenone,NCC(O)COc1ccccc1C(=O)CCc1ccccc1,MetXBioDB,True
+(s)-propafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1,(S)-4'-Hydroxypropafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccc(O)cc1,MetXBioDB,True
+(s)-tomoxetine,CNCCC(Oc1ccccc1C)c1ccccc1,4-Hydroxy-(s)-tomoxetine,CNCCC(Oc1ccc(O)cc1C)c1ccccc1,MetXBioDB,True
+(s)-venlafaxine,COc1ccc(C(CN(C)C)C2(O)CCCCC2)cc1,N-Desmethylvenlafaxine,CNCC(c1ccc(OC)cc1)C1(O)CCCCC1,MetXBioDB,True
+(s)-venlafaxine,COc1ccc(C(CN(C)C)C2(O)CCCCC2)cc1,O-Desmethylvenlafaxine,CN(C)CC(c1ccc(O)cc1)C1(O)CCCCC1,MetXBioDB,True
+1_8_cineole,CC12CCC(CC1)C(C)(C)O2,"2alpha-hydroxy-1,8-cineole",CC1(C)OC2(C)CCC1CC2O,MetXBioDB,True
+1_8_cineole,CC12CCC(CC1)C(C)(C)O2,"3alpha-hydroxy-1,8-cineole",CC12CCC(C(O)C1)C(C)(C)O2,MetXBioDB,True
+1-(3-chlorophenyl)piperazine,Clc1cccc(N2CCNCC2)c1,2‐chloro‐4‐(piperazin‐1‐yl)phenol,Oc1ccc(N2CCNCC2)cc1Cl,MetXBioDB,True
+2-(1-piperazinyl)pyrimidine,c1cnc(N2CCNCC2)nc1,,Oc1cnc(N2CCNCC2)nc1,MetXBioDB,True
+2-oxoquazepam,O=C1CN=C(c2ccccc2F)c2cc(Cl)ccc2N1CC(F)(F)F,3-Hydroxy-2-oxoquazepam,O=C1C(O)N=C(c2ccccc2F)c2cc(Cl)ccc2N1CC(F)(F)F,MetXBioDB,True
+4-Hydroxytamoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,Endoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,MetXBioDB,True
+5-hydroxydiclofenac,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,"4',5-Dihydroxydiclofenac",O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cc(O)cc1Cl,MetXBioDB,True
+aceclofenac,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl,4'-OH-aceclofenac,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cc(O)cc1Cl,MetXBioDB,True
+aceclofenac,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl,5-OH-aceclofenac,O=C(O)COC(=O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,MetXBioDB,True
+alfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,N-phenylpropionamide,CCC(=O)Nc1ccccc1,MetXBioDB,True
+alfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,Noralfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCNCC1,MetXBioDB,True
+alfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,"2‐(4‐ethyl‐5‐oxo‐1,2,3,4‐tetrazol‐1‐yl)acetaldehyde",CCn1nnn(CC=O)c1=O,MetXBioDB,True
+almotriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,2-OH-almotriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3O)cc12,MetXBioDB,True
+almotriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,methyl(2-{5-[(pyrrolidine-1-sulfonyl)methyl]-1H-indol-3-yl}ethyl)amine,CNCCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,MetXBioDB,True
+alphacetylmethadol,CCC(OC(C)=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,norLAAM,CCC(OC(C)=O)C(CC(C)NC)(c1ccccc1)c1ccccc1,MetXBioDB,True
+alprazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2,4-Hydroxyalprazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2O,MetXBioDB,True
+alprazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2,Beta-Hydroxyalprazolam,OCc1nnc2n1-c1ccccc1C(c1ccccc1)=NC2O,MetXBioDB,True
+amiodarone,CCCCc1oc2ccccc2c1C(=O)c1cc(I)c(OCCN(CC)CC)c(I)c1,N-Desethylamiodarone,CCCCc1oc2ccccc2c1C(=O)c1cc(I)c(OCCNCC)c(I)c1,MetXBioDB,True
+amitriptyline,CN(C)CCC=C1c2ccccc2CCc2ccccc21,Nortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,MetXBioDB,True
+amitriptyline,CN(C)CCC=C1c2ccccc2CCc2ccccc21,E-10-OH-amitriptyline,CN(C)CCC=C1c2ccccc2CC(O)c2ccccc21,MetXBioDB,True
+androstenedione,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,6beta-hydroxy-androstenedione,CC12CCC3C(CC(O)C4=CC(=O)CCC43C)C1CCC2=O,MetXBioDB,True
+antipyrine,Cc1cc(=O)n(-c2ccccc2)n1C,3-OH-methylantipyrine,Cn1c(CO)cc(=O)n1-c1ccccc1,MetXBioDB,True
+antipyrine,Cc1cc(=O)n(-c2ccccc2)n1C,4-OH-antipyrine,Cc1c(O)c(=O)n(-c2ccccc2)n1C,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,5-HETE,CCCCCC=CCC=CCC=CC=CC(O)CCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,7-HETE,CCCCCC=CCC=CCC=CC(O)C=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,10-HETE,CCCCCC=CCC=CC(O)C=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,13-HETE,CCCCCC=CC(O)C=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,20-HETE,O=C(O)CCCC=CCC=CCC=CCC=CCCCCCO,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,19-HETE,CC(O)CCCC=CCC=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,18-HETE,CCC(O)CCC=CCC=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,17-HETE,CCCC(O)CC=CCC=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,16-HETE,CCCCC(O)C=CCC=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"14,15-EET",CCCCCC1OC1CC=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"11,12-EET",CCCCCC=CCC1OC1CC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"8,9-EET",CCCCCC=CCC=CCC1OC1CC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"5,6-EET",CCCCCC=CCC=CCC=CCC1OC1CCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,15-HETE,CCCCCC(O)C=CC=CCC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,12-HETE,CCCCCC=CCC(O)C=CC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,11-HETE,CCCCCC=CC=CC(O)CC=CCC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,9-HETE,CCCCCC=CCC=CCC(O)C=CC=CCCCC(=O)O,MetXBioDB,True
+arachidonic acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,8-HETE,CCCCCC=CCC=CC=CC(O)CC=CCCCC(=O)O,MetXBioDB,True
+arverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,"(2R)-5-{[2-(3,4-dimethoxyphenyl)ethyl]amino}-2-(3-methoxyphenyl)-2-(propan-2-yl)pentanenitrile",COc1cccc(C(C#N)(CCCNCCc2ccc(OC)c(OC)c2)C(C)C)c1,MetXBioDB,True
+arverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,(2R)-5-amino-2-(3-methoxyphenyl)-2-(propan-2-yl)pentanenitrile,COc1cccc(C(C#N)(CCCN)C(C)C)c1,MetXBioDB,True
+arverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,"2-(3,4-dimethoxyphenyl)acetaldehyde",COc1ccc(CC=O)cc1OC,MetXBioDB,True
+atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,MetXBioDB,True
+atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,MetXBioDB,True
+barnidipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OC2CCN(Cc3ccccc3)C2)C1c1cccc([N+](=O)[O-])c1,,COC(=O)C1=C(C)NC(C)=C(C(=O)OC2CCNC2)C1c1cccc([N+](=O)[O-])c1,MetXBioDB,True
+barnidipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OC2CCN(Cc3ccccc3)C2)C1c1cccc([N+](=O)[O-])c1,,COC(=O)c1c(C)nc(C)c(C(=O)OC2CCN(Cc3ccccc3)C2)c1-c1cccc([N+](=O)[O-])c1,MetXBioDB,True
+bosentan,COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)C)cc2)nc(-c2ncccn2)nc1OCCO,"4-(2-hydroxy-1,1-dimethylethyl)-N-[6-(2-hydroxyethoxy)-5-(2-methoxyphenoxy)-[2,2Ã¢â‚¬â„¢]bipyrimidinyl-4-yl]-benzenesulfonamide",COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)CO)cc2)nc(-c2ncccn2)nc1OCCO,MetXBioDB,True
+bosentan,COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)C)cc2)nc(-c2ncccn2)nc1OCCO,"4-tert-butyl-N-[6-(2-hydroxyethoxy)-5-(2-hydroxyphenoxy)-[2,2Ã¢â‚¬â„¢]bipyrimidinyl-4-yl]-benzenesulfonamide",CC(C)(C)c1ccc(S(=O)(=O)Nc2nc(-c3ncccn3)nc(OCCO)c2Oc2ccccc2O)cc1,MetXBioDB,True
+brofaromine,COc1cc(Br)c2oc(C3CCNCC3)cc2c1,O-desmethyl-brofaromine,Oc1cc(Br)c2oc(C3CCNCC3)cc2c1,MetXBioDB,True
+carbamazepine,NC(=O)N1c2ccccc2C=Cc2ccccc21," Carbamazepine 10,11-epoxide ",NC(=O)N1c2ccccc2C2OC2c2ccccc21,MetXBioDB,True
+carbamazepine,NC(=O)N1c2ccccc2C=Cc2ccccc21,3-Hydroxycarbamazepine ,NC(=O)N1c2ccccc2C=Cc2ccc(O)cc21,MetXBioDB,True
+celecoxib,Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1,Hydroxy celecoxib,NS(=O)(=O)c1ccc(-n2nc(C(F)(F)F)cc2-c2ccc(CO)cc2)cc1,MetXBioDB,True
+(R)-colchicine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,3-demethylcolchicine,COc1c(O)cc2c(c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,MetXBioDB,True
+(R)-colchicine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,2-demethyicolchicine,COc1cc2c(c(OC)c1O)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,MetXBioDB,True
+(R)-colchicine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,Colchiceine,COc1cc2c(c(OC)c1OC)-c1ccc(O)c(=O)cc1C(NC(C)=O)CC2,MetXBioDB,True
+itraconazole,CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,Hydroxy-iteraconazole,CC(O)C(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,MetXBioDB,True
+(R)-phenprocoumon,CCC(c1ccccc1)c1c(O)c2ccccc2oc1=O,,CCC(c1ccc(O)cc1)c1c(O)c2ccccc2oc1=O,MetXBioDB,True
+(R)-phenprocoumon,CCC(c1ccccc1)c1c(O)c2ccccc2oc1=O,,CCC(c1ccccc1)c1c(O)c2ccc(O)cc2oc1=O,MetXBioDB,True
+Seratrodast,CC1=C(C)C(=O)C(C(CCCCCC(=O)O)c2ccccc2)=C(C)C1=O,5-OH-seratrodast,CC1=C(CO)C(=O)C(C)=C(C(CCCCCC(=O)O)c2ccccc2)C1=O,MetXBioDB,True
+Seratrodast,CC1=C(C)C(=O)C(C(CCCCCC(=O)O)c2ccccc2)=C(C)C1=O,4'-OH-seratrodast,CC1=C(C)C(=O)C(C(CCCCCC(=O)O)c2ccc(O)cc2)=C(C)C1=O,MetXBioDB,True
+chlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,7-Hydroxychlorpromazine,CN(C)CCCN1c2ccc(O)cc2Sc2ccc(Cl)cc21,MetXBioDB,True
+chlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,Chlorpromazine S-oxide,CN(C)CCCN1c2ccccc2[S+]([O-])c2ccc(Cl)cc21,MetXBioDB,True
+chlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,"Chlorpromazine, N-desmethyl",CNCCCN1c2ccccc2Sc2ccc(Cl)cc21,MetXBioDB,True
+chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1,2-OH-chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1O,MetXBioDB,True
+chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1,3-OH-chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)c(O)c1,MetXBioDB,True
+chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1,p-Chlorobenzene sulfonylurea,NC(=O)NS(=O)(=O)c1ccc(Cl)cc1,MetXBioDB,True
+cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,4-{phenyl[4-(3-phenylprop-2-en-1-yl)piperazin-1-yl]methyl}phenol,Oc1ccc(C(c2ccccc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,MetXBioDB,True
+cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,4-{3-[4-(diphenylmethyl)piperazin-1-yl]prop-1-en-1-yl}phenol,Oc1ccc(C=CCN2CCN(C(c3ccccc3)c3ccccc3)CC2)cc1,MetXBioDB,True
+cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,1-Benzhydrylpiperazine,c1ccc(C(c2ccccc2)N2CCNCC2)cc1,MetXBioDB,True
+cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,1-Cinnamylpiperazine,C(=Cc1ccccc1)CN1CCNCC1,MetXBioDB,True
+cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,Norcisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCNCC1OC,MetXBioDB,True
+cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,3-(4-fluorophenoxy)propanal,O=CCCOc1ccc(F)cc1,MetXBioDB,True
+cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,3-Fluoro-4-hydroxycisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(O)c(F)c2)CC1OC,MetXBioDB,True
+cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,4-Fluoro-2- hydroxycisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2O)CC1OC,MetXBioDB,True
+clarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,14-(R)-hydroxy-CLAR,COC1(C)CC(OC2C(C)C(=O)OC(C(C)O)C(C)(O)C(O)C(C)C(=O)C(C)CC(C)(OC)C(OC3OC(C)CC(N(C)C)C3O)C2C)OC(C)C1O,MetXBioDB,True
+clarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,N-desmethyl-CLAR,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(NC)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,MetXBioDB,True
+clindamycin,CCCC1CC(C(=O)NC(C(C)Cl)C2OC(SC)C(O)C(O)C2O)N(C)C1,N-desmethyclindamycin,CCCC1CNC(C(=O)NC(C(C)Cl)C2OC(SC)C(O)C(O)C2O)C1,MetXBioDB,True
+clindamycin,CCCC1CC(C(=O)NC(C(C)Cl)C2OC(SC)C(O)C(O)C2O)N(C)C1,clindamycin sulfoxide,CCCC1CC(C(=O)NC(C(C)Cl)C2OC([S+](C)[O-])C(O)C(O)C2O)N(C)C1,MetXBioDB,True
+clobazam,CN1C(=O)CC(=O)N(c2ccccc2)c2cc(Cl)ccc21,4-Hydroxyclobazam,CN1C(=O)CC(=O)N(c2ccc(O)cc2)c2cc(Cl)ccc21,MetXBioDB,True
+clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,2-OH-clomipramine,CN(C)CCCN1c2ccccc2CCc2cc(O)c(Cl)cc21,MetXBioDB,True
+clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,8-OH-clomipramine,CN(C)CCCN1c2cc(Cl)ccc2CCc2c(O)cccc21,MetXBioDB,True
+clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,N-Desmethylclomipramine,CNCCCN1c2ccccc2CCc2ccc(Cl)cc21,MetXBioDB,True
+clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,10-OH-clomipramine,CN(C)CCCN1c2cc(Cl)ccc2CC(O)c2ccccc21,MetXBioDB,True
+clozapine,CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,N-Desmethylclozapine,Clc1ccc2c(c1)N=C(N1CCNCC1)c1ccccc1N2,MetXBioDB,True
+clozapine,CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,Clozapine-N-oxide,C[N+]1([O-])CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,MetXBioDB,True
+codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,morphine,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,MetXBioDB,True
+codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,norcodeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)NCCC341,MetXBioDB,True
+cotinine,CN1C(=O)CCC1c1cccnc1,trans-3'-hydroxycotinine,CN1C(=O)C(O)CC1c1cccnc1,MetXBioDB,True
+coumarin,O=c1ccc2ccccc2o1,7-Hydroxycoumarin,O=c1ccc2ccc(O)cc2o1,MetXBioDB,True
+coumarin,O=c1ccc2ccccc2o1,3-Hydroxycoumarin,O=c1oc2ccccc2cc1O,MetXBioDB,True
+coumarin,O=c1ccc2ccccc2o1,"Coumarin 3,4-epoxide",O=C1Oc2ccccc2C2OC12,MetXBioDB,True
+curcumin,COc1cc(C=CC(=O)CC(=O)C=Cc2ccc(O)c(OC)c2)ccc1O,O-demethyl curcumin,COc1cc(C=CC(=O)CC(=O)C=Cc2ccc(O)c(O)c2)ccc1O,MetXBioDB,True
+cyclobenzaprine,CN(C)CCC=C1c2ccccc2C=Cc2ccccc21,N-Desmethylcyclobenzaprine,CNCCC=C1c2ccccc2C=Cc2ccccc21,MetXBioDB,True
+dapsone,Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1,N-Hydroxydapsone,Nc1ccc(S(=O)(=O)c2ccc(NO)cc2)cc1,MetXBioDB,True
+debrisoquine,N=C(N)N1CCc2ccccc2C1,4-Hydroxydebrisoquine,N=C(N)N1Cc2ccccc2C(O)C1,MetXBioDB,True
+delavirdine,CC(C)Nc1cccnc1N1CCN(C(=O)c2cc3cc(NS(C)(=O)=O)ccc3[nH]2)CC1,,CS(=O)(=O)Nc1ccc2[nH]c(C(=O)N3CCN(c4ncccc4N)CC3)cc2c1,MetXBioDB,True
+desmethylcitalopram,CNCCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,"N,N-Didesmethylcitalopram",N#Cc1ccc2c(c1)COC2(CCCN)c1ccc(F)cc1,MetXBioDB,True
+desogestrel,C#CC1(O)CCC2C3CCC4=CCCCC4C3C(=C)CC21CC,3-alpha-OH-desogestrel,C#CC1(O)CCC2C3CCC4=CC(O)CCC4C3C(=C)CC21CC,MetXBioDB,True
+dexamethasone,CC1CC2C3CCC4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)CO,6-alpha-OH DEXAMETHASONE,CC1CC2C3CC(O)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)CO,MetXBioDB,True
+dexfenfluramine,CCNC(C)Cc1cccc(C(F)(F)F)c1,nordexfenfluramine,CC(N)Cc1cccc(C(F)(F)F)c1,MetXBioDB,True
+dexpropranolol (propranolol),CC(C)NCC(O)COc1cccc2ccccc12,,NCC(O)COc1cccc2ccccc12,MetXBioDB,True
+dexpropranolol (propranolol),CC(C)NCC(O)COc1cccc2ccccc12,,CC(C)NCC(O)COc1ccc(O)c2ccccc12,MetXBioDB,True
+dextromethorphan,COc1ccc2c(c1)C13CCCCC1C(C2)N(C)CC3,Dextrorphan,CN1CCC23CCCCC2C1Cc1ccc(O)cc13,MetXBioDB,True
+dextromethorphan,COc1ccc2c(c1)C13CCCCC1C(C2)N(C)CC3,3-methoxymorphinan,COc1ccc2c(c1)C13CCCCC1C(C2)NCC3,MetXBioDB,True
+dexverapamil,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,"dexverapamil, N-demethyl",COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,MetXBioDB,True
+dexverapamil,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,"(2R)-5-{[2-(3,4-dimethoxyphenyl)ethyl](methyl)amino}-2-(4-hydroxy-3-methoxyphenyl)-2-(propan-2-yl)pentanenitrile",COc1cc(C(C#N)(CCCN(C)CCc2ccc(OC)c(OC)c2)C(C)C)ccc1O,MetXBioDB,True
+dexverapamil,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,(R)-D-617,CNCCCC(C#N)(c1ccc(OC)c(OC)c1)C(C)C,MetXBioDB,True
+diazepam,CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21,Temazepam,CN1C(=O)C(O)N=C(c2ccccc2)c2cc(Cl)ccc21,MetXBioDB,True
+diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,4'-OH-diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cc(O)cc1Cl,MetXBioDB,True
+diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,5-OH-diclofenac,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,MetXBioDB,True
+dihydrocodeine,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341,,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,MetXBioDB,True
+diltiazem,COc1ccc(C2Sc3ccccc3N(CCN(C)C)C(=O)C2OC(C)=O)cc1,N-Demethyldiltiazem,CNCCN1C(=O)C(OC(C)=O)C(c2ccc(OC)cc2)Sc2ccccc21,MetXBioDB,True
+diltiazem,COc1ccc(C2Sc3ccccc3N(CCN(C)C)C(=O)C2OC(C)=O)cc1,O-Demethyldiltiazem,CC(=O)OC1C(=O)N(CCN(C)C)c2ccccc2SC1c1ccc(O)cc1,MetXBioDB,True
+diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,N-Desmethyldiphenhydramine,CNCCOC(c1ccccc1)c1ccccc1,MetXBioDB,True
+disopiramide,CC(C)N(CCC(C(N)=O)(c1ccccc1)c1ccccn1)C(C)C,mono-N-desalkyldisopyramide,CC(C)NCCC(C(N)=O)(c1ccccc1)c1ccccn1,MetXBioDB,True
+doxepin,CN(C)CCC=C1c2ccccc2COc2ccccc21,nordoxepin,CNCCC=C1c2ccccc2COc2ccccc21,MetXBioDB,True
+ebastine,CC(C)(C)c1ccc(C(=O)CCCN2CCC(OC(c3ccccc3)c3ccccc3)CC2)cc1,Deslakylebastine,CC(C)(C)c1ccc(C(=O)CCC=O)cc1,MetXBioDB,True
+ebastine,CC(C)(C)c1ccc(C(=O)CCCN2CCC(OC(c3ccccc3)c3ccccc3)CC2)cc1,4-(4-tert-butylphenyl)-4-oxobutanal,c1ccc(C(OC2CCNCC2)c2ccccc2)cc1,MetXBioDB,True
+eplerenone,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,6beta-hydroxyeplerenone,COC(=O)C1C(O)C2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,MetXBioDB,True
+eplerenone,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,21-hydroxyeplerenone,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CC(O)C(=O)O4)C13,MetXBioDB,True
+esomeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3C)[nH]c2c1,5-Hydroxyomeprazole ,COc1ccc2nc([S+]([O-])Cc3ncc(CO)c(OC)c3C)[nH]c2c1,MetXBioDB,True
+esomeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3C)[nH]c2c1,Omeprazole sulfone ,COc1ccc2nc(S(=O)(=O)Cc3ncc(C)c(OC)c3C)[nH]c2c1,MetXBioDB,True
+estazolam,Clc1ccc2c(c1)C(c1ccccc1)=NCc1nncn1-2,4-hydroxyestazolam,OC1N=C(c2ccccc2)c2cc(Cl)ccc2-n2cnnc21,MetXBioDB,True
+estradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,4-Hydroxyestradiol ,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2O,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,2-OH-estrone,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,4-OH-estrone,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2=O,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,6alpha-OH-estrone,CC12CCC3c4ccc(O)cc4C(O)CC3C1CCC2=O,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,7alpha-OH-estrone,CC12CCC3c4ccc(O)cc4CC(O)C3C1CCC2=O,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,15alpha-OH-estrone,CC12CCC3c4ccc(O)cc4CCC3C1C(O)CC2=O,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,16alpha-OH-estrone,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2=O,MetXBioDB,True
+eszopiclone,CN1CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,N-desmethyl-zopiclone,O=C(OC1c2nccnc2C(=O)N1c1ccc(Cl)cn1)N1CCNCC1,MetXBioDB,True
+eszopiclone,CN1CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,N-oxide-zopiclone,C[N+]1([O-])CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,MetXBioDB,True
+etizolam,CCc1cc2c(s1)-n1c(C)nnc1CN=C2c1ccccc1Cl,,Cc1nnc2n1-c1sc(C(C)O)cc1C(c1ccccc1Cl)=NC2,MetXBioDB,True
+etoperidone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,,Clc1cccc(N2CCNCC2)c1,MetXBioDB,True
+etoperidone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,,CCc1nn(CCCN2CCN(c3ccc(O)c(Cl)c3)CC2)c(=O)n1CC,MetXBioDB,True
+etoperidone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,,CCn1c(C(C)O)nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c1=O,MetXBioDB,True
+etoposide,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(OC)c1O,Etoposide Catechol,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,MetXBioDB,True
+etoricoxib,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,6-Hydroxymethyletoricoxib,CS(=O)(=O)c1ccc(-c2cc(Cl)cnc2-c2ccc(CO)nc2)cc1,MetXBioDB,True
+etoricoxib,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,Etoricoxib 1'-N'-oxide,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)c[n+]1[O-],MetXBioDB,True
+fentanyl,CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,Norfentanyl,CCC(=O)N(c1ccccc1)C1CCNCC1,MetXBioDB,True
+flosequinan,Cn1cc([S+](C)[O-])c(=O)c2ccc(F)cc21,flosequinan sulfone,Cn1cc(S(C)(=O)=O)c(=O)c2ccc(F)cc21,MetXBioDB,True
+flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,1Ã¢â‚¬Â[bis(4Ã¢â‚¬Âfluorophenyl)methyl]piperazine,Fc1ccc(C(c2ccc(F)cc2)N2CCNCC2)cc1,MetXBioDB,True
+flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,p-Hydroxyflunarizine,Oc1ccc(C=CCN2CCN(C(c3ccc(F)cc3)c3ccc(F)cc3)CC2)cc1,MetXBioDB,True
+flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,bis(4Ã¢â‚¬Âfluorophenyl)methanone,O=C(c1ccc(F)cc1)c1ccc(F)cc1,MetXBioDB,True
+fluphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(C(F)(F)F)cc32)CC1,10-{3-[4-(2-hydroxyethyl)piperazin-1-yl]propyl}-2-(trifluoromethyl)-10H-5ÃŽÂ»Ã¢ÂÂ´-phenothiazin-5-one,[O-][S+]1c2ccccc2N(CCCN2CCN(CCO)CC2)c2cc(C(F)(F)F)ccc21,MetXBioDB,True
+flutamide,CC(C)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1,2-OH-flutamide,CC(C)(O)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1,MetXBioDB,True
+fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,6-OH-fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccc(O)cc21,MetXBioDB,True
+fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,N-Deisopropyl-fluvastatin,O=C(O)CC(O)CC(O)C=Cc1[nH]c2ccccc2c1-c1ccc(F)cc1,MetXBioDB,True
+fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,5-OH-fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2cc(O)ccc21,MetXBioDB,True
+fluvoxamine,COCCCCC(=NOCCN)c1ccc(C(F)(F)F)cc1,Fluvoxamino alcohol,NCCON=C(CCCCO)c1ccc(C(F)(F)F)cc1,MetXBioDB,True
+galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,O-Desmethylgalantamine,CN1CCC23C=CC(O)CC2Oc2c(O)ccc(c23)C1,MetXBioDB,True
+galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,Galantamine N-oxide,COc1ccc2c3c1OC1CC(O)C=CC31CC[N+](C)([O-])C2,MetXBioDB,True
+galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,N-desmethylgalantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCNC2,MetXBioDB,True
+genistein,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,Orobol,O=c1c(-c2ccc(O)c(O)c2)coc2cc(O)cc(O)c12,MetXBioDB,True
+gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1,,CC1(C)CC(=O)N(CCCCN2CCN(c3ncc(O)cn3)CC2)C(=O)C1,MetXBioDB,True
+gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1,,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1O,MetXBioDB,True
+gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1,1-(2-pyrimidinyl)-piperazine (1-PP),c1cnc(N2CCNCC2)nc1,MetXBioDB,True
+granisetron,CN1C2CCCC1CC(NC(=O)c1nn(C)c3ccccc13)C2,9'-Desmethylgranisetron,CN1C2CCCC1CC(NC(=O)c1n[nH]c3ccccc13)C2,MetXBioDB,True
+haloperidol,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,p-Fluorobenzoylpropionic acid and 4-(4-chlorophenyl)-4-hydroxypiperidine,O=C(O)CCC(=O)c1ccc(F)cc1,MetXBioDB,True
+haloperidol,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,Haloperidol pyridinium,O=C(CCCN1C=CC(=C2C=CC(=[Cl+])C=C2)C=C1)c1ccc(F)cc1,MetXBioDB,True
+harmaline,COc1ccc2c3c([nH]c2c1)C(C)=NCC3,Harmalol,CC1=NCCc2c1[nH]c1cc(O)ccc21,MetXBioDB,True
+harmine,COc1ccc2c(c1)[nH]c1c(C)nccc12,Harmol,COc1cc2[nH]c3c(C)nccc3c2cc1O,MetXBioDB,True
+harmine,COc1ccc2c(c1)[nH]c1c(C)nccc12,6-OH-harmaline,Cc1nccc2c1[nH]c1cc(O)ccc12,MetXBioDB,True
+hydrocodone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,Hydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,MetXBioDB,True
+hydrocodone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,Norhydromorphone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)NCCC314,MetXBioDB,True
+iloperidone,COc1cc(C(C)=O)ccc1OCCCN1CCC(c2noc3cc(F)ccc23)CC1,"4-[3-[4-(6-fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-3-methoxy-a-methylbenzene methanol",COc1cc(C(C)O)ccc1OCCCN1CCC(c2noc3cc(F)ccc23)CC1,MetXBioDB,True
+imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,N-desmethylimatinib,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,MetXBioDB,True
+imipramine,CN(C)CCCN1c2ccccc2CCc2ccccc21,2-Hydroxyimipramine ,CN(C)CCCN1c2ccccc2CCc2cc(O)ccc21,MetXBioDB,True
+indinavir,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1O,,CC(C)(C)NC(=O)C1CNCCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1O,MetXBioDB,True
+indiplon,CC(=O)N(C)c1cccc(-c2ccnc3c(C(=O)c4cccs4)cnn23)c1,N-Desmethylindiplon,CC(=O)Nc1cccc(-c2ccnc3c(C(=O)c4cccs4)cnn23)c1,MetXBioDB,True
+indomethacin,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,O-Desmethylindomethacin,Cc1c(CC(=O)O)c2cc(O)ccc2n1C(=O)c1ccc(Cl)cc1,MetXBioDB,True
+irbesartan,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,"2-(3-hydroxybutyl)-3-({4-[2-(2H-1,2,3,4-tetrazol-5-yl)phenyl]phenyl}methyl)-1,3-diazaspiro[4.4]non-1-en-4-one",CC(O)CCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,MetXBioDB,True
+irbesartan,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,M7,CCCCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,MetXBioDB,True
+irbesartan,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,M3,O=C(O)CCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,MetXBioDB,True
+ketobemidone,CCC(=O)C1(c2cccc(O)c2)CCN(C)CC1,Norketobemidone,CCC(=O)C1(c2cccc(O)c2)CCNCC1,MetXBioDB,True
+l-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,Dechloroethyl cyclophosphamide,O=P1(NCCCl)NCCCO1,MetXBioDB,True
+l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,3-Dechloroethylifosfamide,O=P1(NCCCl)NCCCO1,MetXBioDB,True
+l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,2-Dechloroethylifosfamide,NP1(=O)OCCCN1CCCl,MetXBioDB,True
+l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,4-Hydroxyifosfamide,O=P1(NCCCl)OCCC(O)N1CCCl,MetXBioDB,True
+l-trofosfamide,O=P1(N(CCCl)CCCl)OCCCN1CCCl,l-ifosfamide,O=P1(N(CCCl)CCCl)OCCC(O)N1CCCl,MetXBioDB,True
+l-trofosfamide,O=P1(N(CCCl)CCCl)OCCCN1CCCl,l-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,MetXBioDB,True
+laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4-hydroxy-N-(4-hydroxyphenyl)-1-methyl-2-oxo-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccc(O)cc1,MetXBioDB,True
+laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-4-hydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",Cn1c(=O)c(C(=O)Nc2ccccc2)c(O)c2c(Cl)cccc21,MetXBioDB,True
+laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4,8-dihydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)ccc(O)c2n(C)c1=O)c1ccccc1,MetXBioDB,True
+laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4,7-dihydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)cc(O)cc2n(C)c1=O)c1ccccc1,MetXBioDB,True
+laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4,6-dihydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)c(O)ccc2n(C)c1=O)c1ccccc1,MetXBioDB,True
+lauric acid,CCCCCCCCCCCC(=O)O,12-Hydroxylauric acid,O=C(O)CCCCCCCCCCCO,MetXBioDB,True
+licofelone,CC1(C)Cc2c(-c3ccccc3)c(-c3ccc(Cl)cc3)c(CC(=O)O)n2C1,licofelone M4,CC1(C)Cc2c(-c3ccc(O)cc3)c(-c3ccc(Cl)cc3)c(CC(=O)O)n2C1,MetXBioDB,True
+licofelone,CC1(C)Cc2c(-c3ccccc3)c(-c3ccc(Cl)cc3)c(CC(=O)O)n2C1,licofelone M2,CC1(C)Cc2c(-c3ccccc3)c(-c3ccc(Cl)c(O)c3)c(CC(=O)O)n2C1,MetXBioDB,True
+lidocaine,CCN(CC)CC(=O)Nc1c(C)cccc1C,Monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,MetXBioDB,True
+lidocaine,CCN(CC)CC(=O)Nc1c(C)cccc1C,3-Hydroxylidocaine,CCN(CC)CC(=O)Nc1c(C)ccc(O)c1C,MetXBioDB,True
+linomide,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4,8-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2cccc(O)c2n(C)c1=O)c1ccccc1,MetXBioDB,True
+linomide,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4,7-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2ccc(O)cc2n(C)c1=O)c1ccccc1,MetXBioDB,True
+linomide,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4,6-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2cc(O)ccc2n(C)c1=O)c1ccccc1,MetXBioDB,True
+linomide,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4-hydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",Cn1c(=O)c(C(=O)Nc2ccccc2)c(O)c2ccccc21,MetXBioDB,True
+linomide,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4-hydroxy-N-(4-hydroxyphenyl)-N,1-dimethyl-2-oxo-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccc(O)cc1,MetXBioDB,True
+lisofylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,"lisofylline 4,5-diol",CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O,MetXBioDB,True
+lisofylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,pentoxifylline,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,MetXBioDB,True
+loperamide,CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,N-Desmethyloperamide,CNC(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,MetXBioDB,True
+loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,,Clc1ccc2c(c1)CCc1cccnc1C2=C1CCNCC1,MetXBioDB,True
+lovastatin,CCC(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,6'beta-Hydroxylovastatin,CCC(C)C(=O)OC1CC(C)(O)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,MetXBioDB,True
+maprotiline,CNCCCC12CCC(c3ccccc31)c1ccccc12,desmethylmaprotiline,NCCCC12CCC(c3ccccc31)c1ccccc12,MetXBioDB,True
+maprotiline,CNCCCC12CCC(c3ccccc31)c1ccccc12,3-OH-maprotiline,CNCCCC12CCC(c3ccccc31)c1ccc(O)cc12,MetXBioDB,True
+maprotiline,CNCCCC12CCC(c3ccccc31)c1ccccc12,2-OH-maprotiline,CNCCCC12CCC(c3ccccc31)c1cc(O)ccc12,MetXBioDB,True
+mefenamic acid,Cc1cccc(Nc2ccccc2C(=O)O)c1C,3-hydroxymethyl mefenamic aci,Cc1c(CO)cccc1Nc1ccccc1C(=O)O,MetXBioDB,True
+melatonin,COc1ccc2[nH]cc(CCNC(C)=O)c2c1,6-Hydroxymelatonin,COc1cc2c(CCNC(C)=O)c[nH]c2cc1O,MetXBioDB,True
+melatonin,COc1ccc2[nH]cc(CCNC(C)=O)c2c1,N-Acetyl-5-hydroxytryptamine,CC(=O)NCCc1c[nH]c2ccc(O)cc12,MetXBioDB,True
+meloxicam,Cc1cnc(NC(=O)C2=C(O)c3ccccc3S(=O)(=O)N2C)s1,,CN1C(C(=O)Nc2ncc(CO)s2)=C(O)c2ccccc2S1(=O)=O,MetXBioDB,True
+midazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,1'-Hydroxymidazolam,OCc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,MetXBioDB,True
+midazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,4-Hydroxymidazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2O,MetXBioDB,True
+mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(N(C)C)cc3)CC21C,Monodemethylated mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(NC)cc3)CC21C,MetXBioDB,True
+mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(N(C)C)cc3)CC21C,17alpha-hydroxymifepristone ,CN(C)c1ccc(C2CC3(C)C(CCC3(O)C#CCO)C3CCC4=CC(=O)CCC4=C23)cc1,MetXBioDB,True
+montelukast,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,montelukast sulfoxide,CC(C)(O)c1ccccc1CCC(c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1)[S+]([O-])CC1(CC(=O)O)CC1,MetXBioDB,True
+montelukast,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,21-Hydroxymontelukast,CC(C)(O)c1ccccc1C(O)CC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,MetXBioDB,True
+montelukast,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,"[1Ã¢â‚¬Â({[(1R)Ã¢â‚¬Â1Ã¢â‚¬Â{3Ã¢â‚¬Â[(E)Ã¢â‚¬Â2Ã¢â‚¬Â(7Ã¢â‚¬ÂchloroquinolinÃ¢â‚¬Â2Ã¢â‚¬Âyl)ethenyl]phenyl}Ã¢â‚¬Â3Ã¢â‚¬Â[2Ã¢â‚¬Â(1,2Ã¢â‚¬ÂdihydroxypropanÃ¢â‚¬Â2Ã¢â‚¬Âyl)phenyl]propyl]sulfanyl}methyl)cyclopropyl]aceticacid",CC(O)(CO)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,MetXBioDB,True
+mycophenolic acid,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)O)C(=O)OC2,6-O-desmethyl-MPA (DM-MPA),CC(=CCc1c(O)c(C)c2c(c1O)C(=O)OC2)CCC(=O)O,MetXBioDB,True
+naproxen,COc1ccc2cc(C(C)C(=O)O)ccc2c1,Desmethylnaproxen ,CC(C(=O)O)c1ccc2cc(O)ccc2c1,MetXBioDB,True
+nefazodone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,,CC(O)c1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,MetXBioDB,True
+nefazodone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,,Clc1cccc(N2CCNCC2)c1,MetXBioDB,True
+nicotine,CN1CCCC1c1cccnc1,"(S)-Nicotine ÃŽâ€1Ã¢â‚¬Â²,5Ã¢â‚¬Â²-iminium ion",C[N+]1=CCCC1c1cccnc1,MetXBioDB,True
+nicotine,CN1CCCC1c1cccnc1,2Ã¢â‚¬Â²-Hydroxynicotine,CN1CCCC1(O)c1cccnc1,MetXBioDB,True
+nicotine,CN1CCCC1c1cccnc1,Nornicotine,c1cncc(C2CCCN2)c1,MetXBioDB,True
+nifedipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1ccccc1[N+](=O)[O-],Oxidized nifedipine,COC(=O)c1c(C)nc(C)c(C(=O)OC)c1-c1ccccc1[N+](=O)[O-],MetXBioDB,True
+nortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,E-10-OH-nortriptyline,CNCCC=C1c2ccccc2CC(O)c2ccccc21,MetXBioDB,True
+nortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,demethylnortriptyline,NCCC=C1c2ccccc2CCc2ccccc21,MetXBioDB,True
+olanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,,CN1CCN(C2=Nc3ccccc3Nc3sc(CO)cc32)CC1,MetXBioDB,True
+olanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,,Cc1cc2c(s1)Nc1ccc(O)cc1N=C2N1CCN(C)CC1,MetXBioDB,True
+olanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCNCC1,MetXBioDB,True
+olopatadine,CN(C)CCC=C1c2ccccc2COc2ccc(CC(=O)O)cc21,N-monodemethylolopatadine,CNCCC=C1c2ccccc2COc2ccc(CC(=O)O)cc21,MetXBioDB,True
+oxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,oxymorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,MetXBioDB,True
+oxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,noroxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)NCCC314,MetXBioDB,True
+perphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(Cl)cc32)CC1,N-Dealkylated perphenazine,Clc1ccc2c(c1)N(CCCN1CCNCC1)c1ccccc1S2,MetXBioDB,True
+perphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(Cl)cc32)CC1,Perphenazine sulfoxide,[O-][S+]1c2ccccc2N(CCCN2CCN(CCO)CC2)c2cc(Cl)ccc21,MetXBioDB,True
+phenacetin,CCOc1ccc(NC(C)=O)cc1,Acetaminophen,CC(=O)Nc1ccc(O)cc1,MetXBioDB,True
+phenacetin,CCOc1ccc(NC(C)=O)cc1,N-OH-phenacetin,CCOc1ccc(N(O)C(C)=O)cc1,MetXBioDB,True
+pilocarpine,CCC1C(=O)OCC1Cc1cncn1C,3-hydroxypilocarpine,CCC1(O)C(=O)OCC1Cc1cncn1C,MetXBioDB,True
+piroxicam,CN1C(C(=O)Nc2ccccn2)=C(O)c2ccccc2S1(=O)=O,5'-Hydroxypiroxicam,CN1C(C(=O)Nc2ccc(O)cn2)=C(O)c2ccccc2S1(=O)=O,MetXBioDB,True
+progesterone,CC(=O)C1CCC2C3CCC4=CC(=O)CCC4(C)C3CCC12C,6beta-OH-progesterone,CC(=O)C1CCC2C3CC(O)C4=CC(=O)CCC4(C)C3CCC12C,MetXBioDB,True
+progesterone,CC(=O)C1CCC2C3CCC4=CC(=O)CCC4(C)C3CCC12C,21-OH-progesterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(C(=O)CO)CCC12,MetXBioDB,True
+promazine,CN(C)CCCN1c2ccccc2Sc2ccccc21,Promazine 5-sulfoxide,CN(C)CCCN1c2ccccc2[S+]([O-])c2ccccc21,MetXBioDB,True
+promazine,CN(C)CCCN1c2ccccc2Sc2ccccc21,N-Desmethyl promazine,CNCCCN1c2ccccc2Sc2ccccc21,MetXBioDB,True
+propofol,CC(C)c1cccc(C(C)C)c1O,4-OH-propofol,CC(C)c1cc(O)cc(C(C)C)c1O,MetXBioDB,True
+quazepam,Fc1ccccc1C1=NCC(=S)N(CC(F)(F)F)c2ccc(Cl)cc21,2-Oxoquazepam,O=C1CN=C(c2ccccc2F)c2cc(Cl)ccc2N1CC(F)(F)F,MetXBioDB,True
+quetiapine,OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,,[O-][S+]1c2ccccc2N=C(N2CCN(CCOCCO)CC2)c2ccccc21,MetXBioDB,True
+quetiapine,OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,,OCCOCCN1CCN(C2=Nc3ccc(O)cc3Sc3ccccc32)CC1,MetXBioDB,True
+quinidine,C=CC1CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,3-Hydroxyquinidine,C=CC1(O)CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,MetXBioDB,True
+quinidine,C=CC1CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,Quinidine-N-oxide,C=CC1C[N+]2([O-])CCC1CC2C(O)c1ccnc2ccc(OC)cc12,MetXBioDB,True
+(R)-mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,"(R)-mianserin, N-Desmethyl",c1ccc2c(c1)Cc1ccccc1N1CCNCC21,MetXBioDB,True
+(R)-mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,"(R)-mianserin, 8-hydroxy",CN1CCN2c3cc(O)ccc3Cc3ccccc3C2C1,MetXBioDB,True
+(R)-mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,"(R)-mianserin, N-oxide",C[N+]1([O-])CCN2c3ccccc3Cc3ccccc3C2C1,MetXBioDB,True
+ranitidine,CNC(=C[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,Desmethylranitidine,CNCc1ccc(CSCCNC(=C[N+](=O)[O-])NC)o1,MetXBioDB,True
+repaglinide,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N2CCCCC2)ccc1C(=O)O,,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N2CCCC(O)C2)ccc1C(=O)O,MetXBioDB,True
+repaglinide,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N2CCCCC2)ccc1C(=O)O,,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N)ccc1C(=O)O,MetXBioDB,True
+retinol,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CCO,All-trans-retinal,CC(C=CC=C(C)C=CC1=C(C)CCCC1(C)C)=CC=O,MetXBioDB,True
+risperidone,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2,,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2O,MetXBioDB,True
+ropivacaine,CCCN1CCCCC1C(=O)Nc1c(C)cccc1C,3-OH-ropivacaine,CCCN1CCCCC1C(=O)Nc1c(C)ccc(O)c1C,MetXBioDB,True
+ropivacaine,CCCN1CCCCC1C(=O)Nc1c(C)cccc1C,PPX,Cc1cccc(C)c1NC(=O)C1CCCCN1,MetXBioDB,True
+salmeterol,OCc1cc(C(O)CNCCCCCCOCCCCc2ccccc2)ccc1O,,OCc1cc(C(O)CNCCCCCCOCCCC(O)c2ccccc2)ccc1O,MetXBioDB,True
+selegiline,C#CCN(C)C(C)Cc1ccccc1,Desmethylselegiline,C#CCNC(C)Cc1ccccc1,MetXBioDB,True
+selegiline,C#CCN(C)C(C)Cc1ccccc1,Methamphetamine,CNC(C)Cc1ccccc1,MetXBioDB,True
+sertraline,CNC1CCC(c2ccc(Cl)c(Cl)c2)c2ccccc21,N-desmethylsertraline,NC1CCC(c2ccc(Cl)c(Cl)c2)c2ccccc21,MetXBioDB,True
+simvastatin,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,6'-ÃŽÂ²-Hydroxysimvastatin ,CCC(C)(C)C(=O)OC1CC(C)(O)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,MetXBioDB,True
+simvastatin,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,"3', 5'-Dihydrodiol",CCC(C)(C)C(=O)OC1CC(C)C(O)C2=CC(O)C(C)C(CCC3CC(O)CC(=O)O3)C21,MetXBioDB,True
+simvastatin,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,6'-exomethylene,C=C1C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C2C(OC(=O)C(C)(C)CC)C1,MetXBioDB,True
+sulfamethoxazole,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1,Sulfamethoxazole N4-hydroxylamine,Cc1cc(NS(=O)(=O)c2ccc(NO)cc2)no1,MetXBioDB,True
+tamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,N-Desmethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,MetXBioDB,True
+tamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,4-Hydroxytamoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,MetXBioDB,True
+tamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,alpha-Hydroxytamoxifen,CC(O)C(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,MetXBioDB,True
+tamsulosin,CCOc1ccccc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,,CCOc1ccc(O)cc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,MetXBioDB,True
+tamsulosin,CCOc1ccccc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,,CCOc1ccccc1OCCNC(C)Cc1ccc(O)c(S(N)(=O)=O)c1,MetXBioDB,True
+tamsulosin,CCOc1ccccc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,,COc1ccc(CC(C)NCCOc2ccccc2O)cc1S(N)(=O)=O,MetXBioDB,True
+teniposide,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(OC)c1O,Teniposide catechol ,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,MetXBioDB,True
+terbinafine,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,N-Desmethylterbinafine,CC(C)(C)C#CC=CCNCc1cccc2ccccc12,MetXBioDB,True
+terbinafine,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,Hydroxyterbinafine,CN(CC=CC#CC(C)(C)CO)Cc1cccc2ccccc12,MetXBioDB,True
+terbinafine,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,1-Naphtaldehyde,O=Cc1cccc2ccccc12,MetXBioDB,True
+testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,6ÃŽÂ²Hydroxytestosterone ,CC12CCC(=O)C=C1C(O)CC1C2CCC2(C)C(O)CCC12,MetXBioDB,True
+testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,2ÃŽÂ±-Hydroxytestosterone ,CC12CC(O)C(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,MetXBioDB,True
+testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,15ÃŽÂ±-Hydroxytestosterone ,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CC(O)C12,MetXBioDB,True
+testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,16ÃŽÂ±-Hydroxytestosterone ,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)C(O)CC12,MetXBioDB,True
+testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,Androstenedione ,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,MetXBioDB,True
+thiabendazole,c1ccc2[nH]c(-c3cscn3)nc2c1,5-hydroxythiabendazole ,Oc1ccc2nc(-c3cscn3)[nH]c2c1,MetXBioDB,True
+ticlopidine,Clc1ccccc1CN1CCc2sccc2C1,Thienodihydropyridinium,Clc1ccccc1CN1C=C2C=C[S+]=C2CC1,MetXBioDB,True
+ticlopidine,Clc1ccccc1CN1CCc2sccc2C1,Ticlopidine S-oxide,[O-][s+]1ccc2c1CCN(Cc1ccccc1Cl)C2,MetXBioDB,True
+ticrynafen,O=C(O)COc1ccc(C(=O)c2cccs2)c(Cl)c1Cl,Tienilic acid-s-oxide,O=C(O)COc1ccc(C(=O)c2ccc[s+]2[O-])c(Cl)c1Cl,MetXBioDB,True
+tolbutamide,CCCCNC(=O)NS(=O)(=O)c1ccc(C)cc1,4-Hydroxytolbutamide,CCCCNC(=O)NS(=O)(=O)c1ccc(CO)cc1,MetXBioDB,True
+tolterodine,Cc1ccc(O)c(C(CCN(C(C)C)C(C)C)c2ccccc2)c1,N-Dealkylated tolterodine,Cc1ccc(O)c(C(CCNC(C)C)c2ccccc2)c1,MetXBioDB,True
+tolterodine,Cc1ccc(O)c(C(CCN(C(C)C)C(C)C)c2ccccc2)c1,5-Hydroxymethyl tolterodine,CC(C)N(CCC(c1ccccc1)c1cc(CO)ccc1O)C(C)C,MetXBioDB,True
+toremifene,CN(C)CCOc1ccc(C(=C(CCCl)c2ccccc2)c2ccccc2)cc1,N-desmethyltoremifene,CNCCOc1ccc(C(=C(CCCl)c2ccccc2)c2ccccc2)cc1,MetXBioDB,True
+tramadol,COc1cccc(C2(O)CCCCC2CN(C)C)c1,N-desmethyltramadol,CNCC1CCCCC1(O)c1cccc(OC)c1,MetXBioDB,True
+tramadol,COc1cccc(C2(O)CCCCC2CN(C)C)c1,O-desmethyl-tramadol,CN(C)CC1CCCCC1(O)c1cccc(O)c1,MetXBioDB,True
+trazodone,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,m-CPP,Clc1cccc(N2CCNCC2)c1,MetXBioDB,True
+trazodone,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,p-Hydroxytrazodone,O=c1n(CCCN2CCN(c3ccc(O)c(Cl)c3)CC2)nc2ccccn12,MetXBioDB,True
+trazodone,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,Trazodone epoxide,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2n1C=CC1OC21,MetXBioDB,True
+triazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,,OCc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,MetXBioDB,True
+triazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2O,MetXBioDB,True
+trimethadione,CN1C(=O)OC(C)(C)C1=O,,CC1(C)OC(=O)N=C1O,MetXBioDB,True
+valdecoxib,Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1,"4Ã¢â‚¬Â[5Ã¢â‚¬Â(hydroxymethyl)Ã¢â‚¬Â3Ã¢â‚¬ÂphenylÃ¢â‚¬Â1,2Ã¢â‚¬ÂoxazolÃ¢â‚¬Â4Ã¢â‚¬Âyl]benzeneÃ¢â‚¬Â1Ã¢â‚¬Âsulfonamide",NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2CO)cc1,MetXBioDB,True
+valdecoxib,Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1,"4Ã¢â‚¬Â[3Ã¢â‚¬Â(3Ã¢â‚¬Âhydroxyphenyl)Ã¢â‚¬Â5Ã¢â‚¬ÂmethylÃ¢â‚¬Â1,2Ã¢â‚¬ÂoxazolÃ¢â‚¬Â4Ã¢â‚¬Âyl]benzeneÃ¢â‚¬Â1Ã¢â‚¬Âsulfonamide",Cc1onc(-c2cccc(O)c2)c1-c1ccc(S(N)(=O)=O)cc1,MetXBioDB,True
+valproic acid,CCCC(CCC)C(=O)O,4-Hydroxyvalproate,CCCC(CC(C)O)C(=O)O,MetXBioDB,True
+valproic acid,CCCC(CCC)C(=O)O,5-Hydroxyvalproate,CCCC(CCCO)C(=O)O,MetXBioDB,True
+valproic acid,CCCC(CCC)C(=O)O,3-Hydroxyvalproate,CCCC(C(=O)O)C(O)CC,MetXBioDB,True
+valproic acid,CCCC(CCC)C(=O)O,4-ene-valproate,C=CCC(CCC)C(=O)O,MetXBioDB,True
+valsartan,CCCCC(=O)N(Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1)C(C(=O)O)C(C)C,4-OH-valsartan,CC(O)CCC(=O)N(Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1)C(C(=O)O)C(C)C,MetXBioDB,True
+vicriviroc,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,N-Desalkylvicriviroc ,Cc1ncnc(C)c1C(=O)N1CCC(C)(N2CCNC(C)C2)CC1,MetXBioDB,True
+vicriviroc,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,O-Desmethylvicriviroc ,Cc1ncnc(C)c1C(=O)N1CCC(C)(N2CCN(C(CO)c3ccc(C(F)(F)F)cc3)C(C)C2)CC1,MetXBioDB,True
+vicriviroc,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,Vicriviroc N-oxide ,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)nc[n+]([O-])c3C)CC2)CC1C,MetXBioDB,True
+voriconazole,CC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,Hydroxymethyl Voriconazole,OCC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,MetXBioDB,True
+voriconazole,CC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,Voriconazole N-Oxide,CC(c1nc[n+]([O-])cc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,MetXBioDB,True
+DMXAA,Cc1ccc2c(=O)c3cccc(CC(=O)O)c3oc2c1C,6-Hydroxy-MXAA,Cc1c(CO)ccc2c(=O)c3cccc(CC(=O)O)c3oc12,MetXBioDB,True
+DEET,CCN(CC)C(=O)c1cccc(C)c1,"N,N-diethyl-m-hydroxymethylbenzamide",CCN(CC)C(=O)c1cccc(CO)c1,MetXBioDB,True
+Proguanil,CC(C)NC(=N)NC(=N)Nc1ccc(Cl)cc1,4-Chlorophenylbiguanide,N=C(N)NC(=N)Nc1ccc(Cl)cc1,MetXBioDB,True
+Promethazine,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,,CC(CN1c2ccccc2[S+]([O-])c2ccccc21)N(C)C,MetXBioDB,True
+Promethazine,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,,CNC(C)CN1c2ccccc2Sc2ccccc21,MetXBioDB,True
+Bufuralol,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,4-Hydroxybufuralol,CCc1ccc(O)c2cc(C(O)CNC(C)(C)C)oc12,MetXBioDB,True
+Bufuralol,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,6-Hydroxubufuralol,CCc1c(O)ccc2cc(C(O)CNC(C)(C)C)oc12,MetXBioDB,True
+Bufuralol,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,1'2'-Ethenylbufuralol,C=Cc1cccc2cc(C(O)CNC(C)(C)C)oc12,MetXBioDB,True
+Deltamethrin,CC1(C)C(C=C(Br)Br)C1C(=O)OC(C#N)c1cccc(Oc2ccccc2)c1,4'-OH-deltamethrin,CC1(C)C(C=C(Br)Br)C1C(=O)OC(C#N)c1cccc(Oc2ccc(O)cc2)c1,MetXBioDB,True
+Halothane ,FC(F)(F)C(Cl)Br,Trifluoroacetyl chloride,O=C(Cl)C(F)(F)F,MetXBioDB,True
+delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,11-OH-delata-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,MetXBioDB,True
+delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,7-OH-delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1C(O)CC(C)=CC21,MetXBioDB,True
+delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,8-OH-delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(C)=CC21,MetXBioDB,True
+S-Bioallethrin,C=CCC1=C(C)C(OC(=O)C2C(C=C(C)C)C2(C)C)CC1=O,,C=CCC1=C(C)C(OC(=O)C2C(C=C(C)CO)C2(C)C)CC1=O,MetXBioDB,True
+Artesunate,CC1CCC2C(C)C(OC(=O)CCC(=O)O)OC3OC4(C)CCC1C32OO4,,CC1CCC2C(C)C(O)OC3OC4(C)CCC1C32OO4,MetXBioDB,True
+Erlotinib,C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1,2Ã¢â‚¬Â({4Ã¢â‚¬Â[(3Ã¢â‚¬Âethynylphenyl)amino]Ã¢â‚¬Â6Ã¢â‚¬Â(2Ã¢â‚¬Âmethoxyethoxy)quinazolinÃ¢â‚¬Â7Ã¢â‚¬Âyl}oxy)ethanÃ¢â‚¬Â1Ã¢â‚¬Âol,C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1,MetXBioDB,True
+zafirlukast,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12,cyclopentyl NÃ¢â‚¬Â[1Ã¢â‚¬Â(hydroxymethyl)Ã¢â‚¬Â3Ã¢â‚¬Â({2Ã¢â‚¬ÂmethoxyÃ¢â‚¬Â4Ã¢â‚¬Â[(2Ã¢â‚¬Âmethylbenzenesulfonyl)carbamoyl]phenyl}methyl)indolÃ¢â‚¬Â5Ã¢â‚¬Âyl]carbamate,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(CO)c2ccc(NC(=O)OC3CCCC3)cc12,MetXBioDB,True
+zafirlukast,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12,3Ã¢â‚¬Âhydroxycyclopentyl NÃ¢â‚¬Â[3Ã¢â‚¬Â({2Ã¢â‚¬ÂmethoxyÃ¢â‚¬Â4Ã¢â‚¬Â[(2Ã¢â‚¬Âmethylbenzenesulfonyl)carbamoyl]phenyl}methyl)Ã¢â‚¬Â1Ã¢â‚¬ÂmethylindolÃ¢â‚¬Â5Ã¢â‚¬Âyl]carbamate,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCC(O)C3)cc12,MetXBioDB,True
+zinc03978059,CC12CCC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,free cortisol,CC12CCC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,MetXBioDB,True
+zinc36377943,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,6beta - HYDROXYBUDESONIDE,CCCC1OC2CC3C4CC(O)C5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,MetXBioDB,True
+zolpidem,Cc1ccc(-c2nc3ccc(C)cn3c2CC(=O)N(C)C)cc1,methoxyzolpidem,Cc1cn2c(CC(=O)N(C)C)c(-c3ccc(CO)cc3)nc2cc1O,MetXBioDB,True
+zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,Norzotepine,CNCCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,MetXBioDB,True
+zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,Zotepine N-oxide,C[N+](C)([O-])CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,MetXBioDB,True
+zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,2-OH-zotepine,CN(C)CCOC1=Cc2cc(O)ccc2Sc2ccc(Cl)cc21,MetXBioDB,True
+zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,3-OH-zotepine,CN(C)CCOC1=Cc2ccc(O)cc2Sc2ccc(Cl)cc21,MetXBioDB,True
+zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,Zotepine -oxide,CN(C)CCOC1=Cc2ccccc2[S+]([O-])c2ccc(Cl)cc21,MetXBioDB,True
+ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,,C#CC1(O)CCC2C3CCc4cc(O)c(O)cc4C3CCC21C,MetXBioDB,True
+ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,,C#CC1(O)CCC2C3CCc4c(ccc(O)c4O)C3CCC21C,MetXBioDB,True
+"Retinoic acid, all-trans",CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,4-Hydroxyretinoic acid,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,MetXBioDB,True
+"Retinoic acid, all-trans",CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,18-Hydroxyretinoic acid,CC(C=CC1=C(CO)CCCC1(C)C)=CC=CC(C)=CC(=O)O,MetXBioDB,True
+"Retinoic acid, all-trans",CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,"5,6-Epoxy-retinoic acid",CC(C=CC12OC1(C)CCCC2(C)C)=CC=CC(C)=CC(=O)O,MetXBioDB,True
+Nelfinavir,Cc1c(O)cccc1C(=O)NC(CSc1ccccc1)C(O)CN1CC2CCCCC2CC1C(=O)NC(C)(C)C,Nelfinavir hydroxyl-t- butylamide,Cc1c(O)cccc1C(=O)NC(CSc1ccccc1)C(O)CN1CC2CCCCC2CC1C(=O)NC(C)(C)CO,MetXBioDB,True
+Nelfinavir,Cc1c(O)cccc1C(=O)NC(CSc1ccccc1)C(O)CN1CC2CCCCC2CC1C(=O)NC(C)(C)C,"3,4-Dihydroxynelfinavir",Cc1c(C(=O)NC(CSc2ccccc2)C(O)CN2CC3CCCCC3CC2C(=O)NC(C)(C)C)ccc(O)c1O,MetXBioDB,True
+Metamphetamine,CNC(C)Cc1ccccc1,4-Hydroxymethamphetamine,CNC(C)Cc1ccc(O)cc1,MetXBioDB,True
+Metamphetamine,CNC(C)Cc1ccccc1,Amphetamine,CC(N)Cc1ccccc1,MetXBioDB,True
+desimipramine,CNCCCN1c2ccccc2CCc2ccccc21,2-hydroxy-desipramine ,CNCCCN1c2ccccc2CCc2cc(O)ccc21,MetXBioDB,True
+Duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,,CNCCC(Oc1ccc(O)c2ccccc12)c1cccs1,MetXBioDB,True
+Duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,,CNCCC(Oc1cccc2cc(O)ccc12)c1cccs1,MetXBioDB,True
+Duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,,CNCCC(Oc1cccc2c(O)cccc12)c1cccs1,MetXBioDB,True
+Glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,2-trans-hydroxycyclohexyl glyburide ,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2O)cc1,MetXBioDB,True
+Glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,4-cis-hydroxycyclohexyl glyburide ,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCC(O)CC2)cc1,MetXBioDB,True
+Glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,3-trans-Hydroxycyclohexyl glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCC(O)C2)cc1,MetXBioDB,True
+"(r)-chloroquine, N-desethyl",CCNCCCC(C)Nc1ccnc2cc(Cl)ccc12,"(r)-chloroquine, N-desethyl",CC(CCCN)Nc1ccnc2cc(Cl)ccc12,MetXBioDB,True
+"2,6-Xylidine",Cc1cccc(C)c1N,"4-hydroxy-2,6-dimethylaniline",Cc1cc(O)cc(C)c1N,MetXBioDB,True
+3-Hydroxylidocaine,CCN(CC)CC(=O)Nc1c(C)ccc(O)c1C,3-Hydroxymonoethyl glycinexylidide,CCNCC(=O)Nc1c(C)ccc(O)c1C,MetXBioDB,True
+(R)-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,6-OH-R-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2cccc(O)c2oc1=O,MetXBioDB,True
+(R)-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,7-OH-R-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccc(O)cc2oc1=O,MetXBioDB,True
+(R)-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,8-OH-R-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2cc(O)ccc2oc1=O,MetXBioDB,True
+Amphetamine,CC(N)Cc1ccccc1,4-Hydroxyamphetamine,CC(N)Cc1ccc(O)cc1,MetXBioDB,True
+Aprindine,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,"N-[3-(N,NDiethylamino)propyl]-N-phenyl-2-aminoindan-5-ol",CCN(CC)CCCN(c1ccccc1)C1Cc2ccc(O)cc2C1,MetXBioDB,True
+Aprindine,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,p-Hydroxyphenylaprindine,CCN(CC)CCCN(c1ccc(O)cc1)C1Cc2ccccc2C1,MetXBioDB,True
+Aprindine,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,Desethylaprindine,CCNCCCN(c1ccccc1)C1Cc2ccccc2C1,MetXBioDB,True
+Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Norbuprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5,MetXBioDB,True
+(+)-Camphor,CC12CCC(CC1=O)C2(C)C,8-hydroxycamphor,CC12CC(O)C(CC1=O)C2(C)C,MetXBioDB,True
+Citalopram,CN(C)CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,Citalopram N-oxide,C[N+](C)([O-])CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,MetXBioDB,True
+Citalopram,CN(C)CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,N-Desmethylcitalopram,CNCCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,MetXBioDB,True
+D-617,CNCCCC(C#N)(c1ccc(OC)c(OC)c1)C(C)C,D-620,COc1ccc(C(C#N)(CCCN)C(C)C)cc1OC,MetXBioDB,True
+DEET,CCN(CC)C(=O)c1cccc(C)c1,N-ethyl-m-toluamide,CCNC(=O)c1cccc(C)c1,MetXBioDB,True
+donepezil,COc1cc2c(cc1OC)C(=O)C(CC1CCN(Cc3ccccc3)CC1)C2,"2Ã¢â‚¬Â[(1Ã¢â‚¬ÂbenzylpiperidinÃ¢â‚¬Â4Ã¢â‚¬Âyl)methyl]Ã¢â‚¬Â6Ã¢â‚¬ÂhydroxyÃ¢â‚¬Â5Ã¢â‚¬ÂmethoxyÃ¢â‚¬Â2,3Ã¢â‚¬ÂdihydroindenÃ¢â‚¬Â1Ã¢â‚¬Âone",COc1cc2c(cc1O)C(=O)C(CC1CCN(Cc3ccccc3)CC1)C2,MetXBioDB,True
+Encainide,COc1ccc(C(=O)Nc2ccccc2CCC2CCCCN2C)cc1,N-demethylencainide,COc1ccc(C(=O)Nc2ccccc2CCC2CCCCN2)cc1,MetXBioDB,True
+Encainide,COc1ccc(C(=O)Nc2ccccc2CCC2CCCCN2C)cc1,O-demethylencainide,CN1CCCCC1CCc1ccccc1NC(=O)c1ccc(O)cc1,MetXBioDB,True
+N-Desmethylclomipramine,CNCCCN1c2ccccc2CCc2ccc(Cl)cc21,N-Didesmethylclomipramine,NCCCN1c2ccccc2CCc2ccc(Cl)cc21,MetXBioDB,True
+Fenthion,COP(=S)(OC)Oc1ccc(SC)c(C)c1,Fenthion oxon,COP(=O)(OC)Oc1ccc(SC)c(C)c1,MetXBioDB,True
+lansoprazole,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2ccccc2[nH]1,,Cc1c(OCC(F)(F)F)ccnc1CS(=O)(=O)c1nc2ccccc2[nH]1,MetXBioDB,True
+Gavestinel,O=C(C=Cc1c(C(=O)O)[nH]c2cc(Cl)cc(Cl)c12)Nc1ccccc1,p-OH-gavestinel,O=C(C=Cc1c(C(=O)O)[nH]c2cc(Cl)cc(Cl)c12)Nc1ccc(O)cc1,MetXBioDB,True
+Gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,7-OH-gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CC(O)CC3C2)cc1,MetXBioDB,True
+Gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,Methylhydroxygliclazide,O=C(NN1CC2CCCC2C1)NS(=O)(=O)c1ccc(CO)cc1,MetXBioDB,True
+Gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,6-OH-gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCC(O)C3C2)cc1,MetXBioDB,True
+Glimepiride,CCC1=C(C)CN(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(C)CC3)cc2)C1=O,Cyclohexylhydroymethylglimepiride,CCC1=C(C)CN(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(CO)CC3)cc2)C1=O,MetXBioDB,True
+Glipizide,Cc1cnc(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCCCC3)cc2)cn1,4-trans-OH-glipizide,Cc1cnc(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(O)CC3)cc2)cn1,MetXBioDB,True
+Hydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,Norhydromorphone,O=C1CCC2C3Cc4ccc(O)c5c4C2(CCN3)C1O5,MetXBioDB,True
+Lumiracoxib,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,Lumiracoxib metabolite 1,O=C(O)Cc1cc(CO)ccc1Nc1c(F)cccc1Cl,MetXBioDB,True
+Lumiracoxib,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,Lumiracoxib metabolite 2,Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)O)c1,MetXBioDB,True
+Malathion,CCOC(=O)CC(SP(=S)(OC)OC)C(=O)OCC,Maloxon,CCOC(=O)CC(SP(=O)(OC)OC)C(=O)OCC,MetXBioDB,True
+Mianserine,CN1CCN2c3ccccc3Cc3ccccc3C2C1,8-Hydroxymianserin,CN1CCN2c3ccc(O)cc3Cc3ccccc3C2C1,MetXBioDB,True
+Mirtazapine,CN1CCN2c3ncccc3Cc3ccccc3C2C1,Mirtazapine N-oxide,C[N+]1([O-])CCN2c3ncccc3Cc3ccccc3C2C1,MetXBioDB,True
+Mirtazapine,CN1CCN2c3ncccc3Cc3ccccc3C2C1,N-Desmethylmirtazapine,c1ccc2c(c1)Cc1cccnc1N1CCNCC21,MetXBioDB,True
+(-)-Menthol,CC1CCC(C(C)C)C(O)C1,"p-Menthane-3,-8-diol",CC1CCC(C(C)(C)O)C(O)C1,MetXBioDB,True
+Mestranol,C#CC1(O)CCC2C3CCc4cc(OC)ccc4C3CCC21C,Ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,MetXBioDB,True
+Monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,3-Hydroxymonoethyl glycinexylidide,CCNCC(=O)Nc1c(C)ccc(O)c1C,MetXBioDB,True
+Monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,Glycinexylidide,Cc1cccc(C)c1NC(=O)CN,MetXBioDB,True
+N-Desmethyldiphenhydramine,CNCCOC(c1ccccc1)c1ccccc1,"N,N-Didesmethyldiphenhydramine",NCCOC(c1ccccc1)c1ccccc1,MetXBioDB,True
+N-Desmethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,N-Desdimethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN)cc1)c1ccccc1,MetXBioDB,True
+N-Desmethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,Endoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,MetXBioDB,True
+1-Naphtaldehyde,O=Cc1cccc2ccccc12,1-Nahthalenethanol,OCc1cccc2ccccc12,MetXBioDB,True
+1-Naphtaldehyde,O=Cc1cccc2ccccc12,1-Naphthoic acid,O=C(O)c1cccc2ccccc12,MetXBioDB,True
+Nateglinide,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,2Ã¢â‚¬Â{[4Ã¢â‚¬Â(1Ã¢â‚¬ÂhydroxypropanÃ¢â‚¬Â2Ã¢â‚¬Âyl)cyclohexyl]formamido}Ã¢â‚¬Â3Ã¢â‚¬Âphenylpropanoic acid,CC(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,MetXBioDB,True
+Nateglinide,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,2Ã¢â‚¬Â{[4Ã¢â‚¬Â(2Ã¢â‚¬ÂhydroxypropanÃ¢â‚¬Â2Ã¢â‚¬Âyl)cyclohexyl]formamido}Ã¢â‚¬Â3Ã¢â‚¬Âphenylpropanoic acid,CC(C)(O)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,MetXBioDB,True
+Nicardipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OCCN(C)Cc2ccccc2)C1c1cccc([N+](=O)[O-])c1,De-benzylated nicardipine,CNCCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc([N+](=O)[O-])c1,MetXBioDB,True
+Nicardipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OCCN(C)Cc2ccccc2)C1c1cccc([N+](=O)[O-])c1,Dehydronicardipine,COC(=O)c1c(C)nc(C)c(C(=O)OCCN(C)Cc2ccccc2)c1-c1cccc([N+](=O)[O-])c1,MetXBioDB,True
+Norverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,D-620,COc1ccc(C(C#N)(CCCN)C(C)C)cc1OC,MetXBioDB,True
+omeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3C)[nH]c2c1,3-Hydroxyomeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3CO)[nH]c2c1,MetXBioDB,True
+Ondansetron,Cc1nccn1CC1CCc2c(c3ccccc3n2C)C1=O,6-OH-ondansetron,Cc1nccn1CC1CCc2c(c3cc(O)ccc3n2C)C1=O,MetXBioDB,True
+Ondansetron,Cc1nccn1CC1CCc2c(c3ccccc3n2C)C1=O,7-OH-ondansetron,Cc1nccn1CC1CCc2c(c3ccc(O)cc3n2C)C1=O,MetXBioDB,True
+Ondansetron,Cc1nccn1CC1CCc2c(c3ccccc3n2C)C1=O,8-OH-ondansetron,Cc1nccn1CC1CCc2c(c3cccc(O)c3n2C)C1=O,MetXBioDB,True
+Rofecoxib,CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2)cc1,5-OH-rofecoxib,CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2O)cc1,MetXBioDB,True
+Rosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,N-Desmethylrosuvastatin,CC(C)c1nc(NS(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,MetXBioDB,True
+Rosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,Rosuvastatin 5 S-lactone,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=Cc1cc(O)cc(=O)o1,MetXBioDB,True
+silybin ,COc1cc(C2Oc3cc(C4Oc5cc(O)cc(O)c5C(=O)C4O)ccc3OC2CO)ccc1O,O-demethylated-silybin,O=C1c2c(O)cc(O)cc2OC(c2ccc3c(c2)OC(c2ccc(O)c(O)c2)C(CO)O3)C1O,MetXBioDB,True
+Sulfinpyrazone,O=C1C(CC[S+]([O-])c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,Sulfinpyrazone sulfone,O=C1C(CCS(=O)(=O)c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,MetXBioDB,True
+suprofen,CC(C(=O)O)c1ccc(C(=O)c2cccs2)cc1,Suprofen -sulfoxide,CC(C(=O)O)c1ccc(C(=O)c2ccc[s+]2[O-])cc1,MetXBioDB,True
+suprofen,CC(C(=O)O)c1ccc(C(=O)c2cccs2)cc1,"Thiophene-4,5-epoxide",CC(C(=O)O)c1ccc(C(=O)C2=CC3OC3S2)cc1,MetXBioDB,True
+Thioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,Thioridazine 2-sulfoxide ,CN1CCCCC1CCN1c2ccccc2Sc2ccc([S+](C)[O-])cc21,MetXBioDB,True
+Thioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,N-desmethylthioridazine ,CSc1ccc2c(c1)N(CCC1CCCCN1)c1ccccc1S2,MetXBioDB,True
+Thioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,Thioridazine 5-sulfoxide,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1[S+]2[O-],MetXBioDB,True
+Thymol,Cc1ccc(C(C)C)c(O)c1,"p-Cymene-2,3-diol",Cc1ccc(C(C)C)c(O)c1O,MetXBioDB,True
+Thymol,Cc1ccc(C(C)C)c(O)c1,Thymoquinol,Cc1cc(O)c(C(C)C)cc1O,MetXBioDB,True
+Thymol,Cc1ccc(C(C)C)c(O)c1,p-Cymen-8-en-3-ol,C=C(C)c1ccc(C)cc1O,MetXBioDB,True
+Zaltoprofen,CC(C(=O)O)c1ccc2c(c1)CC(=O)c1ccccc1S2,10-OH-zaltoprofen,CC(C(=O)O)c1ccc2c(c1)CC(O)c1ccccc1S2,MetXBioDB,True
+Medroxyprogesterone Acetate,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,M-4,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)C(O)CC4(C)C3CCC21C,MetXBioDB,True
+Medroxyprogesterone Acetate,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,M-2,CC(=O)OC1(C(C)=O)CCC2C3CC(C)(O)C4=CC(=O)CCC4(C)C3CCC21C,MetXBioDB,True
+Medroxyprogesterone Acetate,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,M-3,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CC(O)C4(C)C3CCC21C,MetXBioDB,True
+Perospirone,O=C1C2CCCCC2C(=O)N1CCCCN1CCN(c2nsc3ccccc23)CC1,,O=C1C2CCCCC2(O)C(=O)N1CCCCN1CCN(c2nsc3ccccc23)CC1,MetXBioDB,True
+Endoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,Endoxifen O-glucuronide,CCC(=C(c1ccc(OCCNC)cc1)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1)c1ccccc1,MetXBioDB,True
+Endoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,Endoxifen O-sulfate,CCC(=C(c1ccc(OCCNC)cc1)c1ccc(OS(=O)(=O)O)cc1)c1ccccc1,MetXBioDB,True
+2-hydroxyestrone,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O,2-O-methoxyestrone,COc1cc2c(cc1O)CCC1C2CCC2(C)C(=O)CCC12,MetXBioDB,True
+17-beta-estradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,17-beta-Estradiol glucuronide,CC12CCC3c4ccc(O)cc4CCC3C1CCC2OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+4-hydroxytamoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,Tamoxifen 4-O-sulfate,CCC(=C(c1ccc(OCCN(C)C)cc1)c1ccc(OS(=O)(=O)O)cc1)c1ccccc1,MetXBioDB,True
+Dopamine,NCCc1ccc(O)c(O)c1,dopamine 3-O-sulfate,NCCc1ccc(O)c(OS(=O)(=O)O)c1,MetXBioDB,True
+Dopamine,NCCc1ccc(O)c(O)c1,Dopamine 4- D-Glucuronide,NCCc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c(O)c1,MetXBioDB,True
+3-Hydroxymorphinan,Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,3-OH-morphinan -glucuronide,O=C(O)C1OC(Oc2ccc3c(c2)C24CCCCC2C(C3)NCC4)C(O)C(O)C1O,MetXBioDB,True
+3-Hydroxymorphinan,Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,3-Hydroxymorphinan sulfate,O=S(=O)(O)Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,MetXBioDB,True
+2-Hydroxynevirapine,Cc1cc(O)nc2c1N=C(O)c1cccnc1N2C1CC1,2-Hydroxynevirapine glucuronide,Cc1cc(OC2OC(C(=O)O)C(O)C(O)C2O)nc2c1N=C(O)c1cccnc1N2C1CC1,MetXBioDB,True
+All-trans-retinoic acid,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,All-trans-retinoyl glucuronide,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Epitestosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,Epitestosterone O-glucuronide,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(OC3OC(C(=O)O)C(O)C(O)C3O)CCC12,MetXBioDB,True
+Ezetimibe,O=C1C(CCC(O)c2ccc(F)cc2)C(c2ccc(O)cc2)N1c1ccc(F)cc1,,O=C(O)C1OC(Oc2ccc(C3C(CCC(O)c4ccc(F)cc4)C(=O)N3c3ccc(F)cc3)cc2)C(O)C(O)C1O,MetXBioDB,True
+Mycophenolic Acid,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)O)C(=O)OC2,,COc1c(C)c2c(c(OC3OC(C(=O)O)C(O)C(O)C3O)c1CC=C(C)CCC(=O)O)C(=O)OC2,MetXBioDB,True
+mesalazine,Nc1ccc(O)c(C(=O)O)c1,"mesalazine, N-acetyl",CC(=O)Nc1ccc(O)c(C(=O)O)c1,MetXBioDB,True
+Lumiracoxib,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,Lumiracoxib O-glucuronide,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1,MetXBioDB,True
+Midazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,Midazolam N-glucuronide,Cc1n2c(c[n+]1C1OC(C(=O)O)C(O)C(O)C1O)CN=C(c1ccccc1F)c1cc(Cl)ccc1-2,MetXBioDB,True
+Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,Diphenhydramine N-glucuronide,C[N+](C)(CCOC(c1ccccc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Cyproheptadine,CN1CCC(=C2c3ccccc3C=Cc3ccccc32)CC1,Cyproheptadine N-glucuronide,C[N+]1(C2OC(C(=O)O)C(O)C(O)C2O)CCC(=C2c3ccccc3C=Cc3ccccc32)CC1,MetXBioDB,True
+Perindopril,CCCC(NC(C)C(=O)N1C(C(=O)O)CC2CCCCC21)C(=O)OCC,,CCC(NC(C)C(=O)N1C(C(=O)OC2(C(=O)O)OC(C)C(O)C(O)C2O)CC2CCCCC21)C(=O)O,MetXBioDB,True
+Cholic acid,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CC(O)C12C,Cholic acid glucuronide,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(OC5OC(C(=O)O)C(O)C(O)C5O)CCC4(C)C3CC(O)C12C,MetXBioDB,True
+benzoic acid,O=C(O)c1ccccc1,,O=C(OC1OC(C(=O)O)C(O)C(O)C1O)c1ccccc1,MetXBioDB,True
+estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,,CC12CCC3c4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)cc4CCC3C1CCC2=O,MetXBioDB,True
+Carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,,COc1ccccc1OCCNCC(COc1cccc2[nH]c3ccccc3c12)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,,CC(C(=O)O)c1ccc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc2c1,MetXBioDB,True
+O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,,CC(C(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c1ccc2cc(O)ccc2c1,MetXBioDB,True
+O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,,CC(C(=O)O)c1ccc2cc(OS(=O)(=O)O)ccc2c1,MetXBioDB,True
+Etodolac,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)OCC3,MetXBioDB,True
+10-hydroxycarbazepine,NC(=O)N1c2ccccc2CC(O)c2ccccc21,,NC(=O)N1c2ccccc2CC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21,MetXBioDB,True
+6-Hydroxymelatonin,COc1cc2c(CCNC(C)=O)c[nH]c2cc1O,,COc1cc2c(CCNC(C)=O)c[nH]c2cc1OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Tolmetin,Cc1ccc(C(=O)c2ccc(CC(=O)O)n2C)cc1,,Cc1ccc(C(=O)c2ccc(CC(=O)OC3OC(C(=O)O)C(O)C(O)C3O)n2C)cc1,MetXBioDB,True
+Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Buprenorphine glucuronide,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)c5c4C3(CCN1CC1CC1)C2O5,MetXBioDB,True
+Nateglinide,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)CC1,MetXBioDB,True
+Dehydroisoandrosterone,CC12CCC3C(CC=C4CC(O)CCC43C)C1CCC2=O,,CC12CCC3C(CC=C4CC(OC5OC(C(=O)O)C(O)C(O)C5O)CCC43C)C1CCC2=O,MetXBioDB,True
+4-hydroxymethyl ambrisentan,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)O,,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+valproic acid,CCCC(CCC)C(=O)O,,CCCC(CCC)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,,O=C(Cc1ccccc1Nc1c(Cl)cccc1Cl)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Sorafenib,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1,,CNC(=O)c1cc(Oc2ccc(NC(=O)N(c3ccc(Cl)c(C(F)(F)F)c3)C3OC(C(=O)O)C(O)C(O)C3O)cc2)ccn1,MetXBioDB,True
+Ascorbic acid,O=C1OC(C(O)CO)C(O)=C1O,,O=C1OC(C(O)CO)C(O)=C1OS(=O)(=O)O,MetXBioDB,True
+testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(OS(=O)(=O)O)CCC12,MetXBioDB,True
+Epinephrine,CNCC(O)c1ccc(O)c(O)c1,,CNCC(O)c1ccc(OS(=O)(=O)O)c(O)c1,MetXBioDB,True
+Propofol,CC(C)c1cccc(C(C)C)c1O,,CC(C)c1cccc(C(C)C)c1OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+4p-Carboxylumiracoxib,Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)O)c1,,Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1,MetXBioDB,True
+Ketoprofen,CC(C(=O)O)c1cccc(C(=O)c2ccccc2)c1,,CC(C(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c1cccc(C(=O)c2ccccc2)c1,MetXBioDB,True
+Flurbiprofen,CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1,,CC(C(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c1ccc(-c2ccccc2)c(F)c1,MetXBioDB,True
+Codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,,COc1ccc2c3c1OC1C(OC4OC(C(=O)O)C(O)C(O)C4O)C=CC4C(C2)N(C)CCC341,MetXBioDB,True
+Acetaminophen,CC(=O)Nc1ccc(O)cc1,,CC(=O)Nc1ccc(OS(=O)(=O)O)cc1,MetXBioDB,True
+Acetaminophen,CC(=O)Nc1ccc(O)cc1,,CC(=O)Nc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1,MetXBioDB,True
+Fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,,CN(CCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Lumiracoxib M25,Cc1ccc2c(c1)CC(=O)N2c1c(F)cc(O)cc1Cl,,Cc1ccc2c(c1)CC(=O)N2c1c(F)cc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1Cl,MetXBioDB,True
+Arbidol,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(O)c(CN(C)C)c12,,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(CN(C)C)c12,MetXBioDB,True
+morphine,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5,MetXBioDB,True
+17-beta estradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,,CC12CCC3c4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)cc4CCC3C1CCC2O,MetXBioDB,True
+abiraterone,CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,abiraterone sulfate,CC12CCC(OS(=O)(=O)O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,MetXBioDB,True
+Zileuton,CC(c1cc2ccccc2s1)N(O)C(N)=O,Zileuton O-glucuronide,CC(c1cc2ccccc2s1)N(OC1OC(C(=O)O)C(O)C(O)C1O)C(N)=O,MetXBioDB,True
+N-Acetyl-5-HT,CC(=O)NCCc1c[nH]c2ccc(O)cc12,,CC(=O)NCCc1c[nH]c2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc12,MetXBioDB,True
+N-Acetyl-5-HT,CC(=O)NCCc1c[nH]c2ccc(O)cc12,,CC(=O)NCCc1c[nH]c2ccc(OS(=O)(=O)O)cc12,MetXBioDB,True
+Hydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,Hydromorphone 3-beta-O-glucuronide,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5,MetXBioDB,True
+O-Desmethyl-tramado,CN(C)CC1CCCCC1(O)c1cccc(O)c1,,CN(C)CC1CCCCC1(O)c1cccc(OC2OC(C(=O)O)C(O)C(O)C2O)c1,MetXBioDB,True
+4-Hydroxyandrostenedione,CC12CCC3C(CCC4=C(O)C(=O)CCC43C)C1CCC2=O,,CC12CCC3C(CCC4=C(OC5OC(C(=O)O)C(O)C(O)C5O)C(=O)CCC43C)C1CCC2=O,MetXBioDB,True
+4-Hydroxyduloxetine,CNCCC(Oc1ccc(O)c2ccccc12)c1cccs1,,CNCCC(Oc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc12)c1cccs1,MetXBioDB,True
+O-Desmethylgalantamine,CN1CCC23C=CC(O)CC2Oc2c(O)ccc(c23)C1,,CN1CCC23C=CC(O)CC2Oc2c(OS(=O)(=O)O)ccc(c23)C1,MetXBioDB,True
+2-Hydroxydoxepin,CN(C)CCC=C1c2ccccc2COc2ccc(O)cc21,,CN(C)CCC=C1c2ccccc2COc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc21,MetXBioDB,True
+Indomethacin,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,,COc1ccc2c(c1)c(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c(C)n2C(=O)c1ccc(Cl)cc1,MetXBioDB,True
+Sulfamethoxazole,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1,,CC(=O)Nc1ccc(S(=O)(=O)Nc2cc(C)on2)cc1,MetXBioDB,True
+Propranolol,CC(C)NCC(O)COc1cccc2ccccc12,,CC(C)NCC(COc1cccc2ccccc12)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,True
+Haloperidol,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,,O=C(CCCN1CCC(OC2OC(C(=O)O)C(O)C(O)C2O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,MetXBioDB,True
+(R)-(-)-Ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,,CC(C)Cc1ccc(C(C)C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)cc1,MetXBioDB,True
+6-Hydroxymethyletoricoxib,CS(=O)(=O)c1ccc(-c2cc(Cl)cnc2-c2ccc(CO)nc2)cc1,,CS(=O)(=O)c1ccc(-c2cc(Cl)cnc2-c2ccc(COC3OC(C(=O)O)C(O)C(O)C3O)nc2)cc1,MetXBioDB,True
+Gemfibrozil,Cc1ccc(C)c(OCCCC(C)(C)C(=O)O)c1,,Cc1ccc(C)c(OCCCC(C)(C)C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1,MetXBioDB,True
+Dapsone,Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1,,CC(=O)Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1,MetXBioDB,True
+Pregnenolone,CC(=O)C1CCC2C3CC=C4CC(O)CCC4(C)C3CCC12C,,CC(=O)C1CCC2C3CC=C4CC(OS(=O)(=O)O)CCC4(C)C3CCC12C,MetXBioDB,True
+Ascorbic acid,O=C1OC(C(O)CO)C(O)=C1O,ascorbic acid-2-sulfate,O=C1OC(C(O)CO)C(O)=C1OS(=O)(=O)O,DrugBank,True
+Vitamin A,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CCO,All-trans-retinal,CC(C=CC=C(C)C=CC1=C(C)CCCC1(C)C)=CC=O,DrugBank,True
+Fluvoxamine,COCCCCC(=NOCCN)c1ccc(C(F)(F)F)cc1,Fluvoxamino alcohol,NCCON=C(CCCCO)c1ccc(C(F)(F)F)cc1,DrugBank,True
+Valsartan,CCCCC(=O)N(Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1)C(C(=O)O)C(C)C,Valeryl-4-hydroxyvalsartan,CC(O)CCC(=O)N(Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1)C(C(=O)O)C(C)C,DrugBank,True
+Amphetamine,CC(N)Cc1ccccc1,4-hydroxyamphetamine,CC(N)Cc1ccc(O)cc1,DrugBank,True
+Nicotine,CN1CCCC1c1cccnc1,Nicotine imine,C[N+]1=CCCC1c1cccnc1,DrugBank,True
+Nicotine,CN1CCCC1c1cccnc1,Nornicotine,c1cncc(C2CCCN2)c1,DrugBank,True
+Nicotine,CN1CCCC1c1cccnc1,2'-Hydroxynicotine,CN1CCCC1(O)c1cccnc1,DrugBank,True
+Tramadol,COc1cccc(C2(O)CCCCC2CN(C)C)c1,O-Desmethyltramadol,CN(C)CC1CCCCC1(O)c1cccc(O)c1,DrugBank,True
+Tramadol,COc1cccc(C2(O)CCCCC2CN(C)C)c1,N-Desmethyltramadol,CNCC1CCCCC1(O)c1cccc(OC)c1,DrugBank,True
+Ticlopidine,Clc1ccccc1CN1CCc2sccc2C1,Thienodihydropyridinium,Clc1ccccc1CN1C=C2C=C[S+]=C2CC1,DrugBank,True
+Ticlopidine,Clc1ccccc1CN1CCc2sccc2C1,Ticlopidine S-oxide,[O-][s+]1ccc2c1CCN(Cc1ccccc1Cl)C2,DrugBank,True
+Citalopram,CN(C)CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,desmethylcitalopram,CNCCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,DrugBank,True
+Citalopram,CN(C)CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,citalopram N-oxide,C[N+](C)([O-])CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,DrugBank,True
+Nelfinavir,Cc1c(O)cccc1C(=O)NC(CSc1ccccc1)C(O)CN1CC2CCCCC2CC1C(=O)NC(C)(C)C,Nelfinavir hydroxyl-t- butylamide,Cc1c(O)cccc1C(=O)NC(CSc1ccccc1)C(O)CN1CC2CCCCC2CC1C(=O)NC(C)(C)CO,DrugBank,True
+Nelfinavir,Cc1c(O)cccc1C(=O)NC(CSc1ccccc1)C(O)CN1CC2CCCCC2CC1C(=O)NC(C)(C)C,"3,4-Dihydroxynelfinavir",Cc1c(C(=O)NC(CSc2ccccc2)C(O)CN2CC3CCCCC3CC2C(=O)NC(C)(C)C)ccc(O)c1O,DrugBank,True
+Glimepiride,CCC1=C(C)CN(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(C)CC3)cc2)C1=O,Cyclohexyl hydroxymethyl glimepiride,CCC1=C(C)CN(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(CO)CC3)cc2)C1=O,DrugBank,True
+Indinavir,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1O,Metabolite M6,CC(C)(C)NC(=O)C1CNCCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1O,DrugBank,True
+Lovastatin,CCC(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,6'beta-Hydroxylovastatin,CCC(C)C(=O)OC1CC(C)(O)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,DrugBank,True
+Enflurane,FC(F)OC(F)(F)C(F)Cl,"2-(difluoromethoxy)-2,2-difluoroacetyl fluoride",O=C(F)C(F)(F)OC(F)F,DrugBank,True
+Mesalazine,Nc1ccc(O)c(C(=O)O)c1,N-acetyl-5-ASA (Ac-5-ASA),CC(=O)Nc1ccc(O)c(C(=O)O)c1,DrugBank,True
+Dapsone,Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1,dapsone hydroxylamine,Nc1ccc(S(=O)(=O)c2ccc(NO)cc2)cc1,DrugBank,True
+Dapsone,Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1,Monoacetyldapsone,CC(=O)Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1,DrugBank,True
+Metoprolol,COCCc1ccc(OCC(O)CNC(C)C)cc1,alpha-Hydroxymetoprolol,COCC(O)c1ccc(OCC(O)CNC(C)C)cc1,DrugBank,True
+Metoprolol,COCCc1ccc(OCC(O)CNC(C)C)cc1,O-Demethylmetoprolol,CC(C)NCC(O)COc1ccc(CCO)cc1,DrugBank,True
+Metoprolol,COCCc1ccc(OCC(O)CNC(C)C)cc1,Deisopropylmetoprolol,COCCc1ccc(OCC(O)CN)cc1,DrugBank,True
+Disopyramide,CC(C)N(CCC(C(N)=O)(c1ccccc1)c1ccccn1)C(C)C,mono-isopropyl-disopyramide,CC(C)NCCC(C(N)=O)(c1ccccc1)c1ccccn1,DrugBank,True
+Lidocaine,CCN(CC)CC(=O)Nc1c(C)cccc1C,3-hydroxylidocaine,CCN(CC)CC(=O)Nc1c(C)ccc(O)c1C,DrugBank,True
+Lidocaine,CCN(CC)CC(=O)Nc1c(C)cccc1C,monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,DrugBank,True
+Venlafaxine,COc1ccc(C(CN(C)C)C2(O)CCCCC2)cc1,Desvenlafaxine,CN(C)CC(c1ccc(O)cc1)C1(O)CCCCC1,DrugBank,True
+Venlafaxine,COc1ccc(C(CN(C)C)C2(O)CCCCC2)cc1,N-Desmethylvenlafaxine,CNCC(c1ccc(OC)cc1)C1(O)CCCCC1,DrugBank,True
+Atomoxetine,CNCCC(Oc1ccccc1C)c1ccccc1,4-hydroxyatomoxetine,CNCCC(Oc1ccc(O)cc1C)c1ccccc1,DrugBank,True
+Morphine,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,Morphine glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5,DrugBank,True
+Ropivacaine,CCCN1CCCCC1C(=O)Nc1c(C)cccc1C,3-hydroxyropivacaine,CCCN1CCCCC1C(=O)Nc1c(C)ccc(O)c1C,DrugBank,True
+Ropivacaine,CCCN1CCCCC1C(=O)Nc1c(C)cccc1C,PPX,Cc1cccc(C)c1NC(=O)C1CCCCN1,DrugBank,True
+Desogestrel,C#CC1(O)CCC2C3CCC4=CCCCC4C3C(=C)CC21CC,3-alpha-OH-desogestrel,C#CC1(O)CCC2C3CCC4=CC(O)CCC4C3C(=C)CC21CC,DrugBank,True
+Valproic acid,CCCC(CCC)C(=O)O,4-ene-Valproic acid,C=CCC(CCC)C(=O)O,DrugBank,True
+Valproic acid,CCCC(CCC)C(=O)O,5-Hydroxyvalproic acid,CCCC(CCCO)C(=O)O,DrugBank,True
+Valproic acid,CCCC(CCC)C(=O)O,3-Hydroxyvalproic acid,CCCC(C(=O)O)C(O)CC,DrugBank,True
+Valproic acid,CCCC(CCC)C(=O)O,4-Hydroxyvalproic acid,CCCC(CC(C)O)C(=O)O,DrugBank,True
+Valproic acid,CCCC(CCC)C(=O)O,Valproic acid β-O-glucuronide,CCCC(CCC)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Acetaminophen,CC(=O)Nc1ccc(O)cc1,Acetaminophen glucuronide,CC(=O)Nc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1,DrugBank,True
+Acetaminophen,CC(=O)Nc1ccc(O)cc1,Acetaminophen sulfate,CC(=O)Nc1ccc(OS(=O)(=O)O)cc1,DrugBank,True
+Acetaminophen,CC(=O)Nc1ccc(O)cc1,NAPQI,CC(=O)N=C1C=CC(=O)C=C1,DrugBank,True
+Codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,norcodeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)NCCC341,DrugBank,True
+Codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,Morphine,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,DrugBank,True
+Codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,Codeine-6-glucuronide,COc1ccc2c3c1OC1C(OC4OC(C(=O)O)C(O)C(O)C4O)C=CC4C(C2)N(C)CCC341,DrugBank,True
+Amitriptyline,CN(C)CCC=C1c2ccccc2CCc2ccccc21,Nortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,DrugBank,True
+Amitriptyline,CN(C)CCC=C1c2ccccc2CCc2ccccc21,E-10-Hydroxyamitriptyline,CN(C)CCC=C1c2ccccc2CC(O)c2ccccc21,DrugBank,True
+Nortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,E-10-Hydroxynortriptyline,CNCCC=C1c2ccccc2CC(O)c2ccccc21,DrugBank,True
+Nortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,Desmethylnortriptyline,NCCC=C1c2ccccc2CCc2ccccc21,DrugBank,True
+Hydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,Hydromorphone-3-glucuronide,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5,DrugBank,True
+Hydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,Norhydromorphone,O=C1CCC2C3Cc4ccc(O)c5c4C2(CCN3)C1O5,DrugBank,True
+Indomethacin,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,5-Hydroxyindomethacin,Cc1c(CC(=O)O)c2cc(O)ccc2n1C(=O)c1ccc(Cl)cc1,DrugBank,True
+Indomethacin,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,Indomethacin acyl glucuronide,COc1ccc2c(c1)c(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c(C)n2C(=O)c1ccc(Cl)cc1,DrugBank,True
+Olanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,7-hydroxyolanzapine,Cc1cc2c(s1)Nc1ccc(O)cc1N=C2N1CCN(C)CC1,DrugBank,True
+Olanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,4'-N-desmethylolanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCNCC1,DrugBank,True
+Olanzapine,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,2-hydroxymethylolanzapine,CN1CCN(C2=Nc3ccccc3Nc3sc(CO)cc32)CC1,DrugBank,True
+Omeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3C)[nH]c2c1,5-Hydroxyomeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(CO)c(OC)c3C)[nH]c2c1,DrugBank,True
+Omeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3C)[nH]c2c1,Omeprazole sulfone,COc1ccc2nc(S(=O)(=O)Cc3ncc(C)c(OC)c3C)[nH]c2c1,DrugBank,True
+Omeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3C)[nH]c2c1,3-Hydroxyomeprazole,COc1ccc2nc([S+]([O-])Cc3ncc(C)c(OC)c3CO)[nH]c2c1,DrugBank,True
+Diltiazem,COc1ccc(C2Sc3ccccc3N(CCN(C)C)C(=O)C2OC(C)=O)cc1,N-monodesmethyl diltiazem,CNCCN1C(=O)C(OC(C)=O)C(c2ccc(OC)cc2)Sc2ccccc21,DrugBank,True
+Diltiazem,COc1ccc(C2Sc3ccccc3N(CCN(C)C)C(=O)C2OC(C)=O)cc1,O-desmethyl diltiazem,CC(=O)OC1C(=O)N(CCN(C)C)c2ccccc2SC1c1ccc(O)cc1,DrugBank,True
+Trimethadione,CN1C(=O)OC(C)(C)C1=O,dimethadione,CC1(C)OC(=O)N=C1O,DrugBank,True
+Clobazam,CN1C(=O)CC(=O)N(c2ccccc2)c2cc(Cl)ccc21,4'-hydroxyclobazam,CN1C(=O)CC(=O)N(c2ccc(O)cc2)c2cc(Cl)ccc21,DrugBank,True
+Clozapine,CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,N-desmethylclozapine,Clc1ccc2c(c1)N=C(N1CCNCC1)c1ccccc1N2,DrugBank,True
+Clozapine,CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,Clozapine N-oxide,C[N+]1([O-])CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,DrugBank,True
+Mirtazapine,CN1CCN2c3ncccc3Cc3ccccc3C2C1,mirtazapine-N-oxide,C[N+]1([O-])CCN2c3ncccc3Cc3ccccc3C2C1,DrugBank,True
+Mirtazapine,CN1CCN2c3ncccc3Cc3ccccc3C2C1,N-desmethylmirtazapine,c1ccc2c(c1)Cc1cccnc1N1CCNCC21,DrugBank,True
+Mexiletine,Cc1cccc(C)c1OCC(C)N,2-hydroxymexiletine,Cc1cccc(CO)c1OCC(C)N,DrugBank,True
+Mexiletine,Cc1cccc(C)c1OCC(C)N,p-hydroxymexiletine,Cc1cc(O)cc(C)c1OCC(C)N,DrugBank,True
+Progesterone,CC(=O)C1CCC2C3CCC4=CC(=O)CCC4(C)C3CCC12C,6β-Hydroxyprogesterone,CC(=O)C1CCC2C3CC(O)C4=CC(=O)CCC4(C)C3CCC12C,DrugBank,True
+Progesterone,CC(=O)C1CCC2C3CCC4=CC(=O)CCC4(C)C3CCC12C,21-OH-progesterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(C(=O)CO)CCC12,DrugBank,True
+Sorafenib,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1,Sorafenib beta-D-Glucuronide,CNC(=O)c1cc(Oc2ccc(NC(=O)N(c3ccc(Cl)c(C(F)(F)F)c3)C3OC(C(=O)O)C(O)C(O)C3O)cc2)ccn1,DrugBank,True
+Eszopiclone,CN1CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,Zopiclone N-oxide,C[N+]1([O-])CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,DrugBank,True
+Eszopiclone,CN1CCN(C(=O)OC2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,N-desmethylzopiclone,O=C(OC1c2nccnc2C(=O)N1c1ccc(Cl)cn1)N1CCNCC1,DrugBank,True
+Alprazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2,Beta-Hydroxyalprazolam,OCc1nnc2n1-c1ccccc1C(c1ccccc1)=NC2O,DrugBank,True
+Alprazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2,4-hydroxyalprazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2O,DrugBank,True
+Promazine,CN(C)CCCN1c2ccccc2Sc2ccccc21,Promazine 5-sulfoxide,CN(C)CCCN1c2ccccc2[S+]([O-])c2ccccc21,DrugBank,True
+Promazine,CN(C)CCCN1c2ccccc2Sc2ccccc21,N-Desmethylpromazine,CNCCCN1c2ccccc2Sc2ccccc21,DrugBank,True
+Zolpidem,Cc1ccc(-c2nc3ccc(C)cn3c2CC(=O)N(C)C)cc1,methoxyzolpidem,Cc1cn2c(CC(=O)N(C)C)c(-c3ccc(CO)cc3)nc2cc1O,DrugBank,True
+Cyproheptadine,CN1CCC(=C2c3ccccc3C=Cc3ccccc32)CC1,Cyproheptadine N-glucuronide,C[N+]1(C2OC(C(=O)O)C(O)C(O)C2O)CCC(=C2c3ccccc3C=Cc3ccccc32)CC1,DrugBank,True
+Teniposide,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(OC)c1O,Teniposide catechol,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,DrugBank,True
+Lansoprazole,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2ccccc2[nH]1,Lansoprazole sulfone,Cc1c(OCC(F)(F)F)ccnc1CS(=O)(=O)c1nc2ccccc2[nH]1,DrugBank,True
+Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,Descarboethoxyloratadine,Clc1ccc2c(c1)CCc1cccnc1C2=C1CCNCC1,DrugBank,True
+Imipramine,CN(C)CCCN1c2ccccc2CCc2ccccc21,2-hydroxyimipramine,CN(C)CCCN1c2ccccc2CCc2cc(O)ccc21,DrugBank,True
+Quinine,C=CC1CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,3-hydroxyquinine,C=CC1(O)CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,DrugBank,True
+Dronabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,11-OH-delata-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(CO)=CC21,DrugBank,True
+Dronabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,7-OH-delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1C(O)CC(C)=CC21,DrugBank,True
+Dronabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,8-OH-delta-9-Tetrahydrocannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CC(O)C(C)=CC21,DrugBank,True
+Montelukast,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,Montelukast metabolite M2a,CC(C)(O)c1ccccc1CCC(c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1)[S+]([O-])CC1(CC(=O)O)CC1,DrugBank,True
+Montelukast,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,Montelukast metabolite M5a,CC(C)(O)c1ccccc1C(O)CC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,DrugBank,True
+Montelukast,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,Montelukast metabolite M6a,CC(O)(CO)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,DrugBank,True
+Fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,Fluoxetine glucuronide,CN(CCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,Norfluoxetine,NCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,DrugBank,True
+Fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,4-Trifluoromethylphenol,Oc1ccc(C(F)(F)F)cc1,DrugBank,True
+Duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,4-hydroxy duloxetine,CNCCC(Oc1ccc(O)c2ccccc12)c1cccs1,DrugBank,True
+Duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,5-hydroxy duloxetine,CNCCC(Oc1cccc2c(O)cccc12)c1cccs1,DrugBank,True
+Duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,6-hydroxy duloxetine,CNCCC(Oc1cccc2cc(O)ccc12)c1cccs1,DrugBank,True
+Chlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,hydroxychlorpromazine,CN(C)CCCN1c2ccc(O)cc2Sc2ccc(Cl)cc21,DrugBank,True
+Chlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,demonomethylchlorpromazine,CNCCCN1c2ccccc2Sc2ccc(Cl)cc21,DrugBank,True
+Chlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,Opromazine,CN(C)CCCN1c2ccccc2[S+]([O-])c2ccc(Cl)cc21,DrugBank,True
+Celecoxib,Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1,Hydroxycelecoxib,NS(=O)(=O)c1ccc(-n2nc(C(F)(F)F)cc2-c2ccc(CO)cc2)cc1,DrugBank,True
+Oxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,oxymorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,DrugBank,True
+Oxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,noroxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)NCCC314,DrugBank,True
+Flutamide,CC(C)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1,2-hydroxyflutamide,CC(C)(O)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1,DrugBank,True
+Tolmetin,Cc1ccc(C(=O)c2ccc(CC(=O)O)n2C)cc1,Tolmetin glucuronide,Cc1ccc(C(=O)c2ccc(CC(=O)OC3OC(C(=O)O)C(O)C(O)C3O)n2C)cc1,DrugBank,True
+Haloperidol,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,4-(4-Chlorophenyl)-1-[4-(4-fluorophenyl)-4-oxobutyl]-pyridinium (HPP+),O=C(CCCN1C=CC(=C2C=CC(=[Cl+])C=C2)C=C1)c1ccc(F)cc1,DrugBank,True
+Haloperidol,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,Haloperidol glucuronide,O=C(CCCN1CCC(OC2OC(C(=O)O)C(O)C(O)C2O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,DrugBank,True
+Haloperidol,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,p-Fluorobenzoylpropionic acid and 4-(4-chlorophenyl)-4-hydroxypiperidine,O=C(O)CCC(=O)c1ccc(F)cc1,DrugBank,True
+Dextromethorphan,COc1ccc2c(c1)C13CCCCC1C(C2)N(C)CC3,Dextrorphan,CN1CCC23CCCCC2C1Cc1ccc(O)cc13,DrugBank,True
+Dextromethorphan,COc1ccc2c(c1)C13CCCCC1C(C2)N(C)CC3,(+)-3-Methoxymorphinan,COc1ccc2c(c1)C13CCCCC1C(C2)NCC3,DrugBank,True
+Erlotinib,C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1,2-(4-(3-Ethynylanilino)-6-(2-methoxyethoxy)quinazolin-7-yl)oxyethanol,C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1,DrugBank,True
+Cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,Dechloroethyl cyclophosphamide,O=P1(NCCCl)NCCCO1,DrugBank,True
+Rofecoxib,CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2)cc1,5-Hydroxyrofecoxib,CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2O)cc1,DrugBank,True
+Toremifene,CN(C)CCOc1ccc(C(=C(CCCl)c2ccccc2)c2ccccc2)cc1,N-desmethyltoremifene,CNCCOc1ccc(C(=C(CCCl)c2ccccc2)c2ccccc2)cc1,DrugBank,True
+Zafirlukast,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12,Zafirlukast metabolite M5,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(CO)c2ccc(NC(=O)OC3CCCC3)cc12,DrugBank,True
+Zafirlukast,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12,3-hydroxycyclopentyl N-[3-({2-methoxy-4-[(2-methylbenzenesulfonyl)carbamoyl]phenyl}methyl)-1-methylindol-5-yl]carbamate,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCC(O)C3)cc12,DrugBank,True
+Piroxicam,CN1C(C(=O)Nc2ccccn2)=C(O)c2ccccc2S1(=O)=O,5'-Hydroxypiroxicam,CN1C(C(=O)Nc2ccc(O)cn2)=C(O)c2ccccc2S1(=O)=O,DrugBank,True
+Bosentan,COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)C)cc2)nc(-c2ncccn2)nc1OCCO,Bosentan metabolite Ro 48-5033,COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)CO)cc2)nc(-c2ncccn2)nc1OCCO,DrugBank,True
+Bosentan,COc1ccccc1Oc1c(NS(=O)(=O)c2ccc(C(C)(C)C)cc2)nc(-c2ncccn2)nc1OCCO,Bosentan metabolite Ro 47-8634,CC(C)(C)c1ccc(S(=O)(=O)Nc2nc(-c3ncccn3)nc(OCCO)c2Oc2ccccc2O)cc1,DrugBank,True
+Carbamazepine,NC(=O)N1c2ccccc2C=Cc2ccccc21,"10,11-Epoxycarbamazepine",NC(=O)N1c2ccccc2C2OC2c2ccccc21,DrugBank,True
+Carbamazepine,NC(=O)N1c2ccccc2C=Cc2ccccc21,3-hydroxycarbamazepine,NC(=O)N1c2ccccc2C=Cc2ccc(O)cc21,DrugBank,True
+Cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Cinnarizine metabolite M1,c1ccc(C(c2ccccc2)N2CCNCC2)cc1,DrugBank,True
+Cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Cinnarizine metabolite M2,Oc1ccc(C=CCN2CCN(C(c3ccccc3)c3ccccc3)CC2)cc1,DrugBank,True
+Cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Cinnarizine metabolite M4,Oc1ccc(C(c2ccccc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,DrugBank,True
+Cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,1-Cinnamylpiperazine,C(=Cc1ccccc1)CN1CCNCC1,DrugBank,True
+Propranolol,CC(C)NCC(O)COc1cccc2ccccc12,N-desisopropylpropranolol,NCC(O)COc1cccc2ccccc12,DrugBank,True
+Propranolol,CC(C)NCC(O)COc1cccc2ccccc12,4'-hydroxypropanolol,CC(C)NCC(O)COc1ccc(O)c2ccccc12,DrugBank,True
+Propranolol,CC(C)NCC(O)COc1cccc2ccccc12,Propranolol Glucuronide,CC(C)NCC(COc1cccc2ccccc12)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Fenfluramine,CCNC(C)Cc1cccc(C(F)(F)F)c1,norfenfluramine,CC(N)Cc1cccc(C(F)(F)F)c1,DrugBank,True
+Valdecoxib,Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1,Valdecoxib metabolite M1,NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2CO)cc1,DrugBank,True
+Valdecoxib,Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1,Valdecoxib metabolite M9,Cc1onc(-c2cccc(O)c2)c1-c1ccc(S(N)(=O)=O)cc1,DrugBank,True
+Voriconazole,CC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,Voriconazole N-Oxide,CC(c1nc[n+]([O-])cc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,DrugBank,True
+Voriconazole,CC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,4-Hydroxyvoriconazole,OCC(c1ncncc1F)C(O)(Cn1cncn1)c1ccc(F)cc1F,DrugBank,True
+Diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,4'-Hydroxydiclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cc(O)cc1Cl,DrugBank,True
+Diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,Diclofenac acyl glucuronide,O=C(Cc1ccccc1Nc1c(Cl)cccc1Cl)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,5-hydroxy diclofenac,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,DrugBank,True
+Medroxyprogesterone acetate,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,6β-Hydroxymedroxyprogesterone Acetate (M-2),CC(=O)OC1(C(C)=O)CCC2C3CC(C)(O)C4=CC(=O)CCC4(C)C3CCC21C,DrugBank,True
+Medroxyprogesterone acetate,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,2β-hydroxymedroxyprogesterone acetate (M-4),CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)C(O)CC4(C)C3CCC21C,DrugBank,True
+Medroxyprogesterone acetate,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,1β-hydroxymedroxyprogesterone acetate (M-3),CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CC(O)C4(C)C3CCC21C,DrugBank,True
+Cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,3-(4-fluorophenoxy)propanal,O=CCCOc1ccc(F)cc1,DrugBank,True
+Cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,3-Fluoro-4-hydroxycisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(O)c(F)c2)CC1OC,DrugBank,True
+Cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,4-Fluoro-2- hydroxycisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2O)CC1OC,DrugBank,True
+Cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,norcisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCNCC1OC,DrugBank,True
+Chloroquine,CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12,"(R)-chloroquine, N-desethyl",CCNCCCC(C)Nc1ccnc2cc(Cl)ccc12,DrugBank,True
+Imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,N-Desmethylimatinib,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,DrugBank,True
+Nicardipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OCCN(C)Cc2ccccc2)C1c1cccc([N+](=O)[O-])c1,De-benzylated nicardipine,CNCCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc([N+](=O)[O-])c1,DrugBank,True
+Nicardipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OCCN(C)Cc2ccccc2)C1c1cccc([N+](=O)[O-])c1,Dehydronicardipine,COC(=O)c1c(C)nc(C)c(C(=O)OCCN(C)Cc2ccccc2)c1-c1cccc([N+](=O)[O-])c1,DrugBank,True
+Fluphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(C(F)(F)F)cc32)CC1,Fluphenazine sulfoxide,[O-][S+]1c2ccccc2N(CCCN2CCN(CCO)CC2)c2cc(C(F)(F)F)ccc21,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,2alpha-hydroxytestosterone,CC12CC(O)C(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,15alpha-hydroxytestosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CC(O)C12,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,16alpha-hydroxytestosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)C(O)CC12,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,Androstenedione,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,Testosterone sulfate,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(OS(=O)(=O)O)CCC12,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,Testosterone glucuronide,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(OC3OC(C(=O)O)C(O)C(O)C3O)CCC12,DrugBank,True
+Testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,6-beta-hydroxytestosterone,CC12CCC(=O)C=C1C(O)CC1C2CCC2(C)C(O)CCC12,DrugBank,True
+Simvastatin,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,6'-beta-Hydroxysimvastatin,CCC(C)(C)C(=O)OC1CC(C)(O)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,DrugBank,True
+Simvastatin,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,"3', 5'-Dihydrodiol",CCC(C)(C)C(=O)OC1CC(C)C(O)C2=CC(O)C(C)C(CCC3CC(O)CC(=O)O3)C21,DrugBank,True
+Simvastatin,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21,6'-exomethylene,C=C1C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C2C(OC(=O)C(C)(C)CC)C1,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,Estrone glucuronide,CC12CCC3c4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)cc4CCC3C1CCC2=O,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,4-hydroxyestrone,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2=O,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,2-OH-estrone,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,6alpha-OH-estrone,CC12CCC3c4ccc(O)cc4C(O)CC3C1CCC2=O,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,7alpha-OH-estrone,CC12CCC3c4ccc(O)cc4CC(O)C3C1CCC2=O,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,15alpha-OH-estrone,CC12CCC3c4ccc(O)cc4CCC3C1C(O)CC2=O,DrugBank,True
+Estrone,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,16alpha-OH-estrone,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2=O,DrugBank,True
+Trazodone,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,m-chlorophenylpiperazine (m-CPP) ,Clc1cccc(N2CCNCC2)c1,DrugBank,True
+Trazodone,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,triazolopyridinone epoxide,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2n1C=CC1OC21,DrugBank,True
+Trazodone,O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,4'-hydroxytrazodone ,O=c1n(CCCN2CCN(c3ccc(O)c(Cl)c3)CC2)nc2ccccn12,DrugBank,True
+Verapamil,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,Verapamil metabolite D-617,CNCCCC(C#N)(c1ccc(OC)c(OC)c1)C(C)C,DrugBank,True
+Verapamil,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,Norverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,DrugBank,True
+Verapamil,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,O-Desmethylverapamil (D-703),COc1cc(C(C#N)(CCCN(C)CCc2ccc(OC)c(OC)c2)C(C)C)ccc1O,DrugBank,True
+Epinephrine,CNCC(O)c1ccc(O)c(O)c1,Epinephrine sulfate,CNCC(O)c1ccc(OS(=O)(=O)O)c(O)c1,DrugBank,True
+Chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1,2-OH-chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1O,DrugBank,True
+Chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1,3-OH-chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)c(O)c1,DrugBank,True
+Chlorpropamide,CCCNC(=O)NS(=O)(=O)c1ccc(Cl)cc1,4-Chlorobenzenesulfonylurea,NC(=O)NS(=O)(=O)c1ccc(Cl)cc1,DrugBank,True
+Galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,O-desmethyl-galantamine,CN1CCC23C=CC(O)CC2Oc2c(O)ccc(c23)C1,DrugBank,True
+Galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,Galantamine N-oxide,COc1ccc2c3c1OC1CC(O)C=CC31CC[N+](C)([O-])C2,DrugBank,True
+Galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,N-desmethyl-galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCNC2,DrugBank,True
+Tamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,N-Desmethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,DrugBank,True
+Tamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,α-hydroxytamoxifen,CC(O)C(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,DrugBank,True
+Tamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,4-Hydroxytamoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,DrugBank,True
+Thioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,Thioridazine 2-sulfoxide,CN1CCCCC1CCN1c2ccccc2Sc2ccc([S+](C)[O-])cc21,DrugBank,True
+Thioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,N-desmethylthioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1)c1ccccc1S2,DrugBank,True
+Thioridazine,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,Thioridazine 5-sulfoxide,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1[S+]2[O-],DrugBank,True
+Midazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,Midazolam-N-glucuronide,Cc1n2c(c[n+]1C1OC(C(=O)O)C(O)C(O)C1O)CN=C(c1ccccc1F)c1cc(Cl)ccc1-2,DrugBank,True
+Midazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,1-hydroxymidazolam,OCc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,DrugBank,True
+Midazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,4-hydroxymidazolam,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2O,DrugBank,True
+Eplerenone,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,6beta-hydroxyeplerenone,COC(=O)C1C(O)C2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,DrugBank,True
+Eplerenone,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CCC(=O)O4)C13,21-hydroxyeplerenone,COC(=O)C1CC2=CC(=O)CCC2(C)C23OC2CC2(C)C(CCC24CC(O)C(=O)O4)C13,DrugBank,True
+Delavirdine,CC(C)Nc1cccnc1N1CCN(C(=O)c2cc3cc(NS(C)(=O)=O)ccc3[nH]2)CC1,N-desalkyl delavirdine,CS(=O)(=O)Nc1ccc2[nH]c(C(=O)N3CCN(c4ncccc4N)CC3)cc2c1,DrugBank,True
+Tamsulosin,CCOc1ccccc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,Tamsulosin M-1 Metabolite,COc1ccc(CC(C)NCCOc2ccccc2O)cc1S(N)(=O)=O,DrugBank,True
+Tamsulosin,CCOc1ccccc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,Tamsulosin M-3 Metabolite,CCOc1ccc(O)cc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,DrugBank,True
+Tamsulosin,CCOc1ccccc1OCCNC(C)Cc1ccc(OC)c(S(N)(=O)=O)c1,Tamsulosin M-4 Metabolite,CCOc1ccccc1OCCNC(C)Cc1ccc(O)c(S(N)(=O)=O)c1,DrugBank,True
+Flurbiprofen,CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1,4'-Hydroxyflurbiprofen,CC(C(=O)O)c1ccc(-c2ccc(O)cc2)c(F)c1,DrugBank,True
+Flurbiprofen,CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1,Flurbiprofen glucuronide,CC(C(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c1ccc(-c2ccccc2)c(F)c1,DrugBank,True
+Thiabendazole,c1ccc2[nH]c(-c3cscn3)nc2c1,5-hydroxythiabendazole,Oc1ccc2nc(-c3cscn3)[nH]c2c1,DrugBank,True
+Nateglinide,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,2-{[4-(1-hydroxypropan-2-yl)cyclohexyl]formamido}-3-phenylpropanoic acid,CC(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,DrugBank,True
+Nateglinide,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,2-{[4-(2-hydroxypropan-2-yl)cyclohexyl]formamido}-3-phenylpropanoic acid,CC(C)(O)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,DrugBank,True
+Nateglinide,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,Nateglinide glucuronide and isomers (M4/M5/M6),CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)CC1,DrugBank,True
+Risperidone,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2,9-hydroxyrisperidone,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2O,DrugBank,True
+Hydrocortisone,CC12CCC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,6-beta-hydrocortisol,CC12CCC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,DrugBank,True
+Zileuton,CC(c1cc2ccccc2s1)N(O)C(N)=O,Hydroxyzileuton,CC(c1cc2ccc(O)cc2s1)N(O)C(N)=O,DrugBank,True
+Zileuton,CC(c1cc2ccccc2s1)N(O)C(N)=O,Zileuton sulfoxide,CC(c1cc2ccccc2[s+]1[O-])N(O)C(N)=O,DrugBank,True
+Zileuton,CC(c1cc2ccccc2s1)N(O)C(N)=O,Zileuton O-glucuronide,CC(c1cc2ccccc2s1)N(OC1OC(C(=O)O)C(O)C(O)C1O)C(N)=O,DrugBank,True
+Etodolac,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,6-Hydroxyetodolac,CCc1cc(O)cc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,DrugBank,True
+Etodolac,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,7-Hydroxyetodolac,CCc1c(O)ccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,DrugBank,True
+Etodolac,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,Etodolac acyl glucuronide,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)OCC3,DrugBank,True
+Tretinoin,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,4-Hydroxyretinoic acid,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,DrugBank,True
+Tretinoin,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,18-Hydroxyretinoic acid,CC(C=CC1=C(CO)CCCC1(C)C)=CC=CC(C)=CC(=O)O,DrugBank,True
+Tretinoin,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,"5,6-Epoxyretinoic acid",CC(C=CC12OC1(C)CCCC2(C)C)=CC=CC(C)=CC(=O)O,DrugBank,True
+Tretinoin,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,Retinoyl beta-glucuronide,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Olopatadine,CN(C)CCC=C1c2ccccc2COc2ccc(CC(=O)O)cc21,N-desmethyl olopatadine,CNCCC=C1c2ccccc2COc2ccc(CC(=O)O)cc21,DrugBank,True
+Malathion,CCOC(=O)CC(SP(=S)(OC)OC)C(=O)OCC,Malaoxon,CCOC(=O)CC(SP(=O)(OC)OC)C(=O)OCC,DrugBank,True
+Etoposide,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(OC)c1O,3'-demethyletoposide,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,DrugBank,True
+Estradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,17-beta-Estradiol-3-glucuronide,CC12CCC3c4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)cc4CCC3C1CCC2O,DrugBank,True
+Estradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,17-beta-Estradiol glucuronide,CC12CCC3c4ccc(O)cc4CCC3C1CCC2OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Estradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,4-Hydroxyestradiol,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2O,DrugBank,True
+Mefenamic acid,Cc1cccc(Nc2ccccc2C(=O)O)c1C,3-hydroxymethyl mefenamic aci,Cc1c(CO)cccc1Nc1ccccc1C(=O)O,DrugBank,True
+Naproxen,COc1ccc2cc(C(C)C(=O)O)ccc2c1,O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,DrugBank,True
+Perindopril,CCCC(NC(C)C(=O)N1C(C(=O)O)CC2CCCCC21)C(=O)OCC,Perindoprilat glucuronide,CCC(NC(C)C(=O)N1C(C(=O)OC2(C(=O)O)OC(C)C(O)C(O)C2O)CC2CCCCC21)C(=O)O,DrugBank,True
+Alfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,N-phenylpropionamide,CCC(=O)Nc1ccccc1,DrugBank,True
+Alfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,"2-(4-ethyl-5-oxo-1,2,3,4-tetrazol-1-yl)acetaldehyde",CCn1nnn(CC=O)c1=O,DrugBank,True
+Alfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,noralfentanil,CCC(=O)N(c1ccccc1)C1(COC)CCNCC1,DrugBank,True
+Lisofylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,"M3, Pentoxifylline internal diol",CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O,DrugBank,True
+Fentanyl,CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,norfentanyl,CCC(=O)N(c1ccccc1)C1CCNCC1,DrugBank,True
+Meloxicam,Cc1cnc(NC(=O)C2=C(O)c3ccccc3S(=O)(=O)N2C)s1,5'-hydroxymethyl meloxicam,CN1C(C(=O)Nc2ncc(CO)s2)=C(O)c2ccccc2S1(=O)=O,DrugBank,True
+Propofol,CC(C)c1cccc(C(C)C)c1O,4-OH-propofol,CC(C)c1cc(O)cc(C(C)C)c1O,DrugBank,True
+Propofol,CC(C)c1cccc(C(C)C)c1O,Propofol glucuronide,CC(C)c1cccc(C(C)C)c1OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Levomenthol,CC1CCC(C(C)C)C(O)C1,"p-Menthane-3,-8-diol",CC1CCC(C(C)(C)O)C(O)C1,DrugBank,True
+Diazepam,CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21,Temazepam,CN1C(=O)C(O)N=C(c2ccccc2)c2cc(Cl)ccc21,DrugBank,True
+Mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(N(C)C)cc3)CC21C,Monodemethylated mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(NC)cc3)CC21C,DrugBank,True
+Mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(N(C)C)cc3)CC21C,17alpha-hydroxymifepristone,CN(C)c1ccc(C2CC3(C)C(CCC3(O)C#CCO)C3CCC4=CC(=O)CCC4=C23)cc1,DrugBank,True
+Loperamide,CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,N-Desmethyloperamide,CNC(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,DrugBank,True
+Donepezil,COc1cc2c(cc1OC)C(=O)C(CC1CCN(Cc3ccccc3)CC1)C2,6-O-desmethyl donepezil,COc1cc2c(cc1O)C(=O)C(CC1CCN(Cc3ccccc3)CC1)C2,DrugBank,True
+Perphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(Cl)cc32)CC1,N-Dealkylated perphenazine,Clc1ccc2c(c1)N(CCCN1CCNCC1)c1ccccc1S2,DrugBank,True
+Perphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(Cl)cc32)CC1,Perphenazine sulfoxide,[O-][S+]1c2ccccc2N(CCCN2CCN(CCO)CC2)c2cc(Cl)ccc21,DrugBank,True
+Terbinafine,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,Hydroxyterbinafine,CN(CC=CC#CC(C)(C)CO)Cc1cccc2ccccc12,DrugBank,True
+Terbinafine,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,N-Desmethylterbinafine,CC(C)(C)C#CC=CCNCc1cccc2ccccc12,DrugBank,True
+Terbinafine,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,1-Naphthaldehyde,O=Cc1cccc2ccccc12,DrugBank,True
+Ranitidine,CNC(=C[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,Desmethylranitidine,CNCc1ccc(CSCCNC(=C[N+](=O)[O-])NC)o1,DrugBank,True
+Suprofen,CC(C(=O)O)c1ccc(C(=O)c2cccs2)cc1,Suprofen S-oxide,CC(C(=O)O)c1ccc(C(=O)c2ccc[s+]2[O-])cc1,DrugBank,True
+Suprofen,CC(C(=O)O)c1ccc(C(=O)c2cccs2)cc1,"Thiophene-4,5-epoxide",CC(C(=O)O)c1ccc(C(=O)C2=CC3OC3S2)cc1,DrugBank,True
+Granisetron,CN1C2CCCC1CC(NC(=O)c1nn(C)c3ccccc13)C2,9'-desmethylgranisetron,CN1C2CCCC1CC(NC(=O)c1n[nH]c3ccccc13)C2,DrugBank,True
+Triazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,4-hydroxytriazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2O,DrugBank,True
+Triazolam,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,1'-hydroxytriazolam,OCc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,DrugBank,True
+Ondansetron,Cc1nccn1CC1CCc2c(c3ccccc3n2C)C1=O,6-OH-ondansetron,Cc1nccn1CC1CCc2c(c3cc(O)ccc3n2C)C1=O,DrugBank,True
+Ondansetron,Cc1nccn1CC1CCc2c(c3ccccc3n2C)C1=O,7-OH-ondansetron,Cc1nccn1CC1CCc2c(c3ccc(O)cc3n2C)C1=O,DrugBank,True
+Ondansetron,Cc1nccn1CC1CCc2c(c3ccccc3n2C)C1=O,8-OH-ondansetron,Cc1nccn1CC1CCc2c(c3cccc(O)c3n2C)C1=O,DrugBank,True
+Quinidine,C=CC1CN2CCC1CC2C(O)c1ccnc2ccc(OC)cc12,Quinidine-N-oxide,C=CC1C[N+]2([O-])CCC1CC2C(O)c1ccnc2ccc(OC)cc12,DrugBank,True
+Repaglinide,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N2CCCCC2)ccc1C(=O)O,hydroxyrepaglinide,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N2CCCC(O)C2)ccc1C(=O)O,DrugBank,True
+Repaglinide,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N2CCCCC2)ccc1C(=O)O,repaglinide aromatic amine,CCOc1cc(CC(=O)NC(CC(C)C)c2ccccc2N)ccc1C(=O)O,DrugBank,True
+Almotriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,2-OH-almotriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3O)cc12,DrugBank,True
+Almotriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,N-desmethylalmotriptan,CNCCc1c[nH]c2ccc(CS(=O)(=O)N3CCCC3)cc12,DrugBank,True
+Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Norbuprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5,DrugBank,True
+Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Buprenorphine glucuronide,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)c5c4C3(CCN1CC1CC1)C2O5,DrugBank,True
+Cyclobenzaprine,CN(C)CCC=C1c2ccccc2C=Cc2ccccc21,desmethylcyclobenzaprine,CNCCC=C1c2ccccc2C=Cc2ccccc21,DrugBank,True
+Maprotiline,CNCCCC12CCC(c3ccccc31)c1ccccc12,demethylmaprotiline,NCCCC12CCC(c3ccccc31)c1ccccc12,DrugBank,True
+Maprotiline,CNCCCC12CCC(c3ccccc31)c1ccccc12,3-OH-maprotiline,CNCCCC12CCC(c3ccccc31)c1ccc(O)cc12,DrugBank,True
+Maprotiline,CNCCCC12CCC(c3ccccc31)c1ccccc12,2-OH-maprotiline,CNCCCC12CCC(c3ccccc31)c1cc(O)ccc12,DrugBank,True
+Salmeterol,OCc1cc(C(O)CNCCCCCCOCCCCc2ccccc2)ccc1O,alpha-hydroxysalmeterol,OCc1cc(C(O)CNCCCCCCOCCCC(O)c2ccccc2)ccc1O,DrugBank,True
+Phenprocoumon,CCC(c1ccccc1)c1c(O)c2ccccc2oc1=O,4'-Hydroxy-R-phenprocoumon,CCC(c1ccc(O)cc1)c1c(O)c2ccccc2oc1=O,DrugBank,True
+Phenprocoumon,CCC(c1ccccc1)c1c(O)c2ccccc2oc1=O,7-Hydroxy-R-phenprocoumon,CCC(c1ccccc1)c1c(O)c2ccc(O)cc2oc1=O,DrugBank,True
+Hydrocodone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,Hydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,DrugBank,True
+Hydrocodone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,norhydrocodone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)NCCC314,DrugBank,True
+Azelastine,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1,Desmethylazelastine,O=c1c2ccccc2c(Cc2ccc(Cl)cc2)nn1C1CCCNCC1,DrugBank,True
+Ezetimibe,O=C1C(CCC(O)c2ccc(F)cc2)C(c2ccc(O)cc2)N1c1ccc(F)cc1,Ezetimibe glucuronide,O=C(O)C1OC(Oc2ccc(C3C(CCC(O)c4ccc(F)cc4)C(=O)N3c3ccc(F)cc3)cc2)C(O)C(O)C1O,DrugBank,True
+Ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,2-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)c(O)cc4C3CCC21C,DrugBank,True
+Ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,4-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4c(ccc(O)c4O)C3CCC21C,DrugBank,True
+Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,Diphenhydramine N-glucuronide,C[N+](C)(CCOC(c1ccccc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,N-Desmethyldiphenhydramine,CNCCOC(c1ccccc1)c1ccccc1,DrugBank,True
+Dopamine,NCCc1ccc(O)c(O)c1,Dopamine 3-O-sulfate,NCCc1ccc(O)c(OS(=O)(=O)O)c1,DrugBank,True
+Dopamine,NCCc1ccc(O)c(O)c1,Dopamine glucuronide,NCCc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c(O)c1,DrugBank,True
+Ketoprofen,CC(C(=O)O)c1cccc(C(=O)c2ccccc2)c1,Ketoprofen glucuronide,CC(C(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c1cccc(C(=O)c2ccccc2)c1,DrugBank,True
+Sulfamethoxazole,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1,N-acetylsulfamethoxazole,CC(=O)Nc1ccc(S(=O)(=O)Nc2cc(C)on2)cc1,DrugBank,True
+Sulfamethoxazole,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1,Sulfamethoxazole N4-hydroxylamine,Cc1cc(NS(=O)(=O)c2ccc(NO)cc2)no1,DrugBank,True
+Glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,2-trans-hydroxycyclohexyl glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2O)cc1,DrugBank,True
+Glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,4-cis-hydroxycyclohexyl glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCC(O)CC2)cc1,DrugBank,True
+Glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1,3-trans-Hydroxycyclohexyl glyburide,COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCC(O)C2)cc1,DrugBank,True
+Felodipine,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc(Cl)c1Cl,dehydrofelodipine,CCOC(=O)c1c(C)nc(C)c(C(=O)OC)c1-c1cccc(Cl)c1Cl,DrugBank,True
+Mycophenolic acid,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)O)C(=O)OC2,6-O-desmethyl-mycophenolic acid,CC(=CCc1c(O)c(C)c2c(c1O)C(=O)OC2)CCC(=O)O,DrugBank,True
+Mycophenolic acid,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)O)C(=O)OC2,Mycophenolic acid-7-O-glucuronide,COc1c(C)c2c(c(OC3OC(C(=O)O)C(O)C(O)C3O)c1CC=C(C)CCC(=O)O)C(=O)OC2,DrugBank,True
+Irbesartan,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,Irbesartan derivative M4,CC(O)CCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,DrugBank,True
+Irbesartan,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,Irbesartan derivative M5,CCCCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,DrugBank,True
+Irbesartan,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,Irbesartan derivative M3,O=C(O)CCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,DrugBank,True
+Tolterodine,Cc1ccc(O)c(C(CCN(C(C)C)C(C)C)c2ccccc2)c1,N-Dealkylated tolterodine,Cc1ccc(O)c(C(CCNC(C)C)c2ccccc2)c1,DrugBank,True
+Tolterodine,Cc1ccc(O)c(C(CCN(C(C)C)C(C)C)c2ccccc2)c1,5-Hydroxymethyl tolterodine,CC(C)N(CCC(c1ccccc1)c1cc(CO)ccc1O)C(C)C,DrugBank,True
+Selegiline,C#CCN(C)C(C)Cc1ccccc1,Desmethylselegiline,C#CCNC(C)Cc1ccccc1,DrugBank,True
+Selegiline,C#CCN(C)C(C)Cc1ccccc1,Levmetamfetamine,CNC(C)Cc1ccccc1,DrugBank,True
+Ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,Ibuprofen glucuronide,CC(C)Cc1ccc(C(C)C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)cc1,DrugBank,True
+Ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,2-Hydroxyibuprofen,CC(C(=O)O)c1ccc(CC(C)(C)O)cc1,DrugBank,True
+Ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,3-Hydroxyibuprofen,CC(CO)Cc1ccc(C(C)C(=O)O)cc1,DrugBank,True
+Oxybutynin,CCN(CC)CC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,2-cyclohexyl-2-phenylglycolic acid,O=C(O)C(O)(c1ccccc1)C1CCCCC1,DrugBank,True
+Oxybutynin,CCN(CC)CC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,N-desethyloxybutynin,CCNCC#CCOC(=O)C(O)(c1ccccc1)C1CCCCC1,DrugBank,True
+Melatonin,COc1ccc2[nH]cc(CCNC(C)=O)c2c1,6-Hydroxymelatonin,COc1cc2c(CCNC(C)=O)c[nH]c2cc1O,DrugBank,True
+Melatonin,COc1ccc2[nH]cc(CCNC(C)=O)c2c1,N-Acetyl-5-hydroxytryptamine,CC(=O)NCCc1c[nH]c2ccc(O)cc12,DrugBank,True
+Glipizide,Cc1cnc(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCCCC3)cc2)cn1,4-trans-OH-glipizide,Cc1cnc(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCC(O)CC3)cc2)cn1,DrugBank,True
+Promethazine,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,Promethazine Sulphoxide,CC(CN1c2ccccc2[S+]([O-])c2ccccc21)N(C)C,DrugBank,True
+Promethazine,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,Desmethylpromethazine,CNC(C)CN1c2ccccc2Sc2ccccc21,DrugBank,True
+Perhexiline,C1CCC(C(CC2CCCCN2)C2CCCCC2)CC1,cis-Hydroxy Perhexiline,OC1CCC(C(CC2CCCCN2)C2CCCCC2)CC1,DrugBank,True
+Atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,para-hydroxyatorvastatin,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DrugBank,True
+Atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,ortho-hydroxyatorvastatin,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DrugBank,True
+Pilocarpine,CCC1C(=O)OCC1Cc1cncn1C,3-Hydroxyisopilocarpine,CCC1(O)C(=O)OCC1Cc1cncn1C,DrugBank,True
+Fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,6-OH-fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccc(O)cc21,DrugBank,True
+Fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,5-OH-fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2cc(O)ccc21,DrugBank,True
+Fluvastatin,CC(C)n1c(C=CC(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,N-Deisopropyl-fluvastatin,O=C(O)CC(O)CC(O)C=Cc1[nH]c2ccccc2c1-c1ccc(F)cc1,DrugBank,True
+Rosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,N-Desmethylrosuvastatin,CC(C)c1nc(NS(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,DrugBank,True
+Rosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,Rosuvastatin 5 S-lactone,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=Cc1cc(O)cc(=O)o1,DrugBank,True
+Sertraline,CNC1CCC(c2ccc(Cl)c(Cl)c2)c2ccccc21,norsertraline,NC1CCC(c2ccc(Cl)c(Cl)c2)c2ccccc21,DrugBank,True
+Nifedipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1ccccc1[N+](=O)[O-],dehydronifedipine,COC(=O)c1c(C)nc(C)c(C(=O)OC)c1-c1ccccc1[N+](=O)[O-],DrugBank,True
+Amiodarone,CCCCc1oc2ccccc2c1C(=O)c1cc(I)c(OCCN(CC)CC)c(I)c1,Desethylamiodarone,CCCCc1oc2ccccc2c1C(=O)c1cc(I)c(OCCNCC)c(I)c1,DrugBank,True
+Gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,7-OH-gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CC(O)CC3C2)cc1,DrugBank,True
+Gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,6-OH-gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCC(O)C3C2)cc1,DrugBank,True
+Gliclazide,Cc1ccc(S(=O)(=O)NC(=O)NN2CC3CCCC3C2)cc1,Methylhydroxygliclazide,O=C(NN1CC2CCCC2C1)NS(=O)(=O)c1ccc(CO)cc1,DrugBank,True
+Tolbutamide,CCCCNC(=O)NS(=O)(=O)c1ccc(C)cc1,4-Hydroxy tolbutamide,CCCCNC(=O)NS(=O)(=O)c1ccc(CO)cc1,DrugBank,True
+Proguanil,CC(C)NC(=N)NC(=N)Nc1ccc(Cl)cc1,4-Chlorophenylbiguanide,N=C(N)NC(=N)Nc1ccc(Cl)cc1,DrugBank,True
+Carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,8-Hydroxycarbazolylcarvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3c(O)cccc3c12,DrugBank,True
+Carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,4'-Hydroxyphenylcarvedilol,COc1cc(O)ccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,DrugBank,True
+Carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,5'-Hydroxyphenylcarvedilol,COc1ccc(O)cc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,DrugBank,True
+Carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,O-Desmethylcarvedilol,Oc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,DrugBank,True
+Carvedilol,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,Carvedilol Glucuronide,COc1ccccc1OCCNCC(COc1cccc2[nH]c3ccccc3c12)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+Sulfinpyrazone,O=C1C(CC[S+]([O-])c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,Sulfinpyrazone sulfone,O=C1C(CCS(=O)(=O)c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,DrugBank,True
+Doxepin,CN(C)CCC=C1c2ccccc2COc2ccccc21,N-desmethyldoxepin,CNCCC=C1c2ccccc2COc2ccccc21,DrugBank,True
+Nefazodone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,hydroxynefazodone,CC(O)c1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,DrugBank,True
+Nefazodone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,m-Chlorophenylpiperazine,Clc1cccc(N2CCNCC2)c1,DrugBank,True
+Desipramine,CNCCCN1c2ccccc2CCc2ccccc21,2-hydroxydesipramine,CNCCCN1c2ccccc2CCc2cc(O)ccc21,DrugBank,True
+Bupropion,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,S-Hydroxybupropion,CC(NC(C)(C)CO)C(=O)c1cccc(Cl)c1,DrugBank,True
+Bupropion,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,(2R)-2-(tert-butylamino)-1-(3-chlorophenyl)-3-hydroxypropan-1-one,CC(C)(C)NC(CO)C(=O)c1cccc(Cl)c1,DrugBank,True
+Bupropion,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,S-4'-hydroxybupropion,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,DrugBank,True
+Halothane,FC(F)(F)C(Cl)Br,trifluoroacetic acid,O=C(O)C(F)(F)F,DrugBank,True
+Halothane,FC(F)(F)C(Cl)Br,Trifluoroacetyl chloride,O=C(Cl)C(F)(F)F,DrugBank,True
+Halothane,FC(F)(F)C(Cl)Br,chlorotrifluoroethane,FC(F)(F)CCl,DrugBank,True
+Itraconazole,CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,Hydroxyitraconazole,CC(O)C(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O,DrugBank,True
+Ifosfamide,O=P1(NCCCl)OCCCN1CCCl,3-Dechloroethylifosfamide,O=P1(NCCCl)NCCCO1,DrugBank,True
+Ifosfamide,O=P1(NCCCl)OCCCN1CCCl,Dechloroethylifosfamide,NP1(=O)OCCCN1CCCl,DrugBank,True
+Ifosfamide,O=P1(NCCCl)OCCCN1CCCl,4-Hydroxyifosfamide,O=P1(NCCCl)OCCC(O)N1CCCl,DrugBank,True
+Propafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1,(S)-5-Hydroxypropafenone,CCCNCC(O)COc1ccc(O)cc1C(=O)CCc1ccccc1,DrugBank,True
+Propafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1,(S)-N-Despropylpropafenone,NCC(O)COc1ccccc1C(=O)CCc1ccccc1,DrugBank,True
+Propafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1,(S)-4'-Hydroxypropafenone,CCCNCC(O)COc1ccccc1C(=O)CCc1ccc(O)cc1,DrugBank,True
+Clindamycin,CCCC1CC(C(=O)NC(C(C)Cl)C2OC(SC)C(O)C(O)C2O)N(C)C1,Clindamycin sulfoxide,CCCC1CC(C(=O)NC(C(C)Cl)C2OC([S+](C)[O-])C(O)C(O)C2O)N(C)C1,DrugBank,True
+Clindamycin,CCCC1CC(C(=O)NC(C(C)Cl)C2OC(SC)C(O)C(O)C2O)N(C)C1,N-desmethylclindamycin,CCCC1CNC(C(=O)NC(C(C)Cl)C2OC(SC)C(O)C(O)C2O)C1,DrugBank,True
+Clarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,14-hydroxyclarithromycin,COC1(C)CC(OC2C(C)C(=O)OC(C(C)O)C(C)(O)C(O)C(C)C(=O)C(C)CC(C)(OC)C(OC3OC(C)CC(N(C)C)C3O)C2C)OC(C)C1O,DrugBank,True
+Clarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,N-desmethylclarithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(NC)C2O)C(C)(OC)CC(C)C(=O)C(C)C(O)C1(C)O,DrugBank,True
+Estazolam,Clc1ccc2c(c1)C(c1ccccc1)=NCc1nncn1-2,4-hydroxy-estazolam,OC1N=C(c2ccccc2)c2cc(Cl)ccc2-n2cnnc21,DrugBank,True
+Halofantrine,CCCCN(CCCC)CCC(O)c1cc2c(Cl)cc(Cl)cc2c2cc(C(F)(F)F)ccc12,N-debutylhalofantrine,CCCCNCCC(O)c1cc2c(Cl)cc(Cl)cc2c2cc(C(F)(F)F)ccc12,DrugBank,True
+Ketamine,CNC1(c2ccccc2Cl)CCCCC1=O,Norketamine,NC1(c2ccccc2Cl)CCCCC1=O,DrugBank,True
+Budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,6-beta-hydroxybudesonide,CCCC1OC2CC3C4CC(O)C5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DrugBank,True
+Quetiapine,OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,7-Hydroxyquetiapine,OCCOCCN1CCN(C2=Nc3ccc(O)cc3Sc3ccccc32)CC1,DrugBank,True
+Quetiapine,OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,Quetiapine sulfoxide,[O-][S+]1c2ccccc2N=C(N2CCN(CCOCCO)CC2)c2ccccc21,DrugBank,True
+Levacetylmethadol,CCC(OC(C)=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,noracymethadol,CCC(OC(C)=O)C(CC(C)NC)(c1ccccc1)c1ccccc1,DrugBank,True
+Encainide,COc1ccc(C(=O)Nc2ccccc2CCC2CCCCN2C)cc1,N-demethylencainide,COc1ccc(C(=O)Nc2ccccc2CCC2CCCCN2)cc1,DrugBank,True
+Encainide,COc1ccc(C(=O)Nc2ccccc2CCC2CCCCN2C)cc1,O-demethylencainide,CN1CCCCC1CCc1ccccc1NC(=O)c1ccc(O)cc1,DrugBank,True
+Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,"(2S)-N-[(2S,3R)-4-[(3S,4aS,8aS)-3-[(1-hydroxy-2-methylpropan-2-yl)carbamoyl]-decahydroisoquinolin-2-yl]-3-hydroxy-1-phenylbutan-2-yl]-2-[(quinolin-2-yl)formamido]butanediamide",CC(C)(CO)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,DrugBank,True
+Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,"(2S)-N-[(2S,3R)-4-[(3S,4aR,8aS)-3-(tert-butylcarbamoyl)-6-hydroxy-decahydroisoquinolin-2-yl]-3-hydroxy-1-phenylbutan-2-yl]-2-[(quinolin-2-yl)formamido]butanediamide",CC(C)(C)NC(=O)C1CC2CC(O)CCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,DrugBank,True
+Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,"(2S)-N-[(2S,3R)-4-[(3S,4aS,8aS)-3-(tert-butylcarbamoyl)-7-hydroxy-decahydroisoquinolin-2-yl]-3-hydroxy-1-phenylbutan-2-yl]-2-[(quinolin-2-yl)formamido]butanediamide",CC(C)(C)NC(=O)C1CC2CCC(O)CC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,DrugBank,True
+Dexamethasone,CC1CC2C3CCC4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)CO,6alpha-Hydroxydexamethasone,CC1CC2C3CC(O)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)CO,DrugBank,True
+Gemfibrozil,Cc1ccc(C)c(OCCCC(C)(C)C(=O)O)c1,Gemfibrozil 1-beta-glucuronide,Cc1ccc(C)c(OCCCC(C)(C)C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1,DrugBank,True
+Clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,8-OH-clomipramine,CN(C)CCCN1c2cc(Cl)ccc2CCc2c(O)cccc21,DrugBank,True
+Clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,10-OH-clomipramine,CN(C)CCCN1c2cc(Cl)ccc2CC(O)c2ccccc21,DrugBank,True
+Clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,2-hydroxyclomipramine,CN(C)CCCN1c2ccccc2CCc2cc(O)c(Cl)cc21,DrugBank,True
+Clomipramine,CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21,Desmethylclomipramine,CNCCCN1c2ccccc2CCc2ccc(Cl)cc21,DrugBank,True
+Lumiracoxib,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,Lumiracoxib metabolite M21,O=C(O)Cc1cc(CO)ccc1Nc1c(F)cccc1Cl,DrugBank,True
+Lumiracoxib,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,Lumiracoxib glucuronide (M24),Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1,DrugBank,True
+Lumiracoxib,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,4'-hydroxylumiracoxib (M23),Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)O)c1,DrugBank,True
+Mestranol,C#CC1(O)CCC2C3CCc4cc(OC)ccc4C3CCC21C,Ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,DrugBank,True
+Colchicine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,2-Demethylcolchicine,COc1cc2c(c(OC)c1O)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,DrugBank,True
+Colchicine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,3-Desmethylchochicine,COc1c(O)cc2c(c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,DrugBank,True
+Colchicine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,Colchiceine,COc1cc2c(c(OC)c1OC)-c1ccc(O)c(=O)cc1C(NC(C)=O)CC2,DrugBank,True
+Acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,6-Hydroxy-R-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2cccc(O)c2oc1=O,DrugBank,True
+Acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,7-Hydroxy-R-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccc(O)cc2oc1=O,DrugBank,True
+Acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2ccccc2oc1=O,8-Hydroxy-R-acenocoumarol,CC(=O)CC(c1ccc([N+](=O)[O-])cc1)c1c(O)c2cc(O)ccc2oc1=O,DrugBank,True
+Aprindine,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,"N-[3-(N,NDiethylamino)propyl]-N-phenyl-2-aminoindan-5-ol",CCN(CC)CCCN(c1ccccc1)C1Cc2ccc(O)cc2C1,DrugBank,True
+Aprindine,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,p-Hydroxyphenylaprindine,CCN(CC)CCCN(c1ccc(O)cc1)C1Cc2ccccc2C1,DrugBank,True
+Aprindine,CCN(CC)CCCN(c1ccccc1)C1Cc2ccccc2C1,Desethylaprindine,CCNCCCN(c1ccccc1)C1Cc2ccccc2C1,DrugBank,True
+Antipyrine,Cc1cc(=O)n(-c2ccccc2)n1C,3-Hydroxymethylantipyrine,Cn1c(CO)cc(=O)n1-c1ccccc1,DrugBank,True
+Antipyrine,Cc1cc(=O)n(-c2ccccc2)n1C,4-Hydroxyantipyrine,Cc1c(O)c(=O)n(-c2ccccc2)n1C,DrugBank,True
+Androstenedione,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,6beta-hydroxy-androstenedione,CC12CCC3C(CC(O)C4=CC(=O)CCC43C)C1CCC2=O,DrugBank,True
+Metamfetamine,CNC(C)Cc1ccccc1,Dextroamphetamine,CC(N)Cc1ccccc1,DrugBank,True
+Metamfetamine,CNC(C)Cc1ccccc1,4-hydroxymethamphetamine,CNC(C)Cc1ccc(O)cc1,DrugBank,True
+Quazepam,Fc1ccccc1C1=NCC(=S)N(CC(F)(F)F)c2ccc(Cl)cc21,2-Oxoquazepam,O=C1CN=C(c2ccccc2F)c2cc(Cl)ccc2N1CC(F)(F)F,DrugBank,True
+Etoricoxib,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,Etoricoxib 1'-N'-oxide,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)c[n+]1[O-],DrugBank,True
+Etoricoxib,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,6-Hydroxymethyletoricoxib,CS(=O)(=O)c1ccc(-c2cc(Cl)cnc2-c2ccc(CO)nc2)cc1,DrugBank,True
+Genistein,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,3'-hydroxygenistein,O=c1c(-c2ccc(O)c(O)c2)coc2cc(O)cc(O)c12,DrugBank,True
+Prasterone,CC12CCC3C(CC=C4CC(O)CCC43C)C1CCC2=O,Dehydroepiandrosterone 3-glucuronide,CC12CCC3C(CC=C4CC(OC5OC(C(=O)O)C(O)C(O)C5O)CCC43C)C1CCC2=O,DrugBank,True
+Camphor,CC12CCC(CC1=O)C2(C)C,5-Exo-Hydroxycamphor,CC12CC(O)C(CC1=O)C2(C)C,DrugBank,True
+Thymol,Cc1ccc(C(C)C)c(O)c1,"p-Cymene-2,3-diol",Cc1ccc(C(C)C)c(O)c1O,DrugBank,True
+Thymol,Cc1ccc(C(C)C)c(O)c1,Thymoquinol,Cc1cc(O)c(C(C)C)cc1O,DrugBank,True
+Thymol,Cc1ccc(C(C)C)c(O)c1,p-Cymen-8-en-3-ol,C=C(C)c1ccc(C)cc1O,DrugBank,True
+Cholic Acid,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CC(O)C12C,Cholic acid glucuronide,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(OC5OC(C(=O)O)C(O)C(O)C5O)CCC4(C)C3CC(O)C12C,DrugBank,True
+Pregnenolone,CC(=O)C1CCC2C3CC=C4CC(O)CCC4(C)C3CCC12C,Pregnenolone sulfate,CC(=O)C1CCC2C3CC=C4CC(OS(=O)(=O)O)CCC4(C)C3CCC12C,DrugBank,True
+Lauric acid,CCCCCCCCCCCC(=O)O,12-Hydroxydodecanoic Acid,O=C(O)CCCCCCCCCCCO,DrugBank,True
+Phenacetin,CCOc1ccc(NC(C)=O)cc1,Acetaminophen,CC(=O)Nc1ccc(O)cc1,DrugBank,True
+Phenacetin,CCOc1ccc(NC(C)=O)cc1,N-OH-phenacetin,CCOc1ccc(N(O)C(C)=O)cc1,DrugBank,True
+Benzoic acid,O=C(O)c1ccccc1,Benzoyl glucuronide (Benzoic acid),O=C(OC1OC(C(=O)O)C(O)C(O)C1O)c1ccccc1,DrugBank,True
+Eucalyptol,CC12CCC(CC1)C(C)(C)O2,"2alpha-hydroxy-1,8-cineole",CC1(C)OC2(C)CCC1CC2O,DrugBank,True
+Eucalyptol,CC12CCC(CC1)C(C)(C)O2,"3alpha-hydroxy-1,8-cineole",CC12CCC(C(O)C1)C(C)(C)O2,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,5-HETE,CCCCCC=CCC=CCC=CC=CC(O)CCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,7-HETE,CCCCCC=CCC=CCC=CC(O)C=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,10-HETE,CCCCCC=CCC=CC(O)C=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,13-HETE,CCCCCC=CC(O)C=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,20-HETE,O=C(O)CCCC=CCC=CCC=CCC=CCCCCCO,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,19-HETE,CC(O)CCCC=CCC=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,18-HETE,CCC(O)CCC=CCC=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,17-HETE,CCCC(O)CC=CCC=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,16-HETE,CCCCC(O)C=CCC=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"14,15-EET",CCCCCC1OC1CC=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"11,12-EET",CCCCCC=CCC1OC1CC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"8,9-EET",CCCCCC=CCC=CCC1OC1CC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,"5,6-EET",CCCCCC=CCC=CCC=CCC1OC1CCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,15-HETE,CCCCCC(O)C=CC=CCC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,12-HETE,CCCCCC=CCC(O)C=CC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,11-HETE,CCCCCC=CC=CC(O)CC=CCC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,9-HETE,CCCCCC=CCC=CCC(O)C=CC=CCCCC(=O)O,DrugBank,True
+Arachidonic Acid,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,8-HETE,CCCCCC=CCC=CC=CC(O)CC=CCCCC(=O)O,DrugBank,True
+Coumarin,O=c1ccc2ccccc2o1,7-Hydroxycoumarin,O=c1ccc2ccc(O)cc2o1,DrugBank,True
+Coumarin,O=c1ccc2ccccc2o1,3-Hydroxycoumarin,O=c1oc2ccccc2cc1O,DrugBank,True
+Coumarin,O=c1ccc2ccccc2o1,"Coumarin 3,4-epoxide",O=C1Oc2ccccc2C2OC12,DrugBank,True
+Licofelone,CC1(C)Cc2c(-c3ccccc3)c(-c3ccc(Cl)cc3)c(CC(=O)O)n2C1,Licofelone metabolite M4,CC1(C)Cc2c(-c3ccc(O)cc3)c(-c3ccc(Cl)cc3)c(CC(=O)O)n2C1,DrugBank,True
+Licofelone,CC1(C)Cc2c(-c3ccccc3)c(-c3ccc(Cl)cc3)c(CC(=O)O)n2C1,Licofelone metabolite M2,CC1(C)Cc2c(-c3ccccc3)c(-c3ccc(Cl)c(O)c3)c(CC(=O)O)n2C1,DrugBank,True
+Tienilic acid,O=C(O)COc1ccc(C(=O)c2cccs2)c(Cl)c1Cl,Tienilic acid-s-oxide,O=C(O)COc1ccc(C(=O)c2ccc[s+]2[O-])c(Cl)c1Cl,DrugBank,True
+Debrisoquine,N=C(N)N1CCc2ccccc2C1,4-Hydroxydebrisoquine,N=C(N)N1Cc2ccccc2C(O)C1,DrugBank,True
+Flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,Flunarizine metabolite M1,Fc1ccc(C(c2ccc(F)cc2)N2CCNCC2)cc1,DrugBank,True
+Flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,Flunarizine metabolite M2,Oc1ccc(C=CCN2CCN(C(c3ccc(F)cc3)c3ccc(F)cc3)CC2)cc1,DrugBank,True
+Flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,Flunarizine metabolite M3,O=C(c1ccc(F)cc1)c1ccc(F)cc1,DrugBank,True
+Iloperidone,COc1cc(C(C)=O)ccc1OCCCN1CCC(c2noc3cc(F)ccc23)CC1,P-88,COc1cc(C(C)O)ccc1OCCCN1CCC(c2noc3cc(F)ccc23)CC1,DrugBank,True
+Abiraterone,CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,Abiraterone sulfate,CC12CCC(OS(=O)(=O)O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,DrugBank,True
+Mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,"(R)-mianserin, N-Desmethyl",c1ccc2c(c1)Cc1ccccc1N1CCNCC21,DrugBank,True
+Mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,"(R)-mianserin, 8-hydroxy",CN1CCN2c3cc(O)ccc3Cc3ccccc3C2C1,DrugBank,True
+Mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,"(R)-mianserin, N-oxide",C[N+]1([O-])CCN2c3ccccc3Cc3ccccc3C2C1,DrugBank,True
+Mianserin,CN1CCN2c3ccccc3Cc3ccccc3C2C1,8-Hydroxymianserin,CN1CCN2c3ccc(O)cc3Cc3ccccc3C2C1,DrugBank,True
+Vadimezan,Cc1ccc2c(=O)c3cccc(CC(=O)O)c3oc2c1C,6-Hydroxy-MXAA,Cc1c(CO)ccc2c(=O)c3cccc(CC(=O)O)c3oc12,DrugBank,True
+Vicriviroc,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,O-Desmethylvicriviroc,Cc1ncnc(C)c1C(=O)N1CCC(C)(N2CCN(C(CO)c3ccc(C(F)(F)F)cc3)C(C)C2)CC1,DrugBank,True
+Vicriviroc,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,Vicriviroc N-oxide,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)nc[n+]([O-])c3C)CC2)CC1C,DrugBank,True
+Vicriviroc,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,N-Desalkylvicriviroc,Cc1ncnc(C)c1C(=O)N1CCC(C)(N2CCNC(C)C2)CC1,DrugBank,True
+Arverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,"(2R)-5-{[2-(3,4-dimethoxyphenyl)ethyl]amino}-2-(3-methoxyphenyl)-2-(propan-2-yl)pentanenitrile",COc1cccc(C(C#N)(CCCNCCc2ccc(OC)c(OC)c2)C(C)C)c1,DrugBank,True
+Arverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,(2R)-5-amino-2-(3-methoxyphenyl)-2-(propan-2-yl)pentanenitrile,COc1cccc(C(C#N)(CCCN)C(C)C)c1,DrugBank,True
+Arverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,"3,4-Dimethoxybenzeneacetaldehyde",COc1ccc(CC=O)cc1OC,DrugBank,True
+Laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4-hydroxy-N-(4-hydroxyphenyl)-1-methyl-2-oxo-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccc(O)cc1,DrugBank,True
+Laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-4-hydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",Cn1c(=O)c(C(=O)Nc2ccccc2)c(O)c2c(Cl)cccc21,DrugBank,True
+Laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4,8-dihydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)ccc(O)c2n(C)c1=O)c1ccccc1,DrugBank,True
+Laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4,7-dihydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)cc(O)cc2n(C)c1=O)c1ccccc1,DrugBank,True
+Laquinimod,CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,"5-chloro-N-ethyl-4,6-dihydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)c(O)ccc2n(C)c1=O)c1ccccc1,DrugBank,True
+Bufuralol,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,4-Hydroxybufuralol,CCc1ccc(O)c2cc(C(O)CNC(C)(C)C)oc12,DrugBank,True
+Bufuralol,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,6-Hydroxubufuralol,CCc1c(O)ccc2cc(C(O)CNC(C)(C)C)oc12,DrugBank,True
+Bufuralol,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,1'2'-Ethenylbufuralol,C=Cc1cccc2cc(C(O)CNC(C)(C)C)oc12,DrugBank,True
+Aceclofenac,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl,4'-OH-aceclofenac,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cc(O)cc1Cl,DrugBank,True
+Aceclofenac,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl,5-OH-aceclofenac,O=C(O)COC(=O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,DrugBank,True
+Zaltoprofen,CC(C(=O)O)c1ccc2c(c1)CC(=O)c1ccccc1S2,10-OH-zaltoprofen,CC(C(=O)O)c1ccc2c(c1)CC(O)c1ccccc1S2,DrugBank,True
+Ketobemidone,CCC(=O)C1(c2cccc(O)c2)CCN(C)CC1,Norketobemidone,CCC(=O)C1(c2cccc(O)c2)CCNCC1,DrugBank,True
+Seratrodast,CC1=C(C)C(=O)C(C(CCCCCC(=O)O)c2ccccc2)=C(C)C1=O,5-OH-seratrodast,CC1=C(CO)C(=O)C(C)=C(C(CCCCCC(=O)O)c2ccccc2)C1=O,DrugBank,True
+Seratrodast,CC1=C(C)C(=O)C(C(CCCCCC(=O)O)c2ccccc2)=C(C)C1=O,4'-OH-seratrodast,CC1=C(C)C(=O)C(C(CCCCCC(=O)O)c2ccc(O)cc2)=C(C)C1=O,DrugBank,True
+Gavestinel,O=C(C=Cc1c(C(=O)O)[nH]c2cc(Cl)cc(Cl)c12)Nc1ccccc1,p-OH-gavestinel,O=C(C=Cc1c(C(=O)O)[nH]c2cc(Cl)cc(Cl)c12)Nc1ccc(O)cc1,DrugBank,True
+"(2R)-1-(2,6-dimethylphenoxy)propan-2-amine",Cc1cccc(C)c1OCC(C)N,"(R)-(-)-Mexiletine, m-hydroxyl",Cc1ccc(O)c(C)c1OCC(C)N,DrugBank,True
+"(2R)-1-(2,6-dimethylphenoxy)propan-2-amine",Cc1cccc(C)c1OCC(C)N,"(R)-(-)-Mexiletine, N-hydroxy",Cc1cccc(C)c1OCC(C)NO,DrugBank,True
+Harmine,COc1ccc2c(c1)[nH]c1c(C)nccc12,Harmol,COc1cc2[nH]c3c(C)nccc3c2cc1O,DrugBank,True
+Harmine,COc1ccc2c(c1)[nH]c1c(C)nccc12,6-OH-harmaline,Cc1nccc2c1[nH]c1cc(O)ccc12,DrugBank,True
+(R)-Fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,3-(methylamino)-1-phenylpropan-1-one,CNCCC(=O)c1ccccc1,DrugBank,True
+Formestane,CC12CCC3C(CCC4=C(O)C(=O)CCC43C)C1CCC2=O,4-Hydroxyandrostenedione glucuronide,CC12CCC3C(CCC4=C(OC5OC(C(=O)O)C(O)C(O)C5O)C(=O)CCC43C)C1CCC2=O,DrugBank,True
+(4R)-limonene,C=C(C)C1CC=C(C)CC1,Carveol,C=C(C)C1CC=C(C)C(O)C1,DrugBank,True
+Perospirone,O=C1C2CCCCC2C(=O)N1CCCCN1CCN(c2nsc3ccccc23)CC1,Hydroxyperospirone,O=C1C2CCCCC2(O)C(=O)N1CCCCN1CCN(c2nsc3ccccc23)CC1,DrugBank,True
+Etizolam,CCc1cc2c(s1)-n1c(C)nnc1CN=C2c1ccccc1Cl,alpha-hydroxyetizolam,Cc1nnc2n1-c1sc(C(C)O)cc1C(c1ccccc1Cl)=NC2,DrugBank,True
+Etoperidone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,Etoperidone M2,CCn1c(C(C)O)nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c1=O,DrugBank,True
+Etoperidone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,Etoperidone M5,CCc1nn(CCCN2CCN(c3ccc(O)c(Cl)c3)CC2)c(=O)n1CC,DrugBank,True
+Etoperidone,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,m-Chlorophenylpiperazine,Clc1cccc(N2CCNCC2)c1,DrugBank,True
+Zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,Norzotepine,CNCCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,DrugBank,True
+Zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,Zotepine N-oxide,C[N+](C)([O-])CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,DrugBank,True
+Zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,2-OH-zotepine,CN(C)CCOC1=Cc2cc(O)ccc2Sc2ccc(Cl)cc21,DrugBank,True
+Zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,3-OH-zotepine,CN(C)CCOC1=Cc2ccc(O)cc2Sc2ccc(Cl)cc21,DrugBank,True
+Zotepine,CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21,Zotepine -oxide,CN(C)CCOC1=Cc2ccccc2[S+]([O-])c2ccc(Cl)cc21,DrugBank,True
+Barnidipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OC2CCN(Cc3ccccc3)C2)C1c1cccc([N+](=O)[O-])c1,M-8,COC(=O)c1c(C)nc(C)c(C(=O)OC2CCN(Cc3ccccc3)C2)c1-c1cccc([N+](=O)[O-])c1,DrugBank,True
+Barnidipine,COC(=O)C1=C(C)NC(C)=C(C(=O)OC2CCN(Cc3ccccc3)C2)C1c1cccc([N+](=O)[O-])c1,M-1,COC(=O)C1=C(C)NC(C)=C(C(=O)OC2CCNC2)C1c1cccc([N+](=O)[O-])c1,DrugBank,True
+Artesunate,CC1CCC2C(C)C(OC(=O)CCC(=O)O)OC3OC4(C)CCC1C32OO4,Dihydroartemisinin (DHA),CC1CCC2C(C)C(O)OC3OC4(C)CCC1C32OO4,DrugBank,True
+Silibinin,COc1cc(C2Oc3cc(C4Oc5cc(O)cc(O)c5C(=O)C4O)ccc3OC2CO)ccc1O,O-demethylated-silybin,O=C1c2c(O)cc(O)cc2OC(c2ccc3c(c2)OC(c2ccc(O)c(O)c2)C(CO)O3)C1O,DrugBank,True
+Diethyltoluamide,CCN(CC)C(=O)c1cccc(C)c1,"N,N-diethyl-m-hydroxymethylbenzamide",CCN(CC)C(=O)c1cccc(CO)c1,DrugBank,True
+Diethyltoluamide,CCN(CC)C(=O)c1cccc(C)c1,N-ethyl-m-toluamide,CCNC(=O)c1cccc(C)c1,DrugBank,True
+Roquinimex,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4,8-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2cccc(O)c2n(C)c1=O)c1ccccc1,DrugBank,True
+Roquinimex,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4,7-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2ccc(O)cc2n(C)c1=O)c1ccccc1,DrugBank,True
+Roquinimex,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4,6-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2cc(O)ccc2n(C)c1=O)c1ccccc1,DrugBank,True
+Roquinimex,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4-hydroxy-1-methyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",Cn1c(=O)c(C(=O)Nc2ccccc2)c(O)c2ccccc21,DrugBank,True
+Roquinimex,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,"4-hydroxy-N-(4-hydroxyphenyl)-N,1-dimethyl-2-oxo-1,2-dihydroquinoline-3-carboxamide",CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccc(O)cc1,DrugBank,True
+Fenthion,COP(=S)(OC)Oc1ccc(SC)c(C)c1,Fenthion oxon,COP(=O)(OC)Oc1ccc(SC)c(C)c1,DrugBank,True
+Curcumin,COc1cc(C=CC(=O)CC(=O)C=Cc2ccc(O)c(OC)c2)ccc1O,O-demethyl curcumin,COc1cc(C=CC(=O)CC(=O)C=Cc2ccc(O)c(O)c2)ccc1O,DrugBank,True
+Ebastine,CC(C)(C)c1ccc(C(=O)CCCN2CCC(OC(c3ccccc3)c3ccccc3)CC2)cc1,4-(4-tert-butylphenyl)-4-oxobutanal,c1ccc(C(OC2CCNCC2)c2ccccc2)cc1,DrugBank,True
+Ebastine,CC(C)(C)c1ccc(C(=O)CCCN2CCC(OC(c3ccccc3)c3ccccc3)CC2)cc1,Deslakylebastine,CC(C)(C)c1ccc(C(=O)CCC=O)cc1,DrugBank,True
+m-Chlorophenylpiperazine,Clc1cccc(N2CCNCC2)c1,2-chloro-4-(piperazin-1-yl)phenol,Oc1ccc(N2CCNCC2)cc1Cl,DrugBank,True
+Gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1,3'-OH-gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1O,DrugBank,True
+Gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1,5-OH-gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncc(O)cn3)CC2)C(=O)C1,DrugBank,True
+Gepirone,CC1(C)CC(=O)N(CCCCN2CCN(c3ncccn3)CC2)C(=O)C1,1-PP,c1cnc(N2CCNCC2)nc1,DrugBank,True
+Lisofylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,Pentoxifylline,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,DrugBank,True
+Indiplon,CC(=O)N(C)c1cccc(-c2ccnc3c(C(=O)c4cccs4)cnn23)c1,N-Desmethylindiplon,CC(=O)Nc1cccc(-c2ccnc3c(C(=O)c4cccs4)cnn23)c1,DrugBank,True
+Trofosfamide,O=P1(N(CCCl)CCCl)OCCCN1CCCl,L-ifosfamide,O=P1(N(CCCl)CCCl)OCCC(O)N1CCCl,DrugBank,True
+Trofosfamide,O=P1(N(CCCl)CCCl)OCCCN1CCCl,L-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,DrugBank,True
+Flosequinan,Cn1cc([S+](C)[O-])c(=O)c2ccc(F)cc21,flosequinan sulfone,Cn1cc(S(C)(=O)=O)c(=O)c2ccc(F)cc21,DrugBank,True
+Deltamethrin,CC1(C)C(C=C(Br)Br)C1C(=O)OC(C#N)c1cccc(Oc2ccccc2)c1,4'-OH-deltamethrin,CC1(C)C(C=C(Br)Br)C1C(=O)OC(C#N)c1cccc(Oc2ccc(O)cc2)c1,DrugBank,True
+Umifenovir,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(O)c(CN(C)C)c12,Arbidol M18 metabolite,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(CN(C)C)c12,DrugBank,True
+Bioallethrin,C=CCC1=C(C)C(OC(=O)C2C(C=C(C)C)C2(C)C)CC1=O,M1 (Bioallethrin),C=CCC1=C(C)C(OC(=O)C2C(C=C(C)CO)C2(C)C)CC1=O,DrugBank,True
+Harmaline,COc1ccc2c3c([nH]c2c1)C(C)=NCC3,Harmalol,CC1=NCCc2c1[nH]c1cc(O)ccc21,DrugBank,True
+Brofaromine,COc1cc(Br)c2oc(C3CCNCC3)cc2c1,O-desmethyl-brofaromine,Oc1cc(Br)c2oc(C3CCNCC3)cc2c1,DrugBank,True
+Cotinine,CN1C(=O)CCC1c1cccnc1,3'-Hydroxycotinine,CN1C(=O)C(O)CC1c1cccnc1,DrugBank,True
+O-Desmethyltramadol,CN(C)CC1CCCCC1(O)c1cccc(O)c1,O-Desmethyl-tramado glucuronide,CN(C)CC1CCCCC1(O)c1cccc(OC2OC(C(=O)O)C(O)C(O)C2O)c1,DrugBank,True
+desmethylcitalopram,CNCCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21,didemethylcitalopram,N#Cc1ccc2c(c1)COC2(CCCN)c1ccc(F)cc1,DrugBank,True
+2-Hydroxynevirapine,Cc1cc(O)nc2c1N=C(O)c1cccnc1N2C1CC1,2-hydroxynevirapine glucuronide,Cc1cc(OC2OC(C(=O)O)C(O)C(O)C2O)nc2c1N=C(O)c1cccnc1N2C1CC1,DrugBank,True
+3-hydroxylidocaine,CCN(CC)CC(=O)Nc1c(C)ccc(O)c1C,3-Hydroxymonoethylglycinexylidide,CCNCC(=O)Nc1c(C)ccc(O)c1C,DrugBank,True
+monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,3-Hydroxymonoethylglycinexylidide,CCNCC(=O)Nc1c(C)ccc(O)c1C,DrugBank,True
+monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,Glycinexylidide (GX),Cc1cccc(C)c1NC(=O)CN,DrugBank,True
+"2,6-Dimethylaniline (2,6-Xylidine)",Cc1cccc(C)c1N,"4-Hydroxy-2,6-dimethylaniline",Cc1cc(O)cc(C)c1N,DrugBank,True
+4-hydroxy duloxetine,CNCCC(Oc1ccc(O)c2ccccc12)c1cccs1,4-hydroxy duloxetine glucuronide,CNCCC(Oc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc12)c1cccs1,DrugBank,True
+3-Hydroxymorphinan,Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,3-Hydroxymorphinan O-glucuronide,O=C(O)C1OC(Oc2ccc3c(c2)C24CCCCC2C(C3)NCC4)C(O)C(O)C1O,DrugBank,True
+3-Hydroxymorphinan,Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,3-Hydroxymorphinan sulfate,O=S(=O)(O)Oc1ccc2c(c1)C13CCCCC1C(C2)NCC3,DrugBank,True
+5-hydroxy diclofenac,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cccc1Cl,"4',5-Dihydroxydiclofenac",O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cc(O)cc1Cl,DrugBank,True
+"(R)-chloroquine, N-desethyl",CCNCCCC(C)Nc1ccnc2cc(Cl)ccc12,N-bidesethylchloroquine,CC(CCCN)Nc1ccnc2cc(Cl)ccc12,DrugBank,True
+Verapamil metabolite D-617,CNCCCC(C#N)(c1ccc(OC)c(OC)c1)C(C)C,Verapamil metabolite D-620,COc1ccc(C(C#N)(CCCN)C(C)C)cc1OC,DrugBank,True
+Norverapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,Verapamil metabolite D-620,COc1ccc(C(C#N)(CCCN)C(C)C)cc1OC,DrugBank,True
+O-desmethyl-galantamine,CN1CCC23C=CC(O)CC2Oc2c(O)ccc(c23)C1,Sulfate conjugate of O-desmethyl-galantamine,CN1CCC23C=CC(O)CC2Oc2c(OS(=O)(=O)O)ccc(c23)C1,DrugBank,True
+N-Desmethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,Endoxifen (4-hydroxy-N-desmethyltamoxifen),CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,DrugBank,True
+4-Hydroxytamoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,Endoxifen (4-hydroxy-N-desmethyltamoxifen),CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,DrugBank,True
+4-Hydroxytamoxifen,CCC(=C(c1ccc(O)cc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,4-hydroxytamoxifen sulfate,CCC(=C(c1ccc(OCCN(C)C)cc1)c1ccc(OS(=O)(=O)O)cc1)c1ccccc1,DrugBank,True
+N-Desmethyltamoxifen,CCC(=C(c1ccccc1)c1ccc(OCCNC)cc1)c1ccccc1,"N,N-didesmethyltamoxifen",CCC(=C(c1ccccc1)c1ccc(OCCN)cc1)c1ccccc1,DrugBank,True
+Dehydroxyzyleuton,CC(NC(N)=O)c1cc2ccccc2s1,Dehydroxyzileuton sulfoxide,CC(NC(N)=O)c1cc2ccccc2[s+]1[O-],DrugBank,True
+(R)-MHD,NC(=O)N1c2ccccc2CC(O)c2ccccc21,(R)-MHD glucuronide metabolite,NC(=O)N1c2ccccc2CC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21,DrugBank,True
+2-hydroxyestrone,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O,2-methoxyestrone,COc1cc2c(cc1O)CCC1C2CCC2(C)C(=O)CCC12,DrugBank,True
+O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,O-Desmethylnaproxen sulfate,CC(C(=O)O)c1ccc2cc(OS(=O)(=O)O)ccc2c1,DrugBank,True
+O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,O-Desmethylnaproxen acyl glucuronide,CC(C(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c1ccc2cc(O)ccc2c1,DrugBank,True
+O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,O-Desmethylnaproxen O-glucuronide,CC(C(=O)O)c1ccc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc2c1,DrugBank,True
+1-Naphthaldehyde,O=Cc1cccc2ccccc12,1-Naphthoic acid,O=C(O)c1cccc2ccccc12,DrugBank,True
+1-Naphthaldehyde,O=Cc1cccc2ccccc12,1-Naphthalenemethanol,OCc1cccc2ccccc12,DrugBank,True
+6-α-hydrocodol,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341,6-α-hydromorphol,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,DrugBank,True
+N-Desmethyldiphenhydramine,CNCCOC(c1ccccc1)c1ccccc1,"N,N-Didesmethyldiphenhydramine",NCCOC(c1ccccc1)c1ccccc1,DrugBank,True
+N-Acetyl-5-hydroxytryptamine,CC(=O)NCCc1c[nH]c2ccc(O)cc12,N-Acetyl-5-hydroxytryptamine sulfate,CC(=O)NCCc1c[nH]c2ccc(OS(=O)(=O)O)cc12,DrugBank,True
+N-Acetyl-5-hydroxytryptamine,CC(=O)NCCc1c[nH]c2ccc(O)cc12,N-Acetyl-5-hydroxytryptamine glucuronide,CC(=O)NCCc1c[nH]c2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc12,DrugBank,True
+6-Hydroxymelatonin,COc1cc2c(CCNC(C)=O)c[nH]c2cc1O,6-Hydroxymelatonin glucuronide,COc1cc2c(CCNC(C)=O)c[nH]c2cc1OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+(E)-2-hydroxydoxepin,CN(C)CCC=C1c2ccccc2COc2ccc(O)cc21,Hydroxydoxepin glucuronide,CN(C)CCC=C1c2ccccc2COc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc21,DrugBank,True
+Desmethylclomipramine,CNCCCN1c2ccccc2CCc2ccc(Cl)cc21,didesmethylclomipramine,NCCCN1c2ccccc2CCc2ccc(Cl)cc21,DrugBank,True
+4'-hydroxylumiracoxib (M23),Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)O)c1,4'-Carboxylumiracoxib glucuronide (M22),Cc1ccc(Nc2c(F)cc(O)cc2Cl)c(CC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c1,DrugBank,True
+2-Oxoquazepam,O=C1CN=C(c2ccccc2F)c2cc(Cl)ccc2N1CC(F)(F)F,3-hydroxy-2-oxoquazepam,O=C1C(O)N=C(c2ccccc2F)c2cc(Cl)ccc2N1CC(F)(F)F,DrugBank,True
+6-Hydroxymethyletoricoxib,CS(=O)(=O)c1ccc(-c2cc(Cl)cnc2-c2ccc(CO)nc2)cc1,6-Hydroxymethyletoricoxib glucuronide,CS(=O)(=O)c1ccc(-c2cc(Cl)cnc2-c2ccc(COC3OC(C(=O)O)C(O)C(O)C3O)nc2)cc1,DrugBank,True
+4-hydroxymethyl ambrisentan,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)O,4-hydroxymethyl ambrisentan glucuronide,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,True
+1-PP,c1cnc(N2CCNCC2)nc1,5-OH 1-PP,Oc1cnc(N2CCNCC2)nc1,DrugBank,True
+Endoxifen (4-hydroxy-N-desmethyltamoxifen),CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,Tamoxifen Glucuronides,CCC(=C(c1ccc(OCCNC)cc1)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1)c1ccccc1,DrugBank,True
+Endoxifen (4-hydroxy-N-desmethyltamoxifen),CCC(=C(c1ccc(O)cc1)c1ccc(OCCNC)cc1)c1ccccc1,4-endoxifen Sulfate,CCC(=C(c1ccc(OCCNC)cc1)c1ccc(OS(=O)(=O)O)cc1)c1ccccc1,DrugBank,True
+Lumiracoxib metabolite M25,Cc1ccc2c(c1)CC(=O)N2c1c(F)cc(O)cc1Cl,Lumiracoxib metabolite M25 glucuronide (M20),Cc1ccc2c(c1)CC(=O)N2c1c(F)cc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1Cl,DrugBank,True
+M-3,COC(=O)C1=C(C)NC(C)=C(C(=O)O)C1c1cccc([N+](=O)[O-])c1,M-4,COC(=O)c1c(C)nc(C)c(C(=O)O)c1-c1cccc([N+](=O)[O-])c1,DrugBank,True

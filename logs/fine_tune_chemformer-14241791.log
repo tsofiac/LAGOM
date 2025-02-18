@@ -1,0 +1,17 @@
+cp: missing file operand
+Try 'cp --help' for more information.
+sed: no input files
+sed: no input files
+sed: no input files
+sed: no input files
+sed: no input files
+Error executing job with overrides: ['+config=']
+Cannot find primary config ''. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///projects/cc/se_users/carlsson_ksmq649/MasterThesis
+	provider=hydra-colorlog, path=pkg://hydra_plugins.hydra_colorlog.conf
+	provider=schema, path=structured://
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
