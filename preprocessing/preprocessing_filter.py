@@ -21,7 +21,7 @@ def remove_duplicates(data_file, duplicates_data_file): #Removes duplicate react
     duplicates_df = df[df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False)]
     df = df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='first') 
     len_after = len(df)
-    print("Total data points removed due to duplicates:", len_before - len_after)
+    print("Total data points removed with remove_duplicates:", len_before - len_after)
 
     df.to_csv(data_file, index=False)
     duplicates_df.to_csv(duplicates_data_file, index=False)
@@ -39,7 +39,7 @@ def remove_equal_parent_child(data_file, removed_data_file):
     filtered_data.to_csv(data_file, index=False)
     removed_data.to_csv(removed_data_file, index=False)
 
-    print(f"Total data points removed with equal_parent_child_filter: {total_removed}")
+    print(f"Total data points removed with remove_equal_parent_child: {total_removed}")
 
 def filter_data_on_both_sides(data_file, filter_method, removed_data_file): 
     data = pd.read_csv(data_file)
