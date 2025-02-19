@@ -1,63 +1,68 @@
 import json
 import pandas as pd
 
-# Load the JSON data from the file
-with open('gloryx_reference_dataset.json', 'r') as json_file:
-    data = json.load(json_file)
 
-# Prepare lists to hold the extracted data
-products = []
-reactants = []
-set_column = []
+def load_gloryx(input_file, output_file):
+    # Load JSON data from the input file
+    with open(input_file, 'r') as f:
+        data = json.load(f)
 
-# Iterate over each entry in the JSON data
-for entry in data:
-    parent_smiles = entry['Parent molecule']['SMILES']
-  
-    # Iterate over metabolites for each parent molecule
-    for metabolite in entry['Metabolites']:
-        metabolite_smiles = metabolite['SMILES']
-  
-        # Append the SMILES and 'train' set to the lists
-        products.append(metabolite_smiles)
-        reactants.append(parent_smiles)
-        set_column.append('train')
+    # Prepare lists to hold the extracted data
+    child_smiles = []
+    parent_smiles = []
+    child_name = []
+    parent_name = []
+    set_column = []
 
-# Calculate the cutoff index for the last 10% to be labeled as 'val'
-cutoff_index = int(len(products) * 0.9)
+    def process_metabolites(metabolites, drug_smiles, drug_name):
+        for metabolite in metabolites:
+            metabolite_smiles = metabolite['smiles']
+            metabolite_name = metabolite.get('metaboliteName', None)
+            
+            # Append the data to the lists
+            child_smiles.append(metabolite_smiles)
+            parent_smiles.append(drug_smiles)
+            child_name.append(metabolite_name)
+            parent_name.append(drug_name)
+            set_column.append('test')
+            
+            # Process any nested metabolites
+            if 'metabolites' in metabolite:
+                process_metabolites(metabolite['metabolites'], metabolite_smiles, drug_name)
 
-# Update the last 10% of the set_column to 'val'
-set_column[cutoff_index:] = ['val'] * (len(products) - cutoff_index)
 
-# Create a DataFrame with the collected data
-df1 = pd.DataFrame({
-    'products': products,
-    'reactants': reactants,
-    'set': set_column
-})
+    # Iterate over each entry in the JSON data
+    for entry in data:
+        drug_name = entry['drugName']
+        drug_smiles = entry['smiles']
+        
+        # Process each metabolite
+        if 'metabolites' in entry:
+            process_metabolites(entry['metabolites'], drug_smiles, drug_name)
 
-# Write the DataFrame to a TSV file (tab-separated values)
-df1.to_csv('10percent_gloryx_reference_dataset.csv', sep='\t', index=False)
+    # Create a DataFrame with the collected data
+    df = pd.DataFrame({
+        'parent_name': parent_name,
+        'child_name': child_name,
+        'parent_smiles': parent_smiles,
+        'child_smiles': child_smiles,
+        'set': set_column
+    })
 
-# Create df2 for the half-and-half dataset
-half_index = len(products) // 2
+    # Calculate number of unique parents by parent_name
+    unique_parents_by_name = df['parent_name'].nunique()
+    print(f"Number of unique parent names: {unique_parents_by_name}")
 
-# Select half of the products and reactants for 'train'
-half_train_products = products[:half_index]
-half_train_reactants = reactants[:half_index]
-half_train_set = ['train'] * half_index
+    # Alternatively, calculate number of unique parents by parent_smiles
+    unique_parents_by_smiles = df['parent_smiles'].nunique()
+    print(f"Number of unique parent SMILES: {unique_parents_by_smiles}")
 
-# Duplicate the same for 'val'
-half_val_products = products[:half_index]
-half_val_reactants = reactants[:half_index]
-half_val_set = ['val'] * half_index
 
-# Combine the halves to form the full DataFrame
-df2 = pd.DataFrame({
-    'products': half_train_products + half_val_products,
-    'reactants': half_train_reactants + half_val_reactants,
-    'set': half_train_set + half_val_set
-})
+    # Write the DataFrame to a TSV file (tab-separated values)
+    df.to_csv(output_file, index=False)
 
-# Write the second DataFrame to a TSV file (tab-separated)
-df2.to_csv('half_half_gloryx_reference_dataset.csv', sep='\t', index=False)
+
+gloryx = 'dataset/raw_data/gloryx_test_dataset.json'
+gloryx_loaded = 'dataset/curated_data/gloryx_test_dataset.csv'
+
+load_gloryx(gloryx, gloryx_loaded)
