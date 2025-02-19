@@ -26,6 +26,10 @@ def remove_duplicates(data_file, duplicates_data_file): #Removes duplicate react
     df.to_csv(data_file, index=False)
     duplicates_df.to_csv(duplicates_data_file, index=False)
 
+def non_equal_smiles(parent_smiles, child_smiles):
+    # Returns True if the smiles are not equal, False otherwise.
+    return parent_smiles != child_smiles
+
 def remove_equal_parent_child(data_file, removed_data_file):
     data = pd.read_csv(data_file)
 
@@ -99,7 +103,7 @@ def molecule_allowed_based_on_weight(molecule, max_weight=750, min_weight=100):
     return False 
 # ----------------------------------------------------------------
 
-def define_finger_print_similarity(dataset):
+def define_fingerprint_similarity(dataset):
     parent_smiles = dataset['parent_smiles'].tolist()
     child_smiles = dataset['child_smiles'].tolist()
 
@@ -124,9 +128,9 @@ def fingerprints_allowed(similarity, min_similarity):
         return False
     return True
 
-def finger_print_similarity_filter(data_file, removed_data_file, min_similarity = 0.15):
+def filter_fingerprint_similarity(data_file, removed_data_file, min_similarity = 0.15):
     data = pd.read_csv(data_file)
-    data = define_finger_print_similarity(data)
+    data = define_fingerprint_similarity(data)
 
     total_removed = 0
 
@@ -139,10 +143,6 @@ def finger_print_similarity_filter(data_file, removed_data_file, min_similarity 
     removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with finger_print_similarity_filter: {total_removed}")
-
-def non_equal_smiles(parent_smiles, child_smiles):
-    # Returns True if the smiles are not equal, False otherwise.
-    return parent_smiles != child_smiles
 
 def filter_endogenous_reaction(data_file, removed_data_file):
 
@@ -189,6 +189,6 @@ if __name__ == "__main__":
     filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
     filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
     filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-    finger_print_similarity_filter(clean, removed_fingerprints)
+    filter_fingerprint_similarity(clean, removed_fingerprints)
     if name == 'drugbank':
         filter_endogenous_reaction(clean, removed_reactions)
