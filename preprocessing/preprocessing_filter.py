@@ -142,7 +142,7 @@ def filter_fingerprint_similarity(data_file, removed_data_file, min_similarity =
     filtered_data.to_csv(data_file, index=False)
     removed_data.to_csv(removed_data_file, index=False)
 
-    print(f"Total data points removed with finger_print_similarity_filter: {total_removed}")
+    print(f"Total data points removed with fingerprint_similarity_filter: {total_removed}")
 
 def filter_endogenous_reaction(data_file, removed_data_file):
 
