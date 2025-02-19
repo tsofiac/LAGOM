@@ -15,8 +15,8 @@ def add_source_column(csv, source): #source is either 'drugbank' or 'metxbiodb'
     
 def combine_datasets(metxbiodb_df, drugbank_df, output_csv):
     # Select only the relevant columns
-    drugbank_selected_df = drugbank_df[['parent_name', 'parent_smiles', 'child_name', 'child_smiles', 'source']].copy()
-    metxbiodb_selected_df = metxbiodb_df[['parent_name', 'parent_smiles', 'child_name', 'child_smiles', 'source']].copy()
+    drugbank_selected_df = drugbank_df[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'source']].copy()
+    metxbiodb_selected_df = metxbiodb_df[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'source']].copy()
     # Concatenate the two DataFrames
     combined_df = pd.concat([metxbiodb_selected_df, drugbank_selected_df], ignore_index=True)
 
@@ -36,7 +36,7 @@ def remove_duplicates(combined_csv, removed_duplicates_csv):  # Removes duplicat
     duplicates_df = df[df['is_duplicate']]
     
     # Modify the 'source' column for the rows that are kept
-    df.loc[~df['is_duplicate'], 'source'] = 'Both'  # Change 'source' value for rows that are kept
+    df.loc[df['is_duplicate'], 'source'] = 'Both'  # Change 'source' value for rows that are kept
 
     # Remove the 'is_duplicate' column as it's no longer needed
     df = df.drop(columns='is_duplicate')
@@ -72,10 +72,11 @@ def remove_duplicates(combined_csv, removed_duplicates_csv):  # Removes duplicat
 if __name__ == "__main__":
 
     output_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+    removed_csv = 'dataset/removed_data/combined_duplicates.csv'
 
     metxbiodb_df = add_source_column('dataset/curated_data/metxbiodb_smiles_clean.csv', 'metxbiodb')
     drugbank_df = add_source_column('dataset/curated_data/drugbank_smiles_clean.csv', 'drugbank')
 
     combine_datasets(metxbiodb_df, drugbank_df, output_csv)
 
-    remove_duplicates(output_csv, 'dataset/removed_data/combined_duplicates.csv')
+    remove_duplicates(output_csv, removed_csv)
