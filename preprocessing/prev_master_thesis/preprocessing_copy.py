@@ -392,6 +392,7 @@ def divide_duplicates():
     metxbiodb_inds, drugbank_inds = next(split)
 
     metxbiodb_dups = duplicates.iloc[metxbiodb_inds] 
+    
     drugbank_dups = duplicates.iloc[drugbank_inds] 
 
     metxbiodb = compare_dataset_remove_duplicates(metxbiodb, duplicates)
