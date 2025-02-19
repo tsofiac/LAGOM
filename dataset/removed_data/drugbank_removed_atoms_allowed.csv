@@ -24,9 +24,7 @@ DBMET01462,Dimethyl selenide,DBMET01463,Trimethylselenonium,,C[Se]C,C[Se+](C)C
 DBMET01466,Se-methylselenocysteine selenoxide,DBMET01467,Methyl selenic acid,,C[Se](=O)CC(N)C(=O)O,C[Se]O
 DB13949,Ferric cation,DBMET02047,ferrous cation (Fe2+),Cytochrome b,[Fe+3],[Fe+2]
 DB14520,Tetraferric tricitrate decahydrate,DB14510,Ferrous cation,Plasma membrane ascorbate-dependent reductase CYBRD1,O=C(O)CC(O)(CC(=O)O)C(=O)O,[Fe+2]
-DB14510,Ferrous cation,DB14510,Ferrous cation,Ferritin heavy chain,[Fe+2],[Fe+2]
 DB00188,Bortezomib,DBMET01061,Bortezomib metabolite M1,"Cytochrome P450 2C9, Cytochrome P450 2C19, Cytochrome P450 2D6, Cytochrome P450 3A4",CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1
-DB00188,Bortezomib,DBMET01062,Bortezomib metabolite M2,"Cytochrome P450 2C9, Cytochrome P450 2C19, Cytochrome P450 2D6, Cytochrome P450 3A4",CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1
 DB00188,Bortezomib,DBMET01081,Bortezomib metabolite M34,,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)CC(=O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1
 DB00188,Bortezomib,DBMET01122,Bortezomib metabolite M23 or M24 (1),"Cytochrome P450 3A4, Cytochrome P450 2C19, Cytochrome P450 1A2, Cytochrome P450 2D6",CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)C=CNC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1
 DB00188,Bortezomib,DBMET01124,Bortezomib metabolite M23 or M24 (2),"Cytochrome P450 3A4, Cytochrome P450 2C19, Cytochrome P450 1A2, Cytochrome P450 2D6",CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)=CCNC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1
@@ -37,4 +35,3 @@ DB09570,Ixazomib,DBMET03786,Ixazomib M2 metabolite,,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl
 DB09570,Ixazomib,DBMET03787,Ixazomib M5 metabolite,,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,CC(C)CC(O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl
 DB13235,Perboric acid,DBMET02108,Carbonate,,O=BOO,O=C(O)O
 DB13235,Perboric acid,DB11091,Hydrogen peroxide,,O=BOO,OO
-DB13235,Perboric acid,DB09460,Sodium carbonate,,O=BOO,O=C(O)O

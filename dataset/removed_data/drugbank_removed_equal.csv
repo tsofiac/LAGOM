@@ -2,54 +2,37 @@ parent_id,parent_name,child_id,child_name,enzymes,parent_smiles,child_smiles
 DB00153,Ergocalciferol,DBMET02437,beta-ergocalciferol,Ribulose-phosphate 3-epimerase,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)C=CC(C)C(C)C,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)C=CC(C)C(C)C
 DB00175,Pravastatin,DBMET02472,6-epi-pravastatin,,CCC(C)C(=O)OC1CC(O)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21,CCC(C)C(=O)OC1CC(O)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21
 DB00185,Cevimeline,DBMET00430,cevimeline trans-sulfoxide,"Cytochrome P450 3A4, Cytochrome P450 2D6",CC1OC2(CS1)CN1CCC2CC1,CC1OC2(CS1)CN1CCC2CC1
-DB00185,Cevimeline,DBMET00431,cevimeline cis-sulfoxide,Cytochrome P450 3A4,CC1OC2(CS1)CN1CCC2CC1,CC1OC2(CS1)CN1CCC2CC1
-DB00185,Cevimeline,DBMET00433,cevimeline N-oxide,Flavin-containing monooxygenase 1,CC1OC2(CS1)CN1CCC2CC1,CC1OC2(CS1)CN1CCC2CC1
 DB00287,Travoprost,DBMET02216,Travoprost free acid,,CC(C)OC(=O)CCCC=CCC1C(O)CC(O)C1C=CC(O)COc1cccc(C(F)(F)F)c1,CC(C)OC(=O)CCCC=CCC1C(O)CC(O)C1C=CC(O)COc1cccc(C(F)(F)F)c1
 DB00330,Ethambutol,DBMET03256,Ethambutol Aldehyde,,CCC(CO)NCCNC(CC)CO,CCC(CO)NCCNC(CC)CO
-DBMET03256,Ethambutol Aldehyde,DBMET03257,"2,2'-(Ethylenediimino)di-butryic acid",,CCC(CO)NCCNC(CC)CO,CCC(CO)NCCNC(CC)CO
 DB00501,Cimetidine,DBMET03242,cimetidine sulfoxide,,CNC(=NC#N)NCCSCc1nc[nH]c1C,CNC(=NC#N)NCCSCc1nc[nH]c1C
-DB00501,Cimetidine,DBMET03243,hydroxymethyl cimetidine,,CNC(=NC#N)NCCSCc1nc[nH]c1C,CNC(=NC#N)NCCSCc1nc[nH]c1C
 DBMET01101,"2,3-Dihydroxycarbamazepine",DBMET02601,Carbamazepine-o-quinione,,NC(=O)N1c2ccccc2C=Cc2cc(O)c(O)cc21,NC(=O)N1c2ccccc2C=Cc2cc(O)c(O)cc21
 DB00590,Doxazosin,DBMET02603,"Demethylated metabolite, Doxazosin",,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC
-DB00590,Doxazosin,DBMET02604,"Hydroxylated metabolite, Doxazosin",,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC
 DBMET00485,Adenosine monophosphate,DBMET03265,Adenosine Diphosphate,Adenylate kinase isoenzyme 1,Nc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,Nc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O
 DB00688,Mycophenolate mofetil,DBMET02607,Mycophenolic acyl-glucuronide (AcMPAG),"UDP-glucuronosyltransferase 1A9, UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A8, UDP-glucuronosyltransferase 1A7, UDP-glucuronosyltransferase 1A10",COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)OCCN1CCOCC1)C(=O)OC2,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)OCCN1CCOCC1)C(=O)OC2
 DB01024,Mycophenolic acid,DBMET02606,6-O-desmethyl-MPA (DM-MPA),"Cytochrome P450 3A4, Cytochrome P450 3A5, Cytochrome P450 2C8",COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)O)C(=O)OC2,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)O)C(=O)OC2
 DBMET03411,Deoxydaunorubicin aglycone,DBMET03406,,,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3
-DBMET03406,Deoxydaunorubicinol aglycone,DBMET03406,Deoxydaunorubicinol aglycone,,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3
 DB00727,Nitroglycerin,DBMET02594,"1,2-glyceryl dinitrate","Aldehyde dehydrogenase, mitochondrial",O=[N+]([O-])OCC(CO[N+](=O)[O-])O[N+](=O)[O-],O=[N+]([O-])OCC(CO[N+](=O)[O-])O[N+](=O)[O-]
-DB00727,Nitroglycerin,DBMET02598,"1,3-glyceryl dinitrate","Aldehyde dehydrogenase, mitochondrial",O=[N+]([O-])OCC(CO[N+](=O)[O-])O[N+](=O)[O-],O=[N+]([O-])OCC(CO[N+](=O)[O-])O[N+](=O)[O-]
 DB00755,Tretinoin,DB00982,Isotretinoin,"Cytochrome P450 3A7, Cytochrome P450 2C8, Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2A6",CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
-DB00755,Tretinoin,DB00523,Alitretinoin,"Cytochrome P450 2C9, Cytochrome P450 2C8, Cytochrome P450 3A4",CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
 DB00787,Acyclovir,DBMET02605,8-hydroxy-acyclovir,,Nc1nc(=O)c2ncn(COCCO)c2[nH]1,Nc1nc(=O)c2ncn(COCCO)c2[nH]1
 DB00820,Tadalafil,DBMET03416,Tadalafil catechol metabolite,Cytochrome P450 3A4,CN1CC(=O)N2C(Cc3c([nH]c4ccccc34)C2c2ccc3c(c2)OCO3)C1=O,CN1CC(=O)N2C(Cc3c([nH]c4ccccc34)C2c2ccc3c(c2)OCO3)C1=O
 DB00853,Temozolomide,DBMET03266,Temozolomide carboxylic acid metabolite (TMA),,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
-DB00853,Temozolomide,DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
-DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),DBMET03268,5-aminoimidazole-4-carboxamide (AIC),,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
-DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),DBMET03269,Methyl diazonium,,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
 DB00871,Terbutaline,DBMET03275,Terbutaline Sulfate,Sulfotransferase,CC(C)(C)NCC(O)c1cc(O)cc(O)c1,CC(C)(C)NCC(O)c1cc(O)cc(O)c1
-DB00871,Terbutaline,DBMET03276,Terbutaline Glucuronide,UDP-glucuronosyltransferases (UGTs),CC(C)(C)NCC(O)c1cc(O)cc(O)c1,CC(C)(C)NCC(O)c1cc(O)cc(O)c1
 DB00921,Buprenorphine,DBMET00175,Hydroxybuprenorphine,"Cytochrome P450 3A4, Cytochrome P450 3A5, Cytochrome P450 3A7",COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5
 DBMET00174,Norbuprenorphine,DBMET01295,Hydroxynorbuprenorphine,,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5
 DBMET03287,3-Hydroxy Pindolol,DBMET03288,Pindolol Sulfate,,CC(C)N(O)CC(O)COc1cccc2[nH]ccc12,CC(C)N(O)CC(O)COc1cccc2[nH]ccc12
 DBMET03314,Alpha-methylnorepinephrine,DBMET03315,Alpha-methylepinephrine,Phenylethanolamine N-methyltransferase,CC(N)C(O)c1ccc(O)c(O)c1,CC(N)C(O)c1ccc(O)c(O)c1
-DB00982,Isotretinoin,DBMET02548,all-trans-retinoic acid,,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
 DBMET02552,4-oxo-13-cis-retinoic acid,DBMET02550,4-oxo-all-trans-retinoic acid,,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O
-DBMET02550,4-oxo-all-trans-retinoic acid,DBMET02552,4-oxo-13-cis-retinoic acid,,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O
 DB01076,Atorvastatin,DBMET01268,Atorvastatin lactone,,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O
 DBMET00351,para-hydroxyatorvastatin,DBMET01266,para-hydroxyatorvastatin lactone,,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O
 DBMET00352,ortho-hydroxyatorvastatin,DBMET01267,ortho-hydroxyatorvastatin lactone,,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O
 DB01171,Moclobemide,DBMET02153,Moclobemide M1,,O=C(NCCN1CCOCC1)c1ccc(Cl)cc1,O=C(NCCN1CCOCC1)c1ccc(Cl)cc1
 DB01192,Oxymorphone,DBMET00321,oxymorphone,Cytochrome P450 2D6,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5
 DB01409,Tiotropium,DBMET02592,Dithienylglycolic Acid,,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12
-DB01409,,DBMET02593,N-methylscopine,,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12,C[N+]1(C)C2CC(OC(=O)C(O)(c3cccs3)c3cccs3)CC1C1OC12
 DB05015,Belinostat,DBMET01443,Belinostat glucuronide,UDP-glucuronosyltransferase 1A1,O=C(C=Cc1cccc(S(=O)(=O)Nc2ccccc2)c1)NO,O=C(C=Cc1cccc(S(=O)(=O)Nc2ccccc2)c1)NO
 DB06217,Vernakalant,DBMET01446,RSD1385,Cytochrome P450 2D6,COc1ccc(CCOC2CCCCC2N2CCC(O)C2)cc1OC,COc1ccc(CCOC2CCCCC2N2CCC(O)C2)cc1OC
 DB06781,Difluprednate,DBMET00837,difluoroprednisolone butyrate,,CCCC(=O)OC1(C(=O)COC(C)=O)CCC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C,CCCC(=O)OC1(C(=O)COC(C)=O)CCC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C
 DB08893,Mirabegron,DBMET03330,Mirabegron M8 metabolite,,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1
-DBMET03330,Mirabegron M8 metabolite,DBMET03331,Mirabegron M9 metabolite,,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1
 DBMET03332,Mirabegron M16 metabolite,DBMET03333,Mirabegron M5 metabolite,,Nc1ccc(CCNCC(O)c2ccccc2)cc1,Nc1ccc(CCNCC(O)c2ccccc2)cc1
-DBMET03332,Mirabegron M16 metabolite,DBMET03334,Mirabegron M17 metabolite,,Nc1ccc(CCNCC(O)c2ccccc2)cc1,Nc1ccc(CCNCC(O)c2ccccc2)cc1
 DB08932,Macitentan,DBMET03419,M6,"Cytochrome P450 3A4, Cytochrome P450 2C8, Cytochrome P450 2C9, Cytochrome P450 2C19",CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1
 DB09053,Ibrutinib,DBMET02023,PCI-45773 (M35),,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1
 DBMET02025,PCI-45741 (M25),DBMET02026,M20,,C=CC(=O)NCC(CCC(=O)O)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,C=CC(=O)NCC(CCC(=O)O)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21
@@ -61,8 +44,7 @@ DBMET00596,25-Hydroxyvitamin D2-25-glucuronide,DBMET00608,25-Hydroxyvitamin D2 2
 DB11282,Diethyltoluamide,DB11282,Diethyltoluamide,"Cytochrome P450 1A1, Cytochrome P450 2B6, Cytochrome P450 2D6, Cytochrome P450 2E1",CCN(CC)C(=O)c1cccc(C)c1,CCN(CC)C(=O)c1cccc(C)c1
 DB03501,Galactose-uridine-5'-diphosphate,DB01861,Uridine diphosphate glucose,UDP-galactose 4-epimerase,O=c1ccn(C2OC(COP(=O)(O)OP(=O)(O)OC3OC(CO)C(O)C(O)C3O)C(O)C2O)c(=O)[nH]1,O=c1ccn(C2OC(COP(=O)(O)OP(=O)(O)OC3OC(CO)C(O)C(O)C3O)C(O)C2O)c(=O)[nH]1
 DB11751,Cabotegravir,DBMET03246,Cabotegravir M1 Metabolite,"UDP-glucuronosyltransferase 1A9, UDP-glucuronosyltransferase 1A1",CC1COC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,CC1COC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12
-DB11751,Cabotegravir,DBMET03247,Cabotegravir M2 Metabolite,"UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A9",CC1COC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,CC1COC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12
+DB14510,Ferrous cation,DB14510,Ferrous cation,Ferritin heavy chain,[Fe+2],[Fe+2]
 DB15456,Vericiguat,DBMET03244,Vericiguat N-glucuronide,"UDP-glucuronosyltransferase 1A9, UDP-glucuronosyltransferase 1A1",COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N,COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N
-DB15456,Vericiguat,DBMET03245,Vericiguat debenzylated metabolite,,COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N,COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N
 DB15694,Cedazuridine,DBMET03186,"(4S)-2′-Deoxy-2′,2′-difluoro-3,4,5,6-tetrahydrouridine",,O=C1NC(O)CCN1C1OC(CO)C(O)C1(F)F,O=C1NC(O)CCN1C1OC(CO)C(O)C1(F)F
 DB16217,Leniolisib,DBMET03652,Leniolisib M7 metabolite,"Cytochrome P450 3A4, Cytochrome P450 3A5, Cytochrome P450 1A2, Cytochrome P450 2D6",CCC(=O)N1CCC(Nc2ncnc3c2CN(c2cnc(OC)c(C(F)(F)F)c2)CC3)C1,CCC(=O)N1CCC(Nc2ncnc3c2CN(c2cnc(OC)c(C(F)(F)F)c2)CC3)C1

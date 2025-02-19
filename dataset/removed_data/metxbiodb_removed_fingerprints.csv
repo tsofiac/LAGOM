@@ -9,7 +9,6 @@ aprepitant,CC(OC1OCCN(Cc2nc(O)n[nH]2)C1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,
 astemizole,COc1ccc(CCN2CCC(N=c3[nH]c4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,2-(4-hydroxyphenyl)acetaldehyde,O=CCc1ccc(O)cc1,0.109375
 l-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,2-chloroacetaldehyde,O=CCCl,0.125
 l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,chloroacetaldehyde,O=CCCl,0.11428571428571428
-Halothane ,FC(F)(F)C(Cl)Br,chlorodifluoroethene,FC(F)=CCl,0.1111111111111111
 DEET,CCN(CC)C(=O)c1cccc(C)c1,acetaldehyde,CC=O,0.06451612903225806
 Trichloroethylene,ClC=C(Cl)Cl,Chloral hydrate,OC(O)C(Cl)(Cl)Cl,0.13333333333333333
 "1-Chloro-2,4-dinitrobenzene",O=[N+]([O-])c1ccc(Cl)c([N+](=O)[O-])c1,,NC(CCC(=O)NC(CSC1(Cl)C=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.13513513513513514

@@ -8,7 +8,6 @@ DB00313,Valproic acid,DBMET01015,Valproic acid CoA,,CCCC(CCC)C(=O)O,CCCC(CCC)C(=
 DB00322,Floxuridine,DBMET00855,alpha-Fluoro-beta-alanine,,O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1F,NCC(F)C(=O)O,0.08
 DB00322,Floxuridine,DBMET00655,"5,6-Dihydro-5-fluorouracil",,O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1F,O=C1NCC(F)C(=O)N1,0.13725490196078433
 DB00333,Methadone,DBMET00181,"2-Ethylidene-1,5-dimethyl-3,3-diphenylpyrrolidine","Cytochrome P450 2D6, Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2C8, Cytochrome P450 2C19, Cytochrome P450 2C9",CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,CC=C1N(C)C(C)CC1(c1ccccc1)c1ccccc1,0.12962962962962962
-DB00333,Methadone,DBMET03778,"[S-(E)]-2-Ethylidene-1,5-dimethyl-3,3-diphenyl-pyrrolidine","Cytochrome P450 2D6, Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2C8, Cytochrome P450 2C19, Cytochrome P450 2C9",CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,CC=C1N(C)C(C)CC1(c1ccccc1)c1ccccc1,0.12962962962962962
 DB00519,Trandolapril,DBMET00840,Diketopiperazine,,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)CC2CCCCC21,O=C1NC(Cc2cnc[nH]2)C(=O)N2CCCCC12,0.13253012048192772
 DB00531,Cyclophosphamide,DBMET00023,Chloroacetaldehyde,Cytochrome P450 3A7,O=P1(N(CCCl)CCCl)NCCCO1,O=CCCl,0.125
 DBMET00658,Aldophosphamide,DBMET01126,Acrolein,,NP(=O)(OCCC=O)N(CCCl)CCCl,C=CC=O,0.09090909090909091
@@ -31,13 +30,11 @@ DBMET00630,6-Mercaptopurine,DBMET01009,6-thiouric acid,Xanthine dehydrogenase/ox
 DBMET00630,6-Mercaptopurine,DBMET01010,6-Thiosine 5'-monophosphate,Hypoxanthine-guanine phosphoribosyltransferase,S=c1nc[nH]c2nc[nH]c12,O=P(O)(O)OCC1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,0.09836065573770492
 DB01020,Isosorbide mononitrate,DB00435,Nitric Oxide,"Cytochrome P450 3A Subfamily, Glutathione S-transferase Mu 1, Xanthine dehydrogenase/oxidase, Alcohol dehydrogenase class-3",O=[N+]([O-])OC1COC2C(O)COC12,[N]=O,0.03571428571428571
 DB01033,Mercaptopurine,DBMET00657,6-Thioinosine 5'-monophosphate,Hypoxanthine-guanine phosphoribosyltransferase,S=c1nc[nH]c2nc[nH]c12,O=P(O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,0.08333333333333333
-DB01033,Mercaptopurine,DBMET01161,Thiouric acid,Xanthine dehydrogenase/oxidase,S=c1nc[nH]c2nc[nH]c12,Oc1nc(S)c2nc(O)[nH]c2n1,0.10526315789473684
 DBMET00449,5-fluorouracil,DBMET03581,dihydrofluorouracil (DHFU),Dihydropyrimidine dehydrogenase [NADP(+)],O=c1[nH]cc(F)c(=O)[nH]1,O=C1NCC(F)C(=O)N1,0.14705882352941177
 DBMET03581,dihydrofluorouracil (DHFU),DBMET03582,β-ureidopropionic acid (FUPA),Dihydropyrimidinase-related protein 2,O=C1NCC(F)C(=O)N1,NC(=O)NCC(F)C(=O)O,0.07894736842105263
 DB01112,Cefuroxime,DBMET00328,acetaldehyde,,CON=C(C(=O)NC1C(=O)N2C(C(=O)O)=C(COC(N)=O)CSC12)c1ccco1,CC=O,0.029850746268656716
 DB01159,Halothane,DBMET00329,bromide,Cytochrome P450 2E1,FC(F)(F)C(Cl)Br,Br,0.0
 DB01159,Halothane,DBMET01542,"2-chloro-1,1-difluoroethene","Cytochrome P450 2A6, Cytochrome P450 3A4",FC(F)(F)C(Cl)Br,FC(F)=CCl,0.1111111111111111
-DB01159,Halothane,DBMET01542,"2-chloro-1,1-difluoroethene","Cytochrome P450 2A6, Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2C9, Cytochrome P450 2D6",FC(F)(F)C(Cl)Br,FC(F)=CCl,0.1111111111111111
 DB01168,Procarbazine,DBMET00617,Hydrazine,,CNNCc1ccc(C(=O)NC(C)C)cc1,NN,0.0
 DB01181,Ifosfamide,DBMET00023,Chloroacetaldehyde,"Cytochrome P450 3A4, Cytochrome P450 3A5, Cytochrome P450 2B6",O=P1(NCCCl)OCCCN1CCCl,O=CCCl,0.11428571428571428
 DBMET00792,aldoifosfamide,DBMET01126,Acrolein,,O=CCCOP(=O)(NCCCl)NCCCl,C=CC=O,0.0967741935483871
@@ -59,8 +56,6 @@ DBMET01436,Benzoyloxyl radical,DBMET03364,Phenyl Radical,,O=C(O)c1ccccc1,[C+]1=C
 DB09117,Paraldehyde,DBMET00328,acetaldehyde,,CC1OC(C)OC(C)O1,CC=O,0.07692307692307693
 DB09194,Etoperidone,DBMET01879,triazole propionic acid,,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,O=C(O)CCn1cncn1,0.1076923076923077
 DB09194,Etoperidone,DBMET02170,Etoperidone M21,,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,CC(=O)c1n[nH]c(=O)[nH]1,0.0967741935483871
-DBMET00449,5-fluorouracil,DBMET02004,5-FUH2,Dihydropyrimidine dehydrogenase [NADP(+)],O=c1[nH]cc(F)c(=O)[nH]1,O=C1NCC(F)C(=O)N1,0.14705882352941177
-DBMET02004,5-FUH2,DBMET02005,FUPA,Dihydropyrimidinase-related protein 2,O=C1NCC(F)C(=O)N1,NC(=O)NCC(F)C(=O)O,0.07894736842105263
 DBMET01492,m-Iodohippuric acid,DBMET01493,Radioiodide 123,,O=C(O)CNC(=O)c1cccc(I)c1,I,0.0
 DB11121,Chloroxylenol,DBMET00488,Glucuronic acid,UDP-glucuronosyltransferase 1A1,Cc1cc(O)cc(C)c1Cl,O=C(O)C1OC(O)C(O)C(O)C1O,0.029411764705882353
 DB11121,Chloroxylenol,DB11309,Sulfuric acid,UDP-glucuronosyltransferase 1A1,Cc1cc(O)cc(C)c1Cl,O=S(=O)(O)O,0.047619047619047616

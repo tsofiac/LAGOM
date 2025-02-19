@@ -15,7 +15,32 @@ def standardize_smiles(input_file,output_file): #input df that has columns 'pare
     df['child_smiles'] = standardize_smiles_collection(df['child_smiles'], False)
     df.to_csv(output_file, index=False)
 
-# saving removed data
+def remove_duplicates(data_file, duplicates_data_file): #Removes duplicate reactions
+    df = pd.read_csv(data_file)
+    len_before = len(df)
+    duplicates_df = df[df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False)]
+    df = df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='first') 
+    len_after = len(df)
+    print("Total data points removed due to duplicates:", len_before - len_after)
+
+    df.to_csv(data_file, index=False)
+    duplicates_df.to_csv(duplicates_data_file, index=False)
+
+def remove_equal_parent_child(data_file, removed_data_file):
+    data = pd.read_csv(data_file)
+
+    total_removed = 0
+
+    allowed_molecules = [non_equal_smiles(row['parent_smiles'], row['child_smiles']) for index, row in data.iterrows()]
+    filtered_data = data[allowed_molecules]
+    removed_data = data[[not allowed for allowed in allowed_molecules]]
+    total_removed += allowed_molecules.count(False)
+
+    filtered_data.to_csv(data_file, index=False)
+    removed_data.to_csv(removed_data_file, index=False)
+
+    print(f"Total data points removed with equal_parent_child_filter: {total_removed}")
+
 def filter_data_on_both_sides(data_file, filter_method, removed_data_file): 
     data = pd.read_csv(data_file)
     total_removed = 0
@@ -38,7 +63,6 @@ def filter_data_on_both_sides(data_file, filter_method, removed_data_file):
     removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with {filter_method.__name__}: {total_removed}")
-
 
 def filter_data_on_one_side(data_file, filter_method, removed_data_file, if_parent = True): 
     name_property = "parent_smiles" if if_parent else "child_smiles"
@@ -120,22 +144,6 @@ def non_equal_smiles(parent_smiles, child_smiles):
     # Returns True if the smiles are not equal, False otherwise.
     return parent_smiles != child_smiles
 
-def equal_parent_child_filter(data_file, removed_data_file):
-    data = pd.read_csv(data_file)
-
-    total_removed = 0
-
-    allowed_molecules = [non_equal_smiles(row['parent_smiles'], row['child_smiles']) for index, row in data.iterrows()]
-    filtered_data = data[allowed_molecules]
-    removed_data = data[[not allowed for allowed in allowed_molecules]]
-    total_removed += allowed_molecules.count(False)
-
-    filtered_data.to_csv(data_file, index=False)
-    removed_data.to_csv(removed_data_file, index=False)
-
-    print(f"Total data points removed with equal_parent_child_filter: {total_removed}")
-
-
 def filter_endogenous_reaction(data_file, removed_data_file):
 
     original_df = pd.read_csv(data_file)
@@ -159,69 +167,28 @@ def filter_endogenous_reaction(data_file, removed_data_file):
     print('Total data points removed with filter_endogenous_reaction: ', len(only_dbmet_parents_df))
     only_db_parents_df.to_csv(data_file, index=False)
 
-def remove_duplicates(data_file, duplicates_data_file): #Removes duplicate reactions
-    df = pd.read_csv(data_file)
-    len_before = len(df)
-    duplicates_df = df[df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False)]
-    df = df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='first') 
-    len_after = len(df)
-    print("Total data points removed due to duplicates:", len_before - len_after)
-
-    df.to_csv(data_file, index=False)
-    duplicates_df.to_csv(duplicates_data_file, index=False)
-
-
-# ---------------------------------
-
-# name = 'metxbiodb'
-# df = pd.read_csv(f'dataset/curated_data/{name}_clean_unique_parents.csv')
-
-# filtered_data, removed_data, total_removed = finger_print_similarity_filter(df)
-# filtered_data.to_csv(f'dataset/curated_data/filtered/filtered_fingerprint_{name}_clean_unique_parents.csv', index=False)
-
-# print("Total data points removed: ", total_removed)
-# print(removed_data)
-
-
-# ---------------------------------
-
-'''
-name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' ]'
-filter_method = valid_smiles #remember to change file name
-
-df = pd.read_csv(f'dataset/curated_data/{name}_clean_unique_parents.csv')
-
-filtered_data, removed_data, total_removed=filter_out_data_on_parent_and_child(df, filter_method)
-
-filtered_data.to_csv(f'dataset/curated_data/filtered/filtered_valid_smiles_{name}_clean_unique_parents.csv', index=False)
-
-print("Total data points removed: ", total_removed)
-print(removed_data)
-'''
 
 if __name__ == "__main__":
 
-
-    name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' ]
+    name = 'drugbank' # [ 'drugbank' 'metxbiodb' ]
 
     dataset = f'dataset/curated_data/{name}_smiles.csv'
     clean = f'dataset/curated_data/{name}_smiles_clean.csv'
 
     removed_valid_smiles = f'dataset/removed_data/{name}_removed_valid_smiles.csv'
-    removed_reactions = f'dataset/removed_data/{name}_removed_reactions.csv'
+    removed_duplicates = f'dataset/removed_data/{name}_removed_duplicates.csv'
+    removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
     removed_atoms_allowed = f'dataset/removed_data/{name}_removed_atoms_allowed.csv'
     removed_weights_allowed = f'dataset/removed_data/{name}_removed_weights_allowed.csv'
-    removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
     removed_fingerprints = f'dataset/removed_data/{name}_removed_fingerprints.csv'
-    duplicates_data_file = f'dataset/removed_data/{name}_duplicates.csv'
-
+    removed_reactions = f'dataset/removed_data/{name}_removed_reactions.csv'
+    
     standardize_smiles(dataset, clean)
+    remove_duplicates(clean, removed_duplicates)
+    remove_equal_parent_child(clean, removed_equal)
     filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
     filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
     filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-    equal_parent_child_filter(clean, removed_equal)
     finger_print_similarity_filter(clean, removed_fingerprints)
-    remove_duplicates(clean, duplicates_data_file)
-
     if name == 'drugbank':
         filter_endogenous_reaction(clean, removed_reactions)
