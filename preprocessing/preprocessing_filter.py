@@ -24,7 +24,9 @@ def remove_duplicates(data_file, duplicates_data_file): #Removes duplicate react
     print("Total data points removed with remove_duplicates:", len_before - len_after)
 
     df.to_csv(data_file, index=False)
-    duplicates_df.to_csv(duplicates_data_file, index=False)
+    # Only save the duplicates DataFrame if it is not empty
+    if not duplicates_df.empty:
+        duplicates_df.to_csv(duplicates_data_file, index=False)
 
 def non_equal_smiles(parent_smiles, child_smiles):
     # Returns True if the smiles are not equal, False otherwise.
@@ -41,7 +43,8 @@ def remove_equal_parent_child(data_file, removed_data_file):
     total_removed += allowed_molecules.count(False)
 
     filtered_data.to_csv(data_file, index=False)
-    removed_data.to_csv(removed_data_file, index=False)
+    if not removed_data.empty:
+        removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with remove_equal_parent_child: {total_removed}")
 
@@ -64,7 +67,8 @@ def filter_data_on_both_sides(data_file, filter_method, removed_data_file):
     removed_data = pd.concat([removed_data_children, removed_data_parents])
 
     filtered_data.to_csv(data_file, index=False)
-    removed_data.to_csv(removed_data_file, index=False)
+    if not removed_data.empty:
+        removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with {filter_method.__name__}: {total_removed}")
 
@@ -81,7 +85,8 @@ def filter_data_on_one_side(data_file, filter_method, removed_data_file, if_pare
     total_removed += allowed_molecules.count(False)
 
     filtered_data.to_csv(data_file, index=False)
-    removed_data.to_csv(removed_data_file, index=False)
+    if not removed_data.empty:
+        removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with {filter_method.__name__}: {total_removed}")
 
@@ -140,7 +145,8 @@ def filter_fingerprint_similarity(data_file, removed_data_file, min_similarity =
     total_removed += allowed_molecules.count(False)
 
     filtered_data.to_csv(data_file, index=False)
-    removed_data.to_csv(removed_data_file, index=False)
+    if not removed_data.empty:
+        removed_data.to_csv(removed_data_file, index=False)
 
     print(f"Total data points removed with fingerprint_similarity_filter: {total_removed}")
 
@@ -163,14 +169,15 @@ def filter_endogenous_reaction(data_file, removed_data_file):
         only_db_parents_df = pd.concat([only_db_parents_df,metabolite_parent_with_drug_origin_df])
         num_new_rows = len(metabolite_parent_with_drug_origin_df)
 
-    only_dbmet_parents_df.to_csv(removed_data_file, index=False)
     print('Total data points removed with filter_endogenous_reaction: ', len(only_dbmet_parents_df))
     only_db_parents_df.to_csv(data_file, index=False)
+    if not only_dbmet_parents_df.empty:
+        only_dbmet_parents_df.to_csv(removed_data_file, index=False)
 
 
 if __name__ == "__main__":
 
-    name = 'drugbank' # [ 'drugbank' 'metxbiodb' ]
+    name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' 'gloryx' ]
 
     dataset = f'dataset/curated_data/{name}_smiles.csv'
     clean = f'dataset/curated_data/{name}_smiles_clean.csv'
@@ -182,13 +189,18 @@ if __name__ == "__main__":
     removed_weights_allowed = f'dataset/removed_data/{name}_removed_weights_allowed.csv'
     removed_fingerprints = f'dataset/removed_data/{name}_removed_fingerprints.csv'
     removed_reactions = f'dataset/removed_data/{name}_removed_reactions.csv'
-    
-    standardize_smiles(dataset, clean)
-    remove_duplicates(clean, removed_duplicates)
-    remove_equal_parent_child(clean, removed_equal)
-    filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
-    filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
-    filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-    filter_fingerprint_similarity(clean, removed_fingerprints)
-    if name == 'drugbank':
-        filter_endogenous_reaction(clean, removed_reactions)
+
+    if name == 'gloryx':
+        standardize_smiles(dataset, clean)
+        remove_duplicates(clean, removed_duplicates)
+        remove_equal_parent_child(clean, removed_equal)
+    else:
+        standardize_smiles(dataset, clean)
+        remove_duplicates(clean, removed_duplicates)
+        remove_equal_parent_child(clean, removed_equal)
+        filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
+        filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
+        filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+        filter_fingerprint_similarity(clean, removed_fingerprints)
+        if name == 'drugbank':
+            filter_endogenous_reaction(clean, removed_reactions)

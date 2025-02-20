@@ -1,0 +1,3 @@
+parent_name,child_name,parent_smiles,child_smiles,generation,set
+M9,M15,CCOc1cc(C(CS(C)(=O)=O)NC(=O)c2cccc(NC(C)=O)c2C(=O)O)ccc1O,CCOc1cc(C(CS(C)(=O)=O)NC(=O)c2cccc(NC(C)=O)c2C(=O)O)ccc1OC1OC(C(=O)O)C(O)C(O)C1O,3,test
+M9,M15,CCOc1cc(C(CS(C)(=O)=O)NC(=O)c2cccc(NC(C)=O)c2C(=O)O)ccc1O,CCOc1cc(C(CS(C)(=O)=O)NC(=O)c2cccc(NC(C)=O)c2C(=O)O)ccc1OC1OC(C(=O)O)C(O)C(O)C1O,3,test
