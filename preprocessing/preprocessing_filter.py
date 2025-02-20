@@ -133,7 +133,7 @@ def fingerprints_allowed(similarity, min_similarity):
         return False
     return True
 
-def filter_fingerprint_similarity(data_file, removed_data_file, min_similarity = 0.15):
+def filter_fingerprint_similarity(data_file, removed_data_file, min_similarity = 0.20):
     data = pd.read_csv(data_file)
     data = define_fingerprint_similarity(data)
 
@@ -177,7 +177,7 @@ def filter_endogenous_reaction(data_file, removed_data_file):
 
 if __name__ == "__main__":
 
-    name = 'metxbiodb' # [ 'drugbank' 'metxbiodb' 'gloryx' ]
+    name = 'drugbank' # [ 'drugbank' 'metxbiodb' 'gloryx' ]
 
     dataset = f'dataset/curated_data/{name}_smiles.csv'
     clean = f'dataset/curated_data/{name}_smiles_clean.csv'
@@ -198,9 +198,10 @@ if __name__ == "__main__":
         standardize_smiles(dataset, clean)
         remove_duplicates(clean, removed_duplicates)
         remove_equal_parent_child(clean, removed_equal)
+        #if name == 'drugbank':
+            #filter_endogenous_reaction(clean, removed_reactions)
         filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
         filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         filter_fingerprint_similarity(clean, removed_fingerprints)
-        if name == 'drugbank':
-            filter_endogenous_reaction(clean, removed_reactions)
+        
