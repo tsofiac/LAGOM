@@ -20,13 +20,8 @@ def combine_datasets(df1, df2, output_csv=None):
     selected_df2 = df2[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'source']].copy()
 
     combined_df = pd.concat([selected_df1, selected_df2], ignore_index=True)
+    combined_df.to_csv(output_csv, index=False)
 
-    # Save the combined DataFrame to a new CSV file
-    if output_csv is None:
-        return combined_df
-    else:
-        combined_df.to_csv(output_csv, index=False)
-        return None
 
 
 def remove_duplicates(combined_csv, removed_duplicates_csv):  # Removes duplicate reactions and modifies source column
@@ -58,25 +53,15 @@ def remove_duplicates(combined_csv, removed_duplicates_csv):  # Removes duplicat
 
 
 def compare_datasets(combined_csv, df2, removed_file):
-
     df1 = pd.read_csv(combined_csv)
+    # duplicate parent_smiles between df1 and df2
+    duplicate_parent_smiles = set(df1['parent_smiles']).intersection(set(df2['parent_smiles']))
+    # those not in the duplicates set
+    non_duplicates_in_df1 = df1[~df1['parent_smiles'].isin(duplicate_parent_smiles)].copy()
+    duplicates_df = df1[df1['parent_smiles'].isin(duplicate_parent_smiles)].copy()
 
-    combined_df = combine_datasets(df1, df2)
-
-    combined_df['is_duplicate'] = combined_df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False) 
-
-    duplicates_df = combined_df[combined_df['is_duplicate']]
-
-    combined_df = combined_df.drop(columns='is_duplicate')
-    duplicates_df = duplicates_df.drop(columns='is_duplicate')
-
-    combined_df = combined_df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='last')
-
-    combined_df = combined_df[combined_df['source'] != 'GLORYx']
-
-    print('Number of duplicates found: ', int(len(duplicates_df)/2))
-
-    combined_df.to_csv(combined_csv, index=False)
+    print('Number of duplicate parents reactions found: ', len(df1)-len(non_duplicates_in_df1))
+    non_duplicates_in_df1.to_csv(combined_csv, index=False)
     duplicates_df.to_csv(removed_file, index=False)
 
 

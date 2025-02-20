@@ -204,7 +204,6 @@ Saquinavir,"(2S)-N-[(2S,3R)-4-[(3S,4aS,8aS)-3-(tert-butylcarbamoyl)-7-hydroxy-de
 abt_378,,Cc1cccc(C)c1OCC(=O)NC(Cc1ccccc1)C(O)CC(Cc1ccccc1)NC(=O)C(C(C)C)N1CCCN=C1O,Cc1cccc(C)c1OCC(=O)NC(Cc1ccccc1)C(O)CC(Cc1ccccc1)NC(=O)C(C(C)C)N1CCC(O)=NC1=O,MetXBioDB
 1â€[(2S)â€4â€(5â€benzylthiophenâ€2â€yl)butâ€3â€ynâ€2â€yl]â€1â€hydroxyurea,ABT-515,CC(C#Cc1ccc(Cc2ccccc2)s1)N(O)C(N)=O,CC(C#Cc1ccc(C(O)c2ccccc2)s1)N(O)C(N)=O,MetXBioDB
 "1-[Amino-(3,4-dichloroanilino)methylidene]-2-propan-2-ylguanidine",,CC(C)NC(=N)NC(=N)Nc1ccc(Cl)c(Cl)c1,CC(C)(O)NC(=N)NC(=N)Nc1ccc(Cl)c(Cl)c1,MetXBioDB
-ac1ldic9,2-oxo-clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,COC(=O)C(c1ccccc1Cl)N1CCC2=C(CC(=O)S2)C1,MetXBioDB
 ac1mip3e,N-deethylated  ac1mip3e,CCN(CC)CC#CC(C)(C)OC(=O)C(O)(c1ccccc1)C1CCCCC1,CCNCC#CC(C)(C)OC(=O)C(O)(c1ccccc1)C1CCCCC1,MetXBioDB
 [5-(Diethylamino)-2-methylpent-3-yn-2-yl] (2S)-2-cyclohexyl-2-hydroxy-2-phenylacetate,4-cis-OH ac1mip3e,CCN(CC)CC#CC(C)(C)OC(=O)C(O)(c1ccccc1)C1CCCCC1,CCN(CC)CC#CC(C)(C)OC(=O)C(O)(c1ccccc1)C1CCC(O)CC1,MetXBioDB
 ac1ocg1j,,CNC(C)Cc1ccccc1OC,CNC(C)Cc1ccccc1O,MetXBioDB
@@ -1083,7 +1082,6 @@ zinc188,N-demethyl-cyamemazine,CC(CN(C)C)CN1c2ccccc2Sc2ccc(C#N)cc21,CNCC(C)CN1c2
 zinc21985223,,CN(C)c1ccc(C2CC3(C)C(CCC3(O)C=CCO)C3CCC4=CC(=O)CCC4=C23)cc1,CNc1ccc(C2CC3(C)C(CCC3(O)C=CCO)C3CCC4=CC(=O)CCC4=C23)cc1,MetXBioDB
 zinc33952402,HO-MPPP,Cc1ccc(C(=O)C(C)N2CCCC2)cc1,CC(C(=O)c1ccc(CO)cc1)N1CCCC1,MetXBioDB
 zinc33952517,di-HO-MDPPP,CC(C(=O)c1ccc2c(c1)OCO2)N1CCCC1,CC(C(=O)c1ccc(O)c(O)c1)N1CCCC1,MetXBioDB
-zinc36377943,6beta - HYDROXYBUDESONIDE,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC(O)OC1CC2C3CCC4=CC(=O)C=CC4(C)C3C(O)CC2(C)C1C(=O)CO,MetXBioDB
 zinc38309998,,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21,C=C1C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C2C(OC(=O)C(C)(C)CC)C1,MetXBioDB
 zinc38309998,,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21,CCC(C)(C)C(=O)OC1CC(C)C(O)=C2C=C(O)C(C)C(CCC(O)CC(O)CC(=O)O)C21,MetXBioDB
 zinc38309998,,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21,CCC(C)(C)C(=O)OC1CC(C)(O)C=C2C=CC(C)C(CCC(O)CC(O)CC(=O)O)C21,MetXBioDB
@@ -1274,7 +1272,6 @@ Rofecoxib,5-OH-rofecoxib,CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2)cc1,CS(=O)(=O)c1
 rosiglitazone,para-hydroxyrosiglitazone ,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccccn1,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccc(O)cn1,MetXBioDB
 rosiglitazone,N-Desmethylrosiglitazone ,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccccn1,O=C1N=C(O)C(Cc2ccc(OCCNc3ccccn3)cc2)S1,MetXBioDB
 rosiglitazone,ortho-hydroxyrosiglitazone,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccccn1,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ncccc1O,MetXBioDB
-Rosuvastatin,Rosuvastatin 5 S-lactone,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=Cc1cc(O)cc(=O)o1,Both
 silybin ,O-demethylated-silybin,COc1cc(C2Oc3cc(C4Oc5cc(O)cc(O)c5C(=O)C4O)ccc3OC2CO)ccc1O,O=C1c2c(O)cc(O)cc2OC(c2ccc3c(c2)OC(c2ccc(O)c(O)c2)C(CO)O3)C1O,Both
 Simazine,N-Desethylsimazine,CCN=c1nc(Cl)[nH]c(=NCC)[nH]1,CCN=c1[nH]c(Cl)nc(=N)[nH]1,MetXBioDB
 Sulfinpyrazone,Sulfinpyrazone sulfone,O=C1C(CC[S+]([O-])c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,O=C1C(CCS(=O)(=O)c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,Both
@@ -2147,7 +2144,6 @@ Dronabinol,"9-alpha,10-alpha-epoxyhexahydrocannabinol",CCCCCc1cc(O)c2c(c1)OC(C)(
 Montelukast,Montelukast metabolite M1,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)OC2OC(C(=O)O)C(O)C(O)C2O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,DrugBank
 Chlorpromazine,chlorpromazine-N-oxide,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,C[N+](C)([O-])CCCN1c2ccccc2Sc2ccc(Cl)cc21,DrugBank
 Chlorpromazine,dedimethylchlorpromazine,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,NCCCN1c2ccccc2Sc2ccc(Cl)cc21,DrugBank
-Lenalidomide,N-acetyl-lenalidomide,Nc1cccc2c1CN(C1CCC(=O)NC1=O)C2=O,CC(=O)Nc1cccc2c1CN(C1CCC(O)=NC1=O)C2=O,DrugBank
 Raloxifene,Raloxifene-4′-glucuronide,O=C(c1ccc(OCCN2CCCCC2)cc1)c1c(-c2ccc(O)cc2)sc2cc(O)ccc12,O=C(c1ccc(OCCN2CCCCC2)cc1)c1c(-c2ccc(OC3C(O)C(O)C(O)C(O)C3C(=O)O)cc2)sc2cc(O)ccc12,DrugBank
 Raloxifene,"Raloxifene-6, 4′-diglucuronide",O=C(c1ccc(OCCN2CCCCC2)cc1)c1c(-c2ccc(O)cc2)sc2cc(O)ccc12,O=C(c1ccc(OCCN2CCCCC2)cc1)c1c(-c2ccc(OC3C(O)C(O)C(O)C(O)C3C(=O)O)cc2)sc2cc(OC3C(O)C(O)C(O)C(O)C3C(=O)O)ccc12,DrugBank
 Raloxifene,Raloxifene-6-glucuronide,O=C(c1ccc(OCCN2CCCCC2)cc1)c1c(-c2ccc(O)cc2)sc2cc(O)ccc12,O=C(c1ccc(OCCN2CCCCC2)cc1)c1c(-c2ccc(O)cc2)sc2cc(OCC3C(O)C(O)C(O)C(O)C3C(=O)O)ccc12,DrugBank
@@ -2212,7 +2208,6 @@ Diclofenac,diclofenac o-imine methine,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,C=C1C=CC=CC
 Diclofenac,"diclofenac 2',3'-oxide",O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,O=C(O)Cc1ccccc1NC1=C(Cl)C=CC2OC12Cl,DrugBank
 Diclofenac,Diclofenac radical,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,O=C(O)Cc1ccccc1[N]c1c(Cl)cccc1Cl,DrugBank
 Diclofenac,3'-Hydroxydiclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,O=C(O)Cc1ccccc1Nc1c(Cl)ccc(O)c1Cl,DrugBank
-Fluticasone propionate,fluticasone 17beta-carboxylic acid,CCC(=O)OC1(C(=O)SCF)C(C)CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C,CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)O,DrugBank
 Labetalol,Labetalol Benzyl Glucuronide Metabolite (II),CC(CCc1ccccc1)NCC(O)c1ccc(O)c(C(N)=O)c1,CC(CCc1ccccc1)NCC(OC1OC(C(=O)O)C(O)C(O)C1O)c1ccc(O)c(C(N)=O)c1,DrugBank
 Labetalol,Labetalol Phenolic Glucuronide Metabolite (III),CC(CCc1ccccc1)NCC(O)c1ccc(O)c(C(N)=O)c1,CC(CCc1ccccc1)NCC(O)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)c(C(N)=O)c1,DrugBank
 Labetalol,Labetalol Hydroxylated Metabolite (IV),CC(CCc1ccccc1)NCC(O)c1ccc(O)c(C(N)=O)c1,CC(CCc1ccc(O)cc1)NCC(O)c1ccc(O)c(C(N)=O)c1,DrugBank
@@ -2226,11 +2221,6 @@ Ethionamide,Ethionamide sulphoxide,CCc1cc(C(N)=S)ccn1,CCc1cc(C(N)=S=O)ccn1,DrugB
 Amodiaquine,desethylamodiaquine,CCN(CC)Cc1cc(Nc2ccnc3cc(Cl)ccc23)ccc1O,CCNCc1cc(Nc2ccnc3cc(Cl)ccc23)ccc1O,DrugBank
 Furazolidone,3-amino-2-oxazolidone,O=C1OCCN1N=Cc1ccc([N+](=O)[O-])o1,NN1CCOC1=O,DrugBank
 Paramethadione,"5-ethyl-5-methyl-2,4-oxazolidinedione",CCC1(C)OC(=O)N(C)C1=O,CCC1(C)OC(=O)N=C1O,DrugBank
-Imatinib,AFN911,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,CN1CCN(Cc2ccc(C(=O)NC3=CC(Nc4nccc(-c5cccnc5)n4)C(CO)C=C3)cc2)CC1,DrugBank
-Imatinib,Piperidine N-oxide imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CC[N+](C)([O-])CC3)cc2)cc1Nc1nccc(C2=CN[CH]C=C2)n1,DrugBank
-Imatinib,M7 N-oxidation imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)[n+]1[O-],DrugBank
-Imatinib,M28.8 imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3=O)cc2)cc1Nc1nccc(-c2cccnc2)n1,DrugBank
-Imatinib,APG049 imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCNC(=O)C3)cc2)cc1Nc1nccc(-c2cccnc2)n1,DrugBank
 Triamcinolone,6-beta-hydroxy-triamcinolone,CC12C=CC(=O)C=C1CCC1C3CC(O)C(O)(C(=O)CO)C3(C)CC(O)C12F,CC12C=CC(=O)C=C1C(O)CC1C3CC(O)C(O)(C(=O)CO)C3(C)CC(O)C12F,DrugBank
 Testosterone,Dihydrotestosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,DrugBank
 Testosterone,1β-hydroxy-testosterone,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4=CC(=O)CC(O)C43C)C1CCC2O,DrugBank
@@ -2316,10 +2306,6 @@ Procaine,"N,N-diethyl-2-aminoethanol",CCN(CC)CCOC(=O)c1ccc(N)cc1,CCN(CC)CCO,Drug
 Procaine,para-aminobenzoic acid,CCN(CC)CCOC(=O)c1ccc(N)cc1,Nc1ccc(C(=O)O)cc1,DrugBank
 Rocuronium,17-desacetyl-rocuronium,C=CC[N+]1(C2CC3C4CCC5CC(O)C(N6CCOCC6)CC5(C)C4CCC3(C)C2OC(C)=O)CCCC1,C=CC[N+]1(C2CC3C4CCC5CC(O)C(N6CCOCC6)CC5(C)C4CCC3(C)C2O)CCCC1,DrugBank
 Nateglinide,Nateglinide metabolite M7,CC(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,C=C(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,DrugBank
-Esomeprazole,Active Metabolite of Esomeprazole,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)nc2c1,COc1ccc2nc3n(c2c1)SCc1c(C)c(OC)c(C)c[n+]1-3,DrugBank
-Esomeprazole,Omeprazole sulfone,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)nc2c1,COc1ccc2nc(S(=O)(=O)Cc3ncc(C)c(OC)c3C)[nH]c2c1,DrugBank
-Esomeprazole,5-O-Desmethylomeprazole,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)nc2c1,COc1c(C)cnc(C[S+]([O-])c2nc3ccc(O)cc3[nH]2)c1C,DrugBank
-Esomeprazole,5-hydroxyesomeprazole,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)nc2c1,COc1ccc2nc([S+]([O-])Cc3ncc(CO)c(OC)c3C)[nH]c2c1,DrugBank
 Meclizine,Meclizine metabolite M1,Cc1cccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)c1,Cc1cccc(CN2CCN(C(c3ccc(O)cc3)c3ccc(Cl)cc3)CC2)c1,DrugBank
 Meclizine,Meclizine metabolite M2,Cc1cccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)c1,OCc1cccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)c1,DrugBank
 Riluzole,4-OH-riluzole,Nc1nc2ccc(OC(F)(F)F)cc2s1,Nc1nc2c(O)cc(OC(F)(F)F)cc2s1,DrugBank
@@ -2470,7 +2456,6 @@ Ethinylestradiol,6-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,C
 Ethinylestradiol,7-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,C#CC1(O)CCC2C3C(O)Cc4cc(O)ccc4C3CCC21C,DrugBank
 Ethinylestradiol,16α-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,C#CC1(O)C(O)CC2C3CCc4cc(O)ccc4C3CCC21C,DrugBank
 Ethinylestradiol,Ethinylestradiol-3-sulfate,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,C#CC1(O)CCC2C3CCc4cc(OS(=O)(=O)O)ccc4C3CCC21C,DrugBank
-Formoterol,Formoterol deformylated metabolite,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(N)c2)cc1,DrugBank
 Dimenhydrinate,8-chlorotheophylline,Cn1c(=O)c2nc(Cl)[nH]c2n(C)c1=O,Cn1c(=O)c2[nH]c(Cl)nc2n(C)c1=O,DrugBank
 Glycopyrronium,Glycopyrronium M9 Metabolite,C[N+]1(C)CCC(OC(=O)C(O)(c2ccccc2)C2CCCC2)C1,O=C(O)C(O)(c1ccccc1)C1CCCC1,DrugBank
 Dopamine,6-Hydroxydopamine,NCCc1ccc(O)c(O)c1,NCCc1cc(O)c(O)cc1O,DrugBank
@@ -2487,8 +2472,6 @@ Frovatriptan,N-acetyl desmethyl frovatriptan,CNC1CCc2[nH]c3ccc(C(N)=O)cc3c2C1,CC
 Albuterol,Salbutamol 4-O-sulfate,CC(C)(C)NCC(O)c1ccc(O)c(CO)c1,CC(C)(C)NCC(O)c1ccc(OS(=O)(=O)O)c(CO)c1,DrugBank
 Letrozole,Letrozole ketone analog metabolite,N#Cc1ccc(C(c2ccc(C#N)cc2)n2cncn2)cc1,N#Cc1ccc(C(=O)c2ccc(C#N)cc2)cc1,DrugBank
 Metyrapone,Metyrapol,CC(C)(C(=O)c1cccnc1)c1cccnc1,CC(C)(c1cccnc1)C(O)c1cccnc1,DrugBank
-Cinacalcet,Hydrocinnamic acid,CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12,O=C(O)CCc1ccccc1,DrugBank
-Cinacalcet,hydroxy-hydrocinnamic acid,CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12,O=C(O)CCc1cccc(O)c1,DrugBank
 Balsalazide,5-aminosalicylic acid,O=C(O)CCNC(=O)c1ccc(N=Nc2ccc(O)c(C(=O)O)c2)cc1,Nc1ccc(O)c(C(=O)O)c1,DrugBank
 Balsalazide,4-aminobenzoyl-(beta)-alanine,O=C(O)CCNC(=O)c1ccc(N=Nc2ccc(O)c(C(=O)O)c2)cc1,Nc1ccc(C(=O)NCCC(=O)O)cc1,DrugBank
 Sulfamethoxazole,5-Hydroxysulfamethoxazole,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1,Nc1ccc(S(=O)(=O)Nc2cc(CO)on2)cc1,DrugBank
@@ -2603,7 +2586,6 @@ Dantrolene,5-hydroxydantrolene,O=C1CN(N=Cc2ccc(-c3ccc([N+](=O)[O-])cc3)o2)C(=O)N
 Ketamine,6-Hydroxyketamine,CNC1(c2ccccc2Cl)CCCCC1=O,CNC1(c2ccccc2Cl)CCCC(O)C1=O,DrugBank
 Ketamine,5-Hydroxyketamine,CNC1(c2ccccc2Cl)CCCCC1=O,CNC1(c2ccccc2Cl)CCC(O)CC1=O,DrugBank
 Ketamine,4-Hydroxyketamine,CNC1(c2ccccc2Cl)CCCCC1=O,CNC1(c2ccccc2Cl)CC(O)CCC1=O,DrugBank
-Budesonide,22-hydroxy Intermediate Metabolite of Budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1(O)OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DrugBank
 Quetiapine,N-desalkylquetiapine,OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,c1ccc2c(c1)N=C(N1CCNCC1)c1ccccc1S2,DrugBank
 Saquinavir,M2 di-hydroxylated metabolite,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,CNC(=O)C(O)c1cc(O)c2ccn(C3CCN(CCc4ccccc4F)CC3)c2c1,DrugBank
 Metoclopramide,Monodeethylmetoclopramide,CCN(CC)CCNC(=O)c1cc(Cl)c(N)cc1OC,CCNCCNC(=O)c1cc(Cl)c(NC(=O)C(F)(F)C(F)(F)C(F)(F)F)cc1OC,DrugBank
@@ -2631,8 +2613,6 @@ Olsalazine,Mesalazine,O=C(O)c1cc(N=Nc2ccc(O)c(C(=O)O)c2)ccc1O,Nc1ccc(O)c(C(=O)O)
 Olsalazine,Olsalazine-O-sulfate,O=C(O)c1cc(N=Nc2ccc(O)c(C(=O)O)c2)ccc1O,O=C(O)c1cc(N=Nc2ccc(OS(=O)(=O)O)c(C(=O)O)c2)ccc1O,DrugBank
 Lisdexamfetamine,Dextroamphetamine,CC(Cc1ccccc1)NC(=O)C(N)CCCCN,CC(N)Cc1ccccc1,DrugBank
 Lisdexamfetamine,Lysine,CC(Cc1ccccc1)NC(=O)C(N)CCCCN,NCCCCC(N)C(=O)O,DrugBank
-Sitagliptin,Sitagliptin M2 and M5 Metabolites,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,O=C1CC(Cc2cc(F)c(F)cc2F)NC2Cn3c(nnc3C(F)(F)F)CN12,DrugBank
-Sitagliptin,Sitagliptin Unnamed Metabolite,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,O=C(O)NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,DrugBank
 Decitabine,5-aza-2'-deoxycytidine-monophosphate,Nc1ncn(C2CC(O)C(CO)O2)c(=O)n1,Nc1ncn(C2CC(O)C(COP(=O)(O)O)O2)c(=O)n1,DrugBank
 Decitabine,5-aza-2'-deoxyuridine,Nc1ncn(C2CC(O)C(CO)O2)c(=O)n1,O=C1NC(O)N=CN1C1CC(O)C(CO)O1,DrugBank
 Hydralazine,Hydralazine acetone hydrazone,NNc1nncc2ccccc12,CC(C)=NNc1nncc2ccccc12,DrugBank
@@ -2731,7 +2711,6 @@ Dexlansoprazole,5-Hydroxy dexlansoprazole,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2c
 Dexlansoprazole,4-Sulfonyloxy dexlansoprazole,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2ccccc2[nH]1,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2c(OS(=O)(=O)O)cccc2[nH]1,DrugBank
 Dexlansoprazole,5-Glucuronyloxy dexlansoprazole,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2ccccc2[nH]1,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cc2[nH]1,DrugBank
 Telaprevir,Pyrazinoic acid,CCCC(NC(=O)C1C2CCCC2CN1C(=O)C(NC(=O)C(NC(=O)c1cnccn1)C1CCCCC1)C(C)(C)C)C(=O)C(=O)NC1CC1,O=C(O)c1cnccn1,DrugBank
-Abiraterone,N-oxide abiraterone sulfate,CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,CC12CCC(OS(=O)(=O)O)CC1=CCC1C2CCC2(C)C(c3ccc[n+]([O-])c3)=CCC12,DrugBank
 Cariprazine,Desmethyl cariprazine,CN(C)C(=O)NC1CCC(CCN2CCN(c3cccc(Cl)c3Cl)CC2)CC1,CNC(=O)NC1CCC(CCN2CCN(c3cccc(Cl)c3Cl)CC2)CC1,DrugBank
 Cariprazine,Didesmethyl cariprazine,CN(C)C(=O)NC1CCC(CCN2CCN(c3cccc(Cl)c3Cl)CC2)CC1,NC(=O)NC1CCC(CCN2CCN(c3cccc(Cl)c3Cl)CC2)CC1,DrugBank
 Pentaerythritol tetranitrate,Pentaerithrityl,O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-],OCC(CO)(CO)CO,DrugBank
@@ -2766,7 +2745,6 @@ Levocetirizine,Levocetirizine N-oxide Metabolite (M3),O=C(O)COCCN1CCN(C(c2ccccc2
 Levocetirizine,Levocetirizine O-dealkylated Metabolite (M6),O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,O=C(O)CN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,DrugBank
 Levocetirizine,Levocetirizine Taurine Conjugated Metabolite (M8),O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,O=C(COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1)NCCS(=O)(=O)O,DrugBank
 Levocetirizine,Levocetirizine N-dealkylated and Aromatic Hydroxylated Metabolite (M9),O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,Oc1ccc(C(O)c2ccc(Cl)cc2)cc1,DrugBank
-Dapagliflozin,Dapagliflozin 3-O-glucuronide,CCOc1ccc(Cc2cc(C3OC(CO)C(O)C(O)C3O)ccc2Cl)cc1,CCOc1ccc(Cc2cc(C3OC(CO)C(O)C(OC4OC(C(=O)O)C(O)C(O)C4O)C3O)ccc2Cl)cc1,DrugBank
 Saxagliptin,5-hydroxy saxagliptin,N#CC1CC2CC2N1C(=O)C(N)C12CC3CC(CC(O)(C3)C1)C2,N#CC1CC2CC2N1C(=O)C(N)C12CC3CC(O)(CC(O)(C3)C1)C2,DrugBank
 Ambrisentan,Ambrisentan glucuronide,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(C)n1)C(=O)O,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(C)n1)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank
 Ambrisentan,4-hydroxymethyl ambrisentan,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(C)n1)C(=O)O,COC(c1ccccc1)(c1ccccc1)C(Oc1nc(C)cc(CO)n1)C(=O)O,DrugBank
@@ -2794,8 +2772,6 @@ Odanacatib,M8 (Odanacatib),CC(C)(F)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)cc1)C(F)(F)
 Laquinimod,"5-chloro-N-ethyl-4-hydroxy-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",CCN(C(=O)c1c(O)c2c(Cl)cccc2n(C)c1=O)c1ccccc1,CCN(C(=O)c1c(O)c2c(Cl)cccc2[nH]c1=O)c1ccccc1,DrugBank
 Dabigatran etexilate,BIBR0951/M2,CCCCCCOC(=O)N=C(N)c1ccc(NCc2nc3cc(C(=O)N(CCC(=O)OCC)c4ccccn4)ccc3n2C)cc1,CCOC(=O)CCN(C(=O)c1ccc2c(c1)nc(CNc1ccc(C(=N)N)cc1)n2C)c1ccccn1,DrugBank
 Dabigatran etexilate,BIBR1087/M1,CCCCCCOC(=O)N=C(N)c1ccc(NCc2nc3cc(C(=O)N(CCC(=O)OCC)c4ccccn4)ccc3n2C)cc1,CCCCCCOC(=O)NC(=N)c1ccc(NCc2nc3cc(C(=O)N(CCC(=O)O)c4ccccn4)ccc3n2C)cc1,DrugBank
-Dabigatran,Dabigatran M486,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(C(=O)Nc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,DrugBank
-Dabigatran,Dabigatran 1-O-acylglucuronide metabolite,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)OC3OC(C(=O)O)C(O)C(O)C3O)c3ccccn3)ccc21,DrugBank
 Artemether,Alpha-dihydroartemisinin,COC1OC2OC3(C)CCC4C(C)CCC(C1C)C24OO3,CC1CCC2C(C)C(O)OC3OC4(C)CCC1C32OO4,DrugBank
 Artemether,Deoxydihydro-artemisinin,COC1OC2OC3(C)CCC4C(C)CCC(C1C)C24OO3,CC1CCC2C(C)C(O)OC3OC4(C)CCC1C32O4,DrugBank
 Betahistine,2-pyridylacetic acid,CNCCc1ccccn1,O=C(O)Cc1ccccn1,DrugBank
@@ -2835,7 +2811,6 @@ Nandrolone,19-Norandrosterone,CC12CCC3C4CCC(=O)C=C4CCC3C1CCC2O,CC12CCC3C4CCC(O)C
 Nandrolone,19-Noretiocholanolone,CC12CCC3C4CCC(=O)C=C4CCC3C1CCC2O,CC12CCC3C4CCC(O)CC4CCC3C1CCC2O,DrugBank
 Bupranolol,"carboxybupranolol, 4-chloro-3-[3-(1,1-dimethylethylamino)-2-hydroxy-propyloxy]benzoic acid",Cc1ccc(Cl)c(OCC(O)CNC(C)(C)C)c1,CCCCNCC(O)COc1cc(C(=O)O)ccc1Cl,DrugBank
 Triflusal,2-hydroxy-4-trifluoromethyl benzoic acid,CC(=O)Oc1cc(C(F)(F)F)ccc1C(=O)O,O=C(O)c1ccc(C(F)(F)F)cc1O,DrugBank
-Lurasidone,ID14326,O=C1C2C3CCC(C3)C2C(=O)N1CC1CCCCC1CN1CCN(c2nsc3ccccc23)CC1,O=C1C2C3CCC(C3O)C2C(=O)N1CC1CCCCC1CN1CCN(c2nsc3ccccc23)CC1,DrugBank
 Tafluprost,Tafluprost free acid,CC(C)OC(=O)CCCC=CCC1C(O)CC(O)C1C=CC(F)(F)COc1ccccc1,O=C(O)CCCC=CCC1C(O)CC(O)C1C=CC(F)(F)COc1ccccc1,DrugBank
 Ivacaftor,M1 (hydroxymethyl-ivacaftor),CC(C)(C)c1cc(C(C)(C)C)c(NC(=O)c2c[nH]c3ccccc3c2=O)cc1O,CC(C)(C)c1cc(C(C)(C)O)c(O)cc1NC(=O)c1c[nH]c2ccccc2c1=O,DrugBank
 Ivacaftor,M6 (ivacaftor-carboxylate),CC(C)(C)c1cc(C(C)(C)C)c(NC(=O)c2c[nH]c3ccccc3c2=O)cc1O,CC(C)(C)c1cc(C(C)(C)C(=O)O)c(O)cc1NC(=O)c1c[nH]c2ccccc2c1=O,DrugBank
@@ -2845,17 +2820,11 @@ Vismodegib,Vismodegib M3 metabolite,CS(=O)(=O)c1ccc(C(=O)Nc2ccc(Cl)c(-c3ccccn3)c
 Vismodegib,Vismodegib M14 metabolite,CS(=O)(=O)c1ccc(C(=O)Nc2ccc(Cl)c(-c3ccccn3)c2)c(Cl)c1,CS(=O)(=O)c1ccc(C(=O)Nc2ccc(Cl)c(-c3ccccn3)c2O)c(Cl)c1,DrugBank
 Pitavastatin,Pitavastatin glucuronide,O=C(O)CC(O)CC(O)C=Cc1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1,O=C(CC(O)CC(O)C=Cc1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank
 Pitavastatin,M13 pitavastatin,O=C(O)CC(O)CC(O)C=Cc1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1,O=C(O)CC(O)CC(O)C=Cc1c(C2CC2)nc2c(O)cccc2c1-c1ccc(F)cc1,DrugBank
-Rilpivirine,hydroxilated form of rilpivirine 1 (M1),Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,Cc1cc(C=CN)c(O)c(C)c1Nc1ccnc(Nc2ccc(N)cc2)n1,DrugBank
-Rilpivirine,hydroxilated form of rilpivirine 2 (M2),Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,Cc1cc(C=CN)cc(CO)c1Nc1ccnc(Nc2ccc(N)cc2)n1,DrugBank
-Rilpivirine,hydroxilated form of rilpivirine 3 (M3),Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,Cc1cc(C=CN)c(O)c(CO)c1Nc1ccnc(Nc2ccc(N)cc2)n1,DrugBank
-Rilpivirine,hydroxilated form of rilpivirine 4 (M4),Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,NC=Cc1cc(CO)c(Nc2ccnc(Nc3ccc(N)cc3)n2)c(CO)c1,DrugBank
-Rilpivirine,glucurinated form of rilpivirine (M5),Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,Cc1cc(C=CN)cc(C)c1N=c1ccn(C2OC(C(=O)O)C(O)C(O)C2O)c(Nc2ccc(N)cc2)n1,DrugBank
 Crizotinib,PF-06260182,CC(Oc1cc(-c2cnn(C3CCNCC3)c2)cnc1N)c1c(Cl)ccc(F)c1Cl,CC(Oc1cc(-c2cnn(C3CCNC(=O)C3)c2)cnc1N)c1c(Cl)ccc(F)c1Cl,DrugBank
 Ruxolitinib,Ruxolitinib M18 metabolite,N#CCC(C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1,N#CCC(C1CCCC1O)n1cc(-c2nc[nH]c3nccc2-3)cn1,DrugBank
 Ruxolitinib,Ruxolitinib M49 metabolite,N#CCC(C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1,N#CCC(C1CCCC1)n1cc(C2=C3C(=O)CNC3=NC(O)N2)cn1,DrugBank
 Ruxolitinib,Ruxolitinib M16 metabolite,N#CCC(C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1,N#CCC(C1CCC(O)C1)n1cc(-c2nc[nH]c3nccc2-3)cn1,DrugBank
 Vemurafenib,vemurafenib intermediary metabolite,CCCS(=O)(=O)Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4ccc(Cl)cc4)cc23)c1F,Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4cccc(Cl)c4)cc23)c1F,DrugBank
-Linagliptin,Linagliptin M487(1),CC#CCn1c(N2CCCC(N)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(N2CCC(=O)C(N)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
 Icosapent ethyl,EPA,CCC=CCC=CCC=CCC=CCC=CCCCC(=O)OCC,CCC=CCC=CCC=CCC=CCC=CCCCC(=O)O,DrugBank
 Mirabegron,Mirabegron M15 metabolite,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCN(CC(O)c3ccccc3)OC3OC(C(=O)O)C(O)C(O)C3O)cc2)cs1,DrugBank
 Mirabegron,Mirabegron O-glucuronide,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCNCC(OC3OC(C(=O)O)C(O)C(O)C3O)c3ccccc3)cc2)cs1,DrugBank
@@ -2863,7 +2832,6 @@ Mirabegron,Mirabegron N-carbamoylglucuronide,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3
 Mirabegron,Mirabegron M12 metabolite,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCN(CC(=O)c3ccccc3)C(=O)OC3OC(C(=O)O)C(O)C(O)C3O)cc2)cs1,DrugBank
 Mirabegron,Mirabegron M16 metabolite,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1ccc(CCNCC(O)c2ccccc2)cc1,DrugBank
 Mirabegron,Mirabegron N-glucuronide,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,O=C(Cc1csc(NC2OC(C(=O)O)C(O)C(O)C2O)n1)Nc1ccc(CCNCC(O)c2ccccc2)cc1,DrugBank
-Enzalutamide,M6 enzalutamide,CNC(=O)c1ccc(N2C(=S)N(c3ccc(C#N)c(C(F)(F)F)c3)C(=O)C2(C)C)cc1F,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(=O)NCO)c(F)c1,DrugBank
 Bedaquiline,N-monodesmethyl bedaquiline,COc1nc2ccc(Br)cc2cc1C(c1ccccc1)C(O)(CCN(C)C)c1cccc2ccccc12,CNCCC(O)(c1cccc2ccccc12)C(c1ccccc1)c1cc2cc(Br)ccc2nc1OC,DrugBank
 Fluticasone furoate,M21 fluticasone furoate,CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)SCF,CC1CC2C3CC(O)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)SCF,DrugBank
 Fluticasone furoate,M10 (GW694301X),CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)SCF,CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)O,DrugBank
@@ -2873,15 +2841,11 @@ Trametinib,Trametinib M3 metabolite,CC(=O)Nc1cccc(-n2c(=O)n(C3CC3)c(=O)c3c(Nc4cc
 Dabrafenib,Hydroxy-dabrafenib,CC(C)(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,CC(C)(CO)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,DrugBank
 Levomilnacipran,p-Hydroxy-levomilnacipran,CCN(CC)C(=O)C1(c2ccccc2)CC1CN,CCN(CC)C(=O)C1(c2ccc(O)cc2)CC1CN,DrugBank
 (4R)-limonene,Uroterpenol,C=C(C)C1CC=C(C)CC1,CC1=CCC(C(C)(O)CO)CC1,DrugBank
-Dolutegravir,defluorinated and gutathione conjugated form of dolutegravir (M4.2),CC1CCOC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,CC1CCOC2Cn3cc(C(=O)NCc4cc(SCC(N)C(=O)O)c(F)cc4O)c(=O)c(O)c3C(=O)N12,DrugBank
-Dolutegravir,defluorinated and gutathione conjugated form of dolutegravir (M4.1),CC1CCOC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,CC1CCOC2Cn3cc(C(=O)NCc4cc(SCC(N)C(=O)O)c(O)cc4F)c(=O)c(O)c3C(=O)N12,DrugBank
 Macitentan,M3,CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,DrugBank
 Macitentan,M4 (Macitentan),CCCNS(=O)(=O)Nc1ncnc(OCCOc2ncc(Br)cn2)c1-c1ccc(Br)cc1,CCCNS(=O)(=O)Nc1ncnc(OCCO)c1-c1ccc(Br)cc1,DrugBank
-Sofosbuvir,GS-56650,CC(C)OC(=O)C(C)NP(=O)(OCC1OC(n2ccc(=O)[nH]c2=O)C(C)(F)C1O)Oc1ccccc1,CC(C)OC(=O)C(C)NP(=O)(O)OCC1OC(n2ccc(=O)[nH]c2=O)C(C)(F)C1O,DrugBank
 Bisacodyl,Bis-(p-hydroxyphenyl)-pyridyl-2-methane,CC(=O)Oc1ccc(C(c2ccc(OC(C)=O)cc2)c2ccccn2)cc1,Oc1ccc(C(c2ccc(O)cc2)c2ccccn2)cc1,DrugBank
 Vorapaxar,amine metabolite (M19),CCOC(=O)NC1CCC2C(C1)CC1C(=O)OC(C)C1C2C=Cc1ccc(-c2cccc(F)c2)cn1,CC1OC(=O)C2CC3CC(N)CCC3C(C=Cc3ccc(-c4cccc(F)c4)cn3)C12,DrugBank
 Vorapaxar,monohydroxy-vorapaxar (M20),CCOC(=O)NC1CCC2C(C1)CC1C(=O)OC(C)C1C2C=Cc1ccc(-c2cccc(F)c2)cn1,CC1OC(=O)C2CC3CC(NC(=O)OCCO)CCC3C(C=Cc3ccc(-c4cccc(F)c4)cn3)C12,DrugBank
-Empagliflozin,Empagliflozin-2-glucuronide,OCC1OC(c2ccc(Cl)c(Cc3ccc(OC4CCOC4)cc3)c2)C(O)C(O)C1O,OCC1OC(c2ccc(Cl)c(Cc3ccc(OC4CCOC4)cc3)c2)C(OC2OC(C(O)O)C(O)C(O)C2O)C(O)C1O,DrugBank
 Eliglustat,Genz-256416,CCCCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,CC(O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank
 Eliglustat,Genz-311752,CCCCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,CCC(O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank
 Eliglustat,Genz-258179,CCCCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,CCCC(O)CCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank
@@ -2892,10 +2856,6 @@ Tedizolid,Carboxy tedizolid,Cn1nnc(-c2ccc(-c3ccc(N4CC(CO)OC4=O)cc3F)cn2)n1,Cn1nn
 Tedizolid,Ring-opened tedizolid metabolite,Cn1nnc(-c2ccc(-c3ccc(N4CC(CO)OC4=O)cc3F)cn2)n1,Cn1nnc(-c2ccc(-c3ccc(NCC(=O)O)cc3F)cn2)n1,DrugBank
 Netupitant,Desmethyl Netupitant,Cc1ccccc1-c1cc(N2CCN(C)CC2)ncc1N(C)C(=O)C(C)(C)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,Cc1ccccc1-c1cc(N2CCNCC2)ncc1N(C)C(=O)C(C)(C)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,DrugBank
 Netupitant,N-oxide Netupitant,Cc1ccccc1-c1cc(N2CCN(C)CC2)ncc1N(C)C(=O)C(C)(C)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,Cc1ccccc1-c1cc(N2CCC(C)(O)CC2)ncc1N(C)C(=O)C(C)(C)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,DrugBank
-Ibrutinib,PCI-7503 (M23),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,Nc1ncnc2c1c(-c1ccc(Oc3ccccc3)cc1)nn2C1CCCNC1,DrugBank
-Ibrutinib,PCI-48303 (M26),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,Nc1ncnc2c1c(-c1ccc(Oc3ccccc3)cc1)nn2C1CCCN(C(=O)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C1,DrugBank
-Ibrutinib,PCI-45741 (M25),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)NCC(CCC(=O)O)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,DrugBank
-Ibrutinib,PCI-45752 (M34),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,DrugBank
 Idelalisib,GS-563117,CCC(Nc1ncnc2[nH]cnc12)c1nc2cccc(F)c2c(=O)n1-c1ccccc1,CCC(NC1=NC=NC2NC(=O)N=C12)c1nc2cccc(F)c2c(=O)n1-c1ccccc1,DrugBank
 Vortioxetine,Vortioxetine Metabolite 1,Cc1ccc(Sc2ccccc2N2CCNCC2)c(C)c1,Cc1cc(CO)ccc1Sc1ccccc1N1CCNCC1,DrugBank
 Vortioxetine,M8,Cc1ccc(Sc2ccccc2N2CCNCC2)c(C)c1,Cc1ccc(Sc2cc(O)ccc2N2CCNCC2)c(C)c1,DrugBank
@@ -3464,7 +3424,6 @@ Tamsulosin M-3 Metabolite,Tamsulosin M-3-Sul Metabolite,CCOc1ccc(O)cc1OCCNC(C)Cc
 Nateglinide metabolite M7,Nateglinide metabolite M11/M12,C=C(C)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,CC(O)(CO)C1CCC(C(=O)NC(Cc2ccccc2)C(=O)O)CC1,DrugBank
 4-Hydroxyretinoic acid,4-Oxoretinoic acid,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O,DrugBank
 "5,6-Epoxyretinoic acid","rac-5,6-Epoxy-retinoyl-beta-D-glucuronide",CC(C=CC12OC1(C)CCCC2(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC12OC1(C)CCCC2(C)C)=CC=CC(C)=CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank
-2-Oxoclopidogrel,Active Metabolite of Clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCC2SC(=O)C=C2C1,COC(=O)C(c1ccccc1Cl)N1CCC(S)=C(CC(=O)O)C1,DrugBank
 Methimazole Sulfenic Acid Metabolite (Ring),Methimazole Sulfinic Acid Metabolite (Ring),Cn1ccnc1SO,Cn1ccnc1S(=O)O,DrugBank
 15-keto-PGE1,15-keto-PGE0,CCCCCC(=O)C=CC1C(O)CC(=O)C1CCCCCCC(=O)O,CCCCCC(=O)CCC1C(O)CC(=O)C1CCCCCCC(=O)O,DrugBank
 4- hydroxyphenelzine,4-hydroxyphenylacetic acid,NNCCc1ccc(O)cc1,O=C(O)Cc1ccc(O)cc1,DrugBank
@@ -3692,14 +3651,12 @@ hydroxilated form of rilpivirine 4 (M4),glucurinated form of rilpivirine (M7),NC
 Ruxolitinib M16 metabolite,Ruxolitinib M9 metabolite,N#CCC(C1CCC(O)C1)n1cc(-c2nc[nH]c3nccc2-3)cn1,N#CCC(C1CCC(=O)C1)n1cc(-c2nc[nH]c3nccc2-3)cn1,DrugBank
 vemurafenib intermediary metabolite,secondary metabolite of vemurafenib,Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4cccc(Cl)c4)cc23)c1F,O=Cc1c[nH]c2ncc(-c3ccc(Cl)cc3)cc12,DrugBank
 vemurafenib intermediary metabolite,secondary metabolite of vemurafenib alternative,Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4cccc(Cl)c4)cc23)c1F,Nc1cccc(C(=O)c2c[nH]c3ncc(-c4ccc(Cl)cc4)cc23)c1F,DrugBank
-Linagliptin M515(1),Linigliptin M531(2),CC#CCn1c(N2CCCC(NC(C)=O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(N2CCCC(NC(C)=O)C2O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
 M6 enzalutamide,N-desmethyl enzalutamide,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(=O)NCO)c(F)c1,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(N)=O)c(F)c1,DrugBank
 M10 (GW694301X),M26 fluticasone furoate,CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)O,CC1CC2C3CC(O)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)O,DrugBank
 Trametinib M1 metabolite,Trametinib M2 metabolite,Cc1c(=O)n(C)c(Nc2ccc(I)cc2F)c2c(=O)n(C3CC3)c(=O)n(-c3cccc(N)c3)c12,Cc1c(=O)n(C)c(Nc2ccc(I)cc2F)c2c(=O)n(C3CC3)c(=O)n(-c3cccc(NC4OC(C(=O)O)C(O)C(O)C4O)c3)c12,DrugBank
 Trametinib M3 metabolite,Trametinib M4 metabolite,Cc1c(=O)n(C)c(Nc2ccc(I)cc2F)c2c(=O)n(C3CC3)c(=O)n(-c3ccc(O)c(N)c3)c12,Cc1c(=O)n(C)c(Nc2ccc(I)cc2F)c2c(=O)n(C3CC3)c(=O)n(-c3ccc(OC4OC(C(=O)O)C(O)C(O)C4O)c(N)c3)c12,DrugBank
 Hydroxy-dabrafenib,Carboxy-dabrafenib,CC(C)(CO)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,CC(C)(C(=O)O)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,DrugBank
 Uroterpenol,Uroterpenol-O-glucuronide,CC1=CCC(C(C)(O)CO)CC1,CC1=CCC(C(C)(O)COC2OC(C(=O)O)C(O)C(O)C2O)CC1,DrugBank
-hydroxilated form of dolutegravir (M3),"2,4- difluorobenzaldehyde (M5 dolutegravir)",CC1CCOC2Cn3cc(C(=O)NC(O)c4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,OCc1ccc(F)cc1F,DrugBank
 M4 (Macitentan),M5 (Macitentan),CCCNS(=O)(=O)Nc1ncnc(OCCO)c1-c1ccc(Br)cc1,CCCNS(=O)(=O)Nc1ncnc(OCC(=O)O)c1-c1ccc(Br)cc1,DrugBank
 GS-56650,GS-606965,CC(C)OC(=O)C(C)NP(=O)(O)OCC1OC(n2ccc(=O)[nH]c2=O)C(C)(F)C1O,CC1(F)C(O)C(COP(=O)(O)O)OC1n1ccc(=O)[nH]c1=O,DrugBank
 Genz-256416,Genz-258162,CC(O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,CC(=O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank
@@ -3959,11 +3916,9 @@ M7-B (Odanacatib),M7-A (Odanacatib),CC(F)(C=O)CC(NC(c1ccc(-c2ccc(S(C)(=O)=O)cc2)
 Dabigatran M630,Dabigatran M602,Cn1c(CNc2ccc(C(=N)NC(=O)OCCCCCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)NC(=O)OCCCC(=O)O)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,DrugBank
 Chloramphenicol 1-acetate,"Chloramphenicol 1,3-diacetate",CC(=O)OC(c1ccc([N+](=O)[O-])cc1)C(CO)NC(=O)C(Cl)Cl,CC(=O)OCC(NC(=O)C(Cl)Cl)C(OC(C)=O)c1ccc([N+](=O)[O-])cc1,DrugBank
 Pitavastatin lactone,M3 pitavastatin,O=C1CC(O)CC(C=Cc2c(C3CC3)nc3ccccc3c2-c2ccc(F)cc2)O1,O=C(O)CC(O)CC(=O)C=Cc1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1,DrugBank
-Linagliptin CD1790,Linagliptin M490(1),CC#CCn1c(N2CCCC(O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,Cc1nc(Cn2c(=O)c3c(nc(N4CCCC(O)C4)n3CC#CCO)n(C)c2=O)nc2ccccc12,DrugBank
 N-desmethyl enzalutamide,Carboxyl metabolite enzalutamide (M1),CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(N)=O)c(F)c1,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(=O)O)c(F)c1,DrugBank
 Carboxy-dabrafenib,Desmethyl-dabrafenib,CC(C)(C(=O)O)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,CC(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1,DrugBank
 M5 (Macitentan),m/z 324 (Macitentan),CCCNS(=O)(=O)Nc1ncnc(OCC(=O)O)c1-c1ccc(Br)cc1,Nc1ncnc(OCC(=O)O)c1-c1ccc(Br)cc1,DrugBank
-GS-606965,GS-461203,CC1(F)C(O)C(COP(=O)(O)O)OC1n1ccc(=O)[nH]c1=O,CC1(F)C(O)C(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)OC1n1ccc(O)nc1=O,DrugBank
 Genz-258162,Genz-399207,CC(=O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank
 Genz-258162,Genz-399240,CC(=O)CCCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank
 Genz-527862,Genz-399240,CCC(=O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,O=C(O)CCCCC(=O)NC(CN1CCCC1)C(O)c1ccc2c(c1)OCCO2,DrugBank

@@ -49,8 +49,8 @@ def load_gloryx(input_file, output_file):
         'set': set_column
     })
 
-    # generation_df = df[df['generation'] == 2]
-    df.to_csv(output_file, index=False)
+    generation_1_df = df[df['generation'] == 1]
+    generation_1_df.to_csv(output_file, index=False)
 
 
 gloryx = 'dataset/raw_data/gloryx_test_dataset.json'
