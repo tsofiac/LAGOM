@@ -16,8 +16,8 @@ def add_source_column(csv, source):
     return df
     
 def combine_datasets(df1, df2, output_csv=None):
-    selected_df1 = df1[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'source']].copy()
-    selected_df2 = df2[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'source']].copy()
+    selected_df1 = df1[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'origin', 'source']].copy()
+    selected_df2 = df2[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'origin', 'source']].copy()
 
     combined_df = pd.concat([selected_df1, selected_df2], ignore_index=True)
     combined_df.to_csv(output_csv, index=False)
