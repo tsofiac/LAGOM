@@ -1,42 +1,42 @@
-parent_name,parent_smiles,child_name,child_smiles,tanimoto
-(R)-halothane,FC(F)(F)C(Cl)Br,trifluoroacetic acid,O=C(O)C(F)(F)F,0.16666666666666666
-(R)-halothane,FC(F)(F)C(Cl)Br,"2-chloro-1,1-difluoroethene",FC(F)=CCl,0.1111111111111111
-2-acetylbenzothiophene,CC(=O)c1cc2ccccc2s1,,CC(O)C1CC2CCCCC2[S+]1[O-],0.04
-"2,6-dichlorobenzonitrile",N#Cc1c(Cl)cccc1Cl,,N#CC1C(Cl)=CC=C2OC21Cl,0.19444444444444445
-3-methylindole,Cc1c[nH]c2ccccc12,3-methyleneindolenine,C=C1C=Nc2ccccc21,0.14285714285714285
-3-methylindole,Cc1c[nH]c2ccccc12,"3-methylindole-2,3-epoxide",CC12OC1Nc1ccccc12,0.18421052631578946
-7-benzyloxyquinoline,c1ccc(COc2ccc3cccnc3c2)cc1,7-Hydroxyquinoline,O=C1C=Cc2cccnc2C1,0.19148936170212766
-7-butoxy-2h-chromen-2-one,CCCCOc1ccc2ccc(=O)oc2c1,,CCCC(O)OC1CCC2CCC(O)OC2C1,0.1
-7-butoxy-2h-chromen-2-one,CCCCOc1ccc2ccc(=O)oc2c1,,CC(O)CCOC1CCC2CCC(O)OC2C1,0.08196721311475409
-7-butoxy-2h-chromen-2-one,CCCCOc1ccc2ccc(=O)oc2c1,,OCCCCOC1CCC2CCC(O)OC2C1,0.0847457627118644
-aprepitant,CC(OC1OCCN(Cc2nc(O)n[nH]2)C1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,"5‐oxo‐1,4‐dihydro‐1,2,4‐triazole‐3‐carbaldehyde",O=Cc1n[nH]c(O)n1,0.1388888888888889
-astemizole,COc1ccc(CCN2CCC(N=c3[nH]c4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,2-(4-hydroxyphenyl)acetaldehyde,O=CCc1ccc(O)cc1,0.109375
-"2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,Pyridone,O=c1cc[nH]c(CSc2nc3cc(O)c(F)cc3[nH]2)c1,0.17721518987341772
-cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Benzophenone,O=C(c1ccccc1)c1ccccc1,0.15
-flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,bis(4Ã¢â‚¬Âfluorophenyl)methanone,O=C(c1ccc(F)cc1)c1ccc(F)cc1,0.17777777777777778
-indole,c1ccc2[nH]ccc2c1,,OC1=Nc2ccccc2C1,0.1875
-l-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,2-chloroacetaldehyde,O=CCCl,0.125
-l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,chloroacetaldehyde,O=CCCl,0.11428571428571428
-p-cresol,Cc1ccc(O)cc1,,CC1C=CC(=O)C=C1,0.16666666666666666
-Nitrosodiethylamine,CCN(CC)N=O,N-Nitrosomonoethylamine,CCN=NO,0.19047619047619047
-NDPA,CCCN(CCC)N=O,Dipropylimine,CCCNCCC,0.19047619047619047
-Carbosulfan,CCCCN(CCCC)SN(C)C(=O)Oc1cccc2c1OC(C)(C)C2,dibutyl(sulfanyl)amine,CCCCN(S)CCCC,0.16981132075471697
-DEET,CCN(CC)C(=O)c1cccc(C)c1,acetaldehyde,CC=O,0.06451612903225806
-methadone,CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,"2ethylidene-1,5-dimethyl-3,3-diphenylpyrolidine",CCC1C(C)N(C)CC1(c1ccccc1)c1ccccc1,0.17647058823529413
-Trichloroethylene,ClC=C(Cl)Cl,Chloral hydrate,OC(O)C(Cl)(Cl)Cl,0.13333333333333333
-"1,3,5-trinitrobenzene",O=[N+]([O-])c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1,"S-(2,4,6-trinitrocyclohexa-2,5-dien-1-yl)glutathione",NC(CCC(=O)NC(CSC1C([N+](=O)[O-])=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.15254237288135594
-"1-Chloro-2,4-dinitrobenzene",O=[N+]([O-])c1ccc(Cl)c([N+](=O)[O-])c1,,NC(CCC(=O)NC(CSC1(Cl)C=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.13513513513513514
-Diphenylamine,c1ccc(Nc2ccccc2)cc1,Diphenylamine N-glucuronide,O=C(O)C1OC(N(c2ccccc2)c2ccccc2)C(O)C(O)C1O,0.16666666666666666
-chlorofluoroacetic acid,O=C(O)C(F)Cl,chloroacetyl-S-glutathione,NC(CCC(=O)NC(CSC(Cl)C(=O)O)C(=O)NCC(=O)O)C(=O)O,0.17777777777777778
-aminochrome,O=C1C=C2CCNC2=CC1=O,,NC(CCC(=O)NC(CSc1c(O)c(O)cc2c1NCC2)C(=O)NCC(=O)O)C(=O)O,0.12857142857142856
-Hexafluoroisopropanol,OC(C(F)(F)F)C(F)(F)F,,O=C(O)C1OC(OC(C(F)(F)F)C(F)(F)F)C(O)C(O)C1O,0.17647058823529413
-1-iodoethane,CCI,ethylglutathione,CCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.06976744186046512
-1-iodopropane,CCCI,propyl-glutathione,CCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.08695652173913043
-1-iodobutane,CCCCI,butyl-glutathione,CCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.12244897959183673
-1-iodooctane,CCCCCCCCI,octyl-glutathione,CCCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.1568627450980392
-1-iodoheptane,CCCCCCCI,heptyl-glutathione,CCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.1568627450980392
-1-iodomethane,CI,methylglutathione,CSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.02564102564102564
-1-iodopentane,CCCCCI,pentyl-glutathione,CCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.14
-Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,Aniline,Nc1ccccc1,0.1875
-Choline,C[N+](C)(C)CCO,Trimethylazanium,CN(C)C,0.06666666666666667
-Choline,C[N+](C)(C)CCO,Acetaldehyde,CC=O,0.058823529411764705
+parent_name,parent_smiles,child_name,child_smiles,origin,tanimoto
+(R)-halothane,FC(F)(F)C(Cl)Br,trifluoroacetic acid,O=C(O)C(F)(F)F,(R)-halothane,0.16666666666666666
+(R)-halothane,FC(F)(F)C(Cl)Br,"2-chloro-1,1-difluoroethene",FC(F)=CCl,(R)-halothane,0.1111111111111111
+2-acetylbenzothiophene,CC(=O)c1cc2ccccc2s1,,CC(O)C1CC2CCCCC2[S+]1[O-],2-acetylbenzothiophene,0.04
+"2,6-dichlorobenzonitrile",N#Cc1c(Cl)cccc1Cl,,N#CC1C(Cl)=CC=C2OC21Cl,"2,6-dichlorobenzonitrile",0.19444444444444445
+3-methylindole,Cc1c[nH]c2ccccc12,3-methyleneindolenine,C=C1C=Nc2ccccc21,3-methylindole,0.14285714285714285
+3-methylindole,Cc1c[nH]c2ccccc12,"3-methylindole-2,3-epoxide",CC12OC1Nc1ccccc12,3-methylindole,0.18421052631578946
+7-benzyloxyquinoline,c1ccc(COc2ccc3cccnc3c2)cc1,7-Hydroxyquinoline,O=C1C=Cc2cccnc2C1,7-benzyloxyquinoline,0.19148936170212766
+7-butoxy-2h-chromen-2-one,CCCCOc1ccc2ccc(=O)oc2c1,,CCCC(O)OC1CCC2CCC(O)OC2C1,7-butoxy-2h-chromen-2-one,0.1
+7-butoxy-2h-chromen-2-one,CCCCOc1ccc2ccc(=O)oc2c1,,CC(O)CCOC1CCC2CCC(O)OC2C1,7-butoxy-2h-chromen-2-one,0.08196721311475409
+7-butoxy-2h-chromen-2-one,CCCCOc1ccc2ccc(=O)oc2c1,,OCCCCOC1CCC2CCC(O)OC2C1,7-butoxy-2h-chromen-2-one,0.0847457627118644
+aprepitant,CC(OC1OCCN(Cc2nc(O)n[nH]2)C1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,"5‐oxo‐1,4‐dihydro‐1,2,4‐triazole‐3‐carbaldehyde",O=Cc1n[nH]c(O)n1,aprepitant,0.1388888888888889
+astemizole,COc1ccc(CCN2CCC(N=c3[nH]c4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,2-(4-hydroxyphenyl)acetaldehyde,O=CCc1ccc(O)cc1,astemizole,0.109375
+"2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,Pyridone,O=c1cc[nH]c(CSc2nc3cc(O)c(F)cc3[nH]2)c1,"2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",0.17721518987341772
+cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Benzophenone,O=C(c1ccccc1)c1ccccc1,cinnarizine,0.15
+flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,bis(4Ã¢â‚¬Âfluorophenyl)methanone,O=C(c1ccc(F)cc1)c1ccc(F)cc1,flunarizine,0.17777777777777778
+indole,c1ccc2[nH]ccc2c1,,OC1=Nc2ccccc2C1,indole,0.1875
+l-cyclophosphamide,O=P1(N(CCCl)CCCl)NCCCO1,2-chloroacetaldehyde,O=CCCl,l-cyclophosphamide,0.125
+l-ifosfamide,O=P1(NCCCl)OCCCN1CCCl,chloroacetaldehyde,O=CCCl,l-ifosfamide,0.11428571428571428
+p-cresol,Cc1ccc(O)cc1,,CC1C=CC(=O)C=C1,p-cresol,0.16666666666666666
+Nitrosodiethylamine,CCN(CC)N=O,N-Nitrosomonoethylamine,CCN=NO,Nitrosodiethylamine,0.19047619047619047
+NDPA,CCCN(CCC)N=O,Dipropylimine,CCCNCCC,NDPA,0.19047619047619047
+Carbosulfan,CCCCN(CCCC)SN(C)C(=O)Oc1cccc2c1OC(C)(C)C2,dibutyl(sulfanyl)amine,CCCCN(S)CCCC,Carbosulfan,0.16981132075471697
+DEET,CCN(CC)C(=O)c1cccc(C)c1,acetaldehyde,CC=O,DEET,0.06451612903225806
+methadone,CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,"2ethylidene-1,5-dimethyl-3,3-diphenylpyrolidine",CCC1C(C)N(C)CC1(c1ccccc1)c1ccccc1,methadone,0.17647058823529413
+Trichloroethylene,ClC=C(Cl)Cl,Chloral hydrate,OC(O)C(Cl)(Cl)Cl,Trichloroethylene,0.13333333333333333
+"1,3,5-trinitrobenzene",O=[N+]([O-])c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1,"S-(2,4,6-trinitrocyclohexa-2,5-dien-1-yl)glutathione",NC(CCC(=O)NC(CSC1C([N+](=O)[O-])=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,"1,3,5-trinitrobenzene",0.15254237288135594
+"1-Chloro-2,4-dinitrobenzene",O=[N+]([O-])c1ccc(Cl)c([N+](=O)[O-])c1,,NC(CCC(=O)NC(CSC1(Cl)C=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,"1-Chloro-2,4-dinitrobenzene",0.13513513513513514
+Diphenylamine,c1ccc(Nc2ccccc2)cc1,Diphenylamine N-glucuronide,O=C(O)C1OC(N(c2ccccc2)c2ccccc2)C(O)C(O)C1O,Diphenylamine,0.16666666666666666
+chlorofluoroacetic acid,O=C(O)C(F)Cl,chloroacetyl-S-glutathione,NC(CCC(=O)NC(CSC(Cl)C(=O)O)C(=O)NCC(=O)O)C(=O)O,chlorofluoroacetic acid,0.17777777777777778
+aminochrome,O=C1C=C2CCNC2=CC1=O,,NC(CCC(=O)NC(CSc1c(O)c(O)cc2c1NCC2)C(=O)NCC(=O)O)C(=O)O,aminochrome,0.12857142857142856
+Hexafluoroisopropanol,OC(C(F)(F)F)C(F)(F)F,,O=C(O)C1OC(OC(C(F)(F)F)C(F)(F)F)C(O)C(O)C1O,Hexafluoroisopropanol,0.17647058823529413
+1-iodoethane,CCI,ethylglutathione,CCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodoethane,0.06976744186046512
+1-iodopropane,CCCI,propyl-glutathione,CCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodopropane,0.08695652173913043
+1-iodobutane,CCCCI,butyl-glutathione,CCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodobutane,0.12244897959183673
+1-iodooctane,CCCCCCCCI,octyl-glutathione,CCCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodooctane,0.1568627450980392
+1-iodoheptane,CCCCCCCI,heptyl-glutathione,CCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodoheptane,0.1568627450980392
+1-iodomethane,CI,methylglutathione,CSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodomethane,0.02564102564102564
+1-iodopentane,CCCCCI,pentyl-glutathione,CCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodopentane,0.14
+Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,Aniline,Nc1ccccc1,Sudan I,0.1875
+Choline,C[N+](C)(C)CCO,Trimethylazanium,CN(C)C,Choline,0.06666666666666667
+Choline,C[N+](C)(C)CCO,Acetaldehyde,CC=O,Choline,0.058823529411764705

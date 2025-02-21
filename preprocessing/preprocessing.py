@@ -20,7 +20,7 @@ def test_val_distribute(input_file, output_file, val_size): #Input csv file. Fun
 
     ## Using GroupShuffleSplit
     splitter = GroupShuffleSplit(test_size=val_size, n_splits=2, random_state=42)
-    split = splitter.split(df, groups=df['parent_smiles'])
+    split = splitter.split(df, groups=df['origin']) 
     train_inds, val_inds = next(split)
     train_df = df.iloc[train_inds]
     val_df = df.iloc[val_inds]
@@ -104,12 +104,12 @@ if __name__ == "__main__":
 
     val_size = 0.1
     preprocess = True
-    preprocess_unique_parents = False
+    preprocess_unique_parents = True
 
     size = 733
     get_small_dataset = False
 
-    name = 'combined' # [ 'drugbank' 'metxbiodb' 'combined']
+    name = 'drugbank' # [ 'drugbank' 'metxbiodb' 'combined']
     
     # SPECIFY WHICH DATASET TO USE!
     dataset = f'dataset/curated_data/{name}_smiles_clean.csv'
