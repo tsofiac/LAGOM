@@ -150,11 +150,14 @@ def filter_fingerprint_similarity(data_file, removed_data_file, min_similarity =
 
     print(f"Total data points removed with fingerprint_similarity_filter: {total_removed}")
 
-def filter_endogenous_reaction(data_file, removed_data_file):
+def find_drug_origin(data_file):
 
     original_df = pd.read_csv(data_file)
+    original_df['origin'] = 'unknown'
     only_db_parents_df = original_df[~original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that not contain DBMET
     only_dbmet_parents_df = original_df[original_df['parent_id'].str.contains('DBMET').fillna(False)] # all parents that contain DBMET
+
+    only_db_parents_df['origin'] = only_db_parents_df['parent_id']
 
     num_new_rows = 1
     while( num_new_rows != 0 ):
@@ -163,16 +166,25 @@ def filter_endogenous_reaction(data_file, removed_data_file):
         child_ids = only_db_parents_df['child_id'].tolist()
         # store rows where parents are child in list
         metabolite_parent_with_drug_origin_df  = only_dbmet_parents_df[only_dbmet_parents_df['parent_id'].isin(child_ids) ]
+
+        # Assign 'origin' for metabolite_parent_with_drug_origin_df
+        for index, row in metabolite_parent_with_drug_origin_df.iterrows():
+            origin_parent_id = only_db_parents_df[only_db_parents_df['child_id'] == row['parent_id']]['origin']
+            if not origin_parent_id.empty:
+                metabolite_parent_with_drug_origin_df.at[index, 'origin'] = origin_parent_id.values[0]
+
         # drop all children that are not children of drugs or drug metabolites
         only_dbmet_parents_df  = only_dbmet_parents_df[~only_dbmet_parents_df['parent_id'].isin(child_ids) ]
 
         only_db_parents_df = pd.concat([only_db_parents_df,metabolite_parent_with_drug_origin_df])
         num_new_rows = len(metabolite_parent_with_drug_origin_df)
 
-    print('Total data points removed with filter_endogenous_reaction: ', len(only_dbmet_parents_df))
-    only_db_parents_df.to_csv(data_file, index=False)
-    if not only_dbmet_parents_df.empty:
-        only_dbmet_parents_df.to_csv(removed_data_file, index=False)
+
+    combined_data = pd.concat([only_db_parents_df, only_dbmet_parents_df])
+    combined_data.to_csv(data_file, index=False)
+    # only_db_parents_df.to_csv(data_file, index=False)
+    # if not only_dbmet_parents_df.empty:
+    #     only_dbmet_parents_df.to_csv(removed_data_file, index=False)
 
 
 if __name__ == "__main__":
@@ -198,8 +210,8 @@ if __name__ == "__main__":
         standardize_smiles(dataset, clean)
         remove_duplicates(clean, removed_duplicates)
         remove_equal_parent_child(clean, removed_equal)
-        #if name == 'drugbank':
-            #filter_endogenous_reaction(clean, removed_reactions)
+        if name == 'drugbank':
+            find_drug_origin(clean)
         filter_data_on_both_sides(clean, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(clean, atoms_allowed_in_molecules, removed_atoms_allowed)
         filter_data_on_one_side(clean, molecule_allowed_based_on_weight, removed_weights_allowed, True)
