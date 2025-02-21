@@ -6,7 +6,6 @@ pinoline,COc1ccc2[nH]c3c(c2c1)CCNC3,"1H,2H,3H,4H,9H‐pyrido[3,4‐b]indol‐6�
 "2-Amino-3-methylimidazo(4,5-F)quinoline",Cn1c(=N)[nH]c2c3cccnc3ccc21,"N-OH-2-amino-3-methylimidazo[4,5-f]quinoline (N-OH-IQ)",Cn1c(NO)nc2c3cccnc3ccc21,0.45652173913043476
 "5-Methoxy-N,N-diisopropyltryptamine",COc1ccc2[nH]cc(CCN(C(C)C)C(C)C)c2c1,5-OH-DIPT,CC(C)N(CCc1c[nH]c2ccc(O)cc12)C(C)C,0.6904761904761905
 "5-Methoxy-N,N-diisopropyltryptamine",COc1ccc2[nH]cc(CCN(C(C)C)C(C)C)c2c1,5-MeO-IPT,COc1ccc2[nH]cc(CCNC(C)C)c2c1,0.6444444444444445
-(R)-halothane,FC(F)(F)C(Cl)Br,trifluoroacetic acid,O=C(O)C(F)(F)F,0.16666666666666666
 (R)-halothane,FC(F)(F)C(Cl)Br,"1-chloro-2,2,2-trifluoroethanide",FC(F)(F)CCl,0.25
 "(R)-3,4-Methylenedioxymethamphetamine",CNC(C)Cc1ccc2c(c1)OCO2,"N-Methyl-3,4- dihydroxyamphetamine",CNC(C)Cc1ccc(O)c(O)c1,0.5135135135135135
 "(R)-3,4-Methylenedioxymethamphetamine",CNC(C)Cc1ccc2c(c1)OCO2,"3,4-Methylenedioxymethamphetamine",CC(N)Cc1ccc2c(c1)OCO2,0.6571428571428571
@@ -147,7 +146,6 @@ Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1
 "2,2-dichloro-1,1,1-trifluoroethane",FC(F)(F)C(Cl)Cl,Trifluoroacetyl chloride,O=CC(F)(F)F,0.2
 "2,2',4,5,5'-pentachlorobiphenyl",Clc1ccc(Cl)c(-c2cc(Cl)c(Cl)cc2Cl)c1,"2,2',4',5,5'-pentachloro-[1,1'-biphenyl]-4-ol",Oc1cc(Cl)c(-c2cc(Cl)c(Cl)cc2Cl)cc1Cl,0.5416666666666666
 "2,6-dichlorobenzonitrile",N#Cc1c(Cl)cccc1Cl,,N#CC1=C(Cl)C2OC2C=C1Cl,0.2727272727272727
-"2,6-dichlorobenzonitrile",N#Cc1c(Cl)cccc1Cl,,N#CC1C(Cl)=CC=C2OC21Cl,0.19444444444444445
 2'-methoxyacetophenone,COc1ccccc1C(C)=O,2'-Hydroxyacetophenone,CC(=O)c1ccccc1O,0.5384615384615384
 "2h-1-benzopyran-2-one, 4-(chloromethyl)-7-ethoxy-",CCOc1ccc2c(CCl)cc(=O)oc2c1,4-(Chloromethyl)-7-hydroxychromen-2-one,O=c1cc(CCl)c2ccc(O)cc2o1,0.575
 "2h-1-benzopyran-2-one, 7-(pentyloxy)-",CCCCCOc1ccc2ccc(=O)oc2c1,,CCC(O)CCOc1ccc2ccc(=O)oc2c1,0.6511627906976745
@@ -155,7 +153,6 @@ Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1
 "2h-1-benzopyran-2-one, 7-(pentyloxy)-",CCCCCOc1ccc2ccc(=O)oc2c1,,CCCCC(O)Oc1ccc2ccc(=O)oc2c1,0.6136363636363636
 3-cyano-7-ethoxycoumarin,CCOc1ccc2cc(C#N)c(=O)oc2c1,3-Cyano-7-hydroxycoumarin,N#Cc1cc2ccc(O)cc2oc1=O,0.5714285714285714
 3-cyano-7-methoxycoumarin,COc1ccc2cc(C#N)c(=O)oc2c1,3-Cyano-7-hydroxycoumarin,N#Cc1cc2ccc(O)cc2oc1=O,0.6153846153846154
-3-methylindole,Cc1c[nH]c2ccccc12,"3-methylindole-2,3-epoxide",CC12OC1Nc1ccccc12,0.18421052631578946
 "3,5-pyridinedicarboxylic acid, 1,4-dihydro-2,6-dimethyl-4-(3-nitrophenyl)-, ethyl methyl ester, (4r)-",CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc([N+](=O)[O-])c1,,CCOC(=O)c1c(C)nc(C)c(C(=O)OC)c1-c1cccc([N+](=O)[O-])c1,0.5263157894736842
 "3alpha,12beta-dihydroxy-5alpha-cholan-24-oic acid",CC(CCC(=O)O)C1CCC2C3CCC4CC(O)CCC4(C)C3CC(O)C12C,hyocholic acid (HCA),CC(CCC(=O)O)C1CCC2C3C(O)C(O)C4CC(O)CCC4(C)C3CC(O)C12C,0.6610169491525424
 "3alpha,7beta,12beta-trihydroxy-5alpha-cholan-24-oic acid",CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CC(O)C12C,,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(=O)CCC4(C)C3CC(O)C12C,0.7627118644067796
@@ -187,7 +184,6 @@ Saquinavir,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1
 6-nitrochrysene,O=[N+]([O-])c1cc2c3ccccc3ccc2c2ccccc12,N-hydroxy-6-AC,ONc1cc2c3ccccc3ccc2c2ccccc12,0.45714285714285713
 6-nitrochrysene,O=[N+]([O-])c1cc2c3ccccc3ccc2c2ccccc12,"1,2-DHD-6-NC ",O=[N+]([O-])c1cc2c3c(ccc2c2ccccc12)C(O)C(O)C=C3,0.4772727272727273
 7-benzyloxy-4-trifluoromethylcoumarin,O=c1cc(C(F)(F)F)c2ccc(OCc3ccccc3)cc2o1,7-hydroxy-4-triuoromethylcoumarin (HFC),O=c1cc(C(F)(F)F)c2ccc(O)cc2o1,0.5555555555555556
-7-benzyloxyquinoline,c1ccc(COc2ccc3cccnc3c2)cc1,7-Hydroxyquinoline,O=C1C=Cc2cccnc2C1,0.19148936170212766
 7-ethoxycoumarin,CCOc1ccc2ccc(=O)oc2c1,Umbelliferone,O=c1ccc2ccc(O)cc2o1,0.4857142857142857
 7-ethoxycoumarin,CCOc1ccc2ccc(=O)oc2c1,,CCOc1ccc2c(O)cc(=O)oc2c1,0.6052631578947368
 7-ethoxyresorufin,CCOc1ccc2nc3ccc(=O)cc-3oc2c1,Resorufin,O=c1ccc2nc3ccc(O)cc3oc-2c1,0.5909090909090909
@@ -342,7 +338,6 @@ NE-100,CCCN(CCC)CCc1ccc(OC)c(OCCc2ccccc2)c1,,CCCN(CCC)CCc1ccc(O)c(OCCc2ccccc2)c1
 pantoprazole,COc1ccnc(C[S+]([O-])c2nc3ccc(OC(F)F)cc3[nH]2)c1OC,,COc1c(OCO)ccnc1C[S+]([O-])c1nc2ccc(OC(F)F)cc2[nH]1,0.864406779661017
 "2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,Sulphone,O=S(=O)(Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,0.6290322580645161
 "2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,,[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2cc(O)c(F)cc2[nH]1,0.7457627118644068
-"2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,Pyridone,O=c1cc[nH]c(CSc2nc3cc(O)c(F)cc3[nH]2)c1,0.17721518987341772
 "(2S,3R)-3-(4-Hydroxy-phenyl)-2-[4-(2-piperidin-1-yl-ethoxy)-phenyl]-2,3-dihydro-benzo[1,4]oxathiin-6-ol",Oc1ccc(C2Sc3cc(O)ccc3OC2c2ccc(OCCN3CCCCC3)cc2)cc1,,[O-][S+]1c2cc(O)ccc2OC(c2ccc(OCCN3CCCCC3)cc2)C1c1ccc(O)cc1,0.6507936507936508
 "(2S,3R)-3-(4-Hydroxy-phenyl)-2-[4-(2-piperidin-1-yl-ethoxy)-phenyl]-2,3-dihydro-benzo[1,4]oxathiin-6-ol",Oc1ccc(C2Sc3cc(O)ccc3OC2c2ccc(OCCN3CCCCC3)cc2)cc1,,CCCCCNCCOc1ccc(C2Oc3ccc(O)cc3SC2c2ccc(O)cc2)cc1,0.6
 PNU-96391,CCCN1CCCC(c2cccc(S(C)(=O)=O)c2)C1,,CS(=O)(=O)c1cccc(C2CCCNC2)c1,0.5416666666666666
@@ -383,7 +378,6 @@ cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,4-{phenyl[4-(3-phenylpro
 cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,4-{3-[4-(diphenylmethyl)piperazin-1-yl]prop-1-en-1-yl}phenol,Oc1ccc(C=CCN2CCN(C(c3ccccc3)c3ccccc3)CC2)cc1,0.8157894736842105
 cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,1-Benzhydrylpiperazine,c1ccc(C(c2ccccc2)N2CCNCC2)cc1,0.4473684210526316
 cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Cinnamaldehyde,O=CC=Cc1ccccc1,0.28205128205128205
-cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Benzophenone,O=C(c1ccccc1)c1ccccc1,0.15
 cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,1-Cinnamylpiperazine,C(=Cc1ccccc1)CN1CCNCC1,0.5789473684210527
 cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,Norcisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCNCC1OC,0.5416666666666666
 cisapride,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,3-(4-fluorophenoxy)propanal,O=CCCOc1ccc(F)cc1,0.23943661971830985
@@ -524,7 +518,6 @@ flosequinan,Cn1cc([S+](C)[O-])c(=O)c2ccc(F)cc21,flosequinan sulfone,Cn1cc(S(C)(=
 flucloxacillin,Cc1onc(-c2c(F)cccc2Cl)c1C(=O)NC1C(=O)N2C1SC(C)(C)C2C(=O)O,,CC1(C)SC2C(NC(=O)c3c(-c4c(F)cccc4Cl)noc3CO)C(=O)N2C1C(=O)O,0.835820895522388
 flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,1Ã¢â‚¬Â[bis(4Ã¢â‚¬Âfluorophenyl)methyl]piperazine,Fc1ccc(C(c2ccc(F)cc2)N2CCNCC2)cc1,0.4523809523809524
 flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,p-Hydroxyflunarizine,Oc1ccc(C=CCN2CCN(C(c3ccc(F)cc3)c3ccc(F)cc3)CC2)cc1,0.7674418604651163
-flunarizine,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,bis(4Ã¢â‚¬Âfluorophenyl)methanone,O=C(c1ccc(F)cc1)c1ccc(F)cc1,0.17777777777777778
 fluphenazine,OCCN1CCN(CCCN2c3ccccc3Sc3ccc(C(F)(F)F)cc32)CC1,10-{3-[4-(2-hydroxyethyl)piperazin-1-yl]propyl}-2-(trifluoromethyl)-10H-5ÃŽÂ»Ã¢ÂÂ´-phenothiazin-5-one,[O-][S+]1c2ccccc2N(CCCN2CCN(CCO)CC2)c2cc(C(F)(F)F)ccc21,0.6428571428571429
 flunitrazepam,CN1C(=O)CN=C(c2ccccc2F)c2cc([N+](=O)[O-])ccc21,desmethylflunitrazepam,O=[N+]([O-])c1ccc2c(c1)C(c1ccccc1F)=NCC(O)=N2,0.5818181818181818
 flunitrazepam,CN1C(=O)CN=C(c2ccccc2F)c2cc([N+](=O)[O-])ccc21,3-hydroxyflunitrazepam,CN1C(=O)C(O)N=C(c2ccccc2F)c2cc([N+](=O)[O-])ccc21,0.6428571428571429
@@ -574,7 +567,6 @@ indinavir,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1
 indinavir,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1O,,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2C(O)C1O,0.8170731707317073
 indiplon,CC(=O)N(C)c1cccc(-c2ccnc3c(C(=O)c4cccs4)cnn23)c1,N-Desmethylindiplon,CC(=O)Nc1cccc(-c2ccnc3c(C(=O)c4cccs4)cnn23)c1,0.7096774193548387
 indole,c1ccc2[nH]ccc2c1,,Oc1c[nH]c2ccccc12,0.34615384615384615
-indole,c1ccc2[nH]ccc2c1,,OC1=Nc2ccccc2C1,0.1875
 indole,c1ccc2[nH]ccc2c1,,Oc1ccc2cc[nH]c2c1,0.46153846153846156
 indomethacin,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,O-Desmethylindomethacin,Cc1c(CC(=O)O)c2cc(O)ccc2n1C(=O)c1ccc(Cl)cc1,0.74
 "invega, invega sustenna, 9-hydroxyrisperidone, paliperidone",Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2O,,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CC(O)CC2O,0.8028169014084507
@@ -719,7 +711,6 @@ org_30659,C#CC1(O)C=CC2C3CCC4=CC(=O)CCC4C3C(=C)CC21C,,C#CC1(O)C=CC2C3C(O)CC4=CC(
 oxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,oxymorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3(O)C1C5,0.7818181818181819
 oxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)N(C)CCC314,noroxycodone,COc1ccc2c3c1OC1C(=O)CCC4(O)C(C2)NCCC314,0.6666666666666666
 p-cresol,Cc1ccc(O)cc1,4-methyl-hydroquinone,Cc1ccc(O)c(O)c1,0.45
-p-cresol,Cc1ccc(O)cc1,,CC1C=CC(=O)C=C1,0.16666666666666666
 p-cresol,Cc1ccc(O)cc1,,OCc1ccc(O)cc1,0.4
 p-xylene,Cc1ccc(C)cc1,4-Methylbenzylalcohol,Cc1ccc(CO)cc1,0.5
 p-xylene,Cc1ccc(C)cc1,"2,5-dimethylphenol",Cc1ccc(C)c(O)c1,0.3888888888888889
@@ -1006,7 +997,6 @@ warfarin-r,CC(=O)CC(c1ccccc1)c1c(O)oc2ccccc2c1=O,4'- Hydroxywarfarin,CC(=O)CC(c1
 "7,12 Dimethylbenzanthracene",Cc1c2ccccc2c(C)c2c1ccc1ccccc12,,Cc1c2ccccc2c(CO)c2c1ccc1ccccc12,0.6666666666666666
 DMXAA,Cc1ccc2c(=O)c3cccc(CC(=O)O)c3oc2c1C,6-Hydroxy-MXAA,Cc1c(CO)ccc2c(=O)c3cccc(CC(=O)O)c3oc12,0.775
 4-(Aminomethyl)-7-methoxycoumarin,COc1ccc2c(CN)cc(=O)oc2c1,7-hydroxy-4-(aminomethyl)-coumarin (HAMC),NCc1cc(=O)oc2cc(O)ccc12,0.6153846153846154
-Nitrosodiethylamine,CCN(CC)N=O,N-Nitrosomonoethylamine,CCN=NO,0.19047619047619047
 NNK,CN(CCCC(=O)c1cccnc1)N=O,,O=NN(CO)CCCC(=O)c1cccnc1,0.6976744186046512
 DEET,CCN(CC)C(=O)c1cccc(C)c1,"N,N-diethyl-m-hydroxymethylbenzamide",CCN(CC)C(=O)c1cccc(CO)c1,0.696969696969697
 DEET,CCN(CC)C(=O)c1cccc(C)c1,,CCN(CCO)C(=O)c1cccc(C)c1,0.7878787878787878
@@ -1025,7 +1015,6 @@ Terbutryn,CCN=c1nc(NC(C)(C)C)[nH]c(SC)n1,,CCN=c1nc(NC(C)(C)CO)[nH]c(SC)n1,0.75
 MNAN,CCCCCN(C)N=O,,CCCCCN(CO)N=O,0.5185185185185185
 MNAN,CCCCCN(C)N=O,,CC(O)CCCN(C)N=O,0.5
 NDPA,CCCN(CCC)N=O,Alpha-OH NDPA,CCCN(N=O)C(O)CC,0.4583333333333333
-NDPA,CCCN(CCC)N=O,Dipropylimine,CCCNCCC,0.19047619047619047
 NPYR,O=NN1CCCC1,,O=NN1CCCC1O,0.32
 RP73401,COc1ccc(C(=O)N=c2c(Cl)c[nH]cc2Cl)cc1OC1CCCC1,,COc1ccc(C(=O)N=c2c(Cl)c[nH]cc2Cl)cc1OC1CCC(O)C1,0.803921568627451
 sulfinpyrazone_sulfide,O=C1C(CCSc2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,Sulfinpyrazone,O=C1C(CC[S+]([O-])c2ccccc2)C(=O)N(c2ccccc2)N1c1ccccc1,0.5384615384615384
@@ -1187,7 +1176,6 @@ Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Nor
 (+)-Camphor,CC12CCC(CC1=O)C2(C)C,5-exo-hydroxycamphor,CC12CCC(CC1=O)C2(C)CO,0.5806451612903226
 (+)-Camphor,CC12CCC(CC1=O)C2(C)C,8-hydroxycamphor,CC12CC(O)C(CC1=O)C2(C)C,0.40625
 Carbosulfan,CCCCN(CCCC)SN(C)C(=O)Oc1cccc2c1OC(C)(C)C2,carbofuran,CNC(=O)Oc1cccc2c1OC(C)(C)C2,0.5555555555555556
-Carbosulfan,CCCCN(CCCC)SN(C)C(=O)Oc1cccc2c1OC(C)(C)C2,dibutyl(sulfanyl)amine,CCCCN(S)CCCC,0.16981132075471697
 Carbosulfan,CCCCN(CCCC)SN(C)C(=O)Oc1cccc2c1OC(C)(C)C2,,CCCCN(CCCC)[S+]([O-])N(C)C(=O)Oc1cccc2c1OC(C)(C)C2,0.6779661016949152
 Chlorpyrifos-oxon,CCOP(=O)(OCC)Oc1nc(Cl)c(Cl)cc1Cl,"3,5,6-Trichloro-2-pyridinol",Oc1nc(Cl)c(Cl)cc1Cl,0.3333333333333333
 Chlorpyrifos-oxon,CCOP(=O)(OCC)Oc1nc(Cl)c(Cl)cc1Cl,Diethyl phosphate,CCOP(=O)(O)OCC,0.2857142857142857
@@ -1245,7 +1233,6 @@ Mono-OH-methoxychlor,COc1ccc(C(c2ccc(O)cc2)C(Cl)(Cl)Cl)cc1,Catechol-methoxychlor
 Mono-OH-methoxychlor,COc1ccc(C(c2ccc(O)cc2)C(Cl)(Cl)Cl)cc1,Bis-OH-methoxychlor,Oc1ccc(C(c2ccc(O)cc2)C(Cl)(Cl)Cl)cc1,0.7037037037037037
 Monodemethylated mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(NC)cc3)CC21C,Didemethylated mifepristone,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(N)cc3)CC21C,0.8253968253968254
 Bis-OH-methoxychlor,Oc1ccc(C(c2ccc(O)cc2)C(Cl)(Cl)Cl)cc1,Tris-OH-methoxychlor,Oc1ccc(C(c2ccc(O)c(O)c2)C(Cl)(Cl)Cl)cc1,0.7307692307692307
-methadone,CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,"2ethylidene-1,5-dimethyl-3,3-diphenylpyrolidine",CCC1C(C)N(C)CC1(c1ccccc1)c1ccccc1,0.17647058823529413
 Monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,3-Hydroxymonoethyl glycinexylidide,CCNCC(=O)Nc1c(C)ccc(O)c1C,0.6571428571428571
 Monoethylglycinexylidide,CCNCC(=O)Nc1c(C)cccc1C,Glycinexylidide,Cc1cccc(C)c1NC(=O)CN,0.625
 N-Desmethyldiphenhydramine,CNCCOC(c1ccccc1)c1ccccc1,"N,N-Didesmethyldiphenhydramine",NCCOC(c1ccccc1)c1ccccc1,0.5666666666666667
@@ -1460,7 +1447,6 @@ Sulfapyridine,Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1,"Sulfapyridine, N-acetyl",CC(=O)Nc1c
 "2,5-dimethylaniline",Cc1ccc(C)c(N)c1," 2,5Ã¢â‚¬Âdimethylacetanilide",CC(=O)Nc1cc(C)ccc1C,0.3793103448275862
 2-(4-aminobenzamido)pyridine,Nc1ccc(C(=O)Nc2ccccn2)cc1,4Ã¢â‚¬ÂacetamidoÃ¢â‚¬ÂNÃ¢â‚¬Â(pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl)benzamide,CC(=O)Nc1ccc(C(=O)Nc2ccccn2)cc1,0.6756756756756757
 (+)-2-bromo-3-(4-nitrophenyl)propanoic acid,O=C(O)C(Br)Cc1ccc([N+](=O)[O-])cc1,2-(glutathion-S-yl)-3-(4-nitrophenyl)propanoic acid,NC(CCC(=O)NC(CSC(Cc1ccc([N+](=O)[O-])cc1)C(=O)O)C(=O)NCC(=O)O)C(=O)O,0.3770491803278688
-"1,3,5-trinitrobenzene",O=[N+]([O-])c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1,"S-(2,4,6-trinitrocyclohexa-2,5-dien-1-yl)glutathione",NC(CCC(=O)NC(CSC1C([N+](=O)[O-])=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.15254237288135594
 "1-chloro-2,3-dinitrobenzene",O=[N+]([O-])c1cccc(Cl)c1[N+](=O)[O-],"S-(2,3-dinitrophenyl)glutathione",NC(CCC(=O)NC(CSc1cccc([N+](=O)[O-])c1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.2833333333333333
 "1-chloro-2,4-dinitrobenzene",O=[N+]([O-])c1ccc(Cl)c([N+](=O)[O-])c1,"S-(2,4-dinitrophenyl)glutathione",NC(CCC(=O)NC(CSc1ccc([N+](=O)[O-])cc1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.2833333333333333
 Pefloxacin,CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21,Pefloxacin O-glucuronide,CCn1cc(C(=O)OC2OC(C(=O)O)C(O)C(O)C2O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21,0.65625
@@ -1487,7 +1473,6 @@ N-Acetylbenzidine,CC(=O)Nc1ccc(-c2ccc(N)cc2)cc1,"N-Acetylbenzidine, N-glucuronid
 retigabine,CCOC(=O)Nc1ccc(NCc2ccc(F)cc2)cc1N,retigabine N2-glucuronide,CCOC(=O)Nc1ccc(NCc2ccc(F)cc2)cc1NC1OC(C(=O)O)C(O)C(O)C1O,0.5873015873015873
 Desmethylclozapine,Clc1ccc2c(c1)N=C(N1CCNCC1)c1ccccc1N2,Desmethylclozapine N-glucuronide,O=C(O)C1OC(N2CCN(C3=Nc4cc(Cl)ccc4Nc4ccccc43)CC2)C(O)C(O)C1O,0.5645161290322581
 Desipramine,CNCCCN1c2ccccc2CCc2ccccc21,Desipramine N-glucuronide,CN(CCCN1c2ccccc2CCc2ccccc21)C1OC(C(=O)O)C(O)C(O)C1O,0.4074074074074074
-Diphenylamine,c1ccc(Nc2ccccc2)cc1,Diphenylamine N-glucuronide,O=C(O)C1OC(N(c2ccccc2)c2ccccc2)C(O)C(O)C1O,0.16666666666666666
 Promethazine,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,Promethazine N-glucuronide,CC(CN1c2ccccc2Sc2ccccc21)[N+](C)(C)C1OC(C(=O)O)C(O)C(O)C1O,0.4
 Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,Diphenhydramine N-glucuronide,C[N+](C)(CCOC(c1ccccc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O,0.375
 Loxepine,CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1,Loxepine N-glucuronide,C[N+]1(C2OC(C(=O)O)C(O)C(O)C2O)CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1,0.5555555555555556
@@ -1502,7 +1487,6 @@ Nirvanol,CCC1(c2ccccc2)N=C(O)N=C1O,Nirvanol N-glucuronide,CCC1(c2ccccc2)N=C(O)N(
 Isonicotinoylhydrazine,NNC(=O)c1ccncc1,,O=C(NNC1OC(C(=O)O)C(O)C(O)C1O)c1ccncc1,0.3902439024390244
 Ketobemidone,CCC(=O)C1(c2cccc(O)c2)CCN(C)CC1,Ketobemidone O-glucuronide,CCC(=O)C1(c2cccc(OC3OC(C(=O)O)C(O)C(O)C3O)c2)CCN(C)CC1,0.5254237288135594
 Ketobemidone,CCC(=O)C1(c2cccc(O)c2)CCN(C)CC1,Ketobemidone sulfate,CCC(=O)C1(c2cccc(OS(=O)(=O)O)c2)CCN(C)CC1,0.6458333333333334
-chlorofluoroacetic acid,O=C(O)C(F)Cl,chloroacetyl-S-glutathione,NC(CCC(=O)NC(CSC(Cl)C(=O)O)C(=O)NCC(=O)O)C(=O)O,0.17777777777777778
 4-nitrobenzyl chloride,O=[N+]([O-])c1ccc(CCl)cc1,S-(4-Nitrobenzyl)glutathione,NC(CCC(=O)NC(CSCc1ccc([N+](=O)[O-])cc1)C(=O)NCC(=O)O)C(=O)O,0.27586206896551724
 4-nitrobenzyl chloride,O=[N+]([O-])c1ccc(CCl)cc1,"S-(2,4-dinitrophenyl)glutathione",NC(CCC(=O)NC(CSc1ccc([N+](=O)[O-])cc1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,0.20967741935483872
 alachlor,CCc1cccc(CC)c1N(COC)C(=O)CCl,S-(alachlor)glutathione,CCc1cccc(CC)c1N(COC)C(=O)CSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.4090909090909091
@@ -1519,7 +1503,6 @@ Cholic acid,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CC(O)C12C,Cholic acid glucu
 7-Hydroxy-beta-thujone,CC1C(=O)CC2(C(C)(C)O)CC12,,CC1C(=O)CC2(C(C)(C)OC3OC(C(=O)O)C(O)C(O)C3O)CC12,0.4583333333333333
 4-Hydroxy-beta-thujone,CC(C)C12CC(=O)C(C)(O)C1C2,,CC(C)C12CC(=O)C(C)(OC3OC(C(=O)O)C(O)C(O)C3O)C1C2,0.4375
 2-iodobenzyl bromide,BrCc1ccccc1I,,NC(CCC(=O)NC(CSc1ccccc1CBr)C(=O)NCC(=O)O)C(=O)O,0.2222222222222222
-Hexafluoroisopropanol,OC(C(F)(F)F)C(F)(F)F,,O=C(O)C1OC(OC(C(F)(F)F)C(F)(F)F)C(O)C(O)C1O,0.17647058823529413
 "2,4-diene-VPA",C=CC=C(CCC)C(=O)O,,C=CC=C(CCC)C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,0.4523809523809524
 "3,7-Dihydroxyfavone",O=c1c(O)c(-c2ccccc2)oc2cc(O)ccc12,,O=C(O)C1OC(Oc2ccc3c(=O)c(O)c(-c4ccccc4)oc3c2)C(O)C(O)C1O,0.5283018867924528
 "3,7-Dihydroxyfavone",O=c1c(O)c(-c2ccccc2)oc2cc(O)ccc12,,O=C(O)C1OC(Oc2c(-c3ccccc3)oc3cc(O)ccc3c2=O)C(O)C(O)C1O,0.5384615384615384
@@ -1671,7 +1654,6 @@ Codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,,COc1ccc2c3c1OC1C(OC4OC(C(=O)O)C
 Losartan,CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,,CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2C2N=NN(C3OC(C(O)O)C(O)C(O)C3O)N2)cc1,0.5185185185185185
 N-hydroxy-2-acetylamino-3-methyl-5-phenylpyridine,CC(=O)N(O)c1ncc(-c2ccccc2)cc1C,,CC(=O)N(OC1OC(C(=O)O)C(O)C(O)C1O)c1ncc(-c2ccccc2)cc1C,0.5185185185185185
 5-OH-paeonol,COc1cc(O)c(C(C)=O)cc1O,,COc1cc(OS(=O)(=O)O)c(C(C)=O)cc1O,0.6363636363636364
-1-iodooctane,CCCCCCCCI,octyl-glutathione,CCCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.1568627450980392
 4-phenoxyaniline,Nc1ccc(Oc2ccccc2)cc1,,CC(=O)Nc1ccc(Oc2ccccc2)cc1,0.43333333333333335
 N-hydroxy-2-aminobenzanthrone,O=C1C=c2cc3ccc4ccc(NO)cc4c3cc2=CC1,,O=C1C=c2cc3ccc4ccc(NOC5OC(C(=O)O)C(O)C(O)C5O)cc4c3cc2=CC1,0.5344827586206896
 xanthurenic acid,O=C(O)c1cc(O)c2cccc(O)c2n1,,O=C(O)c1cc(O)c2cccc(OS(=O)(=O)O)c2n1,0.6410256410256411
@@ -1694,7 +1676,6 @@ Vitamin D2,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)C=CC(C)C(C)C,,C=C1CCC(OC2OC(C(=O
 Dihydrocurcumin,COc1cc(C=CC(=O)C=C(O)CCc2ccc(O)c(OC)c2)ccc1O,,COc1cc(CCC(O)=CC(=O)C=Cc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)c(OC)c2)ccc1O,0.6935483870967742
 "4-OH-2,6-dimethylaniline",Cc1cc(O)cc(C)c1N,,Cc1cc(OC2OC(C(=O)O)C(O)C(O)C2O)cc(C)c1N,0.3
 3-Hydroxy-6-methylflavone,Cc1ccc2oc(-c3ccccc3)c(O)c(=O)c2c1,,Cc1ccc2oc(-c3ccccc3)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(=O)c2c1,0.5370370370370371
-1-iodoheptane,CCCCCCCI,heptyl-glutathione,CCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,0.1568627450980392
 Tolcapone,Cc1ccc(C(=O)c2cc(O)c(O)c([N+](=O)[O-])c2)cc1,,Cc1ccc(C(=O)c2cc(O)c(OC3OC(C(=O)O)C(O)C(O)C3O)c([N+](=O)[O-])c2)cc1,0.5178571428571429
 4-Nitrophenol,O=[N+]([O-])c1ccc(O)cc1,,O=C(O)C1OC(Oc2ccc([N+](=O)[O-])cc2)C(O)C(O)C1O,0.34146341463414637
 3-Indole carboxylic acid,O=C(O)c1c[nH]c2ccccc12,,O=C(OC1OC(C(=O)O)C(O)C(O)C1O)c1c[nH]c2ccccc12,0.4883720930232558
@@ -1929,4 +1910,3 @@ Dihydrogenistein,O=C1c2c(O)cc(O)cc2OCC1c1ccc(O)cc1,,C=C(C(=O)c1c(O)cc(O)cc1O)c1c
 ,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,4-hydroxyphenyl-2-propenoic acid,C=C(C(=O)O)c1ccc(O)cc1,0.5333333333333333
 ,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,Phloroglucinol,Oc1cc(O)cc(O)c1,0.25925925925925924
 Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,1-Amino-2-naphthol,Nc1c(O)ccc2ccccc12,0.45454545454545453
-Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,Aniline,Nc1ccccc1,0.1875

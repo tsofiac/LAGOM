@@ -31,8 +31,6 @@ Formoterol,Formoterol glucuronide 1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc
 Formoterol,Formoterol glucuronide 2,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccc(O)c(NC=O)c2)cc1,DrugBank
 Formoterol,Formoterol deformylated metabolite,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(N)c2)cc1,DrugBank
 Formoterol,Formoterol sulfate conjugate,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(OS(=O)(=O)O)c(NC=O)c2)cc1,DrugBank
-Cinacalcet,Hydrocinnamic acid,CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12,O=C(O)CCc1ccccc1,DrugBank
-Cinacalcet,hydroxy-hydrocinnamic acid,CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12,O=C(O)CCc1cccc(O)c1,DrugBank
 Budesonide,22-hydroxy Intermediate Metabolite of Budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1(O)OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DrugBank
 Budesonide,delta6-budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1OC2CC3C4C=CC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DrugBank
 Budesonide,23-hydroxybudesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCC(O)C1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DrugBank
@@ -86,21 +84,3 @@ Ibrutinib,PCI-45741 (M25),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)
 Ibrutinib,PCI-45752 (M34),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,DrugBank
 Osimertinib,AZ-7550,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCNC,DrugBank
 Osimertinib,AZ-5104,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,C=CC(=O)Nc1cc(Nc2nccc(-c3c[nH]c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,DrugBank
-2-Oxoclopidogrel,Active Metabolite of Clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCC2SC(=O)C=C2C1,COC(=O)C(c1ccccc1Cl)N1CCC(S)=C(CC(=O)O)C1,DrugBank
-O-desmethyl Apremilast,O-desmethyl  apremilast glucuronide,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1O,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank
-BIBR1151/M324,Dabigatran M500,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)O)ccc21,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)OC3OC(C(=O)O)C(O)C(O)C3O)ccc21,DrugBank
-Dabigatran M355,Dabigatran M369,Cn1c(CO)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(C(=O)O)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,DrugBank
-Dabigatran M355,Dabigatran M354,Cn1c(CO)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CN)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,DrugBank
-Linagliptin M515(1),Linagliptin M531(1),CC#CCn1c(N2CCCC(NC(C)=O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC(=O)NC1CCCN(c2nc3c(c(=O)n(Cc4nc(C)c5ccccc5n4)c(=O)n3C)n2CC#CCO)C1,DrugBank
-Linagliptin M515(1),Linigliptin M531(2),CC#CCn1c(N2CCCC(NC(C)=O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(N2CCCC(NC(C)=O)C2O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
-Linagliptin M489(1),Linagliptin M531(1),Cc1nc(Cn2c(=O)c3c(nc(N4CCCC(N)C4)n3CC#CCO)n(C)c2=O)nc2ccccc12,CC(=O)NC1CCCN(c2nc3c(c(=O)n(Cc4nc(C)c5ccccc5n4)c(=O)n3C)n2CC#CCO)C1,DrugBank
-Linagliptin CD10604,Linagliptin CD1790,CC#CCn1c(N2CCCC(=O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(N2CCCC(O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
-hydroxilated form of dolutegravir (M3),"2,4- difluorobenzaldehyde (M5 dolutegravir)",CC1CCOC2Cn3cc(C(=O)NC(O)c4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,OCc1ccc(F)cc1F,DrugBank
-hydroxilated form of dolutegravir (M3),hydrolized form of dolutegravir (M1),CC1CCOC2Cn3cc(C(=O)NC(O)c4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,CC1CCOC2Cn3cc(C(N)=O)c(=O)c(O)c3C(=O)N12,DrugBank
-Dabigatran M369,Dabigatran M325,Cn1c(C(=O)O)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1cnc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,DrugBank
-Dabigatran M354,Dabigatran M396,Cn1c(CN)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,CC(=O)NCc1nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc2n1C,DrugBank
-Linagliptin CD1790,Linagliptin M490(1),CC#CCn1c(N2CCCC(O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,Cc1nc(Cn2c(=O)c3c(nc(N4CCCC(O)C4)n3CC#CCO)n(C)c2=O)nc2ccccc12,DrugBank
-Linagliptin CD1790,Linagliptin M506(1),CC#CCn1c(N2CCCC(O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(NCCCC(O)C(=O)O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
-GS-606965,GS-461203,CC1(F)C(O)C(COP(=O)(O)O)OC1n1ccc(=O)[nH]c1=O,CC1(F)C(O)C(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)OC1n1ccc(O)nc1=O,DrugBank
-Linagliptin M506(1),Linagliptin M504(2),CC#CCn1c(NCCCC(O)C(=O)O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(NCCCC(=O)C(=O)O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
-Linagliptin M504(2),Linagliptin M476(1),CC#CCn1c(NCCCC(=O)C(=O)O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(NCCCC(=O)O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank
