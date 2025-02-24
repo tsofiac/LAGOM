@@ -97,14 +97,24 @@ def small_dataset(input_file, output_file, size):
     # Write the random sample to an output CSV file
     random_sample.to_csv(output_file, index=False)
 
+def gloryx(input, output):
+    df = pd.read_csv(input)
+
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+        "set": "set"
+    })
+
+    df.to_csv(output, sep='\t', index=False)
 
 
 
 if __name__ == "__main__":
 
     val_size = 0.1
-    preprocess = True
-    preprocess_unique_parents = True
+    preprocess = False
+    preprocess_unique_parents = False
 
     size = 733
     get_small_dataset = False
@@ -132,3 +142,8 @@ if __name__ == "__main__":
         if get_small_dataset:
             small_dataset(unique_finetune, unique_finetune_small, size)
 
+
+    gloryx_in = 'dataset/curated_data/gloryx_smiles_clean.csv'
+    gloryx_out = 'dataset/finetune/gloryx_finetune.csv'
+    
+    gloryx(gloryx_in, gloryx_out)
