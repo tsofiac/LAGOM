@@ -76,7 +76,7 @@ if __name__ == "__main__":
     drugbank_df = add_source_column('dataset/curated_data/drugbank_smiles_clean.csv', 'drugbank')
     gloryx_df = add_source_column('dataset/curated_data/gloryx_smiles_clean.csv', 'gloryx')
 
-    combine_datasets(metxbiodb_df, drugbank_df, combined_csv)
+    combine_datasets(drugbank_df, metxbiodb_df, combined_csv)
     remove_duplicates(combined_csv, removed_csv)
 
     compare_datasets(combined_csv, gloryx_df, compare_removed_csv)

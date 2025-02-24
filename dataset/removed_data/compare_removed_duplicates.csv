@@ -1,16 +1,8 @@
 parent_name,child_name,parent_smiles,child_smiles,origin,source
-ac1ldic9,2-oxo-clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,COC(=O)C(c1ccccc1Cl)N1CCC2=C(CC(=O)S2)C1,ac1ldic9,MetXBioDB
-atorvastatin,,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,atorvastatin,Both
-atorvastatin,,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,atorvastatin,Both
-imatinib,N-desmethylimatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,imatinib,Both
-zinc36377943,6beta - HYDROXYBUDESONIDE,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1OC2CC3C4CC(O)C5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,zinc36377943,Both
-zinc36377943,6beta - HYDROXYBUDESONIDE,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC(O)OC1CC2C3CCC4=CC(=O)C=CC4(C)C3C(O)CC2(C)C1C(=O)CO,zinc36377943,MetXBioDB
-Rosuvastatin,N-Desmethylrosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,CC(C)c1nc(NS(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,Rosuvastatin,Both
-Rosuvastatin,Rosuvastatin 5 S-lactone,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=Cc1cc(O)cc(=O)o1,Rosuvastatin,Both
-abiraterone,abiraterone sulfate,CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,CC12CCC(OS(=O)(=O)O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,abiraterone,Both
 Lenalidomide,5­-Hydroxy-lenalidomide,Nc1cccc2c1CN(C1CCC(=O)NC1=O)C2=O,Nc1c(O)ccc2c1CN(C1CCC(=O)NC1=O)C2=O,DB00480,DrugBank
 Lenalidomide,N-acetyl-lenalidomide,Nc1cccc2c1CN(C1CCC(=O)NC1=O)C2=O,CC(=O)Nc1cccc2c1CN(C1CCC(O)=NC1=O)C2=O,DB00480,DrugBank
 Fluticasone propionate,fluticasone 17beta-carboxylic acid,CCC(=O)OC1(C(=O)SCF)C(C)CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C,CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)O,DB00588,DrugBank
+Imatinib,N-Desmethylimatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,DB00619,Both
 Imatinib,AFN911,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,CN1CCN(Cc2ccc(C(=O)NC3=CC(Nc4nccc(-c5cccnc5)n4)C(CO)C=C3)cc2)CC1,DB00619,DrugBank
 Imatinib,Piperidine N-oxide imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CC[N+](C)([O-])CC3)cc2)cc1Nc1nccc(C2=CN[CH]C=C2)n1,DB00619,DrugBank
 Imatinib,Pyridine N-oxide imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2ccc[n+]([O-])c2)n1,DB00619,DrugBank
@@ -31,9 +23,14 @@ Formoterol,Formoterol glucuronide 1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc
 Formoterol,Formoterol glucuronide 2,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccc(O)c(NC=O)c2)cc1,DB00983,DrugBank
 Formoterol,Formoterol deformylated metabolite,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(N)c2)cc1,DB00983,DrugBank
 Formoterol,Formoterol sulfate conjugate,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(OS(=O)(=O)O)c(NC=O)c2)cc1,DB00983,DrugBank
+Atorvastatin,para-hydroxyatorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DB01076,Both
+Atorvastatin,ortho-hydroxyatorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DB01076,Both
+Rosuvastatin,N-Desmethylrosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,CC(C)c1nc(NS(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,DB01098,Both
+Rosuvastatin,Rosuvastatin 5 S-lactone,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=Cc1cc(O)cc(=O)o1,DB01098,Both
 Budesonide,22-hydroxy Intermediate Metabolite of Budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1(O)OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DB01222,DrugBank
 Budesonide,delta6-budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1OC2CC3C4C=CC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DB01222,DrugBank
 Budesonide,23-hydroxybudesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCC(O)C1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DB01222,DrugBank
+Budesonide,6-beta-hydroxybudesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC1OC2CC3C4CC(O)C5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DB01222,Both
 Dasatinib,Dasatinib M4 metabolite,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCNCC2)n1,DB01254,DrugBank
 Dasatinib,Dasatinib M24 metabolite,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1,Cc1nc(Nc2ncc(C(=O)Nc3c(Cl)cccc3CO)s2)cc(N2CCN(CCO)CC2)n1,DB01254,DrugBank
 Dasatinib,Dasatinib M20 metabolite,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cc(O)cc3Cl)s2)cc(N2CCN(CCO)CC2)n1,DB01254,DrugBank
@@ -42,6 +39,7 @@ Sitagliptin,Sitagliptin M1 Metabolite,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c
 Sitagliptin,Sitagliptin M2 and M5 Metabolites,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,O=C1CC(Cc2cc(F)c(F)cc2F)NC2Cn3c(nnc3C(F)(F)F)CN12,DB01261,DrugBank
 Sitagliptin,Sitagliptin Unnamed Metabolite,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,O=C(O)NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,DB01261,DrugBank
 Apremilast,O-desmethyl Apremilast,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1O,DB05676,DrugBank
+Abiraterone,Abiraterone sulfate,CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,CC12CCC(OS(=O)(=O)O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,DB05812,Both
 Abiraterone,N-oxide abiraterone sulfate,CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12,CC12CCC(OS(=O)(=O)O)CC1=CCC1C2CCC2(C)C(c3ccc[n+]([O-])c3)=CCC12,DB05812,DrugBank
 Dapagliflozin,Dapagliflozin 3-O-glucuronide,CCOc1ccc(Cc2cc(C3OC(CO)C(O)C(O)C3O)ccc2Cl)cc1,CCOc1ccc(Cc2cc(C3OC(CO)C(O)C(OC4OC(C(=O)O)C(O)C(O)C4O)C3O)ccc2Cl)cc1,DB06292,DrugBank
 Dapagliflozin,"Dapagliflozin BMS-511926, M8 metabolite",CCOc1ccc(Cc2cc(C3OC(CO)C(O)C(O)C3O)ccc2Cl)cc1,OCC1OC(c2ccc(Cl)c(Cc3ccc(O)cc3)c2)C(O)C(O)C1O,DB06292,DrugBank
@@ -84,3 +82,5 @@ Ibrutinib,PCI-45741 (M25),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)
 Ibrutinib,PCI-45752 (M34),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,C=CC(=O)NCC(CCCO)n1nc(-c2ccc(Oc3ccccc3)cc2)c2c(N)ncnc21,DB09053,DrugBank
 Osimertinib,AZ-7550,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCNC,DB09330,DrugBank
 Osimertinib,AZ-5104,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,C=CC(=O)Nc1cc(Nc2nccc(-c3c[nH]c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,DB09330,DrugBank
+ac1ldic9,2-oxo-clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,COC(=O)C(c1ccccc1Cl)N1CCC2=C(CC(=O)S2)C1,ac1ldic9,MetXBioDB
+zinc36377943,6beta - HYDROXYBUDESONIDE,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC(O)OC1CC2C3CCC4=CC(=O)C=CC4(C)C3C(O)CC2(C)C1C(=O)CO,zinc36377943,MetXBioDB
