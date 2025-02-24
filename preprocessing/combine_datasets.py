@@ -68,17 +68,17 @@ def compare_datasets(combined_csv, df2, removed_file):
 
 if __name__ == "__main__":
 
-    combined_csv = 'dataset/curated_data/combined_smiles_raw.csv'
-    #removed_csv = 'dataset/removed_data/combined_removed_duplicates.csv'
-    #compare_removed_csv = 'dataset/removed_data/compare_removed_duplicates.csv'
+    combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+    removed_csv = 'dataset/removed_data/combined_removed_duplicates.csv'
+    compare_removed_csv = 'dataset/removed_data/compare_removed_duplicates.csv'
 
-    metxbiodb_df = add_source_column('dataset/curated_data/metxbiodb_smiles.csv', 'metxbiodb')
-    drugbank_df = add_source_column('dataset/curated_data/drugbank_smiles.csv', 'drugbank')
-    #gloryx_df = add_source_column('dataset/curated_data/gloryx_smiles_clean.csv', 'gloryx')
+    metxbiodb_df = add_source_column('dataset/curated_data/metxbiodb_smiles_clean.csv', 'metxbiodb')
+    drugbank_df = add_source_column('dataset/curated_data/drugbank_smiles_clean.csv', 'drugbank')
+    gloryx_df = add_source_column('dataset/curated_data/gloryx_smiles_clean.csv', 'gloryx')
 
     combine_datasets(metxbiodb_df, drugbank_df, combined_csv)
-    #remove_duplicates(combined_csv, removed_csv)
+    remove_duplicates(combined_csv, removed_csv)
 
-    #compare_datasets(combined_csv, gloryx_df, compare_removed_csv)
+    compare_datasets(combined_csv, gloryx_df, compare_removed_csv)
 
     

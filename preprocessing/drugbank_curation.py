@@ -191,6 +191,44 @@ def generate_reaction_pairs(input_file, output_file):
     df = pd.DataFrame(parent_child_ids, columns=["parent_id",'parent_name',"child_id",'child_name','enzymes'])
     df.to_csv(output_file, index=False)
 
+def add_missing_ID(data_file):
+    df = pd.read_csv(data_file)
+
+    missing_parent_id_rows = df[df['parent_id'].isnull()]
+    missing_child_id_rows = df[df['child_id'].isnull()]
+
+    df_no_missing_id = df[df['parent_id'].notnull() & df['child_id'].notnull()]
+
+    for index, missing_row in missing_parent_id_rows.iterrows():
+        parent_name = missing_row['parent_name']
+        
+        matching_rows = df_no_missing_id[df_no_missing_id['parent_name'] == parent_name]
+        
+        if not matching_rows.empty:
+            df.at[index, 'parent_id'] = matching_rows.iloc[0]['parent_id']
+        else:
+            matching_rows = df_no_missing_id[df_no_missing_id['child_name'] == parent_name]
+            
+            if not matching_rows.empty:
+                df.at[index, 'parent_id'] = matching_rows.iloc[0]['child_id']
+
+# Iterate over rows with missing child_id
+    for index, missing_row in missing_child_id_rows.iterrows():
+        child_name = missing_row['child_name']
+        
+        # First, check for another child_name match
+        matching_rows = df_no_missing_id[df_no_missing_id['child_name'] == child_name]
+        if not matching_rows.empty:
+            df.at[index, 'child_id'] = matching_rows.iloc[0]['child_id']
+        else:
+            # If no child_name match, check where the parent_name matches the child_name
+            matching_rows = df_no_missing_id[df_no_missing_id['parent_name'] == child_name]
+            if not matching_rows.empty:
+                df.at[index, 'child_id'] = matching_rows.iloc[0]['parent_id']
+    
+    # Save the updated DataFrame to a new CSV file
+    df.to_csv(data_file, index=False)
+
 def find_drug_origin_drugbank(data_file):
 
     original_df = pd.read_csv(data_file)
@@ -200,34 +238,22 @@ def find_drug_origin_drugbank(data_file):
 
     only_db_parents_df.loc[:, 'origin'] = only_db_parents_df['parent_id']
 
-    '''
-    only_db_parents --> both_db_rows
-    only_dbmet_parents --> db_and_dbmet_rows
-    '''
-
-    # # Identify drug origins
     both_db_rows = only_db_parents_df[~only_db_parents_df['child_id'].str.contains('DBMET').fillna(False)]
-    # print(both_db_rows)
 
     db_and_dbmet_rows = only_db_parents_df[only_db_parents_df['child_id'].str.contains('DBMET').fillna(False)]
 
     db_child_ids = both_db_rows['child_id'].tolist()
     db_parent_with_other_origin = db_and_dbmet_rows[db_and_dbmet_rows['parent_id'].isin(db_child_ids)]
-    # print(db_parent_with_other_origin)
 
     for index, row in db_parent_with_other_origin.iterrows():
         origin_parent_id = both_db_rows[both_db_rows['child_id'] == row['parent_id']]['origin']
         if not origin_parent_id.empty:
-            # print(origin_parent_id.values[0])
             db_parent_with_other_origin.at[index, 'origin'] = origin_parent_id.values[0]
 
     db_and_dbmet_rows  = db_and_dbmet_rows[~db_and_dbmet_rows['parent_id'].isin(db_child_ids) ]
 
-    # print(db_parent_with_other_origin)
-
     only_db_parents_df = pd.concat([both_db_rows,db_parent_with_other_origin])
     only_db_parents_df = pd.concat([only_db_parents_df,db_and_dbmet_rows])
-    print(only_db_parents_df)
 
     num_new_rows = 1
     while( num_new_rows != 0 ):
@@ -263,8 +289,6 @@ def find_drug_origin_drugbank(data_file):
 
     print("Number of reactions with unknown origin: ", unknown_counter)
     combined_data.to_csv(data_file, index=False)
-
-
 
 def map_smiles_to_reaction_pairs(reaction_pairs_file, structures_file, output_file, is_drug=False):
     smiles_property = "parent_smiles" if is_drug else "child_smiles"
@@ -315,10 +339,10 @@ if __name__ == "__main__":
     get_drug_structures = False
     get_metabolite_structures = False
     get_external_structures = False
-    get_reaction_pairs = True
+    get_reaction_pairs = False
     
-    combine_all_structures = False
-    extend_dataset = False
+    combine_all_structures = True
+    extend_dataset = True
    
 
     ## Drug structure - drugbank_drug_structures.sdf
@@ -359,8 +383,10 @@ if __name__ == "__main__":
     drugbank_reaction_pairs = "dataset/processed_data/drugbank_reaction_pairs.csv"
     if get_reaction_pairs: 
         generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
+        add_missing_ID(drugbank_reaction_pairs)
         find_drug_origin_drugbank(drugbank_reaction_pairs)
         # Missing data: 45
+        # Number of reactions with unknown origin:  0
 
     # Combine all strucutres into one file
     drugbank_full_structures = "dataset/processed_data/drugbank_full_structures.csv"
