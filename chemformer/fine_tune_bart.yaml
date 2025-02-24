@@ -11,4 +11,4 @@ augmentation_strategy: all
 
 vocabulary_path: VOCABULARY_PATH
 output_directory: OUTPUT_DIRECTORY
-task: backward_prediction
+task: forward_prediction

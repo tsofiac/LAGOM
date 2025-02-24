@@ -93,6 +93,29 @@ def check_origin_vs_parent(data_file): #just for checking
     print("Nr of times where the parent and origin are not the same: ", counter)
     return discrepancy_exists
 
+def check_origin_vs_parent_drugbank(data_file): #just for checking
+    """
+    Function to check if any row in the DataFrame has 'origin' not equal to 'parent_name'.
+    
+    Returns True if any such discrepancy exists and False otherwise.
+    """
+    # Read the DataFrame
+    df = pd.read_csv(data_file)
+
+    counter = 0
+
+    # Check for discrepancies where 'origin' is not equal to 'parent_name'
+    discrepancy_exists = False
+    for index, row in df.iterrows():
+        if row['origin'] != row['parent_id']:
+            discrepancy_exists = True
+            #print(f"Discrepancy found at index {index}:")
+            #print(f"\tParent Name: {row['parent_name']}, Origin: {row['origin']}")
+            counter += 1
+
+    print("Nr of times where the parent and origin are not the same: ", counter)
+    return discrepancy_exists
+
 if __name__ == "__main__":
 
     dataset = 'dataset/raw_data/metxbiodb.csv'
@@ -102,4 +125,15 @@ if __name__ == "__main__":
     metxbiodb_inchi_to_smiles(metxbiodb, final)
     find_drug_origin_metxbiodb(final)
 
-    #check_origin_vs_parent(final)
+    check_origin_vs_parent(final)
+
+    # Comparing with drugbank
+    # check_origin_vs_parent_drugbank('dataset/curated_data/drugbank_smiles.csv')
+
+    '''
+    MetXBioDB: 
+    Nr of times where the parent and origin are not the same:  115
+
+    DrugBank: 
+    Nr of times where the parent and origin are not the same:  1448
+    '''

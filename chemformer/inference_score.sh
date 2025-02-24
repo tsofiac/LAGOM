@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --array=0-19
+#SBATCH --array=0-9
 #SBATCH --job-name=score-model
 #SBATCH --output="logs/inference-score-%j.log"
 #SBATCH --nodes 1
@@ -15,9 +15,9 @@ conda activate aizynthmodels
  
 export HYDRA_FULL_ERROR=1
  
-# Set i_chunk to 0 when running interactively
-i_chunk=0 #$SLURM_ARRAY_TASK_ID
-n_chunks=20
+# Set i_chunk_i=0, n_chunks=1 when running interactively
+i_chunk=$SLURM_ARRAY_TASK_ID
+n_chunks=10
  
 config_template=$1
 data=$2
