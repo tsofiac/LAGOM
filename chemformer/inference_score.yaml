@@ -1,4 +1,4 @@
- data_path: DATA_PATH
+data_path: DATA_PATH
 model_path: MODEL_PATH
  
 vocabulary_path: VOCABULARY_PATH
