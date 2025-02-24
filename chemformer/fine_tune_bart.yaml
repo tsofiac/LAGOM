@@ -1,7 +1,7 @@
 data_path: DATA_PATH
 model_path: MODEL_PATH
 
-n_predictions: 1
+n_predictions: 1 # 0
 resume: false
 
 n_epochs: 50
