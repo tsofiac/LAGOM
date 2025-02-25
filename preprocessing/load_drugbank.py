@@ -77,9 +77,7 @@ def inchi_to_smiles(csv_file):
 # combines two dataframes
 def combine_datasets(first_file,second_file,output_file):
     first_df = pd.read_csv(first_file,on_bad_lines='skip')
-    print(first_df.columns)
     second_df = pd.read_csv(second_file,on_bad_lines='skip')
-    print(second_df.columns)
 
     first_df.drop(columns=['inchi'], inplace=True, errors='ignore')
     second_df.drop(columns=['inchi'], inplace=True, errors='ignore')
@@ -336,10 +334,10 @@ def clean_smiles(input_file): # this makes 100% sense
 
 if __name__ == "__main__":
 
-    get_drug_structures = False
-    get_metabolite_structures = False
-    get_external_structures = False
-    get_reaction_pairs = False
+    get_drug_structures = True
+    get_metabolite_structures = True
+    get_external_structures = True
+    get_reaction_pairs = True
     
     combine_all_structures = True
     extend_dataset = True

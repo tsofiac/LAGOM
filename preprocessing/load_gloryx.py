@@ -1,9 +1,10 @@
 import json
 import pandas as pd
+from standardize_smiles import standardize_smiles_collection
 
 
-def load_gloryx(input_file, output_file):
-    with open(input_file, 'r', encoding="utf8") as file:
+def load_gloryx(json_file, comma_file, tab_file):
+    with open(json_file, 'r', encoding="utf8") as file:
         reader = file.read()
         # replace \ to \\ for correct reading of file
         reader = reader.replace('\\', '\\\\')
@@ -49,11 +50,24 @@ def load_gloryx(input_file, output_file):
         'set': set_column
     })
 
-    generation_1_df = df[df['generation'] == 1]
-    generation_1_df.to_csv(output_file, index=False)
+    df['parent_smiles'] = standardize_smiles_collection(df['parent_smiles'], False) #'False' eliminates isomeres
+    df['child_smiles'] = standardize_smiles_collection(df['child_smiles'], False)
+
+    df = df[df['generation'] == 1] # Only first generation reactions
+    df.to_csv(comma_file, index=False)
+
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+    })
+
+    df.to_csv(tab_file, sep='\t', index=False)
 
 
-gloryx = 'dataset/raw_data/gloryx_test_dataset.json'
-gloryx_loaded = 'dataset/curated_data/gloryx_smiles.csv'
+if __name__ == "__main__":
 
-load_gloryx(gloryx, gloryx_loaded)
+    gloryx = 'dataset/raw_data/gloryx_test_dataset.json'
+    gloryx_comma = 'dataset/curated_data/gloryx_smiles_clean.csv'
+    gloryx_tab = 'dataset/finetune/gloryx_finetune.csv'
+
+    load_gloryx(gloryx, gloryx_comma, gloryx_tab)
