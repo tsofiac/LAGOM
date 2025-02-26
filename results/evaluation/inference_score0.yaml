@@ -2,7 +2,7 @@ data_path: dataset/finetune/gloryx_finetune.csv
 model_path: results/training/forward_prediction/version_2/checkpoints/epoch=10-step=88.ckpt
  
 vocabulary_path: chemformer/bart_vocab_downstream.json
-n_predictions: 1
+n_predictions: 10
  
 output_score_data: results/evaluation/metrics_scores0.csv
 output_predictions: results/evaluation/predictions0.json
@@ -10,7 +10,7 @@ n_chunks: 1
 i_chunk: 0
 task: forward_prediction
  
-batch_size: 64
+batch_size: 46
 device: cuda
  
 model:
