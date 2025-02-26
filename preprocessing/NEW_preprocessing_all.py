@@ -280,19 +280,14 @@ def get_unique_parents(input_file, output_file):
 
 def reformat_for_chemformer(input_file, output_file):
     df = pd.read_csv(input_file)
-    try:
-        new_df = pd.DataFrame({
-            'products': df['child_smiles'],
-            'reactants': df['parent_smiles'],
-            'set': df['set']
-        })
 
-        new_df.to_csv(output_file, sep='\t', index=False)
-        
-    except KeyError as e:
-        print(f"Error: Missing required column in the input data: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+    })
+
+    df.to_csv(output_file, sep='\t', index=False)
+
 
     
 
@@ -315,34 +310,30 @@ def reformat_for_chemformer(input_file, output_file):
 if __name__ == "__main__":
 
     name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'combined' ]
-    preprocess_unique_parents = False
+    preprocess_unique_parents = True
 
     val_size = 0.1
-    finetune = f'dataset/finetune/{name}_finetune.csv'
+    min_similarity = 0.2
+    
+    clean_csv = f'dataset/curated_data/{name}_smiles_clean.csv'
+    dataset_gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 
-    removed_valid_smiles = f'dataset/removed_data/{name}_removed_valid_smiles.csv'
     removed_duplicates = f'dataset/removed_data/{name}_removed_duplicates.csv'
-    removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
+    removed_valid_smiles = f'dataset/removed_data/{name}_removed_valid_smiles.csv'
     removed_atoms_allowed = f'dataset/removed_data/{name}_removed_atoms_allowed.csv'
     removed_weights_allowed = f'dataset/removed_data/{name}_removed_weights_allowed.csv'
     removed_fingerprints = f'dataset/removed_data/{name}_removed_fingerprints.csv'
-    removed_reactions = f'dataset/removed_data/{name}_removed_reactions.csv'
 
+    finetune_csv = f'dataset/finetune/{name}_finetune.csv'
     unique = f'dataset/curated_data/{name}_unique_parents.csv'
     unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv'
 
-    dataset_gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
-
     if name == 'combined':
-        
-        combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
-        finetune_csv = 'dataset/finetune/combined_finetune.csv'
-
-        combined_removed_csv = 'dataset/removed_data/combined_removed_duplicates.csv'
-        compare_removed_csv = 'dataset/removed_data/compare_removed_duplicates.csv'
 
         dataset_metx = 'dataset/curated_data/metxbiodb_smiles.csv'
         dataset_drugbank = 'dataset/curated_data/drugbank_smiles.csv'
+
+        compare_removed_csv = 'dataset/removed_data/compare_removed_duplicates.csv'
 
         df_metx = standardize_smiles(dataset_metx)
         df_drugbank = standardize_smiles(dataset_drugbank)
@@ -356,30 +347,29 @@ if __name__ == "__main__":
         df_metx = add_source_column(df_metx, 'metxbiodb')
         df_drugbank = add_source_column(df_drugbank, 'drugbank')
 
-        combine_datasets(df_drugbank, df_metx, combined_csv)
-        remove_duplicates_combined(combined_csv, combined_removed_csv)
-        compare_datasets(combined_csv, dataset_gloryx, compare_removed_csv)
+        combine_datasets(df_drugbank, df_metx, clean_csv)
+        remove_duplicates_combined(clean_csv, removed_duplicates)
+        compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
 
-        test_val_distribute(combined_csv, val_size)
+        test_val_distribute(clean_csv, val_size)
 
-        filter_data_on_both_sides(combined_csv, valid_smiles, removed_valid_smiles)
-        filter_data_on_both_sides(combined_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-        filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-        filter_fingerprint_similarity(combined_csv, removed_fingerprints)
+        filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
+        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+        filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
 
-        reformat_for_chemformer(combined_csv, finetune_csv)
+        reformat_for_chemformer(clean_csv, finetune_csv)
 
         if preprocess_unique_parents:
-            get_unique_parents(combined_csv, unique)
+            get_unique_parents(clean_csv, unique)
             reformat_for_chemformer(unique, unique_finetune)
 
     else:
 
         dataset = f'dataset/curated_data/{name}_smiles.csv'
-        clean_csv = f'dataset/curated_data/{name}_smiles_clean.csv'
-        finetune_csv = f'dataset/finetune/{name}_finetune.csv'
-
-        compare_removed_csv = f'dataset/removed_data/{name}compare_removed_duplicates.csv'
+        
+        removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
+        compare_removed_csv = f'dataset/removed_data/{name}_compare_removed_duplicates.csv'
 
         df = standardize_smiles(dataset)
         df = remove_duplicates(df, removed_duplicates)
@@ -393,7 +383,7 @@ if __name__ == "__main__":
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-        filter_fingerprint_similarity(clean_csv, removed_fingerprints)
+        filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
         
         reformat_for_chemformer(clean_csv, finetune_csv)
 
