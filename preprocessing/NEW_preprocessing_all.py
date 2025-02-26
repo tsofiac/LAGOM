@@ -31,6 +31,10 @@ def remove_duplicates(df, duplicates_data_file): #Removes duplicate reactions
 
     return df
 
+def non_equal_smiles(parent_smiles, child_smiles):
+    # Returns True if the smiles are not equal, False otherwise.
+    return parent_smiles != child_smiles
+
 def remove_equal_parent_child(data, removed_data_file):
 
     total_removed = 0
@@ -140,10 +144,6 @@ def test_val_distribute(data_file, val_size): #Input csv file. Function adds an 
     final_df.to_csv(data_file, index=False)
 
 # --------------------------Filtering data--------------------------------------
-
-def non_equal_smiles(parent_smiles, child_smiles):
-    # Returns True if the smiles are not equal, False otherwise.
-    return parent_smiles != child_smiles
 
 def filter_data_on_both_sides(data_file, filter_method, removed_data_file): 
     data = pd.read_csv(data_file)
@@ -351,7 +351,7 @@ if __name__ == "__main__":
         df_drugbank = remove_duplicates(df_drugbank, 'dataset/removed_data/drugbank_removed_duplicates.csv') 
 
         df_metx = remove_equal_parent_child(df_metx, 'dataset/removed_data/metxbiodb_removed_equal.csv')
-        df_drugbank = remove_equal_parent_child(df_metx, 'dataset/removed_data/drugbank_removed_equal.csv')
+        df_drugbank = remove_equal_parent_child(df_drugbank, 'dataset/removed_data/drugbank_removed_equal.csv')
 
         df_metx = add_source_column(df_metx, 'metxbiodb')
         df_drugbank = add_source_column(df_drugbank, 'drugbank')

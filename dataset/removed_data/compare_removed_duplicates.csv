@@ -7,6 +7,7 @@ Imatinib,AFN911,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,CN1C
 Imatinib,Piperidine N-oxide imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CC[N+](C)([O-])CC3)cc2)cc1Nc1nccc(C2=CN[CH]C=C2)n1,DB00619,DrugBank
 Imatinib,Pyridine N-oxide imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2ccc[n+]([O-])c2)n1,DB00619,DrugBank
 Imatinib,M7 N-oxidation imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)[n+]1[O-],DB00619,DrugBank
+Imatinib,Deaminated imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,CN1CCNCC1,DB00619,DrugBank
 Imatinib,M42.2 imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(C(=O)O)cc2)cc1Nc1nccc(-c2cccnc2)n1,DB00619,DrugBank
 Imatinib,M29.6 imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3=O)cc2)cc1Nc1nccc(-c2cccnc2)n1,DB00619,DrugBank
 Imatinib,M28.8 imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3=O)cc2)cc1Nc1nccc(-c2cccnc2)n1,DB00619,DrugBank
@@ -18,11 +19,16 @@ Esomeprazole,5-O-Desmethylomeprazole,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)n
 Esomeprazole,5-hydroxyesomeprazole,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)nc2c1,COc1ccc2nc([S+]([O-])Cc3ncc(CO)c(OC)c3C)[nH]c2c1,DB00736,DrugBank
 Clopidogrel,Clopidogrel carboxylic acid derivative,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,O=C(O)C(c1ccccc1Cl)N1CCc2sccc2C1,DB00758,DrugBank
 Clopidogrel,2-Oxoclopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,COC(=O)C(c1ccccc1Cl)N1CCC2SC(=O)C=C2C1,DB00758,DrugBank
+Tacrolimus,31-O-Demethyltacrolimus,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(O)C3)C(C)C(O)CC1=O)C(C)CC2OC,DB00864,DrugBank
+Tacrolimus,13-O-Desmethyltacrolimus,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2O,DB00864,Both
+Tacrolimus,15-O-Desmethyltacrolimus,C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC,C=CCC1C=C(C)CC(C)CC(O)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC,DB00864,Both
 Formoterol,O-demethylated formoterol (M1),COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,CC(Cc1ccc(O)cc1)NCC(O)c1ccc(O)c(NC=O)c1,DB00983,DrugBank
 Formoterol,Formoterol glucuronide 1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)c(NC=O)c2)cc1,DB00983,DrugBank
 Formoterol,Formoterol glucuronide 2,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccc(O)c(NC=O)c2)cc1,DB00983,DrugBank
 Formoterol,Formoterol deformylated metabolite,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(O)c(N)c2)cc1,DB00983,DrugBank
 Formoterol,Formoterol sulfate conjugate,COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1,COc1ccc(CC(C)NCC(O)c2ccc(OS(=O)(=O)O)c(NC=O)c2)cc1,DB00983,DrugBank
+Cinacalcet,Hydrocinnamic acid,CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12,O=C(O)CCc1ccccc1,DB01012,DrugBank
+Cinacalcet,hydroxy-hydrocinnamic acid,CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12,O=C(O)CCc1cccc(O)c1,DB01012,DrugBank
 Atorvastatin,para-hydroxyatorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DB01076,Both
 Atorvastatin,ortho-hydroxyatorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,CC(C)c1c(C(=O)Nc2ccccc2O)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DB01076,Both
 Rosuvastatin,N-Desmethylrosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,CC(C)c1nc(NS(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O,DB01098,Both
@@ -83,4 +89,6 @@ Ibrutinib,PCI-45752 (M34),C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)
 Osimertinib,AZ-7550,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCNC,DB09330,DrugBank
 Osimertinib,AZ-5104,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,C=CC(=O)Nc1cc(Nc2nccc(-c3c[nH]c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C,DB09330,DrugBank
 ac1ldic9,2-oxo-clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,COC(=O)C(c1ccccc1Cl)N1CCC2=C(CC(=O)S2)C1,ac1ldic9,MetXBioDB
+everolimus,,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(OCCO)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,everolimus,MetXBioDB
+everolimus,,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(OCCO)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(OCCO)C(O)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,everolimus,MetXBioDB
 zinc36377943,6beta - HYDROXYBUDESONIDE,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,CCCC(O)OC1CC2C3CCC4=CC(=O)C=CC4(C)C3C(O)CC2(C)C1C(=O)CO,zinc36377943,MetXBioDB

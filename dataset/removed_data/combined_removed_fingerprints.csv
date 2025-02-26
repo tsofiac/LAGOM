@@ -1,0 +1,136 @@
+parent_name,child_name,parent_smiles,child_smiles,origin,source,set,tanimoto
+Dimenhydrinate,Diphenhydramine,Cn1c(=O)c2nc(Cl)[nH]c2n(C)c1=O,CN(C)CCOC(c1ccccc1)c1ccccc1,DB00985,DrugBank,train,0.04
+Isosorbide mononitrate,Nitric Oxide,O=[N+]([O-])OC1COC2C(O)COC12,[N]=O,DB01020,DrugBank,train,0.03571428571428571
+Pentaerythritol tetranitrate,Nitrite,O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-],O=NO,DB06154,DrugBank,train,0.1
+Chloroxylenol,Sulfuric acid,Cc1cc(O)cc(C)c1Cl,O=S(=O)(O)O,DB11121,DrugBank,train,0.047619047619047616
+Trichloroethylene,Chloral hydrate,ClC=C(Cl)Cl,OC(O)C(Cl)(Cl)Cl,DB13323,Both,train,0.13333333333333333
+Aripiprazole lauroxil,Lauric acid,CCCCCCCCCCCC(=O)OCN1C(=O)CCc2ccc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)cc21,CCCCCCCCCCCC(=O)O,DB14185,DrugBank,train,0.18055555555555555
+Monomethyl fumarate,Citric acid,COC(=O)C=CC(=O)O,O=C(O)CC(O)(CC(=O)O)C(=O)O,DB14219,DrugBank,train,0.14285714285714285
+Morphine,morphine-3-glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CCCN(C)C(CC)C1C=CC(O)C2Oc3c(OC4OC(C)C(O)C(O)C4O)cccc3C12,DB00318,DrugBank,train,0.1797752808988764
+Niacin,N1-methyl-4-pyridone-5-carboxamide,O=C(O)c1cccnc1,Cn1ccc(=O)c(C(N)=O)c1,DB12911,DrugBank,train,0.15
+Ifosfamide,Chloroacetaldehyde,O=P1(NCCCl)OCCCN1CCCl,O=CCCl,DB12902,Both,train,0.11428571428571428
+Diethyltoluamide,acetaldehyde,CCN(CC)C(=O)c1cccc(C)c1,CC=O,DB11282,Both,train,0.06451612903225806
+Galactose,α-D-galactose,O=CC(O)C(O)C(O)C(O)CO,OCC1OC(O)C(O)C(O)C1O,DB09301,DrugBank,train,0.09090909090909091
+Ademetionine,Cystathionine,C[S+](CCC(N)C(=O)[O-])CC1OC(n2cnc3c(N)ncnc32)C(O)C1O,NC(CCSCC(N)C(=O)O)C(=O)O,DB00118,DrugBank,train,0.15151515151515152
+Cevimeline,Glucuronic acid,CC1OC2(CS1)CN1CCC2CC1,O=C(O)C1OC(O)C(O)C(O)C1O,DB00185,DrugBank,train,0.06976744186046512
+Esmolol,Methanol,COC(=O)CCc1ccc(OCC(O)CNC(C)C)cc1,CO,DB00187,DrugBank,train,0.05
+Valproic acid,Valproic acid CoA,CCCC(CCC)C(=O)O,CCCC(CCC)C(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB00313,DrugBank,train,0.12903225806451613
+Floxuridine,alpha-Fluoro-beta-alanine,O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1F,NCC(F)C(=O)O,DB00322,DrugBank,train,0.08
+Floxuridine,"5,6-Dihydro-5-fluorouracil",O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1F,O=C1NCC(F)C(=O)N1,DB00322,DrugBank,train,0.13725490196078433
+Methadone,"2-Ethylidene-1,5-dimethyl-3,3-diphenylpyrrolidine",CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,CC=C1N(C)C(C)CC1(c1ccccc1)c1ccccc1,DB00333,DrugBank,train,0.12962962962962962
+Chlorzoxazone,6-hydroxychlorzoxazone,O=c1[nH]c2cc(Cl)ccc2o1,Oc1nc2cc(Cl)c(O)cc2o1,DB00356,DrugBank,train,0.19047619047619047
+Cyclophosphamide,Chloroacetaldehyde,O=P1(N(CCCl)CCCl)NCCCO1,O=CCCl,DB00531,Both,train,0.125
+Levocarnitine,Trimethylamine N-oxide,C[N+](C)(C)CC(O)CC(=O)[O-],C[N+](C)(C)[O-],DB00583,DrugBank,train,0.18181818181818182
+Furazolidone,beta-Hydroxyethylhydrazine,O=C1OCCN1N=Cc1ccc([N+](=O)[O-])o1,CC=CCCC=CCCC(=O)OC,DB00614,DrugBank,train,0.034482758620689655
+Astemizole,2-(4-hydroxyphenyl)acetaldehyde,COc1ccc(CCN2CCC(Nc3nc4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,O=CCc1ccc(O)cc1,DB00637,DrugBank,train,0.10606060606060606
+Aprepitant,"(2R,3S)-2-[(1R)-1-[3,5-bis(trifluoromethyl)phenyl]ethoxy]-3-(4-fluorophenyl)morpholine",CC(OC1OCCN(Cc2n[nH]c(=O)[nH]2)C1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,O=Cc1n[nH]c(=O)[nH]1,DB00673,DrugBank,train,0.14705882352941177
+Trovafloxacin,Sulfamate,NC1C2CN(c3nc4c(cc3F)c(=O)c(C(=O)O)cn4-c3ccc(F)cc3F)CC12,NS(=O)(=O)O,DB00685,DrugBank,train,0.05263157894736842
+Mycophenolate mofetil,N-(2-hydroxyethyl)-morpholine N-oxide,COc1c(C)c2c(c(O)c1CC=C(C)CCC(=O)OCCN1CCOCC1)C(=O)OC2,OCCON1CCOCC1,DB00688,DrugBank,train,0.17391304347826086
+Mannitol,Glycogen,OCC(O)C(O)C(O)C(O)CO,OCC1OC(OCC2OC(OC3C(CO)OC(O)C(O)C3O)C(O)C(O)C2OC2OC(CO)C(O)C(O)C2O)C(O)C(O)C1O,DB00742,DrugBank,train,0.07317073170731707
+Methimazole,Methimazole Epoxide Metabolite,Cn1cc[nH]c1=S,CN1C(S)=NC2OC21,DB00763,DrugBank,train,0.11428571428571428
+Alfentanil,AMX,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,CC1=NN(c2cccc(S(=O)(=O)O)c2)C(=O)C1N=Nc1cc(Cl)c(Cl)cc1S(=O)(=O)O,DB00802,DrugBank,train,0.14285714285714285
+Emtricitabine,5-fluorocytosine,N=c1nc(O)n(C2CSC(CO)O2)cc1F,Nc1nc(=O)[nH]cc1F,DB00879,DrugBank,train,0.12962962962962962
+Zonisamide,2-sulfamoylacetylphenol,NS(=O)(=O)Cc1noc2ccccc12,CCC1(O)CC2CN(CCc3c([nH]c4ccccc34)C(C(=O)OC)(c3cc4c(cc3OC)N(C)C3C(O)(C(=O)OC)C(O)C5(CC)C=CCN6CCC43C65)C2)C1,DB00909,DrugBank,train,0.12149532710280374
+Mercaptopurine,6-Thioinosine 5'-monophosphate,S=c1nc[nH]c2nc[nH]c12,O=P(O)(O)OCC1OC(n2cnc3c(S)ncnc32)C(O)C1O,DB01033,DrugBank,train,0.08333333333333333
+Mercaptopurine,Thiouric acid,S=c1nc[nH]c2nc[nH]c12,Oc1nc(S)c2nc(O)[nH]c2n1,DB01033,DrugBank,train,0.10526315789473684
+Cefuroxime,acetaldehyde,CON=C(C(=O)NC1C(=O)N2C(C(=O)O)=C(COC(N)=O)CSC12)c1ccco1,CC=O,DB01112,DrugBank,train,0.029850746268656716
+Halothane,bromide,FC(F)(F)C(Cl)Br,Br,DB01159,DrugBank,train,0.0
+Halothane,trifluoroacetic acid,FC(F)(F)C(Cl)Br,O=C(O)C(F)(F)F,DB01159,Both,train,0.16666666666666666
+Halothane,"2-chloro-1,1-difluoroethene",FC(F)(F)C(Cl)Br,FC(F)=CCl,DB01159,Both,train,0.1111111111111111
+Procarbazine,Hydrazine,CNNCc1ccc(C(=O)NC(C)C)cc1,NN,DB01168,DrugBank,train,0.0
+Anastrozole,Triazole,CC(C)(C#N)c1cc(Cn2cncn2)cc(C(C)(C)C#N)c1,c1c[nH]nn1,DB01217,DrugBank,train,0.06818181818181818
+Saquinavir,M2 di-hydroxylated metabolite,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(O)C(Cc1ccccc1)NC(=O)C(CC(N)=O)NC(=O)c1ccc2ccccc2n1,CNC(=O)C(O)c1cc(O)c2ccn(C3CCN(CCc4ccccc4F)CC3)c2c1,DB01232,DrugBank,train,0.16379310344827586
+Sevoflurane,Fluoride,FCOC(C(F)(F)F)C(F)(F)F,F,DB01236,DrugBank,train,0.0
+Cefepime,N-Methylpyrrolidine,CON=C(C(=O)NC1C(=O)N2C(C(=O)[O-])=C(C[N+]3(C)CCCC3)CSC12)c1csc(N)n1,CN1CCCC1,DB01413,DrugBank,train,0.05333333333333334
+Phenazopyridine,"2,3,6 Triaminopyridine",Nc1ccc(N=Nc2ccccc2)c(N)n1,N=c1ccc(N)c(N)[nH]1,DB01438,DrugBank,train,0.19444444444444445
+Metamfetamine,4-Hydroxynorephedrine,CNC(C)Cc1ccccc1,CC(N)C(O)c1ccc(O)cc1,DB01577,DrugBank,train,0.16666666666666666
+Taurine,taurocholate,NCCS(=O)(=O)O,O=C(CCCC1CCC2C1C(O)CC1C3CCC(O)CC3CC(O)C12)NCCS(=O)(=O)O,DB01956,DrugBank,train,0.16666666666666666
+Pidolic acid,Glutamate,O=C1CCC(C(=O)O)N1,NC(CCC(=O)O)C(=O)O,DB03088,DrugBank,train,0.11764705882352941
+Tienilic acid,"Thiophene-4,5-epoxide",O=C(O)COc1ccc(C(=O)c2cccs2)c(Cl)c1Cl,CC(C(=O)O)c1ccc(C(=O)C2=CC3OC3S2)cc1,DB04831,DrugBank,train,0.15384615384615385
+Flunarizine,Flunarizine metabolite M3,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,O=C(c1ccc(F)cc1)c1ccc(F)cc1,DB04841,Both,train,0.17777777777777778
+Pentaerythritol tetranitrate,Ammonia,O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-],N,DB06154,DrugBank,train,0.0
+Romidepsin,Romidepsin (active),CC=C1NC(=O)C2CSSCCC=CC(CC(=O)NC(C(C)C)C(=O)N2)OC(=O)C(C(C)C)NC1=O,CC=C1N=C(O)C(CS)N=C(O)C(C(C)C)CC(=O)CC(C=CCCS)OC(=O)C(C(C)C)N=C1O,DB06176,DrugBank,train,0.1553398058252427
+Isavuconazonium,BAL8728,CNCC(=O)OCc1cccnc1N(C)C(=O)OC(C)[n+]1cnn(CC(O)(c2cc(F)ccc2F)C(C)c2nc(-c3ccc(C#N)cc3)cs2)c1,CN1C(=O)OCc2cccnc21,DB06636,DrugBank,train,0.10344827586206896
+Artemether,Deoxyartemsinin,COC1OC2OC3(C)CCC4C(C)CCC(C1C)C24OO3,CC1C=CC2C(C)C(=O)OC3OC(C)(O)CCC1C32,DB06697,DrugBank,train,0.14492753623188406
+Fospropofol,Phosphate,CC(C)c1cccc(C(C)C)c1OCOP(=O)(O)O,O=P(O)(O)O,DB06716,DrugBank,train,0.16129032258064516
+Methenamine,ammonium,C1N2CN3CN1CN(C2)C3,N,DB06799,DrugBank,train,0.0
+Tetracaine,diethylaminoethanol,CCCCNc1ccc(C(=O)OCCN(C)C)cc1,CCN(CC)CCO,DB09085,DrugBank,train,0.13333333333333333
+Paraldehyde,acetaldehyde,CC1OC(C)OC(C)O1,CC=O,DB09117,DrugBank,train,0.07692307692307693
+Etoperidone,triazole propionic acid,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,O=C(O)CCn1cncn1,DB09194,DrugBank,train,0.1076923076923077
+Etoperidone,Etoperidone M20,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,CCc1n[nH]c(=O)[nH]1,DB09194,DrugBank,train,0.15517241379310345
+Etoperidone,Etoperidone M21,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,CC(=O)c1n[nH]c(=O)[nH]1,DB09194,DrugBank,train,0.0967741935483871
+Tipiracil,6-(hydroxymethyl)uracil,N=C1CCCN1Cc1[nH]c(=O)[nH]c(=O)c1Cl,O=c1cc(CO)[nH]c(=O)[nH]1,DB09343,DrugBank,train,0.1702127659574468
+Chloroxylenol,Glucuronic acid,Cc1cc(O)cc(C)c1Cl,O=C(O)C1OC(O)C(O)C(O)C1O,DB11121,DrugBank,train,0.029411764705882353
+Amifampridine,3-N-acetylamifampridine,Nc1ccncc1N,CC(=O)NC1=CNC=CC1N,DB11640,DrugBank,train,0.075
+Momelotinib,Aminoacetonitrile,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1,N#CCN,DB11763,DrugBank,train,0.0847457627118644
+Methyl nicotinate,Methanol,COC(=O)c1cccnc1,CO,DB13882,DrugBank,train,0.07692307692307693
+Diroximel fumarate,Methanol,COC(=O)C=CC(=O)OCCN1C(=O)CCC1=O,CO,DB14783,DrugBank,train,0.0625
+Dehydroascorbate,"2,3-dikeogulonic acid",O=C1OC(C(O)CO)C(=O)C1=O,O=C(O)C(=O)C(=O)C(O)C(O)CO,DB00126,DrugBank,train,0.1891891891891892
+Glutamate,1-pyrroline-5-carboxylic acid,NC(CCC(=O)O)C(=O)O,O=C(O)C1CCC=N1,DB00130,DrugBank,train,0.12121212121212122
+Dihydrolipoamide,Lipoic acid,NC(=O)CCCCC(S)CCS,O=C(O)CCCCC1CCSS1,DB00145,DrugBank,train,0.16279069767441862
+Phenytoin arene-oxide,Hydroxyphenytoin,O=C1NC(=O)C(C2=CC3OC3C=C2)(c2ccccc2)N1,OC1=NC(c2ccccc2)(c2ccc(O)cc2)C(O)=N1,DB00252,DrugBank,train,0.16363636363636364
+15-alpha-hydroxydesogestrel,Glucuronic acid,C#CC1(O)CC(O)C2C3CCC4=CCCCC4C3C(=C)CC21CC,O=C(O)C1OC(O)C(O)C(O)C1O,DB00304,DrugBank,train,0.04411764705882353
+NAPQI,Acetaminophen cysteine,CC(=O)N=C1C=CC(=O)C=C1,CC(=O)Nc1ccc(SCC(N)C(=O)O)cc1,DB03783,DrugBank,train,0.18604651162790697
+4-Hydroxycyclophosphamide,Aldophosphamide,O=P1(N(CCCl)CCCl)NC(O)CCO1,NP(=O)(OCCC=O)N(CCCl)CCCl,DB00531,DrugBank,train,0.1836734693877551
+5-fluorouracil,dihydrofluorouracil (DHFU),O=c1[nH]cc(F)c(=O)[nH]1,O=C1NCC(F)C(=O)N1,DB00322,DrugBank,train,0.14705882352941177
+4-Hydroxyifosfamide,aldoifosfamide,O=P1(NCCCl)OCCC(O)N1CCCl,O=CCCOP(=O)(NCCCl)NCCCl,DB12902,DrugBank,train,0.15384615384615385
+Benzoyloxyl radical,Carbon dioxide,O=C(O)c1ccccc1,O=C=O,DB09096,DrugBank,train,0.058823529411764705
+Benzoyloxyl radical,Phenyl Radical,O=C(O)c1ccccc1,[C+]1=CC=CC=C1,DB09096,DrugBank,train,0.04
+m-Iodohippuric acid,Radioiodide 123,O=C(O)CNC(=O)c1cccc(I)c1,I,DB09546,DrugBank,train,0.0
+Heptanoate,Acetyl Coenzyme A,CCCCCCC(=O)O,CC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB11677,DrugBank,train,0.06382978723404255
+Heptanoate,Propionyl Coenzyme A,CCCCCCC(=O)O,CCC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB11677,DrugBank,train,0.0851063829787234
+Taurultam,Taurinamide,O=S1(=O)CCNCN1,NCCS(N)(=O)=O,DB12473,DrugBank,train,0.03571428571428571
+Undecanoate,Acetyl Coenzyme A,CCCCCCCCCCC(=O)O,CC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB13946,DrugBank,train,0.06382978723404255
+Bromonitroethanol,Nitrite,O=[N+]([O-])C(Br)CO,O=NO,DB13960,DrugBank,train,0.1
+1-pyrroline-5-carboxylic acid,Ornithine,O=C(O)C1CCC=N1,NCCCC(N)C(=O)O,DB00130,DrugBank,train,0.11764705882352941
+Aldophosphamide,Acrolein,NP(=O)(OCCC=O)N(CCCl)CCCl,C=CC=O,DB00531,DrugBank,train,0.09090909090909091
+Methimazole Dihydrodiol Metabolite,Methimazole Glyoxal Metabolite,CN1C(S)=NC(O)C1O,CC(=O)C(C)=O,DB00763,DrugBank,train,0.08
+Methimazole Dihydrodiol Metabolite,Methimazole N-methyl Thiourea Metabolite,CN1C(S)=NC(O)C1O,CNC(N)=S,DB00763,DrugBank,train,0.06896551724137931
+3-Carbamoyl-2-phenylpropionaldehyde,"4-Hydroxy-5-phenyltetrahydro-1,3-oxazin-2-one",NC(=O)OCC(C=O)c1ccccc1,OC1=NC(O)C(c2ccccc2)CO1,DB00949,DrugBank,train,0.14285714285714285
+dihydrofluorouracil (DHFU),β-ureidopropionic acid (FUPA),O=C1NCC(F)C(=O)N1,NC(=O)NCC(F)C(=O)O,DB00322,DrugBank,train,0.07894736842105263
+aldoifosfamide,Acrolein,O=CCCOP(=O)(NCCCl)NCCCl,C=CC=O,DB12902,DrugBank,train,0.0967741935483871
+4- aminophenol,N-acetyl-4-Aminophenol,Nc1ccc(O)cc1,CC(=O)Nc1ccc(O)c(C(=O)C(CS)NC(C)=O)c1,DB01438,DrugBank,train,0.11363636363636363
+Carboxyphosphamide,Nornitrogen mustard,NP(=O)(OCCC(=O)O)N(CCCl)CCCl,ClCCNCCCl,DB00531,DrugBank,train,0.11428571428571428
+Aripiprazole unnamed metabolite 3,Aripiprazole unnamed metabolite 4,O=C1C=CC(=O)C(Cl)=C1Cl,NC(CCC(=O)NC(CSC1=CC(=O)C(Cl)=C(Cl)C1=O)C(=O)NCC(=O)O)C(=O)O,DB01238,DrugBank,train,0.16363636363636364
+"5-Phenyl-1,3-oxazinane-2,4-dione",3-Carbamoyl-2-phenylpropionic acid,O=C1N=C(O)C(c2ccccc2)CO1,NC(=O)OCC(C(=O)O)c1ccccc1,DB00949,DrugBank,train,0.1702127659574468
+"2,6-dichlorobenzonitrile",,N#Cc1c(Cl)cccc1Cl,N#CC1C(Cl)=CC=C2OC21Cl,"2,6-dichlorobenzonitrile",MetXBioDB,train,0.19444444444444445
+3-methylindole,3-methyleneindolenine,Cc1c[nH]c2ccccc12,C=C1C=Nc2ccccc21,3-methylindole,MetXBioDB,train,0.14285714285714285
+3-methylindole,"3-methylindole-2,3-epoxide",Cc1c[nH]c2ccccc12,CC12OC1Nc1ccccc12,3-methylindole,MetXBioDB,train,0.18421052631578946
+7-benzyloxyquinoline,7-Hydroxyquinoline,c1ccc(COc2ccc3cccnc3c2)cc1,O=C1C=Cc2cccnc2C1,7-benzyloxyquinoline,MetXBioDB,train,0.19148936170212766
+7-butoxy-2h-chromen-2-one,,CCCCOc1ccc2ccc(=O)oc2c1,CCCC(O)OC1CCC2CCC(O)OC2C1,7-butoxy-2h-chromen-2-one,MetXBioDB,train,0.1
+7-butoxy-2h-chromen-2-one,,CCCCOc1ccc2ccc(=O)oc2c1,CC(O)CCOC1CCC2CCC(O)OC2C1,7-butoxy-2h-chromen-2-one,MetXBioDB,train,0.08196721311475409
+7-butoxy-2h-chromen-2-one,,CCCCOc1ccc2ccc(=O)oc2c1,OCCCCOC1CCC2CCC(O)OC2C1,7-butoxy-2h-chromen-2-one,MetXBioDB,train,0.0847457627118644
+aprepitant,"5‐oxo‐1,4‐dihydro‐1,2,4‐triazole‐3‐carbaldehyde",CC(OC1OCCN(Cc2nc(O)n[nH]2)C1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,O=Cc1n[nH]c(O)n1,aprepitant,MetXBioDB,train,0.1388888888888889
+astemizole,2-(4-hydroxyphenyl)acetaldehyde,COc1ccc(CCN2CCC(N=c3[nH]c4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,O=CCc1ccc(O)cc1,astemizole,MetXBioDB,train,0.109375
+"2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",Pyridone,[O-][S+](Cc1cc(OCC2CC2)ccn1)c1nc2ccc(F)cc2[nH]1,O=c1cc[nH]c(CSc2nc3cc(O)c(F)cc3[nH]2)c1,"2Ã¢â‚¬Â[(S)Ã¢â‚¬Â[4Ã¢â‚¬Â(cyclopropylmethoxy)pyridinÃ¢â‚¬Â2Ã¢â‚¬Âyl]methanesulfinyl]Ã¢â‚¬Â5Ã¢â‚¬ÂfluoroÃ¢â‚¬Â1HÃ¢â‚¬Â1,3Ã¢â‚¬Âbenzodiazole",MetXBioDB,train,0.17721518987341772
+cinnarizine,Benzophenone,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,O=C(c1ccccc1)c1ccccc1,cinnarizine,MetXBioDB,train,0.15
+indole,,c1ccc2[nH]ccc2c1,OC1=Nc2ccccc2C1,indole,MetXBioDB,train,0.1875
+p-cresol,,Cc1ccc(O)cc1,CC1C=CC(=O)C=C1,p-cresol,MetXBioDB,train,0.16666666666666666
+Nitrosodiethylamine,N-Nitrosomonoethylamine,CCN(CC)N=O,CCN=NO,Nitrosodiethylamine,MetXBioDB,train,0.19047619047619047
+NDPA,Dipropylimine,CCCN(CCC)N=O,CCCNCCC,NDPA,MetXBioDB,train,0.19047619047619047
+Carbosulfan,dibutyl(sulfanyl)amine,CCCCN(CCCC)SN(C)C(=O)Oc1cccc2c1OC(C)(C)C2,CCCCN(S)CCCC,Carbosulfan,MetXBioDB,train,0.16981132075471697
+methadone,"2ethylidene-1,5-dimethyl-3,3-diphenylpyrolidine",CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,CCC1C(C)N(C)CC1(c1ccccc1)c1ccccc1,methadone,MetXBioDB,train,0.17647058823529413
+"1,3,5-trinitrobenzene","S-(2,4,6-trinitrocyclohexa-2,5-dien-1-yl)glutathione",O=[N+]([O-])c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1,NC(CCC(=O)NC(CSC1C([N+](=O)[O-])=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,"1,3,5-trinitrobenzene",MetXBioDB,train,0.15254237288135594
+"1-Chloro-2,4-dinitrobenzene",,O=[N+]([O-])c1ccc(Cl)c([N+](=O)[O-])c1,NC(CCC(=O)NC(CSC1(Cl)C=CC([N+](=O)[O-])C=C1[N+](=O)[O-])C(=O)NCC(=O)O)C(=O)O,"1-Chloro-2,4-dinitrobenzene",MetXBioDB,train,0.13513513513513514
+Diphenylamine,Diphenylamine N-glucuronide,c1ccc(Nc2ccccc2)cc1,O=C(O)C1OC(N(c2ccccc2)c2ccccc2)C(O)C(O)C1O,Diphenylamine,MetXBioDB,train,0.16666666666666666
+chlorofluoroacetic acid,chloroacetyl-S-glutathione,O=C(O)C(F)Cl,NC(CCC(=O)NC(CSC(Cl)C(=O)O)C(=O)NCC(=O)O)C(=O)O,chlorofluoroacetic acid,MetXBioDB,train,0.17777777777777778
+aminochrome,,O=C1C=C2CCNC2=CC1=O,NC(CCC(=O)NC(CSc1c(O)c(O)cc2c1NCC2)C(=O)NCC(=O)O)C(=O)O,aminochrome,MetXBioDB,train,0.12857142857142856
+Hexafluoroisopropanol,,OC(C(F)(F)F)C(F)(F)F,O=C(O)C1OC(OC(C(F)(F)F)C(F)(F)F)C(O)C(O)C1O,Hexafluoroisopropanol,MetXBioDB,train,0.17647058823529413
+1-iodobutane,butyl-glutathione,CCCCI,CCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodobutane,MetXBioDB,train,0.12244897959183673
+1-iodooctane,octyl-glutathione,CCCCCCCCI,CCCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodooctane,MetXBioDB,train,0.1568627450980392
+1-iodoheptane,heptyl-glutathione,CCCCCCCI,CCCCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodoheptane,MetXBioDB,train,0.1568627450980392
+1-iodomethane,methylglutathione,CI,CSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodomethane,MetXBioDB,train,0.02564102564102564
+1-iodopentane,pentyl-glutathione,CCCCCI,CCCCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodopentane,MetXBioDB,train,0.14
+Sudan I,Aniline,Oc1ccc2ccccc2c1N=Nc1ccccc1,Nc1ccccc1,Sudan I,MetXBioDB,train,0.1875
+Choline,Trimethylazanium,C[N+](C)(C)CCO,CN(C)C,Choline,MetXBioDB,train,0.06666666666666667
+Choline,Acetaldehyde,C[N+](C)(C)CCO,CC=O,Choline,MetXBioDB,train,0.058823529411764705
+Desflurane,Fluoride ion,FC(F)OC(F)C(F)(F)F,F,DB01189,DrugBank,val,0.0
+Arbutin,D-glucose,OCC1OC(Oc2ccc(O)cc2)C(O)C(O)C1O,O=CC(O)C(O)C(O)C(O)CO,DB11217,DrugBank,val,0.06382978723404255
+Isopropyl myristate,Isopropyl alcohol,CCCCCCCCCCCCCC(=O)OC(C)C,CC(C)O,DB13966,DrugBank,val,0.16
+Trandolapril,Diketopiperazine,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)CC2CCCCC21,O=C1NC(Cc2cnc[nH]2)C(=O)N2CCCCC12,DB00519,DrugBank,val,0.13253012048192772
+Desflurane,trifluoroacetic acid,FC(F)OC(F)C(F)(F)F,O=C(O)C(F)(F)F,DB01189,DrugBank,val,0.14285714285714285
+6-Mercaptopurine,6-Thiosine 5'-monophosphate,S=c1nc[nH]c2nc[nH]c12,O=P(O)(O)OCC1OC(n2cnc3c(S)nc(O)nc32)C(O)C1O,DB00993,DrugBank,val,0.09836065573770492
+hydroxilated form of dolutegravir (M3),"2,4- difluorobenzaldehyde (M5 dolutegravir)",CC1CCOC2Cn3cc(C(=O)NC(O)c4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,OCc1ccc(F)cc1F,DB08930,DrugBank,val,0.19402985074626866
+2-acetylbenzothiophene,,CC(=O)c1cc2ccccc2s1,CC(O)C1CC2CCCCC2[S+]1[O-],2-acetylbenzothiophene,MetXBioDB,val,0.04
+1-iodoethane,ethylglutathione,CCI,CCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodoethane,MetXBioDB,val,0.06976744186046512
+1-iodopropane,propyl-glutathione,CCCI,CCCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,1-iodopropane,MetXBioDB,val,0.08695652173913043
