@@ -237,9 +237,25 @@ def find_drug_origin_drugbank(data_file):
     only_db_parents_df.loc[:, 'origin'] = only_db_parents_df['parent_id']
 
     both_db_rows = only_db_parents_df[~only_db_parents_df['child_id'].str.contains('DBMET').fillna(False)]
-
     db_and_dbmet_rows = only_db_parents_df[only_db_parents_df['child_id'].str.contains('DBMET').fillna(False)]
 
+    # DB-DB fix ----------------------------------------
+    db_child_ids = both_db_rows['child_id'].tolist()
+
+    both_db_child_also_parent = both_db_rows[both_db_rows['parent_id'].isin(db_child_ids)]
+    print(both_db_child_also_parent)
+    print(len(both_db_child_also_parent))
+    for index, row in both_db_child_also_parent.iterrows():
+        origin_parent_id = both_db_rows[both_db_rows['child_id'] == row['parent_id']]['origin']
+        if not origin_parent_id.empty:
+            both_db_child_also_parent.at[index, 'origin'] = origin_parent_id.values[0]
+
+    both_db_rows.update(both_db_child_also_parent)
+
+    print(both_db_child_also_parent)
+    print(len(both_db_child_also_parent))
+
+    # DB-DBMET fix ----------------------------------------
     db_child_ids = both_db_rows['child_id'].tolist()
     db_parent_with_other_origin = db_and_dbmet_rows[db_and_dbmet_rows['parent_id'].isin(db_child_ids)]
 
@@ -253,6 +269,7 @@ def find_drug_origin_drugbank(data_file):
     only_db_parents_df = pd.concat([both_db_rows,db_parent_with_other_origin])
     only_db_parents_df = pd.concat([only_db_parents_df,db_and_dbmet_rows])
 
+    # DBMET-DBMET fix ----------------------------------------
     num_new_rows = 1
     while( num_new_rows != 0 ):
         # Parent is DBMET. If parent is child in any reaction in only_db_parents_df. Then keep it
@@ -334,9 +351,9 @@ def clean_smiles(input_file): # this makes 100% sense
 
 if __name__ == "__main__":
 
-    get_drug_structures = True
-    get_metabolite_structures = True
-    get_external_structures = True
+    get_drug_structures = False
+    get_metabolite_structures = False
+    get_external_structures = False
     get_reaction_pairs = True
     
     combine_all_structures = True
@@ -380,8 +397,8 @@ if __name__ == "__main__":
     drugbank_full_database = "dataset/raw_data/drugbank_full_database.xml"
     drugbank_reaction_pairs = "dataset/processed_data/drugbank_reaction_pairs.csv"
     if get_reaction_pairs: 
-        generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
-        add_missing_ID(drugbank_reaction_pairs)
+        # generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
+        # add_missing_ID(drugbank_reaction_pairs)
         find_drug_origin_drugbank(drugbank_reaction_pairs)
         # Missing data: 45
         # Number of reactions with unknown origin:  0
