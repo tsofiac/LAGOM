@@ -1,0 +1,30 @@
+parent_id,parent_name,child_id,child_name,parent_smiles,child_smiles,origin,source
+DB14520,Tetraferric tricitrate decahydrate,DB14510,Ferrous cation,O=C(O)CC(O)(CC(=O)O)C(=O)O,[Fe+2],DB14520,DrugBank Augmented
+DB01169,Arsenic trioxide,DBMET02875,Dimethylarsinic acid,O=[As]O[As]=O,C[As](C)(=O)O,DB01169,DrugBank Augmented
+DB01169,Arsenic trioxide,DBMET02872,Arsenic acid,O=[As]O[As]=O,O=[As](O)(O)O,DB01169,DrugBank Augmented
+DB01169,Arsenic trioxide,DBMET02874,Monomethylarsonic acid,O=[As]O[As]=O,C[As](=O)(O)O,DB01169,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03683,Dichloro DACH platinum,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,Cl[Pt]1(Cl)NC2CCCCC2N1,DB00526,DrugBank Augmented
+DB11127,Selenious acid,DBMET01458,Hydrogen Selenide,O=[Se](O)O,[SeH2],DB11127,DrugBank Augmented
+DB11127,Selenious acid,DBMET01461,Methyl-selenol,O=[Se](O)O,C[SeH],DB11127,DrugBank Augmented
+DB11127,Selenious acid,DBMET01460,Selenophosphate,O=[Se](O)O,OP(O)(O)=[Se],DB11127,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03684,Monoaquo DACH platinum,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,[OH2+][Pt]1(Cl)NC2CCCCC2N1,DB00526,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03686,DACH platinum cysteine,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,NC(CS[Pt]1(SCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O,DB00526,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03688,DACH platinum methionine,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,NC(CCS[Pt]1(SCCC(N)C(=O)O)NC2CCCCC2N1)C(=O)O,DB00526,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03690,DACH platinum bis(GSH) complex,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,NC(CCC(=O)NC(CS[Pt]1(SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)NC2CCCCC2N1)C(=O)NCC(=O)O)C(=O)O,DB00526,DrugBank Augmented
+DB11127,Selenious acid,DBMET01462,Dimethyl selenide,O=[Se](O)O,C[Se]C,DB11127,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03685,Diaquo DACH platinum,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,[OH2+][Pt]1([OH2+])NC2CCCCC2N1,DB00526,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03687,DACH platinum bis(Cys) complex,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,O=C(O)C1CS[Pt]23SCC(C(=O)O)N2C2CCCCC2N13,DB00526,DrugBank Augmented
+DB00526,Oxaliplatin,DBMET03689,DACH platinum bis(Met) complex,O=C1O[Pt]2(NC3CCCCC3N2)OC1=O,O=C(O)C1CCS[Pt]23SCCC(C(=O)O)N2C2CCCCC2N13,DB00526,DrugBank Augmented
+DB11127,Selenious acid,DBMET01463,Trimethylselenonium,O=[Se](O)O,C[Se+](C)C,DB11127,DrugBank Augmented
+DB11127,Selenious acid,DBMET01467,Methyl selenic acid,O=[Se](O)O,C[Se]O,DB11127,DrugBank Augmented
+DB13235,Perboric acid,DB09140,Oxygen,O=BOO,O=O,DB13235,DrugBank Augmented
+DB13235,Perboric acid,DB09145,Water,O=BOO,O,DB13235,DrugBank Augmented
+DB00188,Bortezomib,DBMET01063,Bortezomib metabolite M3,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,DB00188,DrugBank Augmented
+DB00188,Bortezomib,DBMET01065,Bortezomib metabolite M5,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)(O)CC(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,DB00188,DrugBank Augmented
+DB00188,Bortezomib,DBMET01067,Bortezomib metabolite M8,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)CC(O)NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,DB00188,DrugBank Augmented
+DB00188,Bortezomib,DBMET01082,Bortezomib metabolite M25,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,CC(C)C(O)C(O)NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1,DB00188,DrugBank Augmented
+DB09570,Ixazomib,DBMET03785,Ixazomib M1 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,O=C(O)CNC(=O)c1cc(Cl)ccc1Cl,DB09570,DrugBank Augmented
+DB09570,Ixazomib,DBMET03786,Ixazomib M2 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,DB09570,DrugBank Augmented
+DB09570,Ixazomib,DBMET03783,Ixazomib M6 metabolite,CC(C)CC(NC(=O)CNC(=O)c1cc(Cl)ccc1Cl)B(O)O,CC(C)CC(=O)NC(=O)CNC(=O)c1cc(Cl)ccc1Cl,DB09570,DrugBank Augmented
+DB00188,Bortezomib,DBMET01064,Bortezomib metabolite M4,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,O=C(NC(Cc1ccccc1)C(=O)O)c1cnccn1,DB00188,DrugBank Augmented
+DB00188,Bortezomib,DBMET01068,Bortezomib metabolite M33,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c1cnccn1)B(O)O,NC(=O)C(NC(=O)c1cnccn1)C(O)c1ccccc1,DB00188,DrugBank Augmented

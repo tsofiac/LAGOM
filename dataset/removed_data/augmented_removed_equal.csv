@@ -1,0 +1,15 @@
+parent_id,parent_name,child_id,child_name,parent_smiles,child_smiles,origin,source
+DB00318,Codeine,DB00318,Codeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,DB00318,DrugBank Augmented
+DB00295,Morphine,DB00295,Morphine,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,DB00295,DrugBank Augmented
+DB12406,Lisofylline,DB12406,Lisofylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,DB12406,DrugBank Augmented
+DB00806,Pentoxifylline,DB00806,Pentoxifylline,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,DB00806,DrugBank Augmented
+DB00755,Tretinoin,DBMET02548,all-trans-retinoic acid,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,DB00755,DrugBank Augmented
+DB00330,Ethambutol,DBMET03257,"2,2'-(Ethylenediimino)di-butryic acid",CCC(CO)NCCNC(CC)CO,CCC(CO)NCCNC(CC)CO,DB00330,DrugBank Augmented
+DB00674,Galantamine,DBMET03150,Epigalantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,DB00674,DrugBank Augmented
+DB00853,Temozolomide,DBMET03268,5-aminoimidazole-4-carboxamide (AIC),Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O,DB00853,DrugBank Augmented
+DB00322,Floxuridine,DBMET03584,5-fluorodeoxyuridine (5-FUdR),O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1F,O=c1[nH]c(=O)n(C2CC(O)C(CO)O2)cc1F,DB00322,DrugBank Augmented
+DB01234,Dexamethasone,DB01234,Dexamethasone,CC1CC2C3CCC4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)CO,CC1CC2C3CCC4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(O)C(=O)CO,DB01234,DrugBank Augmented
+DB01586,Ursodeoxycholic acid,DB06777,Chenodeoxycholic acid,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CCC12C,CC(CCC(=O)O)C1CCC2C3C(O)CC4CC(O)CCC4(C)C3CCC12C,DB01586,DrugBank Augmented
+DB08893,Mirabegron,DBMET03331,Mirabegron M9 metabolite,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,Nc1nc(CC(=O)Nc2ccc(CCNCC(O)c3ccccc3)cc2)cs1,DB08893,DrugBank Augmented
+DB00121,Biotin,DB00121,Biotin,O=C(O)CCCCC1SCC2NC(=O)NC21,O=C(O)CCCCC1SCC2NC(=O)NC21,DB00121,DrugBank Augmented
+DB00586,Diclofenac,DBMET02609,3'-hydroxy-4'-methoxy diclofenac,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,DB00586,DrugBank Augmented

@@ -147,6 +147,11 @@ def test_val_distribute(data_file, val_size): #Input csv file. Function adds an 
 
 def filter_data_on_both_sides(data_file, filter_method, removed_data_file): 
     data = pd.read_csv(data_file)
+
+    # Ensure SMILES columns are strings
+    data["child_smiles"] = data["child_smiles"].fillna('').astype(str)
+    data["parent_smiles"] = data["parent_smiles"].fillna('').astype(str)
+
     total_removed = 0
 
     # Filtering based on child molecules
@@ -174,6 +179,8 @@ def filter_data_on_one_side(data_file, filter_method, removed_data_file, if_pare
     name_property = "parent_smiles" if if_parent else "child_smiles"
     data = pd.read_csv(data_file)
 
+    data[name_property] = data[name_property].fillna('').astype(str)
+
     total_removed = 0
 
     # Filtering based on parent molecules
@@ -191,19 +198,26 @@ def filter_data_on_one_side(data_file, filter_method, removed_data_file, if_pare
 # filtering methods
 # ----------------------------------------------------------------
 def valid_smiles(molecule): 
-    return Chem.MolFromSmiles(molecule) is not None
+    try:
+        return Chem.MolFromSmiles(molecule) is not None
+    except:
+        return False
 
 def atoms_allowed_in_molecules(molecule): 
-    atoms_to_include = ['C', 'N', 'S', 'O', 'H', 'F', 'I', 'P', 'Cl', 'Br'] # B and Si removed in contrast to last year
-    mol = Chem.MolFromSmiles(molecule)
-    atoms = [atom.GetSymbol() for atom in mol.GetAtoms()]
-    return set(atoms).issubset(set(atoms_to_include)) #Returns true if all atoms in the molecule are included in the specified set
+    try:
+        atoms_to_include = ['C', 'N', 'S', 'O', 'H', 'F', 'I', 'P', 'Cl', 'Br']
+        mol = Chem.MolFromSmiles(molecule)
+        atoms = [atom.GetSymbol() for atom in mol.GetAtoms()]
+        return set(atoms).issubset(set(atoms_to_include))
+    except:
+        return False
 
 def molecule_allowed_based_on_weight(molecule, max_weight=750, min_weight=100): 
-    mol_weight = Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule))
-    if mol_weight <= max_weight and mol_weight >= min_weight: 
-        return True
-    return False 
+    try:
+        mol_weight = Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule))
+        return min_weight <= mol_weight <= max_weight
+    except:
+        return False
 # ----------------------------------------------------------------
 
 def define_fingerprint_similarity(dataset):
@@ -309,7 +323,7 @@ def reformat_for_chemformer(input_file, output_file):
 
 if __name__ == "__main__":
 
-    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'combined' ]
+    name = 'augmented' # [ 'combined' 'drugbank' 'metxbiodb' 'combined' ]
     preprocess_unique_parents = True
 
     val_size = 0.1
@@ -319,6 +333,7 @@ if __name__ == "__main__":
     dataset_gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 
     removed_duplicates = f'dataset/removed_data/{name}_removed_duplicates.csv'
+    removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
     removed_valid_smiles = f'dataset/removed_data/{name}_removed_valid_smiles.csv'
     removed_atoms_allowed = f'dataset/removed_data/{name}_removed_atoms_allowed.csv'
     removed_weights_allowed = f'dataset/removed_data/{name}_removed_weights_allowed.csv'
@@ -364,11 +379,25 @@ if __name__ == "__main__":
             get_unique_parents(clean_csv, unique)
             reformat_for_chemformer(unique, unique_finetune)
 
+    elif name == "augmented":
+        
+        augmentated_csv = 'dataset/curated_data/augmented_data_clean.csv'
+
+        df_augmented = standardize_smiles('dataset/curated_data/augmented_data.csv')
+        df_augmented = remove_duplicates(df_augmented, removed_duplicates)
+        df_augmented = remove_equal_parent_child(df_augmented, removed_equal)
+
+        df_augmented.to_csv(augmentated_csv, index=False)
+
+        filter_data_on_both_sides(augmentated_csv, valid_smiles, removed_valid_smiles)
+        filter_data_on_both_sides(augmentated_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        filter_data_on_one_side(augmentated_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+        filter_fingerprint_similarity(augmentated_csv, removed_fingerprints, min_similarity)
+
     else:
 
         dataset = f'dataset/curated_data/{name}_smiles.csv'
         
-        removed_equal = f'dataset/removed_data/{name}_removed_equal.csv'
         compare_removed_csv = f'dataset/removed_data/{name}_compare_removed_duplicates.csv'
 
         df = standardize_smiles(dataset)
