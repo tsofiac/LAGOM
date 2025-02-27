@@ -63,9 +63,21 @@ def find_drug_origin_metxbiodb(data_file):
                         df.at[index, 'origin'] = new_origin
                         update_made = True
 
+            if current_origin == 'metxbiodb unknown':
+                current_origin = row['parent_smiles']
+                for _, pot_parent_row in df.iterrows():
+                    if current_origin == pot_parent_row['child_smiles']:
+                        new_origin = pot_parent_row['parent_smiles']
+                        if current_origin != new_origin:
+                            df.at[index, 'origin'] = new_origin
+                            update_made = True
+                        else:
+                            df.at[index, 'origin'] = current_origin
+
         # Exit the loop early if no updates are made
         if not update_made:
             break
+    
 
     # Write the updated DataFrame back to a CSV
     df.to_csv(data_file, index=False)
