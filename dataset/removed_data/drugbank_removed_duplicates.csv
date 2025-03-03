@@ -1,12 +1,12 @@
 parent_id,parent_name,child_id,child_name,enzymes,origin,parent_smiles,child_smiles
-DB00146,Calcifediol,DB00136,Calcitriol,"25-hydroxyvitamin D-1 alpha hydroxylase, mitochondrial",DB00146,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)CCCC(C)(C)O,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCCC(C)(C)O)CC(O)CC1O
-DB00295,Morphine,DB06409,Morphine glucuronide,"UDP-glucuronosyltransferase 2B7, UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A8, UDP-glucuronosyltransferase 2B15, UDP-glucuronosyltransferase 2B4, UDP-glucuronosyltransferase 1A3",DB00295,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5
+DB00146,Calcifediol,DB00136,Calcitriol,"25-hydroxyvitamin D-1 alpha hydroxylase, mitochondrial",DB00169,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)CCCC(C)(C)O,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCCC(C)(C)O)CC(O)CC1O
+DB00295,Morphine,DB06409,Morphine glucuronide,"UDP-glucuronosyltransferase 2B7, UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A8, UDP-glucuronosyltransferase 2B15, UDP-glucuronosyltransferase 2B4, UDP-glucuronosyltransferase 1A3",DB00318,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5
 DB00755,Tretinoin,DB00982,Isotretinoin,"Cytochrome P450 3A7, Cytochrome P450 2C8, Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2A6",DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
 DB00755,Tretinoin,DB00523,Alitretinoin,"Cytochrome P450 2C9, Cytochrome P450 2C8, Cytochrome P450 3A4",DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
-DB00806,Pentoxifylline,DB12406,Lisofylline,,DB00806,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O
+DB00806,Pentoxifylline,DB12406,Lisofylline,,DB12406,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O
 DB00829,Diazepam,DB14028,Nordazepam,"Cytochrome P450 2C9, Cytochrome P450 2B6, Cytochrome P450 2C19, Cytochrome P450 3A5, Cytochrome P450 3A4",DB00829,CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21,O=C1CN=C(c2ccccc2)c2cc(Cl)ccc2N1
-DB00860,Prednisolone,DB00635,Prednisone,,DB00860,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00956,Hydrocodone,DB00327,Hydromorphone,"Cytochrome P450 2D6, Cytochrome P450 2B6, Cytochrome P450 2C19",DB00956,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5
+DB00860,Prednisolone,DB00635,Prednisone,,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00956,Hydrocodone,DB00327,Hydromorphone,"Cytochrome P450 2D6, Cytochrome P450 2B6, Cytochrome P450 2C19",DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5
 DB01357,Mestranol,DB00977,Ethinylestradiol,Cytochrome P450 2C9,DB01357,C#CC1(O)CCC2C3CCc4cc(OC)ccc4C3CCC21C,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C
 DB01744,Camphor,DB02817,5-Exo-Hydroxycamphor,Cytochrome P450 2D6,DB01744,CC12CCC(CC1=O)C2(C)C,CC12CC(O)C(CC1=O)C2(C)C
 DB03783,Phenacetin,DB00316,Acetaminophen,Cytochrome P450 1A2,DB03783,CCOc1ccc(NC(C)=O)cc1,CC(=O)Nc1ccc(O)cc1
@@ -16,26 +16,26 @@ DB08544,(S)-Fluoxetine,DB06731,Seproxetine,"Cytochrome P450 2C9, Cytochrome P450
 DB08544,(S)-Fluoxetine,DB03610,4-(trifluoromethyl)phenol,"Cytochrome P450 2C19, Cytochrome P450 3A4",DB08544,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,Oc1ccc(C(F)(F)F)cc1
 DB09194,Etoperidone,DB12110,m-Chlorophenylpiperazine,,DB09194,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,Clc1cccc(N2CCNCC2)c1
 DB09357,Dexpanthenol,DB01783,Pantothenic acid,,DB09357,CC(C)(CO)C(O)C(=O)NCCCO,CC(C)(CO)C(O)C(=O)NCCC(=O)O
-DB11195,Xylitol,DB03947,D-Xylulose,,DB11195,OCC(O)C(O)C(O)CO,O=C(CO)C(O)C(O)CO
-DB00146,Calcifediol,DB00136,Calcitriol,"25-hydroxyvitamin D-1 alpha hydroxylase, mitochondrial",DB00146,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)CCCC(C)(C)O,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCCC(C)(C)O)CC(O)CC1O
-DB11195,Xylitol,DB03947,D-Xylulose,Xylitol dehydrogenase,DB11195,OCC(O)C(O)C(O)CO,O=C(CO)C(O)C(O)CO
+DB11195,Xylitol,DB03947,D-Xylulose,,DB09419,OCC(O)C(O)C(O)CO,O=C(CO)C(O)C(O)CO
+DB00146,Calcifediol,DB00136,Calcitriol,"25-hydroxyvitamin D-1 alpha hydroxylase, mitochondrial",DB00169,C=C1CCC(O)CC1=CC=C1CCCC2(C)C1CCC2C(C)CCCC(C)(C)O,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCCC(C)(C)O)CC(O)CC1O
+DB11195,Xylitol,DB03947,D-Xylulose,Xylitol dehydrogenase,DB09419,OCC(O)C(O)C(O)CO,O=C(CO)C(O)C(O)CO
 DB11204,Panthenol,DB01783,Pantothenic acid,,DB11204,CC(C)(CO)C(O)C(=O)NCCCO,CC(C)(CO)C(O)C(=O)NCCC(=O)O
-DB13854,Gamolenic acid,DB00154,Dihomo-gamma-linolenic acid,"Very long chain fatty acid elongase 5, Very long chain fatty acid elongase 4",DB13854,CCCCCC=CCC=CCC=CCCCCC(=O)O,CCCCCC=CCC=CCC=CCCCCCCC(=O)O
-DB00154,Dihomo-gamma-linolenic acid,DB04557,Arachidonic Acid,Acyl-CoA 6-desaturase,DB00154,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O
+DB13854,Gamolenic acid,DB00154,Dihomo-gamma-linolenic acid,"Very long chain fatty acid elongase 5, Very long chain fatty acid elongase 4",DB11358,CCCCCC=CCC=CCC=CCCCCC(=O)O,CCCCCC=CCC=CCC=CCCCCCCC(=O)O
+DB00154,Dihomo-gamma-linolenic acid,DB04557,Arachidonic Acid,Acyl-CoA 6-desaturase,DB13854,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O
 DB13235,Perboric acid,DB09460,Sodium carbonate,,DB13235,O=BOO,O=C(O)O
 DB13783,Acemetacin,DB00328,Indomethacin,,DB13783,COc1ccc2c(c1)c(CC(=O)OCC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1
-DB13854,Gamolenic acid,DB00154,Dihomo-gamma-linolenic acid,Very long chain fatty acid elongase 5,DB13854,CCCCCC=CCC=CCC=CCCCCC(=O)O,CCCCCC=CCC=CCC=CCCCCCCC(=O)O
-DB00154,Dihomo-gamma-linolenic acid,DB04557,Arachidonic Acid,Acyl-CoA (8-3)-desaturase,DB00154,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O
-DB00956,Hydrocodone,DB00327,Hydromorphone,"Cytochrome P450 2D6, Cytochrome P450 2B6, Cytochrome P450 2C19",DB00956,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5
-DB00860,Prednisolone,DB00635,Prednisone,,DB00860,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB13854,Gamolenic acid,DB00154,Dihomo-gamma-linolenic acid,Very long chain fatty acid elongase 5,DB11358,CCCCCC=CCC=CCC=CCCCCC(=O)O,CCCCCC=CCC=CCC=CCCCCCCC(=O)O
+DB00154,Dihomo-gamma-linolenic acid,DB04557,Arachidonic Acid,Acyl-CoA (8-3)-desaturase,DB13854,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O
+DB00956,Hydrocodone,DB00327,Hydromorphone,"Cytochrome P450 2D6, Cytochrome P450 2B6, Cytochrome P450 2C19",DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5
+DB00860,Prednisolone,DB00635,Prednisone,,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
 DB00277,Theophylline,DBMET00271,1-Methylxanthine,Cytochrome P450 1A2,DB00201,Cn1c(=O)c2[nH]cnc2n(C)c1=O,Cn1c(=O)[nH]c2nc[nH]c2c1=O
 DB00244,Mesalazine,DBMET00924,N-acetyl-5-ASA (Ac-5-ASA),Arylamine N-acetyltransferase 1,DB00795,Nc1ccc(O)c(C(=O)O)c1,CC(=O)Nc1ccc(O)c(C(=O)O)c1
 DB00277,Theophylline,DBMET00271,1-Methylxanthine,Cytochrome P450 1A2,DB00201,Cn1c(=O)c2[nH]cnc2n(C)c1=O,Cn1c(=O)[nH]c2nc[nH]c2c1=O
 DB00279,Liothyronine,DBMET02273,Diiodothyronine,,DB00451,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2ccc(O)cc2)c(I)c1)C(=O)O
 DB06700,Desvenlafaxine,DBMET00437,"N,O-Didesmethylvenlafaxine","Cytochrome P450 3A4, Cytochrome P450 2C19, Cytochrome P450 2C9",DB00285,CN(C)CC(c1ccc(O)cc1)C1(O)CCCCC1,CNCC(c1ccc(O)cc1)C1(O)CCCCC1
-DB00295,Morphine,DBMET00462,morphine-3-glucuronide,"UDP-glucuronosyltransferase 2B7, UDP-glucuronosyltransferase 1A1",DB00318,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CCCN(C)C(CC)C1C=CC(O)C2Oc3c(OC4OC(C)C(O)C(O)C4O)cccc3C12
+DB00295,Morphine,DBMET00462,morphine-3-glucuronide,"UDP-glucuronosyltransferase 2B7, UDP-glucuronosyltransferase 1A1",DB00295,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CCCN(C)C(CC)C1C=CC(O)C2Oc3c(OC4OC(C)C(O)C(O)C4O)cccc3C12
 DB00540,Nortriptyline,DBMET00053,Desmethylnortriptyline,Cytochrome P450 2C19,DB00321,CNCCC=C1c2ccccc2CCc2ccccc21,NCCC=C1c2ccccc2CCc2ccccc21
-DB00327,Hydromorphone,DBMET00866,Hydromorphone-3-glucuronide,"UDP-glucuronosyltransferase 1A3, UDP-glucuronosyltransferase 2B7",DB00956,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5
+DB00327,Hydromorphone,DBMET00866,Hydromorphone-3-glucuronide,"UDP-glucuronosyltransferase 1A3, UDP-glucuronosyltransferase 2B7",DB15465,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5
 DB00328,Indomethacin,DBMET00157,Indomethacin acyl glucuronide,UDP-glucuronosyltransferase 1A1,DB13783,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,COc1ccc2c(c1)c(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c(C)n2C(=O)c1ccc(Cl)cc1
 DB00279,Liothyronine,DBMET02273,Diiodothyronine,Thyroxine 5-deiodinase,DB00451,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2ccc(O)cc2)c(I)c1)C(=O)O
 DB00540,Nortriptyline,DBMET00053,Desmethylnortriptyline,"Cytochrome P450 2D6, Cytochrome P450 1A2, Cytochrome P450 2C19",DB00321,CNCCC=C1c2ccccc2CCc2ccccc21,NCCC=C1c2ccccc2CCc2ccccc21
@@ -46,11 +46,11 @@ DB00624,Testosterone,DBMET01765,15beta-hydroxytestosterone,"Cytochrome P450 3A4,
 DB00624,Testosterone,DBMET01766,16alpha-hydroxytestosterone,"Cytochrome P450 3A4, Cytochrome P450 2B6",DB01420,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)C(O)CC12
 DB00624,Testosterone,DBMET01767,16beta-hydroxytestosterone,"Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2C9, Cytochrome P450 2C19",DB01420,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)C(O)CC12
 DB00624,Testosterone,DBMET00558,Dihydrotestosterone,3-oxo-5-alpha-steroid 4-dehydrogenase 2,DB01420,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O
-DB00635,Prednisone,DBMET02859,"17α,21-dihydroxy-pregnan-1,4,6-trien-3,11,30-trione (M-XVII)",,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02860,20α-dihydro-prednisone (M-V),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
-DB00635,Prednisone,DBMET02861,20β-dihydro-prednisone (M-IV),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
-DB00635,Prednisone,DBMET02863,6α-hydroxy-prednisone (M-XIII),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02864,6βhydroxy-prednisone (M-XII),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02859,"17α,21-dihydroxy-pregnan-1,4,6-trien-3,11,30-trione (M-XVII)",,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02860,20α-dihydro-prednisone (M-V),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DB00635,Prednisone,DBMET02861,20β-dihydro-prednisone (M-IV),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DB00635,Prednisone,DBMET02863,6α-hydroxy-prednisone (M-XIII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02864,6βhydroxy-prednisone (M-XII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
 DB00982,Isotretinoin,DBMET03635,13-cis-4-Oxoretinoic acid,,DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O
 DB00982,Isotretinoin,DBMET03636,13-cis-Retinoyl-beta-glucuronide,UDP-glucuronosyltransferase 2B7,DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O
 DB00523,Alitretinoin,DBMET03638,9-cis-4-Oxoretinoic acid,,DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(=O)CCC1(C)C)=CC=CC(C)=CC(=O)O
@@ -62,27 +62,27 @@ DB00783,Estradiol,DBMET00600,Estradiol-17alpha 3-D-glucuronoside,UDP-glucuronosy
 DB00783,Estradiol,DBMET00248,2-hydroxyestrone,"Cytochrome P450 1A2, Cytochrome P450 3A4, Cytochrome P450 1A1",DB13952,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O
 DB00783,Estradiol,DBMET00248,,"Cytochrome P450 3A4, Cytochrome P450 1A2, Cytochrome P450 1A1",DB13952,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,CC12CCC3c4cc(O)c(O)cc4CCC3C1CCC2=O
 DB00244,Mesalazine,DBMET00924,N-acetyl-5-ASA (Ac-5-ASA),Arylamine N-acetyltransferase 1,DB00795,Nc1ccc(O)c(C(=O)O)c1,CC(=O)Nc1ccc(O)c(C(=O)O)c1
-DB00806,Pentoxifylline,DBMET03229,(S)-M1,,DB12406,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O
-DB12406,Lisofylline,DBMET03231,"M3, Pentoxifylline internal diol",,DB00806,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O
-DB12406,Lisofylline,DBMET03235,"M7, 7-demethylated M1 Pentoxifylline",Cytochrome P450 1A2,DB00806,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2[nH]cnc2n(C)c1=O
+DB00806,Pentoxifylline,DBMET03229,(S)-M1,,DB00806,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O
+DB12406,Lisofylline,DBMET03231,"M3, Pentoxifylline internal diol",,DB12406,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O
+DB12406,Lisofylline,DBMET03235,"M7, 7-demethylated M1 Pentoxifylline",Cytochrome P450 1A2,DB12406,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2[nH]cnc2n(C)c1=O
 DB00860,Prednisolone,DBMET02848,Δ6-prednisolone (M-XI),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
 DB00860,Prednisolone,DBMET02849,20α-dihydro-prednisolone (M-III),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DB00860,Prednisolone,DBMET02850,20β-dihydro-prednisolone (M-II),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DB00860,Prednisolone,DBMET02851,6αhydroxy-prednisolone (M-VII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
 DB00860,Prednisolone,DBMET02853,6βhydroxy-prednisolone(M-VI),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02859,"17α,21-dihydroxy-pregnan-1,4,6-trien-3,11,30-trione (M-XVII)",,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02860,20α-dihydro-prednisone (M-V),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
-DB00635,Prednisone,DBMET02861,20β-dihydro-prednisone (M-IV),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
-DB00635,Prednisone,DBMET02863,6α-hydroxy-prednisone (M-XIII),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02864,6βhydroxy-prednisone (M-XII),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02859,"17α,21-dihydroxy-pregnan-1,4,6-trien-3,11,30-trione (M-XVII)",,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02860,20α-dihydro-prednisone (M-V),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DB00635,Prednisone,DBMET02861,20β-dihydro-prednisone (M-IV),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DB00635,Prednisone,DBMET02863,6α-hydroxy-prednisone (M-XIII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02864,6βhydroxy-prednisone (M-XII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
 DB00871,Terbutaline,DBMET03275,Terbutaline Sulfate,Sulfotransferase,DB01408,CC(C)(C)NCC(O)c1cc(O)cc(O)c1,CC(C)(C)NCC(O)c1cc(O)cc(O)c1
 DB00871,Terbutaline,DBMET03276,Terbutaline Glucuronide,UDP-glucuronosyltransferases (UGTs),DB01408,CC(C)(C)NCC(O)c1cc(O)cc(O)c1,CC(C)(C)NCC(O)c1cc(O)cc(O)c1
 DB00956,Hydrocodone,DBMET00420,norhydrocodone,Cytochrome P450 3A4,DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(=O)CCC4C(C2)NCCC314
 DB00956,Hydrocodone,DBMET02686,6-α-hydrocodol,,DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341
 DB00956,Hydrocodone,DBMET02687,6-β-hydrocodol,,DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341
-DB00327,Hydromorphone,DBMET02685,6-α-hydromorphol,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
-DB00327,Hydromorphone,DBMET02684,6-β-hydromorphol,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
-DB00327,Hydromorphone,DBMET02723,Hydromorphone glucuronide conjugate,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5
+DB00327,Hydromorphone,DBMET02685,6-α-hydromorphol,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
+DB00327,Hydromorphone,DBMET02684,6-β-hydromorphol,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
+DB00327,Hydromorphone,DBMET02723,Hydromorphone glucuronide conjugate,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5
 DB00982,Isotretinoin,DBMET02548,all-trans-retinoic acid,,DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O
 DB00982,Isotretinoin,DBMET02554,4-hydroxy-13-cis-retinoic acid,,DB00755,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(=O)O,CC(C=CC1=C(C)C(O)CCC1(C)C)=CC=CC(C)=CC(=O)O
 DB01075,Diphenhydramine,DBMET00087,Diphenhydramine N-glucuronide,UDP-glucuronosyltransferases (UGTs),DB00985,CN(C)CCOC(c1ccccc1)c1ccccc1,C[N+](C)(CCOC(c1ccccc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O
@@ -109,31 +109,31 @@ DB06701,Dexmethylphenidate,DBMET02408,6-oxo-methylphenidate,,DB16629,COC(=O)C(c1
 DB06701,Dexmethylphenidate,DBMET00651,Ritalinic acid,Carboxylesterase,DB16629,COC(=O)C(c1ccccc1)C1CCCCN1,O=C(O)C(c1ccccc1)C1CCCCN1
 DB13169,Nandrolone,DBMET03358,19-Norandrosterone,,DB08804,CC12CCC3C4CCC(=O)C=C4CCC3C1CCC2O,CC12CCC3C4CCC(O)CC4CCC3C1CCC2=O
 DB13169,Nandrolone,DBMET03360,19-Norepiandrosterone,,DB08804,CC12CCC3C4CCC(=O)C=C4CCC3C1CCC2O,CC12CCC3C4CCC(O)CC4CCC3C1CCC2=O
-DB03947,D-Xylulose,DBMET02033,D-Xylulose-5-phosphate,,DB11195,O=C(CO)C(O)C(O)CO,O=C(CO)C(O)C(O)COP(=O)(O)O
-DB03947,D-Xylulose,DBMET02033,D-Xylulose-5-phosphate,,DB11195,O=C(CO)C(O)C(O)CO,O=C(CO)C(O)C(O)COP(=O)(O)O
-DB00154,Dihomo-gamma-linolenic acid,DBMET02087,15-HETrE,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB13854,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC=CCC=CCCCCCCC(=O)O
-DB00154,Dihomo-gamma-linolenic acid,DBMET02086,Prostaglandin E1,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB13854,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC1C(O)CC(=O)C1CCCCCCC(=O)O
-DB12406,Lisofylline,DBMET01696,"lisofylline 4,5-diol","Cytochrome P450 3A4, Cytochrome P450 2A6",DB00806,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O
-DB00154,Dihomo-gamma-linolenic acid,DBMET02087,15-HETrE,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB13854,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC=CCC=CCCCCCCC(=O)O
-DB00154,Dihomo-gamma-linolenic acid,DBMET02086,Prostaglandin E1,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB13854,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC1C(O)CC(=O)C1CCCCCCC(=O)O
+DB03947,D-Xylulose,DBMET02033,D-Xylulose-5-phosphate,,DB09419,O=C(CO)C(O)C(O)CO,O=C(CO)C(O)C(O)COP(=O)(O)O
+DB03947,D-Xylulose,DBMET02033,D-Xylulose-5-phosphate,,DB09419,O=C(CO)C(O)C(O)CO,O=C(CO)C(O)C(O)COP(=O)(O)O
+DB00154,Dihomo-gamma-linolenic acid,DBMET02087,15-HETrE,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB11358,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC=CCC=CCCCCCCC(=O)O
+DB00154,Dihomo-gamma-linolenic acid,DBMET02086,Prostaglandin E1,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB11358,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC1C(O)CC(=O)C1CCCCCCC(=O)O
+DB12406,Lisofylline,DBMET01696,"lisofylline 4,5-diol","Cytochrome P450 3A4, Cytochrome P450 2A6",DB12406,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O
+DB00154,Dihomo-gamma-linolenic acid,DBMET02087,15-HETrE,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB11358,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC=CCC=CCCCCCCC(=O)O
+DB00154,Dihomo-gamma-linolenic acid,DBMET02086,Prostaglandin E1,"Polyunsaturated fatty acid lipoxygenase ALOX15, Prostaglandin G/H synthase 1, Prostaglandin G/H synthase 2",DB11358,CCCCCC=CCC=CCC=CCCCCCCC(=O)O,CCCCCC(O)C=CC1C(O)CC(=O)C1CCCCCCC(=O)O
 DB00624,Testosterone,DBMET00558,Dihydrotestosterone,3-oxo-5-alpha-steroid 4-dehydrogenase,DB01420,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O
 DB00624,Testosterone,DBMET00558,Dihydrotestosterone,3-oxo-5-alpha-steroid 4-dehydrogenase,DB01420,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O
 DB00624,Testosterone,DBMET00558,Dihydrotestosterone,3-oxo-5-alpha-steroid 4-dehydrogenase,DB01420,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O
 DB00956,Hydrocodone,DBMET00420,norhydrocodone,"Cytochrome P450 3A4, Cytochrome P450 2D6",DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(=O)CCC4C(C2)NCCC314
 DB00956,Hydrocodone,DBMET02686,6-α-hydrocodol,,DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341
 DB00956,Hydrocodone,DBMET02687,6-β-hydrocodol,,DB15465,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341
-DB00327,Hydromorphone,DBMET02685,6-α-hydromorphol,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
-DB00327,Hydromorphone,DBMET02684,6-β-hydromorphol,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
+DB00327,Hydromorphone,DBMET02685,6-α-hydromorphol,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
+DB00327,Hydromorphone,DBMET02684,6-β-hydromorphol,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
 DB00860,Prednisolone,DBMET02848,Δ6-prednisolone (M-XI),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
 DB00860,Prednisolone,DBMET02849,20α-dihydro-prednisolone (M-III),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DB00860,Prednisolone,DBMET02850,20β-dihydro-prednisolone (M-II),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DB00860,Prednisolone,DBMET02851,6αhydroxy-prednisolone (M-VII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
 DB00860,Prednisolone,DBMET02853,6βhydroxy-prednisolone(M-VI),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02859,"17α,21-dihydroxy-pregnan-1,4,6-trien-3,11,30-trione (M-XVII)",,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02860,20α-dihydro-prednisone (M-V),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
-DB00635,Prednisone,DBMET02861,20β-dihydro-prednisone (M-IV),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
-DB00635,Prednisone,DBMET02863,6α-hydroxy-prednisone (M-XIII),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
-DB00635,Prednisone,DBMET02864,6βhydroxy-prednisone (M-XII),,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02859,"17α,21-dihydroxy-pregnan-1,4,6-trien-3,11,30-trione (M-XVII)",,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C=CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02860,20α-dihydro-prednisone (M-V),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DB00635,Prednisone,DBMET02861,20β-dihydro-prednisone (M-IV),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DB00635,Prednisone,DBMET02863,6α-hydroxy-prednisone (M-XIII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
+DB00635,Prednisone,DBMET02864,6βhydroxy-prednisone (M-XII),,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(=O)CC2(C)C1CCC2(O)C(=O)CO
 DB01042,Melphalan,DBMET03273,Monohydroxy-melphalan,,DB16627,NC(Cc1ccc(N(CCCl)CCCl)cc1)C(=O)O,NC(Cc1ccc(N(CCO)CCCl)cc1)C(=O)O
 DB01042,Melphalan,DBMET03274,Dihydroxy-melphalan,,DB16627,NC(Cc1ccc(N(CCCl)CCCl)cc1)C(=O)O,NC(Cc1ccc(N(CCO)CCO)cc1)C(=O)O
 DB06701,Dexmethylphenidate,DBMET00651,Ritalinic acid,Carboxylesterase,DB16629,COC(=O)C(c1ccccc1)C1CCCCN1,O=C(O)C(c1ccccc1)C1CCCCN1
@@ -443,13 +443,13 @@ DBMET00558,Dihydrotestosterone,DBMET00571,5-alpha-Dihydrotestosterone glucuronid
 DBMET00558,Dihydrotestosterone,DBMET00574,5a-Dihydrotestosterone sulfate,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC(=O)CC1CCC1C2CCC2(C)C(OS(=O)(=O)O)CCC12
 DBMET00558,Dihydrotestosterone,DBMET02832,5-alpha androstanediol,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2O
 DBMET00558,Dihydrotestosterone,DBMET02834,"5alpha-androstane-3beta,17beta-diol",,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2O
-DBMET02830,5-alpha androstanedione,DBMET02831,5-alpha androsterone,,DB00624,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2=O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2=O
-DBMET02830,5-alpha androstanedione,DBMET02831,5-alpha androsterone,,DB00624,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2=O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2=O
+DBMET02830,5-alpha androstanedione,DBMET02831,5-alpha androsterone,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2=O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2=O
+DBMET02830,5-alpha androstanedione,DBMET02831,5-alpha androsterone,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2=O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2=O
 DBMET00558,Dihydrotestosterone,DBMET00571,5-alpha-Dihydrotestosterone glucuronide,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC(=O)CC1CCC1C2CCC2(C)C(OC3OC(C(=O)O)C(O)C(O)C3O)CCC12
 DBMET00558,Dihydrotestosterone,DBMET00574,5a-Dihydrotestosterone sulfate,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC(=O)CC1CCC1C2CCC2(C)C(OS(=O)(=O)O)CCC12
 DBMET00558,Dihydrotestosterone,DBMET02832,5-alpha androstanediol,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2O
 DBMET00558,Dihydrotestosterone,DBMET02834,"5alpha-androstane-3beta,17beta-diol",,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC3C(CCC4CC(O)CCC43C)C1CCC2O
-DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02851,6αhydroxy-prednisolone (M-VII),DBMET02852,"6α,11β,17α,20β,21-pentahydroxypregnan-1,4-diene-3-one (M-X)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02854,"6β,11β,17α,20β,21-pentahydroxypregnan-1,4-diene-3-one (M-VIII)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02856,"6β,11β,17α,21-tetrahydroxy-5ξ-pregn-1-en-3,20-dione (M-XIV)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
@@ -471,25 +471,25 @@ DBMET01020,(R)-MHD,DBMET02803,"trans-10,11-dihydro-10,11-dihydroxycarbamazepine"
 DBMET01020,(R)-MHD,DBMET02804,"cis-10,11-dihydro-10,11-dihydroxycarbamazepine",,DB00776,NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2C(O)C(O)c2ccccc21
 DBMET01020,(R)-MHD,DBMET02805,(R)-MHD glucuronide metabolite,,DB00776,NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2CC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21
 DBMET02802,(S)-MHD,DBMET02806,(S)-MHD glucuronide metabolite,,DB00776,NC(=O)N1c2ccccc2CC(O)c2ccccc21,NC(=O)N1c2ccccc2CC(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21
-DBMET03229,(S)-M1,DBMET03235,"M7, 7-demethylated M1 Pentoxifylline",Cytochrome P450 1A2,DB12406,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2[nH]cnc2n(C)c1=O
+DBMET03229,(S)-M1,DBMET03235,"M7, 7-demethylated M1 Pentoxifylline",Cytochrome P450 1A2,DB00806,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)CCCCn1c(=O)c2[nH]cnc2n(C)c1=O
 DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),DBMET03268,5-aminoimidazole-4-carboxamide (AIC),,DB00853,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
 DBMET03267,5-(3-methyltriazen-1-yl) imidazole-4-carboxamide (MTIC),DBMET03269,Methyl diazonium,,DB00853,Cn1nnc2c(C(N)=O)ncn2c1=O,Cn1nnc2c(C(N)=O)ncn2c1=O
 DBMET02851,6αhydroxy-prednisolone (M-VII),DBMET02852,"6α,11β,17α,20β,21-pentahydroxypregnan-1,4-diene-3-one (M-X)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02854,"6β,11β,17α,20β,21-pentahydroxypregnan-1,4-diene-3-one (M-VIII)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02856,"6β,11β,17α,21-tetrahydroxy-5ξ-pregn-1-en-3,20-dione (M-XIV)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02857,"6β,11β,17α,20α,21-pentahydroxypregnan-1,4-diene-3-one (M-IX)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
-DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
 DBMET00175,Hydroxybuprenorphine,DBMET01295,Hydroxynorbuprenorphine,,DB00921,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1)C2O5
 DBMET02686,6-α-hydrocodol,DBMET02685,6-α-hydromorphol,"Cytochrome P450 2D6, Cytochrome P450 2B6, Cytochrome P450 2C19",DB15465,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
 DBMET02687,6-β-hydrocodol,DBMET02684,6-β-hydromorphol,"Cytochrome P450 2D6, Cytochrome P450 2B6, Cytochrome P450 2C19",DB15465,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5
-DBMET02684,6-β-hydromorphol,DBMET02724,6-β-hydromorphol glucuronide conjugate 1,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
-DBMET02684,6-β-hydromorphol,DBMET02725,6-β-hydromorphol glucuronide conjugate 2,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
-DBMET02685,6-α-hydromorphol,DBMET02726,6-α-hydromorphol glucuronide conjugate 1,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
-DBMET02685,6-α-hydromorphol,DBMET02727,6-α-hydromorphol glucuronide conjugate 2,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
-DBMET02685,6-α-hydromorphol,DBMET02726,6-α-hydromorphol glucuronide conjugate 1,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
-DBMET02685,6-α-hydromorphol,DBMET02727,6-α-hydromorphol glucuronide conjugate 2,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
-DBMET02684,6-β-hydromorphol,DBMET02724,6-β-hydromorphol glucuronide conjugate 1,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
-DBMET02684,6-β-hydromorphol,DBMET02725,6-β-hydromorphol glucuronide conjugate 2,,DB00956,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
+DBMET02684,6-β-hydromorphol,DBMET02724,6-β-hydromorphol glucuronide conjugate 1,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
+DBMET02684,6-β-hydromorphol,DBMET02725,6-β-hydromorphol glucuronide conjugate 2,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
+DBMET02685,6-α-hydromorphol,DBMET02726,6-α-hydromorphol glucuronide conjugate 1,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
+DBMET02685,6-α-hydromorphol,DBMET02727,6-α-hydromorphol glucuronide conjugate 2,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
+DBMET02685,6-α-hydromorphol,DBMET02726,6-α-hydromorphol glucuronide conjugate 1,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
+DBMET02685,6-α-hydromorphol,DBMET02727,6-α-hydromorphol glucuronide conjugate 2,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
+DBMET02684,6-β-hydromorphol,DBMET02724,6-β-hydromorphol glucuronide conjugate 1,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5
+DBMET02684,6-β-hydromorphol,DBMET02725,6-β-hydromorphol glucuronide conjugate 2,,DB15465,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)CCC3C1C5
 DBMET02923,Methylprednisolone M7 Metabolite,DBMET02925,Methylprednisolone M10 Metabolite,20-ketosteroid reductase (20-hydroxysteroid dehydrogenase),DB00959,CC1(O)CC2C(C(O)CC3(C)C2CCC3(O)C(=O)CO)C2(C)C=CC(=O)C=C12,CC1(O)CC2C(C(O)CC3(C)C2CCC3(O)C(O)CO)C2(C)C=CC(=O)C=C12
 DBMET02923,Methylprednisolone M7 Metabolite,DBMET02924,Methylprednisolone M9 Metabolite,20-ketosteroid reductase (20-hydroxysteroid dehydrogenase),DB00959,CC1(O)CC2C(C(O)CC3(C)C2CCC3(O)C(=O)CO)C2(C)C=CC(=O)C=C12,CC1(O)CC2C(C(O)CC3(C)C2CCC3(O)C(O)CO)C2(C)C=CC(=O)C=C12
 DBMET02926,Methylprednisolone M4 Metabolite,DBMET02927,Methylprednisolone M5 Metabolite,20-ketosteroid reductase (20-hydroxysteroid dehydrogenase),DB00959,CC1=CC2C(C(O)CC3(C)C2CCC3(O)C(=O)CO)C2(C)C=CC(=O)C=C12,CC1=CC2C(C(O)CC3(C)C2CCC3(O)C(O)CO)C2(C)C=CC(=O)C=C12
@@ -575,7 +575,7 @@ DBMET02851,6αhydroxy-prednisolone (M-VII),DBMET02852,"6α,11β,17α,20β,21-pen
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02854,"6β,11β,17α,20β,21-pentahydroxypregnan-1,4-diene-3-one (M-VIII)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02856,"6β,11β,17α,21-tetrahydroxy-5ξ-pregn-1-en-3,20-dione (M-XIV)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)CC1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO
 DBMET02853,6βhydroxy-prednisolone(M-VI),DBMET02857,"6β,11β,17α,20α,21-pentahydroxypregnan-1,4-diene-3-one (M-IX)",,DB15566,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(=O)CO,CC12C=CC(=O)C=C1C(O)CC1C2C(O)CC2(C)C1CCC2(O)C(O)CO
-DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,DB00860,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
+DBMET02861,20β-dihydro-prednisone (M-IV),DBMET02862,"17α,20ξ,21-trihydroxy-5ξ-pregn-1-en-3,11-dione(M-XVIII)",,DB15566,CC12C=CC(=O)C=C1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO,CC12C=CC(=O)CC1CCC1C2C(=O)CC2(C)C1CCC2(O)C(O)CO
 DBMET02311,13'-carboxy-alpha-tocopherol,DBMET02320,alpha-carboxydimethyldecadienylhydroxychromanol,,DB11635,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C(=O)O)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCC(=O)O)O2
 DBMET03705,didemethylcitalopram,DBMET03706,Citalopram propionic aldehyde,"Amine oxidase [flavin-containing] A, Amine oxidase [flavin-containing] B",DB00215,N#Cc1ccc2c(c1)COC2(CCCN)c1ccc(F)cc1,N#Cc1ccc2c(c1)COC2(CCC=O)c1ccc(F)cc1
 DBMET01154,Thioguanosine diphosphate,DBMET01155,Thioguanosine triphosphate,,DB00352,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1,Nc1nc(=S)c2ncn(C3OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C(O)C3O)c2[nH]1

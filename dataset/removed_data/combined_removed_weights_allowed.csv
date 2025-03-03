@@ -3,17 +3,20 @@ Glycine,Methylamine,NCC(=O)O,CN,DB00145,DrugBank,train
 Levothyroxine,Liothyronine,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,DB00451,DrugBank,train
 Phenol,Hydroquinone,Oc1ccccc1,Oc1ccc(O)cc1,DB03255,Both,train
 Propanoic acid,Propanoyl-CoA,CCC(=O)O,CCC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB03766,DrugBank,train
-Propanoyl-CoA,(R)-methylmalonyl-CoA,CCC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,CC(C(=O)O)C(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB02912,DrugBank,train
-(R)-methylmalonyl-CoA,Succinyl-Coenzyme A,CC(C(=O)O)C(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,CC(C)(COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O)C(O)C(=O)NCCC(=O)NCCSC(=O)CCC(=O)O,DB04045,DrugBank,train
+Propanoyl-CoA,(R)-methylmalonyl-CoA,CCC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,CC(C(=O)O)C(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB03766,DrugBank,train
+(R)-methylmalonyl-CoA,Succinyl-Coenzyme A,CC(C(=O)O)C(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,CC(C)(COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O)C(O)C(=O)NCCC(=O)NCCSC(=O)CCC(=O)O,DB02912,DrugBank,train
+Hydrogen peroxide,Oxygen,OO,O=O,DB13235,DrugBank,train
+Hydrogen peroxide,Water,OO,O,DB13235,DrugBank,train
 Toluene,Benzyl alcohol,Cc1ccccc1,OCc1ccccc1,DB11558,Both,train
 Toluene,P-Cresol,Cc1ccccc1,Cc1ccc(O)cc1,DB11558,Both,train
 "1,4-Butanediol",gamma-Hydroxybutyric acid,OCCCCO,O=C(O)CCCO,DB01955,DrugBank,train
 Methylamine,Dihydrolipoamide,CN,NC(=O)CCCCC(S)CCS,DB00145,DrugBank,train
+Cyclosporine,Cyclosporine M-1 (AM-9),CC=CCC(C)C(O)C1C(=O)NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(=O)NC(C(C)C)C(=O)N(C)C(CC(C)C)C(=O)NC(C)C(=O)NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CC=CCC(C)C(O)C1C(=O)NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(=O)NC(C(C)C)C(=O)N(C)C(CC(C)C)C(=O)NC(C)C(=O)NC(C)C(=O)N(C)C(CC(C)(C)O)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,DB00091,DrugBank,train
+Cyclosporine,Cyclosporine M-17 (AM-1),CC=CCC(C)C(O)C1C(=O)NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(=O)NC(C(C)C)C(=O)N(C)C(CC(C)C)C(=O)NC(C)C(=O)NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CCC1NC(=O)C(C(O)C(C)CC=CCO)N(C)C(=O)C(C(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(C)NC(=O)C(C)NC(=O)C(CC(C)C)N(C)C(=O)C(C(C)C)NC(=O)C(CC(C)C)N(C)C(=O)CN(C)C1=O,DB00091,DrugBank,train
 Vinorelbine,4-0-deacetyl Vinorelbine,CCC1=CC2CN(C1)Cc1c([nH]c3ccccc13)C(C(=O)OC)(c1cc3c(cc1OC)N(C)C1C(O)(C(=O)OC)C(OC(C)=O)C4(CC)C=CCN5CCC31C54)C2,CCC1=CC2CN(C1)Cc1c([nH]c3ccccc13)C(C(=O)OC)(c1ccc3c(c1)C14CCN5CC=CC(CC)(C(OC(C)=O)C(O)(C(=O)OC)C1N3C)C54)C2,DB00361,DrugBank,train
 Digoxin,Dihydrodigoxin,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CC(O)C5(C)C(C7=CC(=O)OC7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CC(O)C5(C)C(C7COC(=O)C7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,DB00390,DrugBank,train
 Digoxin,Digoxigenin  bisdigitoxoside,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CC(O)C5(C)C(C7=CC(=O)OC7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,CC1OC(OC2C(O)CC(OC3CCC4(C)C(CCC5C4CC(O)C4(C)C(C6=CC(=O)OC6)CCC54O)C3)OC2C)CC(O)C1O,DB00390,DrugBank,train
-Dextrothyroxine,Thyroxine sulfate,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2cc(I)c(OS(=O)(=O)O)c(I)c2)c(I)c1)C(=O)O,DB00509,DrugBank,train
-Dextrothyroxine,Thyroxine glucuronide,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2cc(I)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(I)c2)c(I)c1)C(=O)O,DB00509,Both,train
+Cisatracurium,laudanosine,COc1ccc(CC2c3cc(OC)c(OC)cc3CC[N+]2(C)CCC(=O)OCCCCCOC(=O)CC[N+]2(C)CCc3cc(OC)c(OC)cc3C2Cc2ccc(OC)c(OC)c2)cc1OC,COc1ccc(CC2c3cc(OC)c(OC)cc3CCN2C)cc1OC,DB00565,DrugBank,train
 Vinblastine,Desacetylvinblastine,CCC1(O)CC2CN(CCc3c([nH]c4ccccc34)C(C(=O)OC)(c3cc4c(cc3OC)N(C)C3C(O)(C(=O)OC)C(OC(C)=O)C5(CC)C=CCN6CCC43C65)C2)C1,CCC1(O)CC2CN(CCc3c([nH]c4ccccc34)C(C(=O)OC)(c3cc4c(cc3OC)N(C)C3C(O)(C(=O)OC)C(O)C5(CC)C=CCN6CCC43C65)C2)C1,DB00570,DrugBank,train
 Piperazine,N-mononitrosopiperazine,C1CNCCN1,O=NC1CCNCC1,DB00592,DrugBank,train
 Piperazine,N-nitroso-3-hydroxypyrrolidine,C1CNCCN1,O=NN1CCC(O)C1,DB00592,DrugBank,train
@@ -22,8 +25,6 @@ Ivermectin,3''-o-Desmethyl-ivermectin B1b,CCC(C)C1OC2(CCC1C)CC1CC(CC=C(C)C(OC3CC
 Rifabutin,27-O-demethylrifabutin,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,CC(=O)OC1C(C)C(O)C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(N=C(O)C(C)=CC=CC(C)C(O)C(C)C(O)C1C)C4=O,DB00615,DrugBank,train
 Rifabutin,25-O-deacetylrifabutin,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(O)C1C)C4=O,DB00615,DrugBank,train
 Rifabutin,31-Hydroxyrifabutin,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)C(C)=CC=CC(CO)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,DB00615,DrugBank,train
-Roxithromycin,descladinose roxithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,CCC1OC(=O)C(C)C(O)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,DB00778,DrugBank,train
-Roxithromycin,N-di-demethyl roxithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(C)C(C)O2)C(C)C(OC2OC(C)CC(N)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,DB00778,DrugBank,train
 Sirolimus,39-O-Desmethylsirolimus,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(O)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,DB00877,Both,train
 Sirolimus,16-O-Desmethylsirolimus,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,COC1CC(CC(C)C2CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C(C)C(O)CC3CCC(C)C(O)(O3)C(=O)C(=O)N3CCCCC3C(=O)O2)CCC1O,DB00877,Both,train
 Sirolimus,12-OH-sirolimus,COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,COC1CC2CC(O)C(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C,DB00877,Both,train
@@ -36,9 +37,12 @@ Ethanol,Ethyl glucuronide,CCO,CCOC1OC(C(=O)O)C(O)C(O)C1O,DB00898,DrugBank,train
 Hydroxyurea,Ammonia,NC(=O)NO,N,DB01005,DrugBank,train
 Hydroxyurea,Hydroxylamine,NC(=O)NO,NO,DB01005,DrugBank,train
 Rifampin,25-Desacetyl rifampin,COC1C=COC2(C)Oc3c(C)c(O)c4c(O)c(c(C=NN5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C,COC1C=COC2(C)Oc3c(C)c(O)c4c(O)c(c(C=NN5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(O)C1C,DB01045,DrugBank,train
+Dimethyl sulfoxide,Dimethyl sulfide,C[S+](C)[O-],CSC,DB01093,DrugBank,train
 Fomepizole,4-carboxypyrazole,Cc1cn[nH]c1,O=C(O)c1cn[nH]c1,DB01213,DrugBank,train
 Fomepizole,4-hydroxymethylpyrazole,Cc1cn[nH]c1,OCc1cn[nH]c1,DB01213,DrugBank,train
-Docetaxel,Hydroxy-Docetaxel,CC(=O)OC12COC1CC(O)C1(C)C(=O)C(O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)C)c4ccccc4)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C,CC(=O)OC12COC1CC(O)C1(C)C(=O)C(O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)CO)c4ccccc4)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C,DB01248,Both,train
+Paclitaxel,"6α, 3'-p-dihydroxypaclitaxel",CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,CC(=O)OC1C(=O)C2(C)C(O)C(O)C3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccc(O)cc3)C(C)=C1C2(O)O,DB01229,DrugBank,train
+Paclitaxel,6α-hydroxypaclitaxel,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,CC(=O)OC1C(=O)C2(C)C(O)C(O)C3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,DB01229,Both,train
+Paclitaxel,3′-p-hydroxypaclitaxel,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccc(O)cc3)C(C)=C1C2(C)C,DB01229,Both,train
 Trabectedin,Trabectedin metabolite M8a,COc1cc2c(cc1O)CCNC21CSC2c3c(OC(C)=O)c(C)c4c(c3C(COC1=O)N1C(O)C3Cc5cc(C)c(OC)c(O)c5C(C21)N3C)OCO4,COc1cc2c(cc1O)CCNC21CSC2c3c(OC(C)=O)c(C)c4c(c3C(COC1=O)N1C(O)C3Cc5cc(CC(=O)O)c(OC)c(O)c5C(C21)N3C)OCO4,DB05109,DrugBank,train
 ,Trabectedin metabolite M8b (ET-729),COc1cc2c(cc1O)CCNC21CSC2c3c(OC(C)=O)c(C)c4c(c3C(COC1=O)N1C(O)C3Cc5cc(C)c(OC)c(O)c5C(C21)N3C)OCO4,COc1cc2c(cc1O)CCNC21CSC2c3c(OC(C)=O)c(C)c4c(c3C(COC1=O)N1C(O)C3Cc5cc(C)c(OC)c(O)c5C(N3)C21)OCO4,DB05109,DrugBank,train
 Trabectedin,Trabectedin metabolite M9,COc1cc2c(cc1O)CCNC21CSC2c3c(OC(C)=O)c(C)c4c(c3C(COC1=O)N1C(O)C3Cc5cc(C)c(OC)c(O)c5C(C21)N3C)OCO4,COc1cc2c(cc1O)CCNC21CSC2c3c(OC(C)=O)c(C)c(O)c(O)c3C(COC1=O)N1C(O)C3Cc4cc(C)c(OC)c(O)c4C(C21)N3C,DB05109,DrugBank,train
@@ -57,6 +61,8 @@ Fidaxomicin,OP-1118,CCc1c(Cl)c(O)c(Cl)c(O)c1C(=O)OC1C(C)OC(OCC2=CC=CCC(O)C(C)=CC
 Inositol nicotinate,Inositol pentanicotinate,O=C(OC1C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,O=C(OC1C(O)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C(OC(=O)c2cccnc2)C1OC(=O)c1cccnc1)c1cccnc1,DB08949,DrugBank,train
 Atosiban,Reduced Metabolite (Atosiban),CCOc1ccc(CC2NC(=O)CCSSCC(C(=O)N3CCCC3C(=O)NC(CCCN)C(=O)NCC(N)=O)NC(=O)C(CC(N)=O)NC(=O)C(C(C)O)NC(=O)C(C(C)CC)NC2=O)cc1,CCOc1ccc(CC(NC(=O)CCS)C(=O)NC(C(=O)NC(C(=O)NC(CC(N)=O)C(=O)NC(CS)C(=O)N2CCCC2C(=O)NC(CCCN)C(=O)NCC(N)=O)C(C)O)C(C)CC)cc1,DB09059,DrugBank,train
 Calcium carbimide,N-hydroxycynamide,N=C=N,NC=NO,DB09116,DrugBank,train
+Propiolactone,hydracrylic acid derivatives,O=C1CCO1,O=CCCO,DB09348,DrugBank,train
+Sennosides,Sennidin A,O=C(O)c1cc(O)c2c(c1)C(C1c3cc(C(=O)O)cc(O)c3C(=O)c3c(OC4OC(CO)C(O)C(O)C4O)cccc31)c1cccc(OC3OC(CO)C(O)C(O)C3O)c1C2=O,O=C(O)c1cc(O)c2c(c1)C(C1c3cccc(O)c3C(=O)c3c(O)cc(C(=O)O)cc31)c1cccc(O)c1C2=O,DB11365,DrugBank,train
 Toluene,o-Cresol,Cc1ccccc1,Cc1ccccc1O,DB11558,Both,train
 Vinflunine,4-O-deacetylvinflunine,CCC12C=CCN3CCC4(c5cc(C6(C(=O)OC)CC7CC(C(C)(F)F)CN(Cc8c6[nH]c6ccccc86)C7)c(OC)cc5N(C)C4C(O)(C(=O)OC)C1OC(C)=O)C32,CCC12C=CCN3CCC4(c5cc(C6(C(=O)OC)CC7CC(C(C)(F)F)CN(Cc8c6[nH]c6ccccc86)C7)c(OC)cc5N(C)C4C(O)(C(=O)OC)C1O)C32,DB11641,DrugBank,train
 Glycyrrhizic acid,Glucuronic acid,CC1(C(=O)O)CCC2(C)CCC3(C)C(=CC(=O)C4C5(C)CCC(OC6OC(C(=O)O)C(O)C(O)C6OC6OC(C(=O)O)C(O)C(O)C6O)C(C)(C)C5CCC43C)C2C1,O=C(O)C1OC(O)C(O)C(O)C1O,DB13751,DrugBank,train
@@ -74,6 +80,7 @@ Reduced Metabolite (Atosiban),Large Fragment Metabolite (Atosiban),CCOc1ccc(CC(N
 Reduced Metabolite (Atosiban),Small Fragment Metabolite (Atosiban),CCOc1ccc(CC(NC(=O)CCS)C(=O)NC(C(=O)NC(C(=O)NC(CC(N)=O)C(=O)NC(CS)C(=O)N2CCCC2C(=O)NC(CCCN)C(=O)NCC(N)=O)C(C)O)C(C)CC)cc1,NCCCC(N)C(=O)NCC(N)=O,DB09059,DrugBank,train
 N-hydroxycynamide,cyanide,NC=NO,C#N,DB09116,DrugBank,train
 N-hydroxycynamide,nitroxyl,NC=NO,N=O,DB09116,DrugBank,train
+Acalabrutinib M5 Metabolite (ACP-5530),Acalabrutinib M7 Metabolite (ACP-5531),CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(N)C(=O)NCC(=O)O,DB11703,DrugBank,train
 DM4,S-methyl-DM4,COc1cc2cc(c1Cl)N(C)C(=O)CC(OC(=O)C(C)N(C)C(=O)CCC(C)(C)S)C1(C)OC1C(C)C1CC(O)(N=C(O)O1)C(OC)C=CC=C(C)C2,COc1cc2cc(c1Cl)N(C)C(=O)CC(OC(=O)C(C)N(C)C(=O)CCC(C)(C)SC)C1(C)OC1C(C)C1CC(O)(N=C(O)O1)C(OC)C=CC=C(C)C2,DB12489,DrugBank,train
 Propionyl Coenzyme A,Succinyl Coenzyme A,CCC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,CC(C)(COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O)C(O)C(=O)NCCC(=O)NCCSC(=O)CCC(O)O,DB11677,DrugBank,train
 Acetyl Coenzyme A,Propionyl Coenzyme A,CC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,CCC(=O)SCCNC(=O)CCNC(=O)C(O)C(C)(C)COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O,DB11677,DrugBank,train
@@ -89,13 +96,13 @@ cyclosporine_a,,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(
 digitoxin,Digoxigenin Bisdigitoxoside,CC1OC(OC2C(O)CC(OC3C(O)CC(OC4CCC5(C)C(CCC6C5CCC5(C)C(C7=CC(=O)OC7)CCC65O)C4)OC3C)OC2C)CC(O)C1O,CC1OC(OC2C(O)CC(OC3CCC4(C)C(CCC5C4CC(O)C4(C)C(C6=CC(=O)OC6)CCC54O)C3)OC2C)CC(O)C1O,digitoxin,MetXBioDB,train
 ethylmethylnitrosamine,,CCN(C)N=O,CCN=NO,ethylmethylnitrosamine,MetXBioDB,train
 ethylmethylnitrosamine,,CCN(C)N=O,CN=NO,ethylmethylnitrosamine,MetXBioDB,train
+fk_506_m1,13-Desmethyl_fk_506,C=CCC1C=C(C)CC(C)CC(OC)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O,C=CCC1C=C(C)CC(C)CC(O)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O,fk_506_m1,MetXBioDB,train
 furan,(E)-2-Butenedial,c1ccoc1,O=CC=CC=O,furan,MetXBioDB,train
 hexane,Hexanol,CCCCCC,CCCCC(C)O,hexane,MetXBioDB,train
 ivermectin,,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,COC1CC(OC2C(C)=CCC3CCC(CC4(CCC(C(C)C)CO4)O3)OC(=O)C3C=C(C)C(O)C4CCC(=CC=CC2C)C34O)OC(C)C1OC1CC(O)C(O)C(C)O1,ivermectin,MetXBioDB,train
 ivermectin,,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,COC1CC(OC2(O)C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,ivermectin,MetXBioDB,train
 ivermectin,,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)C)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,COC1CC(OC2C(C)OC(OC3C(C)=CCC4CCC(CC5(CCC(C(C)(C)O)CO5)O4)OC(=O)C4C=C(C)C(O)C5CCC(=CC=CC3C)C45O)CC2OC)OC(C)C1O,ivermectin,MetXBioDB,train
 miocamycin,,CCC(=O)OC1CC(=O)OC(C)CC=CC=CC(OC(C)=O)C(C)CC(CC=O)C(OC2OC(C)C(OC3CC(C)(OC(C)=O)C(OC(=O)CC)C(C)O3)C(N(C)C)C2O)C1OC,CCC(=O)OC1CC(=O)OC(C)CC=CC=CC(OC(C)=O)C(C)CC(CC=O)C(OC2OC(C)C(OC3CC(C)(OC(C)=O)C(O)(OC(=O)CC)C(C)O3)C(N(C)C)C2O)C1OC,miocamycin,MetXBioDB,train
-n-methylformamide,Methyl Isocyanate,CNC=O,CN=C=O,n-methylformamide,MetXBioDB,train
 qttnoskslatgqb-uhfffaoysa-n,uroporphyrin,O=C(O)CCc1c2[nH]c(c1CC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)C2,O=C(O)CCc1c2[nH]c(c1CC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)Cc1[nH]c(c(CC(=O)O)c1CCC(=O)O)C(O)c1[nH]c(c(CC(=O)O)c1CCC(=O)O)C2,qttnoskslatgqb-uhfffaoysa-n,MetXBioDB,train
 rifabutin,,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(C)(O)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,rifabutin,MetXBioDB,train
 rifabutin,,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(C)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,COC1C=COC2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(CC(=O)C(C)=CC=CC(CO)C(O)C(C)C(O)C(C)C(OC(C)=O)C1C)C4=O,rifabutin,MetXBioDB,train
@@ -108,13 +115,10 @@ roxithromycin,,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O
 sdz_imm_125,,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(COCCO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CCC1N=C(O)C(C(O)C(C)CC=CCO)N(C)C(=O)C(C(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(COCCO)N=C(O)C(C)N=C(O)C(CC(C)C)N(C)C(=O)C(C(C)C)N=C(O)C(CC(C)C)N(C)C(=O)CN(C)C1=O,sdz_imm_125,MetXBioDB,train
 sdz_imm_125,,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(COCCO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)(C)O)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(COCCO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,sdz_imm_125,MetXBioDB,train
 sdz_imm_125,,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(COCCO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CC=CCC(C)C(O)C1C(O)=NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(COCCO)C(=O)N(C)C(CC(C)C)C(O)=NC(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,sdz_imm_125,MetXBioDB,train
-tert-butyl methyl ether,Tert-butanol,COC(C)(C)C,CC(C)(C)O,tert-butyl methyl ether,MetXBioDB,train
-valspodar,,CC=CCC(C)C(=O)C1C(O)=NC(C(C)C)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CC=CCC(C)C(=O)C1C(O)=NC(C(C)C)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)CO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,valspodar,MetXBioDB,train
 N-Nitrosodimethylamine,N-Nitroso-N-methyl-N-hydroxymethylamine,CN(C)N=O,CN(CO)N=O,N-Nitrosodimethylamine,MetXBioDB,train
 N-Nitrosodimethylamine,N-Nitrosomethylamine,CN(C)N=O,CN=NO,N-Nitrosodimethylamine,MetXBioDB,train
 butadiene,butadiene_monoxide,C=CC=C,C=CC1CO1,butadiene,MetXBioDB,train
 butadiene,3-buten-2-one,C=CC=C,C=CC(C)=O,butadiene,MetXBioDB,train
-VINYL CHLORIDE,,C=CCl,ClC1CO1,VINYL CHLORIDE,MetXBioDB,train
 Methylene chloride,Dichloromethanol,ClCCl,OC(Cl)Cl,Methylene chloride,MetXBioDB,train
 Urethane,Vinyl carbamate,CCOC(N)=O,C=COC(N)=O,Urethane,MetXBioDB,train
 Vinyl carbamate,Vinyl carbamate epoxide,C=COC(N)=O,NC(=O)OC1CO1,Urethane,MetXBioDB,train
@@ -122,23 +126,19 @@ Troleandomycin,,COC1CC(OC2C(C)C(=O)OC(C)C(C)C(OC(C)=O)C(C)C(=O)C3(CO3)CC(C)C(OC3
 furfuryl alcohol,,OCc1ccco1,O=S(=O)(O)OCc1ccco1,furfuryl alcohol,MetXBioDB,train
 tert-butanol,,CC(C)(C)O,CC(C)(C)OC1OC(C(=O)O)C(O)C(O)C1O,tert-butanol,MetXBioDB,train
 tert-butanol,,CC(C)(C)O,CC(C)(C)OS(=O)(=O)O,tert-butanol,MetXBioDB,train
-butanol,,CCCCO,CCCCOC1OC(C(=O)O)C(O)C(O)C1O,butanol,MetXBioDB,train
 pentanol,,CCCCCO,CCCCCOC1OC(C(=O)O)C(O)C(O)C1O,pentanol,MetXBioDB,train
 2-propanol,,CC(C)O,CC(C)OC1OC(C(=O)O)C(O)C(O)C1O,2-propanol,MetXBioDB,train
 isobutanol,,CC(C)CO,CC(C)COC1OC(C(=O)O)C(O)C(O)C1O,isobutanol,MetXBioDB,train
 Pyridine N-oxide,,O[n+]1ccccc1,O=C(O)C1OC(O[n+]2ccccc2)C(O)C(O)C1O,Pyridine N-oxide,MetXBioDB,train
 N-nitrosodimethylamine,,CN(C)N=O,CC(=O)[NH+]([O-])N(C)C,N-nitrosodimethylamine,MetXBioDB,train
-Hydrogen peroxide,Oxygen,OO,O=O,DB11091,DrugBank,val
-Hydrogen peroxide,Water,OO,O,DB11091,DrugBank,val
-Cyclosporine,Cyclosporine M-1 (AM-9),CC=CCC(C)C(O)C1C(=O)NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(=O)NC(C(C)C)C(=O)N(C)C(CC(C)C)C(=O)NC(C)C(=O)NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CC=CCC(C)C(O)C1C(=O)NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(=O)NC(C(C)C)C(=O)N(C)C(CC(C)C)C(=O)NC(C)C(=O)NC(C)C(=O)N(C)C(CC(C)(C)O)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,DB00091,DrugBank,val
-Cyclosporine,Cyclosporine M-17 (AM-1),CC=CCC(C)C(O)C1C(=O)NC(CC)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(=O)NC(C(C)C)C(=O)N(C)C(CC(C)C)C(=O)NC(C)C(=O)NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CCC1NC(=O)C(C(O)C(C)CC=CCO)N(C)C(=O)C(C(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(CC(C)C)N(C)C(=O)C(C)NC(=O)C(C)NC(=O)C(CC(C)C)N(C)C(=O)C(C(C)C)NC(=O)C(CC(C)C)N(C)C(=O)CN(C)C1=O,DB00091,DrugBank,val
-Cisatracurium,laudanosine,COc1ccc(CC2c3cc(OC)c(OC)cc3CC[N+]2(C)CCC(=O)OCCCCCOC(=O)CC[N+]2(C)CCc3cc(OC)c(OC)cc3C2Cc2ccc(OC)c(OC)c2)cc1OC,COc1ccc(CC2c3cc(OC)c(OC)cc3CCN2C)cc1OC,DB00565,DrugBank,val
-Dimethyl sulfoxide,Dimethyl sulfide,C[S+](C)[O-],CSC,DB01093,DrugBank,val
-Paclitaxel,"6α, 3'-p-dihydroxypaclitaxel",CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,CC(=O)OC1C(=O)C2(C)C(O)C(O)C3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccc(O)cc3)C(C)=C1C2(O)O,DB01229,DrugBank,val
-Paclitaxel,6α-hydroxypaclitaxel,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,CC(=O)OC1C(=O)C2(C)C(O)C(O)C3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,DB01229,Both,val
-Paclitaxel,3′-p-hydroxypaclitaxel,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C,CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccc(O)cc3)C(C)=C1C2(C)C,DB01229,Both,val
-Propiolactone,hydracrylic acid derivatives,O=C1CCO1,O=CCCO,DB09348,DrugBank,val
-Sennosides,Sennidin A,O=C(O)c1cc(O)c2c(c1)C(C1c3cc(C(=O)O)cc(O)c3C(=O)c3c(OC4OC(CO)C(O)C(O)C4O)cccc31)c1cccc(OC3OC(CO)C(O)C(O)C3O)c1C2=O,O=C(O)c1cc(O)c2c(c1)C(C1c3cccc(O)c3C(=O)c3c(O)cc(C(=O)O)cc31)c1cccc(O)c1C2=O,DB11365,DrugBank,val
-Acalabrutinib M5 Metabolite (ACP-5530),Acalabrutinib M7 Metabolite (ACP-5531),CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,CC(=CC(=O)N1CCCC1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12)SCC(N)C(=O)NCC(=O)O,DB11703,DrugBank,val
-fk_506_m1,13-Desmethyl_fk_506,C=CCC1C=C(C)CC(C)CC(OC)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O,C=CCC1C=C(C)CC(C)CC(O)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O,fk_506_m1,MetXBioDB,val
+Dextrothyroxine,Thyroxine sulfate,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2cc(I)c(OS(=O)(=O)O)c(I)c2)c(I)c1)C(=O)O,DB00509,DrugBank,val
+Dextrothyroxine,Thyroxine glucuronide,NC(Cc1cc(I)c(Oc2cc(I)c(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2cc(I)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(I)c2)c(I)c1)C(=O)O,DB00509,Both,val
+Roxithromycin,descladinose roxithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,CCC1OC(=O)C(C)C(O)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,DB00778,DrugBank,val
+Roxithromycin,N-di-demethyl roxithromycin,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(O)C(C)O2)C(C)C(OC2OC(C)CC(N(C)C)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,CCC1OC(=O)C(C)C(OC2CC(C)(OC)C(C)C(C)O2)C(C)C(OC2OC(C)CC(N)C2O)C(C)(O)CC(C)C(=NOCOCCOC)C(C)C(O)C1(C)O,DB00778,DrugBank,val
+Docetaxel,Hydroxy-Docetaxel,CC(=O)OC12COC1CC(O)C1(C)C(=O)C(O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)C)c4ccccc4)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C,CC(=O)OC12COC1CC(O)C1(C)C(=O)C(O)C3=C(C)C(OC(=O)C(O)C(NC(=O)OC(C)(C)CO)c4ccccc4)CC(O)(C(OC(=O)c4ccccc4)C21)C3(C)C,DB01248,Both,val
+n-methylformamide,Methyl Isocyanate,CNC=O,CN=C=O,n-methylformamide,MetXBioDB,val
 phenol,Catechol,Oc1ccccc1,Oc1ccccc1O,phenol,MetXBioDB,val
+tert-butyl methyl ether,Tert-butanol,COC(C)(C)C,CC(C)(C)O,tert-butyl methyl ether,MetXBioDB,val
+valspodar,,CC=CCC(C)C(=O)C1C(O)=NC(C(C)C)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,CC=CCC(C)C(=O)C1C(O)=NC(C(C)C)C(=O)N(C)CC(=O)N(C)C(CC(C)C)C(O)=NC(C(C)C)C(=O)N(C)C(CC(C)C)C(O)=NC(C)C(O)=NC(C)C(=O)N(C)C(CC(C)CO)C(=O)N(C)C(CC(C)C)C(=O)N(C)C(C(C)C)C(=O)N1C,valspodar,MetXBioDB,val
+VINYL CHLORIDE,,C=CCl,ClC1CO1,VINYL CHLORIDE,MetXBioDB,val
+butanol,,CCCCO,CCCCOC1OC(C(=O)O)C(O)C(O)C1O,butanol,MetXBioDB,val

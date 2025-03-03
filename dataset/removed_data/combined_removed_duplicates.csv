@@ -1,20 +1,20 @@
 parent_name,child_name,parent_smiles,child_smiles,origin,source
 Venlafaxine,Desvenlafaxine,COc1ccc(C(CN(C)C)C2(O)CCCCC2)cc1,CN(C)CC(c1ccc(O)cc1)C1(O)CCCCC1,DB00285,DrugBank
-Morphine,Morphine glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5,DB00295,DrugBank
-Codeine,Morphine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,DB00318,DrugBank
+Morphine,Morphine glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,CN1CCC23c4c5ccc(O)c4OC2C(OC2OC(C(=O)O)C(O)C(O)C2O)C=CC3C1C5,DB00318,DrugBank
+Codeine,Morphine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,CN1CCC23c4c5ccc(O)c4OC2C(O)C=CC3C1C5,DB00295,DrugBank
 Amitriptyline,Nortriptyline,CN(C)CCC=C1c2ccccc2CCc2ccccc21,CNCCC=C1c2ccccc2CCc2ccccc21,DB00321,DrugBank
 Fluoxetine,Fluoxetine glucuronide,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,CN(CCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1)C1OC(C(=O)O)C(O)C(O)C1O,DB00472,DrugBank
 Dextromethorphan,Dextrorphan,COc1ccc2c(c1)C13CCCCC1C(C2)N(C)CC3,CN1CCC23CCCCC2C1Cc1ccc(O)cc13,DB00514,DrugBank
-Testosterone,Androstenedione,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,DB00624,DrugBank
+Testosterone,Androstenedione,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(O)CCC12,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,DB01420,DrugBank
 Diazepam,Temazepam,CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21,CN1C(=O)C(O)N=C(c2ccccc2)c2cc(Cl)ccc21,DB00829,DrugBank
-Hydrocodone,Hydromorphone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,DB00956,DrugBank
+Hydrocodone,Hydromorphone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,DB15465,DrugBank
 Selegiline,Levmetamfetamine,C#CCN(C)C(C)Cc1ccccc1,CNC(C)Cc1ccccc1,DB01037,DrugBank
 Nefazodone,m-Chlorophenylpiperazine,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1,Clc1cccc(N2CCNCC2)c1,DB01149,DrugBank
 Mestranol,Ethinylestradiol,C#CC1(O)CCC2C3CCc4cc(OC)ccc4C3CCC21C,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,DB01357,DrugBank
 Colchicine,Colchiceine,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,COc1cc2c(c(OC)c1OC)-c1ccc(O)c(=O)cc1C(NC(C)=O)CC2,DB01394,DrugBank
 Metamfetamine,Dextroamphetamine,CNC(C)Cc1ccccc1,CC(N)Cc1ccccc1,DB01577,DrugBank
 Camphor,5-Exo-Hydroxycamphor,CC12CCC(CC1=O)C2(C)C,CC12CC(O)C(CC1=O)C2(C)C,DB01744,DrugBank
-Lauric acid,12-Hydroxydodecanoic Acid,CCCCCCCCCCCC(=O)O,O=C(O)CCCCCCCCCCCO,DB03017,DrugBank
+Lauric acid,12-Hydroxydodecanoic Acid,CCCCCCCCCCCC(=O)O,O=C(O)CCCCCCCCCCCO,DB14185,DrugBank
 Phenol,Hydroquinone,Oc1ccccc1,Oc1ccc(O)cc1,DB03255,DrugBank
 Phenacetin,Acetaminophen,CCOc1ccc(NC(C)=O)cc1,CC(=O)Nc1ccc(O)cc1,DB03783,DrugBank
 (R)-Fluoxetine,4-(trifluoromethyl)phenol,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,Oc1ccc(C(F)(F)F)cc1,DB08472,DrugBank
@@ -22,18 +22,18 @@ Phenacetin,Acetaminophen,CCOc1ccc(NC(C)=O)cc1,CC(=O)Nc1ccc(O)cc1,DB03783,DrugBan
 Etoperidone,m-Chlorophenylpiperazine,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,Clc1cccc(N2CCNCC2)c1,DB09194,DrugBank
 Toluene,Benzyl alcohol,Cc1ccccc1,OCc1ccccc1,DB11558,DrugBank
 Toluene,P-Cresol,Cc1ccccc1,Cc1ccc(O)cc1,DB11558,DrugBank
-Lisofylline,Pentoxifylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,DB12406,DrugBank
+Lisofylline,Pentoxifylline,CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,DB00806,DrugBank
 Trichloroethylene,Chloral hydrate,ClC=C(Cl)Cl,OC(O)C(Cl)(Cl)Cl,DB13323,DrugBank
 Mesalazine,N-acetyl-5-ASA (Ac-5-ASA),Nc1ccc(O)c(C(=O)O)c1,CC(=O)Nc1ccc(O)c(C(=O)O)c1,DB00795,DrugBank
 Acetaminophen,Acetaminophen glucuronide,CC(=O)Nc1ccc(O)cc1,CC(=O)Nc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1,DB03783,DrugBank
 Acetaminophen,Acetaminophen sulfate,CC(=O)Nc1ccc(O)cc1,CC(=O)Nc1ccc(OS(=O)(=O)O)cc1,DB03783,DrugBank
 Acetaminophen,NAPQI,CC(=O)Nc1ccc(O)cc1,CC(=O)N=C1C=CC(=O)C=C1,DB03783,DrugBank
-Codeine,norcodeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,COc1ccc2c3c1OC1C(O)C=CC4C(C2)NCCC341,DB00295,DrugBank
-Codeine,Codeine-6-glucuronide,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,COc1ccc2c3c1OC1C(OC4OC(C(=O)O)C(O)C(O)C4O)C=CC4C(C2)N(C)CCC341,DB00295,DrugBank
+Codeine,norcodeine,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,COc1ccc2c3c1OC1C(O)C=CC4C(C2)NCCC341,DB00318,DrugBank
+Codeine,Codeine-6-glucuronide,COc1ccc2c3c1OC1C(O)C=CC4C(C2)N(C)CCC341,COc1ccc2c3c1OC1C(OC4OC(C(=O)O)C(O)C(O)C4O)C=CC4C(C2)N(C)CCC341,DB00318,DrugBank
 Nortriptyline,E-10-Hydroxynortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,CNCCC=C1c2ccccc2CC(O)c2ccccc21,DB00321,DrugBank
 Nortriptyline,Desmethylnortriptyline,CNCCC=C1c2ccccc2CCc2ccccc21,NCCC=C1c2ccccc2CCc2ccccc21,DB00321,DrugBank
-Hydromorphone,Hydromorphone-3-glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5,DB00956,DrugBank
-Hydromorphone,Norhydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,O=C1CCC2C3Cc4ccc(O)c5c4C2(CCN3)C1O5,DB00956,DrugBank
+Hydromorphone,Hydromorphone-3-glucuronide,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(=O)CCC3C1C5,DB15465,DrugBank
+Hydromorphone,Norhydromorphone,CN1CCC23c4c5ccc(O)c4OC2C(=O)CCC3C1C5,O=C1CCC2C3Cc4ccc(O)c5c4C2(CCN3)C1O5,DB15465,DrugBank
 Indomethacin,5-Hydroxyindomethacin,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,Cc1c(CC(=O)O)c2cc(O)ccc2n1C(=O)c1ccc(Cl)cc1,DB13783,DrugBank
 Indomethacin,Indomethacin acyl glucuronide,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,COc1ccc2c(c1)c(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c(C)n2C(=O)c1ccc(Cl)cc1,DB13783,DrugBank
 Piroxicam,5'-Hydroxypiroxicam,CN1C(C(=O)Nc2ccccn2)=C(O)c2ccccc2S1(=O)=O,CN1C(C(=O)Nc2ccc(O)cn2)=C(O)c2ccccc2S1(=O)=O,DB09215,DrugBank
@@ -47,7 +47,7 @@ Isotretinoin,13-cis-Retinoyl-beta-glucuronide,CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=C
 Estradiol,17-beta-Estradiol-3-glucuronide,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,CC12CCC3c4ccc(OC5OC(C(=O)O)C(O)C(O)C5O)cc4CCC3C1CCC2O,DB13952,DrugBank
 Estradiol,17-beta-Estradiol glucuronide,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,CC12CCC3c4ccc(O)cc4CCC3C1CCC2OC1OC(C(=O)O)C(O)C(O)C1O,DB13952,DrugBank
 Estradiol,4-Hydroxyestradiol,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2O,DB13952,DrugBank
-Lisofylline,"M3, Pentoxifylline internal diol",CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O,DB00806,DrugBank
+Lisofylline,"M3, Pentoxifylline internal diol",CC(O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,CC(O)C(O)CCCn1c(=O)c2c(ncn2C)n(C)c1=O,DB12406,DrugBank
 Hydrocodone,norhydrocodone,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(=O)CCC4C(C2)NCCC314,DB15465,DrugBank
 Ethinylestradiol,2-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,C#CC1(O)CCC2C3CCc4cc(O)c(O)cc4C3CCC21C,DB01357,DrugBank
 Ethinylestradiol,4-hydroxyethinylestradiol,C#CC1(O)CCC2C3CCc4cc(O)ccc4C3CCC21C,C#CC1(O)CCC2C3CCc4c(ccc(O)c4O)C3CCC21C,DB01357,DrugBank
@@ -63,25 +63,25 @@ Ifosfamide,Dechloroethylifosfamide,O=P1(NCCCl)OCCCN1CCCl,NP1(=O)OCCCN1CCCl,DB129
 Ifosfamide,Chloroacetaldehyde,O=P1(NCCCl)OCCCN1CCCl,O=CCCl,DB12902,DrugBank
 Ifosfamide,4-Hydroxyifosfamide,O=P1(NCCCl)OCCCN1CCCl,O=P1(NCCCl)OCCC(O)N1CCCl,DB12902,DrugBank
 Dextroamphetamine,4-Hydroxy-d-amphetamine,CC(N)Cc1ccccc1,CC(N)Cc1ccc(O)cc1,DB01255,DrugBank
-Androstenedione,6beta-hydroxy-androstenedione,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,CC12CCC3C(CC(O)C4=CC(=O)CCC43C)C1CCC2=O,DB00624,DrugBank
-Arachidonic Acid,5-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC=CC=CC(O)CCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,7-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC=CC(O)C=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,10-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CC(O)C=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,13-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CC(O)C=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,20-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,O=C(O)CCCC=CCC=CCC=CCC=CCCCCCO,DB00154,DrugBank
-Arachidonic Acid,19-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CC(O)CCCC=CCC=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,18-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCC(O)CCC=CCC=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,17-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCC(O)CC=CCC=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,16-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCC(O)C=CCC=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,"14,15-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC1OC1CC=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,"11,12-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC1OC1CC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,"8,9-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC1OC1CC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,"5,6-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC=CCC1OC1CCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,15-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC(O)C=CC=CCC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,12-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC(O)C=CC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,11-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CC=CC(O)CC=CCC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,9-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC(O)C=CC=CCCCC(=O)O,DB00154,DrugBank
-Arachidonic Acid,8-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CC=CC(O)CC=CCCCC(=O)O,DB00154,DrugBank
+Androstenedione,6beta-hydroxy-androstenedione,CC12CCC3C(CCC4=CC(=O)CCC43C)C1CCC2=O,CC12CCC3C(CC(O)C4=CC(=O)CCC43C)C1CCC2=O,DB01420,DrugBank
+Arachidonic Acid,5-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC=CC=CC(O)CCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,7-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC=CC(O)C=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,10-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CC(O)C=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,13-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CC(O)C=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,20-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,O=C(O)CCCC=CCC=CCC=CCC=CCCCCCO,DB13854,DrugBank
+Arachidonic Acid,19-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CC(O)CCCC=CCC=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,18-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCC(O)CCC=CCC=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,17-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCC(O)CC=CCC=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,16-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCC(O)C=CCC=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,"14,15-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC1OC1CC=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,"11,12-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC1OC1CC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,"8,9-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC1OC1CC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,"5,6-EET",CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC=CCC1OC1CCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,15-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC(O)C=CC=CCC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,12-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC(O)C=CC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,11-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CC=CC(O)CC=CCC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,9-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CCC(O)C=CC=CCCCC(=O)O,DB13854,DrugBank
+Arachidonic Acid,8-HETE,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC=CC=CC(O)CC=CCCCC(=O)O,DB13854,DrugBank
 Diethyltoluamide,"N,N-diethyl-m-hydroxymethylbenzamide",CCN(CC)C(=O)c1cccc(C)c1,CCN(CC)C(=O)c1cccc(CO)c1,DB11282,DrugBank
 Diethyltoluamide,N-ethyl-m-toluamide,CCN(CC)C(=O)c1cccc(C)c1,CCNC(=O)c1cccc(C)c1,DB11282,DrugBank
 Diethyltoluamide,acetaldehyde,CCN(CC)C(=O)c1cccc(C)c1,CC=O,DB11282,DrugBank
@@ -554,7 +554,7 @@ O-Desmethylnaproxen,O-Desmethylnaproxen O-glucuronide,CC(C(=O)O)c1ccc2cc(O)ccc2c
 1-Naphthaldehyde,1-Naphthoic acid,O=Cc1cccc2ccccc12,O=C(O)c1cccc2ccccc12,DB00857,DrugBank
 1-Naphthaldehyde,1-Naphthalenemethanol,O=Cc1cccc2ccccc12,OCc1cccc2ccccc12,DB00857,DrugBank
 6-α-hydrocodol,6-α-hydromorphol,COc1ccc2c3c1OC1C(O)CCC4C(C2)N(C)CCC341,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,DB15465,DrugBank
-6-β-hydromorphol,6-β-hydromorphol glucuronide conjugate 1,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5,DB00956,DrugBank
+6-β-hydromorphol,6-β-hydromorphol glucuronide conjugate 1,CN1CCC23c4c5ccc(O)c4OC2C(O)CCC3C1C5,CN1CCC23c4c5ccc(OC6OC(C(=O)O)C(O)C(O)C6O)c4OC2C(O)CCC3C1C5,DB15465,DrugBank
 N-Desmethyldiphenhydramine,"N,N-Didesmethyldiphenhydramine",CNCCOC(c1ccccc1)c1ccccc1,NCCOC(c1ccccc1)c1ccccc1,DB00985,DrugBank
 Irbesartan derivative M7,Irbesartan derivative M1,CCCCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,CC(O)CCC1=NC2(CCC(O)C2)C(=O)N1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,DB01029,DrugBank
 N-Acetyl-5-hydroxytryptamine,N-Acetyl-5-hydroxytryptamine sulfate,CC(=O)NCCc1c[nH]c2ccc(O)cc12,CC(=O)NCCc1c[nH]c2ccc(OS(=O)(=O)O)cc12,DB01065,DrugBank

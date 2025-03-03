@@ -58,7 +58,7 @@ def find_drug_origin_metxbiodb(data_file):
             # Check if the current origin is a child elsewhere, update if necessary
             for _, pot_parent_row in df.iterrows():
                 if current_origin == pot_parent_row['child_name']:
-                    new_origin = pot_parent_row['parent_name']
+                    new_origin = pot_parent_row['origin']
                     if current_origin != new_origin:
                         df.at[index, 'origin'] = new_origin
                         update_made = True
@@ -67,12 +67,12 @@ def find_drug_origin_metxbiodb(data_file):
                 current_origin = row['parent_smiles']
                 for _, pot_parent_row in df.iterrows():
                     if current_origin == pot_parent_row['child_smiles']:
-                        new_origin = pot_parent_row['parent_smiles']
+                        new_origin = pot_parent_row['origin']
                         if current_origin != new_origin:
                             df.at[index, 'origin'] = new_origin
                             update_made = True
                         else:
-                            df.at[index, 'origin'] = current_origin
+                            df.at[index, 'origin'] = current_origin 
 
         # Exit the loop early if no updates are made
         if not update_made:

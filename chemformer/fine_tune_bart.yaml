@@ -4,11 +4,16 @@ model_path: MODEL_PATH
 n_predictions: 0 # 0
 resume: false
 
-n_epochs: 100
+n_epochs: 200
 batch_size: BATCH_SIZE
-augmentation_probability: 0
-augmentation_strategy: all
+augmentation_probability: 0.3
+augmentation_strategy: reactants # Can be set to "all", "reactants", "products" when using synthesis datamodule
 
 vocabulary_path: VOCABULARY_PATH
 output_directory: OUTPUT_DIRECTORY
 task: forward_prediction
+
+masker:
+  type: SpanTokensMasker  # SpanTokensMasker, ReplaceTokensMasker
+  arguments:
+   - mask_prob: 0
