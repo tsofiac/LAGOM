@@ -3,7 +3,7 @@ import pandas as pd
 from standardize_smiles import standardize_smiles_collection
 
 
-def load_gloryx(json_file, comma_file, tab_file):
+def load_gloryx(json_file, comma_file, comma_unique_file, tab_file):
     with open(json_file, 'r', encoding="utf8") as file:
         reader = file.read()
         # replace \ to \\ for correct reading of file
@@ -55,6 +55,8 @@ def load_gloryx(json_file, comma_file, tab_file):
 
     df = df[df['generation'] == 1] # Only first generation reactions
     df.to_csv(comma_file, index=False)
+    df = df.drop_duplicates(subset='parent_smiles', keep='first') # Only unique parent
+    df.to_csv(comma_unique_file, index=False)
 
     df = df.rename(columns={
         "child_smiles": "products",
@@ -68,6 +70,7 @@ if __name__ == "__main__":
 
     gloryx = 'dataset/raw_data/gloryx_test_dataset.json'
     gloryx_comma = 'dataset/curated_data/gloryx_smiles_clean.csv'
+    gloryx_unique = 'dataset/curated_data/gloryx_unique_smiles_clean.csv'
     gloryx_tab = 'dataset/finetune/gloryx_finetune.csv'
 
-    load_gloryx(gloryx, gloryx_comma, gloryx_tab)
+    load_gloryx(gloryx, gloryx_comma, gloryx_unique, gloryx_tab)

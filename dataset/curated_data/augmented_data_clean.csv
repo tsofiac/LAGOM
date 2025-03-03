@@ -956,4 +956,7 @@ DB13746,Bioallethrin,DBMET02084,M9 (Bioallethrin),C=CCC1=C(C)C(OC(=O)C2C(C=C(C)C
 ,Quercitrin,,Dihydroquercetin,CC1OC(Oc2c(-c3ccc(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)C(O)C(O)C1O,O=C1c2c(O)cc(O)cc2OC(c2ccc(O)c(O)c2)C1O,Quercitrin,MetXBioDB Augmented,0.2647058823529412
 ,"3,4-dihydroxyphenylacetic acid",,2-Phenylacetic acid,O=C(O)Cc1ccc(O)c(O)c1,O=C(O)Cc1ccccc1,"3,4-dihydroxyphenylacetic acid",MetXBioDB Augmented,0.5
 ,Genistein,,,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented,0.3181818181818182
-,,,,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,CC(C(=O)O)c1ccc(O)cc1,,MetXBioDB Augmented,0.2702702702702703
+,Genistein,,6'-Hydroxy-O-desmethylangolensin,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,CC(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented,0.2826086956521739
+,Genistein,,4-hydroxyphenyl-2-propenoic acid,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,C=C(C(=O)O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented,0.23809523809523808
+,Genistein,,Phloroglucinol,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,Oc1cc(O)cc(O)c1,Genistein,MetXBioDB Augmented,0.21212121212121213
+,Genistein,,,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,CC(C(=O)O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented,0.20454545454545456

@@ -54,6 +54,3 @@ DB11251,,DBMET02040,CEHC,,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCC(=O)O)O2,DB11251,DrugBank
 ,Urethane,,Vinyl carbamate epoxide,CCOC(N)=O,NC(=O)OC1CO1,Urethane,MetXBioDB Augmented
 ,phenol,,catechol sulfate,Oc1ccccc1,O=S(=O)(O)Oc1ccccc1O,phenol,MetXBioDB Augmented
 ,phenol,,,Oc1ccccc1,O=C(O)C1OC(Oc2ccccc2O)C(O)C(O)C1O,phenol,MetXBioDB Augmented
-,metxbiodb unknown,,6'-Hydroxy-O-desmethylangolensin,,CC(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,metxbiodb unknown,MetXBioDB Augmented
-,metxbiodb unknown,,4-hydroxyphenyl-2-propenoic acid,,C=C(C(=O)O)c1ccc(O)cc1,metxbiodb unknown,MetXBioDB Augmented
-,metxbiodb unknown,,Phloroglucinol,,Oc1cc(O)cc(O)c1,metxbiodb unknown,MetXBioDB Augmented

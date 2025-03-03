@@ -1575,7 +1575,7 @@ DB11635,,DBMET02324,alpha-carboxyethylhydroxychromanol,,Cc1c(C)c2c(c(C)c1O)CC[C@
 ,"3,4-dihydroxyphenylacetic acid",,2-Phenylacetic acid,O=C(O)Cc1ccc(O)c(O)c1,O=C(O)Cc1ccccc1,"3,4-dihydroxyphenylacetic acid",MetXBioDB Augmented
 ,"3,4-dihydroxyphenylacetic acid",,2-Phenylacetic acid,O=C(O)Cc1ccc(O)c(O)c1,O=C(O)Cc1ccccc1,"3,4-dihydroxyphenylacetic acid",MetXBioDB Augmented
 ,Genistein,,,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented
-,metxbiodb unknown,,6'-Hydroxy-O-desmethylangolensin,,CC(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,metxbiodb unknown,MetXBioDB Augmented
-,metxbiodb unknown,,4-hydroxyphenyl-2-propenoic acid,,C=C(C(=O)O)c1ccc(O)cc1,metxbiodb unknown,MetXBioDB Augmented
-,metxbiodb unknown,,Phloroglucinol,,Oc1cc(O)cc(O)c1,metxbiodb unknown,MetXBioDB Augmented
-,,,,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,CC(C(=O)O)c1ccc(O)cc1,,MetXBioDB Augmented
+,Genistein,,6'-Hydroxy-O-desmethylangolensin,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,CC(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented
+,Genistein,,4-hydroxyphenyl-2-propenoic acid,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,C=C(C(=O)O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented
+,Genistein,,Phloroglucinol,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,Oc1cc(O)cc(O)c1,Genistein,MetXBioDB Augmented
+,Genistein,,,O=c1c(-c2ccc(O)cc2)coc2cc(O)cc(O)c12,CC(C(=O)O)c1ccc(O)cc1,Genistein,MetXBioDB Augmented
