@@ -113,13 +113,13 @@ def gloryx(input, output):
 if __name__ == "__main__":
 
     val_size = 0.1
-    preprocess = False
+    preprocess = True
     preprocess_unique_parents = False
 
     size = 733
     get_small_dataset = False
 
-    name = 'drugbank' # [ 'drugbank' 'metxbiodb' 'combined']
+    name = 'logp_combined' # [ 'drugbank' 'metxbiodb' 'combined']
     
     # SPECIFY WHICH DATASET TO USE!
     dataset = f'dataset/curated_data/{name}_smiles_clean.csv'
