@@ -304,26 +304,9 @@ def reformat_for_chemformer(input_file, output_file):
 
 
     
-
-# def small_dataset(input_file, output_file, size):
-#     # Read the CSV file into a DataFrame
-#     df = pd.read_csv(input_file)
-    
-#     # Check if size is less than or equal to the number of rows in the DataFrame
-#     if size > len(df):
-#         raise ValueError("Size is greater than the number of rows in the dataset.")
-    
-#     # Select a random sample of rows
-#     random_sample = df.sample(n=size)
-    
-#     # Write the random sample to an output CSV file
-#     random_sample.to_csv(output_file, index=False)
-
-# -----------------------------------
-
 if __name__ == "__main__":
 
-    name = 'augmented' # [ 'combined' 'drugbank' 'metxbiodb' 'combined' ]
+    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'augmented' ]
     preprocess_unique_parents = True
 
     val_size = 0.1
@@ -364,6 +347,11 @@ if __name__ == "__main__":
 
         combine_datasets(df_drugbank, df_metx, clean_csv)
         remove_duplicates_combined(clean_csv, removed_duplicates)
+        # ----- to add augmented reactions to combined dataset --------
+        df_clean = pd.read_csv(clean_csv)
+        df_augmented = pd.read_csv('dataset/curated_data/augmented_data_clean.csv')
+        # -------------------------------------------------------------
+        combine_datasets(df_clean, df_augmented, clean_csv)
         compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
 
         test_val_distribute(clean_csv, val_size)
