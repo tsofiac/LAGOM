@@ -4,8 +4,8 @@
     dataset/finetune/gloryx_finetune.csv \
     results/training/forward_prediction/version_2/checkpoints/epoch=10-step=88.ckpt \
     chemformer/bart_vocab_downstream.json \
-    64 \
-    1 \
+    37 \
+    10 \
     forward_prediction \
     results/evaluation/metrics_scores \
     results/evaluation/predictions \
