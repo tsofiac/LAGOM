@@ -1,5 +1,5 @@
 from rdkit import Chem
-from rdkit.Chem import Crippen
+from rdkit.Chem import Crippen, Descriptors
 import pandas as pd
 
 # --------------- LogP ------------------
@@ -27,18 +27,65 @@ def annotate_smiles_with_logp(smiles):
     mol = Chem.MolFromSmiles(smiles)
     logp = Crippen.MolLogP(mol)
     token = assign_logp_token(logp)
-    return f"{token}{smiles}"
+    return f"{token}"
 
-def annotate_data_with_logp(datafile, annotated_datafile):
-    dataset = pd.read_csv(datafile)
+# def annotate_data_with_logp(datafile, annotated_datafile):
+#     dataset = pd.read_csv(datafile)
 
-    dataset['parent_smiles'] = dataset['parent_smiles'].apply(annotate_smiles_with_logp)
-    dataset.to_csv(annotated_datafile, index=False)
+#     dataset['parent_smiles'] = dataset['parent_smiles'].apply(annotate_smiles_with_logp)
+#     dataset.to_csv(annotated_datafile, index=False)
 
 # --------------- CSP3 ------------------
 
+def assign_csp3_token(csp3):
+    """Assign a token based on predefined CSP3 fractions intervals of size 0.1."""
+    # Hard-coded intervals as tuples (min, max)
+    intervals = [
+        (0.0, 0.1), (0.1, 0.2), (0.2, 0.3), (0.3, 0.4), (0.4, 0.5), (0.5, 0.6), (0.6, 0.7), (0.7, 0.8), (0.8, 0.9) #, (0.9, 1.0) is included below
+    ]
 
+    if 0.9 <= csp3 <= 1:
+        return "[csp3_[0.9, 1.0]]"
+    else:
+        for lower, upper in intervals:
+            if lower <= csp3 < upper:
+                return f"[csp3_[{lower}, {upper})]"
 
+def annotate_smiles_with_csp3(smiles):
+    mol = Chem.MolFromSmiles(smiles)
+    csp3 = Descriptors.FractionCSP3(mol)
+    token = assign_csp3_token(csp3)
+    return f"{token}"
+
+# def annotate_data_with_csp3(datafile, annotated_datafile):
+#     dataset = pd.read_csv(datafile)
+
+#     dataset['parent_smiles'] = dataset['parent_smiles'].apply(annotate_smiles_with_csp3)
+#     dataset.to_csv(annotated_datafile, index=False)
+
+# --------------- LogP & CSP3 ------------------
+
+def annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile): # logp3_annotations and csp3_annotations are either set as True or False
+
+    dataset = pd.read_csv(datafile) # has column parent_smiles
+
+    for index, row in dataset.iterrows():
+        smiles = row["parent_smiles"]
+
+        if logp_annotations and csp3_annotations:
+            token1 = annotate_smiles_with_logp(smiles)
+            token2 = annotate_smiles_with_csp3(smiles)
+            smiles_annotated = f"{token1}{token2}{smiles}"
+        elif logp_annotations:
+            token = annotate_smiles_with_logp(smiles)
+            smiles_annotated = f"{token}{smiles}"
+        elif csp3_annotations:
+            token = annotate_smiles_with_csp3(smiles)
+            smiles_annotated = f"{token}{smiles}"
+
+        dataset.at[index, "parent_smiles"] = smiles_annotated
+
+    dataset.to_csv(annotated_datafile, index=False)   
 
 # ----------------------------------------------------------------------------------------------
 
@@ -47,11 +94,9 @@ if __name__ == "__main__":
     logp_annotations = True
     csp3_annotations = True
 
+    name = 'annotations' # 'annotations' 'logp' 'csp3'
+
     datafile = 'dataset/curated_data/combined_smiles_clean.csv'
-    annotated_datafile = 'dataset/curated_data/logp_combined_smiles_clean.csv' 
+    annotated_datafile = f'dataset/curated_data/annotated_data/{name}_combined_smiles_clean.csv' 
 
-    if logp_annotations:
-        annotate_data_with_logp(datafile, annotated_datafile)
-
-    if csp3_annotations:
-        
+    annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
