@@ -348,10 +348,10 @@ if __name__ == "__main__":
         combine_datasets(df_drugbank, df_metx, clean_csv)
         remove_duplicates_combined(clean_csv, removed_duplicates)
         # ----- to add augmented reactions to combined dataset --------
-        df_clean = pd.read_csv(clean_csv)
-        df_augmented = pd.read_csv('dataset/curated_data/augmented_data_clean.csv')
+        # df_clean = pd.read_csv(clean_csv)
+        # df_augmented = pd.read_csv('dataset/curated_data/augmented_data_clean.csv')
+        # combine_datasets(df_clean, df_augmented, clean_csv)
         # -------------------------------------------------------------
-        combine_datasets(df_clean, df_augmented, clean_csv)
         compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
 
         test_val_distribute(clean_csv, val_size)
