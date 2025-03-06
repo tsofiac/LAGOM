@@ -302,12 +302,102 @@ def reformat_for_chemformer(input_file, output_file):
 
     df.to_csv(output_file, sep='\t', index=False)
 
+# --------------------- Augmentation -------------------------------------
+def augment_drugbank(input_file):
+    df_drugbank = pd.read_csv(input_file)
+
+    new_reactions = []
+    for index, row in df_drugbank.iterrows():
+        # Check if the reactant is different from the origin
+        if row['parent_id'] != row['origin']:
+            # Create a new reaction with the origin as the reactant and keep the product same
+            new_reaction = {
+                'parent_id': row['origin'],
+                'child_id': row['child_id'],
+                'child_name': row['child_name'],
+                'child_smiles': row['child_smiles'],
+                'origin': row['origin'],
+            }
+            new_reactions.append(new_reaction)
+    augmented_reactions = pd.DataFrame(new_reactions)
+
+    unique_df_drugbank = df_drugbank[['parent_id', 'parent_name', 'parent_smiles']].drop_duplicates(subset='parent_id')
+    augmented_reactions = pd.merge(
+        augmented_reactions,
+        unique_df_drugbank[['parent_id', 'parent_name', 'parent_smiles']],
+        on='parent_id',
+        how='left'
+    )
+    augmented_reactions['source'] = 'DrugBank Augmented'
+    desired_column_order = [
+        'parent_id', 'parent_name', 'child_id', 
+        'child_name', 'parent_smiles', 'child_smiles',
+        'origin', 'source'
+    ]
+    augmented_reactions = augmented_reactions[desired_column_order]
+    return augmented_reactions
+
+def augment_metxbiodb(input_file):
+    df_metxbiodb = pd.read_csv(input_file)
+
+    new_reactions = []
+    for index, row in df_metxbiodb.iterrows():
+        # Check if the reactant is different from the origin
+        if row['parent_name'] != row['origin']:
+            # Create a new reaction with the origin as the reactant and keep the product same
+            new_reaction = {
+                'parent_name': row['origin'],
+                'child_name': row['child_name'],
+                'child_smiles': row['child_smiles'],
+                'origin': row['origin'],
+            }
+            new_reactions.append(new_reaction)
+    augmented_reactions = pd.DataFrame(new_reactions)
+
+    unique_df_metxbiodb = df_metxbiodb[['parent_name', 'parent_smiles']].drop_duplicates(subset='parent_name')
+    augmented_reactions = pd.merge(
+        augmented_reactions,
+        unique_df_metxbiodb[['parent_name', 'parent_smiles']],
+        on='parent_name',
+        how='left'
+    )
+    augmented_reactions['source'] = 'MetXBioDB Augmented'
+    desired_column_order = [
+        'parent_name', 'child_name', 
+        'parent_smiles', 'child_smiles',
+        'origin', 'source'
+    ]
+    augmented_reactions = augmented_reactions[desired_column_order]
+    return augmented_reactions
+
+def join(df1, df2, output_file):
+    combined = pd.concat([df1,df2], ignore_index=True)
+    combined.to_csv(output_file, index=False)
+
+def parent_to_parent(input_file, output_file):
+    df = pd.read_csv(input_file)
+
+    new_df = pd.DataFrame({
+        'parent_name': df['parent_name'],
+        'parent_smiles': df['parent_smiles'],
+        'child_name': df['parent_name'],
+        'child_smiles': df['parent_smiles'],
+        'origin': df['origin']
+    })
+
+    new_df['source'] = 'Parent-Parent Augmented'
+
+    new_df.to_csv(output_file, index=False)
+
+
 
     
 if __name__ == "__main__":
 
-    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'augmented' ]
-    preprocess_unique_parents = True
+    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' ]
+    preprocess_unique_parents = False
+    augment_parent_grand_child = True
+    augment_parent_parent = True
 
     val_size = 0.1
     min_similarity = 0.2
@@ -347,11 +437,28 @@ if __name__ == "__main__":
 
         combine_datasets(df_drugbank, df_metx, clean_csv)
         remove_duplicates_combined(clean_csv, removed_duplicates)
-        # ----- to add augmented reactions to combined dataset --------
-        # df_clean = pd.read_csv(clean_csv)
-        # df_augmented = pd.read_csv('dataset/curated_data/augmented_data_clean.csv')
-        # combine_datasets(df_clean, df_augmented, clean_csv)
-        # -------------------------------------------------------------
+
+        if augment_parent_grand_child:
+            parent_grand_child = 'dataset/curated_data/augmented_parent_grand_child.csv'
+            augmented_drugbank = augment_drugbank(dataset_drugbank)
+            augmented_metxbiodb = augment_metxbiodb(dataset_metx)
+            join(augmented_drugbank, augmented_metxbiodb, parent_grand_child)
+
+            df_augmented = standardize_smiles(parent_grand_child)
+            df_augmented = remove_duplicates(df_augmented, 'dataset/removed_data/augmented_removed_duplicates.csv')
+            df_augmented = remove_equal_parent_child(df_augmented, 'dataset/removed_data/augmented_removed_equal.csv')
+
+            df_augmented.to_csv(parent_grand_child, index=False)
+
+            filter_data_on_both_sides(parent_grand_child, valid_smiles, 'dataset/removed_data/augmented_removed_valid_smiles.csv')
+            filter_data_on_both_sides(parent_grand_child, atoms_allowed_in_molecules, 'dataset/removed_data/augmented_removed_atoms_allowed.csv')
+            filter_data_on_one_side(parent_grand_child, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
+            filter_fingerprint_similarity(parent_grand_child, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
+
+            df_clean = pd.read_csv(clean_csv)
+            df_augmented = pd.read_csv(parent_grand_child)
+            combine_datasets(df_clean, df_augmented, clean_csv)
+
         compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
 
         test_val_distribute(clean_csv, val_size)
@@ -361,26 +468,20 @@ if __name__ == "__main__":
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
 
+        if augment_parent_parent:
+            parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
+            get_unique_parents(clean_csv, unique)
+            parent_to_parent(unique, parent_parent)
+
+            df_clean = pd.read_csv(clean_csv)
+            df_parent_parent = pd.read_csv(parent_parent)
+            combine_datasets(df_clean, df_parent_parent, clean_csv)
+
         reformat_for_chemformer(clean_csv, finetune_csv)
 
         if preprocess_unique_parents:
             get_unique_parents(clean_csv, unique)
             reformat_for_chemformer(unique, unique_finetune)
-
-    elif name == "augmented":
-        
-        augmentated_csv = 'dataset/curated_data/augmented_data_clean.csv'
-
-        df_augmented = standardize_smiles('dataset/curated_data/augmented_data.csv')
-        df_augmented = remove_duplicates(df_augmented, removed_duplicates)
-        df_augmented = remove_equal_parent_child(df_augmented, removed_equal)
-
-        df_augmented.to_csv(augmentated_csv, index=False)
-
-        filter_data_on_both_sides(augmentated_csv, valid_smiles, removed_valid_smiles)
-        filter_data_on_both_sides(augmentated_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-        filter_data_on_one_side(augmentated_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-        filter_fingerprint_similarity(augmentated_csv, removed_fingerprints, min_similarity)
 
     else:
 

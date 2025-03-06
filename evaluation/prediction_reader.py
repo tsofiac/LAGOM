@@ -8,8 +8,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from preprocessing.standardize_smiles import standardize_smiles_collection
 
 
-
-
 def json_to_csv(json_file, csv_file):
 
     with open(json_file, 'r') as file:
@@ -28,12 +26,8 @@ def json_to_csv(json_file, csv_file):
         sampled_molecules = entry.get('sampled_molecules', [])
         target_smiles = entry.get('target_smiles', '')
 
-        repeated_index = [index] * len(target_smiles) #* nr_of_samples
-        # ----------------------------------------------------------------------------------
-        # nr_of_samples = len(sampled_molecules[0])
-        # repeated_log_lhs = [sublist for sublist in log_lhs for _ in range(nr_of_samples)]
-        # ----------------------------------------------------------------------------------
-        
+        repeated_index = [index] * len(target_smiles) 
+
         indices.extend(repeated_index)
         log_lhs_list.extend(log_lhs)
         target_smiles_list.extend(target_smiles)
@@ -49,49 +43,45 @@ def json_to_csv(json_file, csv_file):
     df.to_csv(csv_file, index=False)
 
 
-def present_result(input1,input2,output):
+def present_result(input1,input2):
 
     test_df = pd.read_csv(input1)
     prediction_df = pd.read_csv(input2)
 
-    # Define a custom function to aggregate while preserving order
     def agg_order_preserved(series):
         return list(series)
 
-    # Group by 'parent_name' and 'parent_smiles', keeping the order preserved
     grouped = test_df.groupby(['parent_name', 'parent_smiles'], sort=False).agg({
-        'child_name': agg_order_preserved,  # Custom aggregate function
-        'child_smiles': agg_order_preserved # Custom aggregate function
+        'child_name': agg_order_preserved, 
+        'child_smiles': agg_order_preserved 
     }).reset_index()
-
 
     if len(grouped) == len(prediction_df):
         grouped['sampled_molecules'] = prediction_df['sampled_molecules']
     else:
         raise ValueError("The number of rows in 'grouped' does not match the number of rows in 'prediction_df'.")
 
-    # Write the result to a new CSV file
-    grouped.to_csv(output, index=False)
+    grouped.to_csv(input2, index=False)
 
-def save_10_valid_smiles(input_file, output_file):
+
+def save_10_valid_smiles(input_file):
 
     df = pd.read_csv(input_file)
     
     for i in range(len(df)):
         sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
 
-        # Filter for valid SMILES
         valid_smiles = [smile for smile in sampled_molecules_i if Chem.MolFromSmiles(smile) is not None]
 
         print("nr of valid smiles: ",len(valid_smiles))
-        # Check for less than 10 valid SMILES
+
         if len(valid_smiles) < 10:
             print(f"Warning: Row {i} has less than 10 valid SMILES.")
 
-        # Update the 'sampled_molecules' column with the valid SMILES
-        df.at[i, 'sampled_molecules'] = valid_smiles[:10]  # Include at most 10 valid SMILES  
+        df.at[i, 'sampled_molecules'] = valid_smiles[:10]
 
-    df.to_csv(output_file, index=False)
+    df.to_csv(input_file, index=False)
+
 
 def score_result(input_file):
 
@@ -175,14 +165,12 @@ def score_result(input_file):
 gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'aug03'
+name = 'version6_20'
 
-csv_file = f"evaluation/predictions/prediction_{name}.csv"
-result_file = f"evaluation/predictions/result_{name}.csv"
-valid_result_file =f"evaluation/predictions/10_result_{name}.csv" 
+csv_file = f"evaluation/predictions/result_{name}.csv"
 
 json_to_csv(json_file, csv_file)
-present_result(gloryx, csv_file, result_file)
-save_10_valid_smiles(result_file, valid_result_file)
-score_result(valid_result_file)
+present_result(gloryx, csv_file)
+save_10_valid_smiles(csv_file)
+score_result(csv_file)
 
