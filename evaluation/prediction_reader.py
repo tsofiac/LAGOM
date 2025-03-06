@@ -3,6 +3,7 @@ import json
 import ast
 import sys
 import os
+from rdkit import Chem
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from preprocessing.standardize_smiles import standardize_smiles_collection
 
@@ -71,6 +72,26 @@ def present_result(input1,input2,output):
 
     # Write the result to a new CSV file
     grouped.to_csv(output, index=False)
+
+def save_10_valid_smiles(input_file, output_file):
+
+    df = pd.read_csv(input_file)
+    
+    for i in range(len(df)):
+        sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
+
+        # Filter for valid SMILES
+        valid_smiles = [smile for smile in sampled_molecules_i if Chem.MolFromSmiles(smile) is not None]
+
+        print("nr of valid smiles: ",len(valid_smiles))
+        # Check for less than 10 valid SMILES
+        if len(valid_smiles) < 10:
+            print(f"Warning: Row {i} has less than 10 valid SMILES.")
+
+        # Update the 'sampled_molecules' column with the valid SMILES
+        df.at[i, 'sampled_molecules'] = valid_smiles[:10]  # Include at most 10 valid SMILES  
+
+    df.to_csv(output_file, index=False)
 
 def score_result(input_file):
 
@@ -154,11 +175,14 @@ def score_result(input_file):
 gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 json_file = 'results/evaluation/predictions0.json'
 
-csv_file = "evaluation/predictions/prediction_version4.csv"
-result_file = "evaluation/predictions/result_version4.csv"
+name = 'aug03'
+
+csv_file = f"evaluation/predictions/prediction_{name}.csv"
+result_file = f"evaluation/predictions/result_{name}.csv"
+valid_result_file =f"evaluation/predictions/10_result_{name}.csv" 
 
 json_to_csv(json_file, csv_file)
 present_result(gloryx, csv_file, result_file)
-
-score_result(result_file)
+save_10_valid_smiles(result_file, valid_result_file)
+score_result(valid_result_file)
 
