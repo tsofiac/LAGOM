@@ -85,6 +85,8 @@ def score_result(input_file):
     score3 = 0
     score5 = 0
     score10 = 0
+    scatter_x = []
+    scatter_y = []
     for i in range(len(parent_name)):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
@@ -113,14 +115,26 @@ def score_result(input_file):
 
         # print(f'{parent_name[i]}: {count_top10} / {len(child_smiles_i)}')
 
-        total = len(child_smiles_i) if len(child_smiles_i) < 1 else 1
-        score1 = score1 + (count_top1 / total)
-        total = len(child_smiles_i) if len(child_smiles_i) < 3 else 3
-        score3 = score3 + (count_top3 / total)
-        total = len(child_smiles_i) if len(child_smiles_i) < 5 else 5
-        score5 = score5 + (count_top5 / total)
-        total = len(child_smiles_i) if len(child_smiles_i) < 10 else 10
-        score10 = score10 + (count_top10 / total)
+        scatter_x.append(len(child_smiles_i))
+        scatter_y.append(count_top10)
+
+        if count_top1 > 0:
+            score1 += 1 
+        if count_top3 > 0:
+            score3 += 1 
+        if count_top5 > 0:
+            score5 += 1 
+        if count_top10 > 0:
+            score10 += 1 
+
+        # total = len(child_smiles_i) if len(child_smiles_i) < 1 else 1
+        # score1 = score1 + (count_top1 / total)
+        # total = len(child_smiles_i) if len(child_smiles_i) < 3 else 3
+        # score3 = score3 + (count_top3 / total)
+        # total = len(child_smiles_i) if len(child_smiles_i) < 5 else 5
+        # score5 = score5 + (count_top5 / total)
+        # total = len(child_smiles_i) if len(child_smiles_i) < 10 else 10
+        # score10 = score10 + (count_top10 / total)
 
     score1 = score1 / len(parent_name)
     score3 = score3 / len(parent_name)
@@ -132,15 +146,19 @@ def score_result(input_file):
     print('Score top5: ', score5)
     print('Score top10: ', score10)
 
+    print(scatter_x)
+    print(scatter_y)
+
 
 
 gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 json_file = 'results/evaluation/predictions0.json'
 
-csv_file = "evaluation/predictions/prediction_03-03_unique.csv"
-result_file = "evaluation/predictions/result_03-03_unique.csv"
+csv_file = "evaluation/predictions/prediction_version4.csv"
+result_file = "evaluation/predictions/result_version4.csv"
 
 json_to_csv(json_file, csv_file)
 present_result(gloryx, csv_file, result_file)
+
 score_result(result_file)
 
