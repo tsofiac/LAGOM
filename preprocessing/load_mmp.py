@@ -15,6 +15,8 @@ def get_chembl(filepath):
     df = pd.DataFrame(result)
     df.columns = columns
 
+    print("You now have a df")
+
     return df
 
 def create_datapoint(chembldb, row): 
@@ -33,6 +35,11 @@ def create_datapoints(mmps, chembldb):
     # chembld: chembl_id	canonical_smiles	standard_inchi	standard_inchi_key 
     result = [create_datapoint(chembldb, row) for row in mmps]
     result = list(filter(lambda item: item is not None, result))
+
+    for i, dat in enumerate(result):
+        if i % 10000 == 0:
+            print(f'iteration {i}')
+
     return result
 
 def create_mmp(mmp_df, chembldb, output_file): 
@@ -40,7 +47,7 @@ def create_mmp(mmp_df, chembldb, output_file):
     
     total = create_datapoints(mmp_df.to_numpy(), chembldb.to_numpy())
     mmp_smiles = pd.DataFrame(total)
-    mmp_smiles.columns = ["virtual_analog_id", "parent_smiles", "chembl_id_metabolite", "metabolite_smiles"]
+    mmp_smiles.columns = ["virtual_analog_id", "parent_smiles", "chembl_id_metabolite", "child_smiles"]
     mmp_smiles.to_csv(output_file, index=False)
     return mmp_smiles
 
