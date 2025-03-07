@@ -115,33 +115,59 @@ def compare_datasets(combined_csv, testdata_csv, removed_file):
     duplicates_df.to_csv(removed_file, index=False)
 
 # -------------------------Splitting the data-------------------------------
-def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
+def test_val_distribute(data_file, val_size, eval_size=0):
     df = pd.read_csv(data_file)
-    # Add an empty column named 'set'
     df['set'] = None
 
-    ## Using train_test_split
-    # train_df, val_df = train_test_split(df, test_size=val_size, random_state=26)     # Random_state is for reproducibility
+    # First split (evaluation set)
+    if eval_size != 0:
+        splitter = GroupShuffleSplit(test_size=eval_size, n_splits=1, random_state=42)
+        train_val_inds, eval_inds = next(splitter.split(df, groups=df['origin']))
+        train_val_df = df.iloc[train_val_inds]
+        eval_df = df.iloc[eval_inds]
+        eval_df['set'] = 'eval'
+
+    # Second split (train and validation sets)
+    splitter = GroupShuffleSplit(test_size=val_size, n_splits=1, random_state=42)
+    train_inds, val_inds = next(splitter.split(train_val_df, groups=train_val_df['origin']))
+    train_df = train_val_df.iloc[train_inds]
+    val_df = train_val_df.iloc[val_inds]
     
-    # Assign "train" and "val" labels
-    # train_df['set'] = 'train'
-    # val_df['set'] = 'val'
+    train_df['set'] = 'train'
+    val_df['set'] = 'val'
 
-    ## Using GroupShuffleSplit
-    splitter = GroupShuffleSplit(test_size=val_size, n_splits=2, random_state=42)
-    split = splitter.split(df, groups=df['origin']) 
-    train_inds, val_inds = next(split)
-    train_df = df.iloc[train_inds]
-    val_df = df.iloc[val_inds]
-
-    # Assign "train" and "val" labels
-    train_df.loc[:, 'set'] = 'train'
-    val_df.loc[:, 'set'] = 'val'
-
-    # Combine the train and validation DataFrames
-    final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
-
+    # Combine and save
+    final_df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
     final_df.to_csv(data_file, index=False)
+    return final_df
+
+# def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
+#     df = pd.read_csv(data_file)
+#     # Add an empty column named 'set'
+#     df['set'] = None
+
+#     ## Using train_test_split
+#     # train_df, val_df = train_test_split(df, test_size=val_size, random_state=26)     # Random_state is for reproducibility
+    
+#     # Assign "train" and "val" labels
+#     # train_df['set'] = 'train'
+#     # val_df['set'] = 'val'
+
+#     ## Using GroupShuffleSplit
+#     splitter = GroupShuffleSplit(test_size=val_size, n_splits=2, random_state=42)
+#     split = splitter.split(df, groups=df['origin']) 
+#     train_inds, val_inds = next(split)
+#     train_df = df.iloc[train_inds]
+#     val_df = df.iloc[val_inds]
+
+#     # Assign "train" and "val" labels
+#     train_df.loc[:, 'set'] = 'train'
+#     val_df.loc[:, 'set'] = 'val'
+
+#     # Combine the train and validation DataFrames
+#     final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
+
+#     final_df.to_csv(data_file, index=False)
 
 # --------------------------Filtering data--------------------------------------
 
@@ -395,7 +421,7 @@ def parent_to_parent(input_file, output_file):
     
 if __name__ == "__main__":
 
-    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' ]
+    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
     preprocess_unique_parents = True
     augment_parent_grand_child = True
     augment_parent_parent = True
@@ -417,7 +443,25 @@ if __name__ == "__main__":
     unique = f'dataset/curated_data/{name}_unique_parents.csv'
     unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv'
 
-    if name == 'combined':
+    if name == 'mmp':
+        dataset = f'dataset/curated_data/paired_mmp.csv'
+
+        df = standardize_smiles(dataset)
+        df = remove_duplicates(df, removed_duplicates)
+        df = remove_equal_parent_child(df, removed_equal)
+
+        df.to_csv(clean_csv, index=False)
+
+        test_val_distribute(clean_csv, val_size)
+
+        filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
+        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+        filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
+        
+        reformat_for_chemformer(clean_csv, finetune_csv)
+
+    elif name == 'combined':
 
         dataset_metx = 'dataset/curated_data/metxbiodb_smiles.csv'
         dataset_drugbank = 'dataset/curated_data/drugbank_smiles.csv'
