@@ -24,6 +24,9 @@ def create_datapoint(chembldb, row):
     v_analog = row[1]
     chembl_id_metabolite = row[2]
 
+    if v_analog_id % 1000 == 0:
+        print(f'iteration {v_analog_id}')
+
     metabolite = chembldb[np.where(chembldb[:,0] == chembl_id_metabolite)]
     if len(metabolite) == 0 : 
         return None
@@ -35,10 +38,6 @@ def create_datapoints(mmps, chembldb):
     # chembld: chembl_id	canonical_smiles	standard_inchi	standard_inchi_key 
     result = [create_datapoint(chembldb, row) for row in mmps]
     result = list(filter(lambda item: item is not None, result))
-
-    for i, dat in enumerate(result):
-        if i % 10000 == 0:
-            print(f'iteration {i}')
 
     return result
 
