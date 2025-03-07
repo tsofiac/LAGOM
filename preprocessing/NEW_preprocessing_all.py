@@ -67,8 +67,8 @@ def add_source_column(df, source):
     return df
     
 def combine_datasets(df1, df2, output_csv):
-    selected_df1 = df1[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'origin', 'source']].copy()
-    selected_df2 = df2[['parent_name', 'child_name', 'parent_smiles', 'child_smiles', 'origin', 'source']].copy()
+    selected_df1 = df1.copy()
+    selected_df2 = df2.copy()
 
     combined_df = pd.concat([selected_df1, selected_df2], ignore_index=True)
     combined_df.to_csv(output_csv, index=False)
@@ -382,7 +382,8 @@ def parent_to_parent(input_file, output_file):
         'parent_smiles': df['parent_smiles'],
         'child_name': df['parent_name'],
         'child_smiles': df['parent_smiles'],
-        'origin': df['origin']
+        'origin': df['origin'],
+        'set': df['set']
     })
 
     new_df['source'] = 'Parent-Parent Augmented'
@@ -395,7 +396,7 @@ def parent_to_parent(input_file, output_file):
 if __name__ == "__main__":
 
     name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' ]
-    preprocess_unique_parents = False
+    preprocess_unique_parents = True
     augment_parent_grand_child = True
     augment_parent_parent = True
 
