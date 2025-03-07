@@ -64,7 +64,7 @@ def present_result(input1,input2):
     grouped.to_csv(input2, index=False)
 
 
-def save_10_valid_smiles(input_file):
+def save_n_valid_smiles(input_file, max_metabolites=12):
 
     df = pd.read_csv(input_file)
     
@@ -75,23 +75,15 @@ def save_10_valid_smiles(input_file):
 
         print("nr of valid smiles: ",len(valid_smiles))
 
-        if len(valid_smiles) < 10:
-            print(f"Warning: Row {i} has less than 10 valid SMILES.")
+        if len(valid_smiles) < max_metabolites:
+            print(f"Warning: Row {i} has less than {max_metabolites} valid SMILES.")
 
-        df.at[i, 'sampled_molecules'] = valid_smiles[:10]
+        df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
 
     df.to_csv(input_file, index=False)
 
+def top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name):
 
-def score_result(input_file):
-
-    df = pd.read_csv(input_file)
-
-    parent_name = df['parent_name']
-    sampled_molecules = df['sampled_molecules']
-    child_name = df['child_name']
-    child_smiles = df['child_smiles']
-    
     score1 = 0
     score3 = 0
     score5 = 0
@@ -152,6 +144,41 @@ def score_result(input_file):
     score5 = score5 / len(parent_name)
     score10 = score10 / len(parent_name)
 
+    return score1, score3, score5, score10, scatter_x, scatter_y
+
+def precision_score(parent_name, sampled_molecules, child_smiles):
+
+    TP = 0
+    FP = 0
+    for i in range(len(parent_name)):
+        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+        child_smiles_i = ast.literal_eval(child_smiles[i])
+
+        sampled_molecules_i = standardize_smiles_collection(sampled_molecules_i, False)
+
+        TP_i = 0
+        for j in range(len(child_smiles_i)):
+            for k in range(len(sampled_molecules_i)):
+                if k <= j and child_smiles_i[j] == sampled_molecules_i[k]:
+                    TP_i += 1
+            
+        TP = TP + TP_i
+        FP = FP + (len(child_smiles_i) - TP_i)
+    
+    return TP / (TP + FP)
+
+
+def score_result(input_file):
+
+    df = pd.read_csv(input_file)
+
+    parent_name = df['parent_name']
+    sampled_molecules = df['sampled_molecules']
+    child_name = df['child_name']
+    child_smiles = df['child_smiles']
+
+    score1, score3, score5, score10, scatter_x, scatter_y = top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name)
+
     print('Score top1: ', score1)
     print('Score top3: ', score3)
     print('Score top5: ', score5)
@@ -160,17 +187,22 @@ def score_result(input_file):
     print(scatter_x)
     print(scatter_y)
 
+    precision = precision_score(parent_name, sampled_molecules, child_smiles)
+
+    print(precision)
+    
+
+
 
 
 gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version6_20'
+name = 'version11'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
-json_to_csv(json_file, csv_file)
-present_result(gloryx, csv_file)
-save_10_valid_smiles(csv_file)
+# json_to_csv(json_file, csv_file)
+# present_result(gloryx, csv_file)
+# save_n_valid_smiles(csv_file, 12)
 score_result(csv_file)
-
