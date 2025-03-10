@@ -50,7 +50,9 @@ def load_gloryx(json_file, comma_file, comma_unique_file, tab_file):
         'set': set_column
     })
 
-    df['parent_smiles'] = standardize_smiles_collection(df['parent_smiles'], False) #'False' eliminates isomeres
+    df['source'] = 'GLORYx'
+
+    df['parent_smiles'] = standardize_smiles_collection(df['parent_smiles'], False)
     df['child_smiles'] = standardize_smiles_collection(df['child_smiles'], False)
 
     df = df[df['generation'] == 1] # Only first generation reactions

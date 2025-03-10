@@ -78,7 +78,7 @@ def find_drug_origin_metxbiodb(data_file):
         if not update_made:
             break
     
-
+    df['source'] = 'MetXBioDB'
     # Write the updated DataFrame back to a CSV
     df.to_csv(data_file, index=False)
 

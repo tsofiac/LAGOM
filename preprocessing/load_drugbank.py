@@ -91,11 +91,8 @@ def remove_duplicates(csv_file):
     df = pd.read_csv(csv_file)
     initial_row_count = len(df)
 
-    print('Nr Rows 1: ', len(df))
     df=df[df['dbid'].isnull() | ~df[df['dbid'].notnull()].duplicated(subset='dbid',keep='first')]
-    print('Nr Rows 2: ', len(df))
     df=df[df['name'].isnull() | ~df[df['name'].notnull()].duplicated(subset='name',keep='first')]
-    print('Nr Rows 3: ', len(df))
     final_row_count = len(df)
     dropped_count = initial_row_count - final_row_count
     print("Number of duplicates removed: ", dropped_count)
@@ -243,17 +240,13 @@ def find_drug_origin_drugbank(data_file):
     db_child_ids = both_db_rows['child_id'].tolist()
 
     both_db_child_also_parent = both_db_rows[both_db_rows['parent_id'].isin(db_child_ids)]
-    print(both_db_child_also_parent)
-    print(len(both_db_child_also_parent))
+
     for index, row in both_db_child_also_parent.iterrows():
         origin_parent_id = both_db_rows[both_db_rows['child_id'] == row['parent_id']]['origin']
         if not origin_parent_id.empty:
             both_db_child_also_parent.at[index, 'origin'] = origin_parent_id.values[0]
 
     both_db_rows.update(both_db_child_also_parent)
-
-    print(both_db_child_also_parent)
-    print(len(both_db_child_also_parent))
 
     # DB-DBMET fix ----------------------------------------
     db_child_ids = both_db_rows['child_id'].tolist()
@@ -345,6 +338,8 @@ def clean_smiles(input_file): # this makes 100% sense
     final_row_count = len(df)
     dropped_count = initial_row_count - final_row_count
     print('Number of dropped rows: ', dropped_count)
+
+    df['source'] = 'DrugBank'
     df.to_csv(input_file, index=False)
 
 
