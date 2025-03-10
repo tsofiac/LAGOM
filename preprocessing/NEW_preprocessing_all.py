@@ -1,11 +1,6 @@
 from rdkit import Chem, DataStructs
 from rdkit.Chem import Descriptors, AllChem 
-from rdkit.Chem.SaltRemover import SaltRemover
-import torch
 import pandas as pd
-import os
-from pathlib import Path
-from collections import Counter
 from standardize_smiles import standardize_smiles_collection
 from sklearn.model_selection import GroupShuffleSplit
 
@@ -397,7 +392,7 @@ if __name__ == "__main__":
 
     name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' ]
     preprocess_unique_parents = True
-    augment_parent_grand_child = True
+    augment_parent_grandchild = True
     augment_parent_parent = True
 
     val_size = 0.1
@@ -439,8 +434,8 @@ if __name__ == "__main__":
         combine_datasets(df_drugbank, df_metx, clean_csv)
         remove_duplicates_combined(clean_csv, removed_duplicates)
 
-        if augment_parent_grand_child:
-            parent_grand_child = 'dataset/curated_data/augmented_parent_grand_child.csv'
+        if augment_parent_grandchild:
+            parent_grand_child = 'dataset/curated_data/augmented_parent_grandchild.csv'
             augmented_drugbank = augment_drugbank(dataset_drugbank)
             augmented_metxbiodb = augment_metxbiodb(dataset_metx)
             join(augmented_drugbank, augmented_metxbiodb, parent_grand_child)
