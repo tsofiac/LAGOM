@@ -33,8 +33,6 @@ def augment_smiles(smiles, augment_prob):
 
 def randomize_mol_restricted(mol):
     # Standard shuffle surprisingly leads to 35% slower code.
-    # if augment_prob < np.random.rand():
-    #     return mol
     atom_order = list(range(mol.GetNumAtoms()))
     np.random.shuffle(atom_order)
     return Chem.RenumberAtoms(mol, atom_order)
@@ -78,7 +76,11 @@ def augment_dataset(csv_file, augment_prob, augmented_file):
         child_smiles = row['child_smiles']
 
         for _ in range(1):
-            smiles_aug = augment_smiles_restricted([parent_smiles, child_smiles], augment_prob)
+
+            if augment_prob < np.random.rand():
+                smiles_aug = augment_smiles_restricted([parent_smiles, child_smiles], augment_prob)
+            else:
+                smiles_aug = [parent_smiles, child_smiles]
 
             augmented_row = {
                 'parent_name': row['parent_name'],
@@ -97,12 +99,10 @@ def augment_dataset(csv_file, augment_prob, augmented_file):
     augmented_dataset.to_csv(augmented_file, index=False)
 
 
-
-
 combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
-augmented_csv = 'dataset/curated_data/randomised_dataset.csv'
+augmented_csv = 'dataset/curated_data/randomised.csv'
 
-augment_dataset(combined_csv, 1, augmented_csv)
+augment_dataset(combined_csv, 0.5, augmented_csv)
 
 
 # combined_df = pd.read_csv(combined_csv)
