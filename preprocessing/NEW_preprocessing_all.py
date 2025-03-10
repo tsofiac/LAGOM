@@ -68,6 +68,37 @@ def combine_datasets(df1, df2, output_csv):
     combined_df = pd.concat([selected_df1, selected_df2], ignore_index=True)
     combined_df.to_csv(output_csv, index=False)
 
+def remove_duplicates_combined2(combined_csv, removed_duplicates_csv):
+    combined_df = pd.read_csv(combined_csv)
+    len_before = len(combined_df)
+
+    drugbank_df = combined_df[combined_df['source'].str.contains('DrugBank', case=False, na=False)]
+    metxbiodb_df = combined_df[combined_df['source'].str.contains('MetXBioDB', case=False, na=False)]
+
+    dups_drugbank_df = drugbank_df[drugbank_df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False)]
+    drugbank_df = drugbank_df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='first') 
+
+    dups_metxbiodb_df = metxbiodb_df[metxbiodb_df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False)]
+    metxbiodb_df = metxbiodb_df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='first') 
+
+    combined_df = pd.concat([drugbank_df, metxbiodb_df])
+    removed_df = pd.concat([dups_drugbank_df, dups_metxbiodb_df])
+
+    combined_df['is_duplicate'] = combined_df.duplicated(subset=['parent_smiles', 'child_smiles'], keep=False)  # Keep all duplicates
+    duplicates_df = combined_df[combined_df['is_duplicate']]
+    combined_df.loc[combined_df['is_duplicate'], 'source'] = 'Both'  # Change 'source' value for rows that are kept
+    combined_df = combined_df.drop(columns='is_duplicate')
+    duplicates_df = duplicates_df.drop(columns='is_duplicate')
+    combined_df = combined_df.drop_duplicates(subset=['parent_smiles', 'child_smiles'], keep='first')
+
+    full_df = pd.concat([removed_df, duplicates_df])
+
+    len_after = len(combined_df)
+    print("Total data points removed due to duplicates in both datasets:", len_before - len_after)
+    combined_df.to_csv(combined_csv, index=False)
+    full_df.to_csv(removed_duplicates_csv, index=False)
+
+
 def remove_duplicates_combined(combined_csv, removed_duplicates_csv):  # Removes duplicate reactions and modifies source column
     df = pd.read_csv(combined_csv)
     len_before = len(df)
@@ -105,64 +136,64 @@ def compare_datasets(combined_csv, testdata_csv, removed_file):
     non_duplicates_in_df1 = df1[~df1['parent_smiles'].isin(duplicate_parent_smiles)].copy()
     duplicates_df = df1[df1['parent_smiles'].isin(duplicate_parent_smiles)].copy()
 
-    print('Number of duplicate parents reactions found: ', len(df1)-len(non_duplicates_in_df1))
+    print('Number of overlapping reactions with test data removed: ', len(df1)-len(non_duplicates_in_df1))
     non_duplicates_in_df1.to_csv(combined_csv, index=False)
     duplicates_df.to_csv(removed_file, index=False)
 
 # -------------------------Splitting the data-------------------------------
-def test_val_distribute(data_file, val_size, eval_size=0):
-    df = pd.read_csv(data_file)
-    df['set'] = None
-
-    # First split (evaluation set)
-    if eval_size != 0:
-        splitter = GroupShuffleSplit(test_size=eval_size, n_splits=1, random_state=42)
-        train_val_inds, eval_inds = next(splitter.split(df, groups=df['origin']))
-        train_val_df = df.iloc[train_val_inds]
-        eval_df = df.iloc[eval_inds]
-        eval_df['set'] = 'eval'
-
-    # Second split (train and validation sets)
-    splitter = GroupShuffleSplit(test_size=val_size, n_splits=1, random_state=42)
-    train_inds, val_inds = next(splitter.split(train_val_df, groups=train_val_df['origin']))
-    train_df = train_val_df.iloc[train_inds]
-    val_df = train_val_df.iloc[val_inds]
-    
-    train_df['set'] = 'train'
-    val_df['set'] = 'val'
-
-    # Combine and save
-    final_df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
-    final_df.to_csv(data_file, index=False)
-    return final_df
-
-# def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
+# def test_val_distribute(data_file, val_size, eval_size=0):
 #     df = pd.read_csv(data_file)
-#     # Add an empty column named 'set'
 #     df['set'] = None
 
-#     ## Using train_test_split
-#     # train_df, val_df = train_test_split(df, test_size=val_size, random_state=26)     # Random_state is for reproducibility
+#     # First split (evaluation set)
+#     if eval_size != 0:
+#         splitter = GroupShuffleSplit(test_size=eval_size, n_splits=1, random_state=42)
+#         train_val_inds, eval_inds = next(splitter.split(df, groups=df['origin']))
+#         train_val_df = df.iloc[train_val_inds]
+#         eval_df = df.iloc[eval_inds]
+#         eval_df['set'] = 'eval'
+
+#     # Second split (train and validation sets)
+#     splitter = GroupShuffleSplit(test_size=val_size, n_splits=1, random_state=42)
+#     train_inds, val_inds = next(splitter.split(train_val_df, groups=train_val_df['origin']))
+#     train_df = train_val_df.iloc[train_inds]
+#     val_df = train_val_df.iloc[val_inds]
     
-#     # Assign "train" and "val" labels
-#     # train_df['set'] = 'train'
-#     # val_df['set'] = 'val'
+#     train_df['set'] = 'train'
+#     val_df['set'] = 'val'
 
-#     ## Using GroupShuffleSplit
-#     splitter = GroupShuffleSplit(test_size=val_size, n_splits=2, random_state=42)
-#     split = splitter.split(df, groups=df['origin']) 
-#     train_inds, val_inds = next(split)
-#     train_df = df.iloc[train_inds]
-#     val_df = df.iloc[val_inds]
-
-#     # Assign "train" and "val" labels
-#     train_df.loc[:, 'set'] = 'train'
-#     val_df.loc[:, 'set'] = 'val'
-
-#     # Combine the train and validation DataFrames
-#     final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
-
+#     # Combine and save
+#     final_df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
 #     final_df.to_csv(data_file, index=False)
+#     return final_df
+
+def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
+    df = pd.read_csv(data_file)
+    # Add an empty column named 'set'
+    df['set'] = None
+
+    ## Using train_test_split
+    # train_df, val_df = train_test_split(df, test_size=val_size, random_state=26)     # Random_state is for reproducibility
+    
+    # Assign "train" and "val" labels
+    # train_df['set'] = 'train'
+    # val_df['set'] = 'val'
+
+    ## Using GroupShuffleSplit
+    splitter = GroupShuffleSplit(test_size=val_size, n_splits=2, random_state=42)
+    split = splitter.split(df, groups=df['origin']) 
+    train_inds, val_inds = next(split)
+    train_df = df.iloc[train_inds]
+    val_df = df.iloc[val_inds]
+
+    # Assign "train" and "val" labels
+    train_df.loc[:, 'set'] = 'train'
+    val_df.loc[:, 'set'] = 'val'
+
+    # Combine the train and validation DataFrames
+    final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
+
+    final_df.to_csv(data_file, index=False)
 
 # --------------------------Filtering data--------------------------------------
 
@@ -417,9 +448,10 @@ def parent_to_parent(input_file, output_file):
 if __name__ == "__main__":
 
     name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
-    preprocess_unique_parents = True
-    augment_parent_grandchild = True
-    augment_parent_parent = True
+    preprocess_unique_parents = False
+    augment_parent_grandchild = False
+    augment_parent_parent = False
+    augment_randomisation = True
 
     val_size = 0.1
     min_similarity = 0.2
@@ -456,7 +488,76 @@ if __name__ == "__main__":
         
         reformat_for_chemformer(clean_csv, finetune_csv)
 
-    elif name == 'combined':
+    elif name == 'combined': # ONGOING PROJECT :)
+
+        metxbiodb_csv = 'dataset/curated_data/metxbiodb_smiles.csv'
+        drugbank_csv = 'dataset/curated_data/drugbank_smiles.csv'
+        combined_csv = f'dataset/curated_data/combined_smiles_clean.csv'
+
+        df_metx = pd.read_csv(metxbiodb_csv)
+        df_drugbank = pd.read_csv(drugbank_csv)
+
+        combine_datasets(df_drugbank, df_metx, combined_csv)     
+        
+        combined_df = standardize_smiles(combined_csv)
+        combined_df.to_csv(combined_csv, index=False)
+        remove_duplicates_combined2(combined_csv, 'dataset/removed_data/combined_removed_duplicates.csv')
+        combined_df = pd.read_csv(combined_csv)
+        combined_df = remove_equal_parent_child(combined_df, 'dataset/removed_data/combined_removed_equal.csv')
+        combined_df.to_csv(combined_csv, index=False)
+
+        if augment_parent_grandchild: # borde vi ta bort gloryx ur denna?!
+            parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
+            augmented_drugbank = augment_drugbank(drugbank_csv)
+            augmented_metxbiodb = augment_metxbiodb(metxbiodb_csv)
+            join(augmented_drugbank, augmented_metxbiodb, parent_grandchild)
+
+            parent_grandchild_df = standardize_smiles(parent_grandchild)
+            parent_grandchild_df = remove_duplicates(parent_grandchild_df, 'dataset/removed_data/augmented_removed_duplicates.csv')
+            parent_grandchild_df = remove_equal_parent_child(parent_grandchild_df, 'dataset/removed_data/augmented_removed_equal.csv')
+
+            parent_grandchild_df.to_csv(parent_grandchild, index=False)
+
+            filter_data_on_both_sides(parent_grandchild, valid_smiles, 'dataset/removed_data/augmented_removed_valid_smiles.csv')
+            filter_data_on_both_sides(parent_grandchild, atoms_allowed_in_molecules, 'dataset/removed_data/augmented_removed_atoms_allowed.csv')
+            filter_data_on_one_side(parent_grandchild, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
+            filter_fingerprint_similarity(parent_grandchild, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
+
+            combined_df = pd.read_csv(combined_csv)
+            parent_grandchild_df = pd.read_csv(parent_grandchild)
+            combine_datasets(combined_df, parent_grandchild_df, combined_csv)
+
+        compare_datasets(combined_csv, dataset_gloryx, 'dataset/removed_data/compare_removed_duplicates.csv')
+
+        test_val_distribute(combined_csv, val_size)
+
+        filter_data_on_both_sides(combined_csv, valid_smiles, removed_valid_smiles)
+        filter_data_on_both_sides(combined_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+        filter_fingerprint_similarity(combined_csv, removed_fingerprints, min_similarity)
+
+        if augment_parent_parent:
+            parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
+            get_unique_parents(combined_csv, unique)
+            parent_to_parent(unique, parent_parent)
+
+            combined_df = pd.read_csv(combined_csv)
+            parent_parent_df = pd.read_csv(parent_parent)
+            combine_datasets(combined_df, parent_parent_df, combined_csv)
+
+        if augment_randomisation:
+            combined = pd.read_csv(combined_csv)
+            randomised = pd.read_csv('dataset/curated_data/randomised.csv')
+            join(combined, randomised, combined_csv)
+
+        reformat_for_chemformer(combined_csv, finetune_csv)
+
+        if preprocess_unique_parents:
+            get_unique_parents(combined_csv, unique)
+            reformat_for_chemformer(unique, unique_finetune)
+
+
+    elif name == 'combined2':
 
         dataset_metx = 'dataset/curated_data/metxbiodb_smiles.csv'
         dataset_drugbank = 'dataset/curated_data/drugbank_smiles.csv'
@@ -472,32 +573,29 @@ if __name__ == "__main__":
         df_metx = remove_equal_parent_child(df_metx, 'dataset/removed_data/metxbiodb_removed_equal.csv')
         df_drugbank = remove_equal_parent_child(df_drugbank, 'dataset/removed_data/drugbank_removed_equal.csv')
 
-        df_metx = add_source_column(df_metx, 'metxbiodb')
-        df_drugbank = add_source_column(df_drugbank, 'drugbank')
-
         combine_datasets(df_drugbank, df_metx, clean_csv)
         remove_duplicates_combined(clean_csv, removed_duplicates)
 
         if augment_parent_grandchild:
-            parent_grand_child = 'dataset/curated_data/augmented_parent_grandchild.csv'
+            parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
             augmented_drugbank = augment_drugbank(dataset_drugbank)
             augmented_metxbiodb = augment_metxbiodb(dataset_metx)
-            join(augmented_drugbank, augmented_metxbiodb, parent_grand_child)
+            join(augmented_drugbank, augmented_metxbiodb, parent_grandchild)
 
-            df_augmented = standardize_smiles(parent_grand_child)
-            df_augmented = remove_duplicates(df_augmented, 'dataset/removed_data/augmented_removed_duplicates.csv')
-            df_augmented = remove_equal_parent_child(df_augmented, 'dataset/removed_data/augmented_removed_equal.csv')
+            df_parent_grandchild = standardize_smiles(parent_grandchild)
+            df_parent_grandchild = remove_duplicates(df_parent_grandchild, 'dataset/removed_data/augmented_removed_duplicates.csv')
+            df_parent_grandchild = remove_equal_parent_child(df_parent_grandchild, 'dataset/removed_data/augmented_removed_equal.csv')
 
-            df_augmented.to_csv(parent_grand_child, index=False)
+            df_parent_grandchild.to_csv(parent_grandchild, index=False)
 
-            filter_data_on_both_sides(parent_grand_child, valid_smiles, 'dataset/removed_data/augmented_removed_valid_smiles.csv')
-            filter_data_on_both_sides(parent_grand_child, atoms_allowed_in_molecules, 'dataset/removed_data/augmented_removed_atoms_allowed.csv')
-            filter_data_on_one_side(parent_grand_child, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
-            filter_fingerprint_similarity(parent_grand_child, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
+            filter_data_on_both_sides(parent_grandchild, valid_smiles, 'dataset/removed_data/augmented_removed_valid_smiles.csv')
+            filter_data_on_both_sides(parent_grandchild, atoms_allowed_in_molecules, 'dataset/removed_data/augmented_removed_atoms_allowed.csv')
+            filter_data_on_one_side(parent_grandchild, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
+            filter_fingerprint_similarity(parent_grandchild, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
 
             df_clean = pd.read_csv(clean_csv)
-            df_augmented = pd.read_csv(parent_grand_child)
-            combine_datasets(df_clean, df_augmented, clean_csv)
+            df_parent_grandchild = pd.read_csv(parent_grandchild)
+            combine_datasets(df_clean, df_parent_grandchild, clean_csv)
 
         compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
 
@@ -508,6 +606,10 @@ if __name__ == "__main__":
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
 
+        clean_df = pd.read_csv(clean_csv)
+        print(len(clean_df))
+
+
         if augment_parent_parent:
             parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
             get_unique_parents(clean_csv, unique)
@@ -516,6 +618,11 @@ if __name__ == "__main__":
             df_clean = pd.read_csv(clean_csv)
             df_parent_parent = pd.read_csv(parent_parent)
             combine_datasets(df_clean, df_parent_parent, clean_csv)
+
+        if augment_randomisation:
+            combined = pd.read_csv(clean_csv)
+            randomised = pd.read_csv('dataset/curated_data/randomised_dataset.csv')
+            join(combined, randomised, clean_csv)
 
         reformat_for_chemformer(clean_csv, finetune_csv)
 
