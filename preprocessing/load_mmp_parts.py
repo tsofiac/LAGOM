@@ -73,8 +73,8 @@ def main():
     # start_row = 0
     # end_row = 1101304
 
-    # start_row = 1101304
-    # end_row = 2202608
+    # start_row = 1101305
+    # end_row = 2202607
 
     # start_row = 2202608
     # end_row = 3303912
@@ -82,23 +82,23 @@ def main():
     # start_row = 3303912
     # end_row = 4405216 
 
-    # start_row = 4405216
-    # end_row = 5506520
+    # start_row = 4405217
+    # end_row = 5506519
 
     # start_row = 5506520
     # end_row = 6607824
 
-    # start_row = 6607824
-    # end_row = 7709128
+    # start_row = 6607825
+    # end_row = 7709127
 
     # start_row = 7709128
-    # end_row = 8810432
+    # end_row = 8810431
 
     # start_row = 8810432
     # end_row = 9911736
 
-    start_row = 9911736
-    end_row = 11013037
+    # start_row = 9911736
+    # end_row = 11013037
 
     print("rows:", start_row, "to", end_row)
 
