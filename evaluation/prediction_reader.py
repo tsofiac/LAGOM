@@ -68,6 +68,7 @@ def save_n_valid_smiles(input_file, max_metabolites=12):
 
     df = pd.read_csv(input_file)
     
+    count = 0
     for i in range(len(df)):
         sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
 
@@ -76,10 +77,11 @@ def save_n_valid_smiles(input_file, max_metabolites=12):
         print("nr of valid smiles: ",len(valid_smiles))
 
         if len(valid_smiles) < max_metabolites:
-            print(f"Warning: Row {i} has less than {max_metabolites} valid SMILES.")
+            count += 1
 
         df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
 
+    print('Nr of drugs with less than 12 valid SMILES: ', count)
     df.to_csv(input_file, index=False)
 
 def top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name):
@@ -179,17 +181,17 @@ def score_result(input_file):
 
     score1, score3, score5, score10, scatter_x, scatter_y = top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name)
 
-    print('Score top1: ', score1)
-    print('Score top3: ', score3)
-    print('Score top5: ', score5)
-    print('Score top10: ', score10)
-
-    print(scatter_x)
-    print(scatter_y)
+    print(f'Score top1: {score1:.3f}')
+    print(f'Score top3: {score3:.3f}')
+    print(f'Score top5: {score5:.3f}')
+    print(f'Score top10: {score10:.3f}')
 
     precision = precision_score(parent_name, sampled_molecules, child_smiles)
 
-    print(precision)
+    print(f'Precision: {precision:.3f}')
+
+    print(scatter_x)
+    print(scatter_y)
     
 
 
