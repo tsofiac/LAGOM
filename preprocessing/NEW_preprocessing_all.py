@@ -2,7 +2,7 @@ from rdkit import Chem, DataStructs
 from rdkit.Chem import Descriptors, AllChem 
 import pandas as pd
 from standardize_smiles import standardize_smiles_collection
-from sklearn.model_selection import GroupShuffleSplit
+from sklearn.model_selection import GroupShuffleSplit, train_test_split
 
 # --------------------------Standardising SMILES and removing duplicates in each data set -----------------------------------
 
@@ -141,32 +141,51 @@ def compare_datasets(combined_csv, testdata_csv, removed_file):
     duplicates_df.to_csv(removed_file, index=False)
 
 # -------------------------Splitting the data-------------------------------
-# def test_val_distribute(data_file, val_size, eval_size=0):
-#     df = pd.read_csv(data_file)
-#     df['set'] = None
+def set_distribute(data_file, val_size, eval_size=0):
+    df = pd.read_csv(data_file)
+    df['set'] = None
+    train_size = 1 - (val_size+eval_size)
 
-#     # First split (evaluation set)
-#     if eval_size != 0:
-#         splitter = GroupShuffleSplit(test_size=eval_size, n_splits=1, random_state=42)
-#         train_val_inds, eval_inds = next(splitter.split(df, groups=df['origin']))
-#         train_val_df = df.iloc[train_val_inds]
-#         eval_df = df.iloc[eval_inds]
-#         eval_df['set'] = 'eval'
+    if 'origin' in df.columns:
+        splitter = GroupShuffleSplit(test_size=train_size, n_splits=1, random_state=42)
+        test_val_inds, train_inds = next(splitter.split(df, groups=df['origin']))
+        test_val_df = df.iloc[test_val_inds]
+        train_df = df.iloc[train_inds]
+        train_df['set'] = 'train'
+        if eval_size != 0:
+            effective_eval_size = eval_size/(eval_size + val_size)
+            splitter = GroupShuffleSplit(test_size=effective_eval_size, n_splits=1, random_state=42)
+            val_inds, eval_inds = next(splitter.split(test_val_df, groups=test_val_df['origin']))
+            eval_df = df.iloc[eval_inds]
+            eval_df['set'] = 'test'
+            val_df = df.iloc[val_inds]
+            val_df['set'] = 'val'
+        else:
+            eval_df = pd.DataFrame()
+            val_df = test_val_df
+            val_df['set'] = 'val'
 
-#     # Second split (train and validation sets)
-#     splitter = GroupShuffleSplit(test_size=val_size, n_splits=1, random_state=42)
-#     train_inds, val_inds = next(splitter.split(train_val_df, groups=train_val_df['origin']))
-#     train_df = train_val_df.iloc[train_inds]
-#     val_df = train_val_df.iloc[val_inds]
-    
-#     train_df['set'] = 'train'
-#     val_df['set'] = 'val'
 
-#     # Combine and save
-#     final_df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
-#     final_df.to_csv(data_file, index=False)
-#     return final_df
+    else: #if 'origin' does not exist, e.g. for mmp
+        test_val_df, train_df = train_test_split(df, test_size=train_size, random_state=42)
+        train_df['set'] = 'train'
+        if eval_size != 0:
+            effective_eval_size = eval_size/(eval_size + val_size)
+            val_df, eval_df = train_test_split(test_val_df, test_size=effective_eval_size, random_state=42)
+            val_df['set'] = 'val'
+            eval_df['set'] = 'test'
+        else:
+            eval_df = pd.DataFrame()
+            val_df = test_val_df
+            val_df['set'] = 'val'
 
+
+    # Combine and save
+    final_df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
+    final_df.to_csv(data_file, index=False)
+    return final_df
+
+# Shouldn't be needed anymore
 def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
     df = pd.read_csv(data_file)
     # Add an empty column named 'set'
@@ -451,9 +470,10 @@ if __name__ == "__main__":
     preprocess_unique_parents = False
     augment_parent_grandchild = False
     augment_parent_parent = False
-    augment_randomisation = True
+    augment_randomisation = False
 
     val_size = 0.1
+    eval_size = 0
     min_similarity = 0.2
     
     clean_csv = f'dataset/curated_data/{name}_smiles_clean.csv'
@@ -471,7 +491,7 @@ if __name__ == "__main__":
     unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv'
 
     if name == 'mmp':
-        dataset = f'dataset/curated_data/paired_mmp.csv'
+        dataset = f'dataset/curated_data/paired_mmp_rows_0_to_110.csv'
 
         df = standardize_smiles(dataset)
         df = remove_duplicates(df, removed_duplicates)
@@ -479,16 +499,15 @@ if __name__ == "__main__":
 
         df.to_csv(clean_csv, index=False)
 
-        test_val_distribute(clean_csv, val_size)
+        set_distribute(clean_csv, val_size, eval_size)
 
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
-        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        #filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
-        
         reformat_for_chemformer(clean_csv, finetune_csv)
 
-    elif name == 'combined': # ONGOING PROJECT :)
+    elif name == 'combined': 
 
         metxbiodb_csv = 'dataset/curated_data/metxbiodb_smiles.csv'
         drugbank_csv = 'dataset/curated_data/drugbank_smiles.csv'
@@ -529,7 +548,7 @@ if __name__ == "__main__":
 
         compare_datasets(combined_csv, dataset_gloryx, 'dataset/removed_data/compare_removed_duplicates.csv')
 
-        test_val_distribute(combined_csv, val_size)
+        set_distribute(clean_csv, val_size, eval_size)
 
         filter_data_on_both_sides(combined_csv, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(combined_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
@@ -599,7 +618,7 @@ if __name__ == "__main__":
 
         compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
 
-        test_val_distribute(clean_csv, val_size)
+        set_distribute(clean_csv, val_size, eval_size)
 
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
@@ -643,7 +662,7 @@ if __name__ == "__main__":
         df.to_csv(clean_csv, index=False)
 
         compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
-        test_val_distribute(clean_csv, val_size)
+        set_distribute(clean_csv, val_size, eval_size)
 
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
