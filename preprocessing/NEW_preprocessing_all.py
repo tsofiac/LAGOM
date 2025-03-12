@@ -3,6 +3,7 @@ from rdkit.Chem import Descriptors, AllChem
 import pandas as pd
 from standardize_smiles import standardize_smiles_collection
 from sklearn.model_selection import GroupShuffleSplit, train_test_split
+import datetime
 
 # --------------------------Standardising SMILES and removing duplicates in each data set -----------------------------------
 
@@ -149,21 +150,15 @@ def set_distribute(data_file, val_size, eval_size=0):
     if 'origin' in df.columns:
         splitter = GroupShuffleSplit(test_size=train_size, n_splits=1, random_state=42)
         test_val_inds, train_inds = next(splitter.split(df, groups=df['origin']))
-        test_val_df = df.iloc[test_val_inds]
-        train_df = df.iloc[train_inds]
-        train_df['set'] = 'train'
+        df.loc[train_inds, 'set'] = 'train'
         if eval_size != 0:
             effective_eval_size = eval_size/(eval_size + val_size)
             splitter = GroupShuffleSplit(test_size=effective_eval_size, n_splits=1, random_state=42)
-            val_inds, eval_inds = next(splitter.split(test_val_df, groups=test_val_df['origin']))
-            eval_df = df.iloc[eval_inds]
-            eval_df['set'] = 'test'
-            val_df = df.iloc[val_inds]
-            val_df['set'] = 'val'
+            val_inds, eval_inds = next(splitter.split(df.iloc[test_val_inds], groups=df.iloc[test_val_inds]['origin']))
+            df.loc[eval_inds, 'set'] = 'test'
+            df.loc[val_inds, 'set'] = 'val'
         else:
-            eval_df = pd.DataFrame()
-            val_df = test_val_df
-            val_df['set'] = 'val'
+            df.loc[test_val_inds, 'set'] = 'val'
 
 
     else: #if 'origin' does not exist, e.g. for mmp
@@ -179,11 +174,12 @@ def set_distribute(data_file, val_size, eval_size=0):
             val_df = test_val_df
             val_df['set'] = 'val'
 
-
-    # Combine and save
-    final_df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
-    final_df.to_csv(data_file, index=False)
-    return final_df
+        # Combine and save
+        df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
+    
+    df.to_csv(data_file, index=False)
+    
+    return df
 
 # Shouldn't be needed anymore
 def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
@@ -462,6 +458,14 @@ def parent_to_parent(input_file, output_file):
     new_df.to_csv(output_file, index=False)
 
 
+# ------------Time log------------------
+def log_time(message):
+    # Get the current time
+    current_time = datetime.datetime.now()
+    # Format the time (optional, for easier reading)
+    formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+    # Print or log the time with a message
+    print(f"[{formatted_time}] {message}")
 
     
 if __name__ == "__main__":
@@ -472,8 +476,8 @@ if __name__ == "__main__":
     augment_parent_parent = False
     augment_randomisation = False
 
-    val_size = 0.1
-    eval_size = 0
+    val_size = 0.05
+    eval_size = 0.05
     min_similarity = 0.2
     
     clean_csv = f'dataset/curated_data/{name}_smiles_clean.csv'
@@ -491,24 +495,32 @@ if __name__ == "__main__":
     unique_finetune = f'dataset/finetune/{name}_unique_parents_finetune.csv'
 
     if name == 'mmp':
-        dataset = f'dataset/curated_data/paired_mmp_rows_0_to_110.csv'
 
+        dataset='dataset/curated_data/paired_mmp_all.csv'
+        log_time("Begin filtering")
         df = standardize_smiles(dataset)
+        log_time("Smiles are standardised")
         df = remove_duplicates(df, removed_duplicates)
+        log_time("Duplicates removed")
         df = remove_equal_parent_child(df, removed_equal)
-
+        log_time("Equal_parent_child removed")
         df.to_csv(clean_csv, index=False)
 
         set_distribute(clean_csv, val_size, eval_size)
-
+        log_time("set distribution complete")
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
-        #filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        log_time("Filtered valid smiles")
+        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        log_time("Filtered atoms allowed")
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
+        log_time("Filtered on weight")
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
+        log_time("Filtered on fingerprint similarity")
         reformat_for_chemformer(clean_csv, finetune_csv)
+        log_time("Reformating for Chemformer complete")
 
     elif name == 'combined': 
-
+        print("Starting preprocessing of combined dataset")
         metxbiodb_csv = 'dataset/curated_data/metxbiodb_smiles.csv'
         drugbank_csv = 'dataset/curated_data/drugbank_smiles.csv'
         combined_csv = f'dataset/curated_data/combined_smiles_clean.csv'
