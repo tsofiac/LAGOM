@@ -11,7 +11,7 @@ def load_metxbiodb(file):
     # "prod_inchikey","prod_inchi","reference"
     try:
         metxbiodb_df = pd.read_csv(file)
-        metxbiodb_df = metxbiodb_df[['substrate_name','substrate_inchi','prod_name','prod_inchi']]
+        metxbiodb_df = metxbiodb_df[['substrate_name','substrate_inchi','prod_name','prod_inchi','enzyme']]
         return metxbiodb_df
     
     except FileNotFoundError:
@@ -31,15 +31,16 @@ def metxbiodb_inchi_to_smiles(data, output_file):
 
             parent_name = data.loc[ind]["substrate_name"]
             child_name = data.loc[ind]["prod_name"]
+            enzyme = data.loc[ind]["enzyme"]
 
-            parent_child.append([parent_name, parent_smiles, child_name, child_smiles])
+            parent_child.append([parent_name, parent_smiles, child_name, child_smiles, enzyme])
         except:
             counter += 1
             print("ERROR MISSING DATA, number: ", counter)
             print(data.loc[ind])
             
     smiles_metxbiodb_df = pd.DataFrame(parent_child)
-    smiles_metxbiodb_df.columns = ['parent_name', 'parent_smiles', 'child_name', 'child_smiles']
+    smiles_metxbiodb_df.columns = ['parent_name', 'parent_smiles', 'child_name', 'child_smiles', 'enzymes']
   
     smiles_metxbiodb_df.to_csv(output_file, index=False)
 
