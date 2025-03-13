@@ -67,14 +67,32 @@ def present_result(input1,input2):
 def save_n_valid_smiles(input_file, max_metabolites=12):
 
     df = pd.read_csv(input_file)
+
+    parent_smiles = df['parent_smiles']
     
     count = 0
-    for i in range(len(df)):
+    for i in range(len(parent_smiles)):
         sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
+        parent_smiles_i = parent_smiles[i]
 
-        valid_smiles = [smile for smile in sampled_molecules_i if Chem.MolFromSmiles(smile) is not None]
+        valid_smiles = []
+        count_dup = 0
+        count_parent = 0
+        for smiles in sampled_molecules_i:
+            if Chem.MolFromSmiles(smiles) is not None:
+                if smiles not in valid_smiles:
+                    if smiles != parent_smiles_i:
+                        valid_smiles.append(smiles)
+                    else:
+                        count_parent += 1
+                else:
+                    count_dup += 1
+
+        # valid_smiles = [smile for smile in sampled_molecules_i if Chem.MolFromSmiles(smile) is not None]
 
         print("nr of valid smiles: ",len(valid_smiles))
+        print('nr of dup: ', count_dup)
+        print('nr of parent dup: ', count_parent)
 
         if len(valid_smiles) < max_metabolites:
             count += 1
@@ -200,11 +218,39 @@ def score_result(input_file):
 gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version11'
+name = 'version23'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
-# json_to_csv(json_file, csv_file)
-# present_result(gloryx, csv_file)
-# save_n_valid_smiles(csv_file, 12)
+json_to_csv(json_file, csv_file)
+present_result(gloryx, csv_file)
+save_n_valid_smiles(csv_file, 12)
 score_result(csv_file)
+
+
+'''
+With parent dup, dup and smiles
+Score top1: 0.405
+Score top3: 0.568
+Score top5: 0.568
+Score top10: 0.595
+Precision: 0.184
+'''
+
+'''
+With dup and valid smiles
+Score top1: 0.135
+Score top3: 0.541
+Score top5: 0.568
+Score top10: 0.595
+Precision: 0.132
+'''
+
+'''
+With only valid smiles
+Score top1: 0.135
+Score top3: 0.541
+Score top5: 0.568
+Score top10: 0.595
+Precision: 0.132
+'''

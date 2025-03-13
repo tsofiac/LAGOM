@@ -64,7 +64,7 @@ def augment_smiles_restricted(smiles, augment_prob):
     augment_prob = augment_prob_og
     return smiles_aug
 
-def augment_dataset(csv_file, augment_prob, augmented_file):
+def augment_dataset(csv_file, augment_prob, augmented_file, nr_of_reactions):
 
     df = pd.read_csv(csv_file)
     parent_smiles = df['parent_smiles']
@@ -75,9 +75,9 @@ def augment_dataset(csv_file, augment_prob, augmented_file):
         parent_smiles = row['parent_smiles']
         child_smiles = row['child_smiles']
 
-        for _ in range(1):
+        for _ in range(nr_of_reactions):
 
-            if augment_prob < np.random.rand():
+            if 1-augment_prob < np.random.rand():
                 smiles_aug = augment_smiles_restricted([parent_smiles, child_smiles], augment_prob)
             else:
                 smiles_aug = [parent_smiles, child_smiles]
@@ -99,11 +99,24 @@ def augment_dataset(csv_file, augment_prob, augmented_file):
     augmented_dataset.to_csv(augmented_file, index=False)
 
 
+def reformat_for_chemformer(input_file, output_file):
+    df = pd.read_csv(input_file)
+
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+    })
+
+    df.to_csv(output_file, sep='\t', index=False)
+
+
 combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 augmented_csv = 'dataset/curated_data/randomised.csv'
 
-augment_dataset(combined_csv, 0.5, augmented_csv)
+finetune = 'dataset/finetune/randomised_finetune.csv'
 
+augment_dataset(combined_csv, 1, augmented_csv, 2)
+reformat_for_chemformer(augmented_csv, finetune)
 
 # combined_df = pd.read_csv(combined_csv)
 # parent_smiles = combined_df['parent_smiles']
