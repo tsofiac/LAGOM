@@ -496,7 +496,7 @@ if __name__ == "__main__":
 
     if name == 'mmp':
 
-        dataset='dataset/curated_data/paired_mmp_all.csv'
+        dataset='dataset/curated_data/paired_mmp_rows_0_to_110.csv'
         log_time("Begin filtering")
         df = standardize_smiles(dataset)
         log_time("Smiles are standardised")
@@ -506,16 +506,16 @@ if __name__ == "__main__":
         log_time("Equal_parent_child removed")
         df.to_csv(clean_csv, index=False)
 
-        set_distribute(clean_csv, val_size, eval_size)
-        log_time("set distribution complete")
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
         log_time("Filtered valid smiles")
-        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-        log_time("Filtered atoms allowed")
+        #filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        #log_time("Filtered atoms allowed")
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         log_time("Filtered on weight")
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
         log_time("Filtered on fingerprint similarity")
+        set_distribute(clean_csv, val_size, eval_size)
+        log_time("set distribution complete")
         reformat_for_chemformer(clean_csv, finetune_csv)
         log_time("Reformating for Chemformer complete")
 
@@ -560,12 +560,11 @@ if __name__ == "__main__":
 
         compare_datasets(combined_csv, dataset_gloryx, 'dataset/removed_data/compare_removed_duplicates.csv')
 
-        set_distribute(clean_csv, val_size, eval_size)
-
         filter_data_on_both_sides(combined_csv, valid_smiles, removed_valid_smiles)
         filter_data_on_both_sides(combined_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
         filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         filter_fingerprint_similarity(combined_csv, removed_fingerprints, min_similarity)
+        set_distribute(clean_csv, val_size, eval_size)
 
         if augment_parent_parent:
             parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
