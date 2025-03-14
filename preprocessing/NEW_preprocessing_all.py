@@ -456,6 +456,19 @@ def join(df1, df2, output_file):
     combined = pd.concat([df1,df2], ignore_index=True)
     combined.to_csv(output_file, index=False)
 
+
+def select_reactions(input_file, comparison_file):
+    df = pd.read_csv(input_file)
+    comparison_df = pd.read_csv(comparison_file)
+
+    train_df = comparison_df[comparison_df['set'] == 'train']
+    filtered_df = df[df['origin'].isin(train_df['origin'])]
+
+    filtered_df['set'] = 'train'
+
+    filtered_df.to_csv(input_file, index=False)
+
+
 def parent_to_parent(input_file, output_file):
     df = pd.read_csv(input_file)
 
@@ -487,9 +500,8 @@ if __name__ == "__main__":
 
     name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
     preprocess_unique_parents = False
-    augment_parent_grandchild = False
+    augment_parent_grandchild = True
     augment_parent_parent = False
-    augment_randomisation = False
 
     val_size = 0.1 #val
     eval_size = 0.05 #test
@@ -558,7 +570,19 @@ if __name__ == "__main__":
         combined_df = remove_equal_parent_child(combined_df, 'dataset/removed_data/combined_removed_equal.csv')
         combined_df.to_csv(combined_csv, index=False)
 
-        if augment_parent_grandchild: # borde vi ta bort gloryx ur denna?!
+        compare_datasets(combined_csv, dataset_gloryx, 'dataset/removed_data/compare_removed_duplicates.csv')
+
+        filter_data_on_both_sides(combined_csv, valid_smiles, 'dataset/removed_data/combined_removed_valid_smiles.csv')
+        filter_data_on_both_sides(combined_csv, atoms_allowed_in_molecules, 'dataset/removed_data/combined_removed_atoms_allowed.csv')
+        filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, 'dataset/removed_data/combined_removed_weights_allowed.csv', True)
+        filter_fingerprint_similarity(combined_csv, 'dataset/removed_data/combined_removed_fingerprints.csv', min_similarity)
+        shuffle_dataset(clean_csv)
+
+        set_distribute(clean_csv, evaluation_csv, val_size, eval_size)
+        get_unique_parents(evaluation_csv, evaluation_unique_csv)
+        reformat_for_chemformer(evaluation_unique_csv, evaluation_finetune_csv)
+
+        if augment_parent_grandchild:
             parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
             augmented_drugbank = augment_drugbank(drugbank_csv)
             augmented_metxbiodb = augment_metxbiodb(metxbiodb_csv)
@@ -575,35 +599,23 @@ if __name__ == "__main__":
             filter_data_on_one_side(parent_grandchild, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
             filter_fingerprint_similarity(parent_grandchild, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
 
+            select_reactions(parent_grandchild, combined_csv)  # borde vi ta bort gloryx också, det kanske redan görs så som koden fungerar...
+
             combined_df = pd.read_csv(combined_csv)
             parent_grandchild_df = pd.read_csv(parent_grandchild)
             combine_datasets(combined_df, parent_grandchild_df, combined_csv)
 
-        compare_datasets(combined_csv, dataset_gloryx, 'dataset/removed_data/compare_removed_duplicates.csv')
-
-        filter_data_on_both_sides(combined_csv, valid_smiles, removed_valid_smiles)
-        filter_data_on_both_sides(combined_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-        filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-        filter_fingerprint_similarity(combined_csv, removed_fingerprints, min_similarity)
-        shuffle_dataset(clean_csv)
-
-        set_distribute(clean_csv, evaluation_csv, val_size, eval_size)
-        get_unique_parents(evaluation_csv, evaluation_unique_csv)
-        reformat_for_chemformer(evaluation_unique_csv, evaluation_finetune_csv)
-
         if augment_parent_parent:
             parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
-            get_unique_parents(combined_csv, unique)
+            combined_df = pd.read_csv(combined_csv)
+            train_df = combined_df[combined_df['set'] == 'train']
+            train_df.to_csv(parent_parent, index=False)
+            get_unique_parents(parent_parent, unique)
             parent_to_parent(unique, parent_parent)
 
             combined_df = pd.read_csv(combined_csv)
             parent_parent_df = pd.read_csv(parent_parent)
             combine_datasets(combined_df, parent_parent_df, combined_csv)
-
-        if augment_randomisation:
-            combined = pd.read_csv(combined_csv)
-            randomised = pd.read_csv('dataset/curated_data/randomised.csv')
-            join(combined, randomised, combined_csv)
 
         reformat_for_chemformer(combined_csv, finetune_csv)
 
@@ -674,10 +686,10 @@ if __name__ == "__main__":
             df_parent_parent = pd.read_csv(parent_parent)
             combine_datasets(df_clean, df_parent_parent, clean_csv)
 
-        if augment_randomisation:
-            combined = pd.read_csv(clean_csv)
-            randomised = pd.read_csv('dataset/curated_data/randomised_dataset.csv')
-            join(combined, randomised, clean_csv)
+        # if augment_randomisation:
+        #     combined = pd.read_csv(clean_csv)
+        #     randomised = pd.read_csv('dataset/curated_data/randomised_dataset.csv')
+        #     join(combined, randomised, clean_csv)
 
         reformat_for_chemformer(clean_csv, finetune_csv)
 
