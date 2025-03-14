@@ -491,8 +491,8 @@ if __name__ == "__main__":
     augment_parent_parent = False
     augment_randomisation = False
 
-    val_size = 0.2
-    eval_size = 0.2
+    val_size = 0.1 #val
+    eval_size = 0.05 #test
 
     min_similarity = 0.2
     
@@ -514,9 +514,9 @@ if __name__ == "__main__":
     evaluation_unique_csv = f'dataset/curated_data/{name}_evaluation_unique.csv'
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-    if name == 'mmp_atoms_allowed_only':
+    if name == 'mmp':
 
-        dataset='dataset/curated_data/paired_mmp_rows_0_to_110.csv'
+        dataset='dataset/curated_data/paired_mmp_all.csv'
         log_time("Begin filtering")
         df = standardize_smiles(dataset)
         log_time("Smiles are standardised")
@@ -528,8 +528,8 @@ if __name__ == "__main__":
 
         filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
         log_time("Filtered valid smiles")
-        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-        log_time("Filtered atoms allowed")
+        #filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
+        #log_time("Filtered atoms allowed")
         filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
         log_time("Filtered on weight")
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)

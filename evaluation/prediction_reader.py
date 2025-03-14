@@ -46,15 +46,21 @@ def json_to_csv(json_file, csv_file):
 def present_result(input1,input2):
 
     test_df = pd.read_csv(input1)
+    print("len test_df", len(test_df))
     prediction_df = pd.read_csv(input2)
 
     def agg_order_preserved(series):
         return list(series)
 
-    grouped = test_df.groupby(['parent_name', 'parent_smiles'], sort=False).agg({
+    grouped = test_df.groupby(['parent_smiles'], sort=False).agg({
+        'parent_name': 'first',  # Get the first entry for 'parent_name' in each group
         'child_name': agg_order_preserved, 
         'child_smiles': agg_order_preserved 
     }).reset_index()
+
+    grouped.to_csv('evaluation/predictions/grouped.csv', index=False)
+    print("len grouped", len(grouped))
+    print("len prediction_df", len(prediction_df))
 
     if len(grouped) == len(prediction_df):
         grouped['sampled_molecules'] = prediction_df['sampled_molecules']
@@ -64,7 +70,7 @@ def present_result(input1,input2):
     grouped.to_csv(input2, index=False)
 
 
-def save_n_valid_smiles(input_file, max_metabolites=12):
+def save_n_valid_smiles(input_file, max_metabolites=10):
 
     df = pd.read_csv(input_file)
 
@@ -99,7 +105,7 @@ def save_n_valid_smiles(input_file, max_metabolites=12):
 
         df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
 
-    print('Nr of drugs with less than 12 valid SMILES: ', count)
+    print(f'Nr of drugs with less than {max_metabolites} valid SMILES: ', count)
     df.to_csv(input_file, index=False)
 
 def top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name):
@@ -113,7 +119,7 @@ def top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name):
     for i in range(len(parent_name)):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
-        child_name_i = ast.literal_eval(child_name[i])
+        # child_name_i = ast.literal_eval(child_name[i])
 
         sampled_molecules_i = standardize_smiles_collection(sampled_molecules_i, False)
         
@@ -215,16 +221,17 @@ def score_result(input_file):
 
 
 
-gloryx = 'dataset/curated_data/gloryx_smiles_clean.csv'
+testset = 'dataset/curated_data/combined_evaluation.csv'
+# testset = 'dataset/curated_data/gloryx_smiles_clean.csv' #gloryx
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version23'
+name = 'version2'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
 json_to_csv(json_file, csv_file)
-present_result(gloryx, csv_file)
-save_n_valid_smiles(csv_file, 12)
+present_result(testset, csv_file)
+save_n_valid_smiles(csv_file, 10)
 score_result(csv_file)
 
 
