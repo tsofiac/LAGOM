@@ -85,18 +85,63 @@ def annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafi
 
         dataset.at[index, "parent_smiles"] = smiles_annotated
 
-    dataset.to_csv(annotated_datafile, index=False)   
+    dataset.to_csv(annotated_datafile, index=False)
+
+def annotate_data_finetune(logp_annotations, csp3_annotations, datafile, annotated_datafile): # if file already ready for finetuning
+
+    dataset = pd.read_csv(datafile, sep='\t') # has column parent_smiles
+
+    for index, row in dataset.iterrows():
+        smiles = row["reactants"]
+
+        if logp_annotations and csp3_annotations:
+            token1 = annotate_smiles_with_logp(smiles)
+            token2 = annotate_smiles_with_csp3(smiles)
+            smiles_annotated = f"{token1}{token2}{smiles}"
+        elif logp_annotations:
+            token = annotate_smiles_with_logp(smiles)
+            smiles_annotated = f"{token}{smiles}"
+        elif csp3_annotations:
+            token = annotate_smiles_with_csp3(smiles)
+            smiles_annotated = f"{token}{smiles}"
+
+        dataset.at[index, "reactants"] = smiles_annotated
+
+    dataset.to_csv(annotated_datafile, sep='\t', index=False)      
 
 # ----------------------------------------------------------------------------------------------
+
+def reformat_for_chemformer(input_file, output_file):
+    df = pd.read_csv(input_file)
+
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+    })
+
+    df.to_csv(output_file, sep='\t', index=False)
+
 
 if __name__ == "__main__":
 
     logp_annotations = True
     csp3_annotations = True
+    using_finetune_ready_file = True
 
-    name = 'annotations' # 'annotations' 'logp' 'csp3'
+    name = 'annotations_evaluation' # 'annotations' 'logp' 'csp3'
 
-    datafile = 'dataset/curated_data/combined_smiles_clean.csv'
     annotated_datafile = f'dataset/curated_data/annotated_data/{name}_combined_smiles_clean.csv' 
+    finetune_file = f'dataset/finetune/{name}_finetune.csv'
 
-    annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
+    if using_finetune_ready_file == False:
+        # datafile = 'dataset/curated_data/gloryx_unique_smiles_clean.csv'
+        # annotated_datafile = 'dataset/curated_data/annotated_data/annotations_gloryx_unique_smiles_clean.csv'
+
+        datafile = 'dataset/curated_data/combined_smiles_clean.csv'
+
+        annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
+        reformat_for_chemformer(annotated_datafile, finetune_file)
+
+    else:
+        datafile = 'dataset/finetune/combined_evaluation_finetune.csv'
+        annotate_data_finetune(logp_annotations, csp3_annotations, datafile, finetune_file)
