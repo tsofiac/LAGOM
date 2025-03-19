@@ -560,18 +560,18 @@ def log_time(message):
     
 if __name__ == "__main__":
 
-    name = 'distribution' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
+    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
     preprocess_unique_parents = False
     augment_parent_grandchild = False
     augment_parent_parent = False
 
     # for combined
-    # val_size = 0.1 # val
-    # eval_size = 0.05 # test
+    val_size = 0.1 # val
+    eval_size = 0.05 # test
 
     # for mmp
-    val_size = 0.05 # val
-    eval_size = 0.05 # test
+    # val_size = 0.05 # val
+    # eval_size = 0.05 # test
 
     min_similarity = 0.2
     
@@ -685,8 +685,8 @@ if __name__ == "__main__":
             combined_df = pd.read_csv(combined_csv)
             train_df = combined_df[combined_df['set'] == 'train']
             train_df.to_csv(parent_parent, index=False)
-            get_unique_parents(parent_parent, unique)
-            parent_to_parent(unique, parent_parent)
+            get_unique_parents(parent_parent, parent_parent)
+            parent_to_parent(parent_parent, parent_parent)
 
             combined_df = pd.read_csv(combined_csv)
             parent_parent_df = pd.read_csv(parent_parent)
@@ -695,6 +695,7 @@ if __name__ == "__main__":
         reformat_for_chemformer(combined_csv, finetune_csv)
 
         if preprocess_unique_parents:
+            print('Unique parent')
             get_unique_parents(combined_csv, unique)
             reformat_for_chemformer(unique, unique_finetune)
 
