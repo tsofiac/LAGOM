@@ -1,0 +1,215 @@
+parent_id,parent_name,child_id,child_name,enzymes,origin,parent_smiles,child_smiles,source,tanimoto,set
+DB00279,Liothyronine,DBMET02274,Monoiodothyronine,,DB00451,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1ccc(Oc2ccc(O)cc2)c(I)c1)C(=O)O,DrugBank,0.56,test
+DBMET02446,"3,4-dihydroxyphenylacetic acid (DOPAC)",DBMET02442,Homovanillic acid,Catechol O-methyltransferase,DB01235,O=C(O)Cc1ccc(O)c(O)c1,COc1cc(CC(=O)O)ccc1O,DrugBank,0.6129032258064516,test
+DBMET00112,alpha-Hydroxyalprazolam,DBMET02467,"alpha,4-dihydroxy-alprazolam",,DB00404,OCc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2,OCc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2O,DrugBank,0.6181818181818182,test
+DB01026,Ketoconazole,DBMET02655,M9 (Ketoconazole),,DB01026,CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1,CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)C(O)C1,DrugBank,0.84,test
+,KR-33028,,5-hydroxy-KR-33028,CYP3A4,KR-33028,N#Cc1cccc2sc(C(=O)NC(=N)N)cc12,N#Cc1c(O)ccc2sc(C(=O)NC(=N)N)cc12,MetXBioDB,0.6458333333333334,test
+,"2,3-Dihydroxynaphthalene",,,COMT,"2,3-Dihydroxynaphthalene",Oc1cc2ccccc2cc1O,COc1cc2ccccc2cc1O,MetXBioDB,0.5652173913043478,test
+DBMET02691,4'-hydroxy-butyrfentanyl,DBMET02692,4'-hydroxy-3'-methoxy-butyrfentanyl,,DB09173,CCCC(=O)N(c1ccccc1)C1CCN(CCc2ccc(O)cc2)CC1,CCCC(=O)N(c1ccccc1)C1CCN(CCc2ccc(O)c(OC)c2)CC1,DrugBank,0.7192982456140351,test
+DB06652,Vicriviroc,DBMET00083,Vicriviroc carboxylic acid,Cytochrome P450 3A4,DB06652,COCC(c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)CC1C,Cc1ncnc(C)c1C(=O)N1CCC(C)(N2CCN(C(C(=O)O)c3ccc(C(F)(F)F)cc3)C(C)C2)CC1,DrugBank,0.7464788732394366,test
+DB00495,Zidovudine,DBMET00720,3'-Aminothymidine,,DB00495,Cc1cn(C2CC(N=[N+]=[N-])C(CO)O2)c(=O)[nH]c1=O,Cc1cn(C2CC(N)C(CO)O2)c(=O)[nH]c1=O,DrugBank,0.6666666666666666,test
+,v11294,,,CYP2C9;CYP3A4;,v11294,CCNc1ncn(Cc2ccc(OC)c(OC3CCCC3)c2)c2nc(C(C)C)nc1-2,CCNc1ncn(Cc2ccc(OC)c(OC3CCC(O)C3)c2)c2nc(C(C)C)nc1-2,MetXBioDB,0.8333333333333334,test
+DB00780,Phenelzine,DBMET01955,4- hydroxyphenelzine,,DB00780,NNCCc1ccccc1,NNCCc1ccc(O)cc1,DrugBank,0.6,test
+DB01156,Bupropion,DBMET00277,S-Hydroxybupropion,"Cytochrome P450 2B6, Cytochrome P450 2E1, Cytochrome P450 3A4, Cytochrome P450 2C19",DB01156,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,CC(NC(C)(C)CO)C(=O)c1cccc(Cl)c1,Both,0.7435897435897436,test
+DB06148,Mianserin,DBMET01733,"(R)-mianserin, 8-hydroxy","Cytochrome P450 2D6, Cytochrome P450 3A4",DB06148,CN1CCN2c3ccccc3Cc3ccccc3C2C1,CN1CCN2c3cc(O)ccc3Cc3ccccc3C2C1,Both,0.7317073170731707,test
+,2-naphthylamine,,N-Hydroxy-2-naphthalenamine,CYP1A2,2-naphthylamine,Nc1ccc2ccccc2c1,ONc1ccc2ccccc2c1,MetXBioDB,0.4230769230769231,test
+DB12016,Ponesimod,DBMET03309,Ponesimod M32 Metabolite,,DB12016,CCCN=C1SC(=Cc2ccc(OCC(O)CO)c(Cl)c2)C(=O)N1c1ccccc1C,CCCN=C1SC(=Cc2ccc(O)c(Cl)c2)C(=O)N1c1ccccc1C,DrugBank,0.6956521739130435,test
+DB14583,Segesterone acetate,DBMET02129,"3α, 5α-tetrahydrosegesterone acetate",,DB14583,C=C1CC2C3CCC4=CC(=O)CCC4C3CCC2(C)C1(OC(C)=O)C(C)=O,C=C1CC2C3CCC4CC(O)CCC4C3CCC2(C)C1(OC(C)=O)C(C)=O,DrugBank,0.5409836065573771,test
+,meiqx,,IQx-8-COOH,CYP1A2,meiqx,Cc1cnc2ccc3c([nH]c(=N)n3C)c2n1,Cn1c(=N)[nH]c2c3nc(C(=O)O)cnc3ccc21,MetXBioDB,0.6666666666666666,test
+DB01217,Anastrozole,DBMET02826,Hydroxyanastrozole,"Cytochrome P450 3A4, Cytochrome P450 3A5, Cytochrome P450 2C8",DB01217,CC(C)(C#N)c1cc(Cn2cncn2)cc(C(C)(C)C#N)c1,CC(C)(C#N)c1cc(Cn2cncn2)cc(C(C)(C#N)CO)c1,DrugBank,0.8095238095238095,test
+DB09069,Trimetazidine,DBMET03344,3-desmethyltrimetazidine,,DB09069,COc1ccc(CN2CCNCC2)c(OC)c1OC,COc1ccc(CN2CCNCC2)c(OC)c1O,DrugBank,0.7837837837837838,test
+,O-Desmethylnaproxen,,,SULT1A1; SULT1B1; SULT1E1,O-Desmethylnaproxen,CC(C(=O)O)c1ccc2cc(O)ccc2c1,CC(C(=O)OS(=O)(=O)O)c1ccc2cc(O)ccc2c1,MetXBioDB,0.6052631578947368,test
+DBMET01336,Indapamide epoxide intermediate,DBMET01337,Indapamide metabolite M6,Epoxide hydrolase 1,DB00808,CC1CC2=C(C=CC3OC23)N1NC(=O)c1ccc(Cl)c(S(N)(=O)=O)c1,CC1CC2=C(C=CC(O)C2O)N1NC(=O)c1ccc(Cl)c(S(N)(=O)=O)c1,DrugBank,0.7540983606557377,test
+,(-)-thalidomide,,5-OH-thalidomide,CYP2C19,(-)-thalidomide,O=C1N=C(O)CCC1N1C(=O)c2ccccc2C1=O,O=C1N=C(O)CCC1N1C(=O)c2ccc(O)cc2C1=O,MetXBioDB,0.7435897435897436,test
+DBMET00743,4'-hydroxyclobazam,DBMET03601,4'-hydroxy-N-desmethylclobazam,"Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2C9",DB00349,CN1C(=O)CC(=O)N(c2ccc(O)cc2)c2cc(Cl)ccc21,O=C1CC(=O)N(c2ccc(O)cc2)c2cc(Cl)ccc2N1,DrugBank,0.5957446808510638,test
+DB00238,Nevirapine,DBMET01716,12-OH-nevirapine,"Cytochrome P450 3A4, Cytochrome P450 2D6, Cytochrome P450 2C9",DB00238,Cc1ccnc2c1NC(=O)c1cccnc1N2C1CC1,O=C1Nc2c(CCO)ccnc2N(C2CC2)c2ncccc21,DrugBank,0.6666666666666666,test
+,kr-60436,,,CYP2D6;CYP3A4,kr-60436,COc1ccc(N2CCc3c2c2cccc(OC(F)(F)F)c2[nH]c3=NCCO)c(C)c1,COc1ccc(-n2ccc3c(=NCCO)[nH]c4c(OC(F)(F)F)cccc4c32)c(C)c1,MetXBioDB,0.6712328767123288,test
+DB00277,Theophylline,DBMET00272,3-methylxanthine,Cytochrome P450 1A2,DB00201,Cn1c(=O)c2[nH]cnc2n(C)c1=O,Cn1c(=O)[nH]c(=O)c2[nH]cnc21,DrugBank,0.5588235294117647,test
+DB00568,Cinnarizine,DBMET01196,Cinnarizine metabolite M4,Cytochrome P450 2B6,DB00568,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,Oc1ccc(C(c2ccccc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,Both,0.8421052631578947,test
+,(-)-Epigallocatechin,,"(-)-Epigallocatechin, 3p-OH-glucuronide",UGT1A9,(-)-Epigallocatechin,Oc1cc(O)c2c(c1)OC(c1cc(O)c(O)c(O)c1)C(O)C2,O=C(O)C1OC(Oc2cc(C3Oc4cc(O)cc(O)c4CC3O)cc(O)c2O)C(O)C(O)C1O,MetXBioDB,0.5961538461538461,test
+DBMET00296,para-Hydroxyrosiglitazone,DBMET00938,N-Desmethyl-para-hydroxy rosiglitazone,,DB00412,CN(CCOc1ccc(CC2SC(=O)N=C2O)cc1)c1ccc(O)cn1,O=C1NC(=O)C(Cc2ccc(OCCNc3ccc(O)cn3)cc2)S1,DrugBank,0.484375,test
+DB11412,Fenthion,DBMET01816,Fenthion oxon,"Cytochrome P450 1A2, Cytochrome P450 2B6, Cytochrome P450 2C9, Cytochrome P450 2C19, Cytochrome P450 3A4, Cytochrome P450 3A5",DB11412,COP(=S)(OC)Oc1ccc(SC)c(C)c1,COP(=O)(OC)Oc1ccc(SC)c(C)c1,Both,0.6666666666666666,test
+DBMET02389,Linagliptin CD1790,DBMET02391,Linagliptin M506(1),,DB08882,CC#CCn1c(N2CCCC(O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,CC#CCn1c(NCCCC(O)C(=O)O)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DrugBank,0.5764705882352941,test
+DB11963,Dacomitinib,DBMET02190,PF-05199265,"Cytochrome P450 2D6, Cytochrome P450 2C9",DB11963,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1NC(=O)C=CCN1CCCCC1,O=C(C=CCN1CCCCC1)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1O,DrugBank,0.8169014084507042,test
+DBMET03044,Arbidol M5 metabolite,DBMET03059,Arbidol M11-2 metabolite,,DB13609,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(O)c(CNC)c12,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(OS(=O)(=O)O)c(CNC)c12,DrugBank,0.7761194029850746,test
+DB00424,Hyoscyamine,DBMET03253,Tropic acid,,DB00424,CN1C2CCC1CC(OC(=O)C(CO)c1ccccc1)C2,O=C(O)C(CO)c1ccccc1,DrugBank,0.4390243902439024,test
+DB11757,Istradefylline,DBMET02750,4'-O-monodesmethyl istradefylline (M1),,DB11757,CCn1c(=O)c2c(nc(C=Cc3ccc(OC)c(OC)c3)n2C)n(CC)c1=O,CCn1c(=O)c2c(nc(C=Cc3ccc(O)c(OC)c3)n2C)n(CC)c1=O,DrugBank,0.8269230769230769,test
+DB08906,Fluticasone furoate,DBMET03675,M21 fluticasone furoate,,DB08906,CC1CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)SCF,CC1CC2C3CC(O)C4=CC(=O)C=CC4(C)C3(F)C(O)CC2(C)C1(OC(=O)c1ccco1)C(=O)SCF,DrugBank,0.8918918918918919,test
+DB00243,Ranolazine,DBMET02244,CVT-2738,"Cytochrome P450 3A4, Cytochrome P450 2D6",DB00243,COc1ccccc1OCC(O)CN1CCN(CC(=O)Nc2c(C)cccc2C)CC1,Cc1cccc(C)c1NC(=O)CN1CCNCC1,DrugBank,0.509090909090909,test
+DB00563,Methotrexate,DBMET00467,7-hydroxymethotrexate,Aldehyde oxidase,DB00563,CN(Cc1cnc2nc(=N)[nH]c(N)c2n1)c1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1,CN(Cc1nc2c(N)[nH]c(=N)[nH]c-2nc1=O)c1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1,DrugBank,0.5921052631578947,test
+DBMET02310,13'-hydroxy-alpha-tocopherol,DBMET02311,13'-carboxy-alpha-tocopherol,,DB11635,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)CO)O2,Cc1c(C)c2c(c(C)c1O)CCC(C)(CCCC(C)CCCC(C)CCCC(C)C(=O)O)O2,DrugBank,0.76,test
+DB09194,Etoperidone,DBMET02171,Etoperidone M2,,DB09194,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CC,CCn1c(C(C)O)nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c1=O,Both,0.7368421052631579,test
+DB00369,Cidofovir,DBMET03373,Cidofovir diphosphate,,DB12151,Nc1ccn(CC(CO)OCP(=O)(O)O)c(=O)n1,Nc1ccn(CC(CO)OCP(=O)(O)OP(=O)(O)O)c(=O)n1,DrugBank,0.7872340425531915,test
+DB13952,Estradiol acetate,DB00783,Estradiol,,DB13952,CC(=O)Oc1ccc2c(c1)CCC1C2CCC2(C)C(O)CCC12,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,DrugBank,0.6862745098039216,test
+DB04573,Estriol,DBMET00604,Estriol 3-sulfate 16-glucuronide,,DB04573,CC12CCC3c4ccc(O)cc4CCC3C1CC(O)C2O,CC12CCC3c4ccc(OS(=O)(=O)O)cc4CCC3C1CC(OC1OC(C(=O)O)C(O)C(O)C1O)C2O,DrugBank,0.4444444444444444,test
+,Azimilide,,,CYP3A4;CYP3A5,Azimilide,CN1CCN(CCCCN2C(=O)CN(N=Cc3ccc(-c4ccc(Cl)cc4)o3)C2=O)CC1,C[N+]1([O-])CCN(CCCCN2C(=O)CN(N=Cc3ccc(-c4ccc(Cl)cc4)o3)C2=O)CC1,MetXBioDB,0.8166666666666667,test
+,"2,6-Xylidine",,"N-(2,6-dimethylphenyl)hydroxylamine",CYP2A6; CYP2E1,"2,6-Xylidine",Cc1cccc(C)c1N,Cc1cccc(C)c1NO,MetXBioDB,0.4090909090909091,test
+DB14682,Dextrorphan,DBMET00595,Dextrorphan O-glucuronide,"UDP-glucuronosyltransferases (UGTs), UDP-glucuronosyltransferase 2B4, UDP-glucuronosyltransferase 2B7, UDP-glucuronosyltransferase 2B15, UDP-glucuronosyltransferase 2B17",DB00514,CN1CCC23CCCCC2C1Cc1ccc(O)cc13,CN1CCC23CCCCC2C1Cc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc13,DrugBank,0.546875,test
+,"8,14-diOH-efavirenz",,,UGT,8-hydroxyefavirenz,OC1=Nc2c(O)cc(Cl)cc2C(C#CC2(O)CC2)(C(F)(F)F)O1,O=C(O)C1OC(OC2(C#CC3(C(F)(F)F)OC(O)=Nc4c(O)cc(Cl)cc43)CC2)C(O)C(O)C1O,MetXBioDB,0.5846153846153846,test
+,Geraniol,,,GST,Geraniol,CC(C)=CCCC(C)=CCO,CC(C)=CCCC(C)=CCOS(=O)(=O)O,MetXBioDB,0.4838709677419355,test
+,cinnarizine,,Cinnamaldehyde,CYP2C9; CYP1A2; CYP2A6,cinnarizine,C(=Cc1ccccc1)CN1CCN(C(c2ccccc2)c2ccccc2)CC1,O=CC=Cc1ccccc1,MetXBioDB,0.282051282051282,test
+,schembl69463,,Hydroxy-DA-8164,CYP3A4,schembl69463,CCCOc1ccc(S(=O)(=O)NCCC2CCCN2C)cc1-c1nc2c(CCC)nn(C)c2c(=O)[nH]1,CCCc1nn(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)NCCC4CCCN4C)ccc3OCC(C)O)nc12,MetXBioDB,0.8395061728395061,test
+,Irinotecan,,,UGT,Irinotecan,CCc1c2c(nc3ccc(OC(=O)N4CCC(N5CCCCC5)CC4)cc13)-c1cc3c(c(=O)n1C2)COC(=O)C3(O)CC,CCc1c2c(nc3ccc(OC(=O)N4CCC(N5CCCCC5)CC4)cc13)-c1cc3c(c(=O)n1C2)COC(=O)C3(CC)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,0.7578947368421053,test
+,Propyl-4-hydroxybenzoate,,,UGT1A9,Propyl-4-hydroxybenzoate,CCCOC(=O)c1ccc(O)cc1,CCCOC(=O)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1,MetXBioDB,0.4666666666666667,test
+,Linoleic acid,,Leukotoxin,CYP2C9; CYP2C19,Linoleic acid,CCCCCC=CCC=CCCCCCCCC(=O)O,CCCCCC=CCC1OC1CCCCCCCC(=O)O,MetXBioDB,0.5897435897435898,test
+,cis-Dibromochrysanthemic acid,,,UGT,cis-Dibromochrysanthemic acid,CC1(C)C(C=C(Br)Br)C1C(=O)O,CC1(C)C(C=C(Br)Br)C1C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,0.5121951219512195,test
+DB00802,Alfentanil,DBMET01580,"2-(4-ethyl-5-oxo-1,2,3,4-tetrazol-1-yl)acetaldehyde",Cytochrome P450 3A4,DB00802,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1,CCn1nnn(CC=O)c1=O,Both,0.2711864406779661,test
+DBMET01073,8-hydroxydesmethyl clomipramine,DBMET01075,8-hyroxydesmethyl clomipramine glucuronide,,DB01242,CNCCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,CNCCCN1c2cc(Cl)ccc2CCc2c1ccc(O)c2OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,0.5142857142857142,test
+DB00136,Calcitriol,DBMET00575,Calcitroic acid,,DB00169,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCCC(C)(C)O)CC(O)CC1O,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CC(=O)O)CC(O)CC1O,DrugBank,0.703125,test
+DB00834,Mifepristone,DBMET01703,Monodemethylated mifepristone,Cytochrome P450 3A4,DB00834,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(N(C)C)cc3)CC21C,CC#CC1(O)CCC2C3CCC4=CC(=O)CCC4=C3C(c3ccc(NC)cc3)CC21C,Both,0.8153846153846154,test
+DB00279,Liothyronine,DBMET00559,Triiodothyronine sulfate,,DB00451,NC(Cc1cc(I)c(Oc2ccc(O)c(I)c2)c(I)c1)C(=O)O,NC(Cc1cc(I)c(Oc2ccc(OS(=O)(=O)O)c(I)c2)c(I)c1)C(=O)O,DrugBank,0.7083333333333334,test
+,donepezil,,"2Ã¢â‚¬Â[(1Ã¢â‚¬ÂbenzylpiperidinÃ¢â‚¬Â4Ã¢â‚¬Âyl)methyl]Ã¢â‚¬Â5Ã¢â‚¬ÂhydroxyÃ¢â‚¬Â6Ã¢â‚¬ÂmethoxyÃ¢â‚¬Â2,3Ã¢â‚¬ÂdihydroindenÃ¢â‚¬Â1Ã¢â‚¬Âone",CYP3A4; CYP2C9; CYP2D6,donepezil,COc1cc2c(cc1OC)C(=O)C(CC1CCN(Cc3ccccc3)CC1)C2,COc1cc2c(cc1O)CC(CC1CCN(Cc3ccccc3)CC1)C2=O,MetXBioDB,0.8490566037735849,test
+DB12110,m-Chlorophenylpiperazine,DBMET01575,2-chloro-4-(piperazin-1-yl)phenol,Cytochrome P450 2D6,DB01149,Clc1cccc(N2CCNCC2)c1,Oc1ccc(N2CCNCC2)cc1Cl,Both,0.5428571428571428,test
+DB00857,Terbinafine,DBMET01203,Terbinafine dihydrodiol derivative (1),"Cytochrome P450 1A2, Cytochrome P450 2C9, Cytochrome P450 2B6",DB00857,CN(CC=CC#CC(C)(C)C)Cc1cccc2ccccc12,CN(CC=CC#CC(C)(C)C)Cc1cc(O)c(O)c2ccccc12,DrugBank,0.6530612244897959,test
+DB04854,Febuxostat,DBMET03278,Febuxostat acyl-glucuronide,"UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A3, UDP-glucuronosyltransferase 1A9, UDP-glucuronosyltransferase 2B7",DB04854,Cc1nc(-c2ccc(OCC(C)C)c(C#N)c2)sc1C(=O)O,Cc1nc(-c2ccc(OCC(C)C)c(C#N)c2)sc1C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,0.6617647058823529,test
+,TRANS-PERMETHRIN,,(3-Phenoxyphenyl)methanol,CYP2C8;CYP2C9;CYP2C19;CYP3A4,TRANS-PERMETHRIN,CC1(C)C(C=C(Cl)Cl)C1C(=O)OCc1cccc(Oc2ccccc2)c1,OCc1cccc(Oc2ccccc2)c1,MetXBioDB,0.4081632653061224,test
+DB00316,Acetaminophen,DBMET00243,NAPQI,"Cytochrome P450 2E1, Cytochrome P450 3A4, Cytochrome P450 1A2, Cytochrome P450 2D6, Cytochrome P450 2A6",DB03783,CC(=O)Nc1ccc(O)cc1,CC(=O)N=C1C=CC(=O)C=C1,Both,0.2580645161290322,test
+DB01394,Colchicine,DBMET02756,2-Demethylcolchicine,Cytochrome P450 3A4,DB01394,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,COc1cc2c(c(OC)c1O)-c1ccc(OC)c(=O)cc1C(NC(C)=O)CC2,Both,0.8490566037735849,test
+DBMET00099,R-95913,DBMET00483,R-138727,"Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 2C9, Cytochrome P450 2C19, Cytochrome P450 2D6",DB06209,O=C(C1CC1)C(c1ccccc1F)N1CCc2sc(O)cc2C1,O=C(O)CC1=C(S)CCN(C(C(=O)C2CC2)c2ccccc2F)C1,DrugBank,0.5573770491803278,test
+DB00783,Estradiol,DBMET00332,4-hydroxyestrone,"Cytochrome P450 1B1, Cytochrome P450 3A5",DB13952,CC12CCC3c4ccc(O)cc4CCC3C1CCC2O,CC12CCC3c4ccc(O)c(O)c4CCC3C1CCC2=O,DrugBank,0.3928571428571428,test
+DB00740,Riluzole,DBMET01740,N-OH-riluzole,Cytochrome P450 1A1,DB00740,Nc1nc2ccc(OC(F)(F)F)cc2s1,ONc1nc2ccc(OC(F)(F)F)cc2s1,DrugBank,0.6410256410256411,test
+DB13600,Deltamethrin,DBMET01813,4'-OH-deltamethrin,"Cytochrome P450 2C8, Cytochrome P450 2C19, Cytochrome P450 3A4, Cytochrome P450 3A5",DB13600,CC1(C)C(C=C(Br)Br)C1C(=O)OC(C#N)c1cccc(Oc2ccccc2)c1,CC1(C)C(C=C(Br)Br)C1C(=O)OC(C#N)c1cccc(Oc2ccc(O)cc2)c1,Both,0.875,test
+,ziprasidone,,,CYP3A4,ziprasidone,OC1=Nc2cc(Cl)c(CCN3CCN(c4nsc5ccccc45)CC3)cc2C1,[O-][s+]1nc(N2CCN(CCc3cc4c(cc3Cl)N=C(O)C4)CC2)c2ccccc21,MetXBioDB,0.6615384615384615,test
+DB15465,Benzhydrocodone,DB00956,Hydrocodone,,DB15465,COc1ccc2c3c1OC1C(OC(=O)c4ccccc4)=CCC4C(C2)N(C)CCC314,COc1ccc2c3c1OC1C(=O)CCC4C(C2)N(C)CCC314,DrugBank,0.5882352941176471,test
+DB00440,Trimethoprim,DBMET03026,4-Desmethyl-TMP,Cytochrome P450 3A4,DB00440,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1O,DrugBank,0.7692307692307693,test
+DB04557,Arachidonic Acid,DBMET01599,18-HETE,"Cytochrome P450 1A1, Cytochrome P450 1A2, Cytochrome P450 2E1",DB13854,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCC(O)CCC=CCC=CCC=CCC=CCCCC(=O)O,Both,0.6176470588235294,test
+DBMET03575,5'-hydroxysulfapyridine,DBMET03576,5'-hydroxysulfapyridine-O-glucuronide,,DB00795,Nc1ccc(S(=O)(=O)Nc2ccc(O)cn2)cc1,Nc1ccc(S(=O)(=O)Nc2ccc(OC3OC(C(=O)O)C(O)C(O)C3O)cn2)cc1,DrugBank,0.4821428571428571,test
+DBMET00366,2-hydroxyethinylestradiol,DBMET03022,2-methoxyethinylestradiol,Catechol O-methyltransferase,DB01357,C#CC1(O)CCC2C3CCc4cc(O)c(O)cc4C3CCC21C,C#CC1(O)CCC2C3CCc4cc(O)c(OC)cc4C3CCC21C,DrugBank,0.8,test
+DB13783,Acemetacin,DBMET01880,O-demethylated acemetacin,,DB13783,COc1ccc2c(c1)c(CC(=O)OCC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,Cc1c(CC(=O)OCC(=O)O)c2cc(O)ccc2n1C(=O)c1ccc(Cl)cc1,DrugBank,0.7857142857142857,test
+DBMET02817,α-ketoglutarate hydrazone,DBMET02815,Phthalazinone,,DB01275,O=C(O)CCC(=NNc1nncc2ccccc12)C(=O)O,O=c1[nH]ncc2ccccc12,DrugBank,0.26,test
+,CTK0G1203,,,CYP3A4,CTK0G1203,CC(NC(=NC#N)N=c1cc[nH]cc1)C(C)(C)C,CC(NC(=NC#N)Nc1cc[n+]([O-])cc1)C(C)(C)C,MetXBioDB,0.4313725490196078,test
+,Bisphenol A,,,UGT1A9,Bisphenol A,CC(C)(c1ccc(O)cc1)c1ccc(O)cc1,CC(C)(c1ccc(O)cc1)c1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1,MetXBioDB,0.4,test
+,"n,n-dimethyl-5-methoxytryptamine",,Bufotenine,CYP2D6,"n,n-dimethyl-5-methoxytryptamine",COc1ccc2[nH]cc(CCN(C)C)c2c1,CN(C)CCc1c[nH]c2ccc(O)cc12,MetXBioDB,0.65,test
+DBMET00734,4-hydroxyatomoxetine,DBMET02294,4-hydroxyatomoxetine-O-glucuronide,,DB00289,CNCCC(Oc1ccc(O)cc1C)c1ccccc1,CNCCC(Oc1ccc(O)cc1OC1OC(O)C(O)C(O)C1O)c1ccccc1,DrugBank,0.6111111111111112,test
+,5-OH-resacetophenone,,,SULT,5-OH-resacetophenone,CC(=O)c1cc(O)c(O)cc1O,CC(=O)c1cc(OS(=O)(=O)O)c(O)cc1O,MetXBioDB,0.5517241379310345,test
+DB01026,Ketoconazole,DBMET02653,M8 (Ketoconazole),Cytochrome P450 3A4,DB01026,CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1,CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)c(O)c2)CC1,DrugBank,0.8157894736842105,test
+DB01069,Promethazine,DBMET02972,Promethazine Sulphoxide,,DB01069,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,CC(CN1c2ccccc2[S+]([O-])c2ccccc21)N(C)C,Both,0.5789473684210527,test
+DBMET02488,Tamsulosin M-1 Metabolite,DBMET02495,Tamsulosin M-1-Glu Metabolite,,DB00706,COc1ccc(CC(C)NCCOc2ccccc2O)cc1S(N)(=O)=O,COc1ccc(CC(C)NCCOc2ccccc2OC2OC(C(=O)O)C(O)C(O)C2O)cc1S(N)(=O)=O,DrugBank,0.6617647058823529,test
+,"2,5-dimethylaniline",," 2,5Ã¢â‚¬Âdimethylacetanilide",NAT1; NAT2,"2,5-dimethylaniline",Cc1ccc(C)c(N)c1,CC(=O)Nc1cc(C)ccc1C,MetXBioDB,0.3793103448275862,test
+DB09516,Mequinol,DBMET02069,3-hydroxy-4-methoxyanisole,Glutathione S-transferase A1,DB09516,COc1ccc(O)cc1,COc1ccc(OC)c(O)c1,DrugBank,0.5416666666666666,test
+,Alachlor,,,CYP2B6; CYP3A4,Alachlor,CCc1cccc(CC)c1N(COC)C(=O)CCl,CCc1cccc(CC)c1NCOC,MetXBioDB,0.3658536585365853,test
+DBMET02094,R406,DBMET02095,R529,Cytochrome P450 3A4,DB12010,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)NC(=O)C(C)(C)O4)n2)cc(OC)c1OC,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)NC(=O)C(C)(C)O4)n2)cc(OC)c1O,DrugBank,0.8548387096774194,test
+DBMET03406,Deoxydaunorubicinol aglycone,DBMET03408,Deoxydaunorubicinol aglycone-13-O-β-glucuronide,,DB00694,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)O)CC3,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)CC(O)(C(C)OOC1OC(C(=O)O)C(O)C(O)C1O)CC3,DrugBank,0.6231884057971014,test
+,JNJ-10198409,,JNJ-10198409 N-glucuronide B,UGT1A9,JNJ-10198409,COc1cc2c(cc1OC)-c1[nH][nH]c(=Nc3cccc(F)c3)c1C2,COc1cc2c(cc1OC)-c1c(c(=Nc3cccc(F)c3)[nH]n1C1OC(C(=O)O)C(O)C(O)C1O)C2,MetXBioDB,0.5,test
+DB14783,Diroximel fumarate,DB14219,Monomethyl fumarate,Liver esterases,DB14783,COC(=O)C=CC(=O)OCCN1C(=O)CCC1=O,COC(=O)C=CC(=O)O,DrugBank,0.4117647058823529,test
+DB01601,Lopinavir,DBMET03069,Lopinavir M2 metabolite,,DB01601,Cc1cccc(C)c1OCC(=O)NC(Cc1ccccc1)C(O)CC(Cc1ccccc1)NC(=O)C(C(C)C)N1CCCNC1=O,Cc1cccc(C)c1OCC(=O)NC(Cc1ccccc1)C(O)CC(Cc1ccccc1)NC(=O)C(C(C)C)N1C(=O)NCCC1O,DrugBank,0.7402597402597403,test
+DB11921,Deflazacort,DBMET02573,21-Deflazacort,Liver esterases,DB11921,CC(=O)OCC(=O)C12N=C(C)OC1CC1C3CCC4=CC(=O)C=CC4(C)C3C(O)CC12C,CC1=NC2(C(=O)CO)C(CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC32C)O1,DrugBank,0.803030303030303,test
+DB19325,Sofpironium,DBMET03780,BBI-4010,Serum paraoxonase/arylesterase 1,DB19325,CCOC(=O)C[N+]1(C)CCC(OC(=O)C(O)(c2ccccc2)C2CCCC2)C1,C[N+]1(CC(=O)[O-])CCC(OC(=O)C(O)(c2ccccc2)C2CCCC2)C1,DrugBank,0.7678571428571429,test
+,(-)-limonene,,Perillyl alcohol,CYP2C9; CYP2C19; CYP3A4,(-)-limonene,C=C(C)C1CC=C(C)CC1,C=C(C)C1CC=C(CO)CC1,MetXBioDB,0.59375,test
+DBMET03167,Chloramphenicol Base,DBMET03168,Chloramphenicol Base N-acetyl,,DB07565,NC(CO)C(O)c1ccc([N+](=O)[O-])cc1,CC(=O)NC(CO)C(O)c1ccc([N+](=O)[O-])cc1,DrugBank,0.5609756097560976,test
+DB00444,Teniposide,DBMET01761,Teniposide catechol,"Cytochrome P450 3A4, Cytochrome P450 3A5",DB00444,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(OC)c1O,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(c6cccs6)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,Both,0.9487179487179488,test
+DB00836,Loperamide,DBMET01697,N-Desmethyloperamide,"Cytochrome P450 3A4, Cytochrome P450 2D6, Cytochrome P450 2C8, Cytochrome P450 2B6",DB00836,CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,CNC(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,Both,0.7407407407407407,test
+,Tizanidine M6,,,UGT,Tizanidine M6,Oc1cc(Cl)c(NC2=NCCN2)c2nsnc12,O=C(O)C1OC(Oc2cc(Cl)c(NC3=NCCN3)c3nsnc23)C(O)C(O)C1O,MetXBioDB,0.5238095238095238,test
+,3-Hydroxy-6-methylflavone,,,UGT1A9,3-Hydroxy-6-methylflavone,Cc1ccc2oc(-c3ccccc3)c(O)c(=O)c2c1,Cc1ccc2oc(-c3ccccc3)c(OC3OC(C(=O)O)C(O)C(O)C3O)c(=O)c2c1,MetXBioDB,0.5370370370370371,test
+,Afloqualone,,Afloqualone N-glucuronide,UGT1A4,Afloqualone,Cc1ccccc1-n1c(CF)nc2ccc(N)cc2c1=O,Cc1ccccc1-n1c(CF)nc2ccc(NC3OC(C(=O)O)C(O)C(O)C3O)cc2c1=O,MetXBioDB,0.5454545454545454,test
+DB00661,Verapamil,DBMET00132,Norverapamil,"Cytochrome P450 2C8, Cytochrome P450 3A4, Cytochrome P450 3A5, Cytochrome P450 1A2",DB00661,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,Both,0.6909090909090909,test
+DB12483,Copanlisib,DBMET03735,Copanlisib M2 metabolite,Cytochrome P450 3A4,DB12483,COc1c(OCCCN2CCOCC2)ccc2c1N=C(NC(=O)c1cnc(N)nc1)N1CCN=C21,COc1c(OCCC(=O)O)ccc2c1N=C(NC(=O)c1cnc(N)nc1)N1CCN=C21,DrugBank,0.75,test
+DB01262,Decitabine,DBMET03190,5-aza-2'-deoxyuridine,Cytidine deaminase,DB01262,Nc1ncn(C2CC(O)C(CO)O2)c(=O)n1,O=C1NC(O)N=CN1C1CC(O)C(CO)O1,DrugBank,0.46,test
+DBMET00086,N-Desmethyldiphenhydramine,DBMET01200,"N,N-Didesmethyldiphenhydramine","Cytochrome P450 2D6, Cytochrome P450 1A2, Cytochrome P450 2C9, Cytochrome P450 2C19",DB00985,CNCCOC(c1ccccc1)c1ccccc1,NCCOC(c1ccccc1)c1ccccc1,Both,0.5666666666666667,test
+,"benzo(a)pyrene-7,8-diol",,,CYP1A2,"benzo(a)pyrene-7,8-diol",Oc1ccc2c(cc3ccc4cccc5ccc2c3c45)c1O,Oc1c(O)c2oc2c2c1cc1ccc3cccc4ccc2c1c34,MetXBioDB,0.5405405405405406,test
+DB04855,Dronedarone,DBMET02836,C-dealkyl-dronedarone,,DB04855,CCCCc1oc2ccc(NS(C)(=O)=O)cc2c1C(=O)c1ccc(OCCCN(CCCC)CCCC)cc1,CCCCN(CCCC)CCCOc1ccc(C(=O)O)cc1,DrugBank,0.4516129032258064,test
+,Norverapamil,,D-715 (PR-22),CYP2C8; CYP3A4; CYP2D6,Verapamil,COc1ccc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,COc1cc(CCNCCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)ccc1O,MetXBioDB,0.8846153846153846,test
+DBMET00658,Aldophosphamide,DBMET01147,Phosphoramide Mustard,,DB00531,NP(=O)(OCCC=O)N(CCCl)CCCl,NP(=O)(O)N(CCCl)CCCl,DrugBank,0.4242424242424242,test
+,cp_122_721,,,CYP2D6,cp_122_721,COc1ccc(OC(F)(F)F)cc1CNC1CCCNC1c1ccccc1,Oc1ccc(OC(F)(F)F)cc1CNC1CCCNC1c1ccccc1,MetXBioDB,0.75,test
+DB06726,Bufuralol,DBMET01782,1'2'-Ethenylbufuralol,Cytochrome P450 2D6,DB06726,CCc1cccc2cc(C(O)CNC(C)(C)C)oc12,C=Cc1cccc2cc(C(O)CNC(C)(C)C)oc12,Both,0.6739130434782609,test
+DBMET00777,8-hydroxyclomipramine,DBMET01073,8-hydroxydesmethyl clomipramine,,DB01242,CN(C)CCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,CNCCCN1c2ccc(O)cc2CCc2ccc(Cl)cc21,DrugBank,0.7083333333333334,test
+DBMET01894,M7 (Blonanserin),DBMET01895,M8 (Blonanserin),Cytochrome P450 3A4,DB09223,NCCNc1cc(-c2ccc(F)cc2)c2c(n1)CCCCCC2,O=C(O)CNc1cc(-c2ccc(F)cc2)c2c(n1)CCCCCC2,DrugBank,0.68,test
+,riddelliine,,,CYP3A4,riddelliine,C=C1CC(=CC)C(=O)OC2CCN3CC=C(COC(=O)C1(O)CO)C23,C=C1CC(=CC)C(=O)OC2CCN3CC=C(COC(=O)C1(O)CO)C23O,MetXBioDB,0.6029411764705882,test
+DB04839,Cyproterone acetate,DBMET00672,15beta-hydroxycyproterone acetate,,DB04839,CC(=O)OC1(C(C)=O)CCC2C3C=C(Cl)C4=CC(=O)C5CC5C4(C)C3CCC21C,CC(=O)OC1(C(C)=O)CC(O)C2C3C=C(Cl)C4=CC(=O)C5CC5C4(C)C3CCC21C,DrugBank,0.7704918032786885,test
+DB06769,Bendamustine,DBMET01423,monohydroxy-bendamustine (bendamustine metabolite HP1),,DB06769,Cn1c(CCCC(=O)O)nc2cc(N(CCCl)CCCl)ccc21,Cn1c(CCCC(=O)O)nc2cc(N(CCO)CCCl)ccc21,DrugBank,0.9183673469387756,test
+DB00190,Carbidopa,DBMET00637,"3,4-Dihydroxyphenylacetone",,DB00190,CC(Cc1ccc(O)c(O)c1)(NN)C(=O)O,CC(=O)Cc1ccc(O)c(O)c1,DrugBank,0.4473684210526316,test
+DB09173,Butyrfentanyl,DBMET02691,4'-hydroxy-butyrfentanyl,,DB09173,CCCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,CCCC(=O)N(c1ccccc1)C1CCN(CCc2ccc(O)cc2)CC1,DrugBank,0.8695652173913043,test
+DBMET01264,Etoposide catechol,DBMET01265,Etoposide ortho-quinone,Myeloperoxidase,DB00773,COc1cc(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)cc(O)c1O,COC1=CC(C2c3cc4c(cc3C(OC3OC5COC(C)OC5C(O)C3O)C3COC(=O)C23)OCO4)=CC(=O)C1=O,DrugBank,0.691358024691358,test
+DB00457,Prazosin,DBMET02351,"2-(l-Piperazinyl)- 4-amino-6,7 - dimethoxyquinazoline",,DB00457,COc1cc2nc(N3CCN(C(=O)c4ccco4)CC3)nc(N)c2cc1OC,COc1cc2nc(N3CCNCC3)nc(N)c2cc1OC,DrugBank,0.543859649122807,test
+,"Dibenz[a,j]acridine",,,CYP1A2;CYP3A4,"Dibenz[a,j]acridine",c1ccc2c(c1)ccc1nc3ccc4ccccc4c3cc12,ON1c2ccc3ccccc3c2C=C2c3ccccc3C=CC21,MetXBioDB,0.2291666666666666,test
+DB00328,Indomethacin,DBMET00157,Indomethacin acyl glucuronide,UDP-glucuronosyltransferase 1A1,DB13783,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,COc1ccc2c(c1)c(CC(=O)OC1OC(C(=O)O)C(O)C(O)C1O)c(C)n2C(=O)c1ccc(Cl)cc1,Both,0.6461538461538462,test
+,RP73401,,,CYP2B6,RP73401,COc1ccc(C(=O)N=c2c(Cl)c[nH]cc2Cl)cc1OC1CCCC1,COc1ccc(C(=O)N=c2c(Cl)c[nH]cc2Cl)cc1OC1CCC(O)C1,MetXBioDB,0.803921568627451,test
+DBMET00449,5-fluorouracil,DBMET01999,5-fluorodeoxyuridine-monophosphate,,DB00322,O=c1[nH]cc(F)c(=O)[nH]1,O=c1[nH]c(=O)n(C2CC(O)C(COP(=O)(O)O)O2)cc1F,DrugBank,0.2115384615384615,test
+DBMET03396,Finerenone M2 Metabolite,DBMET03397,Finerenone M3 Metabolite,Cytochrome P450 3A4,DB16165,CCOc1ncc(CO)c2nc(C)c(C(N)=O)c(-c3ccc(C#N)cc3OC)c12,CCOc1ncc(C(=O)O)c2nc(C)c(C(N)=O)c(-c3ccc(C#N)cc3OC)c12,DrugBank,0.7910447761194029,test
+DB00794,Primidone,DBMET02951,Phenylethylmalonamide (PEMA),,DB00794,CCC1(c2ccccc2)C(=O)NCNC1=O,CCC(C(N)=O)(C(N)=O)c1ccccc1,DrugBank,0.2439024390243902,test
+DB01576,Dextroamphetamine,DBMET03721,4-Hydroxy-d-amphetamine,,DB01255,CC(N)Cc1ccccc1,CC(N)Cc1ccc(O)cc1,Both,0.6,test
+DBMET03117,4-(4-guanidinobenzoyloxy)phenylacetic Acid,DBMET03118,4-guanidinobenzoic Acid,,DB13729,N=C(N)Nc1ccc(C(=O)Oc2ccc(CC(=O)O)cc2)cc1,N=C(N)Nc1ccc(C(=O)O)cc1,DrugBank,0.525,test
+DBMET01221,11-Nor-9-carboxy-delta-9-THC,DBMET03558,11-nor-9-carboxy-delta-9-THC-glucuronide,"UDP-glucuronosyltransferase 1A1, UDP-glucuronosyltransferase 1A3",DB00470,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)O)=CC21,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C(=O)OC3OC(C(=O)O)C(O)C(O)C3O)=CC21,DrugBank,0.6857142857142857,test
+,reboxetine,,O-desethylreboxetine,CYP3A4,reboxetine,CCOc1ccccc1OC(c1ccccc1)C1CNCCO1,Oc1ccccc1OC(c1ccccc1)C1CNCCO1,MetXBioDB,0.7021276595744681,test
+DBMET03755,4-Sulfonyloxy dexlansoprazole,DBMET03757,4-Sulfonyloxy dexlansoprazole sulfide,,DB05351,Cc1c(OCC(F)(F)F)ccnc1C[S+]([O-])c1nc2c(OS(=O)(=O)O)cccc2[nH]1,Cc1c(OCC(F)(F)F)ccnc1CSc1nc2cccc(OS(=O)(=O)O)c2[nH]1,DrugBank,0.5694444444444444,test
+DB00132,alpha-Linolenic acid,DBMET03466,Eicosapentaenoic acid,,DB13959,CCC=CCC=CCC=CCCCCCCCC(=O)O,CCC=CCC=CCC=CCC=CCC=CCCCC(=O)O,DrugBank,0.8518518518518519,test
+,6-OH-ondansetron,,ondansetron 6-O-glucuronide,UGT,Ondansetron,Cc1nccn1CC1CCc2c(c3cc(O)ccc3n2C)C1=O,Cc1nccn1CC1CCc2c(c3cc(OC4OC(C(=O)O)C(O)C(O)C4O)ccc3n2C)C1=O,MetXBioDB,0.625,test
+DB00531,Cyclophosphamide,DBMET00020,Dechloroethyl cyclophosphamide,"Cytochrome P450 3A4, Cytochrome P450 3A7",DB00531,O=P1(N(CCCl)CCCl)NCCCO1,O=P1(NCCCl)NCCCO1,Both,0.4864864864864865,test
+DB09068,Vortioxetine,DBMET01389,Vortioxetine Metabolite 1,"Cytochrome P450 2D6, Cytochrome P450 2C9",DB09068,Cc1ccc(Sc2ccccc2N2CCNCC2)c(C)c1,Cc1cc(CO)ccc1Sc1ccccc1N1CCNCC1,DrugBank,0.7111111111111111,test
+DB00818,Propofol,DBMET01729,4-OH-propofol,"Cytochrome P450 2B6, Cytochrome P450 2C9, Cytochrome P450 1A2, Cytochrome P450 2A6, Cytochrome P450 2C8, Cytochrome P450 2C19, Cytochrome P450 2D6",DB00818,CC(C)c1cccc(C(C)C)c1O,CC(C)c1cc(O)cc(C(C)C)c1O,Both,0.5454545454545454,test
+DB11642,Pitolisant,DBMET03080,BP2.941,"Cytochrome P450 2D6, Cytochrome P450 3A4",DB11642,Clc1ccc(CCCOCCCN2CCCCC2)cc1,[O-][N+]1(CCCOCCCc2ccc(Cl)cc2)CCCCC1,DrugBank,0.5454545454545454,test
+DBMET01297,Dihydroxy ketobemidone,DBMET01299,m-Hydroxymethoxy ketobemidone,,DB06738,CCC(=O)C1(c2ccc(O)c(O)c2)CCN(C)CC1,CCC(=O)C1(c2ccc(OC)c(O)c2)CCN(C)CC1,DrugBank,0.7441860465116279,test
+DB04557,Arachidonic Acid,DBMET01603,"11,12-EET","Cytochrome P450 1A1, Cytochrome P450 1A2, Cytochrome P450 2B6, Cytochrome P450 2D6",DB13854,CCCCCC=CCC=CCC=CCC=CCCCC(=O)O,CCCCCC=CCC1OC1CC=CCC=CCCCC(=O)O,Both,0.7352941176470589,test
+,N-Desmethyl p-hydroxyrosiglitazone,,,SULT,N-Desmethyl p-hydroxyrosiglitazone,O=C1N=C(O)C(Cc2ccc(OCCN=c3ccc(O)c[nH]3)cc2)S1,O=C1N=C(O)C(Cc2ccc(OCCN=c3ccc(OS(=O)(=O)O)c[nH]3)cc2)S1,MetXBioDB,0.7796610169491526,test
+,leflunomide,,,CYP1A2;CYP2C9;CYP3A4,leflunomide,Cc1oncc1C(=O)Nc1ccc(C(F)(F)F)cc1,CC(O)=C(C=N)C(=O)Nc1ccc(C(F)(F)F)cc1,MetXBioDB,0.4,test
+DB04841,Flunarizine,DBMET01197,Flunarizine metabolite M1,"Cytochrome P450 2C9, Cytochrome P450 2A6, Cytochrome P450 1A1, Cytochrome P450 1A2",DB04841,Fc1ccc(C(c2ccc(F)cc2)N2CCN(CC=Cc3ccccc3)CC2)cc1,Fc1ccc(C(c2ccc(F)cc2)N2CCNCC2)cc1,Both,0.4523809523809524,test
+DB08908,Dimethyl fumarate,DB14219,Monomethyl fumarate,,DB08908,COC(=O)C=CC(=O)OC,COC(=O)C=CC(=O)O,DrugBank,0.7647058823529411,test
+,theobromine,,,CYP1A2;CYP2E1,theobromine,Cn1cnc2c1c(O)nc(=O)n2C,Cn1cnc2nc(O)nc(O)c21,MetXBioDB,0.4857142857142857,test
+,"2,4-dinitrobenzylalcohol",,,SULT1A1,"2,4-dinitrobenzylalcohol",O=[N+]([O-])c1ccc(CO)c([N+](=O)[O-])c1,O=[N+]([O-])c1ccc(COS(=O)(=O)O)c([N+](=O)[O-])c1,MetXBioDB,0.5945945945945946,test
+DBMET02968,3-hydroxyguanfacine,DBMET02970,Guanfacine 3-sulfate,,DB01018,N=C(N)NC(=O)Cc1c(Cl)ccc(O)c1Cl,N=C(N)NC(=O)Cc1c(Cl)ccc(OS(=O)(=O)O)c1Cl,DrugBank,0.627906976744186,test
+DB00604,Cisapride,DBMET01633,3-Fluoro-4-hydroxycisapride,Cytochrome P450 2C8,DB00604,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(F)cc2)CC1OC,COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CCCOc2ccc(O)c(F)c2)CC1OC,Both,0.8333333333333334,test
+,Dehydroxyzyleuton,,(1S)â€1â€(6â€hydroxyâ€1â€benzothiophenâ€2â€yl)ethylurea,CYP1A2; CYP2C9,Dehydroxyzyleuton,CC(NC(N)=O)c1cc2ccccc2s1,CC(NC(N)=O)c1cc2ccc(O)cc2s1,MetXBioDB,0.7,test
+DB00655,Estrone,DBMET00616,4-Hydroxyestrone sulfate,,DB00655,CC12CCC3c4ccc(O)cc4CCC3C1CCC2=O,CC12CCC3c4ccc(OS(=O)(=O)O)c(O)c4CCC3C1CCC2=O,DrugBank,0.5535714285714286,test
+,Caffeic Acid,,,UGT1A9,Caffeic Acid,O=C(O)C=Cc1ccc(O)c(O)c1,O=C(O)C=Cc1ccc(O)c(OC2OC(C(=O)O)C(O)C(O)C2O)c1,MetXBioDB,0.4772727272727273,test
+DB00695,Furosemide,DBMET00729,4-chloro-5-sulfamoylanthranilic acid,,DB00695,NS(=O)(=O)c1cc(C(=O)O)c(NCc2ccco2)cc1Cl,Nc1cc(Cl)c(S(N)(=O)=O)cc1C(=O)O,DrugBank,0.5333333333333333,test
+DBMET00792,aldoifosfamide,DBMET01103,Carboxylifosfamide,Aldehyde dehydrogenase 1A1,DB12902,O=CCCOP(=O)(NCCCl)NCCCl,O=C(O)CCOP(=O)(NCCCl)NCCCl,DrugBank,0.5588235294117647,test
+,(R)-Bunitrolol,,,CYP2D6,(R)-Bunitrolol,CC(C)(C)NCC(O)COc1ccccc1C#N,CC(C)(C)NCC(O)COc1ccc(O)cc1C#N,MetXBioDB,0.7111111111111111,test
+,indinavir,,,CYP3A4,indinavir,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2CC1O,CC(C)(C)NC(=O)C1CN(Cc2cccnc2)CCN1CC(O)CC(Cc1ccccc1)C(=O)NC1c2ccccc2C(O)C1O,MetXBioDB,0.8170731707317073,test
+DBMET00068,Hydroxyterbinafine,DBMET01179,N-Desmethylhydroxyterbinafine,"Cytochrome P450 3A4, Cytochrome P450 2B6, Cytochrome P450 1A2, Cytochrome P450 2C9, Cytochrome P450 2C8, Cytochrome P450 2C19",DB00857,CN(CC=CC#CC(C)(C)CO)Cc1cccc2ccccc12,CC(C)(C#CC=CCNCc1cccc2ccccc12)CO,DrugBank,0.6274509803921569,test
+DB00749,Etodolac,DBMET00148,6-Hydroxyetodolac,Cytochrome P450 2C9,DB00749,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,CCc1cc(O)cc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,Both,0.7169811320754716,test
+,zinc8660420,,,CYP3A4;CYP2C19,zinc8660420,C=C(C)C1Cc2c(ccc3c2OC2COc4cc(OC)c(OC)cc4C2C3=O)O1,C=C(C)C1Cc2c(ccc3c2OC2COc4cc(OC)c(O)cc4C2C3=O)O1,MetXBioDB,0.8813559322033898,test
+DBMET00257,monoethylglycinexylidide,DBMET01090,3-Hydroxymonoethylglycinexylidide,,DB00281,CCNCC(=O)Nc1c(C)cccc1C,CCNCC(=O)Nc1c(C)ccc(O)c1C,Both,0.6571428571428571,test
+,Quercitrin,,L-Rhamnose,EC 3.2.1.X,Quercitrin,CC1OC(Oc2c(-c3ccc(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)C(O)C(O)C1O,CC1OC(O)C(O)C(O)C1O,MetXBioDB,0.2222222222222222,test
+DB01171,Moclobemide,DBMET02150,Moclobemide M5,,DB01171,O=C(NCCN1CCOCC1)c1ccc(Cl)cc1,O=C(NCC[N+]1([O-])CCOCC1)c1ccc(Cl)cc1,DrugBank,0.5652173913043478,test
+DB12911,Nicoboxil,DBMET02072,2-butoxyethanol,Albumin,DB12911,CCCCOCCOC(=O)c1cccnc1,CCCCOCCO,DrugBank,0.325,test
+DB00243,Ranolazine,DBMET02256,CVT-5029,,DB00243,COc1ccccc1OCC(O)CN1CCN(CC(=O)Nc2c(C)cccc2C)CC1,COc1cc(O)ccc1OCC(O)CN1CCN(CC(=O)Nc2c(C)cccc2C)CC1,DrugBank,0.8214285714285714,test
+DB00396,Progesterone,DBMET01727,21-OH-progesterone,"Cytochrome P450 2C19, Cytochrome P450 2C9",DB00396,CC(=O)C1CCC2C3CCC4=CC(=O)CCC4(C)C3CCC12C,CC12CCC(=O)C=C1CCC1C2CCC2(C)C(C(=O)CO)CCC12,Both,0.7755102040816326,test
+DBMET00254,2-hydroxyimipramine,DBMET00680,2-hydroxy-imipramine glucuronide,,DB00458,CN(C)CCCN1c2ccccc2CCc2cc(O)ccc21,CN(C)CCCN1c2ccccc2CCc2cc(OC3OC(C(=O)O)C(O)C(O)C3O)ccc21,DrugBank,0.5238095238095238,test
+DB00862,Vardenafil,DBMET03640,N-desethylvardenafil,Cytochrome P450 3A4,DB00862,CCCc1nc(C)c2c(=O)nc(-c3cc(S(=O)(=O)N4CCN(CC)CC4)ccc3OCC)[nH]n12,CCCc1nc(C)c2c(=O)nc(-c3cc(S(=O)(=O)N4CCNCC4)ccc3OCC)[nH]n12,DrugBank,0.8307692307692308,test
+DBMET00109,3'-Hydroxyhexobarbital,DBMET01214,3'-Oxohexobarbital,,DB01355,CN1C(=O)N=C(O)C(C)(C2=CC(O)CCC2)C1=O,CN1C(=O)NC(=O)C(C)(C2=CC(=O)CCC2)C1=O,DrugBank,0.3396226415094339,test
+DBMET00558,Dihydrotestosterone,DBMET02830,5-alpha androstanedione,,DB01420,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2O,CC12CCC3C(CCC4CC(=O)CCC43C)C1CCC2=O,DrugBank,0.6511627906976745,test
+DB11366,Roquinimex,DBMET01691,"4,7-dihydroxy-N,1-dimethyl-2-oxo-N-phenyl-1,2-dihydroquinoline-3-carboxamide",Cytochrome P450 3A4,DB11366,CN(C(=O)c1c(O)c2ccccc2n(C)c1=O)c1ccccc1,CN(C(=O)c1c(O)c2ccc(O)cc2n(C)c1=O)c1ccccc1,Both,0.7727272727272727,test
+DB00674,Galantamine,DBMET03139,Galantamine N-oxide,Cytochrome P450 3A4,DB00674,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,COc1ccc2c3c1OC1CC(O)C=CC31CC[N+](C)([O-])C2,Both,0.6440677966101694,test
+DB13609,Umifenovir,DBMET03044,Arbidol M5 metabolite,"Cytochrome P450 3A4, Flavin-containing monooxygenase 1, Flavin-containing monooxygenase 3",DB13609,CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(O)c(CN(C)C)c12,CCOC(=O)c1c(C[S+]([O-])c2ccccc2)n(C)c2cc(Br)c(O)c(CNC)c12,DrugBank,0.5555555555555556,test
+,3-Indole carboxylic acid,,,UGT,3-Indole carboxylic acid,O=C(O)c1c[nH]c2ccccc12,O=C(OC1OC(C(=O)O)C(O)C(O)C1O)c1c[nH]c2ccccc12,MetXBioDB,0.4883720930232558,test
+,4-Ethylphenol,,,UGT1A9,4-Ethylphenol,CCc1ccc(O)cc1,CCc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1,MetXBioDB,0.3076923076923077,test
+DB00603,Medroxyprogesterone acetate,DBMET02809,6β-Hydroxymedroxyprogesterone Acetate (M-2),Cytochrome P450 3A4,DB00603,CC(=O)OC1(C(C)=O)CCC2C3CC(C)C4=CC(=O)CCC4(C)C3CCC21C,CC(=O)OC1(C(C)=O)CCC2C3CC(C)(O)C4=CC(=O)CCC4(C)C3CCC21C,Both,0.6896551724137931,test
+,"Desmethylsibutramine, (S)-",,1-[1-(4-chlorophenyl)cyclobutyl]-3-methylbutylamine,CYP2B6,"Desmethylsibutramine, (S)-",CNC(CC(C)C)C1(c2ccc(Cl)cc2)CCC1,CC(C)CC(N)C1(c2ccc(Cl)cc2)CCC1,MetXBioDB,0.631578947368421,test
+DB09526,Hydroquinone,DBMET02100,hydroquinone glucuronide,,DB03255,Oc1ccc(O)cc1,O=C(O)C1C(O)C(O)C(O)C(O)C1Oc1ccc(O)cc1,DrugBank,0.2758620689655172,test
+DB16200,Iptacopan,DBMET03749,M6 iptacopan,,DB16200,CCOC1CCN(Cc2c(OC)cc(C)c3[nH]ccc23)C(c2ccc(C(=O)O)cc2)C1,CCOC1CCN(Cc2c(OC)cc(CO)c3[nH]ccc23)C(c2ccc(C(=O)O)cc2)C1,DrugBank,0.8235294117647058,test
+,Esfenvalerate,,4'-OH-esfenvalerate,CYP2C8; CYP2C9; CYP2C19; CYP3A4; CYP3A5,Esfenvalerate,CC(C)C(C(=O)OC(C#N)c1cccc(Oc2ccccc2)c1)c1ccc(Cl)cc1,CC(C)C(C(=O)OC(C#N)c1cccc(Oc2ccc(O)cc2)c1)c1ccc(Cl)cc1,MetXBioDB,0.8627450980392157,test
+,Tizoxanide,,,UGT,Tizoxanide,O=C(Nc1ncc([N+](=O)[O-])s1)c1ccccc1O,O=C(Nc1ncc([N+](=O)[O-])s1)c1ccccc1OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,0.55,test
+DB00640,Adenosine,DBMET00485,Adenosine monophosphate,Adenosine kinase,DB00640,Nc1ncnc2c1ncn2C1OC(CO)C(O)C1O,Nc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O,DrugBank,0.68,test
+DB11763,Momelotinib,DBMET03717,Momelotinib M5 metabolite,,DB11763,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N(CC(=O)O)CC(=O)O)cc3)n2)cc1,DrugBank,0.6363636363636364,test
+,Rabeprazole (rabeprazole_thioether),,Desmethylrabeprazole-thioether,CYP1A2;CYP2A6;CYP2B6;CYP2C9;CYP2C19;CYP2D6;CYP2E1;CYP3A4,Rabeprazole (rabeprazole_thioether),COCCCOc1ccnc(CSc2nc3ccccc3[nH]2)c1C,Cc1c(OCCCO)ccnc1CSc1nc2ccccc2[nH]1,MetXBioDB,0.8076923076923077,test
+,"7,3p,4p-Trihydroxyflavone",,,UGT1A9,"7,3p,4p-Trihydroxyflavone",O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)ccc12,O=C(O)C1OC(Oc2ccc3c(=O)cc(-c4ccc(O)c(O)c4)oc3c2)C(O)C(O)C1O,MetXBioDB,0.5370370370370371,test
+DB00477,Chlorpromazine,DBMET01627,Opromazine,Cytochrome P450 3A4,DB00477,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,CN(C)CCCN1c2ccccc2[S+]([O-])c2ccc(Cl)cc21,Both,0.6041666666666666,test
+,4-aminobenzoate,,4-acetylaminobenzoate,NAT,4-aminobenzoate,Nc1ccc(C(=O)O)cc1,CC(O)=Nc1ccc(C(=O)O)cc1,MetXBioDB,0.4444444444444444,test
+DB11421,Imidacloprid,DBMET01823,"1H-Imidazol-2-amine, 1-((6-chloro-3-pyridinyl)methyl)-4,5-dihydro-N-nitroso-","Cytochrome P450 2B6, Cytochrome P450 2D6, Cytochrome P450 2E1, Cytochrome P450 3A4",DB11421,O=[N+]([O-])N=C1NCCN1Cc1ccc(Cl)nc1,O=NNC1=NCCN1Cc1ccc(Cl)nc1,DrugBank,0.4545454545454545,test
+DB00730,Thiabendazole,DBMET01768,5-hydroxythiabendazole,Cytochrome P450 1A2,DB00730,c1ccc2[nH]c(-c3cscn3)nc2c1,Oc1ccc2nc(-c3cscn3)[nH]c2c1,Both,0.7027027027027027,test
+DB03852,Eucalyptol,DBMET01574,"3alpha-hydroxy-1,8-cineole",Cytochrome P450 3A4,DB03852,CC12CCC(CC1)C(C)(C)O2,CC12CCC(C(O)C1)C(C)(C)O2,Both,0.4482758620689655,test
+DBMET02938,Levamlodipine M10 metabolite,DBMET02941,Levamlodipine M12 metabolite,,DB09237,CCOC(=O)c1c(COCCO)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,CCOC(=O)c1c(COCC(=O)O)nc(C)c(C(=O)OC)c1-c1ccccc1Cl,DrugBank,0.7894736842105263,test
+DB11431,Moxidectin,DBMET02120,Monohydroxy metabolite of moxidectin at C29,"Cytochrome P450 3A Subfamily, CYP2B protein",DB11431,CON=C1CC2(CC3CC(CC=C(C)CC(C)C=CC=C4COC5C(O)C(C)=CC(C(=O)O3)C45O)O2)OC(C(C)=CC(C)C)C1C,CON=C1CC2(CC3CC(CC=C(C)CC(C)C=CC=C4COC5C(O)C(C)=CC(C(=O)O3)C45O)O2)OC(C(C)=CC(C)CO)C1C,DrugBank,0.9032258064516128,test
+DB11827,Ertugliflozin,DBMET01912,Ertugliflozin M4a metabolite,"UDP-glucuronosyltransferase 1A9, UDP-glucuronosyltransferase 2B7",DB11827,CCOc1ccc(Cc2cc(C34OCC(CO)(O3)C(O)C(O)C4O)ccc2Cl)cc1,CCOc1ccc(Cc2cc(C34OCC(CO)(O3)C(OC3OC(C(=O)O)C(O)C(O)C3O)C(O)C4O)ccc2Cl)cc1,DrugBank,0.6901408450704225,test
+,nabumetone,,4Ã¢â‚¬ÂhydroxyÃ¢â‚¬Â4Ã¢â‚¬Â(6Ã¢â‚¬ÂmethoxynaphthalenÃ¢â‚¬Â2Ã¢â‚¬Âyl)butanÃ¢â‚¬Â2Ã¢â‚¬Âone,CYP1A2,nabumetone,COc1ccc2cc(CCC(C)=O)ccc2c1,COc1ccc2cc(C(O)CC(C)=O)ccc2c1,MetXBioDB,0.525,test
+DB01233,Metoclopramide,DBMET02779,Monodeethylmetoclopramide,"Cytochrome P450 2D6, Cytochrome P450 3A4, Cytochrome P450 1A2",DB01233,CCN(CC)CCNC(=O)c1cc(Cl)c(N)cc1OC,CCNCCNC(=O)c1cc(Cl)c(NC(=O)C(F)(F)C(F)(F)C(F)(F)F)cc1OC,DrugBank,0.421875,test
+DBMET02619,"diclofenac 2',3'-oxide",DBMET02620,2'-hydroxy-3'-glutathione conjugated diclofenac,,DB00586,O=C(O)Cc1ccccc1NC1=C(Cl)C=CC2OC12Cl,NC(CCC(=O)NC(CSC1C=CC(Cl)=C(Nc2ccccc2CC(=O)O)C1(O)Cl)C(=O)NCC(=O)O)C(=O)O,DrugBank,0.4210526315789473,test
+,5-methylchrysene,,"5-Methyl-1,2-dihydrochrysene-1,2-diol",CYP1A2;CYP2D6;CYP2E1;CYP3A4,5-methylchrysene,Cc1cc2ccccc2c2ccc3ccccc3c12,Cc1cc2ccccc2c2ccc3c(c12)C=CC(O)C3O,MetXBioDB,0.5128205128205128,test
+,tentoxin,,,CYP3A4,tentoxin,CC(C)CC1N=C(O)C(C)N(C)C(=O)CN=C(O)C(=Cc2ccccc2)N(C)C1=O,CC(C)CC1N=C(O)C(C)N(C)C(=O)CN=C(O)C(=Cc2ccccc2)N=C1O,MetXBioDB,0.7213114754098361,test
+DB00238,Nevirapine,DBMET00075,2-Hydroxynevirapine,"Cytochrome P450 3A4, Cytochrome P450 3A5",DB00238,Cc1ccnc2c1NC(=O)c1cccnc1N2C1CC1,Cc1cc(O)nc2c1N=C(O)c1cccnc1N2C1CC1,DrugBank,0.4561403508771929,test
+DB06282,Levocetirizine,DBMET02642,Levocetirizine N-oxide Metabolite (M3),,DB06282,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,O=C(O)COCC[N+]1(O)CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,DrugBank,0.6730769230769231,test
+DB00471,Montelukast,DBMET01246,Montelukast metabolite M5a,Cytochrome P450 3A4,DB00471,CC(C)(O)c1ccccc1CCC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,CC(C)(O)c1ccccc1C(O)CC(SCC1(CC(=O)O)CC1)c1cccc(C=Cc2ccc3ccc(Cl)cc3n2)c1,Both,0.7875,test
+DBMET01252,Zafirlukast metabolite M4,DBMET01253,Zafirlukast metabolite M3,,DB00549,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(CO)c2ccc(NC(C)=O)cc12,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1c[nH]c2ccc(NC(C)=O)cc12,DrugBank,0.6891891891891891,test
+DB01156,Bupropion,DBMET03468,S-4'-hydroxybupropion,Cytochrome P450 2C19,DB01156,CC(NC(C)(C)C)C(=O)c1cccc(Cl)c1,CC(NC(C)(C)C)C(=O)c1ccc(O)c(Cl)c1,Both,0.625,test
+DB00818,Propofol,DBMET00194,Propofol glucuronide,"UDP-glucuronosyltransferase 1A8, UDP-glucuronosyltransferase 1A9",DB00818,CC(C)c1cccc(C(C)C)c1O,CC(C)c1cccc(C(C)C)c1OC1OC(C(=O)O)C(O)C(O)C1O,Both,0.3170731707317073,test
+DB13919,Candesartan,DBMET00005,O-Deethylated candesartan,Cytochrome P450 2C9,DB00796,CCOc1nc2cccc(C(=O)O)c2n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,O=C(O)c1cccc2nc(O)n(Cc3ccc(-c4ccccc4-c4nn[nH]n4)cc3)c12,DrugBank,0.5882352941176471,test
+DB00503,Ritonavir,DBMET00084,N-Desmethylritonavir,"Cytochrome P450 3A5, Cytochrome P450 3A4, Cytochrome P450 2D6",DB00503,CC(C)c1nc(CN(C)C(=O)NC(C(=O)NC(Cc2ccccc2)CC(O)C(Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1,CC(C)c1nc(CNC(=O)NC(C(=O)NC(Cc2ccccc2)CC(O)C(Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1,DrugBank,0.8048780487804879,test
+,2_2_4_4_5_5-hexachlorobiphenyl,,,CYP2B6,2_2_4_4_5_5-hexachlorobiphenyl,Clc1cc(Cl)c(-c2cc(Cl)c(Cl)cc2Cl)cc1Cl,Oc1c(Cl)c(Cl)cc(-c2cc(Cl)c(Cl)cc2Cl)c1Cl,MetXBioDB,0.5714285714285714,test
+DB01159,Halothane,DBMET01783,Trifluoroacetyl chloride,"Cytochrome P450 2E1, Cytochrome P450 2A6",DB01159,FC(F)(F)C(Cl)Br,O=C(Cl)C(F)(F)F,Both,0.2222222222222222,test
+DB00339,Pyrazinamide,DBMET00415,5-hydroxypyrazinamide,Aldehyde oxidase,DB00339,NC(=O)c1cnccn1,NC(=O)c1c[nH]c(=O)cn1,DrugBank,0.4333333333333333,test
+DB00946,Phenprocoumon,DBMET00041,8-Hydroxy-R-phenprocoumon,"Cytochrome P450 2C9, Cytochrome P450 3A4",DB00946,CCC(c1ccccc1)c1c(O)c2ccccc2oc1=O,CCC(c1ccccc1)c1c(O)c2cccc(O)c2oc1=O,DrugBank,0.7073170731707317,test
+,"4p,5-diOH-diclofenac",,,UGT,"4p,5-diOH-diclofenac",O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cc(O)cc1Cl,O=C(O)Cc1cc(O)ccc1Nc1c(Cl)cc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1Cl,MetXBioDB,0.5576923076923077,test
+DBMET00411,N-Acetyl-5-hydroxytryptamine,DBMET00926,N-Acetyl-5-hydroxytryptamine sulfate,,DB01065,CC(=O)NCCc1c[nH]c2ccc(O)cc12,CC(=O)NCCc1c[nH]c2ccc(OS(=O)(=O)O)cc12,Both,0.6458333333333334,test
+DB00465,Ketorolac,DBMET02315,rac Ketorolac Glucuronide,UDP-glucuronosyltransferase 2B7,DB00465,O=C(c1ccccc1)c1ccc2n1CCC2C(=O)O,O=C(c1ccccc1)c1ccc2n1CCC2C(=O)OC1OC(C(=O)O)C(O)C(O)C1O,DrugBank,0.6078431372549019,test
+DB01224,Quetiapine,DBMET02794,7-Hydroxyquetiapine,"Cytochrome P450 2D6, Cytochrome P450 3A4",DB01224,OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,OCCOCCN1CCN(C2=Nc3ccc(O)cc3Sc3ccccc32)CC1,Both,0.8076923076923077,test
+,Hydroxyoxid acid,,,UGT,Hydroxyoxid acid,CC1(C)C2CCC3(C)C(C2)C(C(=O)O)CCC13O,CC1(C)C2CCC3(C)C(C2)C(C(=O)O)CCC13OC1OC(C(=O)O)C(O)C(O)C1O,MetXBioDB,0.5294117647058824,test
