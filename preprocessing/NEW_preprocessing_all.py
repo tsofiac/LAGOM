@@ -224,6 +224,22 @@ def set_distribution(data_file, evaluation_csv, val_size, eval_size=0):
             val_df = val_test_df
             test_df = pd.DataFrame()
 
+    else: #if 'origin' does not exist, e.g. for mmp
+        train_df, val_test_df = train_test_split(df, test_size=val_test_size, random_state=set_random_state)
+        train_df.loc[:, 'set'] = 'train'
+        val_test_df.loc[:, 'set'] = 'val/test'
+
+        if eval_size != 0:
+            effective_eval_size = eval_size/(eval_size + val_size)
+            val_df, test_df = train_test_split(val_test_df, test_size=effective_eval_size, random_state=set_random_state)
+            val_df.loc[:, 'set'] = 'val'
+            test_df.loc[:, 'set'] = 'test'
+        else:
+            val_test_df.loc[:, 'set'] = 'val'
+            val_df = val_test_df
+            test_df = pd.DataFrame()
+
+
     df = pd.concat([train_df, val_df, test_df]).reset_index(drop=True)
 
     df.to_csv(data_file, index=False)
