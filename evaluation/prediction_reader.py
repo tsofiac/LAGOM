@@ -46,7 +46,6 @@ def json_to_csv(json_file, csv_file):
 def present_result(input1,input2):
 
     test_df = pd.read_csv(input1)
-    print("len test_df", len(test_df))
     prediction_df = pd.read_csv(input2)
 
     def agg_order_preserved(series):
@@ -57,10 +56,6 @@ def present_result(input1,input2):
         'child_name': agg_order_preserved, 
         'child_smiles': agg_order_preserved 
     }).reset_index()
-
-    grouped.to_csv('evaluation/predictions/grouped.csv', index=False)
-    print("len grouped", len(grouped))
-    print("len prediction_df", len(prediction_df))
 
     if len(grouped) == len(prediction_df):
         grouped['sampled_molecules'] = prediction_df['sampled_molecules']
@@ -108,7 +103,7 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
     print(f'Nr of drugs with less than {max_metabolites} valid SMILES: ', count)
     df.to_csv(input_file, index=False)
 
-def top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name):
+def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_name):
 
     score1 = 0
     score3 = 0
@@ -156,21 +151,53 @@ def top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name):
         if count_top10 > 0:
             score10 += 1 
 
-        # total = len(child_smiles_i) if len(child_smiles_i) < 1 else 1
-        # score1 = score1 + (count_top1 / total)
-        # total = len(child_smiles_i) if len(child_smiles_i) < 3 else 3
-        # score3 = score3 + (count_top3 / total)
-        # total = len(child_smiles_i) if len(child_smiles_i) < 5 else 5
-        # score5 = score5 + (count_top5 / total)
-        # total = len(child_smiles_i) if len(child_smiles_i) < 10 else 10
-        # score10 = score10 + (count_top10 / total)
-
     score1 = score1 / len(parent_name)
     score3 = score3 / len(parent_name)
     score5 = score5 / len(parent_name)
     score10 = score10 / len(parent_name)
 
     return score1, score3, score5, score10, scatter_x, scatter_y
+
+def top_k_accuracy(parent_name, sampled_molecules, child_smiles):
+
+    score1 = 0
+    score3 = 0
+    score5 = 0
+    score10 = 0
+    scatter_x = []
+    scatter_y = []
+    nr_of_metabolites = 0
+    for i in range(len(parent_name)):
+        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+        child_smiles_i = ast.literal_eval(child_smiles[i])
+
+        sampled_molecules_i = standardize_smiles_collection(sampled_molecules_i, False)
+
+        nr_of_metabolites += len(child_smiles_i)
+        for j in range(len(child_smiles_i)):
+            for k in range(len(sampled_molecules_i)):
+                if child_smiles_i[j] == sampled_molecules_i[k]:
+                    if k < 10:
+                        score10 += 1
+                    if k < 5:
+                        score5 += 1
+                    if k < 3:
+                        score3 += 1
+                    if k < 1:
+                        score1 += 1
+                    break
+
+    print(score1)
+    print(score3)
+    print(score5)
+    print(score10)
+    print(nr_of_metabolites)
+    score1 = score1 / nr_of_metabolites
+    score3 = score3 / nr_of_metabolites
+    score5 = score5 / nr_of_metabolites
+    score10 = score10 / nr_of_metabolites
+
+    return score1, score3, score5, score10
 
 def precision_score(parent_name, sampled_molecules, child_smiles):
 
@@ -203,7 +230,9 @@ def score_result(input_file):
     child_name = df['child_name']
     child_smiles = df['child_smiles']
 
-    score1, score3, score5, score10, scatter_x, scatter_y = top_k_accuracy(parent_name, sampled_molecules, child_smiles, child_name)
+    # score1, score3, score5, score10 = top_k_accuracy(parent_name, sampled_molecules, child_smiles)
+
+    score1, score3, score5, score10, scatter_x, scatter_y = at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_name)
 
     print(f'Score top1: {score1:.3f}')
     print(f'Score top3: {score3:.3f}')
@@ -221,11 +250,11 @@ def score_result(input_file):
 
 
 
-testset = 'dataset/curated_data/combined_evaluation.csv'
-# testset = 'dataset/curated_data/gloryx_smiles_clean.csv' #gloryx
+testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
+# testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version2'
+name = 'version38'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
@@ -233,31 +262,3 @@ json_to_csv(json_file, csv_file)
 present_result(testset, csv_file)
 save_n_valid_smiles(csv_file, 10)
 score_result(csv_file)
-
-
-'''
-With parent dup, dup and smiles
-Score top1: 0.405
-Score top3: 0.568
-Score top5: 0.568
-Score top10: 0.595
-Precision: 0.184
-'''
-
-'''
-With dup and valid smiles
-Score top1: 0.135
-Score top3: 0.541
-Score top5: 0.568
-Score top10: 0.595
-Precision: 0.132
-'''
-
-'''
-With only valid smiles
-Score top1: 0.135
-Score top3: 0.541
-Score top5: 0.568
-Score top10: 0.595
-Precision: 0.132
-'''
