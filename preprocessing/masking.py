@@ -42,6 +42,41 @@ def apply_span_mask(smiles:str, mask_prob, span_lambda=2.0):
 def detokenize(tokens: List[str]) -> str:
         return ''.join(tokens)
 
+def apply_span_mask_annotated(smiles_with_info: str, mask_prob, span_lambda=2.0):
+    # Find the position after the second ']'
+    second_bracket_index = smiles_with_info.find(']', smiles_with_info.find(']') + 1) + 1
+    
+    # Split the annotated part from the actual SMILES part
+    annotated_part = smiles_with_info[:second_bracket_index]
+    smiles_part = smiles_with_info[second_bracket_index:]
+
+    # Tokenize the SMILES part only
+    tokens = list(smiles_part)
+    curr_idx = 0
+    masked = []
+    token_mask = []
+
+    # Prepare random choices for masking
+    mask_bools = [True, False]
+    weights = [mask_prob, 1 - mask_prob]
+    sampled_mask = random.choices(mask_bools, weights=weights, k=len(tokens))
+
+    while curr_idx < len(tokens):
+        if sampled_mask[curr_idx]:
+            # Sample length of mask from a Poisson distribution
+            mask_len = max(torch.poisson(torch.tensor(span_lambda)).long().item(), 1)
+            masked.append("<MASK>")
+            token_mask.append(True)
+            curr_idx += mask_len
+        else:
+            masked.append(tokens[curr_idx])
+            token_mask.append(False)
+            curr_idx += 1
+
+    masked_smiles = detokenize(masked)
+
+    return annotated_part + masked_smiles
+
 # --------------ReplaceTokensMasker-----------------
 # Different from the one in Chemformer
 
@@ -71,7 +106,7 @@ def apply_replace_mask(smiles:str, mask_prob):
     return masked_smiles
 
 # ----------------------------------------------
-def mask_dataset(csv_file, mask_prob, masked_file, masker_type):
+def mask_dataset(csv_file, mask_prob, masked_file, masker_type, annotated=False):
 
     df = pd.read_csv(csv_file)
     parent_smiles = df['parent_smiles']
@@ -84,7 +119,10 @@ def mask_dataset(csv_file, mask_prob, masked_file, masker_type):
 
         for _ in range(1):
             if masker_type == 'spanmask':
-                smiles_masked = apply_span_mask(parent_smiles, mask_prob)
+                if annotated:
+                    smiles_masked = apply_span_mask_annotated(parent_smiles, mask_prob)
+                else:
+                    smiles_masked = apply_span_mask(parent_smiles, mask_prob)
             elif masker_type == 'replacemask':
                 smiles_masked = apply_replace_mask(parent_smiles, mask_prob)
             else:
@@ -106,16 +144,39 @@ def mask_dataset(csv_file, mask_prob, masked_file, masker_type):
     masked_dataset = pd.concat([df, masked_dataset])
     masked_dataset.to_csv(masked_file, index=False)
 
+#-------------prepare for finetune----------
+def reformat_for_chemformer(input_file, output_file):
+    df = pd.read_csv(input_file)
+
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+    })
+
+    df.to_csv(output_file, sep='\t', index=False)
 
 if __name__ == "__main__":
      
-    mask_prob = 0.1
-    masker_type = 'replacemask' #'replacemask'  'spanmask'
+    mask_prob = 0.05
+    masker_type = 'spanmask' #'replacemask' 'spanmask'
+    annotated = True #works only for eactly 2 annotations #only for spanmask
 
-    csv_file = 'dataset/curated_data/combined_smiles.csv'
-    masked_file = f'dataset/curated_data/{masker_type}_smiles_clean.csv'
+    # csv_file = 'dataset/curated_data/randomised.csv'
+    # csv_file = 'dataset/curated_data/combined_smiles.csv'
+    #csv_file = 'dataset/curated_data/annotated_data/annotations_combined_smiles_clean.csv'
+    
 
-    mask_dataset(csv_file, mask_prob, masked_file, masker_type)
+    if annotated == False:
+        csv_file = 'dataset/curated_data/combined_smiles.csv'
+        masked_file = f'dataset/curated_data/{masker_type}_{mask_prob}_smiles_clean.csv'
+        finetune_file = f'dataset/finetune/{masker_type}_{mask_prob}_finetune.csv'
+    else:
+        csv_file = 'dataset/curated_data/annotated_data/annotations_combined_smiles_clean.csv'
+        masked_file = f'dataset/curated_data/{masker_type}_{mask_prob}_annotated_smiles_clean.csv'
+        finetune_file = f'dataset/finetune/{masker_type}_{mask_prob}_annotated_finetune.csv'
+
+    mask_dataset(csv_file, mask_prob, masked_file, masker_type, annotated)
+    reformat_for_chemformer(masked_file, finetune_file)
 
 
 
