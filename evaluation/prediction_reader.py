@@ -5,7 +5,7 @@ import sys
 import os
 from rdkit import Chem
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from preprocessing.standardize_smiles import standardize_smiles_collection
+from preprocessing.standardize_smiles import standardize_smiles_collection, standardize_molecule
 
 
 def json_to_csv(json_file, csv_file):
@@ -81,6 +81,7 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
         count_parent = 0
         for smiles in sampled_molecules_i:
             if Chem.MolFromSmiles(smiles) is not None:
+                smiles = standardize_molecule(smiles)
                 if smiles not in valid_smiles:
                     if smiles != parent_smiles_i:
                         valid_smiles.append(smiles)
@@ -89,11 +90,9 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
                 else:
                     count_dup += 1
 
-        # valid_smiles = [smile for smile in sampled_molecules_i if Chem.MolFromSmiles(smile) is not None]
-
-        print("nr of valid smiles: ",len(valid_smiles))
         print('nr of dup: ', count_dup)
         print('nr of parent dup: ', count_parent)
+        print("nr of valid smiles: ",len(valid_smiles))
 
         if len(valid_smiles) < max_metabolites:
             count += 1
@@ -115,8 +114,6 @@ def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
         # child_name_i = ast.literal_eval(child_name[i])
-
-        sampled_molecules_i = standardize_smiles_collection(sampled_molecules_i, False)
         
         # print(f'For {parent_name[i]}: ')
         count_top1 = 0
@@ -138,7 +135,6 @@ def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_
                     break
 
         # print(f'{parent_name[i]}: {count_top10} / {len(child_smiles_i)}')
-
         scatter_x.append(len(child_smiles_i))
         scatter_y.append(count_top10)
 
@@ -170,8 +166,6 @@ def top_k_accuracy(parent_name, sampled_molecules, child_smiles):
     for i in range(len(parent_name)):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
-
-        sampled_molecules_i = standardize_smiles_collection(sampled_molecules_i, False)
 
         nr_of_metabolites += len(child_smiles_i)
         for j in range(len(child_smiles_i)):
@@ -206,8 +200,6 @@ def precision_score(parent_name, sampled_molecules, child_smiles):
     for i in range(len(parent_name)):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
-
-        sampled_molecules_i = standardize_smiles_collection(sampled_molecules_i, False)
 
         TP_i = 0
         for j in range(len(child_smiles_i)):
@@ -248,13 +240,11 @@ def score_result(input_file):
     
 
 
-
-
 testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version38'
+name = 'version39'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
@@ -262,3 +252,4 @@ json_to_csv(json_file, csv_file)
 present_result(testset, csv_file)
 save_n_valid_smiles(csv_file, 10)
 score_result(csv_file)
+
