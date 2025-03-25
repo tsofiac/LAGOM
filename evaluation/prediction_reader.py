@@ -147,6 +147,16 @@ def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_
         if count_top10 > 0:
             score10 += 1 
 
+        
+         # total = len(child_smiles_i) if len(child_smiles_i) < 1 else 1
+         # score1 = score1 + (count_top1 / total)
+         # total = len(child_smiles_i) if len(child_smiles_i) < 3 else 3
+         # score3 = score3 + (count_top3 / total)
+         # total = len(child_smiles_i) if len(child_smiles_i) < 5 else 5
+         # score5 = score5 + (count_top5 / total)
+         # total = len(child_smiles_i) if len(child_smiles_i) < 10 else 10
+         # score10 = score10 + (count_top10 / total)
+
     score1 = score1 / len(parent_name)
     score3 = score3 / len(parent_name)
     score5 = score5 / len(parent_name)
@@ -244,7 +254,7 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version39'
+name = 'version44'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 

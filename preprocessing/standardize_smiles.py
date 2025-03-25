@@ -27,6 +27,7 @@ def standardize_molecule(smiles, isomericSmiles=True):
             mol = Chem.MolFromSmiles(max_frag)
         mol = standardize_mol(mol)
         clean_smiles = Chem.MolToSmiles(mol, isomericSmiles=isomericSmiles) #removing (False) or keeping (True) stereochemistry
+        # clean_smiles = Chem.MolToSmiles(mol, isomericSmiles=isomericSmiles, kekuleSmiles=True) #added by Sofia, for kekulisation
         if Chem.MolFromSmiles(clean_smiles) is None:
             clean_smiles = None  
     except:
