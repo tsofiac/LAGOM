@@ -113,32 +113,36 @@ def mask_dataset(csv_file, mask_prob, masked_file, masker_type, annotated=False)
 
     masked_data = []
     for index, row in df.iterrows():
+        if row['set'] == 'train': # Only mask training data
 
-        parent_smiles = row['parent_smiles']
-        child_smiles = row['child_smiles']
+            parent_smiles = row['parent_smiles']
+            child_smiles = row['child_smiles']
 
-        for _ in range(1):
-            if masker_type == 'spanmask':
-                if annotated:
-                    smiles_masked = apply_span_mask_annotated(parent_smiles, mask_prob)
+            for _ in range(1):
+                if masker_type == 'spanmask':
+                    if annotated:
+                        smiles_masked = apply_span_mask_annotated(parent_smiles, mask_prob)
+                    else:
+                        smiles_masked = apply_span_mask(parent_smiles, mask_prob)
+                elif masker_type == 'replacemask':
+                    smiles_masked = apply_replace_mask(parent_smiles, mask_prob)
                 else:
-                    smiles_masked = apply_span_mask(parent_smiles, mask_prob)
-            elif masker_type == 'replacemask':
-                smiles_masked = apply_replace_mask(parent_smiles, mask_prob)
-            else:
-                print("WARNING: ", masker_type, " is not a valid masker type")
+                    print("WARNING: ", masker_type, " is not a valid masker type")
 
-            masked_row = {
-                'parent_name': row['parent_name'],
-                'child_name': row['child_name'],
-                'parent_smiles': smiles_masked,
-                'child_smiles': row['child_smiles'],
-                'origin': row['origin'],
-                'source': row['source'],
-                'set': row['set']
-            }
-                
-            masked_data.append(masked_row)
+                masked_row = {
+                    'parent_name': row['parent_name'],
+                    'child_name': row['child_name'],
+                    'parent_smiles': smiles_masked,
+                    'child_smiles': row['child_smiles'],
+                    'origin': row['origin'],
+                    'source': row['source'],
+                    'set': row['set']
+                }
+                    
+                masked_data.append(masked_row)
+
+        else: 
+            masked_data.append(row.to_dict())
 
     masked_dataset = pd.DataFrame(masked_data)
     masked_dataset = pd.concat([df, masked_dataset])
@@ -156,10 +160,15 @@ def reformat_for_chemformer(input_file, output_file):
     df.to_csv(output_file, sep='\t', index=False)
 
 if __name__ == "__main__":
+
+    seed = 13
+    random.seed(seed)
+    torch.manual_seed(seed)
      
     mask_prob = 0.05
     masker_type = 'spanmask' #'replacemask' 'spanmask'
-    annotated = True #works only for eactly 2 annotations #only for spanmask
+    annotated = False #works only for exactly 2 annotations, easy to adapt code though #only for spanmask
+    name = 'v5'
 
     # csv_file = 'dataset/curated_data/randomised.csv'
     # csv_file = 'dataset/curated_data/combined_smiles.csv'
@@ -168,8 +177,8 @@ if __name__ == "__main__":
 
     if annotated == False:
         csv_file = 'dataset/curated_data/combined_smiles.csv'
-        masked_file = f'dataset/curated_data/{masker_type}_{mask_prob}_smiles_clean.csv'
-        finetune_file = f'dataset/finetune/{masker_type}_{mask_prob}_finetune.csv'
+        masked_file = f'dataset/curated_data/{masker_type}_{mask_prob}_{name}_smiles_clean.csv'
+        finetune_file = f'dataset/finetune/{masker_type}_{mask_prob}_{name}_finetune.csv'
     else:
         csv_file = 'dataset/curated_data/annotated_data/annotations_combined_smiles_clean.csv'
         masked_file = f'dataset/curated_data/{masker_type}_{mask_prob}_annotated_smiles_clean.csv'
