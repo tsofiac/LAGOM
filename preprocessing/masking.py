@@ -37,7 +37,7 @@ def apply_span_mask(smiles, mask_prob, span_lambda=2.0):
         if sampled_mask[curr_idx]:
             # Sample length of mask from a Poisson distribution
             mask_len = torch.poisson(torch.tensor(span_lambda)).long().item()
-            print(mask_len)
+            #print(mask_len)
             masked.append("<MASK>")
             token_mask.append(True)
             if mask_len == 0:
@@ -149,17 +149,10 @@ def mask_dataset(csv_file, mask_prob, masked_file, masker_type, n_masked_sets, a
                         print("WARNING: ", masker_type, " is not a valid masker type")
 
                     if parent_smiles != smiles_masked:
-                        masked_row = {
-                            'parent_name': row['parent_name'],
-                            'child_name': row['child_name'],
-                            'parent_smiles': smiles_masked,
-                            'child_smiles': row['child_smiles'],
-                            'origin': row['origin'],
-                            'source': row['source'],
-                            'set': row['set']
-                        }
+                        masked_row = row.to_dict()
+                        masked_row['parent_smiles'] = smiles_masked
                         
-                    masked_data.append(masked_row)
+                        masked_data.append(masked_row)
 
             #else: 
                 #masked_data.append(row.to_dict())
@@ -183,13 +176,13 @@ def reformat_for_chemformer(input_file, output_file):
 
 if __name__ == "__main__":
 
-    seed = 27
-    random.seed(seed)
-    torch.manual_seed(seed)
+    # seed = 27
+    # random.seed(seed)
+    # torch.manual_seed(seed)
      
-    mask_prob = 1
+    mask_prob = 0.05
     masker_type = 'spanmask' #'replacemask' 'spanmask'
-    n_masked_sets = 0.05
+    n_masked_sets = 3
     annotated = False #works only for exactly 2 annotations, easy to adapt code though #only for spanmask
     name = ''
 
