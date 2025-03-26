@@ -4,12 +4,26 @@ import random
 from typing import Any, Dict, List, Optional, Tuple
 import torch
 from omegaconf import DictConfig
+import re
 
+#------------tokenising--------------
+#Cl, Br, [ ]
+def tokenize(smiles):
+     # Regular expression to match brackets and everything inside them, and making sure Cl and Br are tokens
+    pattern = r'Cl|Br|\[[^\]]+\]|\S'
+    
+    # Find all matches according to the pattern
+    tokens = re.findall(pattern, smiles)
+    
+    return tokens
+# smiles_string = 'O=[N+]([O-])cnnOC1COC2C(O)COC12-Br=Cl'
+# tokens = tokenize(smiles_string)
+# print(tokens)
 
 # ---------------SpanTokensMasker---------------
 
-def apply_span_mask(smiles:str, mask_prob, span_lambda=2.0):
-    tokens = list(smiles)
+def apply_span_mask(smiles, mask_prob, span_lambda=2.0):
+    tokens = tokenize(smiles)
     curr_idx = 0
     masked = []
     token_mask = []
@@ -159,6 +173,8 @@ def reformat_for_chemformer(input_file, output_file):
 
     df.to_csv(output_file, sep='\t', index=False)
 
+
+
 if __name__ == "__main__":
 
     seed = 13
@@ -187,6 +203,3 @@ if __name__ == "__main__":
     mask_dataset(csv_file, mask_prob, masked_file, masker_type, annotated)
     reformat_for_chemformer(masked_file, finetune_file)
 
-
-
-   
