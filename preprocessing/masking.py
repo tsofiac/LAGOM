@@ -65,7 +65,7 @@ def apply_span_mask_annotated(smiles_with_info: str, mask_prob, span_lambda=2.0)
     smiles_part = smiles_with_info[second_bracket_index:]
 
     # Tokenize the SMILES part only
-    tokens = list(smiles_part)
+    tokens = tokenize(smiles_part)
     curr_idx = 0
     masked = []
     token_mask = []
@@ -95,7 +95,7 @@ def apply_span_mask_annotated(smiles_with_info: str, mask_prob, span_lambda=2.0)
 # Different from the one in Chemformer
 
 def apply_replace_mask(smiles:str, mask_prob):
-    tokens = list(smiles)
+    tokens = tokenize(smiles)
     curr_idx = 0
     masked = []
     token_mask = []
@@ -177,14 +177,14 @@ def reformat_for_chemformer(input_file, output_file):
 
 if __name__ == "__main__":
 
-    seed = 13
+    seed = 27
     random.seed(seed)
     torch.manual_seed(seed)
      
     mask_prob = 0.05
     masker_type = 'spanmask' #'replacemask' 'spanmask'
     annotated = False #works only for exactly 2 annotations, easy to adapt code though #only for spanmask
-    name = 'v5'
+    name = 'v6'
 
     # csv_file = 'dataset/curated_data/randomised.csv'
     # csv_file = 'dataset/curated_data/combined_smiles.csv'
