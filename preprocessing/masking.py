@@ -199,7 +199,7 @@ if __name__ == "__main__":
     
 
     if annotated == False:
-        csv_file = 'dataset/curated_data/combined_smiles.csv'
+        csv_file = 'dataset/curated_data/combined_smiles_clean.csv'
         masked_file = f'dataset/curated_data/{masker_type}_{mask_prob}_{name}_smiles_clean.csv'
         finetune_file = f'dataset/finetune/{masker_type}_{mask_prob}_{name}_finetune.csv'
     else:
