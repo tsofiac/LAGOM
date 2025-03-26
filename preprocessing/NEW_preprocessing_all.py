@@ -428,7 +428,7 @@ def get_unique_parents(input_file, output_file):
 
     # Create a new DataFrame from the unique dataset, preserving other columns
     unique_parent_df = pd.DataFrame(unique_parent_dataset).reset_index(drop=True)
-    unique_parent_df = unique_parent_df[['parent_smiles'] + other_columns]
+    unique_parent_df = unique_parent_df[df.columns]
 
     # val_count_end = (unique_parent_df['set'] == 'val').sum()
 
