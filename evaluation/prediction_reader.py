@@ -72,8 +72,12 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
     parent_smiles = df['parent_smiles']
     
     count = 0
+    zero_count = 0
+    total_valid_smiles = 0
+    total_predictions = 0
     for i in range(len(parent_smiles)):
         sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
+        total_predictions += len(sampled_molecules_i)
         parent_smiles_i = parent_smiles[i]
 
         valid_smiles = []
@@ -81,6 +85,7 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
         count_parent = 0
         for smiles in sampled_molecules_i:
             if Chem.MolFromSmiles(smiles) is not None:
+                total_valid_smiles += 1
                 smiles = standardize_molecule(smiles)
                 if smiles not in valid_smiles:
                     if smiles != parent_smiles_i:
@@ -96,10 +101,15 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
         if len(valid_smiles) < max_metabolites:
             count += 1
+        elif len(valid_smiles) < 1:
+            zero_count += 1
 
         df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
 
+    validity = total_valid_smiles / total_predictions
+    print('Validity: ', validity)
     print(f'Nr of drugs with less than {max_metabolites} valid SMILES: ', count)
+    print('Nr of drugs with zero valid SMILES: ', zero_count)
     df.to_csv(input_file, index=False)
 
 def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_name):
@@ -222,6 +232,26 @@ def precision_score(parent_name, sampled_molecules, child_smiles):
     
     return TP / (TP + FP)
 
+def recall_score(parent_name, sampled_molecules, child_smiles):
+
+    TP = 0
+    FN = 0
+    for i in range(len(parent_name)):
+        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+        child_smiles_i = ast.literal_eval(child_smiles[i])
+
+        TP_i = 0
+        for j in range(len(child_smiles_i)):
+            for k in range(len(sampled_molecules_i)):
+                if child_smiles_i[j] == sampled_molecules_i[k]:
+                    TP_i += 1
+                    break
+
+        TP = TP + TP_i
+        FN = FN + (len(child_smiles_i) - TP_i)
+    
+    return TP / (TP + FN)
+
 
 def score_result(input_file):
 
@@ -245,6 +275,10 @@ def score_result(input_file):
 
     print(f'Precision: {precision:.3f}')
 
+    recall = recall_score(parent_name, sampled_molecules, child_smiles)
+
+    print(f'Recall: {recall:.3f}')
+
     print(scatter_x)
     print(scatter_y)
     
@@ -254,7 +288,7 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version44'
+name = 'version54'
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
