@@ -72,8 +72,6 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
     parent_smiles = df['parent_smiles']
     
-    count = 0
-    zero_count = 0
     total_valid_smiles = 0
     total_predictions = 0
     for i in range(len(parent_smiles)):
@@ -98,19 +96,13 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
         print('nr of dup: ', count_dup)
         print('nr of parent dup: ', count_parent)
-        print("nr of valid smiles: ",len(valid_smiles))
-
-        if len(valid_smiles) < max_metabolites:
-            count += 1
-        if len(valid_smiles) < 1:
-            zero_count += 1
+        print("nr of valid smiles left: ",len(valid_smiles))
 
         df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
 
     validity = total_valid_smiles / total_predictions
-    print('Validity: ', validity)
-    print(f'Nr of drugs with less than {max_metabolites} valid SMILES: ', count)
-    print('Nr of drugs with zero valid SMILES: ', zero_count)
+    print('\nValidity: ', validity)
+
     df.to_csv(input_file, index=False)
 
 def specify_df(df, specification = None):
@@ -141,6 +133,22 @@ def specify_df(df, specification = None):
             child_smiles_i = ast.literal_eval(child_smiles[i])
 
             if len(child_smiles_i) > 1:
+                mask.append(True)
+            else:
+                mask.append(False)
+
+        filtered_df = df[mask]
+        filtered_df = filtered_df.reset_index(drop=True)
+
+        return filtered_df
+    
+    elif specification == 3:
+
+        mask = []
+        for i in range(len(parent_name)):
+            child_smiles_i = ast.literal_eval(child_smiles[i])
+
+            if len(child_smiles_i) > 2:
                 mask.append(True)
             else:
                 mask.append(False)
@@ -254,6 +262,21 @@ def specify_df(df, specification = None):
 #     score10 = score10 / nr_of_metabolites
 
 #     return score1, score3, score5, score10
+
+def count_valid_smiles(parent_name, sampled_molecules, max_metabolites):
+
+    count = 0
+    zero_count = 0
+    for i in range(len(parent_name)):
+        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+
+        if len(sampled_molecules_i) < max_metabolites:
+            count += 1
+        if len(sampled_molecules_i) < 1:
+            zero_count += 1
+
+    print(f'\nNr of drugs with less than {max_metabolites} valid SMILES: ', count)
+    print('Nr of drugs with zero valid SMILES: ', zero_count)
 
 def count_correct_metabolites(parent_name, sampled_molecules, child_smiles):
 
@@ -428,7 +451,7 @@ def recall_and_precision(top10, reference, predictions):
     return recall, precision
 
 
-def score_result(input_file, specification):
+def score_result(input_file, max_metabolites, specification):
 
     df = pd.read_csv(input_file)
 
@@ -437,6 +460,8 @@ def score_result(input_file, specification):
     parent_name = df['parent_name']
     sampled_molecules = df['sampled_molecules']
     child_smiles = df['child_smiles']
+
+    count_valid_smiles(parent_name, sampled_molecules, max_metabolites)
 
     top1, top3, top5, top10, reference, predictions = count_correct_metabolites(parent_name, sampled_molecules, child_smiles)
 
@@ -489,12 +514,13 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 json_file = 'results/evaluation/predictions0.json'
 
 name = 'version57'
-specification = None # 1 (only_child) 2 (siblings) None (all)
+specification = None # 1 (only_child) 2 (more than 1) 3 (more than 2) None (all)
+max_metabolites = 10
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
 json_to_csv(json_file, csv_file)
 present_result(testset, csv_file)
-save_n_valid_smiles(csv_file, 10)
-score_result(csv_file, specification)
+save_n_valid_smiles(csv_file, max_metabolites)
+score_result(csv_file, max_metabolites, specification)
 
