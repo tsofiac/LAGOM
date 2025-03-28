@@ -6,6 +6,7 @@ import os
 from rdkit import Chem
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from preprocessing.standardize_smiles import standardize_smiles_collection, standardize_molecule
+import math
 
 
 def json_to_csv(json_file, csv_file):
@@ -101,7 +102,7 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
         if len(valid_smiles) < max_metabolites:
             count += 1
-        elif len(valid_smiles) < 1:
+        if len(valid_smiles) < 1:
             zero_count += 1
 
         df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
@@ -112,20 +113,160 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
     print('Nr of drugs with zero valid SMILES: ', zero_count)
     df.to_csv(input_file, index=False)
 
-def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_name):
+def specify_df(df, specification = None):
 
-    score1 = 0
-    score3 = 0
-    score5 = 0
-    score10 = 0
-    scatter_x = []
-    scatter_y = []
+    parent_name = df['parent_name']
+    child_smiles = df['child_smiles']
+
+    if specification == 1:
+
+        mask = []
+        for i in range(len(parent_name)):
+            child_smiles_i = ast.literal_eval(child_smiles[i])
+
+            if len(child_smiles_i) == 1:
+                mask.append(True)
+            else:
+                mask.append(False)
+
+        filtered_df = df[mask]
+        filtered_df = filtered_df.reset_index(drop=True)
+
+        return filtered_df
+    
+    elif specification == 2:
+
+        mask = []
+        for i in range(len(parent_name)):
+            child_smiles_i = ast.literal_eval(child_smiles[i])
+
+            if len(child_smiles_i) > 1:
+                mask.append(True)
+            else:
+                mask.append(False)
+
+        filtered_df = df[mask]
+        filtered_df = filtered_df.reset_index(drop=True)
+
+        return filtered_df
+
+    else:
+
+        return df
+
+
+# def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_name):
+
+#     score1 = 0
+#     score3 = 0
+#     score5 = 0
+#     score10 = 0
+#     scatter_x = []
+#     scatter_y = []
+#     for i in range(len(parent_name)):
+#         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+#         child_smiles_i = ast.literal_eval(child_smiles[i])
+#         # child_name_i = ast.literal_eval(child_name[i])
+        
+#         # print(f'For {parent_name[i]}: ')
+#         count_top1 = 0
+#         count_top3 = 0
+#         count_top5 = 0
+#         count_top10 = 0
+#         for j in range(len(child_smiles_i)):
+#             for k in range(len(sampled_molecules_i)):
+#                 if child_smiles_i[j] == sampled_molecules_i[k]:
+#                     # print(f'\t"{child_name_i[j]}" matches with sampled molecule {k+1}')
+#                     if k < 10:
+#                         count_top10 += 1
+#                     if k < 5:
+#                         count_top5 += 1
+#                     if k < 3:
+#                         count_top3 += 1
+#                     if k < 1:
+#                         count_top1 += 1
+#                     break
+
+#         # print(f'{parent_name[i]}: {count_top10} / {len(child_smiles_i)}')
+#         scatter_x.append(len(child_smiles_i))
+#         scatter_y.append(count_top10)
+
+#         if count_top1 > 0:
+#             score1 += 1 
+#         if count_top3 > 0:
+#             score3 += 1 
+#         if count_top5 > 0:
+#             score5 += 1 
+#         if count_top10 > 0:
+#             score10 += 1 
+
+#          # total = len(child_smiles_i) if len(child_smiles_i) < 1 else 1
+#          # score1 = score1 + (count_top1 / total)
+#          # total = len(child_smiles_i) if len(child_smiles_i) < 3 else 3
+#          # score3 = score3 + (count_top3 / total)
+#          # total = len(child_smiles_i) if len(child_smiles_i) < 5 else 5
+#          # score5 = score5 + (count_top5 / total)
+#          # total = len(child_smiles_i) if len(child_smiles_i) < 10 else 10
+#          # score10 = score10 + (count_top10 / total)
+
+#     score1 = score1 / len(parent_name)
+#     score3 = score3 / len(parent_name)
+#     score5 = score5 / len(parent_name)
+#     score10 = score10 / len(parent_name)
+
+#     return score1, score3, score5, score10, scatter_x, scatter_y
+
+# def top_k_accuracy(parent_name, sampled_molecules, child_smiles):
+
+#     score1 = 0
+#     score3 = 0
+#     score5 = 0
+#     score10 = 0
+#     scatter_x = []
+#     scatter_y = []
+#     nr_of_metabolites = 0
+#     for i in range(len(parent_name)):
+#         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+#         child_smiles_i = ast.literal_eval(child_smiles[i])
+
+#         nr_of_metabolites += len(child_smiles_i)
+#         for j in range(len(child_smiles_i)):
+#             for k in range(len(sampled_molecules_i)):
+#                 if child_smiles_i[j] == sampled_molecules_i[k]:
+#                     if k < 10:
+#                         score10 += 1
+#                     if k < 5:
+#                         score5 += 1
+#                     if k < 3:
+#                         score3 += 1
+#                     if k < 1:
+#                         score1 += 1
+#                     break
+
+#     print(score1)
+#     print(score3)
+#     print(score5)
+#     print(score10)
+#     print(nr_of_metabolites)
+#     score1 = score1 / nr_of_metabolites
+#     score3 = score3 / nr_of_metabolites
+#     score5 = score5 / nr_of_metabolites
+#     score10 = score10 / nr_of_metabolites
+
+#     return score1, score3, score5, score10
+
+def count_correct_metabolites(parent_name, sampled_molecules, child_smiles):
+
+    top1 = []
+    top3 = []
+    top5 = []
+    top10 = []
+    reference = []
+    predictions = []
     for i in range(len(parent_name)):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
-        # child_name_i = ast.literal_eval(child_name[i])
-        
-        # print(f'For {parent_name[i]}: ')
+
         count_top1 = 0
         count_top3 = 0
         count_top5 = 0
@@ -133,7 +274,6 @@ def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_
         for j in range(len(child_smiles_i)):
             for k in range(len(sampled_molecules_i)):
                 if child_smiles_i[j] == sampled_molecules_i[k]:
-                    # print(f'\t"{child_name_i[j]}" matches with sampled molecule {k+1}')
                     if k < 10:
                         count_top10 += 1
                     if k < 5:
@@ -144,72 +284,96 @@ def at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_
                         count_top1 += 1
                     break
 
-        # print(f'{parent_name[i]}: {count_top10} / {len(child_smiles_i)}')
-        scatter_x.append(len(child_smiles_i))
-        scatter_y.append(count_top10)
+        top1.append(count_top1)
+        top3.append(count_top3)
+        top5.append(count_top5)
+        top10.append(count_top10)
+        reference.append(len(child_smiles_i))
+        predictions.append(len(sampled_molecules_i))
 
-        if count_top1 > 0:
-            score1 += 1 
-        if count_top3 > 0:
-            score3 += 1 
-        if count_top5 > 0:
-            score5 += 1 
-        if count_top10 > 0:
-            score10 += 1 
+    return top1, top3, top5, top10, reference, predictions
 
-        
-         # total = len(child_smiles_i) if len(child_smiles_i) < 1 else 1
-         # score1 = score1 + (count_top1 / total)
-         # total = len(child_smiles_i) if len(child_smiles_i) < 3 else 3
-         # score3 = score3 + (count_top3 / total)
-         # total = len(child_smiles_i) if len(child_smiles_i) < 5 else 5
-         # score5 = score5 + (count_top5 / total)
-         # total = len(child_smiles_i) if len(child_smiles_i) < 10 else 10
-         # score10 = score10 + (count_top10 / total)
-
-    score1 = score1 / len(parent_name)
-    score3 = score3 / len(parent_name)
-    score5 = score5 / len(parent_name)
-    score10 = score10 / len(parent_name)
-
-    return score1, score3, score5, score10, scatter_x, scatter_y
-
-def top_k_accuracy(parent_name, sampled_molecules, child_smiles):
+def at_least_one_metabolite(top1, top3, top5, top10, reference):
 
     score1 = 0
+    for i in range(len(top1)):
+        if top1[i] >= 1:
+            score1 += 1
+    score1 = score1 / len(top1)
+
     score3 = 0
+    for i in range(len(top3)):
+        if top3[i] >= 1:
+            score3 += 1
+    score3 = score3 / len(top3)
+
     score5 = 0
+    for i in range(len(top5)):
+        if top5[i] >= 1:
+            score5 += 1
+    score5 = score5 / len(top5)
+
     score10 = 0
-    scatter_x = []
-    scatter_y = []
-    nr_of_metabolites = 0
-    for i in range(len(parent_name)):
-        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
-        child_smiles_i = ast.literal_eval(child_smiles[i])
+    for i in range(len(top10)):
+        if top10[i] >= 1:
+            score10 += 1
+    score10 = score10 / len(top10)
 
-        nr_of_metabolites += len(child_smiles_i)
-        for j in range(len(child_smiles_i)):
-            for k in range(len(sampled_molecules_i)):
-                if child_smiles_i[j] == sampled_molecules_i[k]:
-                    if k < 10:
-                        score10 += 1
-                    if k < 5:
-                        score5 += 1
-                    if k < 3:
-                        score3 += 1
-                    if k < 1:
-                        score1 += 1
-                    break
+    return score1, score3, score5, score10
 
-    print(score1)
-    print(score3)
-    print(score5)
-    print(score10)
-    print(nr_of_metabolites)
-    score1 = score1 / nr_of_metabolites
-    score3 = score3 / nr_of_metabolites
-    score5 = score5 / nr_of_metabolites
-    score10 = score10 / nr_of_metabolites
+def at_least_half_metabolites(top1, top3, top5, top10, reference):
+
+    score1 = 0
+    for i in range(len(top1)):
+        if top1[i] >= math.ceil(0.5*reference[i]):# or top1[i] == 1:
+            score1 += 1
+    score1 = score1 / len(top1)
+
+    score3 = 0
+    for i in range(len(top3)):
+        if top3[i] >= math.ceil(0.5*reference[i]):# or top3[i] == 3:
+            score3 += 1
+    score3 = score3 / len(top3)
+
+    score5 = 0
+    for i in range(len(top5)):
+        if top5[i] >= math.ceil(0.5*reference[i]):# or top5[i] == 5:
+            score5 += 1
+    score5 = score5 / len(top5)
+
+    score10 = 0
+    for i in range(len(top10)):
+        if top10[i] >= math.ceil(0.5*reference[i]):# or top10[i] == 10:
+            score10 += 1
+    score10 = score10 / len(top10)
+
+    return score1, score3, score5, score10
+
+def all_metabolites(top1, top3, top5, top10, reference):
+
+    score1 = 0
+    for i in range(len(top1)):
+        if top1[i] == reference[i]:# or top1[i] == 1:
+            score1 += 1
+    score1 = score1 / len(top1)
+
+    score3 = 0
+    for i in range(len(top3)):
+        if top3[i] == reference[i]:# or top3[i] == 3:
+            score3 += 1
+    score3 = score3 / len(top3)
+
+    score5 = 0
+    for i in range(len(top5)):
+        if top5[i] == reference[i]:# or top5[i] == 5:
+            score5 += 1
+    score5 = score5 / len(top5)
+
+    score10 = 0
+    for i in range(len(top10)):
+        if top10[i] == reference[i]:# or top10[i] == 10:
+            score10 += 1
+    score10 = score10 / len(top10)
 
     return score1, score3, score5, score10
 
@@ -252,20 +416,53 @@ def recall_score(parent_name, sampled_molecules, child_smiles):
     
     return TP / (TP + FN)
 
+def recall_and_precision(top10, reference, predictions):
 
-def score_result(input_file):
+    TP = sum(top10)
+    FN = sum(reference) - TP
+    FP = sum(predictions) - TP
+
+    recall = TP / (TP + FN)
+    precision = TP / (TP + FP)
+
+    return recall, precision
+
+
+def score_result(input_file, specification):
 
     df = pd.read_csv(input_file)
 
+    df = specify_df(df, specification)
+
     parent_name = df['parent_name']
     sampled_molecules = df['sampled_molecules']
-    child_name = df['child_name']
     child_smiles = df['child_smiles']
 
-    # score1, score3, score5, score10 = top_k_accuracy(parent_name, sampled_molecules, child_smiles)
+    top1, top3, top5, top10, reference, predictions = count_correct_metabolites(parent_name, sampled_molecules, child_smiles)
 
-    score1, score3, score5, score10, scatter_x, scatter_y = at_least_one_metabolite(parent_name, sampled_molecules, child_smiles, child_name)
+    print('\t')
+    print(f'Total identified metabolites: {sum(top10)} / {sum(reference)}')
+    print('Total number of predictions: ', sum(predictions))
 
+    score1, score3, score5, score10 = at_least_one_metabolite(top1, top3, top5, top10, reference)
+
+    print('\nAt least one metabolite: ')
+    print(f'Score top1: {score1:.3f}')
+    print(f'Score top3: {score3:.3f}')
+    print(f'Score top5: {score5:.3f}')
+    print(f'Score top10: {score10:.3f}')
+
+    score1, score3, score5, score10 = at_least_half_metabolites(top1, top3, top5, top10, reference)
+
+    print('\nAt least half metabolites: ')
+    print(f'Score top1: {score1:.3f}')
+    print(f'Score top3: {score3:.3f}')
+    print(f'Score top5: {score5:.3f}')
+    print(f'Score top10: {score10:.3f}')
+
+    score1, score3, score5, score10 = all_metabolites(top1, top3, top5, top10, reference)
+
+    print('\nAll metabolites: ')
     print(f'Score top1: {score1:.3f}')
     print(f'Score top3: {score3:.3f}')
     print(f'Score top5: {score5:.3f}')
@@ -273,14 +470,17 @@ def score_result(input_file):
 
     precision = precision_score(parent_name, sampled_molecules, child_smiles)
 
+    print('\t')
+    print(f'Our precision: {precision:.3f}')
+
+    recall, precision = recall_and_precision(top10, reference, predictions)
+
     print(f'Precision: {precision:.3f}')
-
-    recall = recall_score(parent_name, sampled_molecules, child_smiles)
-
     print(f'Recall: {recall:.3f}')
 
-    print(scatter_x)
-    print(scatter_y)
+    print('\t')
+    print(reference)
+    print(top10)
     
 
 
@@ -288,12 +488,13 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version54'
+name = 'version57'
+specification = None # 1 (only_child) 2 (siblings) None (all)
 
 csv_file = f"evaluation/predictions/result_{name}.csv"
 
 json_to_csv(json_file, csv_file)
 present_result(testset, csv_file)
 save_n_valid_smiles(csv_file, 10)
-score_result(csv_file)
+score_result(csv_file, specification)
 
