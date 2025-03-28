@@ -190,13 +190,11 @@ def compare_datasets(combined_csv, testdata_csv, removed_file):
 #         eval_df.to_csv(evaluation_csv, index=False)
     
 
-def set_distribution(data_file, evaluation_csv, val_size, eval_size=0):
+def set_distribution(data_file, evaluation_csv, val_size, eval_size=0, set_random_state = 56):
 
     df = pd.read_csv(data_file)
     df['set'] = None
     val_test_size = val_size + eval_size
-
-    set_random_state = 56
 
 
     if 'origin' in df.columns:
@@ -653,7 +651,7 @@ if __name__ == "__main__":
         filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, 'dataset/removed_data/combined_removed_weights_allowed.csv', True)
         filter_fingerprint_similarity(combined_csv, 'dataset/removed_data/combined_removed_fingerprints.csv', min_similarity, save_removed=False)
 
-        set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+        set_distribution(clean_csv, evaluation_csv, val_size, eval_size, 10)
         get_unique_parents(evaluation_csv, evaluation_unique_csv)
         reformat_for_chemformer(evaluation_unique_csv, evaluation_finetune_csv)
 
