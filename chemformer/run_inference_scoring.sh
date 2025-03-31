@@ -1,11 +1,11 @@
 # sbatch inference_score.sh \
 ./chemformer/inference_score.sh \
     chemformer/inference_score.yaml \
-    dataset/finetune/gloryx_finetune.csv \
-    results/training/forward_prediction/version_2/checkpoints/epoch=10-step=88.ckpt \
+    dataset/finetune/combined_evaluation_finetune.csv \
+    results/training/forward_prediction/version_61/checkpoints/epoch=4-step=135.ckpt \
     chemformer/bart_vocab_downstream.json \
-    37 \
-    10 \
+    64 \
+    20 \
     forward_prediction \
     results/evaluation/metrics_scores \
     results/evaluation/predictions \
