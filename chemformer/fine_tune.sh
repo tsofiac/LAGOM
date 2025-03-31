@@ -8,7 +8,8 @@
 ##days-hours:minutes:seconds
 #SBATCH --time=2-00:00:00
 #SBATCH -p medium-gpu
-#SBATCH --gres=gpu:a100:1
+#SBATCH --gres=gpu:1
+#SBATCH --constraint='[ampere|volta]'
 
 source ~/.bashrc
 conda activate aizynthmodels
