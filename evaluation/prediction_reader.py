@@ -67,17 +67,17 @@ def present_result(input1,input2):
     grouped.to_csv(input2, index=False)
 
 
-def calculate_fingerprint_similarity(parent, sampled):
+# def calculate_fingerprint_similarity(parent, sampled):
 
-    parent_mol = Chem.MolFromSmiles(parent)
-    sampled_mol = Chem.MolFromSmiles(sampled)
+#     parent_mol = Chem.MolFromSmiles(parent)
+#     sampled_mol = Chem.MolFromSmiles(sampled)
 
-    parent_fps = AllChem.GetMorganFingerprintAsBitVect(parent_mol, radius=2, nBits=1024)
-    sampled_fps = AllChem.GetMorganFingerprintAsBitVect(sampled_mol, radius=2, nBits=1024)
+#     parent_fps = AllChem.GetMorganFingerprintAsBitVect(parent_mol, radius=2, nBits=1024)
+#     sampled_fps = AllChem.GetMorganFingerprintAsBitVect(sampled_mol, radius=2, nBits=1024)
 
-    fingerprint_similarity = DataStructs.TanimotoSimilarity(parent_fps, sampled_fps) 
+#     fingerprint_similarity = DataStructs.TanimotoSimilarity(parent_fps, sampled_fps) 
    
-    return fingerprint_similarity
+#     return fingerprint_similarity
 
 def save_n_valid_smiles(input_file, max_metabolites=10):
 
@@ -96,17 +96,13 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
         valid_smiles = []
         count_dup = 0
         count_parent = 0
-        count_fps = 0
         for smiles in sampled_molecules_i:
             if Chem.MolFromSmiles(smiles) is not None:
                 total_valid_smiles += 1
                 smiles = standardize_molecule(smiles)
                 if smiles not in valid_smiles:
                     if smiles != parent_smiles_i:
-                        if calculate_fingerprint_similarity(parent_smiles[i], smiles) >= 0.2:
-                            valid_smiles.append(smiles)
-                        else:
-                            count_fps += 1
+                        valid_smiles.append(smiles)
                     else:
                         count_parent += 1
                 else:
@@ -114,7 +110,6 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
         print('nr of dup: ', count_dup)
         print('nr of parent dup: ', count_parent)
-        print('nr of fingerprint similarity: ', count_fps)
         print("nr of valid smiles left: ",len(valid_smiles))
 
         mean_predictions += len(valid_smiles)
@@ -462,7 +457,7 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version62'
+name = 'version0'
 specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
 max_metabolites = 10
 
