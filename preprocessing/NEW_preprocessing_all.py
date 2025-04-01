@@ -142,100 +142,52 @@ def compare_datasets(combined_csv, testdata_csv, removed_file):
     duplicates_df.to_csv(removed_file, index=False)
 
 # -------------------------Splitting the data-------------------------------
-# def set_distribute(data_file, evaluation_csv, val_size, eval_size=0):
-#     df = pd.read_csv(data_file)
-#     df['set'] = None
-#     train_size = 1 - (val_size+eval_size)
-
-#     set_random_state = 56
-
-#     eval_df = pd.DataFrame()
-
-#     if 'origin' in df.columns:
-#         splitter = GroupShuffleSplit(test_size=train_size, n_splits=1, random_state=set_random_state)
-#         test_val_inds, train_inds = next(splitter.split(df, groups=df['origin']))
-#         df.loc[train_inds, 'set'] = 'train'
-  
-#         if eval_size != 0:
-#             effective_eval_size = eval_size/(eval_size + val_size)
-#             splitter = GroupShuffleSplit(test_size=effective_eval_size, n_splits=1, random_state=set_random_state)
-#             val_inds, eval_inds = next(splitter.split(df.iloc[test_val_inds], groups=df.iloc[test_val_inds]['origin']))
-#             df.loc[eval_inds, 'set'] = 'test'
-#             df.loc[val_inds, 'set'] = 'val'
-
-#             eval_df = df.loc[eval_inds]
-#         else:
-#             df.loc[test_val_inds, 'set'] = 'val'
-        
-
-#     else: #if 'origin' does not exist, e.g. for mmp
-#         test_val_df, train_df = train_test_split(df, test_size=train_size, random_state=set_random_state)
-#         train_df['set'] = 'train'
-#         if eval_size != 0:
-#             effective_eval_size = eval_size/(eval_size + val_size)
-#             val_df, eval_df = train_test_split(test_val_df, test_size=effective_eval_size, random_state=set_random_state)
-#             val_df['set'] = 'val'
-#             eval_df['set'] = 'test'
-#         else:
-#             eval_df = pd.DataFrame()
-#             val_df = test_val_df
-#             val_df['set'] = 'val'
-
-#         # Combine and save
-#         df = pd.concat([train_df, val_df, eval_df]).reset_index(drop=True)
-    
-#     df.to_csv(data_file, index=False)
-
-#     if not eval_df.empty:
-#         eval_df.to_csv(evaluation_csv, index=False)
-    
-
-def set_distribution(data_file, evaluation_csv, val_size, eval_size=0, set_random_state = 56):
+def set_distribution(data_file, evaluation_csv, val_size, test_size=0, set_random_state = 56):
 
     df = pd.read_csv(data_file)
     df['set'] = None
-    val_test_size = val_size + eval_size
+    train_val_size = 1 - test_size
 
 
     if 'origin' in df.columns:
-        splitter = GroupShuffleSplit(test_size=val_test_size, n_splits=1, random_state=set_random_state)
-        train_inds, val_test_inds  = next(splitter.split(df, groups=df['origin']))
 
-        train_df = df.iloc[train_inds]
-        val_test_df = df.iloc[val_test_inds]
+        if test_size != 0:
+            splitter = GroupShuffleSplit(test_size=test_size, n_splits=1, random_state=56)
+            train_val_inds, test_inds  = next(splitter.split(df, groups=df['origin']))
 
-        train_df.loc[:, 'set'] = 'train'
-        val_test_df.loc[:, 'set'] = 'val/test'
-  
-        if eval_size != 0:
-            effective_eval_size = eval_size/(eval_size + val_size)
-            splitter = GroupShuffleSplit(test_size=effective_eval_size, n_splits=1, random_state=set_random_state)
-            val_inds, test_inds = next(splitter.split(val_test_df, groups=val_test_df['origin']))
+            train_val_df = df.iloc[train_val_inds]
+            test_df = df.iloc[test_inds]
 
-            val_df = val_test_df.iloc[val_inds]
-            test_df = val_test_df.iloc[test_inds]
-
-            val_df.loc[:, 'set'] = 'val'
+            train_val_df.loc[:, 'set'] = 'train/val'
             test_df.loc[:, 'set'] = 'test'
         else:
-            val_test_df.loc[:, 'set'] = 'val'
-            val_df = val_test_df
+            train_val_df = df
             test_df = pd.DataFrame()
+  
+        effective_val_size = val_size / train_val_size
+        splitter = GroupShuffleSplit(test_size=effective_val_size, n_splits=1, random_state=set_random_state)
+        train_inds, val_inds = next(splitter.split(train_val_df, groups=train_val_df['origin']))
+
+        train_df = train_val_df.iloc[train_inds]
+        val_df = train_val_df.iloc[val_inds]
+
+        train_df.loc[:, 'set'] = 'train'
+        val_df.loc[:, 'set'] = 'val'
 
     else: #if 'origin' does not exist, e.g. for mmp
-        train_df, val_test_df = train_test_split(df, test_size=val_test_size, random_state=set_random_state)
-        train_df.loc[:, 'set'] = 'train'
-        val_test_df.loc[:, 'set'] = 'val/test'
-
-        if eval_size != 0:
-            effective_eval_size = eval_size/(eval_size + val_size)
-            val_df, test_df = train_test_split(val_test_df, test_size=effective_eval_size, random_state=set_random_state)
-            val_df.loc[:, 'set'] = 'val'
+        if test_size != 0:
+            train_val_df, test_df = train_test_split(df, test_size=test_size, random_state=set_random_state)
+            train_val_df.loc[:, 'set'] = 'train/val'
             test_df.loc[:, 'set'] = 'test'
         else:
-            val_test_df.loc[:, 'set'] = 'val'
-            val_df = val_test_df
+            train_val_df = df
             test_df = pd.DataFrame()
+
+
+        effective_val_size = val_size / train_val_size
+        train_df, val_df = train_test_split(train_val_df, test_size=effective_val_size, random_state=set_random_state)
+        train_df.loc[:, 'set'] = 'train'
+        val_df.loc[:, 'set'] = 'val'
 
 
     df = pd.concat([train_df, val_df, test_df]).reset_index(drop=True)
@@ -243,42 +195,63 @@ def set_distribution(data_file, evaluation_csv, val_size, eval_size=0, set_rando
     df.to_csv(data_file, index=False)
 
     if not test_df.empty:
-        test_df.to_csv(evaluation_csv, index=False)
+        test_df.to_csv(evaluation_csv, index=False)   
 
+# def set_distribution(data_file, evaluation_csv, val_size, eval_size=0, set_random_state = 56):
 
-# # Shouldn't be needed anymore
-# def test_val_distribute(data_file, val_size): #Input csv file. Function adds an extra column named 'set' and distributed into 'val' and 'set'
 #     df = pd.read_csv(data_file)
-#     # Add an empty column named 'set'
 #     df['set'] = None
+#     val_test_size = val_size + eval_size
 
-#     ## Using train_test_split
-#     # train_df, val_df = train_test_split(df, test_size=val_size, random_state=26)     # Random_state is for reproducibility
-    
-#     # Assign "train" and "val" labels
-#     # train_df['set'] = 'train'
-#     # val_df['set'] = 'val'
 
-#     ## Using GroupShuffleSplit
-#     splitter = GroupShuffleSplit(test_size=val_size, n_splits=2, random_state=42)
-#     split = splitter.split(df, groups=df['origin']) 
-#     train_inds, val_inds = next(split)
-#     train_df = df.iloc[train_inds]
-#     val_df = df.iloc[val_inds]
+#     if 'origin' in df.columns:
+#         splitter = GroupShuffleSplit(test_size=val_test_size, n_splits=1, random_state=set_random_state)
+#         train_inds, val_test_inds  = next(splitter.split(df, groups=df['origin']))
 
-#     # Assign "train" and "val" labels
-#     train_df.loc[:, 'set'] = 'train'
-#     val_df.loc[:, 'set'] = 'val'
+#         train_df = df.iloc[train_inds]
+#         val_test_df = df.iloc[val_test_inds]
 
-#     # Combine the train and validation DataFrames
-#     final_df = pd.concat([train_df, val_df]).reset_index(drop=True)
+#         train_df.loc[:, 'set'] = 'train'
+#         val_test_df.loc[:, 'set'] = 'val/test'
+  
+#         if eval_size != 0:
+#             effective_eval_size = eval_size/(eval_size + val_size)
+#             splitter = GroupShuffleSplit(test_size=effective_eval_size, n_splits=1, random_state=set_random_state)
+#             val_inds, test_inds = next(splitter.split(val_test_df, groups=val_test_df['origin']))
 
-#     final_df.to_csv(data_file, index=False)
+#             val_df = val_test_df.iloc[val_inds]
+#             test_df = val_test_df.iloc[test_inds]
 
-# def shuffle_dataset(csv):
-#     df = pd.read_csv(csv)
-#     shuffled_df = df.sample(frac=1, random_state=2).reset_index(drop=True)
-#     shuffled_df.to_csv(csv, index=False)
+#             val_df.loc[:, 'set'] = 'val'
+#             test_df.loc[:, 'set'] = 'test'
+#         else:
+#             val_test_df.loc[:, 'set'] = 'val'
+#             val_df = val_test_df
+#             test_df = pd.DataFrame()
+
+#     else: #if 'origin' does not exist, e.g. for mmp
+#         train_df, val_test_df = train_test_split(df, test_size=val_test_size, random_state=set_random_state)
+#         train_df.loc[:, 'set'] = 'train'
+#         val_test_df.loc[:, 'set'] = 'val/test'
+
+#         if eval_size != 0:
+#             effective_eval_size = eval_size/(eval_size + val_size)
+#             val_df, test_df = train_test_split(val_test_df, test_size=effective_eval_size, random_state=set_random_state)
+#             val_df.loc[:, 'set'] = 'val'
+#             test_df.loc[:, 'set'] = 'test'
+#         else:
+#             val_test_df.loc[:, 'set'] = 'val'
+#             val_df = val_test_df
+#             test_df = pd.DataFrame()
+
+
+#     df = pd.concat([train_df, val_df, test_df]).reset_index(drop=True)
+
+#     df.to_csv(data_file, index=False)
+
+#     if not test_df.empty:
+#         test_df.to_csv(evaluation_csv, index=False)
+
 
 # --------------------------Filtering data--------------------------------------
 
@@ -591,13 +564,7 @@ if __name__ == "__main__":
     evaluation_unique_csv = f'dataset/curated_data/{name}_evaluation_unique.csv'
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-    if name == 'distribution':
-
-        csv =  'dataset/curated_data/paired_mmp_rows_4405217_to_5506519.csv'
-
-        set_distribution(csv, evaluation_csv, val_size, eval_size)
-
-    elif (name == 'mmp') or (name == 'mmp_atoms_allowed_5'):
+    if (name == 'mmp') or (name == 'mmp_atoms_allowed_5'):
 
         # dataset = 'dataset/curated_data/paired_mmp_rows_0_to_2000.csv'
         dataset = 'dataset/curated_data/paired_mmp_rows_4405217_to_5506519.csv'
@@ -651,7 +618,7 @@ if __name__ == "__main__":
         filter_data_on_one_side(combined_csv, molecule_allowed_based_on_weight, 'dataset/removed_data/combined_removed_weights_allowed.csv', True)
         filter_fingerprint_similarity(combined_csv, 'dataset/removed_data/combined_removed_fingerprints.csv', min_similarity, save_removed=False)
 
-        set_distribution(clean_csv, evaluation_csv, val_size, eval_size, 10)
+        set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
         get_unique_parents(evaluation_csv, evaluation_unique_csv)
         reformat_for_chemformer(evaluation_unique_csv, evaluation_finetune_csv)
 
