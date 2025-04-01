@@ -1,8 +1,8 @@
     sbatch chemformer/fine_tune.sh \
-    chemformer/fine_tune_bart.yaml \
-    dataset/finetune/mmp_100000rows_finetune.csv\
+    chemformer/pretrain_bart.yaml \
+    dataset/finetune/mmp_all_finetune.csv\
     null \
-    64 \
+    128 \
     chemformer/bart_vocab_downstream.json \
     results/pretraining \
     results/pretraining/config.yaml
