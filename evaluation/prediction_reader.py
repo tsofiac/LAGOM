@@ -119,8 +119,8 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
     validity = total_valid_smiles / total_predictions
     mean_validity = mean_predictions / len(parent_smiles)
-    print('\nValidity: ', validity)
-    print('Mean number of SMILES per drug: ', mean_validity)
+    print(f'\nValidity: {validity:.3f}')
+    print(f'Mean number of SMILES per drug: {mean_validity:.3f}')
 
     df.to_csv(input_file, index=False)
 
@@ -408,7 +408,7 @@ def score_result(input_file, max_metabolites, specification):
 
     print('\t')
     print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
-    print('Total number of predictions: ', sum(predictions))
+    print(f'Total number of predictions: {sum(predictions)}')
 
     score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
 
@@ -457,7 +457,7 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_file = 'results/evaluation/predictions0.json'
 
-name = 'version0'
+name = 'pretrain'
 specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
 max_metabolites = 10
 
@@ -467,4 +467,3 @@ json_to_csv(json_file, csv_file)
 present_result(testset, csv_file)
 save_n_valid_smiles(csv_file, max_metabolites)
 score_result(csv_file, max_metabolites, specification)
-
