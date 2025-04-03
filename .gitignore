@@ -7,3 +7,4 @@ dataset/processed_data/
 results/
 evaluation/predictions
 evaluation/result
+dataset/pretrain
