@@ -50,16 +50,18 @@ def augment_smiles_restricted(smiles, augment_prob):
             continue
 
         mol = Chem.MolFromSmiles(smi)
-        for _ in range(3):
+        for _ in range(5):
             try:
                 mol_rand = randomize_mol_restricted(mol)
-                smiles_aug.append(Chem.MolToSmiles(mol_rand, canonical=False))
-                break
+                if Chem.MolToSmiles(mol_rand, canonical=False) != smi: # added by Sofia
+                    smiles_aug.append(Chem.MolToSmiles(mol_rand, canonical=False)) # added by Sofia
+                    break
             except Exception as e:
                 print(f"Augmentation failed for {smi} with error: {e}")
         else:
-            smiles_aug.append(smi)
-            print(f"Augmentation failed three times for {smi}, returning unaugmented original")
+            # smiles_aug.append(smi)
+            smiles_aug.append(None) # added by Sofia
+            print(f"Augmentation failed five times for {smi}, returning unaugmented original")
 
     augment_prob = augment_prob_og
     return smiles_aug
@@ -79,28 +81,36 @@ def augment_dataset(csv_file, augment_prob, augmented_file, nr_of_reactions):
 
             if 1-augment_prob < np.random.rand():
                 smiles_aug = augment_smiles_restricted([parent_smiles, child_smiles], augment_prob)
-            else:
-                smiles_aug = [parent_smiles, child_smiles]
+                if smiles_aug != [parent_smiles, child_smiles] and None not in smiles_aug:
+                    
+            # else:
+            #     smiles_aug = [parent_smiles, child_smiles]
 
-            augmented_row = {
-                'parent_name': row['parent_name'],
-                'child_name': row['child_name'],
-                'parent_smiles': smiles_aug[0],
-                'child_smiles': smiles_aug[1],
-                'origin': row['origin'],
-                'source': row['source'],
-                'set': row['set']
-            }
-                
-            augmented_data.append(augmented_row)
+                    augmented_row = {
+                        'parent_name': row['parent_name'],
+                        'child_name': row['child_name'],
+                        'parent_smiles': smiles_aug[0],
+                        'child_smiles': smiles_aug[1],
+                        'origin': row['origin'],
+                        'source': row['source'],
+                        'set': row['set']
+                    }
+                        
+                    augmented_data.append(augmented_row)
 
     augmented_dataset = pd.DataFrame(augmented_data)
 
     augmented_dataset.to_csv(augmented_file, index=False)
 
 
-def reformat_for_chemformer(input_file, output_file):
-    df = pd.read_csv(input_file)
+def reformat_for_chemformer(input1_file, input2_file, output_file):
+    df1 = pd.read_csv(input1_file)
+    df2 = pd.read_csv(input2_file)
+    df2 = df2[df2['set'] == 'train']
+
+    df2['source'] = 'Randomised'
+
+    df = pd.concat([df1, df2], ignore_index=True)
 
     df = df.rename(columns={
         "child_smiles": "products",
@@ -112,11 +122,11 @@ def reformat_for_chemformer(input_file, output_file):
 
 combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 augmented_csv = 'dataset/curated_data/randomised.csv'
+combined_finetune = 'dataset/finetune/combined_finetune.csv'
 
-finetune = 'dataset/finetune/randomised_finetune.csv'
 
-augment_dataset(combined_csv, 1, augmented_csv, 2)
-reformat_for_chemformer(augmented_csv, finetune)
+augment_dataset(combined_csv, 1, augmented_csv, 1)
+reformat_for_chemformer(combined_csv, augmented_csv, combined_finetune)
 
 # combined_df = pd.read_csv(combined_csv)
 # parent_smiles = combined_df['parent_smiles']
