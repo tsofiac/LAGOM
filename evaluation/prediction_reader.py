@@ -45,7 +45,7 @@ def json_to_csv(json_file, csv_file):
     df.to_csv(csv_file, index=False)
 
 
-def present_result(input1,input2):
+def present_result(input1,input2, output):
 
     test_df = pd.read_csv(input1)
     prediction_df = pd.read_csv(input2)
@@ -64,7 +64,7 @@ def present_result(input1,input2):
     else:
         raise ValueError("The number of rows in 'grouped' does not match the number of rows in 'prediction_df'.")
 
-    grouped.to_csv(input2, index=False)
+    grouped.to_csv(output, index=False)
 
 
 # def calculate_fingerprint_similarity(parent, sampled):
@@ -79,7 +79,7 @@ def present_result(input1,input2):
    
 #     return fingerprint_similarity
 
-def save_n_valid_smiles(input_file, max_metabolites=10):
+def save_valid_smiles(input_file):
 
     df = pd.read_csv(input_file)
 
@@ -114,7 +114,6 @@ def save_n_valid_smiles(input_file, max_metabolites=10):
 
         mean_predictions += len(valid_smiles)
 
-        # df.at[i, 'sampled_molecules'] = valid_smiles[:max_metabolites]
         df.at[i, 'sampled_molecules'] = valid_smiles
 
     validity = total_valid_smiles / total_predictions
@@ -180,7 +179,28 @@ def specify_df(df, specification = None):
     else:
 
         return df
+    
+def concat_multiple_predictions(input1, input2, output):
 
+    df1 = pd.read_csv(input1)
+    df2 = pd.read_csv(input2)
+
+    combined_sampled_molecules = []
+
+    parent_name = df1['parent_name']
+    sampled_molecules_df1 = df1['sampled_molecules']
+    sampled_molecules_df2 = df2['sampled_molecules']
+
+    for i in range(len(parent_name)):
+        sampled_molecules_df1_i = ast.literal_eval(sampled_molecules_df1[i])
+        sampled_molecules_df2_i = ast.literal_eval(sampled_molecules_df2[i])
+
+        combined_sampled_molecules_i = list(set(sampled_molecules_df1_i).union(set(sampled_molecules_df2_i)))
+        combined_sampled_molecules.append(combined_sampled_molecules_i)
+
+    df1['sampled_molecules'] = combined_sampled_molecules
+
+    df1.to_csv(output, index=False)
 
 def count_valid_smiles(parent_name, sampled_molecules, max_metabolites):
 
@@ -455,15 +475,33 @@ def score_result(input_file, max_metabolites, specification):
 
 testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
-json_file = 'results/evaluation/predictions0.json'
+json_predictions = 'results/evaluation/predictions0.json'
 
-name = 'pretrain'
+status = 'score' # 'score' 'combine' 'new'
+name = 'version0'
 specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
 max_metabolites = 10
 
-csv_file = f"evaluation/predictions/result_{name}.csv"
+csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
+csv_result = f"evaluation/result/result_{name}.csv"
 
-json_to_csv(json_file, csv_file)
-present_result(testset, csv_file)
-save_n_valid_smiles(csv_file, max_metabolites)
-score_result(csv_file, max_metabolites, specification)
+if status == 'new':
+    json_to_csv(json_predictions, csv_predictions)
+    present_result(testset, csv_predictions, csv_result)
+    save_valid_smiles(csv_result)
+    score_result(csv_result, max_metabolites, specification)
+
+elif status == 'score':
+    present_result(testset, csv_predictions, csv_result)
+    save_valid_smiles(csv_result)
+    score_result(csv_result, max_metabolites, specification)
+
+elif status == 'combine':
+    csv_comb = f"evaluation/result/result_comb.csv"
+    # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
+    # score_result(csv_comb, max_metabolites, specification)
+    concat_multiple_predictions(csv_comb, "evaluation/result/result_test0.csv", csv_comb)
+    score_result(csv_comb, max_metabolites, specification)
+else:
+    print('Wrong status')
+
