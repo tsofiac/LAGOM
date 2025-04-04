@@ -119,7 +119,7 @@ def save_valid_smiles(input_file):
     validity = total_valid_smiles / total_predictions
     mean_validity = mean_predictions / len(parent_smiles)
     print(f'\nValidity: {validity:.3f}')
-    print(f'Mean number of SMILES per drug: {mean_validity:.3f}')
+    print(f'Mean number of SMILES per drug: {mean_validity:.3f} / {len(sampled_molecules_i)}')
 
     df.to_csv(input_file, index=False)
 
@@ -478,7 +478,7 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 json_predictions = 'results/evaluation/predictions0.json'
 
 status = 'score' # 'score' 'combine' 'new'
-name = 'version0'
+name = 'version4_BS32'
 specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
 max_metabolites = 10
 
@@ -497,7 +497,7 @@ elif status == 'score':
     score_result(csv_result, max_metabolites, specification)
 
 elif status == 'combine':
-    csv_comb = f"evaluation/result/result_comb.csv"
+    csv_comb = f"evaluation/result/result_comb_{name}.csv"
     # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
     # score_result(csv_comb, max_metabolites, specification)
     concat_multiple_predictions(csv_comb, "evaluation/result/result_test0.csv", csv_comb)
