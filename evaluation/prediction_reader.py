@@ -44,7 +44,6 @@ def json_to_csv(json_file, csv_file):
 
     df.to_csv(csv_file, index=False)
 
-
 def present_result(input1,input2, output):
 
     test_df = pd.read_csv(input1)
@@ -61,11 +60,11 @@ def present_result(input1,input2, output):
 
     if len(grouped) == len(prediction_df):
         grouped['sampled_molecules'] = prediction_df['sampled_molecules']
+        grouped['log_lhs'] = prediction_df['log_lhs']
     else:
         raise ValueError("The number of rows in 'grouped' does not match the number of rows in 'prediction_df'.")
 
     grouped.to_csv(output, index=False)
-
 
 # def calculate_fingerprint_similarity(parent, sampled):
 
@@ -90,19 +89,22 @@ def save_valid_smiles(input_file):
     mean_predictions = 0
     for i in range(len(parent_smiles)):
         sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
+        log_lhs_i = ast.literal_eval(df.at[i, 'log_lhs'])
         total_predictions += len(sampled_molecules_i)
         parent_smiles_i = parent_smiles[i]
 
         valid_smiles = []
+        valid_log_lhs = []
         count_dup = 0
         count_parent = 0
-        for smiles in sampled_molecules_i:
+        for j, smiles in enumerate(sampled_molecules_i):
             if Chem.MolFromSmiles(smiles) is not None:
                 total_valid_smiles += 1
                 smiles = standardize_molecule(smiles)
                 if smiles not in valid_smiles:
                     if smiles != parent_smiles_i:
                         valid_smiles.append(smiles)
+                        valid_log_lhs.append(log_lhs_i[j])
                     else:
                         count_parent += 1
                 else:
@@ -115,6 +117,7 @@ def save_valid_smiles(input_file):
         mean_predictions += len(valid_smiles)
 
         df.at[i, 'sampled_molecules'] = valid_smiles
+        df.at[i, 'log_lhs'] = valid_log_lhs
 
     validity = total_valid_smiles / total_predictions
     mean_validity = mean_predictions / len(parent_smiles)
@@ -202,23 +205,19 @@ def concat_multiple_predictions(input1, input2, output):
 
     df1.to_csv(output, index=False)
 
-def count_valid_smiles(parent_name, sampled_molecules, max_metabolites):
+def count_correct_metabolites(input_file, max_metabolites, specification):
+
+    df = pd.read_csv(input_file)
+
+    df = specify_df(df, specification)
+
+    parent_name = df['parent_name']
+    child_smiles = df['child_smiles']
+    sampled_molecules = df['sampled_molecules']
+    df['sampled_boolean'] = None
 
     count = 0
     zero_count = 0
-    for i in range(len(parent_name)):
-        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
-
-        if len(sampled_molecules_i) < max_metabolites:
-            count += 1
-        if len(sampled_molecules_i) < 1:
-            zero_count += 1
-
-    print(f'\nNr of drugs with less than {max_metabolites} valid SMILES: ', count)
-    print('Nr of drugs with zero valid SMILES: ', zero_count)
-
-def count_correct_metabolites(parent_name, sampled_molecules, child_smiles):
-
     top1 = []
     top3 = []
     top5 = []
@@ -230,15 +229,22 @@ def count_correct_metabolites(parent_name, sampled_molecules, child_smiles):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
         child_smiles_i = ast.literal_eval(child_smiles[i])
 
+        if len(sampled_molecules_i) < max_metabolites:
+            count += 1
+        if len(sampled_molecules_i) < 1:
+            zero_count += 1
+
         count_top1 = 0
         count_top3 = 0
         count_top5 = 0
         count_top10 = 0
         count_all = 0
+        sampled_boolean = [False] * len(sampled_molecules_i)
         for j in range(len(child_smiles_i)):
             for k in range(len(sampled_molecules_i)):
                 if child_smiles_i[j] == sampled_molecules_i[k]:
                     count_all += 1
+                    sampled_boolean[k] = True
                     if k < 10:
                         count_top10 += 1
                     if k < 5:
@@ -247,7 +253,6 @@ def count_correct_metabolites(parent_name, sampled_molecules, child_smiles):
                         count_top3 += 1
                     if k < 1:
                         count_top1 += 1
-                    break
 
         top1.append(count_top1)
         top3.append(count_top3)
@@ -257,6 +262,11 @@ def count_correct_metabolites(parent_name, sampled_molecules, child_smiles):
         reference.append(len(child_smiles_i))
         predictions.append(len(sampled_molecules_i))
 
+        df.at[i, 'sampled_boolean'] = sampled_boolean
+
+    df.to_csv(input_file, index=False)
+    print(f'\nNr of drugs with less than {max_metabolites} valid SMILES: ', count)
+    print('Nr of drugs with zero valid SMILES: ', zero_count)
     return top1, top3, top5, top10, all, reference, predictions
 
 def at_least_one_metabolite(top1, top3, top5, top10, all, reference):
@@ -361,7 +371,13 @@ def all_metabolites(top1, top3, top5, top10, all, reference):
 
     return score1, score3, score5, score10, score_all
 
-def precision_score(parent_name, sampled_molecules, child_smiles):
+def precision_score(input_file):
+
+    df = pd.read_csv(input_file)
+
+    parent_name = df['parent_name']
+    child_smiles = df['child_smiles']
+    sampled_molecules = df['sampled_molecules']
 
     TP = 0
     FP = 0
@@ -380,25 +396,6 @@ def precision_score(parent_name, sampled_molecules, child_smiles):
     
     return TP / (TP + FP)
 
-def recall_score(parent_name, sampled_molecules, child_smiles):
-
-    TP = 0
-    FN = 0
-    for i in range(len(parent_name)):
-        sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
-        child_smiles_i = ast.literal_eval(child_smiles[i])
-
-        TP_i = 0
-        for j in range(len(child_smiles_i)):
-            for k in range(len(sampled_molecules_i)):
-                if child_smiles_i[j] == sampled_molecules_i[k]:
-                    TP_i += 1
-                    break
-
-        TP = TP + TP_i
-        FN = FN + (len(child_smiles_i) - TP_i)
-    
-    return TP / (TP + FN)
 
 def recall_and_precision(top10, reference, predictions):
 
@@ -414,17 +411,7 @@ def recall_and_precision(top10, reference, predictions):
 
 def score_result(input_file, max_metabolites, specification):
 
-    df = pd.read_csv(input_file)
-
-    df = specify_df(df, specification)
-
-    parent_name = df['parent_name']
-    sampled_molecules = df['sampled_molecules']
-    child_smiles = df['child_smiles']
-
-    count_valid_smiles(parent_name, sampled_molecules, max_metabolites)
-
-    top1, top3, top5, top10, all, reference, predictions = count_correct_metabolites(parent_name, sampled_molecules, child_smiles)
+    top1, top3, top5, top10, all, reference, predictions = count_correct_metabolites(input_file, max_metabolites, specification)
 
     print('\t')
     print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
@@ -457,7 +444,7 @@ def score_result(input_file, max_metabolites, specification):
     print(f'Score top10: {score10:.3f}')
     print(f'Score all: {score_all:.3f}')
 
-    precision = precision_score(parent_name, sampled_molecules, child_smiles)
+    precision = precision_score(input_file)
 
     print('\t')
     print(f'Our precision: {precision:.3f}')
@@ -478,7 +465,7 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 json_predictions = 'results/evaluation/predictions0.json'
 
 status = 'score' # 'score' 'combine' 'new'
-name = 'version4_BS32'
+name = 'version7_BS32'
 specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
 max_metabolites = 10
 
