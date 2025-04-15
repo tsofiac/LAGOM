@@ -182,28 +182,57 @@ def specify_df(df, specification = None):
     else:
 
         return df
-    
-def concat_multiple_predictions(input1, input2, output):
 
-    df1 = pd.read_csv(input1)
-    df2 = pd.read_csv(input2)
+def concat_multiple_predictions(input_files, output, n=None):
+
+    dataframes = [pd.read_csv(input_file) for input_file in input_files]
 
     combined_sampled_molecules = []
 
-    parent_name = df1['parent_name']
-    sampled_molecules_df1 = df1['sampled_molecules']
-    sampled_molecules_df2 = df2['sampled_molecules']
+    parent_name = dataframes[0]['parent_name']
 
     for i in range(len(parent_name)):
-        sampled_molecules_df1_i = ast.literal_eval(sampled_molecules_df1[i])
-        sampled_molecules_df2_i = ast.literal_eval(sampled_molecules_df2[i])
 
-        combined_sampled_molecules_i = list(set(sampled_molecules_df1_i).union(set(sampled_molecules_df2_i)))
-        combined_sampled_molecules.append(combined_sampled_molecules_i)
+        combined_sampled_molecules_i = set()
 
-    df1['sampled_molecules'] = combined_sampled_molecules
+        for df in dataframes:
+            sampled_molecules_i = ast.literal_eval(df['sampled_molecules'][i])
 
-    df1.to_csv(output, index=False)
+            if n is not None:
+                sampled_molecules_i = sampled_molecules_i[:n]
+
+            combined_sampled_molecules_i.update(sampled_molecules_i)
+
+        # Convert the set back to a list
+        combined_sampled_molecules.append(list(combined_sampled_molecules_i))
+
+    # Use the first dataframe structure for output, but update 'sampled_molecules'
+    result_df = dataframes[0].copy()
+    result_df['sampled_molecules'] = combined_sampled_molecules
+
+    result_df.to_csv(output, index=False)
+
+def count_metabolites(input_file):
+    # Read the input CSV file
+    df = pd.read_csv(input_file)
+    
+    # Define a function to count molecules in a string representation of a list
+    def count_molecules(row):
+        try:
+            # Safely evaluate the string to a list
+            molecules_list = ast.literal_eval(row)
+            return len(molecules_list)
+        except Exception as e:
+            print(f"Error converting row to list: {e}")
+            return 0
+    
+    # Apply the function to the sampled_molecules column and count molecules in each row
+    df['molecule_count'] = df['sampled_molecules'].apply(count_molecules)
+    
+    # Calculate the average number of molecules per row
+    average_molecules = df['molecule_count'].mean()
+    
+    print(f"The average number of sampled molecules per drug is: {average_molecules}")
 
 def count_correct_metabolites(input_file, max_metabolites, specification):
 
@@ -411,38 +440,71 @@ def recall_and_precision(top10, reference, predictions):
 
 def score_result(input_file, max_metabolites, specification):
 
+    # top1, top3, top5, top10, all, reference, predictions = count_correct_metabolites(input_file, max_metabolites, specification)
+
+    # print('\t')
+    # print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
+    # print(f'Total number of predictions: {sum(predictions)}')
+
+    # score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
+
+    # print('\nAt least one metabolite: ')
+    # print(f'Score top1: {score1:.3f}')
+    # print(f'Score top3: {score3:.3f}')
+    # print(f'Score top5: {score5:.3f}')
+    # print(f'Score top10: {score10:.3f}')
+    # print(f'Score all: {score_all:.3f}')
+
+    # score1, score3, score5, score10, score_all = at_least_half_metabolites(top1, top3, top5, top10, all, reference)
+
+    # print('\nAt least half metabolites: ')
+    # print(f'Score top1: {score1:.3f}')
+    # print(f'Score top3: {score3:.3f}')
+    # print(f'Score top5: {score5:.3f}')
+    # print(f'Score top10: {score10:.3f}')
+    # print(f'Score all: {score_all:.3f}')
+
+    # score1, score3, score5, score10, score_all = all_metabolites(top1, top3, top5, top10, all, reference)
+
+    # print('\nAll metabolites: ')
+    # print(f'Score top1: {score1:.3f}')
+    # print(f'Score top3: {score3:.3f}')
+    # print(f'Score top5: {score5:.3f}')
+    # print(f'Score top10: {score10:.3f}')
+    # print(f'Score all: {score_all:.3f}')
+
+    # precision = precision_score(input_file)
+
+    # print('\t')
+    # print(f'Our precision: {precision:.3f}')
+
+    # recall, precision = recall_and_precision(all, reference, predictions)
+
+    # print(f'Precision: {precision:.3f}')
+    # print(f'Recall: {recall:.3f}')
+
+    # print('\t')
+    # print(reference)
+    # print(all)
+
     top1, top3, top5, top10, all, reference, predictions = count_correct_metabolites(input_file, max_metabolites, specification)
 
     print('\t')
-    print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
+    print(f'Identified metabolites: {sum(all)} / {sum(reference)}')
     print(f'Total number of predictions: {sum(predictions)}')
 
     score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
 
     print('\nAt least one metabolite: ')
     print(f'Score top1: {score1:.3f}')
-    print(f'Score top3: {score3:.3f}')
-    print(f'Score top5: {score5:.3f}')
     print(f'Score top10: {score10:.3f}')
-    print(f'Score all: {score_all:.3f}')
-
-    score1, score3, score5, score10, score_all = at_least_half_metabolites(top1, top3, top5, top10, all, reference)
-
-    print('\nAt least half metabolites: ')
-    print(f'Score top1: {score1:.3f}')
-    print(f'Score top3: {score3:.3f}')
-    print(f'Score top5: {score5:.3f}')
-    print(f'Score top10: {score10:.3f}')
-    print(f'Score all: {score_all:.3f}')
 
     score1, score3, score5, score10, score_all = all_metabolites(top1, top3, top5, top10, all, reference)
 
+
     print('\nAll metabolites: ')
     print(f'Score top1: {score1:.3f}')
-    print(f'Score top3: {score3:.3f}')
-    print(f'Score top5: {score5:.3f}')
     print(f'Score top10: {score10:.3f}')
-    print(f'Score all: {score_all:.3f}')
 
     precision = precision_score(input_file)
 
@@ -464,8 +526,15 @@ testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_predictions = 'results/evaluation/predictions0.json'
 
-status = 'score' # 'score' 'combine' 'new'
-name = 'version7_BS32'
+status = 'combine' # 'score' 'combine' 'new'
+name = 'chemfmmp_mmp_10'
+#name = 'test1_5'
+
+# If combine: ---
+ensemble_list = ['evaluation/result/result_v35_pretrainaug.csv', 'evaluation/result/result_v40_MMPaug.csv']
+samples_per_model = 10
+#---
+
 specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
 max_metabolites = 10
 
@@ -479,16 +548,18 @@ if status == 'new':
     score_result(csv_result, max_metabolites, specification)
 
 elif status == 'score':
-    present_result(testset, csv_predictions, csv_result)
-    save_valid_smiles(csv_result)
+    #present_result(testset, csv_predictions, csv_result)
+    #save_valid_smiles(csv_result)
     score_result(csv_result, max_metabolites, specification)
+    count_metabolites(csv_result)
 
 elif status == 'combine':
     csv_comb = f"evaluation/result/result_comb_{name}.csv"
     # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
     # score_result(csv_comb, max_metabolites, specification)
-    concat_multiple_predictions(csv_comb, "evaluation/result/result_test0.csv", csv_comb)
+    concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
     score_result(csv_comb, max_metabolites, specification)
+    count_metabolites(csv_comb)
 else:
     print('Wrong status')
 
