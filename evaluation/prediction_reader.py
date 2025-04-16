@@ -8,6 +8,7 @@ from rdkit.Chem import AllChem
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from preprocessing.standardize_smiles import standardize_smiles_collection, standardize_molecule
 import math
+import numpy as np
 
 
 def json_to_csv(json_file, csv_file):
@@ -63,6 +64,8 @@ def present_result(input1,input2, output):
         grouped['log_lhs'] = prediction_df['log_lhs']
     else:
         raise ValueError("The number of rows in 'grouped' does not match the number of rows in 'prediction_df'.")
+    
+    grouped.insert(0, 'index', prediction_df['index'])
 
     grouped.to_csv(output, index=False)
 
@@ -182,7 +185,7 @@ def specify_df(df, specification = None):
     else:
 
         return df
-
+    
 def concat_multiple_predictions(input_files, output, n=None):
 
     dataframes = [pd.read_csv(input_file) for input_file in input_files]
@@ -234,28 +237,43 @@ def count_metabolites(input_file):
     
     print(f"The average number of sampled molecules per drug is: {average_molecules}")
 
-def count_correct_metabolites(input_file, max_metabolites, specification):
+
+def count_correct_metabolites(input_file, max_metabolites, specification, batch):
 
     df = pd.read_csv(input_file)
 
     df = specify_df(df, specification)
 
+    if batch is not None:
+        df = df.loc[df['index'] == batch]
+        df.reset_index(drop=True, inplace=True)
+
     parent_name = df['parent_name']
     child_smiles = df['child_smiles']
     sampled_molecules = df['sampled_molecules']
-    df['sampled_boolean'] = None
+    # df['sampled_boolean'] = None  # for the log_lhs plot, doesn't work with batches
+
 
     count = 0
     zero_count = 0
     top1 = []
+    top1_pred = []
     top3 = []
+    top3_pred = []
     top5 = []
+    top5_pred = []
     top10 = []
+    top10_pred = []
     all = []
+    all_pred = []
     reference = []
-    predictions = []
+    
     for i in range(len(parent_name)):
         sampled_molecules_i = ast.literal_eval(sampled_molecules[i])
+        top1_pred.append(len(sampled_molecules_i[0:1]))
+        top3_pred.append(len(sampled_molecules_i[0:3]))
+        top5_pred.append(len(sampled_molecules_i[0:5]))
+        top10_pred.append(len(sampled_molecules_i[0:10]))
         child_smiles_i = ast.literal_eval(child_smiles[i])
 
         if len(sampled_molecules_i) < max_metabolites:
@@ -268,12 +286,12 @@ def count_correct_metabolites(input_file, max_metabolites, specification):
         count_top5 = 0
         count_top10 = 0
         count_all = 0
-        sampled_boolean = [False] * len(sampled_molecules_i)
+        # sampled_boolean = [False] * len(sampled_molecules_i)
         for j in range(len(child_smiles_i)):
             for k in range(len(sampled_molecules_i)):
                 if child_smiles_i[j] == sampled_molecules_i[k]:
                     count_all += 1
-                    sampled_boolean[k] = True
+                    # sampled_boolean[k] = True
                     if k < 10:
                         count_top10 += 1
                     if k < 5:
@@ -288,15 +306,16 @@ def count_correct_metabolites(input_file, max_metabolites, specification):
         top5.append(count_top5)
         top10.append(count_top10)
         all.append(count_all)
+        all_pred.append(len(sampled_molecules_i))
         reference.append(len(child_smiles_i))
-        predictions.append(len(sampled_molecules_i))
+        
 
-        df.at[i, 'sampled_boolean'] = sampled_boolean
+        # df.at[i, 'sampled_boolean'] = sampled_boolean # for the log_lhs plot, coesn't work with batches
 
-    df.to_csv(input_file, index=False)
-    print(f'\nNr of drugs with less than {max_metabolites} valid SMILES: ', count)
-    print('Nr of drugs with zero valid SMILES: ', zero_count)
-    return top1, top3, top5, top10, all, reference, predictions
+    # df.to_csv(input_file, index=False)
+    # print(f'\nNr of drugs with less than {max_metabolites} valid SMILES: ', count)
+    # print('Nr of drugs with zero valid SMILES: ', zero_count)
+    return top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference
 
 def at_least_one_metabolite(top1, top3, top5, top10, all, reference):
 
@@ -426,34 +445,42 @@ def precision_score(input_file):
     return TP / (TP + FP)
 
 
-def recall_and_precision(top10, reference, predictions):
+def recall_and_precision(correct, predictions, reference):
 
-    TP = sum(top10)
-    FN = sum(reference) - TP
+    TP = sum(correct)
     FP = sum(predictions) - TP
+    FN = sum(reference) - TP
 
     recall = TP / (TP + FN)
     precision = TP / (TP + FP)
 
     return recall, precision
 
+def mean_and_variance(list):
 
-def score_result(input_file, max_metabolites, specification):
+    np_list = np.array(list)
+    mean = np.mean(np_list)
+    variance = np.var(np_list, ddof=1)  # set ddof=1 to get sample variance
 
-    # top1, top3, top5, top10, all, reference, predictions = count_correct_metabolites(input_file, max_metabolites, specification)
+    return mean, variance
 
-    # print('\t')
-    # print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
-    # print(f'Total number of predictions: {sum(predictions)}')
+
+def score_result(input_file, max_metabolites, specification, batches):
+
+    top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, max_metabolites, specification, None)
+
+    print('\t')
+    print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
+    print(f'Total number of predictions: {sum(all_pred)}')
 
     # score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
 
     # print('\nAt least one metabolite: ')
     # print(f'Score top1: {score1:.3f}')
-    # print(f'Score top3: {score3:.3f}')
-    # print(f'Score top5: {score5:.3f}')
+    # # print(f'Score top3: {score3:.3f}')
+    # # print(f'Score top5: {score5:.3f}')
     # print(f'Score top10: {score10:.3f}')
-    # print(f'Score all: {score_all:.3f}')
+    # # print(f'Score all: {score_all:.3f}')
 
     # score1, score3, score5, score10, score_all = at_least_half_metabolites(top1, top3, top5, top10, all, reference)
 
@@ -468,75 +495,88 @@ def score_result(input_file, max_metabolites, specification):
 
     # print('\nAll metabolites: ')
     # print(f'Score top1: {score1:.3f}')
-    # print(f'Score top3: {score3:.3f}')
-    # print(f'Score top5: {score5:.3f}')
+    # # print(f'Score top3: {score3:.3f}')
+    # # print(f'Score top5: {score5:.3f}')
     # print(f'Score top10: {score10:.3f}')
-    # print(f'Score all: {score_all:.3f}')
+    # # print(f'Score all: {score_all:.3f}')
 
     # precision = precision_score(input_file)
-
-    # print('\t')
     # print(f'Our precision: {precision:.3f}')
 
-    # recall, precision = recall_and_precision(all, reference, predictions)
+    # recall, precision = recall_and_precision(top10, top10_pred, reference)
 
-    # print(f'Precision: {precision:.3f}')
-    # print(f'Recall: {recall:.3f}')
+    # print('\t')
+    # print(f'Precision @ 10: {precision:.3f}')
+    # print(f'Recall @ 10: {recall:.3f}')
 
     # print('\t')
     # print(reference)
     # print(all)
 
-    top1, top3, top5, top10, all, reference, predictions = count_correct_metabolites(input_file, max_metabolites, specification)
+    recall3_list = []
+    precision3_list = []
+    recall10_list = []
+    precision10_list = []
+    score1_one_list = []
+    score10_one_list = []
+    score1_all_list = []
+    score10_all_list = []
+    for i in range(batches):
+        top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, max_metabolites, specification, i)
+        score1_one, score3_one, score5_one, score10_one, score_all_one = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
+        score1_all, score3_all, score5_all, score10_all, score_all_all = all_metabolites(top1, top3, top5, top10, all, reference)
 
-    print('\t')
-    print(f'Identified metabolites: {sum(all)} / {sum(reference)}')
-    print(f'Total number of predictions: {sum(predictions)}')
+        score1_one_list.append(score1_one)
+        score10_one_list.append(score10_one)
+        score1_all_list.append(score1_all)
+        score10_all_list.append(score10_all)
 
-    score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
+        recall5, precision5 = recall_and_precision(top3, top3_pred, reference)
+        recall3_list.append(recall5)
+        precision3_list.append(precision5)
+
+        recall10, precision10 = recall_and_precision(top10, top10_pred, reference)
+        recall10_list.append(recall10)
+        precision10_list.append(precision10)
+
+    score1_one_mean, score1_one_var = mean_and_variance(score1_one_list)
+    score10_one_mean, score10_one_var = mean_and_variance(score10_one_list)
+
+    score1_all_mean, score1_all_var = mean_and_variance(score1_all_list)
+    score10_all_mean, score10_all_var = mean_and_variance(score10_all_list)
+
+    recall3_mean, recall3_var = mean_and_variance(recall3_list)
+    precision3_mean, precision3_var = mean_and_variance(precision3_list)
+    recall10_mean, recall10_var = mean_and_variance(recall10_list)
+    precision10_mean, precision10_var = mean_and_variance(precision10_list)
 
     print('\nAt least one metabolite: ')
-    print(f'Score top1: {score1:.3f}')
-    print(f'Score top10: {score10:.3f}')
-
-    score1, score3, score5, score10, score_all = all_metabolites(top1, top3, top5, top10, all, reference)
-
-
+    print(f"Score1: {score1_one_mean:.3f} +/- {score1_one_var:.3f}")
+    print(f"Score10: {score10_one_mean:.3f} +/- {score10_one_var:.3f}")
     print('\nAll metabolites: ')
-    print(f'Score top1: {score1:.3f}')
-    print(f'Score top10: {score10:.3f}')
-
-    precision = precision_score(input_file)
-
+    print(f"Score1: {score1_all_mean:.3f} +/- {score1_all_var:.3f}")
+    print(f"Score10: {score10_all_mean:.3f} +/- {score10_all_var:.3f}")
     print('\t')
-    print(f'Our precision: {precision:.3f}')
+    print(f"Precision @ 3: {precision3_mean:.3f} +/- {precision3_var:.3f}")
+    print(f"Recall @ 3: {recall3_mean:.3f} +/- {recall3_var:.3f}")
+    print(f"Precision @ 10: {precision10_mean:.3f} +/- {precision10_var:.3f}")
+    print(f"Recall @ 10: {recall10_mean:.3f} +/- {recall10_var:.3f}")
 
-    recall, precision = recall_and_precision(all, reference, predictions)
-
-    print(f'Precision: {precision:.3f}')
-    print(f'Recall: {recall:.3f}')
-
-    print('\t')
-    print(reference)
-    print(all)
-    
 
 
 testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
 # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
 json_predictions = 'results/evaluation/predictions0.json'
 
-status = 'combine' # 'score' 'combine' 'new'
-name = 'chemfmmp_mmp_10'
-#name = 'test1_5'
+status = 'score' # 'score' 'combine' 'new'
+name = 'versions0_chemf_mmp_comb_48'
+specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
+max_metabolites = 10
 
 # If combine: ---
 ensemble_list = ['evaluation/result/result_v35_pretrainaug.csv', 'evaluation/result/result_v40_MMPaug.csv']
 samples_per_model = 10
 #---
-
-specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
-max_metabolites = 10
 
 csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
 csv_result = f"evaluation/result/result_{name}.csv"
@@ -548,11 +588,10 @@ if status == 'new':
     score_result(csv_result, max_metabolites, specification)
 
 elif status == 'score':
-    #present_result(testset, csv_predictions, csv_result)
-    #save_valid_smiles(csv_result)
-    score_result(csv_result, max_metabolites, specification)
-    count_metabolites(csv_result)
-
+    present_result(testset, csv_predictions, csv_result)
+    save_valid_smiles(csv_result)
+    score_result(csv_result, max_metabolites, specification, 5)
+    # count_metabolites(csv_result)
 elif status == 'combine':
     csv_comb = f"evaluation/result/result_comb_{name}.csv"
     # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
