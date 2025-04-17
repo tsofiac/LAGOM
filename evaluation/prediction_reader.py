@@ -81,53 +81,116 @@ def present_result(input1,input2, output):
    
 #     return fingerprint_similarity
 
-def save_valid_smiles(input_file):
+# def save_valid_smiles(input_file):
+
+#     df = pd.read_csv(input_file)
+
+#     parent_smiles = df['parent_smiles']
+    
+#     total_valid_smiles = 0
+#     total_predictions = 0
+#     mean_predictions = 0
+#     for i in range(len(parent_smiles)):
+#         sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
+#         log_lhs_i = ast.literal_eval(df.at[i, 'log_lhs'])
+#         total_predictions += len(sampled_molecules_i)
+#         parent_smiles_i = parent_smiles[i]
+
+#         valid_smiles = []
+#         valid_log_lhs = []
+#         count_dup = 0
+#         count_parent = 0
+#         for j, smiles in enumerate(sampled_molecules_i):
+#             if Chem.MolFromSmiles(smiles) is not None:
+#                 total_valid_smiles += 1
+#                 smiles = standardize_molecule(smiles)
+#                 if smiles not in valid_smiles:
+#                     if smiles != parent_smiles_i:
+#                         valid_smiles.append(smiles)
+#                         valid_log_lhs.append(log_lhs_i[j])
+#                     else:
+#                         count_parent += 1
+#                 else:
+#                     count_dup += 1
+
+#         print('nr of dup: ', count_dup)
+#         print('nr of parent dup: ', count_parent)
+#         print("nr of valid smiles left: ",len(valid_smiles))
+
+#         mean_predictions += len(valid_smiles)
+
+#         df.at[i, 'sampled_molecules'] = valid_smiles
+#         df.at[i, 'log_lhs'] = valid_log_lhs
+
+#     validity = total_valid_smiles / total_predictions
+#     mean_validity = mean_predictions / len(parent_smiles)
+#     print(f'\nValidity: {validity:.3f}')
+#     print(f'Mean number of SMILES per drug: {mean_validity:.3f} / {len(sampled_molecules_i)}')
+
+#     df.to_csv(input_file, index=False)
+
+def save_valid_smiles(input_file, batches):
 
     df = pd.read_csv(input_file)
 
-    parent_smiles = df['parent_smiles']
-    
-    total_valid_smiles = 0
-    total_predictions = 0
-    mean_predictions = 0
-    for i in range(len(parent_smiles)):
-        sampled_molecules_i = ast.literal_eval(df.at[i, 'sampled_molecules'])
-        log_lhs_i = ast.literal_eval(df.at[i, 'log_lhs'])
-        total_predictions += len(sampled_molecules_i)
-        parent_smiles_i = parent_smiles[i]
+    main_df = pd.DataFrame()
 
-        valid_smiles = []
-        valid_log_lhs = []
-        count_dup = 0
-        count_parent = 0
-        for j, smiles in enumerate(sampled_molecules_i):
-            if Chem.MolFromSmiles(smiles) is not None:
-                total_valid_smiles += 1
-                smiles = standardize_molecule(smiles)
-                if smiles not in valid_smiles:
-                    if smiles != parent_smiles_i:
-                        valid_smiles.append(smiles)
-                        valid_log_lhs.append(log_lhs_i[j])
+    validity = []
+    mean_validity = []
+    for i in range(batches):
+
+        batch_df = df.loc[df['index'] == i]
+        batch_df.reset_index(drop=True, inplace=True)
+
+        parent_smiles = batch_df['parent_smiles']
+        
+        total_valid_smiles = 0
+        total_predictions = 0
+        mean_predictions = 0
+        for i in range(len(parent_smiles)):
+            sampled_molecules_i = ast.literal_eval(batch_df.at[i, 'sampled_molecules'])
+            log_lhs_i = ast.literal_eval(batch_df.at[i, 'log_lhs'])
+            total_predictions += len(sampled_molecules_i)
+            parent_smiles_i = parent_smiles[i]
+
+            valid_smiles = []
+            valid_log_lhs = []
+            count_dup = 0
+            count_parent = 0
+            for j, smiles in enumerate(sampled_molecules_i):
+                if Chem.MolFromSmiles(smiles) is not None:
+                    total_valid_smiles += 1
+                    smiles = standardize_molecule(smiles)
+                    if smiles not in valid_smiles:
+                        if smiles != parent_smiles_i:
+                            valid_smiles.append(smiles)
+                            valid_log_lhs.append(log_lhs_i[j])
+                        else:
+                            count_parent += 1
                     else:
-                        count_parent += 1
-                else:
-                    count_dup += 1
+                        count_dup += 1
 
-        print('nr of dup: ', count_dup)
-        print('nr of parent dup: ', count_parent)
-        print("nr of valid smiles left: ",len(valid_smiles))
+            print('nr of dup: ', count_dup)
+            print('nr of parent dup: ', count_parent)
+            print("nr of valid smiles left: ",len(valid_smiles))
 
-        mean_predictions += len(valid_smiles)
+            mean_predictions += len(valid_smiles)
 
-        df.at[i, 'sampled_molecules'] = valid_smiles
-        df.at[i, 'log_lhs'] = valid_log_lhs
+            batch_df.at[i, 'sampled_molecules'] = valid_smiles
+            batch_df.at[i, 'log_lhs'] = valid_log_lhs
 
-    validity = total_valid_smiles / total_predictions
-    mean_validity = mean_predictions / len(parent_smiles)
-    print(f'\nValidity: {validity:.3f}')
-    print(f'Mean number of SMILES per drug: {mean_validity:.3f} / {len(sampled_molecules_i)}')
+        validity.append(total_valid_smiles / total_predictions)
+        mean_validity.append(mean_predictions / len(parent_smiles))
 
-    df.to_csv(input_file, index=False)
+        main_df = pd.concat([main_df, batch_df], ignore_index=True)
+
+    # print(validity)
+    validity_mean, validity_var = mean_and_variance(validity)
+    mean_validity_mean, mean_validity_var = mean_and_variance(mean_validity)
+    print(f'\nValidity: {validity_mean:.3f} +/- {validity_var:.3f}')
+    print(f'Mean number of SMILES per drug: {mean_validity_mean:.3f} +/- {mean_validity_var:.3f} / {len(sampled_molecules_i)}')
+
+    main_df.to_csv(input_file, index=False)
 
 def specify_df(df, specification = None):
 
@@ -465,13 +528,14 @@ def mean_and_variance(list):
     return mean, variance
 
 
-def score_result(input_file, max_metabolites, specification, batches):
+def score_result(input_file, max_metabolites, specification, batches, print_result=False):
 
     top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, max_metabolites, specification, None)
 
-    print('\t')
-    print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
-    print(f'Total number of predictions: {sum(all_pred)}')
+    if print_result:
+        print('\t')
+        print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
+        print(f'Total number of predictions: {sum(all_pred)}')
 
     # score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
 
@@ -513,92 +577,117 @@ def score_result(input_file, max_metabolites, specification, batches):
     # print(reference)
     # print(all)
 
+    recall1_list = []
+    precision1_list = []
     recall3_list = []
     precision3_list = []
+    recall5_list = []
+    precision5_list = []
     recall10_list = []
     precision10_list = []
     score1_one_list = []
+    score3_one_list = []
+    score5_one_list = []
     score10_one_list = []
+    score_all_one_list = []
     score1_all_list = []
+    score3_all_list = []
+    score5_all_list = []
     score10_all_list = []
+    score_all_all_list = []
     for i in range(batches):
         top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, max_metabolites, specification, i)
         score1_one, score3_one, score5_one, score10_one, score_all_one = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
         score1_all, score3_all, score5_all, score10_all, score_all_all = all_metabolites(top1, top3, top5, top10, all, reference)
 
         score1_one_list.append(score1_one)
+        score3_one_list.append(score3_one)
+        score5_one_list.append(score5_one)
         score10_one_list.append(score10_one)
-        score1_all_list.append(score1_all)
-        score10_all_list.append(score10_all)
+        score_all_one_list.append(score_all_one)
 
-        recall5, precision5 = recall_and_precision(top3, top3_pred, reference)
-        recall3_list.append(recall5)
-        precision3_list.append(precision5)
+        score1_all_list.append(score1_all)
+        score3_all_list.append(score3_all)
+        score5_all_list.append(score5_all)
+        score10_all_list.append(score10_all)
+        score_all_all_list.append(score_all_all)
+
+        recall1, precision1 = recall_and_precision(top1, top1_pred, reference)
+        recall1_list.append(recall1)
+        precision1_list.append(precision1)
+
+        recall3, precision3 = recall_and_precision(top3, top3_pred, reference)
+        recall3_list.append(recall3)
+        precision3_list.append(precision3)
+
+        recall5, precision5 = recall_and_precision(top5, top5_pred, reference)
+        recall5_list.append(recall5)
+        precision5_list.append(precision5)
 
         recall10, precision10 = recall_and_precision(top10, top10_pred, reference)
         recall10_list.append(recall10)
         precision10_list.append(precision10)
 
-    score1_one_mean, score1_one_var = mean_and_variance(score1_one_list)
-    score10_one_mean, score10_one_var = mean_and_variance(score10_one_list)
+    if print_result:
 
-    score1_all_mean, score1_all_var = mean_and_variance(score1_all_list)
-    score10_all_mean, score10_all_var = mean_and_variance(score10_all_list)
+        score1_one_mean, score1_one_var = mean_and_variance(score1_one_list)
+        score10_one_mean, score10_one_var = mean_and_variance(score10_one_list)
 
-    recall3_mean, recall3_var = mean_and_variance(recall3_list)
-    precision3_mean, precision3_var = mean_and_variance(precision3_list)
-    recall10_mean, recall10_var = mean_and_variance(recall10_list)
-    precision10_mean, precision10_var = mean_and_variance(precision10_list)
+        score10_all_mean, score10_all_var = mean_and_variance(score10_all_list)
 
-    print('\nAt least one metabolite: ')
-    print(f"Score1: {score1_one_mean:.3f} +/- {score1_one_var:.3f}")
-    print(f"Score10: {score10_one_mean:.3f} +/- {score10_one_var:.3f}")
-    print('\nAll metabolites: ')
-    print(f"Score1: {score1_all_mean:.3f} +/- {score1_all_var:.3f}")
-    print(f"Score10: {score10_all_mean:.3f} +/- {score10_all_var:.3f}")
-    print('\t')
-    print(f"Precision @ 3: {precision3_mean:.3f} +/- {precision3_var:.3f}")
-    print(f"Recall @ 3: {recall3_mean:.3f} +/- {recall3_var:.3f}")
-    print(f"Precision @ 10: {precision10_mean:.3f} +/- {precision10_var:.3f}")
-    print(f"Recall @ 10: {recall10_mean:.3f} +/- {recall10_var:.3f}")
+        recall10_mean, recall10_var = mean_and_variance(recall10_list)
+        precision10_mean, precision10_var = mean_and_variance(precision10_list)
+
+        print('\nAt least one metabolite: ')
+        print(f"Score1: {score1_one_mean:.3f} +/- {score1_one_var:.3f}")
+        print(f"Score10: {score10_one_mean:.3f} +/- {score10_one_var:.3f}")
+        print('\nAll metabolites: ')
+        print(f"Score10: {score10_all_mean:.3f} +/- {score10_all_var:.3f}")
+        print('\t')
+        print(f"Precision @ 10: {precision10_mean:.3f} +/- {precision10_var:.3f}")
+        print(f"Recall @ 10: {recall10_mean:.3f} +/- {recall10_var:.3f}")
+
+    return [recall1_list, recall3_list, recall5_list, recall10_list], [precision1_list, precision3_list, precision5_list, precision10_list], [score1_one_list, score3_one_list, score5_one_list, score10_one_list, score_all_one_list], [score1_all_list, score3_all_list, score5_all_list, score10_all_list, score_all_all_list]
 
 
 
-testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
-# testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
-json_predictions = 'results/evaluation/predictions0.json'
+if __name__ == "__main__":
 
-status = 'score' # 'score' 'combine' 'new'
-name = 'versions0_chemf_mmp_comb_48'
-specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
-max_metabolites = 10
+    testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
+    # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
+    json_predictions = 'results/evaluation/predictions0.json'
 
-# If combine: ---
-ensemble_list = ['evaluation/result/result_v35_pretrainaug.csv', 'evaluation/result/result_v40_MMPaug.csv']
-samples_per_model = 10
-#---
+    status = 'score' # 'score' 'combine' 'new'
+    name = 'version44_chemf_mmp_comb_0.5'
+    specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
+    max_metabolites = 10
 
-csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
-csv_result = f"evaluation/result/result_{name}.csv"
+    # If combine: ---
+    ensemble_list = ['evaluation/result/result_v35_pretrainaug.csv', 'evaluation/result/result_v40_MMPaug.csv']
+    samples_per_model = 10
+    #---
 
-if status == 'new':
-    json_to_csv(json_predictions, csv_predictions)
-    present_result(testset, csv_predictions, csv_result)
-    save_valid_smiles(csv_result)
-    score_result(csv_result, max_metabolites, specification)
+    csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
+    csv_result = f"evaluation/result/result_{name}.csv"
 
-elif status == 'score':
-    present_result(testset, csv_predictions, csv_result)
-    save_valid_smiles(csv_result)
-    score_result(csv_result, max_metabolites, specification, 5)
-    # count_metabolites(csv_result)
-elif status == 'combine':
-    csv_comb = f"evaluation/result/result_comb_{name}.csv"
-    # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
-    # score_result(csv_comb, max_metabolites, specification)
-    concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
-    score_result(csv_comb, max_metabolites, specification)
-    count_metabolites(csv_comb)
-else:
-    print('Wrong status')
+    if status == 'new':
+        json_to_csv(json_predictions, csv_predictions)
+        present_result(testset, csv_predictions, csv_result)
+        save_valid_smiles(csv_result, 5)
+        score_result(csv_result, max_metabolites, specification, 5, True)
+
+    elif status == 'score':
+        present_result(testset, csv_predictions, csv_result)
+        save_valid_smiles(csv_result, 5)
+        score_result(csv_result, max_metabolites, specification, 5, True)
+        # count_metabolites(csv_result)
+    elif status == 'combine':
+        csv_comb = f"evaluation/result/result_comb_{name}.csv"
+        # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
+        # score_result(csv_comb, max_metabolites, specification)
+        concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
+        score_result(csv_comb, max_metabolites, specification, True)
+        count_metabolites(csv_comb)
+    else:
+        print('Wrong status')
 
