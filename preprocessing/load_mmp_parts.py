@@ -65,51 +65,45 @@ def create_mmp(mmp_df, chembldb, output_file):
 def main():    
 
     # # Division into 10 parts
-    # section_size = 1101304
-
-    # start_row = 10
-    # end_row = 15
 
     # start_row = 0
     # end_row = 1101304
 
-    # start_row = 1101305
+    # start_row = 1101304
     # end_row = 2202607
 
-    # start_row = 2202608
+    # start_row = 2202607
     # end_row = 3303912
 
-    # start_row = 3303913
+    # start_row = 3303912
     # end_row = 4405216 
 
-    # start_row = 4405217
+    # start_row = 4405216
     # end_row = 5506519
 
-    start_row = 5506520
-    end_row = 6607824
+    # start_row = 5506519
+    # end_row = 6607824
 
-    # start_row = 6607825
+    # start_row = 6607824
     # end_row = 7709127
 
-    # start_row = 7709128
+    # start_row = 7709127
     # end_row = 8810431
 
-    # start_row = 8810432
+    # start_row = 8810431
     # end_row = 9911735
 
-    # start_row = 9911736
-    # end_row = 11013037
+    start_row = 9911735
+    end_row = None #11013037
 
     print("rows:", start_row, "to", end_row)
 
     molecular_match_pairs_filepath = "dataset/raw_data/1297204_Virtual_Analogs.dat"
     chembldb_filepath = "dataset/raw_data/chembl_35_chemreps.txt" # CHEMBL35
-    output_file = f"dataset/curated_data/paired_mmp_rows_{start_row}_to_{end_row}.csv"
+    output_file = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
 
     mmp_df = pd.read_csv(molecular_match_pairs_filepath)
     chembldb = get_chembl(chembldb_filepath)
-
-    print("length", len(mmp_df))
 
     mmp_df_subset = mmp_df.iloc[start_row:end_row]
 
