@@ -1,8 +1,10 @@
 import pandas as pd
 import numpy as np
 from rdkit import Chem, DataStructs
+from rdkit.Chem import Descriptors, AllChem 
 from scipy.cluster.hierarchy import linkage, fcluster
 from scipy.spatial.distance import squareform
+from collections import Counter
 #from add_possible_products import add_possible_products
 
 def count_metabolites(input_csv): # Counts metabolites in training data
@@ -330,10 +332,74 @@ def split_tanimoto_score(child_smiles, n_splits): #input is a list of smiles
 
     return splits
 
-splits = split_tanimoto_score(['CCO', 'CCN', 'CCC', 'COC'], 2)
-for i, split in enumerate(splits):
-    print(f"Split {i + 1}: {split}")
+# splits = split_tanimoto_score(['CCO', 'CCN', 'CCC', 'COC', 'NNN', 'OOO', 'NON', 'CCCC', 'C=C'], 4)
+# for i, split in enumerate(splits):
+#     print(f"Split {i + 1}: {split}")
 
+def split_on_tb_clusters(input_file, n_splits):
+    df = pd.read_csv(input_file)
+
+    df_train = df[df['set'] == 'train']
+    df_val = df[df['set'] == 'val']
+    df_test = df[df['set'] == 'test']
+    df = pd.concat([df_train, df_val])
+
+    clusters = df['TB_Cluster']
+
+    # Count the number of rows in each cluster
+    cluster_counts = Counter(clusters)
+     # Sort clusters by size (largest first)
+    sorted_clusters = sorted(cluster_counts.items(), key=lambda x: x[1], reverse=True)
+
+    # Initialise the splits
+    splits = [pd.DataFrame() for _ in range(n_splits)]
+
+    # Distribute clusters to the split with the least number of rows
+    for cluster_id, _ in sorted_clusters:
+        cluster_rows = df[df['TB_Cluster'] == cluster_id]
+        # Find the split with the least number of rows
+        split_lengths = [len(split) for split in splits]
+        split_index = split_lengths.index(min(split_lengths))
+        # Add the cluster rows to that split
+        splits[split_index] = pd.concat([splits[split_index], cluster_rows])
+
+    for i, split in enumerate(splits):
+        csv = f'dataset/curated_data/tb_split_{i + 1}of_{n_splits}_parent.csv'
+        finetune_csv = f'dataset/finetune/tb_split_{i + 1}of_{n_splits}_parent_finetune.csv'
+        split.to_csv(csv, index=False)
+        reformat_for_chemformer(csv, finetune_csv)
+        print(f"Split {i + 1} contains {len(split)} rows.")
+
+    
+    return splits
+
+def reformat_for_chemformer(input_file, output_file):
+    df = pd.read_csv(input_file)
+
+    df = df.rename(columns={
+        "child_smiles": "products",
+        "parent_smiles": "reactants",
+    })
+
+    df.to_csv(output_file, sep='\t', index=False)
+
+tb_file = 'dataset/curated_data/tb_output_parent.csv'
+split_on_tb_clusters(tb_file, 4)
+
+
+# def count_transformations(input_file):
+#     df = pd.read_csv(input_file)
+#     transformations = df['transformation']
+
+#     transformation_counts = transformations.value_counts()
+#     num_unique_transformations = transformation_counts.size
+    
+#     print(f"There are {num_unique_transformations} types of transformations.")
+
+#     for transformation, count in transformation_counts.items():
+#         print(f"Transformation: {transformation}, Count: {count}")
+
+# count_transformations('dataset/curated_data/combined_smiles_clean_transform_newset.csv')
 
 # if __name__ == "__main__":
 
