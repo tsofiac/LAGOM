@@ -67,8 +67,8 @@ def main():
     # # Division into 10 parts
     # section_size = 1101304
 
-    start_row = 0
-    end_row = 2000
+    # start_row = 10
+    # end_row = 15
 
     # start_row = 0
     # end_row = 1101304
@@ -85,8 +85,8 @@ def main():
     # start_row = 4405217
     # end_row = 5506519
 
-    # start_row = 5506520
-    # end_row = 6607824
+    start_row = 5506520
+    end_row = 6607824
 
     # start_row = 6607825
     # end_row = 7709127
@@ -130,6 +130,16 @@ def main():
 if __name__ == "__main__":
     main()
 
+    # # Define start and end rows
+    # start_row = 4382477
+    # end_row = 5408311
+
+    # df = pd.read_csv('dataset/curated_data/paired_mmp_all.csv')
+
+    # df = df.iloc[start_row:end_row]
+    # # Save the selected rows to a new CSV file
+    # df.to_csv(f'dataset/curated_data/paired_mmp_rows_{start_row}_to_{end_row}.csv', index=False)
+    # # data_df.to_csv('dataset/curated_data/paired_mmp_rows_5506520_to_6607824.csv', index=False)
 
 
 

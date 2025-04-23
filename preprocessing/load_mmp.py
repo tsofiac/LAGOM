@@ -24,7 +24,7 @@ def create_datapoint(chembldb, row):
     v_analog = row[1]
     chembl_id_metabolite = row[2]
 
-    if v_analog_id % 1000 == 0:
+    if v_analog_id % 10000 == 0:
         print(f'iteration {v_analog_id}')
 
     metabolite = chembldb[np.where(chembldb[:,0] == chembl_id_metabolite)]
@@ -33,12 +33,22 @@ def create_datapoint(chembldb, row):
     metabolite_smiles = metabolite[0,1]
     return [v_analog_id, v_analog, chembl_id_metabolite, metabolite_smiles]
 
-def create_datapoints(mmps, chembldb): 
-    # mmps: VIRTUAL_ANALOG_IDX,VIRTUAL_ANALOG,CHEMBL_COMPOUND_ID,CHEMBL_TARGET_IDs
-    # chembld: chembl_id	canonical_smiles	standard_inchi	standard_inchi_key 
-    result = [create_datapoint(chembldb, row) for row in mmps]
-    result = list(filter(lambda item: item is not None, result))
+# def create_datapoints(mmps, chembldb): 
+#     # mmps: VIRTUAL_ANALOG_IDX,VIRTUAL_ANALOG,CHEMBL_COMPOUND_ID,CHEMBL_TARGET_IDs
+#     # chembld: chembl_id	canonical_smiles	standard_inchi	standard_inchi_key 
+#     result = [create_datapoint(chembldb, row) for row in mmps]
+#     result = list(filter(lambda item: item is not None, result))
 
+#   return result
+
+def create_datapoints(mmps, chembldb):
+    result = []
+    for row in mmps:
+        datapoint = create_datapoint(chembldb, row)
+        # if datapoint == "STOP":
+        #     break  # Exit loop when the signal is received
+        if datapoint is not None:
+            result.append(datapoint)
     return result
 
 def create_mmp(mmp_df, chembldb, output_file): 
@@ -50,30 +60,29 @@ def create_mmp(mmp_df, chembldb, output_file):
     mmp_smiles.to_csv(output_file, index=False)
     return mmp_smiles
 
-'''
-mmp_split = np.array_split(mmp_df.to_numpy(), 20)
-for current in list(range(12,20)): 
-    print(f"Create_dataset of {current}")
-    current_mmp = mmp_split[current]
-    result = create_datapoints(current_mmp, chembldb.to_numpy())
-    total = total + result
-
-    mmp_smiles = pd.DataFrame(total)
-    mmp_smiles.columns = ["virtual_analog_id", "parent_smiles", "chembl_id_metabolite", "metabolite_smiles"]
-    output_file = "dataset/raw_data/all_paired_mmp" + str(current) + ".csv"
-    mmp_smiles.to_csv(output_file, index=False)
-'''
 
 
 def main():    
     molecular_match_pairs_filepath = "dataset/raw_data/1297204_Virtual_Analogs.dat"
     chembldb_filepath = "dataset/raw_data/chembl_35_chemreps.txt" # CHEMBL35
-    output_file = "dataset/curated_data/paired_mmp.csv"
+    #output_file = "dataset/curated_data/paired_mmp.csv"
 
     mmp_df = pd.read_csv(molecular_match_pairs_filepath)
     chembldb = get_chembl(chembldb_filepath)
-    create_mmp(mmp_df, chembldb, output_file)
-    
+    #create_mmp(mmp_df, chembldb, output_file)
+
+    mmp_split = np.array_split(mmp_df.to_numpy(), 40)
+    for current in list(range(12,20)): 
+        print(f"Create_dataset of {current}")
+        current_mmp = mmp_split[current]
+        result = create_datapoints(current_mmp, chembldb.to_numpy())
+        total = total + result
+
+        mmp_smiles = pd.DataFrame(total)
+        mmp_smiles.columns = ["virtual_analog_id", "parent_smiles", "chembl_id_metabolite", "child_smiles"]
+        output_file = "dataset/curated_data/paired_mmp" + str(current) + ".csv"
+        mmp_smiles.to_csv(output_file, index=False)
+        
 if __name__ == "__main__":
     main()
 
