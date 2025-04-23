@@ -296,7 +296,7 @@ def count_metabolites(input_file):
     df['molecule_count'] = df['sampled_molecules'].apply(count_molecules)
     
     # Calculate the average number of molecules per row
-    average_molecules = df['molecule_count'].mean()
+    average_molecules = round(df['molecule_count'].mean(), 2)
     
     print(f"The average number of sampled molecules per drug is: {average_molecules}")
 
@@ -585,6 +585,8 @@ def score_result(input_file, max_metabolites, specification, batches, print_resu
     precision5_list = []
     recall10_list = []
     precision10_list = []
+    recall_all_list = []
+    precision_all_list = []
     score1_one_list = []
     score3_one_list = []
     score5_one_list = []
@@ -628,6 +630,12 @@ def score_result(input_file, max_metabolites, specification, batches, print_resu
         recall10_list.append(recall10)
         precision10_list.append(precision10)
 
+        recall_all, precision_all = recall_and_precision(all, all_pred, reference)
+        recall_all_list.append(recall_all)
+        precision_all_list.append(precision_all)
+
+
+
     if print_result:
 
         score1_one_mean, score1_one_var = mean_and_variance(score1_one_list)
@@ -635,17 +643,28 @@ def score_result(input_file, max_metabolites, specification, batches, print_resu
 
         score10_all_mean, score10_all_var = mean_and_variance(score10_all_list)
 
+        score_all_one_mean, score_all_one_var = mean_and_variance(score_all_one_list)
+        score_all_all_mean, score_all_all_var = mean_and_variance(score_all_all_list)
+
         recall10_mean, recall10_var = mean_and_variance(recall10_list)
         precision10_mean, precision10_var = mean_and_variance(precision10_list)
+
+        recall_all_mean, recall_all_var = mean_and_variance(recall_all_list)
+        precision_all_mean, precision_all_var = mean_and_variance(precision_all_list)
 
         print('\nAt least one metabolite: ')
         print(f"Score1: {score1_one_mean:.3f} +/- {score1_one_var:.3f}")
         print(f"Score10: {score10_one_mean:.3f} +/- {score10_one_var:.3f}")
+        print(f"Score all: {score_all_one_mean:.3f} +/- {score_all_one_var:.3f}")
         print('\nAll metabolites: ')
         print(f"Score10: {score10_all_mean:.3f} +/- {score10_all_var:.3f}")
         print('\t')
+        print(f"Score all: {score_all_all_mean:.3f} +/- {score_all_all_var:.3f}")
+        print('\t')
         print(f"Precision @ 10: {precision10_mean:.3f} +/- {precision10_var:.3f}")
         print(f"Recall @ 10: {recall10_mean:.3f} +/- {recall10_var:.3f}")
+        print(f"Precision @ all: {precision_all_mean:.3f} +/- {precision_all_var:.3f}")
+        print(f"Recall @ all: {recall_all_mean:.3f} +/- {recall_all_var:.3f}")
 
     return [recall1_list, recall3_list, recall5_list, recall10_list], [precision1_list, precision3_list, precision5_list, precision10_list], [score1_one_list, score3_one_list, score5_one_list, score10_one_list, score_all_one_list], [score1_all_list, score3_all_list, score5_all_list, score10_all_list, score_all_all_list]
 
@@ -657,14 +676,15 @@ if __name__ == "__main__":
     # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
     json_predictions = 'results/evaluation/predictions0.json'
 
-    status = 'score' # 'score' 'combine' 'new'
-    name = 'version44_chemf_mmp_comb_0.5'
+    status = 'combine' # 'score' 'combine' 'new'
+    # name = '4_split4_base_10'
+    name = '4_splits_base_5'
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
-    max_metabolites = 10
+    max_metabolites = 5
 
     # If combine: ---
-    ensemble_list = ['evaluation/result/result_v35_pretrainaug.csv', 'evaluation/result/result_v40_MMPaug.csv']
-    samples_per_model = 10
+    ensemble_list = ['evaluation/result/result_4_split1_base_10.csv', 'evaluation/result/result_4_split2_base_10.csv', 'evaluation/result/result_4_split3_base_10.csv', 'evaluation/result/result_4_split4_base_10.csv']
+    samples_per_model = 5
     #---
 
     csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
@@ -686,7 +706,7 @@ if __name__ == "__main__":
         # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
         # score_result(csv_comb, max_metabolites, specification)
         concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
-        score_result(csv_comb, max_metabolites, specification, True)
+        score_result(csv_comb, max_metabolites, specification, 5, True)
         count_metabolites(csv_comb)
     else:
         print('Wrong status')
