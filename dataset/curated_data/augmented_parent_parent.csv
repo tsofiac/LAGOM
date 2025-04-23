@@ -1922,16 +1922,3 @@ Tetrahydrodaidzein,Oc1ccc(C2COc3cc(O)ccc3C2O)cc1,Tetrahydrodaidzein,Oc1ccc(C2COc
 Dihydrogenistein,O=C1c2c(O)cc(O)cc2OCC1c1ccc(O)cc1,Dihydrogenistein,O=C1c2c(O)cc(O)cc2OCC1c1ccc(O)cc1,Genistein,train,Parent-Parent Augmented
 ,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,,C=C(C(=O)c1c(O)cc(O)cc1O)c1ccc(O)cc1,Genistein,train,Parent-Parent Augmented
 Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,Sudan I,Oc1ccc2ccccc2c1N=Nc1ccccc1,Sudan I,train,Parent-Parent Augmented
-Clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,Clopidogrel,COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1,DB00758,train,Parent-Parent Augmented
-Atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,Atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O,DB01076,train,Parent-Parent Augmented
-Budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,Budesonide,CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1,DB01222,train,Parent-Parent Augmented
-Sitagliptin,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,Sitagliptin,NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,DB01261,train,Parent-Parent Augmented
-Apremilast,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC,Apremilast,CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC,DB05676,train,Parent-Parent Augmented
-Dabigatran,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Dabigatran,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,DB14726,train,Parent-Parent Augmented
-Rilpivirine,Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,Rilpivirine,Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1,DB08864,train,Parent-Parent Augmented
-Linagliptin,CC#CCn1c(N2CCCC(N)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,Linagliptin,CC#CCn1c(N2CCCC(N)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,DB08882,train,Parent-Parent Augmented
-Enzalutamide,CNC(=O)c1ccc(N2C(=S)N(c3ccc(C#N)c(C(F)(F)F)c3)C(=O)C2(C)C)cc1F,Enzalutamide,CNC(=O)c1ccc(N2C(=S)N(c3ccc(C#N)c(C(F)(F)F)c3)C(=O)C2(C)C)cc1F,DB08899,train,Parent-Parent Augmented
-Dolutegravir,CC1CCOC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,Dolutegravir,CC1CCOC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12,DB08930,train,Parent-Parent Augmented
-Ibrutinib,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,Ibrutinib,C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,DB09053,train,Parent-Parent Augmented
-Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Buprenorphine,COC12CCC3(CC1C(C)(O)C(C)(C)C)C1Cc4ccc(O)c5c4C3(CCN1CC1CC1)C2O5,Buprenorphine,train,Parent-Parent Augmented
-galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,galantamine,COc1ccc2c3c1OC1CC(O)C=CC31CCN(C)C2,galantamine,train,Parent-Parent Augmented
