@@ -551,19 +551,50 @@ def log_time(message):
     
 if __name__ == "__main__":
 
-    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
+    # rows for mmp
+    start_row = 0
+    end_row = 1101304
+
+    # start_row = 1101304
+    # end_row = 2202607
+
+    # start_row = 2202607
+    # end_row = 3303912
+
+    # start_row = 3303912
+    # end_row = 4405216 
+
+    # start_row = 4405216
+    # end_row = 5506519
+
+    # start_row = 5506519
+    # end_row = 6607824
+
+    # start_row = 6607824
+    # end_row = 7709127
+
+    # start_row = 7709127
+    # end_row = 8810431
+
+    # start_row = 8810431
+    # end_row = 9911735
+
+    # start_row = 9911735
+    # end_row = None #11013037
+
+    name = f'mmp_{start_row}_{end_row}' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split']
 
     preprocess_unique_parents = False
     augment_parent_grandchild = False
     augment_parent_parent = False
 
     # for combined
-    val_size = 0.1 # val
-    eval_size = 0.05 # test
+    # val_size = 0.1 # val
+    # eval_size = 0.05 # test
 
     # for mmp
-    # val_size = 0.005 # val
-    # eval_size = 0 # test
+    val_size = 0.005 # val
+    eval_size = 0 # test
 
     min_similarity = 0.2
     
@@ -585,17 +616,16 @@ if __name__ == "__main__":
     evaluation_unique_csv = f'dataset/curated_data/{name}_evaluation_unique.csv'
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-    if name == 'mmp_new_split':
+    if name == 'mmp_split':
         print('here')
         clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
 
         set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
         reformat_for_chemformer(clean_csv, finetune_csv)
 
-    if (name == 'mmp') or (name == 'mmp_1') or (name == 'mmp_2') or (name == 'mmp_3') or (name == 'mmp_4') or (name == 'mmp_5') or (name == 'mmp_6') or (name == 'mmp_7') or (name == 'mmp_8') or (name == 'mmp_9') or (name == 'mmp_10'):
+    if 'mmp' in name:
 
-        # dataset = 'dataset/curated_data/paired_mmp_rows_9911736_to_11013037.csv'
-        dataset='dataset/curated_data/paired_mmp_all.csv'
+        dataset = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
 
         log_time("Begin filtering")
         df = standardize_smiles(dataset)
