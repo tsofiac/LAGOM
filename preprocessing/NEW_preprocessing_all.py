@@ -531,18 +531,19 @@ def log_time(message):
     
 if __name__ == "__main__":
 
-    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
+    name = 'mmp_new_split' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
+
     preprocess_unique_parents = False
     augment_parent_grandchild = False
     augment_parent_parent = False
 
     # for combined
-    val_size = 0.1 # val
-    eval_size = 0.05 # test
+    # val_size = 0.1 # val
+    # eval_size = 0.05 # test
 
     # for mmp
-    # val_size = 0.05 # val
-    # eval_size = 0.05 # test
+    val_size = 0.005 # val
+    eval_size = 0 # test
 
     min_similarity = 0.2
     
@@ -564,11 +565,17 @@ if __name__ == "__main__":
     evaluation_unique_csv = f'dataset/curated_data/{name}_evaluation_unique.csv'
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-    if (name == 'mmp') or (name == 'mmp_atoms_allowed_5'):
+    if name == 'mmp_new_split':
+        print('here')
+        clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
 
-        # dataset = 'dataset/curated_data/paired_mmp_rows_0_to_2000.csv'
-        dataset = 'dataset/curated_data/paired_mmp_rows_4405217_to_5506519.csv'
-        # dataset='dataset/curated_data/paired_mmp_all.csv'
+        set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+        reformat_for_chemformer(clean_csv, finetune_csv)
+
+    if (name == 'mmp') or (name == 'mmp_1') or (name == 'mmp_2') or (name == 'mmp_3') or (name == 'mmp_4') or (name == 'mmp_5') or (name == 'mmp_6') or (name == 'mmp_7') or (name == 'mmp_8') or (name == 'mmp_9') or (name == 'mmp_10'):
+
+        # dataset = 'dataset/curated_data/paired_mmp_rows_9911736_to_11013037.csv'
+        dataset='dataset/curated_data/paired_mmp_all.csv'
 
         log_time("Begin filtering")
         df = standardize_smiles(dataset)
@@ -587,11 +594,11 @@ if __name__ == "__main__":
         log_time("Filtered on weight")
         filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
         log_time("Filtered on fingerprint similarity")
-        set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-        log_time("set distribution complete")
-        reformat_for_chemformer(clean_csv, finetune_csv)
+        # set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+        # log_time("set distribution complete")
+        #reformat_for_chemformer(clean_csv, finetune_csv)
         #reformat_for_chemformer(evaluation_csv, evaluation_finetune_csv)
-        log_time("Reformating for Chemformer complete")
+        #log_time("Reformating for Chemformer complete")
 
     if name == 'combined': 
         print("Starting preprocessing of combined dataset")
