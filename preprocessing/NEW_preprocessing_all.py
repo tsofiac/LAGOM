@@ -518,6 +518,26 @@ def parent_to_parent(input_file, output_file):
 
     new_df.to_csv(output_file, index=False)
 
+def add_possible_products(input_file):
+    df = pd.read_csv(input_file, sep='\t') 
+
+    def agg_order_preserved(series):
+        return list(series)
+
+    grouped = df.groupby(['reactants'], sort=False).agg({
+        'parent_name': 'first',  # Get the first entry for 'parent_name' in each group
+        'child_name': agg_order_preserved, 
+        'products': agg_order_preserved 
+    }).reset_index()
+
+    grouped.rename(columns={'products': 'possible_products'}, inplace=True)
+
+    df = df.merge(grouped[['reactants', 'possible_products']], on='reactants', how='left')
+
+    df['possible_products'] = df['possible_products'].apply(lambda x: '.'.join(x))
+
+    df.to_csv(input_file, sep='\t', index=False)
+
 
 # ------------Time log------------------
 def log_time(message):
@@ -531,19 +551,19 @@ def log_time(message):
     
 if __name__ == "__main__":
 
-    name = 'mmp_new_split' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
+    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp']
 
     preprocess_unique_parents = False
     augment_parent_grandchild = False
     augment_parent_parent = False
 
     # for combined
-    # val_size = 0.1 # val
-    # eval_size = 0.05 # test
+    val_size = 0.1 # val
+    eval_size = 0.05 # test
 
     # for mmp
-    val_size = 0.005 # val
-    eval_size = 0 # test
+    # val_size = 0.005 # val
+    # eval_size = 0 # test
 
     min_similarity = 0.2
     
@@ -646,11 +666,11 @@ if __name__ == "__main__":
             filter_data_on_one_side(parent_grandchild, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
             filter_fingerprint_similarity(parent_grandchild, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
 
-            select_reactions(parent_grandchild, combined_csv)  # borde vi ta bort gloryx också, det kanske redan görs så som koden fungerar...
+            # select_reactions(parent_grandchild, combined_csv)
 
-            combined_df = pd.read_csv(combined_csv)
-            parent_grandchild_df = pd.read_csv(parent_grandchild)
-            combine_datasets(combined_df, parent_grandchild_df, combined_csv)
+            # combined_df = pd.read_csv(combined_csv)
+            # parent_grandchild_df = pd.read_csv(parent_grandchild)
+            # combine_datasets(combined_df, parent_grandchild_df, combined_csv)
 
         if augment_parent_parent:
             parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
@@ -660,11 +680,24 @@ if __name__ == "__main__":
             get_unique_parents(parent_parent, parent_parent)
             parent_to_parent(parent_parent, parent_parent)
 
+            # combined_df = pd.read_csv(combined_csv)
+            # parent_parent_df = pd.read_csv(parent_parent)
+            # combine_datasets(combined_df, parent_parent_df, combined_csv)
+
+        if augment_parent_grandchild:
+            select_reactions(parent_grandchild, combined_csv)
+
+            combined_df = pd.read_csv(combined_csv)
+            parent_grandchild_df = pd.read_csv(parent_grandchild)
+            combine_datasets(combined_df, parent_grandchild_df, combined_csv)
+
+        if augment_parent_parent:
             combined_df = pd.read_csv(combined_csv)
             parent_parent_df = pd.read_csv(parent_parent)
             combine_datasets(combined_df, parent_parent_df, combined_csv)
 
         reformat_for_chemformer(combined_csv, finetune_csv)
+        add_possible_products(finetune_csv)
 
         if preprocess_unique_parents:
             print('Unique parent')

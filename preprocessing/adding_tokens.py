@@ -195,16 +195,38 @@ def reformat_for_chemformer(input_file, output_file):
     df.to_csv(output_file, sep='\t', index=False)
 
 
+def add_possible_products(input_file):
+    df = pd.read_csv(input_file, sep='\t') 
+
+    def agg_order_preserved(series):
+        return list(series)
+
+    grouped = df.groupby(['reactants'], sort=False).agg({
+        'parent_name': 'first',  # Get the first entry for 'parent_name' in each group
+        'child_name': agg_order_preserved, 
+        'products': agg_order_preserved 
+    }).reset_index()
+
+    grouped.rename(columns={'products': 'possible_products'}, inplace=True)
+
+    df = df.merge(grouped[['reactants', 'possible_products']], on='reactants', how='left')
+
+    df['possible_products'] = df['possible_products'].apply(lambda x: '.'.join(x))
+
+    df.to_csv(input_file, sep='\t', index=False)
+
+
+
 if __name__ == "__main__":
 
-    enzyme_annotations = True # Can not be done together with the other annotations
-    logp_annotations = False
-    csp3_annotations = False
-    using_finetune_ready_file = False # True for evaluation set
+    enzyme_annotations = False # Can not be done together with the other annotations
+    logp_annotations = True
+    csp3_annotations = True
+    using_finetune_ready_file = True # True for evaluation set
    
     #OBS: look over all file names
 
-    name = 'enzymes' # 'annotations' 'logp' 'csp3' 'enzymes'
+    name = 'annotations' # 'annotations' 'logp' 'csp3' 'enzymes'
 
     annotated_datafile = f'dataset/curated_data/annotated_data/{name}_combined_smiles_clean.csv' 
     finetune_file = f'dataset/finetune/{name}_finetune.csv'
@@ -219,6 +241,7 @@ if __name__ == "__main__":
             annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
             
         reformat_for_chemformer(annotated_datafile, finetune_file)
+        add_possible_products(finetune_file)
 
     else:
         datafile = 'dataset/finetune/combined_evaluation_finetune.csv'
