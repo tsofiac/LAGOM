@@ -215,40 +215,92 @@ def add_possible_products(input_file):
 
     df.to_csv(input_file, sep='\t', index=False)
 
+def combine_datasets(df1, df2, output_csv):
+    selected_df1 = df1.copy()
+    selected_df2 = df2.copy()
+
+    combined_df = pd.concat([selected_df1, selected_df2], ignore_index=True)
+    combined_df.to_csv(output_csv, index=False)
+
 
 
 if __name__ == "__main__":
 
     enzyme_annotations = False # Can not be done together with the other annotations
-    logp_annotations = True
-    csp3_annotations = True
-    using_finetune_ready_file = True # True for evaluation set
+    logp_annotations = False
+    csp3_annotations = False
+    using_finetune_ready_file = False # True for evaluation set
+    
+    augment_parent_grandchild = False
+    augment_parent_parent = True
    
     #OBS: look over all file names
 
-    name = 'annotations' # 'annotations' 'logp' 'csp3' 'enzymes'
+    name = 'PP' # 'annotations' 'logp' 'csp3' 'enzymes' 'PG' 'PP' 'PG_PP'
 
     annotated_datafile = f'dataset/curated_data/annotated_data/{name}_combined_smiles_clean.csv' 
     finetune_file = f'dataset/finetune/{name}_finetune.csv'
 
-    if using_finetune_ready_file == False:
-        datafile = 'dataset/curated_data/combined_smiles_clean.csv'
+    if logp_annotations or csp3_annotations:
 
-        if enzyme_annotations == True:
-            annotate_data_enzymefamily(datafile, annotated_datafile)  
+        if using_finetune_ready_file == False:
+            datafile = 'dataset/curated_data/combined_smiles_clean.csv'
+
+            if enzyme_annotations == True:
+                annotate_data_enzymefamily(datafile, annotated_datafile)  
+
+            else:
+                annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
+                
+            reformat_for_chemformer(annotated_datafile, finetune_file)
+            add_possible_products(finetune_file)
 
         else:
-            annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
-            
+            datafile = 'dataset/finetune/combined_evaluation_finetune.csv'
+            finetune_file = f'dataset/finetune/{name}_evaluation_finetune.csv'
+
+            if enzyme_annotations == True:
+                annotate_data_enzymefamily_finetune(datafile, finetune_file)
+                print('here')
+            else:
+                annotate_data_finetune(logp_annotations, csp3_annotations, datafile, finetune_file)
+
+
+    if augment_parent_grandchild and not augment_parent_parent:
+        combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+        parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
+
+
+        combined_df = pd.read_csv(combined_csv)
+        parent_grandchild_df = pd.read_csv(parent_grandchild)
+        combine_datasets(combined_df, parent_grandchild_df, annotated_datafile)
+
         reformat_for_chemformer(annotated_datafile, finetune_file)
         add_possible_products(finetune_file)
 
-    else:
-        datafile = 'dataset/finetune/combined_evaluation_finetune.csv'
-        finetune_file = f'dataset/finetune/{name}_evaluation_finetune.csv'
+    if augment_parent_parent and not augment_parent_grandchild:
+        combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+        parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
 
-        if enzyme_annotations == True:
-            annotate_data_enzymefamily_finetune(datafile, finetune_file)
-            print('here')
-        else:
-            annotate_data_finetune(logp_annotations, csp3_annotations, datafile, finetune_file)
+        combined_df = pd.read_csv(combined_csv)
+        parent_parent_df = pd.read_csv(parent_parent)
+        combine_datasets(combined_df, parent_parent_df, annotated_datafile)
+
+        reformat_for_chemformer(annotated_datafile, finetune_file)
+        add_possible_products(finetune_file)
+
+    if augment_parent_parent and augment_parent_grandchild:
+        combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+        parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
+        parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
+
+        combined_df = pd.read_csv(combined_csv)
+        parent_grandchild_df = pd.read_csv(parent_grandchild)
+        combine_datasets(combined_df, parent_grandchild_df, annotated_datafile)
+
+        annotated_df = pd.read_csv(annotated_datafile)
+        parent_parent_df = pd.read_csv(parent_parent)
+        combine_datasets(annotated_df, parent_parent_df, annotated_datafile)
+
+        reformat_for_chemformer(annotated_datafile, finetune_file)
+        add_possible_products(finetune_file)
