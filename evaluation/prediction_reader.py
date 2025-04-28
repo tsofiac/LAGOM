@@ -184,7 +184,7 @@ def save_valid_smiles(input_file, batches):
 
         main_df = pd.concat([main_df, batch_df], ignore_index=True)
 
-    # print(validity)
+    print(validity)
     validity_mean, validity_var = mean_and_variance(validity)
     mean_validity_mean, mean_validity_var = mean_and_variance(mean_validity)
     print(f'\nValidity: {validity_mean:.3f} +/- {validity_var:.3f}')
@@ -301,7 +301,7 @@ def count_metabolites(input_file):
     print(f"The average number of sampled molecules per drug is: {average_molecules}")
 
 
-def count_correct_metabolites(input_file, max_metabolites, specification, batch):
+def count_correct_metabolites(input_file, batch, specification):
 
     df = pd.read_csv(input_file)
 
@@ -317,8 +317,8 @@ def count_correct_metabolites(input_file, max_metabolites, specification, batch)
     # df['sampled_boolean'] = None  # for the log_lhs plot, doesn't work with batches
 
 
-    count = 0
-    zero_count = 0
+    # count = 0
+    # zero_count = 0
     top1 = []
     top1_pred = []
     top3 = []
@@ -339,10 +339,10 @@ def count_correct_metabolites(input_file, max_metabolites, specification, batch)
         top10_pred.append(len(sampled_molecules_i[0:10]))
         child_smiles_i = ast.literal_eval(child_smiles[i])
 
-        if len(sampled_molecules_i) < max_metabolites:
-            count += 1
-        if len(sampled_molecules_i) < 1:
-            zero_count += 1
+        # if len(sampled_molecules_i) < max_metabolites:
+        #     count += 1
+        # if len(sampled_molecules_i) < 1:
+        #     zero_count += 1
 
         count_top1 = 0
         count_top3 = 0
@@ -528,9 +528,9 @@ def mean_and_variance(list):
     return mean, variance
 
 
-def score_result(input_file, max_metabolites, specification, batches, print_result=False):
+def score_result(input_file, batches, print_result=False, specification=0):
 
-    top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, max_metabolites, specification, None)
+    top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, None, specification)
 
     if print_result:
         print('\t')
@@ -598,7 +598,7 @@ def score_result(input_file, max_metabolites, specification, batches, print_resu
     score10_all_list = []
     score_all_all_list = []
     for i in range(batches):
-        top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, max_metabolites, specification, i)
+        top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, i, specification)
         score1_one, score3_one, score5_one, score10_one, score_all_one = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
         score1_all, score3_all, score5_all, score10_all, score_all_all = all_metabolites(top1, top3, top5, top10, all, reference)
 
@@ -658,7 +658,6 @@ def score_result(input_file, max_metabolites, specification, batches, print_resu
         print(f"Score all: {score_all_one_mean:.3f} +/- {score_all_one_var:.3f}")
         print('\nAll metabolites: ')
         print(f"Score10: {score10_all_mean:.3f} +/- {score10_all_var:.3f}")
-        print('\t')
         print(f"Score all: {score_all_all_mean:.3f} +/- {score_all_all_var:.3f}")
         print('\t')
         print(f"Precision @ 10: {precision10_mean:.3f} +/- {precision10_var:.3f}")
@@ -674,13 +673,18 @@ if __name__ == "__main__":
 
     testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
     # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
-    json_predictions = 'results/evaluation/predictions0.json'
+    # json_predictions = 'results/evaluation/predictions0.json'
 
-    status = 'combine' # 'score' 'combine' 'new'
+    json_predictions = 'results/evaluation/base/predictions0.json'
+
+    status = 'score' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
-    name = '4_splits_base_5'
+    name = 'test'
+
+    bs = 4 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
-    max_metabolites = 5
+    # max_metabolites = 12
+    
 
     # If combine: ---
     ensemble_list = ['evaluation/result/result_4_split1_base_10.csv', 'evaluation/result/result_4_split2_base_10.csv', 'evaluation/result/result_4_split3_base_10.csv', 'evaluation/result/result_4_split4_base_10.csv']
@@ -693,20 +697,20 @@ if __name__ == "__main__":
     if status == 'new':
         json_to_csv(json_predictions, csv_predictions)
         present_result(testset, csv_predictions, csv_result)
-        save_valid_smiles(csv_result, 5)
-        score_result(csv_result, max_metabolites, specification, 5, True)
+        save_valid_smiles(csv_result, bs)
+        score_result(csv_result, bs, True, specification)
 
     elif status == 'score':
-        present_result(testset, csv_predictions, csv_result)
-        save_valid_smiles(csv_result, 5)
-        score_result(csv_result, max_metabolites, specification, 5, True)
+        # present_result(testset, csv_predictions, csv_result)
+        # save_valid_smiles(csv_result, bs)
+        score_result(csv_result, bs, True, specification)
         # count_metabolites(csv_result)
     elif status == 'combine':
         csv_comb = f"evaluation/result/result_comb_{name}.csv"
         # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
         # score_result(csv_comb, max_metabolites, specification)
         concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
-        score_result(csv_comb, max_metabolites, specification, 5, True)
+        score_result(csv_comb, bs, True, specification)
         count_metabolites(csv_comb)
     else:
         print('Wrong status')
