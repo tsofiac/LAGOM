@@ -582,19 +582,19 @@ if __name__ == "__main__":
     # start_row = 9911735
     # end_row = None #11013037
 
-    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split']
+    name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'metatrans']
 
     preprocess_unique_parents = False
     # augment_parent_grandchild = True
     # augment_parent_parent = True
 
-    # for combined
-    val_size = 0.1 # val
-    eval_size = 0.05 # test
+    # # for combined
+    # val_size = 0.1 # val
+    # eval_size = 0.05 # test
 
     # for mmp
-    # val_size = 0.005 # val
-    # eval_size = 0 # test
+    val_size = 0.005 # val
+    eval_size = 0 # test
 
     min_similarity = 0.2
     
@@ -616,39 +616,64 @@ if __name__ == "__main__":
     evaluation_unique_csv = f'dataset/curated_data/{name}_evaluation_unique.csv'
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-    if name == 'mmp_split':
-        print('here')
-        clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
+    if 'metatrans':
+            dataset = 'dataset/curated_data/metatrans.csv'
 
-        set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-        reformat_for_chemformer(clean_csv, finetune_csv)
+            log_time("Begin filtering metatrans")
+            df = standardize_smiles(dataset)
+            log_time("Smiles are standardised")
+            # df = remove_duplicates(df, removed_duplicates)
+            # log_time("Duplicates removed")
+            df = remove_equal_parent_child(df, removed_equal)
+            log_time("Equal_parent_child removed")
+            df.to_csv(clean_csv, index=False)
+
+            filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles, save_removed=False)
+            log_time("Filtered valid smiles")
+            filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed, save_removed=False)
+            log_time("Filtered atoms allowed")
+            filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True, save_removed=False)
+            log_time("Filtered on weight")
+            filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
+            log_time("Filtered on fingerprint similarity")
+            reformat_for_chemformer(clean_csv, finetune_csv)
+            log_time("Reformated for Chemformer")
 
     if 'mmp' in name:
+        
+        if name == 'mmp_split':
+            clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
+            finetune_csv = 'dataset/finetune/mmp_finetune.csv'
 
-        dataset = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
+            set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+            reformat_for_chemformer(clean_csv, finetune_csv)
 
-        log_time("Begin filtering")
-        df = standardize_smiles(dataset)
-        log_time("Smiles are standardised")
-        # df = remove_duplicates(df, removed_duplicates)
-        # log_time("Duplicates removed")
-        df = remove_equal_parent_child(df, removed_equal)
-        log_time("Equal_parent_child removed")
-        df.to_csv(clean_csv, index=False)
 
-        filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles, save_removed=False)
-        log_time("Filtered valid smiles")
-        filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed, save_removed=False)
-        log_time("Filtered atoms allowed")
-        filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True, save_removed=False)
-        log_time("Filtered on weight")
-        filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
-        log_time("Filtered on fingerprint similarity")
-        # set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-        # log_time("set distribution complete")
-        #reformat_for_chemformer(clean_csv, finetune_csv)
-        #reformat_for_chemformer(evaluation_csv, evaluation_finetune_csv)
-        #log_time("Reformating for Chemformer complete")
+        else: 
+            dataset = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
+
+            log_time("Begin filtering")
+            df = standardize_smiles(dataset)
+            log_time("Smiles are standardised")
+            # df = remove_duplicates(df, removed_duplicates)
+            # log_time("Duplicates removed")
+            df = remove_equal_parent_child(df, removed_equal)
+            log_time("Equal_parent_child removed")
+            df.to_csv(clean_csv, index=False)
+
+            filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles, save_removed=False)
+            log_time("Filtered valid smiles")
+            filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed, save_removed=False)
+            log_time("Filtered atoms allowed")
+            filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True, save_removed=False)
+            log_time("Filtered on weight")
+            filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
+            log_time("Filtered on fingerprint similarity")
+            # set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+            # log_time("set distribution complete")
+            #reformat_for_chemformer(clean_csv, finetune_csv)
+            #reformat_for_chemformer(evaluation_csv, evaluation_finetune_csv)
+            #log_time("Reformating for Chemformer complete")
 
     if name == 'combined': 
         print("Starting preprocessing of combined dataset")
