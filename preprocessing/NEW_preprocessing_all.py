@@ -582,7 +582,7 @@ if __name__ == "__main__":
     # start_row = 9911735
     # end_row = None #11013037
 
-    name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'metatrans']
+    name = 'mmp_split' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'mmp_compare' 'metatrans']
 
     preprocess_unique_parents = False
     # augment_parent_grandchild = True
@@ -616,7 +616,7 @@ if __name__ == "__main__":
     evaluation_unique_csv = f'dataset/curated_data/{name}_evaluation_unique.csv'
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-    if 'metatrans':
+    if name == 'metatrans':
             dataset = 'dataset/curated_data/metatrans.csv'
 
             log_time("Begin filtering metatrans")
@@ -636,11 +636,18 @@ if __name__ == "__main__":
             log_time("Filtered on weight")
             filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
             log_time("Filtered on fingerprint similarity")
+
+            compare_datasets(clean_csv, dataset_gloryx, 'dataset/removed_data/metatrans_compare_gloryx_removed_duplicates.csv')
+            log_time("Filtered on Gloryx")
+
+            compare_datasets(clean_csv, '/projects/cc/se_users/carlsson_ksmq649/MasterThesis/dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/metatrans_compare_combined_removed_duplicates.csv')
+            log_time("Filtered on Metabolic dataset")
+
             reformat_for_chemformer(clean_csv, finetune_csv)
             log_time("Reformated for Chemformer")
 
     if 'mmp' in name:
-        
+        print("MMP")
         if name == 'mmp_split':
             clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
             finetune_csv = 'dataset/finetune/mmp_finetune.csv'
@@ -648,6 +655,20 @@ if __name__ == "__main__":
             set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
             reformat_for_chemformer(clean_csv, finetune_csv)
 
+        elif name == 'mmp_compare':
+            clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
+
+            print("Comparing with Gloryx")
+            compare_datasets(clean_csv, dataset_gloryx, 'dataset/removed_data/mmp_compare_gloryx_removed_duplicates.csv')
+            log_time("Filtered on Gloryx")
+
+            print("Comparing with Metabolic dataset")
+            compare_datasets(clean_csv, 'dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/mmp_compare_metabolic_removed_duplicates.csv')
+            log_time("Filtered on Metabolic dataset")
+
+            # print("Comparing with Metabolic test dataset")
+            # compare_datasets(clean_csv, 'dataset/curated_data/combined_evaluation.csv', 'dataset/removed_data/metatrans_comparetest_combined_removed_duplicates.csv')
+            # log_time("Filtered on Metabolic dataset")
 
         else: 
             dataset = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
