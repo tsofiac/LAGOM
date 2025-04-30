@@ -1,13 +1,13 @@
-    sbatch chemformer/pretrain.sh \
+sbatch chemformer/pretrain.sh \
     chemformer/pretrain_bart.yaml \
-    dataset/finetune/mmp_100000rows_finetune.csv \
-    step=1000000_mod_no_deepspeed.ckpt \
-    500 \
-    0 \
-    0 \
+    dataset/pretrain/mmp_new_split_finetune.csv \
+    null \
+    128 \
+    0.5 \
+    0.1 \
     chemformer/bart_vocab_downstream.json \
-    results/pretraining/base \
-    results/pretraining/base/config.yaml
+    results/pretraining/comb \
+    results/pretraining/comb/config.yaml
 
 # sbatch fine_tune.sh \
 #     fine_tune_bart.yaml \

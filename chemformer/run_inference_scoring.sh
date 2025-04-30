@@ -2,14 +2,16 @@
 ./chemformer/inference_score.sh \
     chemformer/inference_score.yaml \
     dataset/finetune/combined_evaluation_finetune.csv \
-    results/training/forward_prediction/version_61/checkpoints/epoch=4-step=135.ckpt \
+    results/training/submitted/forward_prediction/version_5/checkpoints/epoch=67-step=816.ckpt \
     chemformer/bart_vocab_downstream.json \
-    64 \
+    38 \
     20 \
     forward_prediction \
     results/evaluation/metrics_scores \
     results/evaluation/predictions \
     results/evaluation/inference_score
+
+# 19 as batch size - ok!
 
 
 # sbatch inference_score.sh \

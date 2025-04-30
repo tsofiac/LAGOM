@@ -3,7 +3,7 @@ model_path: MODEL_PATH
 
 resume: false
 
-n_epochs: 100
+n_epochs: 500
 batch_size: BATCH_SIZE
 augmentation_probability: AUGMENTATION_PROBABILITY
 augmentation_strategy: all # Can be set to "all", "reactants", "products" when using synthesis datamodule
@@ -17,11 +17,19 @@ vocabulary_path: VOCABULARY_PATH
 output_directory: OUTPUT_DIRECTORY
 task: forward_prediction
 
-acc_batches: 8
+seed: 1
+
+# acc_batches: 8
 check_val_every_n_epoch: 3
 
+datamodule:
+  type: SynthesisDataModule
+
+n_predictions: 0
+# scorers:
+#   - FractionInvalidScore
 
 # model_hyperparams:
 #   optimizer:
-#     learning_rate: 0.001
+#     learning_rate: 0.5
   

@@ -1,7 +1,7 @@
 sbatch chemformer/fine_tune_submit.sh \
     chemformer/fine_tune_bart_submit.yaml \
-    dataset/finetune/combined_finetune.csv \
-    chemf_mmp_aug_mask_last \
+    dataset/alohomora/annotations_finetune.csv \
+    pre-trained_models/chemVA_comb.ckpt \
     64 \
     chemformer/bart_vocab_downstream.json \
     results/training/submitted/ \

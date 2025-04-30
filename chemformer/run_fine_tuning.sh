@@ -1,8 +1,8 @@
 # sbatch fine_tune.sh \
 ./chemformer/fine_tune.sh \
     chemformer/fine_tune_bart.yaml \
-    dataset/finetune/combined_finetune.csv \
-    step=1000000_mod_no_deepspeed.ckpt \
+    dataset/alohomora/csp3_finetune.csv \
+    chemf_mmp_aug_mask_last \
     64 \
     chemformer/bart_vocab_downstream.json \
     results/training \
