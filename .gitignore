@@ -8,3 +8,5 @@ evaluation/predictions
 evaluation/result
 dataset/pre-train
 pre-trained_models/
+data_analysis/overtrain.ipynb
+data_analysis/metrics_analysis.ipynb
