@@ -1,0 +1,4 @@
+display_name: 'envdev'
+language: 'python'
+manager: 'conda'
+conda_env: '/projects/cc/se_users/carlsson_ksmq649/miniconda3/envs/aizynthmodels'
