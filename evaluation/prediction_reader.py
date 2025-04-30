@@ -673,19 +673,17 @@ if __name__ == "__main__":
 
     testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
     # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
-    # json_predictions = 'results/evaluation/predictions0.json'
-
-    json_predictions = 'results/evaluation/base/predictions0.json'
+    json_predictions = 'results/evaluation/predictions0.json'
+    # json_predictions = 'results/evaluation/final/predictions9.json'
 
     status = 'score' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
-    name = 'test'
+    name = 'logp'
 
     bs = 4 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
     # max_metabolites = 12
     
-
     # If combine: ---
     ensemble_list = ['evaluation/result/result_4_split1_base_10.csv', 'evaluation/result/result_4_split2_base_10.csv', 'evaluation/result/result_4_split3_base_10.csv', 'evaluation/result/result_4_split4_base_10.csv']
     samples_per_model = 5
@@ -693,6 +691,8 @@ if __name__ == "__main__":
 
     csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
     csv_result = f"evaluation/result/result_{name}.csv"
+    # csv_predictions = f"evaluation/final/predictions_{name}.csv"
+    # csv_result = f"evaluation/final/result_{name}.csv"
 
     if status == 'new':
         json_to_csv(json_predictions, csv_predictions)
@@ -701,8 +701,8 @@ if __name__ == "__main__":
         score_result(csv_result, bs, True, specification)
 
     elif status == 'score':
-        # present_result(testset, csv_predictions, csv_result)
-        # save_valid_smiles(csv_result, bs)
+        present_result(testset, csv_predictions, csv_result)
+        save_valid_smiles(csv_result, bs)
         score_result(csv_result, bs, True, specification)
         # count_metabolites(csv_result)
     elif status == 'combine':

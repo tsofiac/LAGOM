@@ -2,9 +2,8 @@ __pycache__/
 outputs/
 logs/
 dataset/raw_data/
-step=1000000_mod_no_deepspeed.ckpt
-dataset/processed_data/
 results/
 evaluation/predictions
 evaluation/result
-dataset/pretrain
+dataset/pre-train
+pre-trained_models/
