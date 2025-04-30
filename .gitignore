@@ -2,11 +2,8 @@ __pycache__/
 outputs/
 logs/
 dataset/raw_data/
-dataset/processed_data/
 results/
 evaluation/predictions
 evaluation/result
 dataset/pre-train
 pre-trained_models/
-data_analysis/overtrain.ipynb
-data_analysis/metrics_analysis.ipynb
