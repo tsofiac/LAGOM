@@ -1,8 +1,0 @@
-För Miranda
-2. mkdir ~/.local/share/fonts/
-3. cp /projects/cc/se_users/larsson_kbvs588/test/MasterThesis/fonts/* ~/.local/share/fonts/
-4. fc-cache -f -v
-5. cd ~/.cache/matplotlib
-6. ls
-7. rm fontlist-v390.json
-8. restart jupyter notebook maybeeee
