@@ -525,8 +525,6 @@ def add_possible_products(input_file):
         return list(series)
 
     grouped = df.groupby(['reactants'], sort=False).agg({
-        'parent_name': 'first',  # Get the first entry for 'parent_name' in each group
-        'child_name': agg_order_preserved, 
         'products': agg_order_preserved 
     }).reset_index()
 
@@ -582,19 +580,11 @@ if __name__ == "__main__":
     # start_row = 9911735
     # end_row = None #11013037
 
-    name = 'mmp_split' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'mmp_compare' 'metatrans']
+    name = f'mmp_{start_row}_{end_row}' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'mmp_compare' 'metatrans']
 
     preprocess_unique_parents = False
     # augment_parent_grandchild = True
     # augment_parent_parent = True
-
-    # # for combined
-    # val_size = 0.1 # val
-    # eval_size = 0.05 # test
-
-    # for mmp
-    val_size = 0.005 # val
-    eval_size = 0 # test
 
     min_similarity = 0.2
     
@@ -617,13 +607,13 @@ if __name__ == "__main__":
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
     if name == 'metatrans':
-            dataset = 'dataset/curated_data/metatrans.csv'
+            dataset = 'dataset/curated_data/metatrans_full_not_filtered.csv'
 
             log_time("Begin filtering metatrans")
             df = standardize_smiles(dataset)
             log_time("Smiles are standardised")
-            # df = remove_duplicates(df, removed_duplicates)
-            # log_time("Duplicates removed")
+            df = remove_duplicates(df, removed_duplicates)
+            log_time("Duplicates removed")
             df = remove_equal_parent_child(df, removed_equal)
             log_time("Equal_parent_child removed")
             df.to_csv(clean_csv, index=False)
@@ -640,23 +630,31 @@ if __name__ == "__main__":
             compare_datasets(clean_csv, dataset_gloryx, 'dataset/removed_data/metatrans_compare_gloryx_removed_duplicates.csv')
             log_time("Filtered on Gloryx")
 
-            compare_datasets(clean_csv, '/projects/cc/se_users/carlsson_ksmq649/MasterThesis/dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/metatrans_compare_combined_removed_duplicates.csv')
+            compare_datasets(clean_csv, 'dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/metatrans_compare_combined_removed_duplicates.csv')
             log_time("Filtered on Metabolic dataset")
 
             reformat_for_chemformer(clean_csv, finetune_csv)
             log_time("Reformated for Chemformer")
 
+            add_possible_products(finetune_csv)
+            log_time("Reformated for Chemformer")
+
     if 'mmp' in name:
+
+        val_size = 0.005 # val
+        eval_size = 0 # test
+
         print("MMP")
+
         if name == 'mmp_split':
-            clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
-            finetune_csv = 'dataset/finetune/mmp_finetune.csv'
+            clean_csv = 'dataset/mmp/mmp_all_smiles_clean_compared_noduplicates.csv'
+            finetune_csv = 'dataset/mmp/mmp_finetune_compared_no_duplicates.csv'
 
             set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
             reformat_for_chemformer(clean_csv, finetune_csv)
 
         elif name == 'mmp_compare':
-            clean_csv = 'dataset/curated_data/mmp_all_smiles_clean.csv'
+            clean_csv = 'dataset/mmp/mmp_all_smiles_clean_compared.csv'
 
             print("Comparing with Gloryx")
             compare_datasets(clean_csv, dataset_gloryx, 'dataset/removed_data/mmp_compare_gloryx_removed_duplicates.csv')
@@ -666,9 +664,19 @@ if __name__ == "__main__":
             compare_datasets(clean_csv, 'dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/mmp_compare_metabolic_removed_duplicates.csv')
             log_time("Filtered on Metabolic dataset")
 
-            # print("Comparing with Metabolic test dataset")
-            # compare_datasets(clean_csv, 'dataset/curated_data/combined_evaluation.csv', 'dataset/removed_data/metatrans_comparetest_combined_removed_duplicates.csv')
-            # log_time("Filtered on Metabolic dataset")
+        elif name == 'mmp_remove_duplicates':
+            print('Removing duplicates from mmp')
+            csv = 'dataset/mmp/mmp_all_smiles_clean_compared.csv'
+            new_csv = 'dataset/mmp/mmp_all_smiles_clean_compared_noduplicates.csv'
+            df = pd.read_csv(csv)
+
+            log_time("Begin filtering")
+            df = remove_duplicates(df, removed_duplicates)
+            log_time("Duplicates removed")
+            df.to_csv(new_csv, index=False)
+            log_time("New csv created")
+
+
 
         else: 
             dataset = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
@@ -697,6 +705,10 @@ if __name__ == "__main__":
             #log_time("Reformating for Chemformer complete")
 
     if name == 'combined': 
+
+        val_size = 0.1 # val
+        eval_size = 0.05 # test
+
         print("Starting preprocessing of combined dataset")
         metxbiodb_csv = 'dataset/curated_data/metxbiodb_smiles.csv'
         drugbank_csv = 'dataset/curated_data/drugbank_smiles.csv'
@@ -726,6 +738,7 @@ if __name__ == "__main__":
         reformat_for_chemformer(evaluation_unique_csv, evaluation_finetune_csv)
 
         # ------- parent - grandchild --------------
+        print("Starting preprocessing of parent-grandchild")
         parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
         augmented_drugbank = augment_drugbank(drugbank_csv)
         augmented_metxbiodb = augment_metxbiodb(metxbiodb_csv)
@@ -746,6 +759,7 @@ if __name__ == "__main__":
         # --------------------------------------
 
         # ------- parent - parent --------------
+        print("Starting preprocessing of parent-parent")
         parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
         combined_df = pd.read_csv(combined_csv)
         train_df = combined_df[combined_df['set'] == 'train']

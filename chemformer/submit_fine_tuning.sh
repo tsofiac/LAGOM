@@ -1,11 +1,11 @@
 sbatch chemformer/fine_tune_submit.sh \
     chemformer/fine_tune_bart_submit.yaml \
-    dataset/alohomora/annotations_finetune.csv \
-    pre-trained_models/chemVA_comb.ckpt \
+    dataset/finetune/metatrans_finetune.csv \
+    results/pretraining/ChemVA/forward_prediction/version_2/checkpoints/last.ckpt \ #CHECKA
     64 \
     chemformer/bart_vocab_downstream.json \
-    results/training/submitted/ \
-    results/training/submitted/config.yaml
+    results/training/meta/ \
+    results/training/meta/config.yaml
 
 # sbatch fine_tune.sh \
 #     fine_tune_bart.yaml \

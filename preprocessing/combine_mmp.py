@@ -1,70 +1,79 @@
 import pandas as pd
 
-#combined_mmp_file = 'dataset/curated_data/paired_mmp_all.csv' 
+    # rows for mmp
+    # start_row = 0
+    # end_row = 1101304
 
-# df1 = pd.read_csv('dataset/curated_data/paired_mmp_rows_0_to_1101304.csv')
-# df2 = pd.read_csv('dataset/curated_data/paired_mmp_rows_1101305_to_2202607.csv')
-# df3 = pd.read_csv('dataset/curated_data/paired_mmp_rows_2202608_to_3303912.csv')
-# df4 = pd.read_csv('dataset/curated_data/paired_mmp_rows_3303912_to_4405216.csv')
-# df5 = pd.read_csv('dataset/curated_data/paired_mmp_rows_4405217_to_5506519.csv')
-# df6 = pd.read_csv('dataset/curated_data/paired_mmp_rows_5506520_to_6607824.csv')
-# df7 = pd.read_csv('dataset/curated_data/paired_mmp_rows_6607825_to_7709127.csv')
-# df8 = pd.read_csv('dataset/curated_data/paired_mmp_rows_7709128_to_8810431.csv')
-# df9 = pd.read_csv('dataset/curated_data/paired_mmp_rows_8810432_to_9911735.csv')
-# df10 = pd.read_csv('dataset/curated_data/paired_mmp_rows_9911736_to_11013037.csv')
+    # start_row = 1101304
+    # end_row = 2202607
 
-def randomly_select_rows(csv_file, small_file, n):
-    """
-    Randomly select n rows from a CSV file.
+    # start_row = 2202607
+    # end_row = 3303912
 
-    Parameters:
-    - csv_file (str): The path to the CSV file.
-    - n (int): The number of rows to randomly select.
+    # start_row = 3303912
+    # end_row = 4405216 
 
-    Returns:
-    - pd.DataFrame: A DataFrame containing the randomly selected rows.
-    """
-    # Load the CSV file into a DataFrame
-    df = pd.read_csv(csv_file, low_memory = False)
+    # start_row = 4405216
+    # end_row = 5506519
+
+    # start_row = 5506519
+    # end_row = 6607824
+
+    # start_row = 6607824
+    # end_row = 7709127
+
+    # start_row = 7709127
+    # end_row = 8810431
+
+    # start_row = 8810431
+    # end_row = 9911735
+
+    # start_row = 9911735
+    # end_row = None #11013037
+
+
+
+import pandas as pd
+
+def combine_filtered_mmp_files(combined_mmp_file):
+    # Base directory for storing or referencing the CSV files
+    base_dir = '/projects/cc/se_users/carlsson_ksmq649/MasterThesis/dataset/mmp'
     
-    # Randomly sample `n` rows from the DataFrame without replacement
-    random_sample = df.sample(n=n, random_state=1)
+    # Define row ranges that are to be used for naming
+    row_ranges = [
+        (0, 1101304),
+        (1101304, 2202607),
+        (2202607, 3303912),
+        (3303912, 4405216),
+        (4405216, 5506519),
+        (5506519, 6607824),
+        (6607824, 7709127),
+        (7709127, 8810431),
+        (8810431, 9911735),
+        (9911735, 'end')
+    ]
+    
+    # List to hold the DataFrames
+    dataframes = []
 
-    random_sample.to_csv(small_file, index=False)
+    for start_row, end_row in row_ranges:
+        # Construct file name
+        name = f'mmp_{start_row}_{end_row}'
+        file_path = f'{base_dir}/{name}_smiles_clean.csv'
+        
+        # Read each CSV as a DataFrame and append to the list
+        try:
+            df = pd.read_csv(file_path)
+            dataframes.append(df)
+        except FileNotFoundError:
+            print(f"File not found: {file_path}")
+            continue
+    
+    # Concatenate all DataFrames in the list
+    df_combined = pd.concat(dataframes, ignore_index=True)
+    
+    # Save the combined DataFrame to a new CSV file
+    df_combined.to_csv(combined_mmp_file, index=False)
 
-def reformat_for_chemformer(input_file, output_file):
-    df = pd.read_csv(input_file, low_memory=False)
-
-    df = df.rename(columns={
-        "child_smiles": "products",
-        "parent_smiles": "reactants",
-    })
-
-    df.to_csv(output_file, sep='\t', index=False)
-
-
-# df_combined = pd.concat([df1, df2, df3, df4, df5, df6, df7, df8, df9, df10])
-# df_combined.to_csv(combined_mmp_file, index=False)
-# reformat_for_chemformer(combined_mmp_file, 'dataset/finetune/mmp_all_finetune.csv')
-
-
-
-dataframes = []
-
-for i in range(1, 11):
-    df = pd.read_csv(f'dataset/curated_data/mmp_{i}_smiles_clean.csv')
-    dataframes.append(df)
-
-# Concatenate all the dataframes into a single dataframe
-combined_df = pd.concat(dataframes, ignore_index=True)
-
-combined_mmp_file = 'dataset/curated_data/mmp_all_smiles_clean.csv'
-combined_df.to_csv(combined_mmp_file, index=False)
-
-# n = 1000000
-# small_file = f'dataset/curated_data/mmp_atoms_allowed_{n}rows_smiles_clean.csv'
-# randomly_select_rows(combined_mmp_file, small_file, n)
-
-# finetune_file = f'dataset/finetune/mmp_{n}rows_finetune.csv'
-# reformat_for_chemformer(small_file, finetune_file)
-
+combined_mmp_file = 'dataset/mmp/mmp_all_smiles_clean_test.csv' 
+combine_filtered_mmp_files(combined_mmp_file)
