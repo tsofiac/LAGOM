@@ -1,10 +1,9 @@
 from rdkit import Chem
 import numpy as np
-from random import shuffle
 from chembl_structure_pipeline.standardizer import standardize_mol
 
 # Canonicalise
-smiles = 'CC(=O)OC1=CC=CC=C1C(O)=O'
+smiles = "CC(=O)OC1=CC=CC=C1C(O)=O"
 mol = Chem.MolFromSmiles(smiles)
 mol = standardize_mol(mol)
 smiles = Chem.MolToSmiles(mol, canonical=True, isomericSmiles=False)
