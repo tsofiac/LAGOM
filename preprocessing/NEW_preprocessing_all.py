@@ -313,7 +313,7 @@ def filter_data_on_one_side(data_file, filter_method, removed_data_file, if_pare
 def valid_smiles(molecule): 
     try:
         return Chem.MolFromSmiles(molecule) is not None
-    except:
+    except Exception:
         return False
 
 def atoms_allowed_in_molecules(molecule): 
@@ -322,14 +322,14 @@ def atoms_allowed_in_molecules(molecule):
         mol = Chem.MolFromSmiles(molecule)
         atoms = [atom.GetSymbol() for atom in mol.GetAtoms()]
         return set(atoms).issubset(set(atoms_to_include))
-    except:
+    except Exception:
         return False
 
 def molecule_allowed_based_on_weight(molecule, max_weight=750, min_weight=100): 
     try:
         mol_weight = Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule))
         return min_weight <= mol_weight <= max_weight
-    except:
+    except Exception:
         return False
 # ----------------------------------------------------------------
 
@@ -388,7 +388,7 @@ def get_unique_parents(input_file, output_file):
     unique_parent_dataset = []
 
     # Get a list of columns excluding 'parent_smiles'
-    other_columns = [col for col in df.columns if col != 'parent_smiles']
+    # other_columns = [col for col in df.columns if col != 'parent_smiles']
 
     # Loop through unique parent SMILES
     for parent in df['parent_smiles'].unique():
@@ -712,7 +712,7 @@ if __name__ == "__main__":
         print("Starting preprocessing of combined dataset")
         metxbiodb_csv = 'dataset/curated_data/metxbiodb_smiles.csv'
         drugbank_csv = 'dataset/curated_data/drugbank_smiles.csv'
-        combined_csv = f'dataset/curated_data/combined_smiles_clean.csv'
+        combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 
         df_metx = pd.read_csv(metxbiodb_csv)
         df_drugbank = pd.read_csv(drugbank_csv)
