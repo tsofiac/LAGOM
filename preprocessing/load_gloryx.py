@@ -30,7 +30,6 @@ def load_gloryx(json_file, comma_file, comma_unique_file, tab_file):
             generation_column.append(generation)
             set_column.append("test")
 
-            # Process any nested metabolites
             if "metabolites" in metabolite:
                 process_metabolites(
                     metabolite["metabolites"], metabolite_smiles, metabolite_name

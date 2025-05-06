@@ -43,9 +43,7 @@ def reformat_external_csv(input_file, output_file):
 def remove_bad_drug_metabolite_rows(input_file):
     df = pd.read_csv(input_file)
     initial_row_count = len(df)
-    # if the identifiers are empty we remove
     df.dropna(subset=["dbid", "name"], how="all", inplace=True)
-    # If the data we need is empty the
     df.dropna(subset=["smiles", "inchi"], how="all", inplace=True)
     final_row_count = len(df)
     dropped_count = initial_row_count - final_row_count
@@ -55,23 +53,17 @@ def remove_bad_drug_metabolite_rows(input_file):
 
 def count_nan_smiles(csv_file):
     df = pd.read_csv(csv_file)
-    # Count the number of NaN values in the 'smiles' column
     nan_count = df["smiles"].isna().sum()
     print("Missing SMILES: ", nan_count)
 
 
 def inchi_to_smiles(csv_file):
     df = pd.read_csv(csv_file)
-    # Iterate over each row where `smiles` is NaN
     for index, row in df[df["smiles"].isna()].iterrows():
         try:
-            # Convert InChI to molecule
             mol = Chem.inchi.MolFromInchi(row["inchi"])
-
             if mol is not None:
-                # Convert molecule to SMILES
                 smiles = Chem.MolToSmiles(mol)
-                # Replace NaN value in `smiles` column
                 df.at[index, "smiles"] = smiles
             else:
                 print(
@@ -83,7 +75,6 @@ def inchi_to_smiles(csv_file):
     df.to_csv(csv_file, index=False)
 
 
-# combines two dataframes
 def combine_datasets(first_file, second_file, output_file):
     first_df = pd.read_csv(first_file, on_bad_lines="skip")
     second_df = pd.read_csv(second_file, on_bad_lines="skip")
@@ -152,7 +143,7 @@ def generate_reaction_pairs(input_file, output_file):
                 is_in_local_reaction = True
                 # If local reaction has data then it is complete or it needs to be investigated
                 if local_reaction.has_data():
-                    # We need atleast an id or a name on both sides of the reaction
+                    # We need at least an id or a name on both sides of the reaction
                     # To map data
                     if (
                         local_reaction.left_side_id == ""
@@ -176,7 +167,7 @@ def generate_reaction_pairs(input_file, output_file):
                                 enzyme_string,
                             ]
                         )
-                    # we reset here since we want to look for the new reaction
+                    # We reset here since we want to look for the new reaction
                     local_reaction = Reaction()
 
             # To keep track on what data we are looking at
@@ -194,7 +185,7 @@ def generate_reaction_pairs(input_file, output_file):
                     local_reaction.left_side_name = element.text
                 elif right_or_left_reaction == "right":
                     local_reaction.right_side_name = element.text
-            # get the names of the enzymes
+            # Get the names of the enzymes
             if tag == "enzyme" and is_in_local_reaction:
                 right_or_left_reaction = "none"
                 is_in_enzymes = True
@@ -243,23 +234,19 @@ def add_missing_ID(data_file):
             if not matching_rows.empty:
                 df.at[index, "parent_id"] = matching_rows.iloc[0]["child_id"]
 
-    # Iterate over rows with missing child_id
     for index, missing_row in missing_child_id_rows.iterrows():
         child_name = missing_row["child_name"]
 
-        # First, check for another child_name match
         matching_rows = df_no_missing_id[df_no_missing_id["child_name"] == child_name]
         if not matching_rows.empty:
             df.at[index, "child_id"] = matching_rows.iloc[0]["child_id"]
         else:
-            # If no child_name match, check where the parent_name matches the child_name
             matching_rows = df_no_missing_id[
                 df_no_missing_id["parent_name"] == child_name
             ]
             if not matching_rows.empty:
                 df.at[index, "child_id"] = matching_rows.iloc[0]["parent_id"]
 
-    # Save the updated DataFrame to a new CSV file
     df.to_csv(data_file, index=False)
 
 
@@ -268,10 +255,10 @@ def find_drug_origin_drugbank(data_file):
     original_df["origin"] = "unknown"
     only_db_parents_df = original_df[
         ~original_df["parent_id"].str.contains("DBMET").fillna(False)
-    ]  # all parents that not contain DBMET
+    ]  # All parents that not contain DBMET
     only_dbmet_parents_df = original_df[
         original_df["parent_id"].str.contains("DBMET").fillna(False)
-    ]  # all parents that contain DBMET
+    ]  # All parents that contain DBMET
 
     only_db_parents_df.loc[:, "origin"] = only_db_parents_df["parent_id"]
 
@@ -321,10 +308,8 @@ def find_drug_origin_drugbank(data_file):
     # DBMET-DBMET fix ----------------------------------------
     num_new_rows = 1
     while num_new_rows != 0:
-        # Parent is DBMET. If parent is child in any reaction in only_db_parents_df. Then keep it
-
         child_ids = only_db_parents_df["child_id"].tolist()
-        # store rows where parents are child in list
+        # Store rows where parents are child in list
         metabolite_parent_with_drug_origin_df = only_dbmet_parents_df[
             only_dbmet_parents_df["parent_id"].isin(child_ids)
         ]
@@ -339,7 +324,7 @@ def find_drug_origin_drugbank(data_file):
                     origin_parent_id.values[0]
                 )
 
-        # drop all children that are not children of drugs or drug metabolites
+        # Drop all children that are not children of drugs or drug metabolites
         only_dbmet_parents_df = only_dbmet_parents_df[
             ~only_dbmet_parents_df["parent_id"].isin(child_ids)
         ]
@@ -381,29 +366,24 @@ def map_smiles_to_reaction_pairs(
     for index, row in reaction_pairs_df.iterrows():
         # Check for id_property match
         if pd.notna(row[id_property]):
-            # Lookup match in structures_df
             matched_row = structures_df[structures_df["dbid"] == row[id_property]]
             if not matched_row.empty:
-                # Assign smiles from the matched structure
                 reaction_pairs_df.at[index, smiles_property] = matched_row[
                     "smiles"
                 ].values[0]
 
         # Check for name_property match if smiles not found yet
         elif pd.notna(row[name_property]):
-            # Lookup match in structures_df
             matched_row = structures_df[structures_df["name"] == row[name_property]]
             if not matched_row.empty:
-                # Assign smiles from the matched structure
                 reaction_pairs_df.at[index, smiles_property] = matched_row[
                     "smiles"
                 ].values[0]
 
-    # Save the enriched DataFrame to CSV
     reaction_pairs_df.to_csv(output_file, index=False)
 
 
-def clean_smiles(input_file):  # this makes 100% sense
+def clean_smiles(input_file):
     df = pd.read_csv(input_file)
     initial_row_count = len(df)
     # Remove rows where either 'parent_smiles' or 'child_smiles' is missing
@@ -417,11 +397,11 @@ def clean_smiles(input_file):  # this makes 100% sense
 
 
 if __name__ == "__main__":
-    get_drug_structures = False
-    get_metabolite_structures = False
-    get_external_structures = False
-    get_reaction_pairs = True
 
+    get_drug_structures = True
+    get_metabolite_structures = True
+    get_external_structures = True
+    get_reaction_pairs = True
     combine_all_structures = True
     extend_dataset = True
 
@@ -474,8 +454,8 @@ if __name__ == "__main__":
     drugbank_full_database = "dataset/raw_data/drugbank_full_database.xml"
     drugbank_reaction_pairs = "dataset/processed_data/drugbank_reaction_pairs.csv"
     if get_reaction_pairs:
-        # generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
-        # add_missing_ID(drugbank_reaction_pairs)
+        generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
+        add_missing_ID(drugbank_reaction_pairs)
         find_drug_origin_drugbank(drugbank_reaction_pairs)
         # Missing data: 45
         # Number of reactions with unknown origin:  0
@@ -513,76 +493,3 @@ if __name__ == "__main__":
         )
         clean_smiles(mapped_smiles_to_reactions)
         # Missing data:  556
-
-    """                 (wrong)
-                        reaction_pairs      full_structure      smiles
-    endogenous + hmdb   2610                225782              1299
-    endogenous          2610                15324               1298
-    hmdb                3365                225782              1659
-    origianl            3365                15324               1658 <-- winning concept!
-
-    1. no endogenous                   1658
-    2. endogenous in extend_dataset    1287
-    3. endogenous in reaction_pairs    1298
-
-                smiles
-    original    3489
-    hmdb        3492 <-- eliminate hmdb!
-    """
-
-# get_hdmb_structures = False
-
-# ## HMDB drug and metabolites - hmdb_metabolites.xml
-# hmdb_metabolites = "dataset/raw_data/hmdb_metabolites.xml"
-# hmdb_cleaned = "dataset/processed_data/hmdb_cleaned.csv"
-# if get_hdmb_structures:
-#     hmdb_metabolite_map(hmdb_metabolites,hmdb_cleaned, -1)
-#     remove_bad_drug_metabolite_rows(hmdb_cleaned)
-#     count_nan_smiles(hmdb_cleaned)
-#     # Number of rows dropped: 2119
-#     # Missing SMILES: 0
-
-# combine_datasets(drugbank_full_structures, hmdb_cleaned, drugbank_full_structures)
-
-# def hmdb_metabolite_map(input_file, output_file, num_iter = 10000):
-#     # Create an iterator for parsing the XML file incrementally
-#     context = ET.iterparse(input_file, events=('start', 'end'))
-#     smiles_db_pair = []
-#     smiles_db_pairs = []
-#     prev_was_accession = False
-#     for i, (event, element) in enumerate(context):
-#         # Keep track on iteration and potenially break
-#         if (i % 1000000 == 0):
-#             print(f'iteration {i}')
-#         if(i == num_iter):
-#             break
-#         # Split the tag to remove garbage
-#         if(element.tag =="root"):
-#             tag = "root"
-#         else:
-#             tag = element.tag.split('}')[1]
-
-#         if event == 'start':
-#             if(tag == "metabolite"):
-#                 if(len(smiles_db_pair) == 3 ):
-#                     smiles_db_pairs.append(smiles_db_pair)
-#                     smiles_db_pair = []
-
-#                 else:
-#                     smiles_db_pair = []
-#             if(tag == "smiles" or tag == "drugbank_id"):
-#                 smiles_db_pair.append(element.text)
-#             if(tag == "accession"):
-#                 prev_was_accession = True
-#                 continue
-#             if(prev_was_accession and tag == "name"):
-#                 smiles_db_pair.append(element.text)
-#                 prev_was_accession = False
-
-#         elif event == 'end':
-#             # Clean up the element when the end tag is encountered
-#             element.clear()
-
-#     df = pd.DataFrame(smiles_db_pairs, columns=['name',"smiles","dbid"])
-#     df['inchi'] = ""
-#     df.to_csv(output_file, index=False)
