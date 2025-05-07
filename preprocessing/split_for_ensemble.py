@@ -5,33 +5,7 @@ from rdkit.Chem import Descriptors, AllChem
 from scipy.cluster.hierarchy import linkage, fcluster
 from scipy.spatial.distance import squareform
 from collections import Counter
-#from add_possible_products import add_possible_products
-
-def count_metabolites(input_csv): # Counts metabolites in training data
-    # Read the CSV file into a DataFrame
-    df = pd.read_csv(input_csv)
-
-    # Filter the DataFrame to include only rows where 'set' is 'train'
-    df_train = df[df['set'] == 'train']
-
-    # Group by 'parent_smiles' and count the number of metabolites for each parent
-    metabolite_counts = df_train.groupby('parent_smiles').size()
-
-    # Count how many parents have a specific number of metabolites
-    count_of_metabolite_counts = metabolite_counts.value_counts().sort_index()
-
-    # Print the results
-    for metabolites, count in count_of_metabolite_counts.items():
-        print(f"Nr of drugs with {metabolites} metabolite(s): {count}")
-
-    # # print rows
-    # # Filter to get only parents with exactly 5 metabolites
-    # parents_with_five_metabolites = metabolite_counts[metabolite_counts == 1]
-
-    # # Print parent identifiers with exactly 5 metabolites
-    # print("Parents with 1 metabolites:")
-    # for parent in parents_with_five_metabolites.index:
-    #     print(parent)
+from NEW_preprocessing_all import add_possible_products
 
 def split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv):
 
@@ -336,7 +310,7 @@ def split_tanimoto_score(child_smiles, n_splits): #input is a list of smiles
 # for i, split in enumerate(splits):
 #     print(f"Split {i + 1}: {split}")
 
-def split_on_tb_clusters(input_file, n_splits):
+def split_on_tb_clusters(input_file, n_splits, name):
     df = pd.read_csv(input_file)
 
     df_train = df[df['set'] == 'train']
@@ -364,10 +338,11 @@ def split_on_tb_clusters(input_file, n_splits):
         splits[split_index] = pd.concat([splits[split_index], cluster_rows])
 
     for i, split in enumerate(splits):
-        csv = f'dataset/curated_data/tb_split_{i + 1}of_{n_splits}_parent.csv'
-        finetune_csv = f'dataset/finetune/tb_split_{i + 1}of_{n_splits}_parent_finetune.csv'
+        csv = f'dataset/curated_data/tb_split_{i + 1}of_{n_splits}_{name}.csv'
+        finetune_csv = f'dataset/finetune/tb_split_{i + 1}of_{n_splits}_{name}_finetune.csv'
         split.to_csv(csv, index=False)
         reformat_for_chemformer(csv, finetune_csv)
+        add_possible_products(finetune_csv)
         print(f"Split {i + 1} contains {len(split)} rows.")
 
     
@@ -382,9 +357,6 @@ def reformat_for_chemformer(input_file, output_file):
     })
 
     df.to_csv(output_file, sep='\t', index=False)
-
-tb_file = 'dataset/curated_data/tb_output_parent.csv'
-split_on_tb_clusters(tb_file, 4)
 
 
 # def count_transformations(input_file):
@@ -401,43 +373,66 @@ split_on_tb_clusters(tb_file, 4)
 
 # count_transformations('dataset/curated_data/combined_smiles_clean_transform_newset.csv')
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 
-#     splits = '6' #'4' #'6'
+    split_type = 'random' #'random' 'parents' 'children'
+    splits = 4 #4 #6
 
-#     input_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+    if split_type == 'parents':
+        tb_file = 'dataset/curated_data/tb_output_parent.csv'
+        split_on_tb_clusters(tb_file, splits, 'parent')
+        # Reformating for Chemformer is done in the function
 
-#     split1_csv = f'dataset/curated_data/{splits}_split1_combined_smiles_clean.csv'
-#     split2_csv = f'dataset/curated_data/{splits}_split2_combined_smiles_clean.csv'
-#     split3_csv = f'dataset/curated_data/{splits}_split3_combined_smiles_clean.csv'
-#     split4_csv = f'dataset/curated_data/{splits}_split4_combined_smiles_clean.csv'
-#     split5_csv = f'dataset/curated_data/{splits}_split5_combined_smiles_clean.csv'
-#     split6_csv = f'dataset/curated_data/{splits}_split6_combined_smiles_clean.csv'
+    if split_type == 'children':
+        tb_file = 'dataset/curated_data/tb_output_child.csv'
+        split_on_tb_clusters(tb_file, splits, 'child')
+        # Reformating for Chemformer is done in the function
 
-#     fine_tune_split1 = f'dataset/finetune/{splits}_split1_finetune.csv'
-#     fine_tune_split2 = f'dataset/finetune/{splits}_split2_finetune.csv'
-#     fine_tune_split3 = f'dataset/finetune/{splits}_split3_finetune.csv'
-#     fine_tune_split4 = f'dataset/finetune/{splits}_split4_finetune.csv'
-#     fine_tune_split5 = f'dataset/finetune/{splits}_split5_finetune.csv'
-#     fine_tune_split6 = f'dataset/finetune/{splits}_split6_finetune.csv'
+    elif split_type == 'random':
 
-#     count_metabolites(input_csv)
+        input_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 
-#     if splits == '4':
+        split1_csv = f'dataset/curated_data/{splits}_split1_combined_smiles_clean.csv'
+        split2_csv = f'dataset/curated_data/{splits}_split2_combined_smiles_clean.csv'
+        split3_csv = f'dataset/curated_data/{splits}_split3_combined_smiles_clean.csv'
+        split4_csv = f'dataset/curated_data/{splits}_split4_combined_smiles_clean.csv'
+        split5_csv = f'dataset/curated_data/{splits}_split5_combined_smiles_clean.csv'
+        split6_csv = f'dataset/curated_data/{splits}_split6_combined_smiles_clean.csv'
 
-#         split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv)
+        fine_tune_split1 = f'dataset/finetune/{splits}_split1_finetune.csv'
+        fine_tune_split2 = f'dataset/finetune/{splits}_split2_finetune.csv'
+        fine_tune_split3 = f'dataset/finetune/{splits}_split3_finetune.csv'
+        fine_tune_split4 = f'dataset/finetune/{splits}_split4_finetune.csv'
+        fine_tune_split5 = f'dataset/finetune/{splits}_split5_finetune.csv'
+        fine_tune_split6 = f'dataset/finetune/{splits}_split6_finetune.csv'
 
-#         reformat_for_chemformer(split1_csv, fine_tune_split1)
-#         reformat_for_chemformer(split2_csv, fine_tune_split2)
-#         reformat_for_chemformer(split3_csv, fine_tune_split3)
-#         reformat_for_chemformer(split4_csv, fine_tune_split4)
+        if splits == 4:
 
-#     if splits == '6':
-#         split_metabolites_6(input_csv, split1_csv, split2_csv, split3_csv, split4_csv, split5_csv, split6_csv)
+            split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv)
 
-#         reformat_for_chemformer(split1_csv, fine_tune_split1)
-#         reformat_for_chemformer(split2_csv, fine_tune_split2)
-#         reformat_for_chemformer(split3_csv, fine_tune_split3)
-#         reformat_for_chemformer(split4_csv, fine_tune_split4)
-#         reformat_for_chemformer(split5_csv, fine_tune_split5)
-#         reformat_for_chemformer(split6_csv, fine_tune_split6)
+            reformat_for_chemformer(split1_csv, fine_tune_split1)
+            reformat_for_chemformer(split2_csv, fine_tune_split2)
+            reformat_for_chemformer(split3_csv, fine_tune_split3)
+            reformat_for_chemformer(split4_csv, fine_tune_split4)
+
+            add_possible_products(fine_tune_split1)
+            add_possible_products(fine_tune_split2)
+            add_possible_products(fine_tune_split3)
+            add_possible_products(fine_tune_split4)
+
+        if splits == 6:
+            split_metabolites_6(input_csv, split1_csv, split2_csv, split3_csv, split4_csv, split5_csv, split6_csv)
+
+            reformat_for_chemformer(split1_csv, fine_tune_split1)
+            reformat_for_chemformer(split2_csv, fine_tune_split2)
+            reformat_for_chemformer(split3_csv, fine_tune_split3)
+            reformat_for_chemformer(split4_csv, fine_tune_split4)
+            reformat_for_chemformer(split5_csv, fine_tune_split5)
+            reformat_for_chemformer(split6_csv, fine_tune_split6)
+
+            add_possible_products(fine_tune_split1)
+            add_possible_products(fine_tune_split2)
+            add_possible_products(fine_tune_split3)
+            add_possible_products(fine_tune_split4)
+            add_possible_products(fine_tune_split5)
+            add_possible_products(fine_tune_split6)
