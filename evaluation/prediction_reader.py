@@ -3,10 +3,9 @@ import json
 import ast
 import sys
 import os
-from rdkit import Chem, DataStructs
-from rdkit.Chem import AllChem 
+from rdkit import Chem 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from preprocessing.standardize_smiles import standardize_smiles_collection, standardize_molecule
+from preprocessing.standardize_smiles import standardize_molecule
 import math
 import numpy as np
 
@@ -674,11 +673,11 @@ if __name__ == "__main__":
     testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
     # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
     json_predictions = 'results/evaluation/predictions0.json'
-    # json_predictions = 'results/evaluation/final/predictions9.json'
+    # json_predictions = 'results/evaluation/alohomora/predictions14.json'
 
     status = 'score' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
-    name = 'logp'
+    name = 'base_rand'
 
     bs = 4 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
@@ -691,8 +690,8 @@ if __name__ == "__main__":
 
     csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
     csv_result = f"evaluation/result/result_{name}.csv"
-    # csv_predictions = f"evaluation/final/predictions_{name}.csv"
-    # csv_result = f"evaluation/final/result_{name}.csv"
+    # csv_predictions = f"evaluation/alohomora/predictions_{name}.csv"
+    # csv_result = f"evaluation/alohomora/result_{name}.csv"
 
     if status == 'new':
         json_to_csv(json_predictions, csv_predictions)
