@@ -5,7 +5,7 @@ resume: false
 
 n_epochs: 200
 batch_size: BATCH_SIZE
-augmentation_probability: 0
+augmentation_probability: 0.5
 augmentation_strategy: all # Can be set to "all", "reactants", "products" when using synthesis datamodule
 
 vocabulary_path: VOCABULARY_PATH
