@@ -580,7 +580,7 @@ if __name__ == "__main__":
     # start_row = 9911735
     # end_row = None #11013037
 
-    name = f'mmp_{start_row}_{end_row}' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'mmp_compare' 'metatrans']
+    name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'mmp_compare' 'metatrans']
 
     preprocess_unique_parents = False
     # augment_parent_grandchild = True
@@ -607,6 +607,10 @@ if __name__ == "__main__":
     evaluation_finetune_csv = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
     if name == 'metatrans':
+            
+            val_size = 0.1 # val
+            eval_size = 0 # test
+
             dataset = 'dataset/curated_data/metatrans_full_not_filtered.csv'
 
             log_time("Begin filtering metatrans")
@@ -633,11 +637,14 @@ if __name__ == "__main__":
             compare_datasets(clean_csv, 'dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/metatrans_compare_combined_removed_duplicates.csv')
             log_time("Filtered on Metabolic dataset")
 
+            set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+            log_time("Fistribution is set")
+
             reformat_for_chemformer(clean_csv, finetune_csv)
             log_time("Reformated for Chemformer")
 
             add_possible_products(finetune_csv)
-            log_time("Reformated for Chemformer")
+            log_time("Added possible products")
 
     if 'mmp' in name:
 
