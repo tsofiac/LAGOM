@@ -7,6 +7,95 @@ from scipy.spatial.distance import squareform
 from collections import Counter
 from NEW_preprocessing_all import add_possible_products
 
+def split_metabolites_4_finetune(input_csv, split1_csv, split2_csv, split3_csv, split4_csv):  # for metatrans
+
+    np.random.seed(6)
+
+    df_split1 = []
+    df_split2 = []
+    df_split3 = []
+    df_split4 = []
+
+    df = pd.read_csv(input_csv, delimiter='\t')
+
+    # Set 'set' to 'train' for all rows
+    df['set'] = 'train'
+    df['source'] = 'metatrans'
+
+    # Group by 'reactants' and distribute the rows among splits
+    for parent, parent_rows in df.groupby('reactants'):
+        num_rows = len(parent_rows)
+
+        if num_rows == 1:
+            for _ in range(4):
+                df_split1.append(parent_rows.iloc[0])
+                df_split2.append(parent_rows.iloc[0])
+                df_split3.append(parent_rows.iloc[0])
+                df_split4.append(parent_rows.iloc[0])
+
+        elif num_rows == 2:
+            df_split1.append(parent_rows.iloc[0])
+            df_split2.append(parent_rows.iloc[0])
+            df_split3.append(parent_rows.iloc[1])
+            df_split4.append(parent_rows.iloc[1])
+
+        elif num_rows == 3:
+            df_split1.append(parent_rows.iloc[0])
+            df_split2.append(parent_rows.iloc[1])
+            df_split3.append(parent_rows.iloc[2])
+            random_index = np.random.randint(0, num_rows)
+            df_split4.append(parent_rows.iloc[random_index])
+
+        elif num_rows > 3:
+            equally_divisible_rows = num_rows - (num_rows % 4)
+            parent_rows_list = list(parent_rows.iterrows())
+            for i in range(equally_divisible_rows):
+                _, row = parent_rows_list[i]
+                if i % 4 == 0:
+                    df_split1.append(row)
+                elif i % 4 == 1:
+                    df_split2.append(row)
+                elif i % 4 == 2:
+                    df_split3.append(row)
+                elif i % 4 == 3:
+                    df_split4.append(row)
+
+            if num_rows > equally_divisible_rows:
+                split_list = [1, 2, 3, 4]
+                for i in range(equally_divisible_rows, num_rows):
+                    _, row = parent_rows_list[i]
+                    if not split_list:
+                        split_list = [1, 2, 3, 4]
+                    random_split_index = np.random.choice(split_list)
+                    split_list.remove(random_split_index)
+                    if random_split_index == 1:
+                        df_split1.append(row)
+                    elif random_split_index == 2:
+                        df_split2.append(row)
+                    elif random_split_index == 3:
+                        df_split3.append(row)
+                    elif random_split_index == 4:
+                        df_split4.append(row)
+
+    # Convert lists to DataFrames
+    df_split1 = pd.DataFrame(df_split1)
+    df_split2 = pd.DataFrame(df_split2)
+    df_split3 = pd.DataFrame(df_split3)
+    df_split4 = pd.DataFrame(df_split4)
+
+    # Print lengths of each DataFrame
+    print(len(df))
+    print(len(df_split1))
+    print(len(df_split2))
+    print(len(df_split3))
+    print(len(df_split4))
+
+    # Convert to CSV
+    df_split1.to_csv(split1_csv, sep='\t', index=False)
+    df_split2.to_csv(split2_csv, sep='\t', index=False)
+    df_split3.to_csv(split3_csv, sep='\t', index=False)
+    df_split4.to_csv(split4_csv, sep='\t', index=False)
+
 def split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv):
 
     np.random.seed(6)
@@ -358,6 +447,13 @@ def reformat_for_chemformer(input_file, output_file):
 
     df.to_csv(output_file, sep='\t', index=False)
 
+def join(csv1, csv2, output_file):
+
+    df1 = pd.read_csv(csv1, delimiter='\t')
+    df2 = pd.read_csv(csv2, delimiter='\t')
+
+    combined = pd.concat([df1,df2], ignore_index=True)
+    combined.to_csv(output_file, sep = '\t', index=False)
 
 # def count_transformations(input_file):
 #     df = pd.read_csv(input_file)
@@ -377,6 +473,9 @@ if __name__ == "__main__":
 
     split_type = 'random' #'random' 'parents' 'children'
     splits = 4 #4 #6
+    # OBS: including metatrans is only possible for random split
+    dataset = 'metatrans' # 'base' 'base_with_metatrans' 'metatrans'
+
 
     if split_type == 'parents':
         tb_file = 'dataset/curated_data/tb_output_parent.csv'
@@ -390,49 +489,93 @@ if __name__ == "__main__":
 
     elif split_type == 'random':
 
-        input_csv = 'dataset/curated_data/combined_smiles_clean.csv'
+        if dataset == 'base':
+            input_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 
-        split1_csv = f'dataset/curated_data/{splits}_split1_combined_smiles_clean.csv'
-        split2_csv = f'dataset/curated_data/{splits}_split2_combined_smiles_clean.csv'
-        split3_csv = f'dataset/curated_data/{splits}_split3_combined_smiles_clean.csv'
-        split4_csv = f'dataset/curated_data/{splits}_split4_combined_smiles_clean.csv'
-        split5_csv = f'dataset/curated_data/{splits}_split5_combined_smiles_clean.csv'
-        split6_csv = f'dataset/curated_data/{splits}_split6_combined_smiles_clean.csv'
+            split1_csv = f'dataset/curated_data/{splits}_split1_combined_smiles_clean.csv'
+            split2_csv = f'dataset/curated_data/{splits}_split2_combined_smiles_clean.csv'
+            split3_csv = f'dataset/curated_data/{splits}_split3_combined_smiles_clean.csv'
+            split4_csv = f'dataset/curated_data/{splits}_split4_combined_smiles_clean.csv'
+            split5_csv = f'dataset/curated_data/{splits}_split5_combined_smiles_clean.csv'
+            split6_csv = f'dataset/curated_data/{splits}_split6_combined_smiles_clean.csv'
 
-        fine_tune_split1 = f'dataset/finetune/{splits}_split1_finetune.csv'
-        fine_tune_split2 = f'dataset/finetune/{splits}_split2_finetune.csv'
-        fine_tune_split3 = f'dataset/finetune/{splits}_split3_finetune.csv'
-        fine_tune_split4 = f'dataset/finetune/{splits}_split4_finetune.csv'
-        fine_tune_split5 = f'dataset/finetune/{splits}_split5_finetune.csv'
-        fine_tune_split6 = f'dataset/finetune/{splits}_split6_finetune.csv'
+            fine_tune_split1 = f'dataset/finetune/{splits}_split1_finetune.csv'
+            fine_tune_split2 = f'dataset/finetune/{splits}_split2_finetune.csv'
+            fine_tune_split3 = f'dataset/finetune/{splits}_split3_finetune.csv'
+            fine_tune_split4 = f'dataset/finetune/{splits}_split4_finetune.csv'
+            fine_tune_split5 = f'dataset/finetune/{splits}_split5_finetune.csv'
+            fine_tune_split6 = f'dataset/finetune/{splits}_split6_finetune.csv'
 
-        if splits == 4:
+            if splits == 4:
 
-            split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv)
+                split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv)
 
-            reformat_for_chemformer(split1_csv, fine_tune_split1)
-            reformat_for_chemformer(split2_csv, fine_tune_split2)
-            reformat_for_chemformer(split3_csv, fine_tune_split3)
-            reformat_for_chemformer(split4_csv, fine_tune_split4)
+                reformat_for_chemformer(split1_csv, fine_tune_split1)
+                reformat_for_chemformer(split2_csv, fine_tune_split2)
+                reformat_for_chemformer(split3_csv, fine_tune_split3)
+                reformat_for_chemformer(split4_csv, fine_tune_split4)
 
-            add_possible_products(fine_tune_split1)
-            add_possible_products(fine_tune_split2)
-            add_possible_products(fine_tune_split3)
-            add_possible_products(fine_tune_split4)
+                add_possible_products(fine_tune_split1)
+                add_possible_products(fine_tune_split2)
+                add_possible_products(fine_tune_split3)
+                add_possible_products(fine_tune_split4)
 
-        if splits == 6:
-            split_metabolites_6(input_csv, split1_csv, split2_csv, split3_csv, split4_csv, split5_csv, split6_csv)
+            if splits == 6:
+                split_metabolites_6(input_csv, split1_csv, split2_csv, split3_csv, split4_csv, split5_csv, split6_csv)
 
-            reformat_for_chemformer(split1_csv, fine_tune_split1)
-            reformat_for_chemformer(split2_csv, fine_tune_split2)
-            reformat_for_chemformer(split3_csv, fine_tune_split3)
-            reformat_for_chemformer(split4_csv, fine_tune_split4)
-            reformat_for_chemformer(split5_csv, fine_tune_split5)
-            reformat_for_chemformer(split6_csv, fine_tune_split6)
+                reformat_for_chemformer(split1_csv, fine_tune_split1)
+                reformat_for_chemformer(split2_csv, fine_tune_split2)
+                reformat_for_chemformer(split3_csv, fine_tune_split3)
+                reformat_for_chemformer(split4_csv, fine_tune_split4)
+                reformat_for_chemformer(split5_csv, fine_tune_split5)
+                reformat_for_chemformer(split6_csv, fine_tune_split6)
 
-            add_possible_products(fine_tune_split1)
-            add_possible_products(fine_tune_split2)
-            add_possible_products(fine_tune_split3)
-            add_possible_products(fine_tune_split4)
-            add_possible_products(fine_tune_split5)
-            add_possible_products(fine_tune_split6)
+                add_possible_products(fine_tune_split1)
+                add_possible_products(fine_tune_split2)
+                add_possible_products(fine_tune_split3)
+                add_possible_products(fine_tune_split4)
+                add_possible_products(fine_tune_split5)
+                add_possible_products(fine_tune_split6)
+
+        if dataset == 'metatrans':
+
+            input_csv = 'dataset/finetune/metatrans_finetune.csv'
+
+            orig_split1_csv = f'dataset/finetune/{splits}_split1_finetune.csv'
+            orig_split2_csv = f'dataset/finetune/{splits}_split2_finetune.csv'
+            orig_split3_csv = f'dataset/finetune/{splits}_split3_finetune.csv'
+            orig_split4_csv = f'dataset/finetune/{splits}_split4_finetune.csv'
+
+            meta_split1_csv = f'dataset/finetune/{splits}_split1_just_meta.csv'
+            meta_split2_csv = f'dataset/finetune/{splits}_split2_just_meta.csv'
+            meta_split3_csv = f'dataset/finetune/{splits}_split3_just_meta.csv'
+            meta_split4_csv = f'dataset/finetune/{splits}_split4_just_meta.csv'
+
+            if splits == 4:
+                split_metabolites_4_finetune(input_csv, meta_split1_csv, meta_split2_csv, meta_split3_csv, meta_split4_csv)
+                
+                for n in range(1, 5):
+                    meta_split_csv = f'dataset/finetune/{splits}_split{n}_just_meta.csv'
+                    orig_split_csv = f'dataset/finetune/{splits}_split{n}_finetune.csv'
+                    output_file = f'dataset/finetune/{splits}_split{n}_meta_and_base_finetune.csv'
+                    join(meta_split_csv, orig_split_csv, output_file)
+
+            else:
+                print("Only 4 splits applicable for metatrans atm, can be added in code")
+
+        
+        # elif dataset == 'base_with_metatrans':
+
+        #     input_csv = 'dataset/finetune/metabolic_and_metatrans_finetune.csv'
+
+        #     fine_tune_split1 = f'dataset/finetune/{splits}_split1_metatrans_notsamesplit_finetune.csv'
+        #     fine_tune_split2 = f'dataset/finetune/{splits}_split2_metatrans_notsamesplit_finetune.csv'
+        #     fine_tune_split3 = f'dataset/finetune/{splits}_split3_metatrans_notsamesplit_finetune.csv'
+        #     fine_tune_split4 = f'dataset/finetune/{splits}_split4_metatrans_notsamesplit_finetune.csv'
+
+        #     if splits == 4:
+        
+        #         split_metabolites_4_finetune(input_csv, fine_tune_split1, fine_tune_split2, fine_tune_split3, fine_tune_split4)
+            
+        #     else:
+        #         print("Only 4 splits applicable for metatrans atm, can be added in code")
