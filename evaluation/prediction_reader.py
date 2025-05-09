@@ -186,8 +186,8 @@ def save_valid_smiles(input_file, batches):
     print(validity)
     validity_mean, validity_var = mean_and_variance(validity)
     mean_validity_mean, mean_validity_var = mean_and_variance(mean_validity)
-    print(f'\nValidity: {validity_mean:.3f} +/- {validity_var:.3f}')
-    print(f'Mean number of SMILES per drug: {mean_validity_mean:.3f} +/- {mean_validity_var:.3f} / {len(sampled_molecules_i)}')
+    print(f'\nValidity: {validity_mean:.3f} $\pm$ {validity_var:.3f}')
+    print(f'Mean number of SMILES per drug: {mean_validity_mean:.3f} $\pm$ {mean_validity_var:.3f} / {len(sampled_molecules_i)}')
 
     main_df.to_csv(input_file, index=False)
 
@@ -652,19 +652,19 @@ def score_result(input_file, batches, print_result=False, specification=0):
         precision_all_mean, precision_all_var = mean_and_variance(precision_all_list)
 
         print('\nAt least one metabolite: ')
-        print(f"Score1: {score1_one_mean:.3f} +/- {score1_one_var:.3f}")
-        print(f"Score10: {score10_one_mean:.3f} +/- {score10_one_var:.3f}")
-        print(f"Score all: {score_all_one_mean:.3f} +/- {score_all_one_var:.3f}")
+        print(f"Score1: {score1_one_mean:.3f} $\pm$ {score1_one_var:.3f}")
+        print(f"Score10: {score10_one_mean:.3f} $\pm$ {score10_one_var:.3f}")
+        print(f"Score all: {score_all_one_mean:.3f} $\pm$ {score_all_one_var:.3f}")
         print('\nAll metabolites: ')
-        print(f"Score10: {score10_all_mean:.3f} +/- {score10_all_var:.3f}")
-        print(f"Score all: {score_all_all_mean:.3f} +/- {score_all_all_var:.3f}")
+        print(f"Score10: {score10_all_mean:.3f} $\pm$ {score10_all_var:.3f}")
+        print(f"Score all: {score_all_all_mean:.3f} $\pm$ {score_all_all_var:.3f}")
         print('\t')
-        print(f"Precision @ 10: {precision10_mean:.3f} +/- {precision10_var:.3f}")
-        print(f"Recall @ 10: {recall10_mean:.3f} +/- {recall10_var:.3f}")
-        print(f"Precision @ all: {precision_all_mean:.3f} +/- {precision_all_var:.3f}")
-        print(f"Recall @ all: {recall_all_mean:.3f} +/- {recall_all_var:.3f}")
+        print(f"Precision @ 10: {precision10_mean:.3f} $\pm$ {precision10_var:.3f}")
+        print(f"Recall @ 10: {recall10_mean:.3f} $\pm$ {recall10_var:.3f}")
+        print(f"Precision @ all: {precision_all_mean:.3f} $\pm$ {precision_all_var:.3f}")
+        print(f"Recall @ all: {recall_all_mean:.3f} $\pm$ {recall_all_var:.3f}")
 
-    return [recall1_list, recall3_list, recall5_list, recall10_list], [precision1_list, precision3_list, precision5_list, precision10_list], [score1_one_list, score3_one_list, score5_one_list, score10_one_list, score_all_one_list], [score1_all_list, score3_all_list, score5_all_list, score10_all_list, score_all_all_list]
+    return [recall1_list, recall3_list, recall5_list, recall10_list, recall_all_list], [precision1_list, precision3_list, precision5_list, precision10_list, precision_all_list], [score1_one_list, score3_one_list, score5_one_list, score10_one_list, score_all_one_list], [score1_all_list, score3_all_list, score5_all_list, score10_all_list, score_all_all_list]
 
 
 
@@ -673,7 +673,7 @@ if __name__ == "__main__":
     testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
     # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
     json_predictions = 'results/evaluation/predictions0.json'
-    # json_predictions = 'results/evaluation/alohomora/predictions14.json'
+    # json_predictions = 'results/evaluation/alohomora/predictions16.json'
 
     status = 'score' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
