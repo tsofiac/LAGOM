@@ -705,7 +705,7 @@ if __name__ == "__main__":
         score_result(csv_result, bs, True, specification)
         # count_metabolites(csv_result)
     elif status == 'combine':
-        csv_comb = f"evaluation/result/result_comb_{name}.csv"
+        csv_comb = f"evaluation/alohomora/result_comb_{name}_{samples_per_model}_per_model.csv"
         # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
         # score_result(csv_comb, max_metabolites, specification)
         concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
