@@ -535,6 +535,12 @@ def score_result(input_file, batches, print_result=False, specification=0):
         print('\t')
         print(f'Total identified metabolites: {sum(all)} / {sum(reference)}')
         print(f'Total number of predictions: {sum(all_pred)}')
+        print(f'Mean number of predictions per drug: {np.mean(all_pred)}')
+
+        print('\t')
+        print(f'Total identified metabolites in top-10: {sum(top10)} / {sum(reference)}')
+        print(f'Total number of predictions in top-10: {sum(top10_pred)}')
+        print(f'Mean number of predictions per drug in top-10: {np.mean(top10_pred)}')
 
     # score1, score3, score5, score10, score_all = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
 
@@ -677,7 +683,7 @@ if __name__ == "__main__":
 
     status = 'score' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
-    name = 'base_rand'
+    name = 'chemVA_base'
 
     bs = 4 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
