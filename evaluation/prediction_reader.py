@@ -515,8 +515,9 @@ def recall_and_precision(correct, predictions, reference):
 
     recall = TP / (TP + FN)
     precision = TP / (TP + FP)
+    F1 = 2 * (TP)/(2*TP+FP+FN)
 
-    return recall, precision
+    return recall, precision, F1
 
 def mean_and_variance(list):
 
@@ -590,8 +591,10 @@ def score_result(input_file, batches, print_result=False, specification=0):
     precision5_list = []
     recall10_list = []
     precision10_list = []
+    f1_10_list = []
     recall_all_list = []
     precision_all_list = []
+    f1_all_list = []
     score1_one_list = []
     score3_one_list = []
     score5_one_list = []
@@ -619,25 +622,27 @@ def score_result(input_file, batches, print_result=False, specification=0):
         score10_all_list.append(score10_all)
         score_all_all_list.append(score_all_all)
 
-        recall1, precision1 = recall_and_precision(top1, top1_pred, reference)
+        recall1, precision1, _ = recall_and_precision(top1, top1_pred, reference)
         recall1_list.append(recall1)
         precision1_list.append(precision1)
 
-        recall3, precision3 = recall_and_precision(top3, top3_pred, reference)
+        recall3, precision3, _ = recall_and_precision(top3, top3_pred, reference)
         recall3_list.append(recall3)
         precision3_list.append(precision3)
 
-        recall5, precision5 = recall_and_precision(top5, top5_pred, reference)
+        recall5, precision5, _ = recall_and_precision(top5, top5_pred, reference)
         recall5_list.append(recall5)
         precision5_list.append(precision5)
 
-        recall10, precision10 = recall_and_precision(top10, top10_pred, reference)
+        recall10, precision10, f1_10 = recall_and_precision(top10, top10_pred, reference)
         recall10_list.append(recall10)
         precision10_list.append(precision10)
+        f1_10_list.append(f1_10)
 
-        recall_all, precision_all = recall_and_precision(all, all_pred, reference)
+        recall_all, precision_all, f1_all = recall_and_precision(all, all_pred, reference)
         recall_all_list.append(recall_all)
         precision_all_list.append(precision_all)
+        f1_all_list.append(f1_all)
 
 
 
@@ -653,9 +658,11 @@ def score_result(input_file, batches, print_result=False, specification=0):
 
         recall10_mean, recall10_var = mean_and_variance(recall10_list)
         precision10_mean, precision10_var = mean_and_variance(precision10_list)
+        f1_10_mean, f1_10_var = mean_and_variance(f1_10_list)
 
         recall_all_mean, recall_all_var = mean_and_variance(recall_all_list)
         precision_all_mean, precision_all_var = mean_and_variance(precision_all_list)
+        f1_all_mean, f1_all_var = mean_and_variance(f1_all_list)
 
         print('\nAt least one metabolite: ')
         print(f"Score1: {score1_one_mean:.3f} $\pm$ {score1_one_var:.3f}")
@@ -667,8 +674,10 @@ def score_result(input_file, batches, print_result=False, specification=0):
         print('\t')
         print(f"Precision @ 10: {precision10_mean:.3f} $\pm$ {precision10_var:.3f}")
         print(f"Recall @ 10: {recall10_mean:.3f} $\pm$ {recall10_var:.3f}")
+        print(f"F1 @ 10: {f1_10_mean:.3f} $\pm$ {f1_10_var:.3f}")
         print(f"Precision @ all: {precision_all_mean:.3f} $\pm$ {precision_all_var:.3f}")
         print(f"Recall @ all: {recall_all_mean:.3f} $\pm$ {recall_all_var:.3f}")
+        print(f"F1 @ all: {f1_all_mean:.3f} $\pm$ {f1_all_var:.3f}")
 
     return [recall1_list, recall3_list, recall5_list, recall10_list, recall_all_list], [precision1_list, precision3_list, precision5_list, precision10_list, precision_all_list], [score1_one_list, score3_one_list, score5_one_list, score10_one_list, score_all_one_list], [score1_all_list, score3_all_list, score5_all_list, score10_all_list, score_all_all_list]
 
@@ -676,26 +685,26 @@ def score_result(input_file, batches, print_result=False, specification=0):
 
 if __name__ == "__main__":
 
-    testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
-    # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
-    json_predictions = 'results/evaluation/predictions0.json'
+    # testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
+    testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
+    json_predictions = 'results/evaluation/gloryx/predictions10.json'
     # json_predictions = 'results/evaluation/alohomora/predictions16.json'
 
-    status = 'score' # 'score' 'combine' 'new'
+    status = 'combine' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
-    name = 'chemVA_base'
+    name = 'GLORYx_random'
 
-    bs = 4 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
+    bs = 1 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
     # max_metabolites = 12
     
     # If combine: ---
-    ensemble_list = ['evaluation/result/result_4_split1_base_10.csv', 'evaluation/result/result_4_split2_base_10.csv', 'evaluation/result/result_4_split3_base_10.csv', 'evaluation/result/result_4_split4_base_10.csv']
+    ensemble_list = ['evaluation/alohomora/ensemble/result_GLORYx_random_split1.csv', 'evaluation/alohomora/ensemble/result_GLORYx_random_split2.csv', 'evaluation/alohomora/ensemble/result_GLORYx_random_split3.csv', 'evaluation/alohomora/ensemble/result_GLORYx_random_split4.csv']
     samples_per_model = 5
     #---
 
-    csv_predictions = f"evaluation/predictions/predictions_{name}.csv"
-    csv_result = f"evaluation/result/result_{name}.csv"
+    csv_predictions = f"evaluation/alohomora/predictions_{name}.csv"
+    csv_result = f"evaluation/alohomora/result_{name}.csv"
     # csv_predictions = f"evaluation/alohomora/predictions_{name}.csv"
     # csv_result = f"evaluation/alohomora/result_{name}.csv"
 
