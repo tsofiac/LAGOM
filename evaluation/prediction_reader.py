@@ -3,11 +3,12 @@ import json
 import ast
 import sys
 import os
-from rdkit import Chem 
+from rdkit import Chem, DataStructs
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from preprocessing.standardize_smiles import standardize_molecule
 import math
 import numpy as np
+from rdkit.Chem import AllChem
 
 
 def json_to_csv(json_file, csv_file):
@@ -68,17 +69,17 @@ def present_result(input1,input2, output):
 
     grouped.to_csv(output, index=False)
 
-# def calculate_fingerprint_similarity(parent, sampled):
+def calculate_fingerprint_similarity(parent, sampled):
 
-#     parent_mol = Chem.MolFromSmiles(parent)
-#     sampled_mol = Chem.MolFromSmiles(sampled)
+    parent_mol = Chem.MolFromSmiles(parent)
+    sampled_mol = Chem.MolFromSmiles(sampled)
 
-#     parent_fps = AllChem.GetMorganFingerprintAsBitVect(parent_mol, radius=2, nBits=1024)
-#     sampled_fps = AllChem.GetMorganFingerprintAsBitVect(sampled_mol, radius=2, nBits=1024)
+    parent_fps = AllChem.GetMorganFingerprintAsBitVect(parent_mol, radius=2, nBits=1024)
+    sampled_fps = AllChem.GetMorganFingerprintAsBitVect(sampled_mol, radius=2, nBits=1024)
 
-#     fingerprint_similarity = DataStructs.TanimotoSimilarity(parent_fps, sampled_fps) 
+    fingerprint_similarity = DataStructs.TanimotoSimilarity(parent_fps, sampled_fps) 
    
-#     return fingerprint_similarity
+    return fingerprint_similarity
 
 # def save_valid_smiles(input_file):
 
@@ -300,7 +301,7 @@ def count_metabolites(input_file):
     print(f"The average number of sampled molecules per drug is: {average_molecules}")
 
 
-def count_correct_metabolites(input_file, batch, specification):
+def count_correct_metabolites(input_file, batch, specification, fingerprint=None):
 
     df = pd.read_csv(input_file)
 
@@ -351,17 +352,30 @@ def count_correct_metabolites(input_file, batch, specification):
         # sampled_boolean = [False] * len(sampled_molecules_i)
         for j in range(len(child_smiles_i)):
             for k in range(len(sampled_molecules_i)):
-                if child_smiles_i[j] == sampled_molecules_i[k]:
-                    count_all += 1
-                    # sampled_boolean[k] = True
-                    if k < 10:
-                        count_top10 += 1
-                    if k < 5:
-                        count_top5 += 1
-                    if k < 3:
-                        count_top3 += 1
-                    if k < 1:
-                        count_top1 += 1
+                if fingerprint is not None:
+                    if calculate_fingerprint_similarity(child_smiles_i[j], sampled_molecules_i[k]) >= fingerprint:
+                        count_all += 1
+                        # sampled_boolean[k] = True
+                        if k < 10:
+                            count_top10 += 1
+                        if k < 5:
+                            count_top5 += 1
+                        if k < 3:
+                            count_top3 += 1
+                        if k < 1:
+                            count_top1 += 1
+                else:
+                    if child_smiles_i[j] == sampled_molecules_i[k]:
+                        count_all += 1
+                        # sampled_boolean[k] = True
+                        if k < 10:
+                            count_top10 += 1
+                        if k < 5:
+                            count_top5 += 1
+                        if k < 3:
+                            count_top3 += 1
+                        if k < 1:
+                            count_top1 += 1
 
         top1.append(count_top1)
         top3.append(count_top3)
@@ -528,9 +542,9 @@ def mean_and_variance(list):
     return mean, variance
 
 
-def score_result(input_file, batches, print_result=False, specification=0):
+def score_result(input_file, batches, print_result=False, fingerprint=None, specification=0):
 
-    top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, None, specification)
+    top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, None, specification, fingerprint)
 
     if print_result:
         print('\t')
@@ -606,7 +620,7 @@ def score_result(input_file, batches, print_result=False, specification=0):
     score10_all_list = []
     score_all_all_list = []
     for i in range(batches):
-        top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, i, specification)
+        top1, top1_pred, top3, top3_pred, top5, top5_pred, top10, top10_pred, all, all_pred, reference = count_correct_metabolites(input_file, i, specification, fingerprint)
         score1_one, score3_one, score5_one, score10_one, score_all_one = at_least_one_metabolite(top1, top3, top5, top10, all, reference)
         score1_all, score3_all, score5_all, score10_all, score_all_all = all_metabolites(top1, top3, top5, top10, all, reference)
 
@@ -685,18 +699,18 @@ def score_result(input_file, batches, print_result=False, specification=0):
 
 if __name__ == "__main__":
 
-    # testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
-    testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
+    testset = 'dataset/curated_data/combined_evaluation.csv' # max: 10
+    # testset = 'dataset/curated_data/gloryx_smiles_clean.csv' # gloryx -- max: 12
     json_predictions = 'results/evaluation/gloryx/predictions10.json'
     # json_predictions = 'results/evaluation/alohomora/predictions16.json'
 
-    status = 'combine' # 'score' 'combine' 'new'
+    status = 'score' # 'score' 'combine' 'new'
     # name = '4_split4_base_10'
-    name = 'GLORYx_random'
+    name = 'base_rand'
 
-    bs = 1 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
+    bs = 4 # if GLORYx: 1 (38), if testset: 4 (38), 8 (19), 5 (32)
     specification = 0 # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2) 
-    # max_metabolites = 12
+    fingerprint = None
     
     # If combine: ---
     ensemble_list = ['evaluation/alohomora/ensemble/result_GLORYx_random_split1.csv', 'evaluation/alohomora/ensemble/result_GLORYx_random_split2.csv', 'evaluation/alohomora/ensemble/result_GLORYx_random_split3.csv', 'evaluation/alohomora/ensemble/result_GLORYx_random_split4.csv']
@@ -705,26 +719,24 @@ if __name__ == "__main__":
 
     csv_predictions = f"evaluation/alohomora/predictions_{name}.csv"
     csv_result = f"evaluation/alohomora/result_{name}.csv"
-    # csv_predictions = f"evaluation/alohomora/predictions_{name}.csv"
-    # csv_result = f"evaluation/alohomora/result_{name}.csv"
 
     if status == 'new':
         json_to_csv(json_predictions, csv_predictions)
         present_result(testset, csv_predictions, csv_result)
         save_valid_smiles(csv_result, bs)
-        score_result(csv_result, bs, True, specification)
+        score_result(csv_result, bs, True, fingerprint, specification)
 
     elif status == 'score':
         present_result(testset, csv_predictions, csv_result)
         save_valid_smiles(csv_result, bs)
-        score_result(csv_result, bs, True, specification)
+        score_result(csv_result, bs, True, fingerprint, specification)
         # count_metabolites(csv_result)
     elif status == 'combine':
         csv_comb = f"evaluation/alohomora/result_comb_{name}_{samples_per_model}_per_model.csv"
         # concat_multiple_predictions("evaluation/result/result_test1.csv", "evaluation/result/result_test2.csv", csv_comb)
-        # score_result(csv_comb, max_metabolites, specification)
+        # score_result(csv_comb, max_metabolites, fingerprint, specification)
         concat_multiple_predictions(ensemble_list, csv_comb, samples_per_model)
-        score_result(csv_comb, bs, True, specification)
+        score_result(csv_comb, bs, True, fingerprint, specification)
         count_metabolites(csv_comb)
     else:
         print('Wrong status')
