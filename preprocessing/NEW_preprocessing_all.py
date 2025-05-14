@@ -608,7 +608,7 @@ if __name__ == "__main__":
 
     if name == 'metatrans':
             
-            val_size = 0.1 # val
+            val_size = 0.005 # val
             eval_size = 0 # test
 
             dataset = 'dataset/curated_data/metatrans_full_not_filtered.csv'
@@ -638,7 +638,7 @@ if __name__ == "__main__":
             log_time("Filtered on Metabolic dataset")
 
             set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-            log_time("Fistribution is set")
+            log_time("Distribution is set")
 
             reformat_for_chemformer(clean_csv, finetune_csv)
             log_time("Reformated for Chemformer")
