@@ -33,7 +33,7 @@ callbacks:
       - monitor: metabolite_coverage_score # validation_loss # fraction_invalid # top_1_metabolite_score # metabolite_coverage_score
       - mode: max # max # min
       - save_last: true
-      - save_top_k: 5
+      - save_top_k: 3
   - ValidationScoreCallback
   - StepCheckpoint
   # - OptLRMonitor
