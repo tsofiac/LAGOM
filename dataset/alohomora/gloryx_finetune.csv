@@ -1,0 +1,38 @@
+parent_name	child_name	reactants	products	generation	set	source
+Apixaban	M2	COc1ccc(-n2nc(C(N)=O)c3c2C(=O)N(c2ccc(N4CCCCC4=O)cc2)CC3)cc1	NC(=O)c1nn(-c2ccc(O)cc2)c2c1CCN(c1ccc(N3CCCCC3=O)cc1)C2=O	1	test	GLORYx
+Lenalidomide	5-hydroxy-lenalidomide	Nc1cccc2c1CN(C1CCC(=O)NC1=O)C2=O	Nc1c(O)ccc2c1CN(C1CCC(=O)NC1=O)C2=O	1	test	GLORYx
+Rivaroxaban	M-2	O=C(NCC1CN(c2ccc(N3CCOCC3=O)cc2)C(=O)O1)c1ccc(Cl)s1	O=C(NCC1CN(c2ccc(N3CCOC(O)C3=O)cc2)C(=O)O1)c1ccc(Cl)s1	1	test	GLORYx
+Ibrutinib	M26	C=CC(=O)N1CCCC(n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1	Nc1ncnc2c1c(-c1ccc(Oc3ccccc3)cc1)nn2C1CCCN(C(=O)CCSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C1	1	test	GLORYx
+Cobicistat	M2	CC(C)c1nc(CN(C)C(=O)NC(CCN2CCOCC2)C(=O)NC(CCC(Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1	CC(C)c1nc(CN(C)C(=O)NC(CCN2CCOCC2)C(=O)NC(CCC(N)Cc2ccccc2)Cc2ccccc2)cs1	1	test	GLORYx
+Sitagliptin	M1	NC(CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F	O=C(CC(Cc1cc(F)c(F)cc1F)NS(=O)(=O)O)N1CCn2c(nnc2C(F)(F)F)C1	1	test	GLORYx
+Enzalutamide	carboxylic acid metabolite	CNC(=O)c1ccc(N2C(=S)N(c3ccc(C#N)c(C(F)(F)F)c3)C(=O)C2(C)C)cc1F	CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(C(=O)O)c(F)c1	1	test	GLORYx
+Abacavir	5'-carboxylate	Nc1nc(NC2CC2)c2ncn(C3C=CC(CO)C3)c2n1	Nc1nc(NC2CC2)c2ncn(C3C=CC(C(=O)O)C3)c2n1	1	test	GLORYx
+Dolutegravir	M2	CC1CCOC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N12	CC1CCOC2Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(OC4OC(C(=O)O)C(O)C(O)C4O)c3C(=O)N12	1	test	GLORYx
+Abiraterone	M75	CC12CCC(O)CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12	CC12CCC=CC1=CCC1C2CCC2(C)C(c3cccnc3)=CCC12	1	test	GLORYx
+Fingolimod	M1	CCCCCCCCc1ccc(CCC(N)(CO)CO)cc1	NC(CO)(CO)CCc1ccc(CCCCCCCC(=O)O)cc1	1	test	GLORYx
+Fluticasone Propionate	M1	CCC(=O)OC1(C(=O)SCF)C(C)CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C	CCC(=O)OC1(C(=O)O)C(C)CC2C3CC(F)C4=CC(=O)C=CC4(C)C3(F)C(O)CC21C	1	test	GLORYx
+Budesonide	M-IV	CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1	CCC(O)C1OC2CC3C4CCC5=CC(=O)C=CC5(C)C4C(O)CC3(C)C2(C(=O)CO)O1	1	test	GLORYx
+Formoterol	Met 1	COc1ccc(CC(C)NCC(O)c2ccc(O)c(NC=O)c2)cc1	CC(Cc1ccc(O)cc1)NCC(O)c1ccc(O)c(NC=O)c1	1	test	GLORYx
+Esomeprazole	5-O-desmethylomeprazole	COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)nc2c1	COc1c(C)cnc(C[S+]([O-])c2nc3cc(O)ccc3[nH]2)c1C	1	test	GLORYx
+Empagliflozin	M626/1	OCC1OC(c2ccc(Cl)c(Cc3ccc(OC4CCOC4)cc3)c2)C(O)C(O)C1O	O=C(O)C1OC(OC2C(c3ccc(Cl)c(Cc4ccc(OC5CCOC5)cc4)c3)OC(CO)C(O)C2O)C(O)C(O)C1O	1	test	GLORYx
+Dasatinib	M9	Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1	Cc1nc(Nc2ncc(C3=Nc4c(Cl)cccc4CO3)s2)cc(N2CCN(CCO)CC2)n1	1	test	GLORYx
+Atorvastatin	para-hydroxyatorvastatin	CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O	CC(C)c1c(C(=O)Nc2ccc(O)cc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O	1	test	GLORYx
+Pomalidomide	M10	Nc1cccc2c1C(=O)N(C1CCC(=O)NC1=O)C2=O	NC(=O)C(CCC(=O)O)N1C(=O)c2cccc(N)c2C1=O	1	test	GLORYx
+Sofosbuvir	first metabolite	CC(C)OC(=O)C(C)NP(=O)(OCC1OC(n2ccc(=O)[nH]c2=O)C(C)(F)C1O)Oc1ccccc1	CC(NP(=O)(OCC1OC(n2ccc(=O)[nH]c2=O)C(C)(F)C1O)Oc1ccccc1)C(=O)O	1	test	GLORYx
+Darunavir	M23	CC(C)CN(CC(O)C(Cc1ccccc1)NC(=O)OC1COC2OCCC12)S(=O)(=O)c1ccc(N)cc1	CC(C)(O)CN(CC(O)C(Cc1ccccc1)NC(=O)OC1COC2OCCC12)S(=O)(=O)c1ccc(N)cc1	1	test	GLORYx
+Nilotinib 	P42.1	Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1	Cc1cn(-c2cc(NC(=O)c3ccc(CO)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1	1	test	GLORYx
+Osimertinib	AZ5104	C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C	C=CC(=O)Nc1cc(Nc2nccc(-c3c[nH]c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C	1	test	GLORYx
+Tacrolimus	M-I	C=CCC1C=C(C)CC(C)CC(OC)C2OC(O)(C(=O)C(=O)N3CCCCC3C(=O)OC(C(C)=CC3CCC(O)C(OC)C3)C(C)C(O)CC1=O)C(C)CC2OC	C=CCC1C=C(C)CC(C)CC(OC)C(O)C2CC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)=CC2CCC(O)C(OC)C2)C(C)C(O)CC1=O	1	test	GLORYx
+Cinacalcet	M2a-Glu	CC(NCCCc1cccc(C(F)(F)F)c1)c1cccc2ccccc12	CC(NCCCc1cccc(C(F)(F)F)c1)C1=CC(O)C(OC2OC(C(=O)O)C(O)C(O)C2O)c2ccccc21	1	test	GLORYx
+Tofacitinib	M1	CC1CCN(C(=O)CC#N)CC1N(C)c1ncnc2[nH]ccc12	CC1CCN(C(=O)CC#N)CC1Nc1ncnc2[nH]ccc12	1	test	GLORYx
+Dabigatran	M400	Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21	Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)Nc3ccccn3)ccc21	1	test	GLORYx
+Lurasidone	BITP	O=C1C2C3CCC(C3)C2C(=O)N1CC1CCCCC1CN1CCN(c2nsc3ccccc23)CC1	c1ccc2c(N3CCNCC3)nsc2c1	1	test	GLORYx
+Clopidogrel	clopidogrel-carboxylic acid	COC(=O)C(c1ccccc1Cl)N1CCc2sccc2C1	O=C(O)C(c1ccccc1Cl)N1CCc2sccc2C1	1	test	GLORYx
+Apremilast	M1/M2	CCOc1cc(C(CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC	CCOc1cc(C(CS(C)(=O)=O)NC(=O)c2cccc(NC(C)=O)c2C(=O)O)ccc1OC	1	test	GLORYx
+Rilpivirine	M2	Cc1cc(C=CC#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1	Cc1cc(C=CC#N)cc(CO)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1	1	test	GLORYx
+Linagliptin	M515	CC#CCn1c(N2CCCC(N)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C	CC#CCn1c(N2CCCC(NC(C)=O)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C	1	test	GLORYx
+Imatinib	CGP74588	Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1	Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1	1	test	GLORYx
+Everolimus	16-O-des	COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(OCCO)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C	COC1CC(CC(C)C2CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C(C)C(O)CC3CCC(C)C(O)(O3)C(=O)C(=O)N3CCCCC3C(=O)O2)CCC1OCCO	1	test	GLORYx
+Rosuvastatin	N-desmethyl rosuvastatin	CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O	CC(C)c1nc(NS(C)(=O)=O)nc(-c2ccc(F)cc2)c1C=CC(O)CC(O)CC(=O)O	1	test	GLORYx
+Dapagliflozin	M8	CCOc1ccc(Cc2cc(C3OC(CO)C(O)C(O)C3O)ccc2Cl)cc1	OCC1OC(c2ccc(Cl)c(Cc3ccc(O)cc3)c2)C(O)C(O)C1O	1	test	GLORYx
+Ticagrelor	M5	CCCSc1nc(NC2CC2c2ccc(F)c(F)c2)c2nnn(C3CC(OCCO)C(O)C3O)c2n1	CCCSc1nc(N)c2nnn(C3CC(OCCO)C(O)C3O)c2n1	1	test	GLORYx
