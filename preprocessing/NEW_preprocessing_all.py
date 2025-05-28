@@ -684,8 +684,6 @@ if __name__ == "__main__":
             log_time("Begin filtering")
             df = standardize_smiles(dataset)
             log_time("Smiles are standardised")
-            # df = remove_duplicates(df, removed_duplicates)
-            # log_time("Duplicates removed")
             df = remove_equal_parent_child(df, removed_equal)
             log_time("Equal_parent_child removed")
             df.to_csv(clean_csv, index=False)
@@ -698,11 +696,6 @@ if __name__ == "__main__":
             log_time("Filtered on weight")
             filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
             log_time("Filtered on fingerprint similarity")
-            # set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-            # log_time("set distribution complete")
-            #reformat_for_chemformer(clean_csv, finetune_csv)
-            #reformat_for_chemformer(evaluation_csv, evaluation_finetune_csv)
-            #log_time("Reformating for Chemformer complete")
 
         else:
             print("Incorrect task name for mmp")
