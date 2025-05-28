@@ -83,27 +83,6 @@ def find_drug_origin_metxbiodb(data_file):
     # Write the updated DataFrame back to a CSV
     df.to_csv(data_file, index=False)
 
-# def find_drug_origin(data_file):
-#     df = pd.read_csv(data_file)
-
-#     print(len(df))
-
-#     df['origin'] = df['parent_name'].fillna('metxbiodb unknown')
-
-#     child_name_set = set(df['child_name'].dropna())
-#     parent_name_set = set(df['parent_name'].dropna())
-
-#     # Find names that are in both columns
-#     common_names = child_name_set.intersection(parent_name_set)
-
-#     # Extract rows where either child_name or parent_name is in common_names
-#     rows_with_common_names = df[df['child_name'].isin(common_names) | df['parent_name'].isin(common_names)]
-#     rows_with_no_common_names = df[~df['child_name'].isin(common_names) | ~df['parent_name'].isin(common_names)]
-
-#     print(len(rows_with_common_names)+len(rows_with_no_common_names))
-
-#     rows_with_common_names.to_csv(data_file, index=False)
-
 
 def check_origin_vs_parent(data_file): #just for checking
     """
@@ -127,29 +106,6 @@ def check_origin_vs_parent(data_file): #just for checking
 
     print("Nr of times where the parent and origin are not the same: ", counter)
     return discrepancy_exists
-
-# def check_origin_vs_parent_drugbank(data_file): #just for checking
-#     """
-#     Function to check if any row in the DataFrame has 'origin' not equal to 'parent_name'.
-    
-#     Returns True if any such discrepancy exists and False otherwise.
-#     """
-#     # Read the DataFrame
-#     df = pd.read_csv(data_file)
-
-#     counter = 0
-
-#     # Check for discrepancies where 'origin' is not equal to 'parent_name'
-#     discrepancy_exists = False
-#     for index, row in df.iterrows():
-#         if row['origin'] != row['parent_id']:
-#             discrepancy_exists = True
-#             #print(f"Discrepancy found at index {index}:")
-#             #print(f"\tParent Name: {row['parent_name']}, Origin: {row['origin']}")
-#             counter += 1
-
-#     print("Nr of times where the parent and origin are not the same: ", counter)
-#     return discrepancy_exists
 
 if __name__ == "__main__":
 
