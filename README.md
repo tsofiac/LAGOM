@@ -70,6 +70,8 @@ To extract the data needed for pre-training the model, you need to download the 
 
 * [Virtual Analogues Dataset](https://zenodo.org/records/45807)
   * 1297204_Virtual__Analogs.dat
+* [ChEMBL](https://chembl.gitbook.io/chembl-interface-documentation/downloads)
+  * chembl_35_chemreps.txt
 * [MetaTrans Dataset](https://github.com/KavrakiLab/MetaTrans/tree/master/datasets)
   * source_train.txt
   * target_train.txt
