@@ -1,14 +1,15 @@
-sbatch chemformer/inference_score_submit.sh \
+# sbatch chemformer/inference_score_submit.sh \
+./chemformer/inference_score_submit.sh \
     chemformer/inference_score_submit.yaml \
-    dataset/alohomora/logp_evaluation.csv \
-    results/training/submitted/forward_prediction/version_8/checkpoints/epoch=68-step=483.ckpt \
+    dataset/finetune/gloryx_finetune.csv \
+    fine-tuned_models/metatrans_epoch=36-step=259.ckpt \
     chemformer/bart_vocab_downstream.json \
     38 \
     20 \
     forward_prediction \
-    results/evaluation/final/metrics_scores \
-    results/evaluation/final/predictions \
-    results/evaluation/final/inference_score
+    results/evaluation/alohomora/metrics_scores \
+    results/evaluation/alohomora/predictions \
+    results/evaluation/alohomora/inference_score
 
 # 19 as batch size - ok!
 
