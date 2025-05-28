@@ -143,8 +143,8 @@ def split_on_tb_clusters(input_file, n_splits, name):
         splits[split_index] = pd.concat([splits[split_index], cluster_rows])
 
     for i, split in enumerate(splits):
-        csv = f'dataset/curated_data/tb_split_{i + 1}of_{n_splits}_{name}.csv'
-        finetune_csv = f'dataset/finetune/tb_split_{i + 1}of_{n_splits}_{name}_finetune.csv'
+        csv = f'dataset/curated_data/tb_split_{i + 1}_of_{n_splits}_{name}.csv'
+        finetune_csv = f'dataset/finetune/tb_split_{i + 1}_of_{n_splits}_{name}_finetune.csv'
         split.to_csv(csv, index=False)
         reformat_for_chemformer(csv, finetune_csv)
         add_possible_products(finetune_csv)
@@ -156,7 +156,7 @@ def split_on_tb_clusters(input_file, n_splits, name):
 if __name__ == "__main__":
 
     # Define split type. 4 splits will be generated
-    split_type = 'parents' #'random' 'parents' 'children'
+    split_type = 'children' #'random' 'parents' 'children'
 
     if split_type == 'parents':
         tb_file = 'dataset/curated_data/tb_output_parent.csv'
