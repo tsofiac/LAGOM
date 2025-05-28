@@ -243,10 +243,10 @@ if __name__ == "__main__":
 
     if logp_annotations or csp3_annotations:
 
-        if using_finetune_ready_file == False:
+        if using_finetune_ready_file is False:
             datafile = 'dataset/curated_data/combined_smiles_clean.csv'
 
-            if enzyme_annotations == True:
+            if enzyme_annotations is True:
                 annotate_data_enzymefamily(datafile, annotated_datafile)  
 
             else:
@@ -259,7 +259,7 @@ if __name__ == "__main__":
             datafile = 'dataset/finetune/combined_evaluation_finetune.csv'
             finetune_file = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-            if enzyme_annotations == True:
+            if enzyme_annotations is True:
                 annotate_data_enzymefamily_finetune(datafile, finetune_file)
                 print('here')
             else:
