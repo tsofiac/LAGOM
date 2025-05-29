@@ -8,7 +8,8 @@
 ##days-hours:minutes:seconds
 #SBATCH --time=2-00:00:00
 #SBATCH -p medium-gpu
-#SBATCH --gres=gpu:a100:1
+#SBATCH --gres=gpu:1
+#SBATCH --constraint='[ampere|volta]'
  
 source ~/.bashrc
 conda activate aizynthmodels
@@ -17,7 +18,7 @@ export HYDRA_FULL_ERROR=1
  
 # Set i_chunk_i=0, n_chunks=1 when running interactively
 i_chunk=0 # $SLURM_ARRAY_TASK_ID
-n_chunks=1 #10
+n_chunks=1 # 10
  
 config_template=$1
 data=$2
