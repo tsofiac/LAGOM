@@ -17,12 +17,25 @@ predicting drug metabolites.
 - [Contact](#contact)
 
 ## Installation
-Here are the instructions on how to install and set up this project:
+Here are the instructions on how to install and set up this project.
+
+First you need set up the Chemformer by following the instructions given the repository [Aizynthmodels](https://github.com/MolecularAI/aizynthmodels/tree/main).
+
+To set up this project you need to clone this repository:
 
 ```bash
 git clone https://github.com/yourusername/your-project.git
 cd your-project
 ```
+
+You also need to download an extra package:
+
+```bash
+conda activate aizynthmodels
+conda install chembl_structure_pipeline
+```
+
+You also need the pre-trained Chemformer model
 
 ## Extracting Data
 
@@ -59,8 +72,8 @@ preprocess_data.py
 Here we need to explain how to fine-tune a model
 
 ```bash
-submit_fine_tuning.sh
-submit_inference_score.sh
+run_fine_tuning.sh
+run_inference_score.sh
 ```
 
 
