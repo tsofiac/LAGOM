@@ -580,7 +580,7 @@ if __name__ == "__main__":
     # start_row = 9911735
     # end_row = None #11013037
 
-    name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp'  f'mmp_{start_row}_{end_row}'  'mmp_split' 'mmp_compare' 'metatrans']
+    name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp_filter_part'(comment out start_row and end_row) 'mmp_last_filtering' 'metatrans']
 
     preprocess_unique_parents = False
     # augment_parent_grandchild = True
@@ -653,46 +653,37 @@ if __name__ == "__main__":
 
         print("MMP")
 
-        if name == 'mmp_split':
-            clean_csv = 'dataset/mmp/mmp_all_smiles_clean_compared_noduplicates.csv'
-            finetune_csv = 'dataset/mmp/mmp_finetune_compared_no_duplicates.csv'
-
-            set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-            reformat_for_chemformer(clean_csv, finetune_csv)
-
-        elif name == 'mmp_compare':
-            clean_csv = 'dataset/mmp/mmp_all_smiles_clean_compared.csv'
+        if name == 'mmp_last_filtering':
+            clean_csv = 'dataset/mmp/mmp_all_smiles_clean.csv'
+            finetune_csv = 'dataset/mmp/mmp_finetune.csv'
 
             print("Comparing with Gloryx")
-            compare_datasets(clean_csv, dataset_gloryx, 'dataset/removed_data/mmp_compare_gloryx_removed_duplicates.csv')
+            compare_datasets(clean_csv, dataset_gloryx, 'dataset/mmp/mmp_removed/mmp_compare_gloryx_removed_duplicates.csv')
             log_time("Filtered on Gloryx")
 
             print("Comparing with Metabolic dataset")
-            compare_datasets(clean_csv, 'dataset/curated_data/combined_smiles_clean.csv', 'dataset/removed_data/mmp_compare_metabolic_removed_duplicates.csv')
+            compare_datasets(clean_csv, 'dataset/curated_data/combined_smiles_clean.csv', 'dataset/mmp/mmp_removed/mmp_compare_metabolic_removed_duplicates.csv')
             log_time("Filtered on Metabolic dataset")
 
-        elif name == 'mmp_remove_duplicates':
-            print('Removing duplicates from mmp')
-            csv = 'dataset/mmp/mmp_all_smiles_clean_compared.csv'
-            new_csv = 'dataset/mmp/mmp_all_smiles_clean_compared_noduplicates.csv'
-            df = pd.read_csv(csv)
+            print('Removing duplicates')
+            df = pd.read_csv(clean_csv)
 
-            log_time("Begin filtering")
+            log_time("Begin filtering on duplicates")
             df = remove_duplicates(df, removed_duplicates)
             log_time("Duplicates removed")
-            df.to_csv(new_csv, index=False)
+            df.to_csv(clean_csv, index=False)
             log_time("New csv created")
+            log_time("Setting training and validation distributions")
+            set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
+            reformat_for_chemformer(clean_csv, finetune_csv)
+            log_time("Done.")
 
-
-
-        else: 
+        elif name == 'mmp_filter_part':
             dataset = f"dataset/curated_data/new_paired_mmp_rows_{start_row}_to_{end_row}.csv"
 
             log_time("Begin filtering")
             df = standardize_smiles(dataset)
             log_time("Smiles are standardised")
-            # df = remove_duplicates(df, removed_duplicates)
-            # log_time("Duplicates removed")
             df = remove_equal_parent_child(df, removed_equal)
             log_time("Equal_parent_child removed")
             df.to_csv(clean_csv, index=False)
@@ -705,11 +696,9 @@ if __name__ == "__main__":
             log_time("Filtered on weight")
             filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
             log_time("Filtered on fingerprint similarity")
-            # set_distribution(clean_csv, evaluation_csv, val_size, eval_size)
-            # log_time("set distribution complete")
-            #reformat_for_chemformer(clean_csv, finetune_csv)
-            #reformat_for_chemformer(evaluation_csv, evaluation_finetune_csv)
-            #log_time("Reformating for Chemformer complete")
+
+        else:
+            print("Incorrect task name for mmp")
 
     if name == 'combined': 
 
