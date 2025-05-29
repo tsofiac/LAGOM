@@ -3,10 +3,10 @@ model_path: MODEL_PATH
 
 resume: false
 
-n_epochs: 50
+n_epochs: 200
 batch_size: BATCH_SIZE
-augmentation_probability: 0
-augmentation_strategy: all # Can be set to "all", "reactants", "products" when using synthesis datamodule
+augmentation_probability: 0.5
+augmentation_strategy: all
 
 vocabulary_path: VOCABULARY_PATH
 output_directory: OUTPUT_DIRECTORY
@@ -14,43 +14,25 @@ task: forward_prediction
 
 seed: 1
 
-# masker:
-#   type: SpanTokensMasker  # SpanTokensMasker, ReplaceTokensMasker
-#   arguments:
-#    - mask_prob: 0
-
 model_hyperparams:
   optimizer:
     learning_rate: 0.001
 
 datamodule:
-  type: MetaboliteDataModule # MetaboliteDataModule # SynthesisDataModule
+  type: MetaboliteDataModule
 
 callbacks:
   - LearningRateMonitor
   - ModelCheckpoint:
       - every_n_epochs: 1
-      - monitor: metabolite_coverage_score # validation_loss # fraction_invalid # top_1_metabolite_score # metabolite_coverage_score
-      - mode: max # max # min
+      - monitor: metabolite_coverage_score
+      - mode: max
       - save_last: true
       - save_top_k: 3
   - ValidationScoreCallback
   - StepCheckpoint
-  # - OptLRMonitor
 
-n_predictions: 1 # 0 # 1
+n_predictions: 5
 scorers:
   - MetaboliteCoverageScore
   - Top1MetaboliteScore
-
-  # - FractionInvalidScore
-  # - TopKAccuracyScore
-  # - FractionUniqueScore
-  # - MeanAbsoluteError
-  # - R2Score
-  # - AveragePrecisionScore
-  # - RecallScore
-  # - BalancedAccuracyScore
-  # - BinaryAccuracyScore
-  # - TanimotoSimilarityScore
-  # - TopKCoverageScore

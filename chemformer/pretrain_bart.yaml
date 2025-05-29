@@ -3,13 +3,13 @@ model_path: MODEL_PATH
 
 resume: false
 
-n_epochs: 500
+n_epochs: 100
 batch_size: BATCH_SIZE
 augmentation_probability: AUGMENTATION_PROBABILITY
-augmentation_strategy: all # Can be set to "all", "reactants", "products" when using synthesis datamodule
+augmentation_strategy: all
 
 masker:
-  type: SpanTokensMasker  # SpanTokensMasker, ReplaceTokensMasker
+  type: SpanTokensMasker
   arguments:
    - mask_prob: MASK_PROBABILITY
 
@@ -19,17 +19,11 @@ task: forward_prediction
 
 seed: 1
 
-# acc_batches: 8
 check_val_every_n_epoch: 3
 
 datamodule:
   type: SynthesisDataModule
 
 n_predictions: 0
-# scorers:
-#   - FractionInvalidScore
 
-# model_hyperparams:
-#   optimizer:
-#     learning_rate: 0.5
   

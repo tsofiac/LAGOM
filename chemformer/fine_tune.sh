@@ -22,9 +22,6 @@ vocabulary_path=$5
 output_directory=$6
 config=$7
 
-# for rate in `seq 0.001 0.001 0.01` ; do
-# output_directory=results/hyperparam/LR_${rate}
-
 cp $config_template $config
 
 sed -i "s+DATA_PATH+${data}+g" ${config}
