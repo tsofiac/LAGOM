@@ -1,12 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import pandas as pd
 from rdkit import Chem
 from rdkit import DataStructs
 from rdkit.ML.Cluster import Butina
 from rdkit.Chem import rdMolDescriptors as rdmd
-from rdkit.Chem import Descriptors
 from tqdm import tqdm
 
 def butina_cluster(mol_list, cutoff=0.8):
@@ -44,10 +40,16 @@ def count_clusters(input_file):
 
 #Preparing for Taylor-Butina Clustering
 
-df = pd.read_csv('dataset/curated_data/combined_smiles_clean.csv')
+if __name__ == "__main__":
 
-cid_list = butina_cluster(list(df['child_smiles']))
-df.loc[:, 'TB_Cluster'] = cid_list
-df.to_csv('dataset/curated_data/tb_output_child.csv', index=False)
+    # Choose if clustering based on children or parents:
+    name = 'child' # 'child' 'parent'
 
-count_clusters('dataset/curated_data/tb_output_child.csv')
+    df = pd.read_csv('dataset/curated_data/combined_smiles_clean.csv')
+    output_csv = f'dataset/curated_data/tb_output_{name}.csv'
+
+    cid_list = butina_cluster(list(df[f'{name}_smiles']))
+    df.loc[:, 'TB_Cluster'] = cid_list
+    df.to_csv(output_csv, index=False)
+
+    count_clusters(output_csv)
