@@ -120,7 +120,6 @@ def split_on_tb_clusters(input_file, n_splits, name):
 
     df_train = df[df['set'] == 'train']
     df_val = df[df['set'] == 'val']
-    df_test = df[df['set'] == 'test']
     df = pd.concat([df_train, df_val])
 
     clusters = df['TB_Cluster']
