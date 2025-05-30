@@ -236,7 +236,7 @@ if __name__ == "__main__":
    
     #OBS: look over all file names
 
-    name = 'PP' # 'annotations' 'logp' 'csp3' 'enzymes' 'PG' 'PP' 'PG_PP'
+    name = 'PP' # 'csp3_logp' 'logp' 'csp3' 'PG' 'PP' 'PG_PP' 'enzymes' 
 
     annotated_datafile = f'dataset/curated_data/annotated_data/{name}_combined_smiles_clean.csv' 
     finetune_file = f'dataset/finetune/{name}_finetune.csv'

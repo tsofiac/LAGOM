@@ -407,7 +407,7 @@ if __name__ == "__main__":
 
     ## Drug structure - drugbank_drug_structures.sdf
     drugbank_drug_structures = "dataset/raw_data/drugbank_drug_structures.sdf"
-    parsed_drug_structures = "dataset/processed_data/drugbank_drug_structures.csv"
+    parsed_drug_structures = "dataset/extracted_data/drugbank_drug_structures.csv"
     if get_drug_structures:
         sdf_to_csv(
             drugbank_drug_structures, parsed_drug_structures, is_drug_information=True
@@ -422,7 +422,7 @@ if __name__ == "__main__":
         "dataset/raw_data/drugbank_metabolite_structures.sdf"
     )
     parsed_metabolite_structures = (
-        "dataset/processed_data/drugbank_metabolite_structures.csv"
+        "dataset/extracted_data/drugbank_metabolite_structures.csv"
     )
     if get_metabolite_structures:
         sdf_to_csv(
@@ -438,7 +438,7 @@ if __name__ == "__main__":
     ## External drugs - drugbank_external_structures.csv
     drugbank_external_structures = "dataset/raw_data/drugbank_external_structures.csv"
     parsed_external_stuctures = (
-        "dataset/processed_data/drugbank_external_structures_cleaned.csv"
+        "dataset/extracted_data/drugbank_external_structures_cleaned.csv"
     )
     if get_external_structures:
         reformat_external_csv(drugbank_external_structures, parsed_external_stuctures)
@@ -452,7 +452,7 @@ if __name__ == "__main__":
 
     # Get the reaction pairs - drugbank_full_database.xml
     drugbank_full_database = "dataset/raw_data/drugbank_full_database.xml"
-    drugbank_reaction_pairs = "dataset/processed_data/drugbank_reaction_pairs.csv"
+    drugbank_reaction_pairs = "dataset/extracted_data/drugbank_reaction_pairs.csv"
     if get_reaction_pairs:
         generate_reaction_pairs(drugbank_full_database, drugbank_reaction_pairs)
         add_missing_ID(drugbank_reaction_pairs)
@@ -461,7 +461,7 @@ if __name__ == "__main__":
         # Number of reactions with unknown origin:  0
 
     # Combine all strucutres into one file
-    drugbank_full_structures = "dataset/processed_data/drugbank_full_structures.csv"
+    drugbank_full_structures = "dataset/extracted_data/drugbank_full_structures.csv"
     if combine_all_structures:
         combine_datasets(
             parsed_drug_structures,
@@ -477,7 +477,7 @@ if __name__ == "__main__":
         # Number of duplicates removed:  12392
 
     # Extend reaction pairs with SMILES
-    mapped_smiles_to_reactions = "dataset/curated_data/drugbank_smiles.csv"
+    mapped_smiles_to_reactions = "dataset/extracted_data/drugbank_smiles.csv"
     if extend_dataset:
         map_smiles_to_reaction_pairs(
             drugbank_reaction_pairs,

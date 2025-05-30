@@ -54,14 +54,14 @@ def combine_csv(train_csv, valid_csv, final_csv):
 # Metatrans training data
 source_file_train = 'dataset/raw_data/metatrans_source_train.txt'
 target_file_train = 'dataset/raw_data/metatrans_target_train.txt'
-metatrans_csv_train = 'dataset/curated_data/metatrans_train.csv'
+metatrans_csv_train = 'dataset/extracted_data/metatrans_train.csv'
 
 # Metatrans validation data
 source_file_valid = 'dataset/raw_data/metatrans_source_valid.txt'
 target_file_valid = 'dataset/raw_data/metatrans_target_valid.txt'
-metatrans_csv_valid = 'dataset/curated_data/metatrans_valid.csv'
+metatrans_csv_valid = 'dataset/extracted_data/metatrans_valid.csv'
 
-metatrans_csv_final = 'dataset/curated_data/metatrans.csv'
+metatrans_csv_final = 'dataset/extracted_data/metatrans_smiles.csv'
 
 load_metatrans(source_file_train, target_file_train, metatrans_csv_train, set_value = 'train')
 load_metatrans(source_file_valid, target_file_valid, metatrans_csv_valid, set_value = 'val')

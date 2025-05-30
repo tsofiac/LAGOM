@@ -583,8 +583,6 @@ if __name__ == "__main__":
     name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp_filter_part'(comment out start_row and end_row) 'mmp_last_filtering' 'metatrans']
 
     preprocess_unique_parents = False
-    # augment_parent_grandchild = True
-    # augment_parent_parent = True
 
     min_similarity = 0.2
     
@@ -611,7 +609,7 @@ if __name__ == "__main__":
             val_size = 0.005 # val
             eval_size = 0 # test
 
-            dataset = 'dataset/curated_data/metatrans_full_not_filtered.csv'
+            dataset = 'dataset/extracted_data/metatrans_smiles.csv'
 
             log_time("Begin filtering metatrans")
             df = standardize_smiles(dataset)
@@ -706,8 +704,8 @@ if __name__ == "__main__":
         eval_size = 0.05 # test
 
         print("Starting preprocessing of combined dataset")
-        metxbiodb_csv = 'dataset/curated_data/metxbiodb_smiles.csv'
-        drugbank_csv = 'dataset/curated_data/drugbank_smiles.csv'
+        metxbiodb_csv = 'dataset/extracted_data/metxbiodb_smiles.csv'
+        drugbank_csv = 'dataset/extracted_data/drugbank_smiles.csv'
         combined_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 
         df_metx = pd.read_csv(metxbiodb_csv)
@@ -771,125 +769,3 @@ if __name__ == "__main__":
             print('Unique parent')
             get_unique_parents(combined_csv, unique)
             reformat_for_chemformer(unique, unique_finetune)
-
-
-
-
-
-    # elif name == 'combined2':
-
-    #     dataset_metx = 'dataset/curated_data/metxbiodb_smiles.csv'
-    #     dataset_drugbank = 'dataset/curated_data/drugbank_smiles.csv'
-
-    #     compare_removed_csv = 'dataset/removed_data/compare_removed_duplicates.csv'
-
-    #     df_metx = standardize_smiles(dataset_metx)
-    #     df_drugbank = standardize_smiles(dataset_drugbank)
-
-    #     df_metx = remove_duplicates(df_metx, 'dataset/removed_data/metxbiodb_removed_duplicates.csv')
-    #     df_drugbank = remove_duplicates(df_drugbank, 'dataset/removed_data/drugbank_removed_duplicates.csv') 
-
-    #     df_metx = remove_equal_parent_child(df_metx, 'dataset/removed_data/metxbiodb_removed_equal.csv')
-    #     df_drugbank = remove_equal_parent_child(df_drugbank, 'dataset/removed_data/drugbank_removed_equal.csv')
-
-    #     combine_datasets(df_drugbank, df_metx, clean_csv)
-    #     remove_duplicates_combined(clean_csv, removed_duplicates)
-
-    #     if augment_parent_grandchild:
-    #         parent_grandchild = 'dataset/curated_data/augmented_parent_grandchild.csv'
-    #         augmented_drugbank = augment_drugbank(dataset_drugbank)
-    #         augmented_metxbiodb = augment_metxbiodb(dataset_metx)
-    #         join(augmented_drugbank, augmented_metxbiodb, parent_grandchild)
-
-    #         df_parent_grandchild = standardize_smiles(parent_grandchild)
-    #         df_parent_grandchild = remove_duplicates(df_parent_grandchild, 'dataset/removed_data/augmented_removed_duplicates.csv')
-    #         df_parent_grandchild = remove_equal_parent_child(df_parent_grandchild, 'dataset/removed_data/augmented_removed_equal.csv')
-
-    #         df_parent_grandchild.to_csv(parent_grandchild, index=False)
-
-    #         filter_data_on_both_sides(parent_grandchild, valid_smiles, 'dataset/removed_data/augmented_removed_valid_smiles.csv')
-    #         filter_data_on_both_sides(parent_grandchild, atoms_allowed_in_molecules, 'dataset/removed_data/augmented_removed_atoms_allowed.csv')
-    #         filter_data_on_one_side(parent_grandchild, molecule_allowed_based_on_weight, 'dataset/removed_data/augmented_removed_weights_allowed.csv', True)
-    #         filter_fingerprint_similarity(parent_grandchild, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
-
-    #         df_clean = pd.read_csv(clean_csv)
-    #         df_parent_grandchild = pd.read_csv(parent_grandchild)
-    #         combine_datasets(df_clean, df_parent_grandchild, clean_csv)
-
-    #     compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
-
-    #     set_distribute(clean_csv, val_size, eval_size)
-
-    #     filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
-    #     filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-    #     filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-    #     filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
-
-    #     clean_df = pd.read_csv(clean_csv)
-    #     print(len(clean_df))
-
-
-    #     if augment_parent_parent:
-    #         parent_parent = 'dataset/curated_data/augmented_parent_parent.csv'
-    #         get_unique_parents(clean_csv, unique)
-    #         parent_to_parent(unique, parent_parent)
-
-    #         df_clean = pd.read_csv(clean_csv)
-    #         df_parent_parent = pd.read_csv(parent_parent)
-    #         combine_datasets(df_clean, df_parent_parent, clean_csv)
-
-    #     # if augment_randomisation:
-    #     #     combined = pd.read_csv(clean_csv)
-    #     #     randomised = pd.read_csv('dataset/curated_data/randomised_dataset.csv')
-    #     #     join(combined, randomised, clean_csv)
-
-    #     reformat_for_chemformer(clean_csv, finetune_csv)
-
-    #     if preprocess_unique_parents:
-    #         get_unique_parents(clean_csv, unique)
-    #         reformat_for_chemformer(unique, unique_finetune)
-
-    # else:
-
-    #     dataset = f'dataset/curated_data/{name}_smiles.csv'
-        
-    #     compare_removed_csv = f'dataset/removed_data/{name}_compare_removed_duplicates.csv'
-
-    #     df = standardize_smiles(dataset)
-    #     df = remove_duplicates(df, removed_duplicates)
-    #     df = remove_equal_parent_child(df, removed_equal)
-
-    #     df.to_csv(clean_csv, index=False)
-
-    #     compare_datasets(clean_csv, dataset_gloryx, compare_removed_csv)
-    #     set_distribute(clean_csv, val_size, eval_size)
-
-    #     filter_data_on_both_sides(clean_csv, valid_smiles, removed_valid_smiles)
-    #     filter_data_on_both_sides(clean_csv, atoms_allowed_in_molecules, removed_atoms_allowed)
-    #     filter_data_on_one_side(clean_csv, molecule_allowed_based_on_weight, removed_weights_allowed, True)
-    #     filter_fingerprint_similarity(clean_csv, removed_fingerprints, min_similarity)
-        
-    #     reformat_for_chemformer(clean_csv, finetune_csv)
-
-    #     if preprocess_unique_parents:
-    #         get_unique_parents(clean_csv, unique)
-    #         reformat_for_chemformer(unique, unique_finetune)
-
-
-
-
-    #      metxbiodb_df = add_source_column('dataset/curated_data/metxbiodb_smiles_clean.csv', 'metxbiodb')
-    # drugbank_df = add_source_column('dataset/curated_data/drugbank_smiles_clean.csv', 'drugbank')
-    # gloryx_df = add_source_column('dataset/curated_data/gloryx_smiles_clean.csv', 'gloryx')
-
-    # combine_datasets(drugbank_df, metxbiodb_df, combined_csv)
-    # remove_duplicates(combined_csv, removed_csv)
-
-    # compare_datasets(combined_csv, gloryx_df, compare_removed_csv)
-
-
-
-    #      df.to_csv(output_file, index=False)
-
-    # else: 
-        

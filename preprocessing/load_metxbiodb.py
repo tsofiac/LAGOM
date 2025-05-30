@@ -1,7 +1,5 @@
 from rdkit import Chem
 import pandas as pd
-from sklearn.model_selection import GroupShuffleSplit
-from sklearn.model_selection import train_test_split
 
 
 def load_metxbiodb(file):
@@ -34,9 +32,10 @@ def metxbiodb_inchi_to_smiles(data, output_file):
             enzyme = data.loc[ind]["enzyme"]
 
             parent_child.append([parent_name, parent_smiles, child_name, child_smiles, enzyme])
-        except:
+        except Exception as e:
             counter += 1
             print("ERROR MISSING DATA, number: ", counter)
+            print("Exception:", e)
             print(data.loc[ind])
             
     smiles_metxbiodb_df = pd.DataFrame(parent_child)
@@ -110,7 +109,7 @@ def check_origin_vs_parent(data_file): #just for checking
 if __name__ == "__main__":
 
     dataset = 'dataset/raw_data/metxbiodb.csv'
-    final = 'dataset/curated_data/metxbiodb_smiles.csv'
+    final = 'dataset/extracted_data/metxbiodb_smiles.csv'
 
     metxbiodb = load_metxbiodb(dataset)
     metxbiodb_inchi_to_smiles(metxbiodb, final)

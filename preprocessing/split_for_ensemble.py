@@ -172,15 +172,15 @@ if __name__ == "__main__":
 
         input_csv = 'dataset/curated_data/combined_smiles_clean.csv'
 
-        split1_csv = f'dataset/curated_data/4_split1_combined_smiles_clean.csv'
-        split2_csv = f'dataset/curated_data/4_split2_combined_smiles_clean.csv'
-        split3_csv = f'dataset/curated_data/4_split3_combined_smiles_clean.csv'
-        split4_csv = f'dataset/curated_data/4_split4_combined_smiles_clean.csv'
+        split1_csv = 'dataset/curated_data/4_split1_combined_smiles_clean.csv'
+        split2_csv = 'dataset/curated_data/4_split2_combined_smiles_clean.csv'
+        split3_csv = 'dataset/curated_data/4_split3_combined_smiles_clean.csv'
+        split4_csv = 'dataset/curated_data/4_split4_combined_smiles_clean.csv'
 
-        fine_tune_split1 = f'dataset/finetune/4_split1_random_finetune.csv'
-        fine_tune_split2 = f'dataset/finetune/4_split2_random_finetune.csv'
-        fine_tune_split3 = f'dataset/finetune/4_split3_random_finetune.csv'
-        fine_tune_split4 = f'dataset/finetune/4_split4_random_finetune.csv'
+        fine_tune_split1 = 'dataset/finetune/4_split1_random_finetune.csv'
+        fine_tune_split2 = 'dataset/finetune/4_split2_random_finetune.csv'
+        fine_tune_split3 = 'dataset/finetune/4_split3_random_finetune.csv'
+        fine_tune_split4 = 'dataset/finetune/4_split4_random_finetune.csv'
 
         split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv)
 
