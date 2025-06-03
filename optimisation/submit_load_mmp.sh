@@ -16,6 +16,6 @@ conda activate aizynthmodels
 export OMP_NUM_THREADS=12
  
 # start the calculation
-python preprocessing/load_mmp_parts.py  # <-- här skriver ni bara namnet på ert script efter "python". NOTERA: detta script måste ligga i samma directory som python scriptet!!
+python optimisation/load_mmp_parts.py  # <-- här skriver ni bara namnet på ert script efter "python". NOTERA: detta script måste ligga i samma directory som python scriptet!!
  
 # end of script

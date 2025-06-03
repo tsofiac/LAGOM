@@ -1,7 +1,11 @@
 from rdkit import Chem, DataStructs
 from rdkit.Chem import Descriptors, AllChem 
 import pandas as pd
-from standardize_smiles import standardize_smiles_collection
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from preprocessing.standardize_smiles import standardize_smiles_collection
 from sklearn.model_selection import GroupShuffleSplit, train_test_split
 import datetime
 
@@ -580,7 +584,7 @@ if __name__ == "__main__":
     # start_row = 9911735
     # end_row = None #11013037
 
-    name = 'metatrans' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp_filter_part'(comment out start_row and end_row) 'mmp_last_filtering' 'metatrans']
+    name = 'combined' # [ 'combined' 'drugbank' 'metxbiodb' 'mmp_filter_part'(comment out start_row and end_row) 'mmp_last_filtering' 'metatrans']
 
     preprocess_unique_parents = False
 
@@ -750,6 +754,7 @@ if __name__ == "__main__":
         filter_fingerprint_similarity(parent_grandchild, 'dataset/removed_data/augmented_removed_fingerprints.csv', min_similarity)
 
         select_reactions(parent_grandchild, combined_csv)
+        print("Finishing preprocessing of parent-grandchild")
         # --------------------------------------
 
         # ------- parent - parent --------------
@@ -760,6 +765,7 @@ if __name__ == "__main__":
         train_df.to_csv(parent_parent, index=False)
         get_unique_parents(parent_parent, parent_parent)
         parent_to_parent(parent_parent, parent_parent)
+        print("Finishing preprocessing of parent-parent")
         # --------------------------------------
 
         reformat_for_chemformer(combined_csv, finetune_csv)

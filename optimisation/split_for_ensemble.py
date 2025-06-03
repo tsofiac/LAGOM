@@ -1,7 +1,11 @@
 import pandas as pd
 import numpy as np
 from collections import Counter
-from NEW_preprocessing_all import add_possible_products
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from preprocessing.NEW_preprocessing_all import add_possible_products
 
 def split_metabolites_4(input_csv, split1_csv, split2_csv, split3_csv, split4_csv):
 
