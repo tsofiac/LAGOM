@@ -553,7 +553,7 @@ def log_time(message):
     
 if __name__ == "__main__":
 
-    # rows for mmp
+    ''' rows for mmp '''
     start_row = 0
     end_row = 1101304
 
