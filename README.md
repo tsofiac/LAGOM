@@ -10,7 +10,7 @@ predicting drug metabolites.
 - [Preprocess Data](#preprocess-data)
 - [Pre-training](#pre-training)
 - [Augmentation and Annotation](#augmentation-and-annotation)
-- [Splitting Data](#splitting-data)
+- [Splitting Data for Ensemble Model](#splitting-data-for-ensemble-model)
 - [Evaluation](#evaluation)
 - [Contributing](#contributing)
 - [License](#license)
@@ -39,7 +39,7 @@ You also need the pre-trained Chemformer model
 
 ## Extracting Data
 
-To extract the data needed for this project you need to download the raw files from the following webpages:
+To extract the data needed for this project, download the raw files from the following webpages:
 
 * [Drugbank](https://go.drugbank.com/releases/latest)
   * drugbank_drug_structures.sdf
@@ -51,21 +51,21 @@ To extract the data needed for this project you need to download the raw files f
 * [GLORYx Test Dataset](https://github.com/christinadebruynkops/GLORYx/tree/master/datasets/test_dataset)
   * gloryx_test_dataset.json
 
-To extract the data you need to run the following files:
+To extract the data, run the following files for each corresponding data source:
 
-```bash
-load_drugbank.py
-load_metxbiodb.py
-load_gloryx.py
-```
+* `load_drugbank.py`
+* `load_metxbiodb.py`
+* `load_gloryx.py`
+
 
 ## Preprocess Data
 
-To preprocess the data, you run the following file:
+To preprocess the data, run the file `preprocess_data.py`.
 
-```bash
-preprocess_data.py
-```
+To combine and preprocess the MetaTrans datasets, set the name parameter under *if __name__ == "__main__"* to *'combined'. 
+The GLORYx dataset does not have to be further preprocessed. 
+
+
 
 ## Running Chemformer
 
@@ -79,7 +79,7 @@ run_inference_score.sh
 
 ## Pre-training
 
-To extract the data needed for pre-training the model, you need to download the raw files from the following webpages:
+To extract the data needed for additional pre-training the model, download the raw files from the following webpages:
 
 * [Virtual Analogues Dataset](https://zenodo.org/records/45807)
   * 1297204_Virtual__Analogs.dat
@@ -91,39 +91,86 @@ To extract the data needed for pre-training the model, you need to download the 
   * source_train.txt
   * target_train.txt
 
-To extract the data from the files, you run the following files:
+To extract the data from the files, run the following files located in the `preprocessing` folder:
 
-```bash
-load_mmp.py
-load_metatrans.py
-```
+* `load_mmp.py` for the Virtual Analogues Dataset
+* `load_metatrans.py`for the MetaTrans Dataset
 
+
+### Virtual Analogues (VA) Dataset
+
+Due to the large size of the dataset, loading the was conducted in parts. For complete curation and filtering, the following steps should be conducted.
+
+#### Loading
+* Go to file `preprocessing/load_mmp_parts.py`
+* Uncomment a *start_row* and corresponding *end_row*
+* Run the sh script `preprocessing/submit_load_mmp.sh`
+
+#### Intitial Filtering
+
+The intital filtering is done separately on each split of the extracted dataset. 
+
+* Go to file `preprocessing/NEW_preprocessing_all.py`
+* Under *if __name__ == "__main__"*, set name to *'mmp_filter_part'* and uncomment a *start_row* and corresponding *end_row*. E.g. like this:
 ```bash
-preprocess_data.py
+if __name__ == "__main__":
+
+    ''' rows for mmp '''
+    start_row = 0
+    end_row = 1101304
+
+    # start_row = 1101304
+    # end_row = 2202607
+
+...
+
+    name = 'mmmp_filter_part'
 ```
+* Run file `preprocessing/submit_preprocess.sh`
+* Repeat the steps for all splits
+* Run the file `preprocessing/combine_mmp.py` to combine the different VA files into one
+
+#### Final Filtering
+
+* Go back to the file `preprocessing/NEW_preprocessing_all.py`
+* Set name to *'mmp_last_filtering'*
+* Run the sh script `preprocessing/submit_load_mmp.sh`
+
+This outputs the file `mmp_finetune.csv` that can be used for training the Chemformer.
+
+### MetaTrans Dataset
+
+For filtering of the MetaTrans dataset, proceed with the following steps.
+
+* Go to file `preprocessing/NEW_preprocessing_all.py`
+* Set name to *'metatrans'
+* Run the script (no sh script needed)
 
 ## Augmentation and Annotation
 
-To augment the training dataset with parent-parent or parent-granchild reactions, or to annotate the dataset with either csp3 fraction or logp the following file should be run:
+To augment the training dataset with parent-parent or parent-granchild reactions, or to annotate the dataset with either Csp3 fraction or LogP, follow these steps:
 
-```bash
-augmentation_annotation.py
-```
+* Go to the file `optimisation/augmentation_annotation.py`
+* Set the relevant augmentation or augmentataion techniques to *True*
+  * Note that both annotation techniques can be done together, and that both augmentation techniques (parent-parent and parent-granchild reactions) can be done together. However, augmentationa and annotation is conducted separately
+* Run the script
 
-## Splitting Data
+Note: Specific data files are required for the augmentation techniques. Please ensure these files are available before beginning the augmentation process. They are generated by running `preprocessing/NEW_preprocessing_all.py` with the name parameter set to *'combined'*, which should have been done in the preprocessing step already.
 
-For splitting the data at random the following file should be run:
+## Splitting Data for Ensemble Model
 
-```bash
-split_for_ensemble.py
-```
+The data can be split at random, or split based the Burtina Clustering algorithm (parent or child similarity). 
 
-To split the data based on the Burtina Clustering algorithm, an additional file need to be run beforehand:
+To split based on similarity the following preparation steps should be conducted.
 
-```bash
-tb_cluster.py
-split_for_ensemble.py
-```
+* Go to the file `optimisation/tb_cluster.py`
+* Set name to *'child'* or *'parent'*, depending on if you want to cluster based on the metabolites or drugs, respectively
+* Run the script
+
+For all different splitting methods,
+
+* Go to the file `optimisation/split_for_ensemble.py`
+* Set *split_type* to the splitting method of choice, i.e., *'random'*, *'parents'* or *'children'*
 
 ## Evaluation
 
