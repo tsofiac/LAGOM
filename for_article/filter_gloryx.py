@@ -34,7 +34,7 @@ removed_file = 'for_article/gloryx_metatrans_overlap.csv'
 gloryx_final_csv = 'for_article/gloryx_removed_metatrans.csv' 
 gloryx_finetune_csv = 'for_article/gloryx_article_finetune.csv'
 
-print("Comparing datasets to remove overlappinr reactions from GLORYx")
+print("Comparing datasets to remove overlapping reactions from GLORYx")
 compare_datasets(gloryx_csv, metatrans_csv, removed_file, gloryx_final_csv)
 print("Creating Chemformer-friendly file")
 get_unique_parents(gloryx_final_csv, gloryx_finetune_csv)
