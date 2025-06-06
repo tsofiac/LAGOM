@@ -29,6 +29,12 @@ def annotate_smiles_with_logp(smiles):
     token = assign_logp_token(logp)
     return f"{token}"
 
+# def annotate_data_with_logp(datafile, annotated_datafile):
+#     dataset = pd.read_csv(datafile)
+
+#     dataset['parent_smiles'] = dataset['parent_smiles'].apply(annotate_smiles_with_logp)
+#     dataset.to_csv(annotated_datafile, index=False)
+
 # --------------- CSP3 ------------------
 
 def assign_csp3_token(csp3):
@@ -50,6 +56,15 @@ def annotate_smiles_with_csp3(smiles):
     csp3 = Descriptors.FractionCSP3(mol)
     token = assign_csp3_token(csp3)
     return f"{token}"
+
+# def annotate_data_with_csp3(datafile, annotated_datafile):
+#     dataset = pd.read_csv(datafile)
+
+#     dataset['parent_smiles'] = dataset['parent_smiles'].apply(annotate_smiles_with_csp3)
+#     dataset.to_csv(annotated_datafile, index=False)
+
+
+
 
 # --------------- LogP & CSP3 ------------------
 
@@ -98,6 +113,75 @@ def annotate_data_finetune(logp_annotations, csp3_annotations, datafile, annotat
     dataset.to_csv(annotated_datafile, sep='\t', index=False)   
 
 
+
+#------------annotate enzymes----------------
+
+def assign_enzyme_family(enzyme):
+
+    if enzyme is None or not isinstance(enzyme, str):
+        return '[unknown]'
+
+    enzyme = enzyme.lower()
+
+    if 'cyp' in enzyme or 'cytochrome p450' in enzyme:
+        return '[CYP]'
+    
+    elif 'ugt'in enzyme or 'udp-glucuronosyltransferase' in enzyme:
+        return '[UGT]'
+    
+    elif 'sult' in enzyme or 'sulfotransferase' in enzyme:
+        return '[SULT]'
+    
+    elif 'gst' in enzyme or 'glutathione s-transferase' in enzyme:
+        return '[GST]'
+    
+    elif 'nat' in enzyme or 'n-acetyltransferase' in enzyme:
+        return '[NAT]'
+    
+    elif 'methyltransferase' in enzyme:
+        return '[MT]'
+    
+    elif 'carboxylesterase' in enzyme:
+        return '[CES]'
+    
+    elif 'kinase' in enzyme:
+        return '[kinase]'
+
+    else:
+        print(enzyme)
+        return '[other]'
+
+def annotate_data_enzymefamily(datafile, output_datafile):
+
+    dataset = pd.read_csv(datafile) # has column parent_smiles
+
+    for index, row in dataset.iterrows():
+        smiles = row["parent_smiles"]
+        enzyme = row["enzymes"]
+
+        token = assign_enzyme_family(enzyme)
+        smiles_annotated = f"{token}{smiles}"
+     
+
+        dataset.at[index, "parent_smiles"] = smiles_annotated
+
+    dataset.to_csv(output_datafile, index=False)
+
+def annotate_data_enzymefamily_finetune(datafile, output_datafile):
+
+    dataset = pd.read_csv(datafile, sep='\t') # has column parent_smiles
+
+    for index, row in dataset.iterrows():
+        smiles = row["reactants"]
+        enzyme = row["enzymes"]
+
+        token = assign_enzyme_family(enzyme)
+        smiles_annotated = f"{token}{smiles}"
+
+        dataset.at[index, "reactants"] = smiles_annotated
+
+    dataset.to_csv(output_datafile, sep='\t', index=False)  
+
 # ----------------------------------------------------------------------------------------------
 
 def reformat_for_chemformer(input_file, output_file):
@@ -142,6 +226,7 @@ def combine_datasets(df1, df2, output_csv):
 
 if __name__ == "__main__":
 
+    enzyme_annotations = False # Can not be done together with the other annotations
     logp_annotations = False
     csp3_annotations = False
     using_finetune_ready_file = False # True for evaluation set
@@ -149,9 +234,9 @@ if __name__ == "__main__":
     augment_parent_grandchild = False
     augment_parent_parent = True
    
-    # OBS: look over all file names
+    #OBS: look over all file names
 
-    name = 'PP' # 'csp3_logp' 'logp' 'csp3' 'PG' 'PP' 'PG_PP' 
+    name = 'PP' # 'csp3_logp' 'logp' 'csp3' 'PG' 'PP' 'PG_PP' 'enzymes' 
 
     annotated_datafile = f'dataset/curated_data/annotated_data/{name}_combined_smiles_clean.csv' 
     finetune_file = f'dataset/finetune/{name}_finetune.csv'
@@ -161,7 +246,11 @@ if __name__ == "__main__":
         if using_finetune_ready_file is False:
             datafile = 'dataset/curated_data/combined_smiles_clean.csv'
 
-            annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
+            if enzyme_annotations is True:
+                annotate_data_enzymefamily(datafile, annotated_datafile)  
+
+            else:
+                annotate_data(logp_annotations, csp3_annotations, datafile, annotated_datafile)
                 
             reformat_for_chemformer(annotated_datafile, finetune_file)
             add_possible_products(finetune_file)
@@ -170,7 +259,11 @@ if __name__ == "__main__":
             datafile = 'dataset/finetune/combined_evaluation_finetune.csv'
             finetune_file = f'dataset/finetune/{name}_evaluation_finetune.csv'
 
-            annotate_data_finetune(logp_annotations, csp3_annotations, datafile, finetune_file)
+            if enzyme_annotations is True:
+                annotate_data_enzymefamily_finetune(datafile, finetune_file)
+                print('here')
+            else:
+                annotate_data_finetune(logp_annotations, csp3_annotations, datafile, finetune_file)
 
 
     if augment_parent_grandchild and not augment_parent_parent:
