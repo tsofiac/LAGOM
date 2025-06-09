@@ -1,0 +1,14 @@
+parent_name,child_name,parent_smiles,child_smiles,generation,set,source
+Apixaban,M2,COc1ccc(-n2nc(C(N)=O)c3c2C(=O)N(c2ccc(N4CCCCC4=O)cc2)CC3)cc1,NC(=O)c1nn(-c2ccc(O)cc2)c2c1CCN(c1ccc(N3CCCCC3=O)cc1)C2=O,1,test,GLORYx
+Dabigatran,M400,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)Nc3ccccn3)ccc21,1,test,GLORYx
+Dabigatran,M369,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(C(=O)O)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,1,test,GLORYx
+Dabigatran,M324,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)O)ccc21,1,test,GLORYx
+Dabigatran,M355,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CO)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,1,test,GLORYx
+Dabigatran,M648,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)O)c3ccccn3)ccc21,Cn1c(CNc2ccc(C(=N)N)cc2)nc2cc(C(=O)N(CCC(=O)OC3CC(C(=O)O)C(O)C(O)C3O)c3ccccn3)ccc21,1,test,GLORYx
+Imatinib,CGP74588,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,1,test,GLORYx
+Imatinib,CGP72383,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2ccc[n+]([O-])c2)n1,1,test,GLORYx
+Imatinib,AFN911,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,CN1CCN(Cc2ccc(C(=O)Nc3ccc(CO)c(Nc4nccc(-c5cccnc5)n4)c3)cc2)CC1,1,test,GLORYx
+Imatinib,CGP71422,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CC[N+](C)([O-])CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,1,test,GLORYx
+Imatinib,AGP050,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)C(=O)C3)cc2)cc1Nc1nccc(-c2cccnc2)n1,1,test,GLORYx
+Imatinib,M29.6,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3=O)cc2)cc1Nc1nccc(-c2cccnc2)n1,1,test,GLORYx
+Imatinib,M42.2,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Cc1ccc(NC(=O)c2ccc(C(=O)O)cc2)cc1Nc1nccc(-c2cccnc2)n1,1,test,GLORYx
