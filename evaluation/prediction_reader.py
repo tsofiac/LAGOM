@@ -664,9 +664,9 @@ def score_result(
 
 
 if __name__ == "__main__":
-    benchmark = True  # True if GLORYx, False if Evaluation
-    status = "score"  # 'score' 'combine' 'new'
-    name = "gloryx_metatrans"
+    benchmark = False  # True if GLORYx, False if Evaluation
+    status = "new"  # 'score' 'combine' 'new'
+    name = "chemf_PP_05"
 
     specification = 0  # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2)
     fingerprint = (
@@ -675,10 +675,10 @@ if __name__ == "__main__":
 
     # If combine:
     ensemble_list = [
-        "evaluation/alohomora/ensemble/result_metatrans_split1.csv",
-        "evaluation/alohomora/ensemble/result_metatrans_split2.csv",
-        "evaluation/alohomora/ensemble/result_metatrans_split3.csv",
-        "evaluation/alohomora/ensemble/result_metatrans_split4.csv",
+        "evaluation/accio/ensemble/result_metatrans_split1.csv",
+        "evaluation/accio/ensemble/result_metatrans_split2.csv",
+        "evaluation/accio/ensemble/result_metatrans_split3.csv",
+        "evaluation/accio/ensemble/result_metatrans_split4.csv",
     ]
     samples_per_model = 5
 
@@ -689,9 +689,9 @@ if __name__ == "__main__":
         bs = 4
         testset = "dataset/curated_data/combined_evaluation.csv"
 
-    json_predictions = "results/evaluation/alohomora/predictions0.json"
-    csv_predictions = f"evaluation/alohomora/predictions_{name}.csv"
-    csv_result = f"evaluation/alohomora/result_{name}.csv"
+    json_predictions = "results/evaluation/accio/predictions9.json"
+    csv_predictions = f"evaluation/accio/predictions_{name}.csv"
+    csv_result = f"evaluation/accio/result_{name}.csv"
 
     if status == "new":
         json_to_csv(json_predictions, csv_predictions)
