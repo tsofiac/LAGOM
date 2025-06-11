@@ -20,6 +20,7 @@ model_hyperparams:
 
 datamodule:
   type: MetaboliteDataModule
+  # type: metabolite_chemformer.MetaboliteDataModule
 
 callbacks:
   - LearningRateMonitor
@@ -36,3 +37,5 @@ n_predictions: 5
 scorers:
   - MetaboliteCoverageScore
   - Top1MetaboliteScore
+  # - metabolite_chemformer.Top1MetaboliteScore
+  # - metabolite_chemformer.MetaboliteCoverageScore
