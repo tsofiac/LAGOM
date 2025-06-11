@@ -1,7 +1,6 @@
-# Master's Thesis: Optimising the Chemformer Model for Metabolite Prediction in Drug Discovery
+# LAGOM: Language-model-Assisted Generation Of Metabolites
 
-The aim of this Master’s thesis is to optimise the Chemformer model to reliably
-predicting drug metabolites.
+The aim of this work is to optimise the Chemformer model to reliably predict drug metabolites.
 
 ## Table of Contents
 
@@ -19,7 +18,7 @@ predicting drug metabolites.
 ## Installation
 Here are the instructions on how to install and set up this project.
 
-First you need set up the Chemformer by following the instructions given the repository [Aizynthmodels](https://github.com/MolecularAI/aizynthmodels/tree/main).
+First, set up the Chemformer by following the instructions given in the repository [Aizynthmodels](https://github.com/MolecularAI/aizynthmodels/tree/main).
 
 To set up this project you need to clone this repository:
 
@@ -28,14 +27,14 @@ git clone https://github.com/yourusername/your-project.git
 cd your-project
 ```
 
-You also need to download an extra package:
+Download this extra package:
 
 ```bash
 conda activate aizynthmodels
 conda install chembl_structure_pipeline
 ```
 
-You also need the pre-trained Chemformer model
+You also need the pre-trained Chemformer model.
 
 ## Extracting Data
 
@@ -51,7 +50,7 @@ To extract the data needed for this project, download the raw files from the fol
 * [GLORYx Test Dataset](https://github.com/christinadebruynkops/GLORYx/tree/master/datasets/test_dataset)
   * gloryx_test_dataset.json
 
-To extract the data, run the following files for each corresponding data source:
+To extract the data, run the following files in this repository for each corresponding data source:
 
 * `load_drugbank.py`
 * `load_metxbiodb.py`
@@ -91,15 +90,15 @@ To extract the data needed for additional pre-training the model, download the r
   * source_train.txt
   * target_train.txt
 
-To extract the data from the files, run the following files located in the `preprocessing` folder:
+To extract the data from the files, run the following files:
 
-* `load_mmp.py` for the Virtual Analogues Dataset
-* `load_metatrans.py`for the MetaTrans Dataset
+* `preprocessing/load_mmp.py` for the Virtual Analogues Dataset
+* `preprocessing/load_metatrans.py` for the MetaTrans Dataset
 
 
 ### Virtual Analogues (VA) Dataset
 
-Due to the large size of the dataset, loading the was conducted in parts. For complete curation and filtering, the following steps should be conducted.
+Due to the large size of the dataset, loading it was conducted in parts. For complete curation and filtering, the following steps should be conducted.
 
 #### Loading
 * Go to file `preprocessing/load_mmp_parts.py`
