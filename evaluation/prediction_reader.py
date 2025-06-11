@@ -665,8 +665,8 @@ def score_result(
 
 if __name__ == "__main__":
     benchmark = False  # True if GLORYx, False if Evaluation
-    status = "new"  # 'score' 'combine' 'new'
-    name = "chemf_PP_05"
+    status = "score"  # 'score' 'combine' 'new'
+    name = "chemVA-Met_base_05"
 
     specification = 0  # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2)
     fingerprint = (
