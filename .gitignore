@@ -4,11 +4,3 @@ logs/
 dataset/raw_data/
 pre-trained_models/
 fine-tuned_models/
-
-dataset/pre-train
-results/
-evaluation/predictions
-evaluation/result
-dataset/mmp
-to_be_deleted
-fine_tuned_models_article
