@@ -1,2 +1,0 @@
-parent_id,parent_name,child_id,child_name,enzymes,origin,parent_smiles,child_smiles,source
-,warfarin-r,,4'- Hydroxywarfarin,CYP2C9; CYP2C18,warfarin-r,CC(=O)CC(c1ccccc1)c1c(O)oc2ccccc2c1=O,CC(=O)CC(c1ccc(O)cc1)c1c(O)oc2ccccc2c1=O,MetXBioDB
