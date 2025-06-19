@@ -1,5 +1,0 @@
-python_kernel: envdev
-selected_templates_prefix: chemformer
-min_template_occurrence: 0
-n_batches: 5
-data_import_class: ""
