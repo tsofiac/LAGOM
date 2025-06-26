@@ -1,6 +1,8 @@
-# LAGOM: Language-model-Assisted Generation Of Metabolites
+# LAGOM: Language-model-Assisted Generation Of Metabolites 
 
 The aim of this work is to optimise the Chemformer model to reliably predict drug metabolites. <!-- A bit longer summary of this methodological framework would be appropriate. You can check other similar packages (e.g., MetaTrans) for inspiration. This will also be followed by the link to the pre-print article/manuscript (once out). -->
+
+<!-- In addition, how to pre-train/fine-tune models and also run them is missing. This information may be contained in the original Chemformer repository, but it would be valuable to provide instructions there as well once a user extracts, preprocesses and splits the data for the model. -->
 
 ## Table of Contents
 
