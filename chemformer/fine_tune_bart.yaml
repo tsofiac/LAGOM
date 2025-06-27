@@ -1,0 +1,38 @@
+data_path: DATA_PATH
+model_path: MODEL_PATH
+
+resume: false
+
+n_epochs: 200
+batch_size: BATCH_SIZE
+augmentation_probability: 0.5
+augmentation_strategy: all
+
+vocabulary_path: VOCABULARY_PATH
+output_directory: OUTPUT_DIRECTORY
+task: forward_prediction
+
+seed: 1
+
+model_hyperparams:
+  optimizer:
+    learning_rate: 0.001
+
+datamodule:
+  type: metabolite_chemformer.MetaboliteDataModule
+
+callbacks:
+  - LearningRateMonitor
+  - ModelCheckpoint:
+      - every_n_epochs: 1
+      - monitor: metabolite_coverage_score
+      - mode: max
+      - save_last: true
+      - save_top_k: 3
+  - ValidationScoreCallback
+  - StepCheckpoint
+
+n_predictions: 5
+scorers:
+  - metabolite_chemformer.Top1MetaboliteScore
+  - metabolite_chemformer.MetaboliteCoverageScore

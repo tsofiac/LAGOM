@@ -1,0 +1,19 @@
+data_path: DATA_PATH
+model_path: MODEL_PATH
+ 
+vocabulary_path: VOCABULARY_PATH
+n_predictions: NUM_PREDICTIONS
+ 
+output_score_data: OUTPUT_SCORE_DATA
+output_predictions: OUTPUT_PREDICTIONS
+n_chunks: N_CHUNKS
+i_chunk: I_CHUNK
+task: TASK
+ 
+batch_size: BATCH_SIZE
+device: cuda
+ 
+model:
+  type: BARTModel
+  arguments:
+    - ckpt_path: ${model_path}

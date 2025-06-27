@@ -1,0 +1,29 @@
+data_path: DATA_PATH
+model_path: MODEL_PATH
+
+resume: false
+
+n_epochs: 100
+batch_size: BATCH_SIZE
+augmentation_probability: AUGMENTATION_PROBABILITY
+augmentation_strategy: all
+
+masker:
+  type: SpanTokensMasker
+  arguments:
+   - mask_prob: MASK_PROBABILITY
+
+vocabulary_path: VOCABULARY_PATH
+output_directory: OUTPUT_DIRECTORY
+task: forward_prediction
+
+seed: 1
+
+check_val_every_n_epoch: 3
+
+datamodule:
+  type: SynthesisDataModule
+
+n_predictions: 0
+
+  
