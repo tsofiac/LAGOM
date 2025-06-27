@@ -68,8 +68,8 @@ To extract the data needed for this project, download the raw files from the web
 * [MetaTrans Dataset](https://github.com/KavrakiLab/MetaTrans/tree/master/datasets)
   * source_train.txt
   * target_train.txt
-  * source_train.txt
-  * target_train.txt
+  * source_valid.txt
+  * target_valid.txt
 
 To extract the data, run the following files in this repository for each corresponding data source. The extracted data files will be saved in `dataset/extracted_data`.
 
@@ -79,7 +79,7 @@ To extract the data, run the following files in this repository for each corresp
 * `optimisation/load_metatrans.py` for the MetaTrans dataset
 * Due to the large size of the VA dataset, it is loaded in parts:
   * Open `preprocessing/load_VA_parts.py` and uncomment a `start_row` and corresponding `end_row`
-  * Run the sh script `preprocessing/submit_load_mmp.sh`
+  * Run the shell script `preprocessing/submit_load_mmp.sh`
   * Repeat this for all start- and end-rows.
 
 
@@ -87,9 +87,9 @@ To extract the data, run the following files in this repository for each corresp
 
 To preprocess the data, use the file `preprocessing/preprocess_data.py`.
 
-To combine and preprocess the DrugBank and MetXBioDB datasets, set the `name` parameter to `'LAGOM'`. LAGOM is the name of the combined fine-tuning dataset. Along with the other files, a test dataset will be obtained. 
+To combine and preprocess the DrugBank and MetXBioDB datasets, set the `name` parameter to `'LAGOM'`. LAGOM is the name of the combined fine-tuning dataset. This will generate the file for finetuning (``LAGOM_finetune.csv``), along with the other files, including an evaluation file and augmentation files. 
 
-(Observe that the GLORYx test dataset does not have to be preprocessed.) 
+(Observe that the GLORYx test dataset is not preprocessed.) 
 
 ### Preprocess the VA Dataset for Additional Pre-Training
 
@@ -123,7 +123,7 @@ if __name__ == "__main__":
 
 * Go back to the file `preprocessing/preprocessing_data.py`
 * Set `name = 'VA_last_filtering'`
-* Run the sh script `preprocessing/submit_load_mmp.sh`
+* Run the shell script `preprocessing/submit_load_mmp.sh`
 
 This outputs the file `VA/VA_finetune.csv` that can be used for additionally pre-training the base Chemformer model.
 
@@ -133,7 +133,7 @@ For filtering of the MetaTrans dataset, proceed with the following steps.
 
 * Open file `preprocessing/preprocessing_data.py`
 * Set `name = 'metatrans'`
-* Run the script (no sh script needed)
+* Run the script (no shell script needed)
 
 This outputs the file `finetune/metatrans_finetune.csv` that can be used for additionally pre-training the ChemVA model.
 
@@ -143,7 +143,7 @@ Chemformer model training involves three main steps: **pre-training**, **fine-tu
 
 ### Pre-Training
 
-Pre-training allows the model to learn general chemical representations from a large dataset. The following scripts are used:
+Pre-training allows the model to learn chemical transformations from a large dataset. The following scripts are used:
 
 * `pretrain_bart.yaml`: Hyperparameter settings for pre-training
 * `pretrain.sh`: SBATCH script for submitting the job
@@ -235,9 +235,9 @@ if __name__ == "__main__":
   
 * Run the script
 
-Note: Specific data files are required for the augmentation techniques. Please ensure these files are available before proceeding with the augmentation process. They are generated when running `preprocessing/preprocessing_data.py` when the `name` parameter is set to `'LAGOM'`.
+Note: Specific data files are required for the augmentation techniques (namely `curated_data/augmented_parent_grandchild.csv` and `curated_data/augmented_parent_parent.csv`). Please ensure these files are available before proceeding with the augmentation process. They are generated when running `preprocessing/preprocessing_data.py` when the `name` parameter is set to `'LAGOM'`.
 
-For inference scoring a model that has been fine-tuned on augmented data, a corresponing augmented test set should to be used. By default, if you select an augmentation technique in the script, an annotated version of the LAGOM test set with the corresponding annotations included will also be created, e.g. `dataset/finetune/logp_evaluation_finetune.csv`
+For inference scoring a model that has been fine-tuned on annotated data, a corresponing annotated test set should to be used. By default, if you select an annotation technique in the script, an annotated version of the LAGOM test set will also be created, e.g. `dataset/finetune/logp_evaluation_finetune.csv`
 
 ## Splitting Data for an Ensemble Model
 
@@ -252,7 +252,7 @@ To split based on similarity (pre-requisite for child-/parent-based splitting) t
 For all different splitting methods,
 
 * Go to the file `optimisation/split_for_ensemble.py`
-* Set `split_type` to the splitting method of choice, i.e., `'random'`, `'parents'` or `'children'`
+* Set `split_type` to the splitting method of choice, i.e., `'stratified'`, `'parents'` or `'children'`
 
 The separate files with the different splits, e.g. `dataset/finetune/strat_split1_finetune.csv` can then be used for individual fine-tuning. 
 
@@ -269,9 +269,7 @@ if __name__ == "__main__":
     name = 'chemVA-Met_base_05'
 
     specification = 0  # 0 (all) 1 (only_child) 2 (more than 1) 3 (more than 2)
-    fingerprint = (
-        None  # 1 (similarity = 1) 0.8 (similarity >= 0.8) None (exact SMILES string)
-    )
+    fingerprint = None  # 1 (similarity = 1) 0.8 (similarity >= 0.8) None (exact SMILES string)
 ```
 Note: Per default, the file `results/evaluation/scores/predictions0.json` is saved when running inference scoring. Thus, if no adjustments are made, `evaluation/prediction_reader.py` should be used before running a new inference scoring.
 
