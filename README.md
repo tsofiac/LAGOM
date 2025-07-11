@@ -1,6 +1,6 @@
 # LAGOM: Language-model-Assisted Generation Of Metabolites 
 
-This repository contains the code used to generate the results reported in the LAGOM article.
+This repository contains the code used to generate the results reported in the [LAGOM article](https://doi.org/10.26434/chemrxiv-2025-0mqf8).
 
 LAGOM (Language-model Assisted Generation Of Metabolites) is a Transformer-based [Chemformer model](https://github.com/MolecularAI/chemformer) fine-tuned to predict likely metabolic transformations of drug candidates. As part of this work, we assembled a rigorously curated and standardised collection of publicly available datasets ([DrugBank](https://go.drugbank.com/releases/latest) and [MetXBioDB](https://zenodo.org/records/13235312)) specifically for metabolite prediction. To enhance model generalisation and predictive accuracy, we incorporated a range of data augmentation strategies. In addition, we explored the impact of different pre-training approaches, including general chemical pre-training using the [Virtual Analogs dataset](https://zenodo.org/records/45807) and metabolite-specific pre-training with [MetaTrans dataset](https://github.com/KavrakiLab/MetaTrans/tree/master/datasets).
 
